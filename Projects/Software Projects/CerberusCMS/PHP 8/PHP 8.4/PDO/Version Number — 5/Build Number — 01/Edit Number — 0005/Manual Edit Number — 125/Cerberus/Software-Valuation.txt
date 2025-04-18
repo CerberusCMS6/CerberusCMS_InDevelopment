@@ -1,0 +1,119 @@
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    () ()()()()() () -- ()
+ +  ()  () () --
+ +  ------
+ + Information Text File
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Master Root Directory => Root Directory => Software-Valuation.txt
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|5|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ + Software Valuation :: Assessment :: Digital Valuations - Los Angeles, California, 90291
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Assessment Scores
+ ============================================================================================================
+*/
+
+- Digital Information Security: 9/10
+* All input forms and data are 100% sanitized.
+* Additional digital security features are easily added.
+
+- Stress Speed: 8/10
+* Stress tests have shown that up to ~50 concurrent unique connections can be made to this web application that is hosted on one shared hosting web server with low-tier hardware specifications.
+* Stress tests have shown that up to ~750 concurrent unique connections can be made to this web application hosted on one dedicated web server with medium-tier hardware specifications.
+* Stress tests have shown that up to ~1,000 concurrent unique connections can be made to this web application hosted on one dedicated web server with high-tier hardware specifications.
+
+- Usability: 8/10
+
+- Unix Name: 10/10
+The Unix name is original.
+
+- Expandability: 9/10
+* The entire web application is easily expanded.
+
+- Maintenance and Automation: 8/10
+* Easy to maintain.
+* The data stays completely organized.
+
+- Creativity: 10/10
+- Originality: 10/10
+* The entire web application is completely custom written by hand typing and it was designed in originalness. It is completely unique. It was not created by automated software creating tools and
+because it was created and written by hand it can never be reproduced. It can only be copied.
+
+- Ease of Installation: 10/10
+* 
+
+- Ease of Removal: 10/10
+* 
+
+- Usefulness: 10/10
+* 
+
+- Functionality: 8/10
+* 
+
+- Architecture: 10/10
+* 
+
+- Ingenuity: 9/10
+* 
+
+- Economy: 2/10
+* 
+
+- Functional and Useful Programming Code: 10/10
+* 
+
+Unix Name: CerberusCMS: $100,000
+Unix Name: Cerberus: $250,000
+Software Project Name: Cerberus Content Management System: $100,000
+125,000 Lines @ $000.50 per line: $75,000
+125,000 Lines @ $001.00 per line: $125,000
+125,000 Lines @ $005.00 per line: $625,000
+125,000 Lines @ $010.00 per line: $1,250,000
+
+$250,000 United States Dollars

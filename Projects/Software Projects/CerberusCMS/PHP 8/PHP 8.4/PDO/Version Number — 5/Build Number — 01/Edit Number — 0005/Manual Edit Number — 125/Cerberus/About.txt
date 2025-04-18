@@ -1,0 +1,88 @@
+﻿                             .-.							   
+                            {{@}}							   
+            <>               8@8							   
+          .::::.             888							   
+      @\\/W\/\/W\//@         8@8							   
+       \\/^\/\/^\//      _   )8(    _							   
+        \_O_<>_O_/     (@)__/8@8\__(@)							   
+   ____________________ `~"-=):(=-"~`							   
+  |<><><>  |  |  <><><>|     |.|							   
+  |<>      |  |      <>|     |T|							   
+  |<>      |  |      <>|     |'|							   
+  |<>   .--------.   <>|     |.|							   
+  |     |   ()   |     |     |I|							   
+  |_____| (O\/O) |_____|     |'|							   
+  |     \   /\   /     |     |.|							   
+  |------\  \/  /------|     |N|							   
+  |       '.__.'       |     |'|							   
+  |        |  |        |     |.|							   
+  :        |  |        :     |K|							   
+   \<>     |  |     <>/      |'|							   
+    \<>    |  |    <>/       |.|							   
+     \<>   |  |   <>/        |E|							   
+      `\<> |  | <>/'         |'|							   
+        `-.|  |.-`           \ /							   
+           '--'               ^					    TINKE SOFTWARE
+					       - 100% Free, Original, Clean and Quality Software Projects -
+              
+/*
+ ============================================================================================================
+ +
+ + About
+ +
+ ============================================================================================================
+*/
+
+Cerberus Content Management System is a Monolithic and Modular Content Management System as well as a consistent Web Application Programming Code Framework that is written in 100% Pure Pre-Hyper-Text-Post-Processor Programming Code with 100% Pure Hyper-Text-Markup-Language output and it supports multiple Database Management System Server Software Projects and their Versions. The Web Application Programming Code Framework is extremely consistent and organized.
+
+This Web Application Software Project is aimed towards small to medium companies as well as individuals and small organizations. This "Bare-Bone" system is 100% free to the public. This Web Application Software Project was started originally as a communications platform and later as an alternative to other Content Management System Projects. Now it is under development as an alternative to Wordpress, Moodle, Drupal.
+Please refer to the Official Software License in the License.txt file.
+
+Official Cerberus Content Management System Versions are always thoroughly tested for errors before official release and upon release will be free of error and will always pass validation checks for:
+* Cascading Style Sheet ( C.S.S. )
+* Extensible Markup Language ( X.M.L. )
+* Hyper-Text-Markup-Language ( H.T.M.L. )
+* Post-Hyper-Text-Pre-Processor ( P.H.P. )
+* Robots Protocol ( R.P. )
+* Real-Simple-Syndication ( R.S.S. )
+* Each of the Structured Query Lanaguage ( S.Q.L. ) Database Management System Server Versions as well as the other Non-S.Q.L. Database Management Systems
+
+Cerberus Content Management System' source code is completely hand written by the author(s) whose names are credited in each official release.
+
+Approximately ~250,000 lines of very easy-to-read and very well documented Lines-of-Code powers the Cerberus Content Management System "Bare-Bone" Releases where these packages are released without any additional Web Applications which are called: "Application Modules".
+There are several hundred high quality Web Application Modules that can be cURL, GIT or manually installed from the Administration Control Panel.
+Additional Hand Written Web Application Modules by the Cerberus Content Management System Project authors are capable of everything from:
+* Advanced Scientific Calculators
+* Retro Video Game Console Emulators such as for playing Nintendo Entertainment System, Super Nintendo Entertainment System, Nintento 64 video games in the web browser itself
+* Applications for downloading 4k resolution and higher quality movies / films directly to the Web Server itself by initiating this transaction from a Mobile Cell Phone or a Computer so that the movies / films can be downloaded without using the Internet Connection of the Mobile Cell Phone or Computer and so that the movie / film can be streamed and watched anywhere by any Registered Member Account from any device that is connected to it
+* Live Voice and Video Chat With a FaceBook-like / Twitter-like Live Video Recorder Called: Cerberus Streams that is written in 100% pure HTML5 Built-In Functions With MediaRecorder(); which is from the Media Stream Application Programming Interface. Important to note is the fact that HTML5 is not JavaScript.
+...and many more Application Modules.
+
+The Cerberus Content Management System ( Unix Name: CerberusCMS and CerberusC.M.S. ) Web Application Software Project is focused on data security and ease of use therefore the project leadership has decided to make very little use to no use at all of the JavaScript Scripting Language in the Pure-PHP Releases of this project.
+Since JavaScript is incredibly vulnerable we have decided to keep JavaScript use at a very basic minimum to none at all.
+
+Advanced Data Security techniques are gradually being implemented into this project.
+Future releases will feature 100% encrypted messages and 100% encrypted data where not even the root account of the server could read any of the data within the database or within the encrypted files.
+All of the data will be decrypted from the database or from the individual file or by the individual user by using advanced key decryption techniques that are unique to the factors of the connection itself.
+Custom encryption mathematics is also supported.
+
+Currently you will only find a few lines of JavaScript code in the Official Pure-PHP Release of Cerberus Content Management System:
+* One line as the last line of the Kernel file to automatically close the Web-Page for inactive connections
+* One line for the insertion of Bulletin Board ( B.B. ) codes into input forms across the system
+* One line to print the News Entries and Article Entries
+
+Everything else is Pure Pre-Hyper-Text-Post-Processor, HTML5, HTML5 Canvas, C.S.S. and X.M.L.
+
+The still-secure and easier-to-use releases make extensive use of JavaScript, JQuery Library and Asynchronous Javascript and X.M.L. ( A.J.A.X. ) for the best drag-and-drop user experience.
+
+Official Cerberus Content Management System Releases follow authentic Northern-Frisian words for elements or names of Greek Goddesses.
+
+Cerberus Content Management System, Version Number: 5, Build Number: 01, Edit Number: 0,001, Manual Edit Number: 001 - Final - Code Name: Hades - Pure-PHP has been debugged and tested to be 100% functional and digitally information secure on the latest
+Apache, H.T.M.L., P.H.P., Zend and MyS.Q.L. versions which at the time of this official Cerberus Content Management System release is:
+----------------------------------------------------------------
+* 2024		Apache			Version Number: 2.4.46
+* 2024		H.T.M.L.		Version Number: 5.4
+* 2024		P.H.P.			Version Number: 5.6, 7.2, 7.4, 8.0, 8.1, 8.2, 8.3
+* 2024		MyS.Q.L.		Version Number: 8.0.28
+* 2024		Zend Engine		Version Number: 4.0
+----------------------------------------------------------------
