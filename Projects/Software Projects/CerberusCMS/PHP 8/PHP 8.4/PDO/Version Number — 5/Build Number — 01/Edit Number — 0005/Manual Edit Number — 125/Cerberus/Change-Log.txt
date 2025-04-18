@@ -604,4 +604,7 @@ Much more than this. Will need to be documented.
 + Version Series: 5, Build: 0.1 To Version Series: 6, Build: 0.1
 =============================================================================================================
 
-* Updated All File Headers To: Cerberus Content Management System, Version Number: 6, Build Number: 0.1, Edit Number: 0001, Manual Edit Number: 125
+[ 04 - 18 - 2025 ]
+
+* Updated All File Headers To: Cerberus Content Management System, Version Number: 6, Build Number: 0.1, Edit Number: 0001, Manual Edit Number: 125.
+* Added Directory Permission Controls To Application Modules.
