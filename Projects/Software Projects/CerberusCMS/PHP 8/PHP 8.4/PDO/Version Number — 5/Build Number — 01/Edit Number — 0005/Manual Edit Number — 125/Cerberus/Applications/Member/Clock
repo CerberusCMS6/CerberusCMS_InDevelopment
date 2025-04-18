@@ -1,0 +1,128 @@
+<?php
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    ()  ()  ()
+ +  ()  ()  ()
+ +  ------------------------------
+ +  Application Module
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Root Directory => Applications => Member => Clock
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|5|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ +
+ + [ ^ ] Application Module :: Member :: Clock
+ +
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Application Module Header
+ ============================================================================================================
+*/
+
+											echo ($_Application_Module_Member_Message_Clock_Header);
+
+echo ("								
+										<B>Settings :: Current Date</B> ~ <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Clock&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Reload This Application Module ::\">Reload</A><HR>
+											<B>Server :: This Web Server :: Date</B><HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Date :: Current Year :: $_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL<BR>
+												*&nbsp;Date :: In This Year :: Current Month: $_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL<BR>
+												*&nbsp;Date :: In This Year :: Current Week: $_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_WEEK_OF_YEAR_FULL<BR>
+												*&nbsp;Date :: In This Year :: Current Day: $_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_DAY_OF_YEAR_FULL<BR>
+												*&nbsp;Date :: In This Month :: Current Day: $_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_DAY_FULL<BR><BR>
+												
+											<B>Server :: This Web Server :: Date :: Timestamps</B><HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Date :: Standard :: Timestamp :: $_GLOBAL_LOCAL_SERVER_DATE_STANDARD<BR><BR>
+												
+											<B>Server :: Connecting Device :: Date</B><HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Date :: Current Year :: $_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL<BR>
+												*&nbsp;Date :: In This Year :: Current Month: $_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL<BR>
+												*&nbsp;Date :: In This Year :: Current Week: $_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_WEEK_OF_YEAR_FULL<BR>
+												*&nbsp;Date :: In This Year :: Current Day: $_Application_Module_PlugIn_Time_GET_TIME_REGISTERED_MEMBER_ACCOUNT_DAY_OF_YEAR_FULL<BR>
+												*&nbsp;Date :: In This Month :: Current Day: $_Application_Module_PlugIn_Time_GET_TIME_REGISTERED_MEMBER_ACCOUNT_MONTH_DAY<BR><BR>
+
+											<B>Settings :: Current Time</B><HR>
+												<B>Server :: This Web Server :: Time :: Standard</B><HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Time :: In Hours: $_GLOBAL_LOCAL_SERVER_TIME_HOURS<BR>
+												*&nbsp;Time :: In Minutes: $_GLOBAL_LOCAL_SERVER_TIME_MINUTES<BR>
+												*&nbsp;Time :: In Seconds: $_GLOBAL_LOCAL_SERVER_TIME_SECONDS<BR>
+												*&nbsp;Time :: In Milliseconds: $_GLOBAL_LOCAL_SERVER_TIME_MILLISECONDS<BR>
+												*&nbsp;Time :: In Microseconds: $_GLOBAL_LOCAL_SERVER_TIME_MICROSECONDS<BR>
+												*&nbsp;Time :: Is It Before Mid-Day OR Is It After Mid-Day ?: $_GLOBAL_LOCAL_SERVER_TIME_AM_PM<BR><BR>
+												
+											<B>Server :: This Web Server :: Time :: Unix</B><HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Time :: Unix :: In Unix-Epoch: <A HREF=\"$_SYSTEM_SERVER_NETWORKING_RESOLVER_TIMESTAMP_UNIX_EPOCH\" TITLE=\":: Open & Display :: The Official Web Server :: For :: This System' Unix Timestamp Converter ::\" TARGET=\"_NEW\">$_GLOBAL_LOCAL_SERVER_TIME_UNIX</A><BR><BR>
+												
+											<B>Server :: This Web Server :: Time :: Internet Time</B><HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Time :: Internet Time :: Standard :: <A HREF=\"https://www.PHP.net/manual/en/function.time.php\" TITLE=\":: Open & Display :: The Pre-Hyper-Text-Post-Processor Article Entry :: For :: Internet Time ::\" TARGET=\"_NEW\">Internet Time: $_GLOBAL_LOCAL_SERVER_TIME_INTERNET</A><BR><BR>
+
+											<B>Server :: This Web Server :: Unix-Epoch :: Time :: Built-In</B><HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Time :: In Microtime: $_GLOBAL_LOCAL_SERVER_TIME_MICROTIME<BR>
+												*&nbsp;Time :: In Unix-Epoch Start Time: January, 1st of 1970<BR>
+												*&nbsp;Time :: In Unix-Epoch: <A HREF=\"$_SYSTEM_SERVER_NETWORKING_RESOLVER_TIMESTAMP_UNIX_EPOCH\" TITLE=\":: Open & Display :: The Official Web Server :: For :: This System' Unix Timestamp Converter ::\" TARGET=\"_NEW\">$_GLOBAL_LOCAL_SERVER_TIME_UNIX</A><BR><BR>
+
+											<B>Server :: This Web Server :: Unix-Epoch :: Time :: Built-In</B><HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Time :: In Unix-Epoch :: Seconds: $_GLOBAL_LOCAL_SERVER_TIME_UNIX<BR>
+												*&nbsp;Time :: In Unix-Epoch :: Minutes: $_GLOBAL_LOCAL_SERVER_TIME_UNIX_MINUTES<BR>
+												*&nbsp;Time :: In Unix-Epoch :: Hours: $_GLOBAL_LOCAL_SERVER_TIME_UNIX_HOURS<BR>
+												*&nbsp;Time :: In Unix-Epoch :: Days: $_GLOBAL_LOCAL_SERVER_TIME_UNIX_DAYS<BR>
+												*&nbsp;Time :: In Unix-Epoch :: Months: $_GLOBAL_LOCAL_SERVER_TIME_UNIX_MONTHS<BR>
+												*&nbsp;Time :: In Unix-Epoch :: Years: ~ $_GLOBAL_LOCAL_SERVER_TIME_UNIX_YEARS<BR><BR>
+												
+										<B>Server :: Connecting Device :: Time</B><HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											*&nbsp;Connecting Device :: Time :: Hour: $_Application_Module_PlugIn_Time_GET_TIME_REGISTERED_MEMBER_ACCOUNT_HOUR<BR>
+											*&nbsp;Connecting Device :: Time :: Minute: $_GLOBAL_LOCAL_SERVER_TIME_MINUTES<BR>
+											*&nbsp;Connecting Device :: Time :: Second: $_GLOBAL_LOCAL_SERVER_TIME_SECONDS<BR>
+											*&nbsp;Connecting Device :: Time :: Is It Before Mid-Day OR Is It After Mid-Day ?: $_Application_Module_PlugIn_Time_GET_TIME_REGISTERED_MEMBER_ACCOUNT_AM_PM<BR><BR>
+
+										<B>Current System Time-Zone Settings</B><HR>
+											<B>Server :: This Web Server :: Time-Zone</B><HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											* Time-Zone :: Current: <A HREF=\"https://en.Wikipedia.org/wiki/$_GLOBAL_MEMBER_LOCATION_CURRENT_TIMEZONE_SERVER_LOCAL\" TITLE=\":: Open & Display :: The Wikipedia Article Entry :: For :: The Time-Zone: $_GLOBAL_MEMBER_LOCATION_CURRENT_TIMEZONE_SERVER_LOCAL ::\" TARGET=\"_NEW\">$_GLOBAL_MEMBER_LOCATION_CURRENT_TIMEZONE_SERVER_LOCAL</A><BR><BR>
+										
+										<B>Server :: Connecting Device :: Time-Zone</B><HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											* Time-Zone :: Current :: Given: <A HREF=\"https://en.Wikipedia.org/wiki/UTC$_GLOBAL_MEMBER_ACCOUNT_GIVEN_LOCATION_TIMEZONE\" TITLE=\":: Open & Display :: The Wikipedia Article Entry :: For :: The Time-Zone: UTC $_GLOBAL_MEMBER_ACCOUNT_GIVEN_LOCATION_TIMEZONE ::\" TARGET=\"_NEW\">UTC $_GLOBAL_MEMBER_ACCOUNT_GIVEN_LOCATION_TIMEZONE</A><BR><BR>
+");
+?>

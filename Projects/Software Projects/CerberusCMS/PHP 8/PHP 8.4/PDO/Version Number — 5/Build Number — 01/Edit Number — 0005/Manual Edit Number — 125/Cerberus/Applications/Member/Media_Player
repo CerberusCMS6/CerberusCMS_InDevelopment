@@ -1,0 +1,1087 @@
+<?php
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    ()  ()  ()
+ +  ()  ()  ()
+ +  ------------------------------
+ +  Application Module
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Root Directory => Applications => Member => Media_Player
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|5|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+-============================================================================================================
+-+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~()~~~~~~~~
+-+---()-------()()()()-()()()-()()()-()()()--()()()-()()()-()-----()()()--()--()-()()()--()()()--()--()------
+-+-()--()-----()-()-()-()-----()--()---()----()--()-()--()-()-----()--()--()()()-()------()-()-----()--------
+-+---()-------()-()-()-()()()-()--()---()----()()()-()()()-()-----()()()----()---()()()--()()----------------
+-+------------()-()-()-()-----()--()---()----()--()-()-----()-----()--()----()---()------()-()---------------
+-+------------()-()-()-()()()-()()()-()()()--()--()-()-----()()()-()--()----()---()()()--()--()--------------
+-+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Version~Number~:~0.7.4~
+-============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ +
+ + [ ^ ] Application Module :: Member :: Media Player
+ +
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Application Module Header
+ ============================================================================================================
+*/
+
+											echo ($_Application_Module_Member_Message_Media_Player_Header);
+
+echo ("
+<BR>
+
+<HR>
+
+	<CENTER> :: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;DisplayVideo&#61;URL&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Display :: Video Stream :: From :: Uniform-Resource-Location ::\">Display Video From URL</A>
+		 :: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;DisplayVideo&#61;FileName&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Display :: Video Stream :: From :: Video File ::\">Display Video From Video File</A> 
+		 :: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;PlayAudioStream&#61;FileName&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Play :: Audio Stream :: From File ::\">Play Audio From Audio File</A> 
+		 :: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;PlayAudioStream&#61;URL&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Play :: Audio Stream :: From :: Uniform-Resource-Location ::\">Play Audio From URL</A>
+		 :: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;Search&#61;Media&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Search :: Media ::\">Search Media</A>
+		 :: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;Upload&#61;Media&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Upload :: Media ::\">Upload Media</A> ::
+</CENTER><HR><BR><BR>
+");
+
+/*
+ ============================================================================================================
+ +
+ + Variables :: POST Variables
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Video :: Uniform-Resource-Location
+ ============================================================================================================
+*/
+
+$_Application_Module_Media_Player_POST_VIDEO_URL							= $_POST['AMM_Media_Player_Video_URL'];
+
+/*
+ ============================================================================================================
+ + Video :: File
+ ============================================================================================================
+*/
+
+$_Application_Module_Media_Player_POST_VIDEO_FILE_NAME							= $_POST['AMM_Media_Player_Video_File_Name'];
+
+/*
+ ============================================================================================================
+ + Audio Stream URL
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Media_Player_POST_AUDIO_URL							= $_POST['AMM_Media_Player_Play_Audio_URL'];
+
+/*
+ ============================================================================================================
+ + Audio Stream File
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Media_Player_POST_AUDIO_FILE_NAME						= $_POST['AMM_Media_Player_Play_Audio_File_Name'];
+
+/*
+ ============================================================================================================
+ + Upload :: Media
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Media_Player_POST_UPLOAD_FILE_AUDIO						= $_POST['AMM_Media_Player_Upload_File_Audio'];
+$_Application_Module_Member_Media_Player_POST_UPLOAD_FILE_VIDEO						= $_POST['AMM_Media_Player_Upload_File_Video'];
+
+/*
+ ============================================================================================================
+ +
+ + Variables :: Upload :: File Size Limitations
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Upload Size Limitations :: Media Files
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Media_Player_MAXIMUM_UPLOAD_LIMIT_FILE_AUDIO				= $_GLOBAL_SYSTEM_UPLOAD_SIZE_PUBLIC_FILE_MEDIA_PLAYER_AUDIO / 1024;
+$_Application_Module_Member_Media_Player_MAXIMUM_UPLOAD_LIMIT_FILE_VIDEO				= $_GLOBAL_SYSTEM_UPLOAD_SIZE_PUBLIC_FILE_MEDIA_PLAYER_VIDEO / 1024;
+
+/*
+ ============================================================================================================
+ + File Upload Details :: Audio File
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Media_Player_SPECIFY_UPLOAD_FILE_DIRECTORY_AUDIO				= "./Temporary/";
+$_Application_Module_Member_Media_Player_SPECIFY_UPLOAD_FILE_AUDIO					= $_Application_Module_Member_Media_Player_SPECIFY_UPLOAD_FILE_DIRECTORY_AUDIO . basename($_FILES['AMM_Media_Player_Upload_File_Audio']['name']);
+
+/*
+ ============================================================================================================
+ + Allowed File Extensions :: Audio File
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Media_Player_ALLOWED_FILE_EXTENSIONS_AUDIO					= array();
+$_Application_Module_Member_Media_Player_ALLOWED_FILE_EXTENSIONS_AUDIO[0]				= "mp3";
+$_Application_Module_Member_Media_Player_ALLOWED_FILE_EXTENSIONS_AUDIO[1]				= "wma";
+$_Application_Module_Member_Media_Player_ALLOWED_FILE_EXTENSIONS_AUDIO[2]				= "flac";
+$_Application_Module_Member_Media_Player_ALLOWED_FILE_EXTENSIONS_AUDIO[3]				= "ogg";
+
+/*
+ ============================================================================================================
+ + File Data Specifications :: Audio File
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Media_Player_FILE_PATHINFO_FILE_AUDIO					= pathinfo($_FILES['AMM_Media_Player_Upload_File_Audio']['name']);
+$_Application_Module_Member_Media_Player_EXTENSION_FILE_AUDIO 						= $_Application_Module_Member_Media_Player_FILE_PATHINFO_FILE_AUDIO['extension'];
+$_Application_Module_Member_Media_Player_BASENAME_FILE_AUDIO						= $_Application_Module_Member_Media_Player_FILE_PATHINFO_FILE_AUDIO['basename'];
+
+$_Application_Module_Member_Media_Player_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE_AUDIO			= pathinfo($_Application_Module_Member_Media_Player_BASENAME_FILE_AUDIO, PATHINFO_EXTENSION);
+
+/*
+ ============================================================================================================
+ + File Upload Details :: Video File
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Media_Player_SPECIFY_UPLOAD_FILE_DIRECTORY_VIDEO				= "./Temporary/";
+$_Application_Module_Member_Media_Player_SPECIFY_UPLOAD_FILE_VIDEO					= $_Application_Module_Member_Media_Player_SPECIFY_UPLOAD_FILE_DIRECTORY_VIDEO . basename($_FILES['AMM_Media_Player_Upload_File_Video']['name']);
+
+/*
+ ============================================================================================================
+ + Allowed File Extensions :: Video File
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Media_Player_ALLOWED_FILE_EXTENSIONS_VIDEO					= array();
+$_Application_Module_Member_Media_Player_ALLOWED_FILE_EXTENSIONS_VIDEO[0]				= "avi";
+$_Application_Module_Member_Media_Player_ALLOWED_FILE_EXTENSIONS_VIDEO[1]				= "mkv";
+$_Application_Module_Member_Media_Player_ALLOWED_FILE_EXTENSIONS_VIDEO[2]				= "mov";
+$_Application_Module_Member_Media_Player_ALLOWED_FILE_EXTENSIONS_VIDEO[3]				= "mp4";
+$_Application_Module_Member_Media_Player_ALLOWED_FILE_EXTENSIONS_VIDEO[4]				= "wmv";
+$_Application_Module_Member_Media_Player_ALLOWED_FILE_EXTENSIONS_VIDEO[5]				= "webm";
+
+/*
+ ============================================================================================================
+ + File Data Specifications :: Video File
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Media_Player_FILE_PATHINFO_FILE_VIDEO					= pathinfo($_FILES['AMM_Media_Player_Upload_File_Video']['name']);
+$_Application_Module_Member_Media_Player_EXTENSION_FILE_VIDEO 						= $_Application_Module_Member_Media_Player_FILE_PATHINFO_FILE_VIDEO['extension'];
+$_Application_Module_Member_Media_Player_BASENAME_FILE_VIDEO						= $_Application_Module_Member_Media_Player_FILE_PATHINFO_FILE_VIDEO['basename'];
+
+$_Application_Module_Member_Media_Player_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE_VIDEO			= pathinfo($_Application_Module_Member_Media_Player_BASENAME_FILE_VIDEO, PATHINFO_EXTENSION);
+
+/*
+ ============================================================================================================
+ + Find and Open :: Directory :: Audio :: Music
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Media_Player_FIND_DIRECTORY_AUDIO_MUSIC					= "./Upload/Audio/Music";
+$_Application_Module_Member_Media_Player_OPEN_DIRECTORY_AUDIO_MUSIC					= opendir($_Application_Module_Member_Media_Player_FIND_DIRECTORY_AUDIO_MUSIC);
+
+/*
+ ============================================================================================================
+ + Find and Open :: Directory :: Video :: Movies
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Media_Player_FIND_DIRECTORY_VIDEO_MOVIES					= "./Upload/Video/Movies";
+$_Application_Module_Member_Media_Player_OPEN_DIRECTORY_VIDEO_MOVIES					= opendir($_Application_Module_Member_Media_Player_FIND_DIRECTORY_VIDEO_MOVIES);
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Video Stream :: From Uniform-Resource-Location
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["DisplayVideo"] == "URL") {
+
+/*
+ ============================================================================================================
+ + IF: Internal Application: Display :: Video Stream :: Input Form :: Variables :: HAVE NOT Executed, Display :: Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Media_Player_POST_VIDEO_URL) {
+
+echo ("
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;DisplayVideo&#61;URL&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"POST\">
+												Video Stream :: File :: Uniform-Resource-Location<BR>
+												<TEXTAREA ROWS=\"15\" COLS=\"75\" MAXLENGTH=\"2000\" NAME=\"AMM_Media_Player_Video_URL\">Paste Video Uniform-Resource-Location Here...</TEXTAREA><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Submit Video URL\"><BR>
+											</FORM>
+");
+
+/*
+ ============================================================================================================
+ + ELSE: Display :: Video File :: From :: Uniform-Resource-Location
+ ============================================================================================================
+*/
+
+} else {
+
+echo ("
+											<CENTER><IFRAME SRC=\"$_Application_Module_Media_Player_POST_VIDEO_URL\" WIDTH=\"80%\" HEIGHT=\"350\"></IFRAME></CENTER>
+");
+
+} // [ + ] IF: Display :: Video Stream :: From :: Uniform-Resource-Location Embedded :: Input Form :: Variables HAVE Executed
+
+} // [ + ] IF: Internal Application: Display Video By Uniform-Resource-Location Embedded Is Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Video Stream :: From Video File
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["DisplayVideo"] == "FileName") {
+
+/*
+ ============================================================================================================
+ + IF: Internal Application: Display :: Video Stream :: Input Form :: Variables :: HAVE NOT Executed, Display :: Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Media_Player_POST_VIDEO_FILE_NAME) {
+
+echo ("
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;DisplayVideo&#61;FileName&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"POST\">
+												Video Stream :: Uniform-Resource-Location<BR>
+												<TEXTAREA ROWS=\"15\" COLS=\"75\" MAXLENGTH=\"2000\" NAME=\"AMM_Media_Player_Video_File_Name\">Paste Video File Name Uniform-Resource-Location Here...</TEXTAREA><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Submit Video File Name\"><BR>
+											</FORM>
+");
+
+/*
+ ============================================================================================================
+ + ELSE: Display :: Video File :: From :: Local Video File
+ ============================================================================================================
+*/
+
+} else {
+
+echo ("
+											<CENTER>
+												<VIDEO WIDTH=\"80%\" HEIGHT=\"350\" CONTROLS AUTOPLAY>
+													<SOURCE SRC=\"$_Application_Module_Media_Player_POST_VIDEO_FILE_NAME\" TYPE=\"VIDEO/MP4\">
+												</VIDEO>
+											</CENTER>
+");
+
+} // [ + ] IF: Internal Application: Display :: Video Stream :: From :: Local Or Remote File :: Input Form :: Variables HAVE Executed
+
+} // [ + ] IF: Internal Application: Display :: Video Stream :: From :: Local Or Remote File :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Play :: Audio Stream :: From Uniform-Resource-Location
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["PlayAudioStream"] == "URL") {
+
+/*
+ ============================================================================================================
+ + IF: Internal Application: Play :: Audio Stream :: Input Form :: Variables :: HAVE NOT Executed, Display :: Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Media_Player_POST_AUDIO_URL) {
+
+echo ("
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;PlayAudioStream&#61;URL&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"POST\">
+												Audio Stream :: Uniform-Resource-Location<BR>
+												<TEXTAREA ROWS=\"15\" COLS=\"75\" MAXLENGTH=\"2000\" NAME=\"AMM_Media_Player_Play_Audio_URL\">Paste Audio Stream Uniform-Resource-Location String Here...</TEXTAREA><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Submit Audio URL Stream\"><BR>
+											</FORM>
+");
+
+/*
+ ============================================================================================================
+ + ELSE: Play :: Audio File :: From :: Uniform-Resource-Location
+ ============================================================================================================
+*/
+
+} else {
+
+echo ("
+											<CENTER>
+												<AUDIO CONTROLS>
+													<SOURCE SRC=\"$_Application_Module_Member_Media_Player_POST_AUDIO_URL\" TYPE=\"AUDIO/MPEG\">
+											</CENTER>
+");
+
+} // [ + ] IF: Internal Application: Play :: Audio Stream :: Input Form :: Variables :: HAVE Executed
+
+} // [ + ] IF: Internal Application: Play :: Audio Stream :: From :: Uniform-Resource-Location :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + Internal Application: Play :: Audio Stream :: From Audio File
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["PlayAudioStream"] == "FileName") {
+
+/*
+ ============================================================================================================
+ + IF: Internal Application: Play :: Audio Stream :: Input Form :: Variables :: HAVE NOT Executed, Display :: Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Media_Player_POST_AUDIO_FILE_NAME) {
+
+echo ("
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;PlayAudioStream&#61;FileName&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"POST\">
+												Audio Stream :: File :: Uniform-Resource-Location<BR>
+												<TEXTAREA ROWS=\"15\" COLS=\"75\" MAXLENGTH=\"2000\" NAME=\"AMM_Media_Player_Play_Audio_File_Name\">Paste Audio Stream File Name Uniform-Resource-Location String Here...</TEXTAREA><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Submit Audio File Stream\"><BR>
+											</FORM>
+");
+
+/*
+ ============================================================================================================
+ + ELSE: Play :: Audio File :: From :: Local Audio File
+ ============================================================================================================
+*/
+
+} else {
+
+echo ("
+											<CENTER>
+												<AUDIO CONTROLS AUTOPLAY>
+													<SOURCE SRC=\"$_Application_Module_Member_Media_Player_POST_AUDIO_FILE_NAME\" TYPE=\"AUDIO/MPEG\">
+											</CENTER>
+
+											<CENTER>
+												<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;DeleteMedia&#61;Audio&amp;Music_File&#61;$_Application_Module_Member_Media_Player_POST_AUDIO_FILE_NAME\" TITLE=\":: Delete This Audio File ::\">Delete This Audio File</A>
+											</CENTER>
+");
+
+} // [ + ] IF: Internal Application: Play :: Audio Stream :: From File :: Input Form :: Variables :: HAVE Executed
+
+} // [ + ] IF: Internal Application: Play :: Audio Stream :: From File :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Upload :: Media
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Upload"] == "Media") {
+
+/*
+ ============================================================================================================
+ + IF: Registered Member Account Credentials Exist, ARE VALID AND Registered Member Account Access Level Is: Greater Than OR Equal To: Moderator
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null && $_GLOBAL_MEMBER_ACCESS_LEVEL >= 2) {
+
+/*
+ ============================================================================================================
+ + IF: Upload :: Media :: Audio :: Input Form :: Variable HAS NOT Executed, Display Input Form
+ ============================================================================================================
+*/
+
+if ((!$_Application_Module_Member_Media_Player_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE_AUDIO)) {
+
+echo ("
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;Upload&#61;Media&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
+												* Media :: File :: Audio File:<BR>
+												[ Maximum Audio File Name Length: 50 Characters ]<BR>
+												* Allowed Audio File Extensions: MP3, WMA, FLAC, OGG<BR>
+													<INPUT TYPE=\"file\" name=\"AMM_Media_Player_Upload_File_Audio\"><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Upload Media\">
+											</FORM><BR>
+											<B>Maximum File Upload Size :: Audio File :: In Kilo-BITS :: File: $_Application_Module_Member_Media_Player_MAXIMUM_UPLOAD_LIMIT_FILE_AUDIO</B><BR><BR>
+");
+
+/*
+ ============================================================================================================
+ + ELSE: Input Form: Media Upload :: Audio File :: Variable HAS Executed
+ ============================================================================================================
+*/
+
+} else {
+
+/*
+ ============================================================================================================
+ + IF: Attempt To Move The Audio Files To The Temporary Directory
+ ============================================================================================================
+*/
+
+											echo ("* Message: Attempting To Upload This Audio File... Wait.<BR>");
+
+if (move_uploaded_file($_FILES['AMM_Media_Player_Upload_File_Audio']['tmp_name'], $_Application_Module_Member_Media_Player_SPECIFY_UPLOAD_FILE_AUDIO)) {
+
+											echo ("* Message: This Audio File Was Successfully Uploaded To The Temporary Upload Directory !<BR>");
+
+/*
+ ============================================================================================================
+ + ELSE: Display Error Message
+ ============================================================================================================
+*/
+
+} else {
+
+											echo ("* Message: Error: This Audio File *WAS NOT* Uploaded To The Temporary Upload Directory !<BR>");
+
+} // [ + ] IF: Move Uploaded File: Audio File
+
+											echo ("* Message: Checking The Audio File Properties... Wait.<BR>");
+
+											echo ("* Message: Checking The Audio File Extension Type... Wait.<BR>");
+
+											echo ("* Message: The Audio File Extension Type Detected Is: $_Application_Module_Member_Media_Player_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE_AUDIO !<BR>");
+
+/*
+ ============================================================================================================
+ + IF: Media :: Audio :: Audio File :: File Extension :: Is: In Allowed File Extensions Array
+ ============================================================================================================
+*/
+
+if (in_array($_Application_Module_Member_Media_Player_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE_AUDIO, $_Application_Module_Member_Media_Player_ALLOWED_FILE_EXTENSIONS_AUDIO)) {
+
+$_Application_Module_Member_Media_Player_PREPARE_FILE_AUDIO				= "1";
+
+} // [ + ] IF: File Extension Is In Allowed File Extension Array
+
+/*
+ ============================================================================================================
+ + IF: Media :: Audio :: Audio File :: File Extension :: Is: In Allowed File Extensions Array :: Prepare Audio File
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Media_Player_PREPARE_FILE_AUDIO == "1") {
+
+											echo ("* Message: This Audio File Is Acceptable... Wait.<BR>");
+
+											echo ("* Message: Checking For Existing Audio File Within The ./Upload/Audio/Music Directory... Wait.<BR>");
+
+/*
+ ============================================================================================================
+ + IF: Media :: Audio :: Audio File :: Exists Within Audio Directory
+ ============================================================================================================
+*/
+
+if (file_exists("./Upload/Audio/Music/$_Application_Module_Member_Media_Player_BASENAME_FILE_AUDIO")) {
+
+											echo ("* Message: This Audio File Already Exists Within The ./Upload/Audio/Music Directory... Deleting This Temporary Audio File Immediately !<BR>");
+
+											unlink("./Temporary/$_Application_Module_Member_Media_Player_BASENAME_FILE_AUDIO");
+
+/*
+ ============================================================================================================
+ + ELSE: Media :: Audio :: Audio File :: DOES NOT Exist Within Audio Directory
+ ============================================================================================================
+*/
+
+} else {
+
+
+											echo ("* Message: This Audio File Does Not Currently Exist Within The ./Upload/Audio/Music Directory... Checking The Audio File Size... Wait.<BR>");
+
+/*
+ ============================================================================================================
+ + IF: Media :: Audio :: Audio File :: File Size :: Is: Greater Than: The Allowed Audio File Size Limitations
+ ============================================================================================================
+*/
+
+if (filesize($_Application_Module_Member_Media_Player_SPECIFY_UPLOAD_FILE_AUDIO > $_Application_Module_Member_Media_Player_MAXIMUM_UPLOAD_LIMIT_FILE_AUDIO)) {
+
+											echo ("* Message: This Audio File Size Is Greater Than The Allowed Media Upload File Size, Deleting Now... Wait.<BR>");
+
+											unlink("./Temporary/$_Application_Module_Member_Media_Player_BASENAME_FILE_AUDIO");
+
+											echo ("* Message: This Audio File Was Deleted.<BR>");
+
+/*
+ ============================================================================================================
+ + ELSE: Media :: Audio :: Audio File :: File Size :: Is NOT: Greater Than: The Allowed Audio File Size Limitations
+ ============================================================================================================
+*/
+
+} else {
+
+
+/*
+ ============================================================================================================
+ + Media :: Audio :: Audio Files Are Cleared, Move The Audio Files Permanently To The Audio Directory
+ ============================================================================================================
+*/
+
+											echo ("* Message: This Audio File Size Is Acceptable, Permanently Moving This Audio File To The ./Upload/Audio/Music Directory Now... Wait.<BR>");
+
+											copy("./Temporary/$_Application_Module_Member_Media_Player_BASENAME_FILE_AUDIO","./Upload/Audio/Music/$_Application_Module_Member_Media_Player_BASENAME_FILE_AUDIO");
+
+											unlink("./Temporary/$_Application_Module_Member_Media_Player_BASENAME_FILE_AUDIO");
+
+											echo ("* Message: This Audio File Has Been Uploaded.<BR>");
+
+header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Media_Player&Upload=Media");
+
+} // [ + ] IF: Media :: File :: Audio :: File Already Exists Within Audio Directory :: Unlink Audio File
+
+} // [ + ] IF: Media :: File :: Audio :: File Size :: Is: Greater Than: The Allowed Media Audio File File Size
+
+} // [ + ] IF: Media :: File :: Audio :: Is: Prepared
+
+} // [ + ] IF: Internal Application: Upload :: Media :: File :: Audio :: Input Form :: Variable HAS Executed
+
+/*
+ ============================================================================================================
+ + IF: Upload :: Media :: Video :: Input Form :: Variable HAS NOT Executed, Display Input Form
+ ============================================================================================================
+*/
+
+if ((!$_Application_Module_Member_Media_Player_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE_VIDEO)) {
+
+echo ("
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;Upload&#61;Media&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
+												* Media :: File :: Video File:<BR>
+												[ Maximum Video File Name Length: 50 Characters ]<BR>
+												* Allowed Video File Extensions: AVI, MKV, MOV, MP4, WMV, WEBM<BR>
+													<INPUT TYPE=\"file\" name=\"AMM_Media_Player_Upload_File_Video\"><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Upload Media\">
+											</FORM><BR>
+											<B>Maximum File Upload Size :: Video File :: In Kilo-BITS :: File: $_Application_Module_Member_Media_Player_MAXIMUM_UPLOAD_LIMIT_FILE_VIDEO</B><BR>
+");
+
+/*
+ ============================================================================================================
+ + ELSE: Input Form: Media Upload :: Video File :: Variable HAS Executed
+ ============================================================================================================
+*/
+
+} else {
+
+/*
+ ============================================================================================================
+ + IF: Attempt To Move The Video Files To The Temporary Directory
+ ============================================================================================================
+*/
+
+											echo ("* Message: Attempting To Upload This Video File... Wait.<BR>");
+
+if (move_uploaded_file($_FILES['AMM_Media_Player_Upload_File_Video']['tmp_name'], $_Application_Module_Member_Media_Player_SPECIFY_UPLOAD_FILE_VIDEO)) {
+
+											echo ("* Message: This Video File Was Successfully Uploaded To The Temporary Upload Directory !<BR>");
+
+/*
+ ============================================================================================================
+ + ELSE: Display Error Message
+ ============================================================================================================
+*/
+
+} else {
+
+											echo ("* Message: Error: This Video File *WAS NOT* Uploaded To The Temporary Upload Directory !<BR>");
+
+} // [ + ] IF: Move Uploaded File: Video File
+
+											echo ("* Message: Checking The Video File Properties... Wait.<BR>");
+
+											echo ("* Message: Checking The Video File Extension Type... Wait.<BR>");
+
+											echo ("* Message: The Video File Extension Type Detected Is: $_Application_Module_Member_Media_Player_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE_VIDEO !<BR>");
+
+/*
+ ============================================================================================================
+ + IF: Media :: Video :: Video File :: File Extension :: Is: In Allowed File Extensions Array
+ ============================================================================================================
+*/
+
+if (in_array($_Application_Module_Member_Media_Player_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE_VIDEO, $_Application_Module_Member_Media_Player_ALLOWED_FILE_EXTENSIONS_VIDEO)) {
+
+$_Application_Module_Member_Media_Player_PREPARE_FILE_VIDEO				= "1";
+
+} // [ + ] IF: File Extension Is In Allowed File Extension Array
+
+/*
+ ============================================================================================================
+ + IF: Media :: Video :: Video File :: File Extension :: Is: In Allowed File Extensions Array :: Prepare Video File
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Media_Player_PREPARE_FILE_VIDEO == "1") {
+
+											echo ("* Message: This Video File Is Acceptable... Wait.<BR>");
+
+											echo ("* Message: Checking For Existing Video File Within The ./Upload/Video/Movies Directory... Wait.<BR>");
+
+/*
+ ============================================================================================================
+ + IF: Media :: Video :: Video File :: Exists Within Audio Directory
+ ============================================================================================================
+*/
+
+if (file_exists("./Upload/Video/Movies/$_Application_Module_Member_Media_Player_BASENAME_FILE_VIDEO")) {
+
+											echo ("* Message: This Video File Already Exists Within The ./Upload/Video/Movies/ Directory... Deleting This Temporary Video File Immediately !<BR>");
+
+											unlink("./Temporary/$_Application_Module_Member_Media_Player_BASENAME_FILE_VIDEO");
+
+/*
+ ============================================================================================================
+ + ELSE: Media :: Video :: Video File :: DOES NOT Exist Within The Video Directory
+ ============================================================================================================
+*/
+
+} else {
+
+
+											echo ("* Message: This Video File Does Not Currently Exist Within The ./Upload/Video/Movies/ Directory... Checking The Video File Size... Wait.<BR>");
+
+/*
+ ============================================================================================================
+ + IF: Media :: Video :: Video File :: File Size :: Is: Greater Than: The Allowed Video File Size Limitations
+ ============================================================================================================
+*/
+
+if (filesize($_Application_Module_Member_Media_Player_SPECIFY_UPLOAD_FILE_VIDEO > $_Application_Module_Member_Media_Player_MAXIMUM_UPLOAD_LIMIT_FILE_VIDEO)) {
+
+											echo ("* Message: This Video File Size Is Greater Than The Allowed Media Upload File Size, Deleting Now... Wait.<BR>");
+
+											unlink("./Temporary/$_Application_Module_Member_Media_Player_BASENAME_FILE_VIDEO");
+
+											echo ("* Message: This Video File Was Deleted.<BR>");
+
+/*
+ ============================================================================================================
+ + ELSE: Media :: Video :: Video File :: File Size :: Is NOT: Greater Than: The Allowed Video File Size Limitations
+ ============================================================================================================
+*/
+
+} else {
+
+
+/*
+ ============================================================================================================
+ + Media :: Video :: Video Files Are Cleared, Move The Video Files Permanently To The Video Directory
+ ============================================================================================================
+*/
+
+											echo ("* Message: This Video File Size Is Acceptable, Permanently Moving This Video File To The ./Upload/Video/Movies Directory Now... Wait.<BR>");
+
+											copy("./Temporary/$_Application_Module_Member_Media_Player_BASENAME_FILE_VIDEO","./Upload/Video/Movies/$_Application_Module_Member_Media_Player_BASENAME_FILE_VIDEO");
+
+											unlink("./Temporary/$_Application_Module_Member_Media_Player_BASENAME_FILE_VIDEO");
+
+											echo ("* Message: This Video File Has Been Uploaded.<BR>");
+
+header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Media_Player&Upload=Media");
+
+} // [ + ] IF: Media :: File :: Video :: File Already Exists Within Video Directory :: Unlink Video File
+
+} // [ + ] IF: Media :: File :: Video :: File Size :: Is: Greater Than: The Allowed Media Video File File Size
+
+} // [ + ] IF: Media :: File :: Video :: Is: Prepared
+
+} // [ + ] IF: Internal Application: Upload :: Media :: File :: Video :: Input Form :: Variable HAS Executed
+
+/*
+ ============================================================================================================
+ + ELSE: Registered Member Account Credentials DO NOT Exist AND OR ARE NOT VALID AND OR Registered Member Account Access Level Is: Less Than: Moderator
+ ============================================================================================================
+*/
+
+} else {
+
+echo ("* Media Player Message: Authentication Is Required In Order To Upload Media To This Media Player.");
+
+} // [ + ] IF: Registered Member Account Credentials Exist, ARE VALID AND Registered Member Account Access Level Is: Greater Than OR Equal To: Moderator
+
+} // [ + ] IF: Internal Application: Upload :: Media :: File :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Delete :: Media :: Local Audio File
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["DeleteMedia"] == "Audio") {
+
+/*
+ ============================================================================================================
+ + IF: Registered Member Account Credentials Exist, ARE VALID AND Registered Member Account Access Level Is: Greater Than OR Equal To: Moderator
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null && $_GLOBAL_MEMBER_ACCESS_LEVEL >= 2) {
+
+/*
+ ============================================================================================================
+ + WHILE: Reading :: Directory :: Audio :: Music
+ ============================================================================================================
+*/
+
+while (($_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC = readdir($_Application_Module_Member_Media_Player_OPEN_DIRECTORY_AUDIO_MUSIC))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP: Exploit :: Local-File-Inclusion AND Remote-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC == "." || $_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC == ".." || $_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC == "index.php") {
+/**
+ * Do Nothing
+**/
+} else {
+
+/*
+ ============================================================================================================
+ + IF: Audio :: Music :: File :: Is: Read Directory :: Audio :: Music
+ ============================================================================================================
+*/
+
+if ($_GET["Music_File"] == "$_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC") {
+
+/*
+ ============================================================================================================
+ + IF: FILE EXISTS: Audio :: Music :: File :: Is: Read Directory :: Audio :: Music
+ ============================================================================================================
+*/
+
+if (file_exists("./Upload/Audio/Music/$_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC")) {
+
+/*
+ ============================================================================================================
+ + UNLINK: Selected :: Media :: Audio :: Music AND Redirect To Media Player Media Search
+ ============================================================================================================
+*/
+
+unlink("./Upload/Audio/Music/$_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC");
+
+header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Media_Player&Search=Media");
+
+} // [ + ] IF: File Exists: Audio :: Music :: File :: Is: Read Directory :: Audio :: Music
+
+} // [ + ] IF: Internal Application: Delete :: Media :: Audio :: Music :: File :: Is: Activated
+
+} // [ + ] IF: Specified Audio Directory AND Files ARE NOT Specified Audio Directory AND Files
+
+} // [ + ] WHILE: Reading :: Directory :: Audio :: Music
+
+/*
+ ============================================================================================================
+ + ELSE: Registered Member Account Credentials DO NOT Exist, ARE NOT Valid AND OR Registered Member Account Access Level Is: Less Than: Moderator
+ ============================================================================================================
+*/
+
+} else {
+
+echo ("Media Player Message: Authentication Is Required In Order To Delete Media.");
+
+} // [ + ] IF: Registered Member Account Credentials Exist, ARE VALID AND Registered Member Account Access Level Is: Greater Than OR Equal To: Moderator
+
+/*
+ ============================================================================================================
+ + Close Directory :: Audio :: Music
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Media_Player_OPEN_DIRECTORY_AUDIO_MUSIC);
+
+} // [ + ] IF: Internal Application: Delete :: Media :: Audio :: Music :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Delete :: Media :: Local Video File
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["DeleteMedia"] == "Video") {
+
+/*
+ ============================================================================================================
+ + IF: Registered Member Account Credentials Exist, ARE VALID AND Registered Member Account Access Level Is: Greater Than OR Equal To: Moderator
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null && $_GLOBAL_MEMBER_ACCESS_LEVEL >= 2) {
+
+/*
+ ============================================================================================================
+ + WHILE: Reading :: Directory :: Video :: Movies
+ ============================================================================================================
+*/
+
+while (($_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES = readdir($_Application_Module_Member_Media_Player_OPEN_DIRECTORY_VIDEO_MOVIES))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP: Exploit :: Local-File-Inclusion AND Remote-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES == "." || $_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES == ".." || $_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES == "index.php") {
+/**
+ * Do Nothing
+**/
+} else {
+
+/*
+ ============================================================================================================
+ + IF: Video :: Movies :: File :: Is: Read Directory :: Video :: Movies
+ ============================================================================================================
+*/
+
+if ($_GET["Video_File"] == "$_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES") {
+
+/*
+ ============================================================================================================
+ + IF: FILE EXISTS: Video :: Movies :: File :: Is: Read Directory :: Video :: Movies
+ ============================================================================================================
+*/
+
+if (file_exists("./Upload/Video/Movies/$_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES")) {
+
+/*
+ ============================================================================================================
+ + UNLINK: Selected :: Media :: Video :: Movies AND Redirect To Media Player Media Search
+ ============================================================================================================
+*/
+
+unlink("./Upload/Audio/Music/$_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES");
+
+header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Media_Player&Search=Media");
+
+} // [ + ] IF: File Exists: Video :: Movies :: File :: Is: Read Directory :: Video :: Movies
+
+} // [ + ] IF: Internal Application: Delete :: Media :: Video :: Movies :: File :: Is: Activated
+
+} // [ + ] IF: Specified Audio Directory AND Files ARE NOT Specified Audio Directory AND Files
+
+} // [ + ] WHILE: Reading :: Directory :: Video :: Movies
+
+/*
+ ============================================================================================================
+ + ELSE: Registered Member Account Credentials DO NOT Exist, ARE NOT Valid AND OR Registered Member Account Access Level Is: Less Than: Moderator
+ ============================================================================================================
+*/
+
+} else {
+
+echo ("* Media Player Message: Authentication Is Required In Order To Delete Media.");
+
+} // [ + ] IF: Registered Member Account Credentials Exist, ARE VALID AND Registered Member Account Access Level Is: Greater Than OR Equal To: Moderator
+
+/*
+ ============================================================================================================
+ + Close Directory :: Video :: Movies
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Media_Player_OPEN_DIRECTORY_VIDEO_MOVIES);
+
+} // [ + ] IF: Internal Application: Delete :: Media :: Video :: Movies :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Search :: Media
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Search"] == "Media") {
+
+/*
+ ============================================================================================================
+ +
+ + Find and Open :: Directory :: Audio :: Music Directory
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Media_Player_FIND_DIRECTORY_AUDIO_MUSIC				= "./Upload/Audio/Music";
+$_Application_Module_Member_Media_Player_OPEN_DIRECTORY_AUDIO_MUSIC				= opendir($_Application_Module_Member_Media_Player_FIND_DIRECTORY_AUDIO_MUSIC);
+
+echo ("
+												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;PlayAudioStream&#61;FileName&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													Audio :: Music<BR>
+													<SELECT NAME=\"AMM_Media_Player_Play_Audio_File_Name\">
+");
+
+/*
+ ============================================================================================================
+ + WHILE: Reading :: Directory :: Audio :: Music
+ ============================================================================================================
+*/
+
+while (($_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC = readdir($_Application_Module_Member_Media_Player_OPEN_DIRECTORY_AUDIO_MUSIC))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploit :: Remote-File-Inclusion AND Local-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC == "." || $_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC == ".." || $_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC == "index.php") {
+/**
+ * Do Nothing
+**/
+} else {
+
+
+$_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC_FILTERED_ARRAY		= array(".mp3",".wma",".flac",".ogg");
+$_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC_FILTERED			= str_replace("_", " ", "$_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC");
+$_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC_FILTERED			= str_replace($_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC_FILTERED_ARRAY, "", "$_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC");
+
+											echo ("<OPTION VALUE=\"./Upload/Audio/Music/$_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC\">$_Application_Module_Member_Media_Player_READ_DIRECTORY_AUDIO_MUSIC_FILTERED</OPTION>");
+
+} // [ + ] IF: Directory :: Audio :: Music Directory ARE NOT Specified Files And Directory
+
+} // [ + ] WHILE: Reading :: Directory :: Audio :: Music
+
+echo ("
+													</SELECT><BR>
+													<INPUT TYPE=\"submit\" VALUE=\"Play Media\">
+												</FORM><BR>
+");
+
+/*
+ ============================================================================================================
+ +
+ + Find and Open :: Directory :: Video :: Movies Directory
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Media_Player_FIND_DIRECTORY_VIDEO_MOVIES				= "./Upload/Video/Movies";
+$_Application_Module_Member_Media_Player_OPEN_DIRECTORY_VIDEO_MOVIES				= opendir($_Application_Module_Member_Media_Player_FIND_DIRECTORY_VIDEO_MOVIES);
+
+echo ("
+												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;DisplayVideo&#61;FileName&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													Video :: Movies<BR>
+													<SELECT NAME=\"AMM_Media_Player_Video_File_Name\">
+");
+
+/*
+ ============================================================================================================
+ + WHILE: Reading :: Directory :: Video :: Movies
+ ============================================================================================================
+*/
+
+while (($_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES = readdir($_Application_Module_Member_Media_Player_OPEN_DIRECTORY_VIDEO_MOVIES))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploit :: Remote-File-Inclusion AND Local-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES == "." || $_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES == ".." || $_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES == "index.php") {
+/**
+ * Do Nothing
+**/
+} else {
+
+$_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES_FILTERED_ARRAY		= array(".avi",".mkv",".mov",".mp4",".wmv",".webm");
+$_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES_FILTERED			= str_replace("_", " ", "$_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES");
+$_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES_FILTERED			= str_replace($_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES_FILTERED_ARRAY, "", "$_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES");
+
+											echo ("<OPTION VALUE=\"./Upload/Video/Movies/$_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES\">$_Application_Module_Member_Media_Player_READ_DIRECTORY_VIDEO_MOVIES_FILTERED</OPTION>");
+
+} // [ + ] IF: Directory :: Video :: Movies Directory ARE NOT Specified Files And Directory
+
+} // [ + ] WHILE: Reading :: Directory :: Video :: Movies
+
+echo ("
+													</SELECT><BR>
+													<INPUT TYPE=\"submit\" VALUE=\"Play Media\">
+												</FORM><HR>
+												<CENTER>[&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Application Module :: Media Player ::\">Options</A>&nbsp;]
+");
+
+/*
+ ============================================================================================================
+ + Close Directory :: Audio :: Music
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Media_Player_OPEN_DIRECTORY_AUDIO_MUSIC);
+
+/*
+ ============================================================================================================
+ + Close Directory :: Video :: Movies
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Media_Player_OPEN_DIRECTORY_VIDEO_MOVIES);
+
+} // [ + ] IF: Internal Application: Search :: Media :: Is: Activated
+?>

@@ -1,0 +1,355 @@
+<?php
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    ()  ()  ()
+ +  ()  ()  ()
+ +  ------------------------------
+ +  Application Module
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Root Directory => Applications => Member => Emulators
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|5|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+-============================================================================================================
+-+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-+-----------------------------------------------------------------------------------------------------------
+-+--------()()()-()()()()-()--()-()---()()()-()()()-()()()-()()()-----()()()------------------------ ()------
+-+- ()----()-----()-()-()-()--()-()---()--()---()---()-----()--()-----()---------------------------()--()----
+-+()--()--()()---()-()-()-()--()-()---()()()---()---()()---()()()-----()-----------------------------()------
+-+--()----()-----()----()-()--()-()---()--()---()---()-----()-()------()-------------------------------------
+-+--------()()()-()----()-()()()-()()-()--()---()---()()()-()--()-()()()-------------------------------------
+-+-----------------------------------------------------------------------------------------------------------
+-+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Version~Number~:~0.7.4~
+-============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ +
+ + [ ^ ] Application Module :: Member :: Emulators
+ +
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Application Module Header
+ ============================================================================================================
+*/
+
+											echo ($_Application_Module_Member_Message_Emulators_Header);
+
+/*
+ ============================================================================================================
+ +
+ + Internal Application :: Variables
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Internal Application :: Variables :: POST Variables
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Emulators_POST_SELECT_GAME_CONSOLE_TYPE			= $_POST['AMM_Emulators_Select_Game_Console_Type'];
+$_Application_Module_Member_Emulators_POST_SELECT_GAME_CONSOLE_ROM			= $_POST['AMM_Emulators_Select_Game_Console_ROM'];
+$_Application_Module_Member_Emulators_POST_SELECT_GAME_CONSOLE_ROM_HTML5_CANVAS		= $_POST['AMM_Emulators_Select_Game_Console_ROM_HTML5_Canvas'];
+$_Application_Module_Member_Emulators_POST_SELECT_GAME_CONSOLE_ROM_HTML5_UNITY3D	= $_POST['AMM_Emulators_Select_Game_Console_ROM_HTML5_Unity3D'];
+
+/*
+ ============================================================================================================
+ + Find and Open :: Video Game Directory :: H.T.M.L. 5 :: Canvas
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Emulators_FIND_DIRECTORY_HTML5_CANVAS			= "./Applications/Video_Games/HTML5/Canvas";
+$_Application_Module_Member_Emulators_OPEN_DIRECTORY_HTML5_CANVAS			= opendir($_Application_Module_Member_Emulators_FIND_DIRECTORY_HTML5_CANVAS);
+
+/*
+ ============================================================================================================
+ + Find and Open :: Video Game Directory :: H.T.M.L. 5 :: Unity 3D
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Emulators_FIND_DIRECTORY_HTML5_UNITY3D			= "./Applications/Video_Games/HTML5/Unity3D";
+$_Application_Module_Member_Emulators_OPEN_DIRECTORY_HTML5_UNITY3D			= opendir($_Application_Module_Member_Emulators_FIND_DIRECTORY_HTML5_UNITY3D);
+
+/*
+ ============================================================================================================
+ +
+ + Display :: Application Options
+ +
+ ============================================================================================================
+*/
+
+echo ("
+<HR ALIGN=\"CENTER\" WIDTH=\"35%\">
+	<CENTER>
+		::&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Emulators&amp;Display&#61;Options&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Video Game Console Emulator Selection ::\">Video Game Console Emulators</A>&nbsp;::
+	</CENTER>
+<HR ALIGN=\"CENTER\" WIDTH=\"35%\">
+<BR><BR>
+");
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Options :: Is: Activated
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Display"] == "Options") {
+
+/*
+ ============================================================================================================
+ + IF: Video Game Console Emulator :: Selection :: Input Form :: Variables :: HAVE NOT Executed, Display Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Emulators_POST_SELECT_GAME_CONSOLE_TYPE) {
+
+echo ("
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Emulators&amp;Select&#61;GameFile&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"POST\">
+												Video Game Console<BR>
+												<SELECT NAME=\"AMM_Emulators_Select_Game_Console_Type\" MAXLENGTH=\"1\">
+													<OPTION VALUE=\"0\">Nintendo :: Nintendo Entertainment System</OPTION>
+													<OPTION VALUE=\"1\">Nintendo :: Nintendo Entertainment System :: Super</OPTION>
+													<OPTION VALUE=\"2\">Nintendo :: Nintendo Entertainment System :: 64</OPTION>
+													<OPTION VALUE=\"3\">Nintendo :: Nintendo Entertainment System :: GameCube</OPTION>
+													<OPTION VALUE=\"4\">Nintendo :: Nintendo Entertainment System :: Wii</OPTION>
+													<OPTION VALUE=\"5\">Sega :: Genesis</OPTION>
+													<OPTION VALUE=\"6\">Sega :: GameGear</OPTION>
+													<OPTION VALUE=\"7\">H.T.M.L. 5 :: Canvas</OPTION>
+													<OPTION VALUE=\"8\">H.T.M.L. 5 :: Unity 3D</OPTION>
+												</SELECT><BR>
+												<INPUT TYPE=\"SUBMIT\" VALUE=\"Select Emulator\">
+											</FORM><BR>
+");
+
+} // [ + ] IF: Internal Application: Display :: Options :: Input Form :: Variables :: HAVE NOT Executed, Display Input Form
+
+} // [ + ] IF: Internal Application: Display :: Options :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Select :: Game File
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Select"] == "GameFile") {
+
+/*
+ ============================================================================================================
+ + IF: Video Game Console Emulator :: Selection :: Is: 7, H.T.M.L. Version: 5 - Canvas :: Include Video Game Programming Code
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Emulators_POST_SELECT_GAME_CONSOLE_TYPE == "7") {
+
+echo ("
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Emulators&amp;Include&#61;GameFile&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"POST\">
+												Video Game Console :: H.T.M.L. 5 Canvas<BR>
+													<INPUT TYPE=\"HIDDEN\" NAME=\"AMM_Emulators_Select_Game_Console_Type\" VALUE=\"7\">
+													<SELECT NAME=\"AMM_Emulators_Select_Game_Console_ROM_HTML5_Canvas\" MAXLENGTH=\"50\">
+");
+
+/*
+ ============================================================================================================
+ + WHILE: Reading :: Directory :: Video Game Console :: H.T.M.L. 5 Canvas
+ ============================================================================================================
+*/
+
+while (($_Application_Module_Member_Emulators_READ_DIRECTORY_HTML5_CANVAS = readdir($_Application_Module_Member_Emulators_OPEN_DIRECTORY_HTML5_CANVAS))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP: Exploit :: Local-File-Inclusion AND Remote-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Emulators_READ_DIRECTORY_HTML5_CANVAS == "." || $_Application_Module_Member_Emulators_READ_DIRECTORY_HTML5_CANVAS == ".." || $_Application_Module_Member_Emulators_READ_DIRECTORY_HTML5_CANVAS == "index.php") {
+/**
+ * Do Nothing
+**/
+} else { // [ + ] ELSE: Read Directory Contents WITHOUT Exploit Characters
+
+												echo ("<OPTION SELECT=\"$_Application_Module_Member_Emulators_READ_DIRECTORY_HTML5_CANVAS\">$_Application_Module_Member_Emulators_READ_DIRECTORY_HTML5_CANVAS</OPTION>");
+
+} // [ + ] IF: Directory Contents :: Video Game Console :: H.T.M.L. 5 Canvas :: IS NOT: H.T.M.L. 5 Canvas, DO NOT Search OR Include ROM Files
+
+} // [ + ] WHILE: Reading :: Directory :: Video Game Console :: H.T.M.L. 5 Canvas
+
+echo ("
+
+													</SELECT><BR>
+												<INPUT TYPE=\"SUBMIT\" VALUE=\"Select Game\">
+											</FORM><BR>
+");
+
+/*
+ ============================================================================================================
+ + Close :: Directory :: Video Game Console :: H.T.M.L. 5 Canvas
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Emulators_OPEN_DIRECTORY_HTML5_CANVAS);
+
+} // [ + ] IF: Internal Application: Select :: Video Game Console Emulator :: Type :: Is: 7, H.T.M.L. Version: 5 - Canvas
+
+/*
+ ============================================================================================================
+ + IF: Video Game Console Emulator :: Selection :: Is: 7, H.T.M.L. Version: 5 - Unity 3D :: Include Video Game Programming Code
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Emulators_POST_SELECT_GAME_CONSOLE_TYPE == "8") {
+
+echo ("
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Emulators&amp;Include&#61;GameFile&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"POST\">
+												Video Game Console :: H.T.M.L. 5 :: Unity 3D<BR>
+													<INPUT TYPE=\"HIDDEN\" NAME=\"AMM_Emulators_Select_Game_Console_Type\" VALUE=\"8\">
+													<SELECT NAME=\"AMM_Emulators_Select_Game_Console_ROM_HTML5_Unity3D\" MAXLENGTH=\"50\">
+");
+
+/*
+ ============================================================================================================
+ + WHILE: Reading :: Directory :: Video Game Console :: H.T.M.L. 5 :: Unity 3D
+ ============================================================================================================
+*/
+
+while (($_Application_Module_Member_Emulators_READ_DIRECTORY_HTML5_UNITY3D = readdir($_Application_Module_Member_Emulators_OPEN_DIRECTORY_HTML5_UNITY3D))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP: Exploit :: Local-File-Inclusion AND Remote-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Emulators_READ_DIRECTORY_HTML5_UNITY3D == "." || $_Application_Module_Member_Emulators_READ_DIRECTORY_HTML5_UNITY3D == ".." || $_Application_Module_Member_Emulators_READ_DIRECTORY_HTML5_UNITY3D == "index.php") {
+/**
+ * Do Nothing
+**/
+} else { // [ + ] ELSE: Read Directory Contents WITHOUT Exploit Characters
+
+												echo ("<OPTION SELECT=\"$_Application_Module_Member_Emulators_READ_DIRECTORY_HTML5_UNITY3D\">$_Application_Module_Member_Emulators_READ_DIRECTORY_HTML5_UNITY3D</OPTION>");
+
+} // [ + ] IF: Directory Contents :: Video Game Console :: H.T.M.L. 5 :: Unity 3D :: IS NOT: H.T.M.L. 5 :: Unity 3D, DO NOT Search OR Include ROM Files
+
+} // [ + ] WHILE: Reading :: Directory :: Video Game Console :: H.T.M.L. 5 :: Unity 3D
+
+echo ("
+
+													</SELECT><BR>
+												<INPUT TYPE=\"SUBMIT\" VALUE=\"Select Game\">
+											</FORM><BR>
+");
+
+/*
+ ============================================================================================================
+ + Close :: Directory :: Video Game Console :: H.T.M.L. 5 :: Unity 3D
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Emulators_OPEN_DIRECTORY_HTML5_UNITY3D);
+
+} // [ + ] IF: Internal Application: Select :: Video Game Console Emulator :: Type :: Is: 8, H.T.M.L. Version: 5 - Unity 3D
+
+} // [ + ] IF: Internal Application: Select :: Game File :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Include :: Game File
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Include"] == "GameFile") {
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Include :: Game File :: Video Game Console :: Emulator :: Type :: Is: H.T.M.L. 5 :: Canvas
+ +
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Emulators_POST_SELECT_GAME_CONSOLE_TYPE == "7") {
+
+echo ("
+<CENTER>
+	H.T.M.L. 5 Canvas :: Video Game File :: $_Application_Module_Member_Emulators_POST_SELECT_GAME_CONSOLE_ROM_HTML5_CANVAS<BR>
+	<OBJECT DATA=\"./Applications/Video_Games/HTML5/Canvas/$_Application_Module_Member_Emulators_POST_SELECT_GAME_CONSOLE_ROM_HTML5_CANVAS/index.html\" WIDTH=\"80%\" HEIGHT=\"650\"></OBJECT>
+</CENTER>
+");
+
+} // [ + ] IF: Internal Application: Include :: Game File :: Video Game Console Emulator :: Type :: Is: 7, H.T.M.L. Version: 5 - Canvas
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Include :: Game File :: Video Game Console :: Emulator :: Type :: Is: H.T.M.L. 5 :: Unity 3D
+ +
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Emulators_POST_SELECT_GAME_CONSOLE_TYPE == "8") {
+
+echo ("
+<CENTER>
+	H.T.M.L. 5 :: Unity 3D :: Video Game File :: $_Application_Module_Member_Emulators_POST_SELECT_GAME_CONSOLE_ROM_HTML5_UNITY3D<BR>
+	<OBJECT DATA=\"./Applications/Video_Games/HTML5/Unity3D/$_Application_Module_Member_Emulators_POST_SELECT_GAME_CONSOLE_ROM_HTML5_UNITY3D/index.html\" WIDTH=\"80%\" HEIGHT=\"650\"></OBJECT>
+</CENTER>
+");
+
+} // [ + ] IF: Internal Application: Include :: Game File :: Video Game Console Emulator :: Type :: Is: 7, H.T.M.L. Version: 5 - Unity 3D
+
+} // [ + ] IF: Internal Application: Include :: Game File :: Is: Activated
+?>

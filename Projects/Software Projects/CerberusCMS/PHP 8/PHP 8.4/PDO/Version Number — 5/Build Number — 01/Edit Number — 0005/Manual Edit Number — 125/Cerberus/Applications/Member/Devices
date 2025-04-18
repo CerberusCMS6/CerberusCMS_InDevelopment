@@ -1,0 +1,149 @@
+<?php
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    ()  ()  ()
+ +  ()  ()  ()
+ +  ------------------------------
+ +  Application Module
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Root Directory => Applications => Member => Devices
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|5|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ +
+ + [ ^ ] Application Module :: Member :: Devices
+ +
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Application Module Header
+ ============================================================================================================
+*/
+
+											echo ("$_Application_Module_Member_Message_Devices_Header");
+
+/*
+ ============================================================================================================
+ +
+ + [ @ ] IF: Internal Application: Display :: Option
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Display"] == "Options") {
+
+echo ("
+Hardware :: Device :: Testing
+<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Devices&amp;DeviceTest&#61;Camera_Microphone&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Hardware Device Testing :: Camera and Microphone ::\">Hardware :: Device :: Testing :: Camera and Microphone</A><BR>
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Devices&amp;DeviceTest&#61;Camera&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Hardware Device Testing :: Camera ::\">Hardware :: Device :: Testing :: Camera</A><BR>
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Devices&amp;DeviceTest&#61;Microphone&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Hardware Device Testing :: Microphone ::\">Hardware :: Device :: Testing :: Microphone</A><BR>
+");
+
+} // [ + ] IF: Internal Application: Display :: Options
+
+/*
+ ============================================================================================================
+ +
+ + [ @ ] IF: Internal Application: Device Test :: Camera and Microphone
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["DeviceTest"] == "Camera_Microphone") {
+
+echo ("
+    <div>
+      <button type=\"button\" id=\"buttonStart\">Start</button>
+      <button type=\"button\" id=\"buttonStop\" disabled>Stop</button>
+    </div>
+    <div>
+      <video autoplay muted playsinline id=\"videoLive\"></video>
+    </div>
+    <div>
+      <video controls playsinline id=\"videoRecorded\"></video>
+    </div>
+");
+
+echo ($_Application_Module_PlugIn_Camera_DEVICE_TEST);
+
+} // [ + ] IF: Internal Application: Device Test :: Camera and Microphone :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + [ @ ] IF: Internal Application: Device Test :: Camera
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["DeviceTest"] == "Camera") {
+
+echo ("
+    <div>
+      <button type=\"button\" id=\"buttonStart\">Start</button>
+      <button type=\"button\" id=\"buttonStop\" disabled>Stop</button>
+    </div>
+    <div>
+      <video autoplay muted playsinline id=\"videoLive\"></video>
+    </div>
+    <div>
+      <video controls playsinline id=\"videoRecorded\"></video>
+    </div>
+");
+
+echo ($_Application_Module_PlugIn_Camera_DEVICE_TEST_2);
+
+} // [ + ] IF: Internal Application: Device Test :: Camera :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + [ @ ] IF: Internal Application: Device Test :: Microphone
+ +
+ ============================================================================================================
+*/
+?>

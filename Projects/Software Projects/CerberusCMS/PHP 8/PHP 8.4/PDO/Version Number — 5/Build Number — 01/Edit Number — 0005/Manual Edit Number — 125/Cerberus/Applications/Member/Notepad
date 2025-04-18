@@ -1,0 +1,1024 @@
+<?php
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    ()  ()  ()
+ +  ()  ()  ()
+ +  ------------------------------
+ +  Application Module
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Root Directory => Applications => Member => Notepad
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|5|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ +
+ + [ ^ ] Application Module :: Member :: Notepad
+ +
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ + Internal Application :: Variables
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Internal Application :: Variables :: POST Variables
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Notepad_POST_UNLOCK_NOTEPAD_NOTE_PASSWORD_CLEARTEXT							= $_POST['AMM_Notepad_Post_Unlock_Notepad_Note_Password_ClearText'];
+$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_ACCESS_LEVEL							= $_POST['AMM_Notepad_Post_Create_Notepad_Note_Access_Level'];
+$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_PASSWORD_CLEARTEXT							= $_POST['AMM_Notepad_Post_Create_Notepad_Note_Password_ClearText'];
+$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_DATA_CLEARTEXT							= $_POST['AMM_Notepad_Post_Create_Notepad_Note_Data_ClearText'];
+$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_ENCRYPTED								= $_POST['AMM_Notepad_Post_Create_Notepad_Note_Encrypted'];
+$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_NAME								= $_POST['AMM_Notepad_Post_Create_Notepad_Note_Name'];
+$_Application_Module_Member_Notepad_POST_SEARCH_KEYWORD										= $_POST['AMM_Notepad_Post_Search_Keyword'];
+
+/*
+ ============================================================================================================
+ + IF: Notepad :: Note :: Password :: Is: Null, SET Default Password AS: Password
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_PASSWORD_CLEARTEXT == null) {
+
+$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_PASSWORD_CLEARTEXT							= "Password";
+
+} // [ + ] IF: Notepad :: Note :: Password :: Is: Null, SET Default Password AS: Password
+
+/*
+ ============================================================================================================
+ + Internal Application :: Variables :: HASH Variables
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_PASSWORD_HASHED							= hash('sha256', $_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_PASSWORD_CLEARTEXT);
+$_Application_Module_Member_Notepad_POST_UNLOCK_NOTEPAD_NOTE_PASSWORD_HASHED							= hash('sha256', $_Application_Module_Member_Notepad_POST_UNLOCK_NOTEPAD_NOTE_PASSWORD_CLEARTEXT);
+
+/*
+ ============================================================================================================
+ +
+ + Internal Application Variables :: Encrypted-Text Notepad Note :: Advanced Encryption Standard
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ + Variables :: Encryption :: Advanced Encryption Standard :: 256
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Post Variables :: Encryption :: Advanced Encryption Standard :: 256 :: Clear-Text Message Data
+ ============================================================================================================
+*/
+
+//$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_DATA_ENCRYPTED							= $_POST['AMM_Notepad_Post_Create_Notepad_Note_Data_ClearText'];
+//$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_DATA_ENCRYPTED							= $_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_DATA_ENCRYPTED;
+
+/*
+ ============================================================================================================
+ + Variables :: Encryption :: Advanced Encryption Standard :: 256 :: Cipher Parameters
+ ============================================================================================================
+*/
+
+//$_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Cipher_Ring_Type					= "AES-256-CBC";
+//$_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Cipher_Ring_IV_Length					= openssl_cipher_iv_length($_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Cipher_Ring_Type);
+//$_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Cipher_Ring_IV						= openssl_random_pseudo_bytes($_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Cipher_Ring_IV_Length);
+//$_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Cipher_Ring_IV_Options					= '0';
+
+/*
+ ============================================================================================================
+ + Encryption :: Cipher Method :: Cipher Ring :: Vector
+ ============================================================================================================
+*/
+
+//$_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Cipher_Ring_IV_Vector					= '1234567891011121';
+
+/*
+ ============================================================================================================
+ + Encryption :: Cipher Method :: Cipher :: Key
+ ============================================================================================================
+*/
+
+//$_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Password						= "$_Application_Module_Member_Notepad_POST_UNLOCK_NOTEPAD_NOTE_PASSWORD_CLEARTEXT";
+
+/*
+ ============================================================================================================
+ + Encryption :: Cipher Method :: Randomization
+ ============================================================================================================
+*/
+
+//$_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Cipher_Ring_IV_Random					= random_bytes($_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Cipher_Ring_IV_Length);
+
+/*
+ ============================================================================================================
+ + Encryption :: Cipher Method :: Open Secure Socket Layer :: Digest Key
+ ============================================================================================================
+*/
+
+//$_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Digest_Length						= openssl_digest(php_uname(), 'MD5', true);
+
+/*
+ ============================================================================================================
+ + Encryption :: Cipher Method :: Encryption :: Of :: Message Data
+ ============================================================================================================
+*/
+
+//$_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Encrypted_Data						= openssl_encrypt($_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_DATA_ENCRYPTED, $_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Cipher_Ring_Type, $_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Password, $_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Cipher_Ring_IV_Options, $_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Cipher_Ring_IV);
+
+/*
+ ============================================================================================================
+ +
+ + Variables :: Decryption :: Advanced Encryption Standard :: 256
+ +
+ ============================================================================================================
+*/
+
+//$_Application_Module_Member_Notepad_Encrypted_Data_Decryption_Type_AES_Decrypted_Data						= openssl_decrypt("", $_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Cipher_Ring_Type, $_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Password, $_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Cipher_Ring_IV_Options, $_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Cipher_Ring_IV);
+
+/*
+ ============================================================================================================
+ + Application Module Header
+ ============================================================================================================
+*/
+
+											echo ($_Application_Module_Member_Message_Notepad_Header);
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Options
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Display"] == "Options") {
+
+echo ("
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Notepad&amp;Display&#61;CreateNote&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Create Notepad Note ::\">Notepad Note :: Create</A><BR>
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Notepad&amp;Display&#61;FindNote&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Find Notepad Note ::\">Notepad Note :: Find</A>
+");
+
+} // [ + ] IF: Internal Application: Display :: Options :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Find Notepad Note Entry
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Display"] == "FindNote") {
+
+if (!$_Application_Module_Member_Notepad_POST_SEARCH_KEYWORD) {
+
+echo ("
+										<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Notepad&amp;Display&#61;FindNote&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"POST\">
+											Find :: Notepad Note Entry :: Search Keywords:<BR>
+												<INPUT TYPE=\"TEXT\" NAME=\"AMM_Notepad_Post_Search_Keyword\"><BR>
+											<INPUT TYPE=\"SUBMIT\" VALUE=\"Search\">
+										</FORM>
+");
+
+} else {
+
+/*
+ ============================================================================================================
+ + Database Server Query: Search All Notepad Note Entries From The Database Management System Server Database
+ ============================================================================================================
+*/
+
+$_Application_Module_Notepad_DB_Query_SEARCH_ALL_NOTEPAD_NOTE_ENTRIES						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_notepad WHERE note_data LIKE '%$_Application_Module_Member_Notepad_POST_SEARCH_KEYWORD%' ORDER BY id ASC");
+
+/*
+ ============================================================================================================
+ + WHILE: Retrieving :: Notepad Note Entries :: From The Database Management System Server Database
+ ============================================================================================================
+*/
+
+while ($_Application_Module_Notepad_DB_Query_SEARCH_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array = $_Application_Module_Notepad_DB_Query_SEARCH_ALL_NOTEPAD_NOTE_ENTRIES->fetch_array(MYSQLI_BOTH)) {
+
+$_Application_Module_Member_Notepad_SEARCH_LIST_NOTEPAD_NOTE_ID				= $_Application_Module_Notepad_DB_Query_SEARCH_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array['id'];
+$_Application_Module_Member_Notepad_SEARCH_LIST_NOTEPAD_NOTE_AUTHOR			= $_Application_Module_Notepad_DB_Query_SEARCH_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array['note_author'];
+$_Application_Module_Member_Notepad_SEARCH_LIST_NOTEPAD_NOTE_DATA			= $_Application_Module_Notepad_DB_Query_SEARCH_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array['note_data'];
+$_Application_Module_Member_Notepad_SEARCH_LIST_NOTEPAD_NOTE_NAME			= $_Application_Module_Notepad_DB_Query_SEARCH_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array['note_name'];
+$_Application_Module_Member_Notepad_SEARCH_LIST_NOTEPAD_NOTE_DATA_REDUCED		= substr($_Application_Module_Member_Notepad_SEARCH_LIST_NOTEPAD_NOTE_DATA, 0, 30);
+
+echo ("
+<B>Search Results For Notepad Note Search Keyword</B>: <I>$_Application_Module_Member_Notepad_POST_SEARCH_KEYWORD</I>
+<HR ALIGN=\"LEFT\" WIDTH=\"25%\"><BR>
+
+Notepad Note: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Notepad&amp;DisplayNote&#61;$_Application_Module_Member_Notepad_SEARCH_LIST_NOTEPAD_NOTE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Notepad Note Entry :: $_Application_Module_Member_Notepad_SEARCH_LIST_NOTEPAD_NOTE_NAME ::\">$_Application_Module_Member_Notepad_SEARCH_LIST_NOTEPAD_NOTE_NAME</A><BR>
+<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+$_Application_Module_Member_Notepad_SEARCH_LIST_NOTEPAD_NOTE_DATA_REDUCED ...<BR><BR>
+");
+
+} // [ + ] WHILE: Retrieving :: Notepad Note Entries :: From The Database Management System Server Database
+
+} // [ + ] IF: Internal Application: Find Notepad Note Entry :: Input Form Variables HAVE Executed
+
+} // [ + ] IF: Internal Application: Find Notepad Note Entry :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Create Note
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Display"] == "CreateNote") {
+
+/*
+ ============================================================================================================
+ + IF: Internal Application: Display :: Create Notepad Note Entry :: Input Form Variables HAVE NOT Executed, Display Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_DATA_CLEARTEXT) {
+
+echo ("
+												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Notepad&amp;Display&#61;CreateNote&amp;&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													* Notepad :: Note :: Access Level<BR>
+														<SELECT NAME=\"AMM_Notepad_Post_Create_Notepad_Note_Access_Level\" MAXLENGTH=\"1\">
+															<OPTION VALUE=\"0\">0 :: Public</OPTION>
+															<OPTION VALUE=\"1\">1 :: Registered Member Account</OPTION>
+															<OPTION VALUE=\"2\">2 :: Registered Member Account :: Moderation</OPTION>
+															<OPTION VALUE=\"3\">3 :: Registered Member Account :: Administration</OPTION>
+															<OPTION VALUE=\"4\">4 :: Registered Member Account :: Root-Administration</OPTION>
+															<OPTION VALUE=\"5\">5 :: Registered Member Account :: Services Root-Administration</OPTION>
+														</SELECT><BR>
+													* Notepad :: Note :: Encrypt This Notepad Note ?<BR>
+														<SELECT NAME=\"AMM_Notepad_Post_Create_Notepad_Note_Encrypted\" MAXLENGTH=\"1\">
+															<OPTION VALUE=\"0\">0 :: No</OPTION>
+															<OPTION VALUE=\"1\">1 :: Yes</OPTION>
+														</SELECT><BR>
+													* Notepad :: Note :: Name<BR>
+														<INPUT TYPE=\"text\" NAME=\"AMM_Notepad_Post_Create_Notepad_Note_Name\" MAXLENGTH=\"100\"><BR>
+													* Notepad :: Note :: Password<BR>
+														<INPUT TYPE=\"password\" NAME=\"AMM_Notepad_Post_Create_Notepad_Note_Password_ClearText\" MAXLENGTH=\"256\"><BR>
+													* Notepad :: Note :: Data<BR>
+														<TEXTAREA ROWS=\"20\" COLS=\"120\" NAME=\"AMM_Notepad_Post_Create_Notepad_Note_Data_ClearText\" MAXLENGTH=\"4096\">Write Notepad Note here...</TEXTAREA><BR>
+													<INPUT TYPE=\"submit\" VALUE=\"Create Note\">
+												</FORM>
+");
+
+} else {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry Is Marked: Encrypted, Craft Structured-Query-Language Query Statement For Encrypted Data
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_ENCRYPTED == "1") {
+
+$_Application_Module_Member_Notepad_DB_Query_INSERT_NOTEPAD_NOTE			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_notepad(
+note_access_level,
+note_author,
+note_data,
+note_encrypted,
+note_name,
+note_password,
+note_timestamp
+)VALUES(
+'$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_ACCESS_LEVEL',
+'$_GLOBAL_COOKIE_MEMBER_USERNAME',
+'$_Application_Module_Member_Notepad_Encrypted_Data_Encryption_Type_AES_Encrypted_Data',
+'$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_ENCRYPTED',
+'$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_NAME',
+'$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_PASSWORD_HASHED',
+'$_GLOBAL_LOCAL_SERVER_DATE_STANDARD'
+)");
+
+} else {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry Is NOT Marked: Encrypted, Craft Structured-Query-Language Query Statement For Non-Encrypted Data
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Notepad_DB_Query_INSERT_NOTEPAD_NOTE			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_notepad(
+note_access_level,
+note_author,
+note_data,
+note_encrypted,
+note_name,
+note_password,
+note_timestamp
+)VALUES(
+'$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_ACCESS_LEVEL',
+'$_GLOBAL_COOKIE_MEMBER_USERNAME',
+'$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_DATA_CLEARTEXT',
+'$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_ENCRYPTED',
+'$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_NAME',
+'$_Application_Module_Member_Notepad_POST_CREATE_NOTEPAD_NOTE_PASSWORD_HASHED',
+'$_GLOBAL_LOCAL_SERVER_DATE_STANDARD'
+)");
+
+} // [ + ] IF: Internal Application: Display :: Create Notepad Note :: Input Form Variable :: Encrypted Note :: Is: Activated
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server Database Query :: Insert Notepad Note Entry
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Notepad_DB_Query_INSERT_NOTEPAD_NOTE) {
+
+										echo ($_Application_Module_Member_Message_Notepad_NOTE_CREATED_SUCCESSFULLY);
+
+} else {
+
+										echo ($_Application_Module_Member_Message_Notepad_NOTE_CREATE_ERROR);
+
+} // [ + ] IF: Database Management System Server Query :: Insert New Notepad Note :: Variable HAS Executed
+
+/*
+ ============================================================================================================
+ + Kill: SQL Database Server Query: Insert New Notepad Note Entry
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Member_Notepad_DB_Query_INSERT_NOTEPAD_NOTE->free_result();
+
+} // [ + ] IF: Internal Application: Display :: Create Note :: Input Form Application Variables HAVE Executed
+
+} // [ + ] IF: Internal Application: Display :: Is: Create Note
+
+/*
+ ============================================================================================================
+ +
+ + Find :: All Notepad Note Entries
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Database Server Query: Select All Notepad Note Entries From The Database Management System Server Database
+ ============================================================================================================
+*/
+
+$_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_notepad ORDER BY id DESC");
+
+/*
+ ============================================================================================================
+ +
+ + Retrieve :: All Notepad Note Entries
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + WHILE: Retrieving :: Notepad Note Entry Data From The Database Management System Server Database
+ ============================================================================================================
+*/
+
+while ($_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array = $_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES->fetch_array(MYSQLI_BOTH)) {
+
+$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID								= $_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array['id'];
+$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ACCESS_LEVEL							= $_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array['note_access_level'];
+$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR								= $_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array['note_author'];
+$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_DATA								= $_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array['note_data'];
+$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ENCRYPTED							= $_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array['note_encrypted'];
+$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_NAME								= $_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array['note_name'];
+$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD								= $_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array['note_password'];
+$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_TIMESTAMP							= $_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array['note_timestamp'];
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Delete Notepad Note Entry
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["DeleteNote"] == "$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID") {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry Author :: Is: Current Registered Member Account UserName
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR == "$_GLOBAL_COOKIE_MEMBER_USERNAME") {
+
+$_Application_Module_Notepad_DB_Query_DELETE_NOTEPAD_NOTE_ENTRY						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("DELETE FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_notepad WHERE id='$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID'");
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry Author :: Is: Current Registered Member Account UserName
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR == "$_GLOBAL_COOKIE_MEMBER_USERNAME") {
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server Database Query :: Delete Notepad Note Entry BY ID Number
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Notepad_DB_Query_DELETE_NOTEPAD_NOTE_ENTRY) {
+
+									echo ($_Application_Module_Member_Message_Notepad_NOTE_DELETED_SUCCESSFULLY);
+
+} else {
+
+									echo ($_Application_Module_Member_Message_Notepad_NOTE_DELETE_ERROR);
+
+} // [ + ] IF: Database Management System Server :: Database Query :: Delete Selected Notepad Note Entry BY ID Number :: Variable HAS Executed
+
+} else {
+
+} // [ + ] IF: Notepad Note Entry Author :: Is: Current Registered Member Account UserName
+
+/*
+ ============================================================================================================
+ + Kill: SQL Database Server Query: Delete Notepad Note Entry By ID Number
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Notepad_DB_Query_DELETE_NOTEPAD_NOTE_ENTRY->free_result();
+
+} // [ + ] IF: Notepad Note Entry Author :: Is: Current Registered Member Account UserName
+
+} // [ + ] IF: Internal Application: Delete Notepad Note Entry :: ID Number :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display Note :: Note ID Number
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["DisplayNote"] == "$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID") {
+
+/*
+ ============================================================================================================
+ +
+ + IF: Notepad Note :: Access Level :: Is: 0, Public
+ +
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ACCESS_LEVEL == "0") {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry :: Is: Encrypted
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD != null) {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry :: Password Unlock Required, Display Password Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Notepad_POST_UNLOCK_NOTEPAD_NOTE_PASSWORD_CLEARTEXT) {
+
+echo ("
+													This Notepad Note Requires Password Verification<BR>
+													For Empty Passwords Use The Password: <I><B>Password</B></I>
+													<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Notepad&amp;DisplayNote&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													* Notepad :: Note :: Password<BR>
+														<INPUT TYPE=\"password\" NAME=\"AMM_Notepad_Post_Unlock_Notepad_Note_Password_ClearText\" VALUE=\"Password\" MAXLENGTH=\"256\"><BR>
+													<INPUT TYPE=\"submit\" VALUE=\"Unlock Note\">
+												</FORM>
+");
+
+} else {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry :: Password Input MATCHES Notepad Note Entry Password String
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Notepad_POST_UNLOCK_NOTEPAD_NOTE_PASSWORD_HASHED == "$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD") {
+
+echo ("
+Notepad Note Entry Data<BR>
+<TEXTAREA ROWS=\"20\" COLS=\"120\">$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_DATA</TEXTAREA><BR>
+This Notepad Note Entry Name: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_NAME<BR>
+This Notepad Note Entry Was Created On: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_TIMESTAMP<BR>
+This Notepad Note Entry Was Created By: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR\" TITLE=\":: Open & Display :: The Application Module :: Profile :: For :: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR ::\">$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR</A><BR>
+This Notepad Note Entry Password String: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD<BR>
+This Notepad Note Entry ID Number: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID<BR>
+This Notepad Note Entry Access Level: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ACCESS_LEVEL<BR>Is This Notepad Note Encrypted ?: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ENCRYPTED<BR>
+<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Notepad&amp;DeleteNote&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Delete Notepad Note Entry ID Number: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID ::\">Delete This Notepad Entry ?</A><BR><BR>
+");
+
+} else {
+
+												echo ($_Application_Module_Member_Message_Notepad_NOTE_UNLOCK_ERROR);
+
+} // [ + ] IF: Internal Application :: Display :: Notepad Note Entry ID Number :: Is Encrypted AND Input HASHED Password String MATCHES HASHED Password String In The Database Management System Server Database
+
+} // [ + ] IF: Internal Application :: Display :: Notepad Note Entry ID Number :: Is Encrypted :: Notepad Note Password Decryption Input Form Variables HAVE Executed
+
+} else {
+
+echo ("
+Notepad Note Entry Data<BR>
+<TEXTAREA ROWS=\"20\" COLS=\"120\">$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_DATA</TEXTAREA><BR>
+This Notepad Note Entry Name: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_NAME<BR>
+This Notepad Note Entry Was Created On: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_TIMESTAMP<BR>
+This Notepad Note Entry Was Created By: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR\" TITLE=\":: Open & Display :: The Application Module :: Profile :: For :: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR ::\">$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR</A><BR>
+This Notepad Note Entry Password String: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD<BR>
+This Notepad Note Entry ID Number: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID<BR>
+This Notepad Note Entry Access Level: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ACCESS_LEVEL<BR>Is This Notepad Note Encrypted ?: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ENCRYPTED<BR>
+<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Notepad&amp;DeleteNote&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Delete Notepad Note Entry ID Number: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID ::\">Delete This Notepad Entry ?</A><BR><BR>
+");
+
+} // [ + ] IF: Notepad Note Entry :: Requires Password Verification
+
+} // [ + ] IF: Notepad Note Entry :: Access Level :: Is: 0 :: Public, Non-Registered Member Account
+
+/*
+ ============================================================================================================
+ +
+ + IF: Notepad Note :: Access Level :: Is: 1, Registered Member Account
+ +
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ACCESS_LEVEL == "1") {
+
+/*
+ ============================================================================================================
+ + IF: Registered Member Account :: Credentials Exist AND ARE Valid
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null && $_GLOBAL_MEMBER_ACCESS_LEVEL >= 1) {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry :: Is: Encrypted
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD != null) {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry :: Password Unlock Required, Display Password Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Notepad_POST_UNLOCK_NOTEPAD_NOTE_PASSWORD_CLEARTEXT) {
+
+echo ("
+													This Notepad Note Requires Password Verification<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Notepad&amp;DisplayNote&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													* Notepad :: Note :: Password<BR>
+														<INPUT TYPE=\"password\" NAME=\"AMM_Notepad_Post_Unlock_Notepad_Note_Password_ClearText\" MAXLENGTH=\"256\"><BR>
+													<INPUT TYPE=\"submit\" VALUE=\"Unlock Note\">
+												</FORM>
+");
+
+} else {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry :: Password Input MATCHES Notepad Note Entry Password String
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Notepad_POST_UNLOCK_NOTEPAD_NOTE_PASSWORD_HASHED == "$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD") {
+
+echo ("
+Notepad Note Entry Data<BR>
+<TEXTAREA ROWS=\"20\" COLS=\"120\">$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_DATA</TEXTAREA><BR>
+This Notepad Note Entry Name: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_NAME<BR>
+This Notepad Note Entry Was Created On: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_TIMESTAMP<BR>
+This Notepad Note Entry Was Created By: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR\" TITLE=\":: Open & Display :: The Application Module :: Profile :: For :: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR ::\">$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR</A><BR>
+This Notepad Note Entry Password String: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD<BR>
+This Notepad Note Entry ID Number: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID<BR>
+This Notepad Note Entry Access Level: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ACCESS_LEVEL<BR>
+Is This Notepad Note Encrypted ?: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ENCRYPTED<BR>
+<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Notepad&amp;DeleteNote&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Delete Notepad Note Entry ID Number: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID ::\">Delete This Notepad Entry ?</A><BR><BR>
+");
+
+} else {
+
+												echo ($_Application_Module_Member_Message_Notepad_NOTE_UNLOCK_ERROR);
+
+} // [ + ] IF: Internal Application :: Display :: Notepad Note Entry ID Number :: Requires Password AND Input HASHED Password String MATCHES HASHED Password String In The Database Management System Server Database
+
+} // [ + ] IF: Internal Application :: Display :: Notepad Note Entry ID Number :: Requires Password :: Notepad Note Password Input Form Variables HAVE Executed
+
+} // [ + ] IF: Notepad Note Entry :: Requires Password Verification
+
+} else {
+
+												echo ($_Application_Module_Member_Message_Notepad_NOTE_ACCESS_LEVEL_MEMBER);
+
+} // [ + ] IF: Registered Member Account :: Credentials :: Exist AND ARE Valid
+
+} // [ + ] IF: Notepad Note Entry :: Access Level :: Is: 1 :: Registered Member Account
+
+/*
+ ============================================================================================================
+ +
+ + IF: Notepad Note :: Access Level :: Is: 2, Registered Member Account :: Moderator
+ +
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ACCESS_LEVEL == "2") {
+
+/*
+ ============================================================================================================
+ + IF: Registered Member Account :: Credentials Exist AND ARE Valid
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null && $_GLOBAL_MEMBER_ACCESS_LEVEL >= 2) {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry :: Requires: Password
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD != null) {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry :: Password Unlock Required, Display Password Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Notepad_POST_UNLOCK_NOTEPAD_NOTE_PASSWORD_CLEARTEXT) {
+
+echo ("
+													This Notepad Note Requires Password Verification<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Notepad&amp;DisplayNote&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													* Notepad :: Note :: Password<BR>
+														<INPUT TYPE=\"password\" NAME=\"AMM_Notepad_Post_Unlock_Notepad_Note_Password_ClearText\" MAXLENGTH=\"256\"><BR>
+													<INPUT TYPE=\"submit\" VALUE=\"Unlock Note\">
+												</FORM>
+");
+
+} else {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry :: Password Input MATCHES Notepad Note Entry Password String
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Notepad_POST_UNLOCK_NOTEPAD_NOTE_PASSWORD_HASHED == "$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD") {
+
+echo ("
+Notepad Note Entry Data<BR>
+<TEXTAREA ROWS=\"20\" COLS=\"120\">$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_DATA</TEXTAREA><BR>
+This Notepad Note Entry Name: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_NAME<BR>
+This Notepad Note Entry Was Created On: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_TIMESTAMP<BR>
+This Notepad Note Entry Was Created By: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR\" TITLE=\":: Open & Display :: The Application Module :: Profile :: For :: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR ::\">$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR</A><BR>
+This Notepad Note Entry Password String: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD<BR>
+This Notepad Note Entry ID Number: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID<BR>
+This Notepad Note Entry Access Level: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ACCESS_LEVEL<BR>Is This Notepad Note Encrypted ?: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ENCRYPTED<BR>
+<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Notepad&amp;DeleteNote&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Delete Notepad Note Entry ID Number: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID ::\">Delete This Notepad Entry ?</A><BR><BR>
+");
+
+} else {
+
+												echo ($_Application_Module_Member_Message_Notepad_NOTE_UNLOCK_ERROR);
+
+} // [ + ] IF: Internal Application :: Display :: Notepad Note Entry ID Number :: Requires Password AND Input HASHED Password String MATCHES HASHED Password String In The Database Management System Server Database
+
+} // [ + ] IF: Internal Application :: Display :: Notepad Note Entry ID Number :: Requires Password :: Notepad Note Password Input Form Variables HAVE Executed
+
+} // [ + ] IF: Notepad Note Entry :: Requires Password Verification
+
+} else {
+
+												echo ($_Application_Module_Member_Message_Notepad_NOTE_ACCESS_LEVEL_MODERATOR);
+
+} // [ + ] IF: Registered Member Account :: Credentials :: Exist AND ARE Valid
+
+} // [ + ] IF: Notepad Note Entry :: Access Level :: Is: 2 :: Registered Member Account :: Moderator
+
+/*
+ ============================================================================================================
+ +
+ + IF: Notepad Note :: Access Level :: Is: 3, Registered Member Account :: Administration
+ +
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ACCESS_LEVEL == "3") {
+
+/*
+ ============================================================================================================
+ + IF: Registered Member Account :: Credentials Exist AND ARE Valid
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null && $_GLOBAL_MEMBER_ACCESS_LEVEL >= 3) {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry :: Requires: Password
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD != null) {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry :: Password Unlock Required, Display Password Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Notepad_POST_UNLOCK_NOTEPAD_NOTE_PASSWORD_CLEARTEXT) {
+
+echo ("
+													This Notepad Note Requires Password Verification<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Notepad&amp;DisplayNote&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													* Notepad :: Note :: Password<BR>
+														<INPUT TYPE=\"password\" NAME=\"AMM_Notepad_Post_Unlock_Notepad_Note_Password_ClearText\" MAXLENGTH=\"256\"><BR>
+													<INPUT TYPE=\"submit\" VALUE=\"Unlock Note\">
+												</FORM>
+");
+
+} else {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry :: Password Input MATCHES Notepad Note Entry Password String
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Notepad_POST_UNLOCK_NOTEPAD_NOTE_PASSWORD_HASHED == "$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD") {
+
+echo ("
+Notepad Note Entry Data<BR>
+<TEXTAREA ROWS=\"20\" COLS=\"120\">$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_DATA</TEXTAREA><BR>
+This Notepad Note Entry Name: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_NAME<BR>
+This Notepad Note Entry Was Created On: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_TIMESTAMP<BR>
+This Notepad Note Entry Was Created By: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR\" TITLE=\":: Open & Display :: The Application Module :: Profile :: For :: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR ::\">$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR</A><BR>
+This Notepad Note Entry Password String: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD<BR>
+This Notepad Note Entry ID Number: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID<BR>
+This Notepad Note Entry Access Level: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ACCESS_LEVEL<BR>Is This Notepad Note Encrypted ?: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ENCRYPTED<BR>
+<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Notepad&amp;DeleteNote&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Delete Notepad Note Entry ID Number: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID ::\">Delete This Notepad Entry ?</A><BR><BR>
+");
+
+} else {
+
+												echo ($_Application_Module_Member_Message_Notepad_NOTE_UNLOCK_ERROR);
+
+} // [ + ] IF: Internal Application :: Display :: Notepad Note Entry ID Number :: Requires Password AND Input HASHED Password String MATCHES HASHED Password String In The Database Management System Server Database
+
+} // [ + ] IF: Internal Application :: Display :: Notepad Note Entry ID Number :: Requires Password :: Notepad Note Password Input Form Variables HAVE Executed
+
+} // [ + ] IF: Notepad Note Entry :: Requires: Password Verification
+
+} else {
+
+												echo ($_Application_Module_Member_Message_Notepad_NOTE_ACCESS_LEVEL_ADMINISTRATION);
+
+} // [ + ] IF: Registered Member Account :: Credentials :: Exist AND ARE Valid
+
+} // [ + ] IF: Notepad Note Entry :: Access Level :: Is: 3 :: Registered Member Account :: Administration
+
+/*
+ ============================================================================================================
+ +
+ + IF: Notepad Note :: Access Level :: Is: 4, Registered Member Account :: Root Administration
+ +
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ACCESS_LEVEL == "4") {
+
+/*
+ ============================================================================================================
+ + IF: Registered Member Account :: Credentials Exist AND ARE Valid
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null && $_GLOBAL_MEMBER_ACCESS_LEVEL >= 4) {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry :: Requires: Password
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD != null) {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry :: Password Unlock Required, Display Password Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Notepad_POST_UNLOCK_NOTEPAD_NOTE_PASSWORD_CLEARTEXT) {
+
+echo ("
+													This Notepad Note Requires Password Verification<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Notepad&amp;DisplayNote&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													* Notepad :: Note :: Password<BR>
+														<INPUT TYPE=\"password\" NAME=\"AMM_Notepad_Post_Unlock_Notepad_Note_Password_ClearText\" MAXLENGTH=\"256\"><BR>
+													<INPUT TYPE=\"submit\" VALUE=\"Unlock Note\">
+												</FORM>
+");
+
+} else {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry :: Password Input MATCHES Notepad Note Entry Password String
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Notepad_POST_UNLOCK_NOTEPAD_NOTE_PASSWORD_HASHED == "$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD") {
+
+echo ("
+Notepad Note Entry Data<BR>
+<TEXTAREA ROWS=\"20\" COLS=\"120\">$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_DATA</TEXTAREA><BR>
+This Notepad Note Entry Name: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_NAME<BR>
+This Notepad Note Entry Was Created On: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_TIMESTAMP<BR>
+This Notepad Note Entry Was Created By: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR\" TITLE=\":: Open & Display :: The Application Module :: Profile :: For :: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR ::\">$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR</A><BR>
+This Notepad Note Entry Password String: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD<BR>
+This Notepad Note Entry ID Number: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID<BR>
+This Notepad Note Entry Access Level: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ACCESS_LEVEL<BR>Is This Notepad Note Encrypted ?: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ENCRYPTED<BR>
+<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Notepad&amp;DeleteNote&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Delete Notepad Note Entry ID Number: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID ::\">Delete This Notepad Entry ?</A><BR><BR>
+");
+
+} else {
+
+												echo ($_Application_Module_Member_Message_Notepad_NOTE_UNLOCK_ERROR);
+
+} // [ + ] IF: Internal Application :: Display :: Notepad Note Entry ID Number :: Requires Password AND Input HASHED Password String MATCHES HASHED Password String In The Database Management System Server Database
+
+} // [ + ] IF: Internal Application :: Display :: Notepad Note Entry ID Number :: Requires Password :: Notepad Note Password Input Form Variables HAVE Executed
+
+} // [ + ] IF: Notepad Note Entry :: Requires: Password Verification
+
+} else {
+
+												echo ($_Application_Module_Member_Message_Notepad_NOTE_ACCESS_LEVEL_ADMINISTRATION_ROOT);
+
+} // [ + ] IF: Registered Member Account :: Credentials :: Exist AND ARE Valid
+
+} // [ + ] IF: Notepad Note Entry :: Access Level :: Is: 4 :: Registered Member Account :: Root Administration
+
+/*
+ ============================================================================================================
+ +
+ + IF: Notepad Note :: Access Level :: Is: 5, Registered Member Account :: Services Root Administration
+ +
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ACCESS_LEVEL == "5") {
+
+/*
+ ============================================================================================================
+ + IF: Registered Member Account :: Credentials Exist AND ARE Valid
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null && $_GLOBAL_MEMBER_ACCESS_LEVEL >= 5) {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry :: Requires: Password
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD != null) {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry :: Password Unlock Required, Display Password Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Notepad_POST_UNLOCK_NOTEPAD_NOTE_PASSWORD_CLEARTEXT) {
+
+echo ("
+													This Notepad Note Requires Password Verification<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Notepad&amp;DisplayNote&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													* Notepad :: Note :: Password<BR>
+														<INPUT TYPE=\"password\" NAME=\"AMM_Notepad_Post_Unlock_Notepad_Note_Password_ClearText\" MAXLENGTH=\"256\"><BR>
+													<INPUT TYPE=\"submit\" VALUE=\"Unlock Note\">
+												</FORM>
+");
+
+} else {
+
+/*
+ ============================================================================================================
+ + IF: Notepad Note Entry :: Password Input MATCHES Notepad Note Entry Password String
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Notepad_POST_UNLOCK_NOTEPAD_NOTE_PASSWORD_HASHED == "$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD") {
+
+echo ("
+Notepad Note Entry Data<BR>
+<TEXTAREA ROWS=\"20\" COLS=\"120\">$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_DATA</TEXTAREA><BR>
+This Notepad Note Entry Name: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_NAME<BR>
+This Notepad Note Entry Was Created On: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_TIMESTAMP<BR>
+This Notepad Note Entry Was Created By: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR\" TITLE=\":: Open & Display :: The Application Module :: Profile :: For :: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR ::\">$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_AUTHOR</A><BR>
+This Notepad Note Entry Password String: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_PASSWORD<BR>
+This Notepad Note Entry ID Number: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID<BR>
+This Notepad Note Entry Access Level: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ACCESS_LEVEL<BR>Is This Notepad Note Encrypted ?: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ENCRYPTED<BR>
+<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Notepad&amp;DeleteNote&#61;$_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Delete Notepad Note Entry ID Number: $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID ::\">Delete This Notepad Entry ?</A><BR><BR>
+");
+
+} else {
+
+												echo ($_Application_Module_Member_Message_Notepad_NOTE_UNLOCK_ERROR);
+
+} // [ + ] IF: Internal Application :: Display :: Notepad Note Entry ID Number :: Requires Password AND Input HASHED Password String MATCHES HASHED Password String In The Database Management System Server Database
+
+} // [ + ] IF: Internal Application :: Display :: Notepad Note Entry ID Number :: Requires Password :: Notepad Note Password Input Form Variables HAVE Executed
+
+} // [ + ] IF: Notepad Note Entry :: Requires: Password Verification
+
+} else {
+
+												echo ($_Application_Module_Member_Message_Notepad_NOTE_ACCESS_LEVEL_ADMINISTRATION_SERVICES);
+
+} // [ + ] IF: Registered Member Account :: Credentials :: Exist AND ARE Valid
+
+} // [ + ] IF: Notepad Note Entry :: Access Level :: Is: 5 :: Registered Member Account :: Services Root Administration
+
+} // [ + ] IF: Internal Application: Display Notepad Note Entry :: Is: ID Number :: Is: Activated
+
+} // [ + ] WHILE: Retrieving All Custom Web Application Module Entries From The Database Management System Server
+
+/*
+ ============================================================================================================
+ + Kill: SQL Database Server Query: Select All Notepad Note Entries
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES->free_result();
+?>
