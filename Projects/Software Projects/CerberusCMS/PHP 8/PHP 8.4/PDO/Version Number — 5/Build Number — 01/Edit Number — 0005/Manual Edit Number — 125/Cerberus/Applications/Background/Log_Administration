@@ -1,0 +1,340 @@
+<?php
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +   ()  ()	     ()
+ +  ()  () () () () ()
+ +  ------------------------------
+ +  Background-Level Application Module
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Root Directory => Applications => Background => Log_Member
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|5|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ + [ ^ ] Application Module :: Background :: Log :: Administrator-Level Activity
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ + Administrator-Level :: Log :: Variables
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Administrator-Level :: Log :: Variables :: Visitor Details
+ ============================================================================================================
+*/
+
+$_Application_Module_Background_Log_Administrator_GET_IP					= $_SERVER['REMOTE_ADDR'];
+$_Application_Module_Background_Log_Administrator_GET_HOST					= $_SERVER['REMOTE_HOST'];
+$_Application_Module_Background_Log_Administrator_GET_REFERRER					= $_SERVER['HTTP_REFERER'];
+$_Application_Module_Background_Log_Administrator_GET_USER_AGENT				= $_SERVER['HTTP_USER_AGENT'];
+$_Application_Module_Background_Log_Administrator_GET_LOG_MEMBER_USERNAME			= $_GLOBAL_COOKIE_MEMBER_USERNAME;
+
+/*
+ ============================================================================================================
+ + Find and Open :: The Administrator-Level Activity Log File
+ ============================================================================================================
+*/
+
+$_Application_Module_Background_Log_Administration_FIND_FILE_NAME				= "./Applications/Administration/Logging/Activity_Logging/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_DAY_FULL/Log.txt";
+$_Application_Module_Background_Log_Administration_OPEN_FILE_NAME				= fopen("$_Application_Module_Background_Log_Administration_FIND_FILE_NAME", "a");
+
+/*
+ ============================================================================================================
+ + Detect :: Harmful Character Entities
+ ============================================================================================================
+*/
+
+$_Application_Module_Background_Log_Administrator_REPLACE_CHARACTERS[0]				= "<";
+$_Application_Module_Background_Log_Administrator_REPLACE_CHARACTERS[1]				= ">";
+$_Application_Module_Background_Log_Administrator_REPLACE_CHARACTERS[2]				= "'";
+$_Application_Module_Background_Log_Administrator_REPLACE_CHARACTERS[3]				= "\"";
+$_Application_Module_Background_Log_Administrator_REPLACE_CHARACTERS[4]				= "`";
+
+$_Application_Module_Background_Log_Administrator_REPLACE_CHARACTERS_WITH[0]			= "Z";
+$_Application_Module_Background_Log_Administrator_REPLACE_CHARACTERS_WITH[1] 			= "Z";
+$_Application_Module_Background_Log_Administrator_REPLACE_CHARACTERS_WITH[2] 			= "Z";
+$_Application_Module_Background_Log_Administrator_REPLACE_CHARACTERS_WITH[3] 			= "Z";
+$_Application_Module_Background_Log_Administrator_REPLACE_CHARACTERS_WITH[4] 			= "Z";
+
+/*
+ ============================================================================================================
+ + Replace :: Harmful Character Entities
+ ============================================================================================================
+*/
+
+$_Application_Module_Background_Log_Administrator_GET_REFERRER					= str_replace($_Application_Module_Background_Log_Administrator_REPLACE_CHARACTERS, $_Application_Module_Background_Log_Administrator_REPLACE_CHARACTERS_WITH, $_Application_Module_Background_Log_Administrator_GET_REFERRER);
+$_Application_Module_Background_Log_Administrator_GET_USER_AGENT				= str_replace($_Application_Module_Background_Log_Administrator_REPLACE_CHARACTERS, $_Application_Module_Background_Log_Administrator_REPLACE_CHARACTERS_WITH, $_Application_Module_Background_Log_Administrator_GET_USER_AGENT);
+$_Application_Module_Background_Log_Administrator_GET_LOG_MEMBER_USERNAME			= str_replace($_Application_Module_Background_Log_Administrator_REPLACE_CHARACTERS, $_Application_Module_Background_Log_Administrator_REPLACE_CHARACTERS_WITH, $_Application_Module_Background_Log_Administrator_GET_LOG_MEMBER_USERNAME);
+
+/*
+ ============================================================================================================
+ + IF: Administration-Level :: Activity Log File Directory :: Numerical Year Does Not Exist, Create It
+ ============================================================================================================
+*/
+
+if (!file_exists("./Applications/Administration/Logging/Activity_Logging/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL/index.php")) {
+
+	mkdir("./Applications/Administration/Logging/Activity_Logging/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL");
+	copy("./System/Log/Activity_Logging/Administration/Year/index.php", "./Applications/Administration/Logging/Activity_Logging/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL/index.php");
+
+} else {
+/**
+ * Do Nothing
+**/
+} // [ + ] IF: File Exists: Administration-Level :: Activity Log File Directory :: Current Numerical Year :: Index File
+
+/*
+ ============================================================================================================
+ + IF: Administration-Level :: Activity Log File Directory :: Numerical Year :: Numerical Month Does Not Exist, Create It
+ ============================================================================================================
+*/
+
+if (!file_exists("./Applications/Administration/Logging/Activity_Logging/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL/index.php")) {
+
+	mkdir("./Applications/Administration/Logging/Activity_Logging/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL");
+	copy("./System/Log/Activity_Logging/Administration/Year/Month/index.php", "./Applications/Administration/Logging/Activity_Logging/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL/index.php");
+
+} else {
+/**
+ * Do Nothing
+**/
+} // [ + ] IF: File Exists: Administration-Level :: Activity Log File Directory :: Current Numerical Year :: Current Numerical Month :: Index File
+
+/*
+ ============================================================================================================
+ + IF: Administration-Level :: Activity Log File Directory :: Numerical Year :: Numerical Month :: Numerical Day Does Not Exist, Create It
+ ============================================================================================================
+*/
+
+if (!file_exists("./Applications/Administration/Logging/Activity_Logging/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_DAY_FULL/index.php")) {
+
+	mkdir("./Applications/Administration/Logging/Activity_Logging/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_DAY_FULL");
+	copy("./System/Log/Activity_Logging/Setup/Administration/Year/Month/Day/index.php", "./Applications/Administration/Logging/Activity_Logging/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_DAY_FULL/index.php");
+
+} else {
+/**
+ * Do Nothing
+**/
+} // [ + ] IF: File Exists: Administration-Level :: Activity Log File Directory :: Current Numerical Year :: Current Numerical Month :: Current Numerical Day :: Index File
+
+/*
+ ============================================================================================================
+ +
+ + Check :: String Length :: Connection :: Details :: Administrator-Level Account
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + IF: Registered Administrator Account :: Internet Protocol Address :: String Length :: Is Greater Than: 250
+ ============================================================================================================
+*/
+
+if (strlen($_Application_Module_Background_Log_Administrator_GET_IP) > "250") {
+
+	$_Application_Module_Background_Log_Administrator_GET_IP 			= "String Removed :: Registered Administrator Account :: Internet Protocol Address";
+
+} // [ + ] IF: String Length Is Greater Than: 250
+
+/*
+ ============================================================================================================
+ + IF: Registered Administrator Account :: Referrer :: String Length :: Is Greater Than: 1024
+ ============================================================================================================
+*/
+
+if (strlen($_Application_Module_Background_Log_Administrator_GET_REFERRER) > "1024") {
+
+	$_Application_Module_Background_Log_Administrator_GET_REFERRER 			= "String Removed :: Registered Administrator Account :: Referrer";
+
+} // [ + ] IF: String Length Is Greater Than: 1024
+
+/*
+ ============================================================================================================
+ + IF: Registered Administrator Account :: User-Agent :: String Length :: Is Greater Than: 250
+ ============================================================================================================
+*/
+
+if (strlen($_Application_Module_Background_Log_Administrator_GET_USER_AGENT) > "250") {
+
+	$_Application_Module_Background_Log_Administrator_GET_USER_AGENT		= "String Removed :: Registered Administrator Account :: User-Agent";
+
+} // [ + ] IF: String Length Is Greater Than: 250
+
+/*
+ ============================================================================================================
+ + IF: Registered Administrator Account :: UserName :: String Length :: Is Greater Than: 20
+ ============================================================================================================
+*/
+
+if (strlen($_Application_Module_Background_Log_Administrator_GET_LOG_MEMBER_USERNAME) > "20") {
+
+	$_Application_Module_Background_Log_Administrator_GET_LOG_MEMBER_USERNAME 	= "String Removed :: Registered Administrator Account :: UserName";
+
+} // [ + ] IF: String Length Is Greater Than: 20
+
+/*
+ ============================================================================================================
+ + Data To Be Written To File :: Activity Log :: Interaction Details :: Administration-Level
+ ============================================================================================================
+*/
+
+fwrite($_Application_Module_Background_Log_Administration_OPEN_FILE_NAME, "
+Activity Log :: Detailed Information :: Registered Member Account :: Administrator :: $_GLOBAL_COOKIE_MEMBER_USERNAME With Timestamp $_GLOBAL_LOCAL_SERVER_DATE_STANDARD
+--------------------------------------------------------------------------
+Machine and Connection Information :: $_GLOBAL_COOKIE_MEMBER_USERNAME
+--------------------------------------------------------------------------
+- Document Information
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Document View Timestamp: $_GLOBAL_LOCAL_SERVER_DATE_STANDARD
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Document Referrer: $_Application_Module_Background_Log_Visitor_GET_REFERRER
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Request String: $_GLOBAL_LOCAL_SERVER_QUERY_STRING
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Request Method: $_GLOBAL_LOCAL_SERVER_REQUEST_METHOD
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Request Time: $_GLOBAL_LOCAL_SERVER_REQUEST_TIME
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Connection Type: $_GLOBAL_LOCAL_SERVER_HTTP_CONNECTION_TYPE
+
+- Network Information
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: Connecting Device :: Network :: Host-Name: $_GLOBAL_REMOTE_SERVER_HOSTNAME
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: Connecting Device :: Network :: Internet Protocol Address: $_GLOBAL_REMOTE_SERVER_ADDRESS
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: Connecting Device :: Network :: Internet Protocol Address :: Port Number: $_GLOBAL_REMOTE_SERVER_PORT
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: Connecting Device :: Network :: User-Agent :: Web Browser: $_Application_Module_Background_Log_Administrator_GET_USER_AGENT
+
+--------------------------------------------------------------------------
+Location :: Information :: $_GLOBAL_COOKIE_MEMBER_USERNAME
+--------------------------------------------------------------------------
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device Location :: From :: Global-Positioning-System Coordinates In: X, Y, Z:
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device Location :: From :: Geographical Localization of Objects:
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device Location :: From :: Region: $_GLOBAL_REMOTE_SERVER_LOCATION_REGION
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device Location :: From :: Internet Protocol Address: $_GLOBAL_REMOTE_SERVER_ADDRESS
+
+--------------------------------------------------------------------------
+This Web Server :: Information :: $_GLOBAL_COOKIE_MEMBER_USERNAME
+--------------------------------------------------------------------------
+- Hyper-Text-Transfer-Protocol Information
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Hyper-Text-Transfer-Protocol :: Accept Type: $_GLOBAL_LOCAL_SERVER_HTTP_ACCEPT
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Hyper-Text-Transfer-Protocol :: Character Set: $_GLOBAL_LOCAL_SERVER_HTTP_ACCEPT_CHARACTER_SET
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Hyper-Text-Transfer-Protocol :: Encoding: $_GLOBAL_LOCAL_SERVER_HTTP_ACCEPT_ENCODING
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Hyper-Text-Transfer-Protocol :: Loading Type: $_GLOBAL_LOCAL_SERVER_HTTP_ACCEPT_LOADING
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Hyper-Text-Transfer-Protocol :: Language: $_GLOBAL_LOCAL_SERVER_HTTP_ACCEPT_LANGUAGE
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Hyper-Text-Transfer-Protocol :: Host: $_GLOBAL_LOCAL_SERVER_HTTP_HOST
+
+- Timestamp Information
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Request Time: $_GLOBAL_LOCAL_SERVER_REQUEST_TIME
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Request Time ( Float ): $_GLOBAL_LOCAL_SERVER_REQUEST_TIME_FLOAT
+
+- Document Information
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Document Root: $_GLOBAL_LOCAL_SERVER_DOCUMENT_ROOT
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Software: $_GLOBAL_LOCAL_SERVER_SOFTWARE
+
+- Network Information
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Network :: Internet Protocol Address: $_GLOBAL_LOCAL_SERVER_ADDRESS
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Network :: Internet Protocol Address :: Connecting Port Number: $_GLOBAL_REMOTE_SERVER_PORT
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Device :: This Web Server :: Network :: Gateway Interface: $_GLOBAL_LOCAL_SERVER_GATEWAY_INTERFACE
+
+--------------------------------------------------------------------------
+Digital Fingerprint Information
+--------------------------------------------------------------------------
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Digital Fingerprint :: Generated :: Clear-Text:
+$_INTERNAL_SECURITY_GENERATED_MEMBER_FINGERPRINT_CLEARTEXT
+
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Digital Fingerprint :: Generated :: HASHED:
+$_INTERNAL_SECURITY_GENERATED_MEMBER_FINGERPRINT_HASHED
+
+--------------------------------------------------------------------------
+Web Page Document Cache Circumvention Strings
+--------------------------------------------------------------------------
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Cache Circumvention :: Randomly Generated String :: Hyper-Text Reference
+$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION
+
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Cache Circumvention :: Randomly Generated String :: Audio
+$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_AUDIO_RANDOM_STRING_GENERATION
+
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Cache Circumvention :: Randomly Generated String :: Document
+$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_DOCUMENT_RANDOM_STRING_GENERATION
+
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Cache Circumvention :: Randomly Generated String :: Image
+$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION
+
+* $_GLOBAL_COOKIE_MEMBER_USERNAME :: Cache Circumvention :: Randomly Generated String :: Video
+$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_VIDEO_RANDOM_STRING_GENERATION
+
+* Registered Member Account :: Cache Circumvention :: Randomly Generated String :: File Inclusion
+$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_FILEINCLUSION_RANDOM_STRING_GENERATION
+
+---------------------------------------------------------------------------------
+Timestamps
+---------------------------------------------------------------------------------
+- Timestamp :: This Web Server
+* Timestamp :: Device :: This Web Server :: Year: $_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL
+* Timestamp :: Device :: This Web Server :: Month: $_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL
+* Timestamp :: Device :: This Web Server :: Day: $_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_DAY_FULL
+* Timestamp :: Device :: This Web Server :: Hour: $_GLOBAL_LOCAL_SERVER_TIME_HOURS
+* Timestamp :: Device :: This Web Server :: Minute: $_GLOBAL_LOCAL_SERVER_TIME_MINUTES
+* Timestamp :: Device :: This Web Server :: Second: $_GLOBAL_LOCAL_SERVER_TIME_SECONDS
+* Timestamp :: Device :: This Web Server :: Unix: $_GLOBAL_LOCAL_SERVER_TIME_MICROTIME
+* Timestamp :: Device :: This Web Server :: Micro Time: $_GLOBAL_LOCAL_SERVER_TIME_UNIX
+
+- Timestamp :: Connecting Device
+* Timestamp :: Device :: Connecting Device :: Year: $_GLOBAL_REMOTE_SERVER_DATE_NUMERICAL_YEAR_FULL
+* Timestamp :: Device :: Connecting Device :: Month: $_GLOBAL_REMOTE_SERVER_DATE_NUMERICAL_MONTH_FULL
+* Timestamp :: Device :: Connecting Device :: Day: $_GLOBAL_REMOTE_SERVER_DATE_NUMERICAL_MONTH_DAY_FULL
+* Timestamp :: Device :: Connecting Device :: Hour: $_GLOBAL_REMOTE_SERVER_TIME_HOURS
+* Timestamp :: Device :: Connecting Device :: Minute: $_GLOBAL_REMOTE_SERVER_TIME_MINUTES
+* Timestamp :: Device :: Connecting Device :: Second: $_GLOBAL_REMOTE_SERVER_TIME_SECONDS
+* Timestamp :: Device :: Connecting Device :: Unix: $_GLOBAL_LOCAL_SERVER_TIME_MICROTIME
+* Timestamp :: Device :: Connecting Device :: Micro Time: $_GLOBAL_LOCAL_SERVER_TIME_UNIX
+");
+
+/*
+ ============================================================================================================
+ + Close File :: Activity Log File :: Raw Log
+ ============================================================================================================
+*/
+
+fclose($_Application_Module_Background_Log_Administration_OPEN_FILE_NAME);
+?>
