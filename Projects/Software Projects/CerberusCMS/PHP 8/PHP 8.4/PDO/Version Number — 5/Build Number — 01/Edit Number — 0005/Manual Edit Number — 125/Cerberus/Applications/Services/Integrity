@@ -1,0 +1,217 @@
+<?php
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    ()  ()()() ---
+ +  ()  () --- ()  ()()()
+ +  ------------------------------
+ +  Services-Level Application Module
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Root Directory => Applications => Services => Integrity
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|5|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ +~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ +---()---()()()-()()()--()()()-()()()-()()()-()()()-()()()-()()()-()--()-----------------()-------()--------
+ +-()--()---()---()--()----()---()-----()-----()--()---()-----()-----()----------------------()--------------
+ +---()-----()---()--()----()---()()()-()()()-()()()---()-----()-----()---------------()---------------------
+ +----------()---()--()----()---()-----()--()-()--()---()-----()-----()----------/-\------------()-----------
+ +--------()()()-()--()----()---()()()-()()()-()--()-()()()---()-----()--VERSION-|1|-------------------------
+ +~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\~/~-Build-Number:-0.1---Final
+ +~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-Edit-Number-:-104
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ +
+ + [ ^ ] Application Module :: Services :: Integrity
+ +
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Application Module Header
+ ============================================================================================================
+*/
+
+											echo ($_Application_Module_Services_Message_Integrity_Header);
+
+/*
+ ============================================================================================================
+ +
+ +
+ + [ @ ] Integrity :: Display :: Options
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Options
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Display"] == "Options") {
+
+echo ("
+<B>Integrity :: Options</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+<B>Integrity :: Options :: Applications</B><BR>
+Options Note: Local Server Application Module Files can be flashed with these options. The Application Module Files can be re-installed either from the Local Server or from the Master Remote Server. The Master Remote Server is this Official Software Project Server Repository.<BR><BR>
+
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_SERVICES&#61;Integrity&amp;Flash&#61;Applications&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Integrity :: Check & Flash :: Application Module Files :: Server :: Local ::\">Integrity :: Flash :: Applications :: Server :: Local</A><BR>
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_SERVICES&#61;Integrity&amp;Flash&#61;Applications&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Integrity :: Check & Flash :: Application Module Files :: Server :: Remote ::\">Integrity :: Flash :: Applications :: Server :: Remote</A><BR><BR>
+
+<B>Integrity :: Options :: Kernel</B><BR>
+Options Note: Local Server Kernel Module Files can be flashed with these options. The Kernel Module Files can be re-installed either from the Local Server or from the Master Remote Server. The Master Remote Server is this Official Software Project Server Repository.<BR><BR>
+
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_SERVICES&#61;Integrity&amp;Flash&#61;Kernel&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Integrity :: Check & Flash :: Kernel Module File :: Server :: Local ::\">Integrity :: Flash :: Kernel Module File :: Server :: Local</A><BR>
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_SERVICES&#61;Integrity&amp;Flash&#61;Kernel&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Integrity :: Check & Flash :: Kernel Module File :: Server :: Remote ::\">Integrity :: Flash :: Kernel Module File :: Server :: Remote</A><BR><BR>
+
+
+<B>Integrity :: Options :: KeyRing</B><BR>
+Options Note: Local Server Integrity KeyRings can be Updated or Deleted with these options. The Integrity KeyRings are stored in the Local Database Management System Server Database. Integrity KeyRings are the HASH Strings for each individual file used in this Software Project.<BR><BR>
+
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_SERVICES&#61;Integrity&amp;Flash&#61;Applications&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Integrity :: KeyRing :: Delete ::\">Integrity :: KeyRing :: Delete</A><BR>
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_SERVICES&#61;Integrity&amp;Flash&#61;Applications&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Integrity :: KeyRing :: Update ::\">Integrity :: KeyRing :: Update</A><BR><BR>
+");
+
+} // [ + ] IF: Internal Application: Display :: Is: Options
+
+/*
+ ============================================================================================================
+ +
+ +
+ + [ @ ] Integrity :: Automatically Check File Size HASH For Application Modules and Reinstall For Difference
+ +
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Flash"] == "Applications") {
+
+/*
+ ============================================================================================================
+ +
+ + Database Server Queries :: Retrieve :: All :: Application Modules
+ +
+ ============================================================================================================
+*/
+
+echo ("<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Icon_Integrity/Integrity.png\" TITLE=\":: Integrity ::\" WIDTH=\"50\" HEIGHT=\"50\"></IMG> Integrity Message:<HR ALIGN=\"LEFT\" WIDTH=\"25%\">");
+
+/*
+ ============================================================================================================
+ + Database Server Query :: Retrieve :: All :: Applcication Module Entries :: Background-Level Applications
+ ============================================================================================================
+*/
+
+$_Application_Module_Services_Integrity_DB_Query_List_Applications_Background				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_background");
+
+while ($_Application_Module_Services_Integrity_DB_Query_List_Applications_Background_Fetch_Array = $_Application_Module_Services_Integrity_DB_Query_List_Applications_Background->fetch_array(MYSQLI_BOTH)) {
+
+$_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_ID					= $_Application_Module_Services_Integrity_DB_Query_List_Applications_Background_Fetch_Array['id'];
+$_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_NAME				= $_Application_Module_Services_Integrity_DB_Query_List_Applications_Background_Fetch_Array['application_file_name'];
+$_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_INTEGRITY			= $_Application_Module_Services_Integrity_DB_Query_List_Applications_Background_Fetch_Array['application_file_integrity'];
+$_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_INTEGRITY_INSTALLATION	= $_Application_Module_Services_Integrity_DB_Query_List_Applications_Background_Fetch_Array['application_file_integrity_installation'];
+$_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_HASH_SHA256			= hash_file('sha256', "./Applications/Background/$_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_NAME");
+
+/*
+ ============================================================================================================
+ + IF: Physical Application Module File Integrity String DOES NOT MATCH Master Application Module File Integrity String
+ ============================================================================================================
+*/
+
+if (file_exists("./Applications/Background/$_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_NAME")) {
+
+echo ("
+* Integrity: Checking For The Existence of Physical Application Module File: $_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_NAME<BR>
+* Integrity :: File Exists: $_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_NAME<BR>
+-- Exiting<BR><BR>
+");
+
+} else {
+
+echo ("
+* Integrity: Physical Application Module File Is Missing: $_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_NAME<BR>
+-- Re-Installing Now<BR><BR>
+");
+
+copy("./System/Security/Integrity/Backup/Applications/Background/$_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_NAME","./Applications/Background/$_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_NAME");
+
+} // [ + ] IF: File Exists: Application Module :: Background
+
+/*
+ ============================================================================================================
+ + IF: Physical Application Module File Integrity String DOES NOT MATCH Master Application Module File Integrity String
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_HASH_SHA256 != "$_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_INTEGRITY") {
+
+echo ("
+* Integrity: Physical File Integrity String Mismatch For Application Module File: ./Applications/Background/$_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_NAME<BR>
+* Integrity :: File: $_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_HASH_SHA256<BR>
+* Integrity :: Database: $_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_INTEGRITY<BR>
+-- Re-Installing Now<BR><BR>");
+
+unlink("./Applications/Background/$_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_NAME");
+copy("./System/Security/Integrity/Backup/Applications/Background/$_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_NAME","./Applications/Background/$_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_NAME");
+
+} else {
+
+echo ("
+* Integrity: All Application Module File Integrity Checks Cleared For Application Module File: $_Application_Module_Services_Integrity_LIST_APPLICATIONS_BACKGROUND_FILE_NAME<BR>
+-- Exiting<BR><BR>");
+
+} // [ + ] IF: Application Module :: Background :: Physical File Integrity String DOES NOT MATCH File Integrity String In The Database Management System Server Database Entry, Copy From Read-Only Backup
+
+} // [ + ] WHILE :: Retrieving :: All :: Applcication Module Entries :: Background :: Entry Data
+
+} // [ + ] IF: Internal Application: Flash :: Is: Application
+?>

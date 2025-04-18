@@ -1,0 +1,102 @@
+<?php
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    ()  ()  --  ()
+ +  ()  --  ()  ()
+ +  ------------------------------
+ +  Panel Application Module
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Master Root Directory => Applications => Panel => Administration
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|5|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ +
+ + [ ^ ] Application Module :: Panel :: Administration Panel
+ +
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ + [ @ ] Display :: Panel :: Administration Applications
+ +
+ +
+ ============================================================================================================
+*/
+
+echo ("
+										<CENTER><B>Administration Panel</B></CENTER>
+
+										<HR><BR>
+										<B><A TITLE=\":: Quick List of Administration Tools ::\">Quick Tools</A></B><HR>
+											<B>=> Administration</B><BR>
+											<BIG><B>&middot;</B></BIG>&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Administration :: Application Module :: Control Panel ::\">Control Panel</A><BR>
+											<BIG><B>&middot;</B></BIG>&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Robot_Monitor&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Administration :: Application Module :: Robot Monitor ::\">Robot Monitor</A><BR><BR>
+
+											<B>=> Root Administration</B><BR>
+											<BIG><B>&middot;</B></BIG>&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ROOT&#61;Tasks&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Root :: Application Module :: Tasks ::\">Tasks</A><BR><BR>
+
+											<B>=> Services Root Administration</B><BR>
+											<BIG><B>&middot;</B></BIG>&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_SERVICES&#61;Control_Panel&amp;Display&#61;Options&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Services :: Application Module :: Control Panel ::\">Control Panel</A><BR>
+											<BIG><B>&middot;</B></BIG>&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_SERVICES&#61;Commander&amp;Display&#61;Options&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Services :: Application Module :: Commander ::\">Commander</A><BR>
+											<BIG><B>&middot;</B></BIG>&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_SERVICES&#61;Integrity&amp;Display&#61;Options&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Services :: Application Module :: Integrity ::\">Integrity</A><BR>
+											<BIG><B>&middot;</B></BIG>&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_SERVICES&#61;Kernel&amp;Display&#61;Options&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Services :: Application Module :: Kernel ::\">Kernel</A><BR>
+											<BIG><B>&middot;</B></BIG>&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_SERVICES&#61;Loops&amp;Display&#61;Options&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Services :: Application Module :: Loops ::\">Loops</A><BR>
+											<BIG><B>&middot;</B></BIG>&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_SERVICES&#61;Services&amp;Display&#61;Options&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Services :: Application Module :: Services ::\">Services</A><BR><BR>
+
+										<B><A TITLE=\":: Server Activity Tools ::\">Server Activity</A></B><HR>
+										<BIG><B>&middot;</B></BIG>&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Referrers&amp;Display&#61;Box&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Visitor-Level :: Log :: Activity Log ::\">Non-Registered</A><BR>
+										<BIG><B>&middot;</B></BIG>&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Referrers&amp;Display&#61;Box&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Moderator-Level :: Log :: Activity Log ::\">Moderator</A><BR>
+										<BIG><B>&middot;</B></BIG>&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Referrers&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Administration-Level :: Log :: Activity Log ::\">Administration</A><BR>
+										<BIG><B>&middot;</B></BIG>&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Referrers&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Root Administration-Level :: Log :: Activity Log ::\">Root Administration</A><BR>
+										<BIG><B>&middot;</B></BIG>&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Referrers&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Services Root Administration-Level :: Log :: Activity Log ::\">Services Root Administration</A><BR><BR>
+
+										<B><A TITLE=\":: Documentation Resources For Cerberus Content Management System ::\">Documentation</A></B><HR>
+											<BIG><B>&middot;</B></BIG>&nbsp;<A HREF=\"../Documentation/Manuals/Hyper-Text-Markup-Language/Documentation.html\" TITLE=\":: Open & Display :: The Documentation File :: For :: $_PROJECT_DEVELOPER_STRING_NAME_EXTENDED :: Hosted Locally ::\" TARGET=\"_NEW\">Local</A><BR>
+											<BIG><B>&middot;</B></BIG>&nbsp;<A HREF=\"$_PROJECT_SERVER_URL_GITHUB_SECURE\" TITLE=\":: Open & Display :: The Most Recent Documentation File :: For :: $_PROJECT_DEVELOPER_STRING_NAME_EXTENDED :: Hosted On :: The :: $_PROJECT_DEVELOPER_STRING_NAME_EXTENDED :: GITHub Project Page ::\" TARGET=\"_NEW\">GITHub</A><BR>
+											<BIG><B>&middot;</B></BIG>&nbsp;<A HREF=\"$_PROJECT_SERVER_URL_SOURCEFORGE_SECURE\" TITLE=\":: Open & Display The Most Recent Documentation File :: For :: $_PROJECT_DEVELOPER_STRING_NAME_EXTENDED :: Hosted On :: The :: $_PROJECT_DEVELOPER_STRING_NAME_EXTENDED :: SourceForge Project Page ::\" TARGET=\"_NEW\">SourceForge</A>
+");
+?>

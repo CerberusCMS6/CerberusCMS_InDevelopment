@@ -1,0 +1,138 @@
+<?php
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    ()  ()  --  ()
+ +  ()  --  ()  ()
+ +  ------------------------------
+ +  Panel Application Module
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Master Root Directory => Applications => Panel => Latest_Shouts
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|5|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ +
+ + [ ^ ] Application Module :: Panel :: Latest Shout Message Entries
+ +
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ + [ @ ] Display :: Panel :: Latest Shouts
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Retrieve Latest Shout Message Entries
+ ============================================================================================================
+*/
+
+$_Application_Module_Panel_Latest_Shouts_DB_Query_SELECT_SHOUTS				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_shout_messages ORDER BY id DESC LIMIT 10");
+$_Application_Module_Panel_Latest_Shouts_DB_Query_SELECT_SHOUTS_NUMBER_OF_ROWS		= $_Application_Module_Panel_Latest_Shouts_DB_Query_SELECT_SHOUTS->num_rows;
+
+/*
+ ============================================================================================================
+ + IF: No Shout Message Entries Exist
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Panel_Latest_Shouts_DB_Query_SELECT_SHOUTS_NUMBER_OF_ROWS <= 0) {
+
+											echo ("No Shout Message Entries Exist<BR><BR>");
+
+/*
+ ============================================================================================================
+ + ELSE: Shout Message Entries Exist, List Latest Shout Message Entries
+ ============================================================================================================
+*/
+
+} else {
+
+/*
+ ============================================================================================================
+ + WHILE: Retrieving Latest Shout Message Entries From The Database Management System Server Database
+ ============================================================================================================
+*/
+
+while ($_Application_Module_Panel_Latest_Shouts_DB_Query_SELECT_SHOUTS_Fetch_Array = $_Application_Module_Panel_Latest_Shouts_DB_Query_SELECT_SHOUTS->fetch_array(MYSQLI_BOTH)) {
+
+$_Application_Module_Panel_Latest_Shouts_LIST_SHOUT_MESSAGE_ID				= $_Application_Module_Panel_Latest_Shouts_DB_Query_SELECT_SHOUTS_Fetch_Array['id'];
+$_Application_Module_Panel_Latest_Shouts_LIST_SHOUT_MESSAGE_AUTHOR			= $_Application_Module_Panel_Latest_Shouts_DB_Query_SELECT_SHOUTS_Fetch_Array['message_author'];
+$_Application_Module_Panel_Latest_Shouts_LIST_SHOUT_MESSAGE_TEXT			= $_Application_Module_Panel_Latest_Shouts_DB_Query_SELECT_SHOUTS_Fetch_Array['message_text'];
+$_Application_Module_Panel_Latest_Shouts_LIST_SHOUT_MESSAGE_VIDEO			= $_Application_Module_Panel_Latest_Shouts_DB_Query_SELECT_SHOUTS_Fetch_Array['message_video'];
+$_Application_Module_Panel_Latest_Shouts_LIST_SHOUT_MESSAGE_TIMESTAMP			= $_Application_Module_Panel_Latest_Shouts_DB_Query_SELECT_SHOUTS_Fetch_Array['message_timestamp'];
+
+echo ("
+											<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Panel_Latest_Shouts_LIST_SHOUT_MESSAGE_AUTHOR\" TITLE=\":: Open & Display The Application Module :: Profile :: For :: $_Application_Module_Panel_Latest_Shouts_LIST_SHOUT_MESSAGE_AUTHOR&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">$_Application_Module_Panel_Latest_Shouts_LIST_SHOUT_MESSAGE_AUTHOR</A> Shouted:<BR>
+											<B>&#34;</B>&nbsp;&nbsp;<I>$_Application_Module_Panel_Latest_Shouts_LIST_SHOUT_MESSAGE_TEXT</I>&nbsp;&nbsp;<B>&#34;</B><BR>
+											On: <I><A HREF=\"$_SYSTEM_SERVER_NETWORKING_RESOLVER_TIMESTAMP_UNIX_EPOCH\" TITLE=\":: Open & Display :: The Official Web Server :: For :: This System' Unix Timestamp Converter ::\" TARGET=\"_NEW\">$_Application_Module_Panel_Latest_Shouts_LIST_SHOUT_MESSAGE_TIMESTAMP</I></A><BR><BR>
+");
+
+} // [ + ] WHILE: Retrieving Latest Shout Entries From Database Server
+
+} // [ + ] IF: Latest Shout Database Server Number of Rows IS Less Than OR Equal To Zero
+
+/*
+ ============================================================================================================
+ + Kill Database Server Query: Select Latest Shout Messages
+ ============================================================================================================
+*/
+
+$_Application_Module_Panel_Latest_Shouts_DB_Query_SELECT_SHOUTS->free_result();
+
+echo ("
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;All_Shouts&amp;Display&#61;Text&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+												<I>Shout Message</I>:<BR>
+													<INPUT TYPE=\"text\" NAME=\"AMM_All_Shouts_Shout_Message_Entry_Text\" MAXLENGTH=\"250\"><BR>
+													<INPUT TYPE=\"submit\" VALUE=\"Shout\">
+											</FORM>
+											<HR>
+												<CENTER>[ <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;All_Shouts&amp;Display&#61;Options&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Application Module :: All Shout Messages ::\">All Shout Messages</A> ]</CENTER>
+");
+?>
