@@ -36,7 +36,7 @@
  + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
  + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
  + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
- + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|5|-	\  []  /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|6|-	\  []  /
  + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
  + -------------------------------------------------------------------------------
  + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
@@ -608,4 +608,3 @@ Much more than this. Will need to be documented.
 
 * Updated All File Headers To: Cerberus Content Management System, Version Number: 6, Build Number: 0.1, Edit Number: 0001, Manual Edit Number: 125.
 * Added Directory Permission Controls To Application Modules.
-* Added Input Fields, Database Options, Database Entries and Crypto Currency Trading For All Known Traded Crypto Currency Platforms.
