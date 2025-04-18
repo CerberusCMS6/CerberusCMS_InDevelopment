@@ -593,3 +593,15 @@ Much more than this. Will need to be documented.
 * Added Customized ASCII Unix-Style Additional Commentation Headers To Several Application Modules.
 * Updated: Theme System, Theme Programming Code, Theme Packages Programming Code To Support:
   144P/I and Everything In Between To 8K Video Resoluton.
+
+=============================================================================================================
++ Version Series: 4, Build: 0.8 To Version Series: 5, Build: 0.1
+=============================================================================================================
+
+~ Need To Document All Changes ( 1 Year of Work )
+
+=============================================================================================================
++ Version Series: 5, Build: 0.1 To Version Series: 6, Build: 0.1
+=============================================================================================================
+
+* Updated All File Headers To: Cerberus Content Management System, Version Number: 6, Build Number: 0.1, Edit Number: 0001, Manual Edit Number: 125
