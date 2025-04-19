@@ -1,0 +1,43 @@
+<?PHP
+
+echo ("
+
+<CENTER><BIG><B>Software Project Legality</B></BIG></CENTER>
+<HR>
+
+<B>This Free and Open Source Software Project is Protected by Local and International Copyright Laws</B><HR>
+This $_PROJECT_STRING_NAME_UNIX Theme was created by: $_PROJECT_STRING_LEGAL_NAME_AUTHOR<BR><BR>
+
+<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/2023_Cerberus_White/Image/Legal/Author_G.C._Johnson.jpg\" CLASS=\"LegalImageAuthor\" WIDTH=\"300\" HEIGHT=\"400\"></IMG><BR><BR>
+
+Credit :: Graphical-User-Interface Theme<BR>
+<TEXTAREA ROWS=\"7\" COLS=\"50\">
+Images :: Banners
+&copy $_PROJECT_STRING_LEGAL_NAME_AUTHOR: Theme Banner Images, Application Module Images, Application Panel Images, Cascading-Style-Sheet Styles, Project Badge Images
+Theme Image Fills were taken from DBZ Wallpaper by 'Unknown'
+
+Images :: Control Panel Icons
+Theme Administration Control Panel and Registered Member Account Control Panel Icons were taken from Laurent Baumann ( Non-Commercial Use Only )
+https://www.LBaumann.com
+
+Images :: Avatars
+&copy; Gerry Martinez, Goddess Athena
+&copy; Gavin Hamilton - Glasgow, Scotland Museum, Artemis
+&copy; Mind Maestro, God Apollo
+&copy; Mistress Distress, Goddess Aphrodite
+&copy; Shanina Conway, Goddess Demeter
+&copy; Unknown, God Hades
+&copy; Unknown, Goddess Hera
+&copy; Mind Meastro, God Hermes
+&copy; Unknown, God Zeus
+
+Images :: Animojis
+&copy; Mind Meastro, God Hermes
+</TEXTAREA><BR><BR>
+
+This Graphical-User-Interface Theme was created using the &reg; G.N.U. Image Manipulation Program, &reg; ULEAD PhotoImpact and &reg; Adobe PhotoShop on the Operating Systems: &reg; Arch-Linux, &reg; Gentoo-Linux and Microsoft &reg; &trade; Windows<BR><BR>
+
+<HR>
+<CENTER>$_PROJECT_STRING_LEGAL_COPYRIGHT — All Rights Reserved.</CENTER>
+");
+?>
