@@ -271,8 +271,8 @@ $_System_Application_Integrity_LIST_APPLICATIONS_ADMINISTRATION_FILE_VERSION			=
  ============================================================================================================
 */
 
-$_System_Application_Integrity_Find_File_Application_Administration				= "./Applications/Administration/$_System_Application_Integrity_LIST_APPLICATIONS_ADMINISTRATION_FILE_NAME";
-$_System_Application_Integrity_Check_File_Application_Administration				= hash_file('sha256', "./Applications/Administration/$_System_Application_Integrity_LIST_APPLICATIONS_ADMINISTRATION_FILE_NAME");
+$_System_Application_Integrity_Find_File_Application_Administration				= "./Applications/Administration/Visibility/Administration/$_System_Application_Integrity_LIST_APPLICATIONS_ADMINISTRATION_FILE_NAME";
+$_System_Application_Integrity_Check_File_Application_Administration				= hash_file('sha256', "./Applications/Administration/Visibility/Administration/$_System_Application_Integrity_LIST_APPLICATIONS_ADMINISTRATION_FILE_NAME");
 
 /*
  ============================================================================================================
@@ -282,7 +282,7 @@ $_System_Application_Integrity_Check_File_Application_Administration				= hash_f
 
 if (!file_exists($_System_Application_Integrity_Find_File_Application_Administration)) {
 
-copy("./System/Security/Integrity/Backup/Applications/Administration/$_System_Application_Integrity_LIST_APPLICATIONS_ADMINISTRATION_FILE_NAME","./Applications/Administration/$_System_Application_Integrity_LIST_APPLICATIONS_ADMINISTRATION_FILE_NAME");
+copy("./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/$_System_Application_Integrity_LIST_APPLICATIONS_ADMINISTRATION_FILE_NAME","./Applications/Administration/Visibility/Administration/$_System_Application_Integrity_LIST_APPLICATIONS_ADMINISTRATION_FILE_NAME");
 
 } // [ + ] IF: File DOES NOT Exist: Application :: Administration: Flash Back: Application :: Administration
 
@@ -324,7 +324,7 @@ unlink($_System_Application_Integrity_Find_File_Application_Administration);
  ============================================================================================================
 */
 
-copy("./System/Security/Integrity/Backup/Applications/Administration/$_System_Application_Integrity_LIST_APPLICATIONS_ADMINISTRATION_FILE_NAME","./Applications/Administration/$_System_Application_Integrity_LIST_APPLICATIONS_ADMINISTRATION_FILE_NAME");
+copy("./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/$_System_Application_Integrity_LIST_APPLICATIONS_ADMINISTRATION_FILE_NAME","./Applications/Administration/Visibility/Administration/$_System_Application_Integrity_LIST_APPLICATIONS_ADMINISTRATION_FILE_NAME");
 
 } // [ + ] WHILE: Retrieving :: All :: Applications :: Administration :: From The Database Management System Server Database
 
@@ -369,8 +369,8 @@ $_System_Application_Integrity_LIST_APPLICATIONS_MEMBER_FILE_VERSION				= $_Syst
  ============================================================================================================
 */
 
-$_System_Application_Integrity_Find_File_Application_Member					= "./Applications/Member/$_System_Application_Integrity_LIST_APPLICATIONS_MEMBER_FILE_NAME";
-$_System_Application_Integrity_Check_File_Application_Member					= hash_file('sha256', "./Applications/Member/$_System_Application_Integrity_LIST_APPLICATIONS_MEMBER_FILE_NAME");
+$_System_Application_Integrity_Find_File_Application_Member					= "./Applications/Member/Visibility/Member/$_System_Application_Integrity_LIST_APPLICATIONS_MEMBER_FILE_NAME";
+$_System_Application_Integrity_Check_File_Application_Member					= hash_file('sha256', "./Applications/Member/Visibility/Member/$_System_Application_Integrity_LIST_APPLICATIONS_MEMBER_FILE_NAME");
 
 /*
  ============================================================================================================
@@ -380,7 +380,7 @@ $_System_Application_Integrity_Check_File_Application_Member					= hash_file('sh
 
 if (!file_exists($_System_Application_Integrity_Find_File_Application_Member)) {
 
-copy("./System/Security/Integrity/Backup/Applications/Member/$_System_Application_Integrity_LIST_APPLICATIONS_MEMBER_FILE_NAME","./Applications/Member/$_System_Application_Integrity_LIST_APPLICATIONS_MEMBER_FILE_NAME");
+copy("./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/$_System_Application_Integrity_LIST_APPLICATIONS_MEMBER_FILE_NAME","./Applications/Member/Visibility/Member/$_System_Application_Integrity_LIST_APPLICATIONS_MEMBER_FILE_NAME");
 
 } // [ + ] IF: File DOES NOT Exist: Application :: Member: Flash Back: Application :: Member
 
@@ -422,7 +422,7 @@ unlink($_System_Application_Integrity_Find_File_Application_Member);
  ============================================================================================================
 */
 
-copy("./System/Security/Integrity/Backup/Applications/Member/$_System_Application_Integrity_LIST_APPLICATIONS_MEMBER_FILE_NAME","./Applications/Member/$_System_Application_Integrity_LIST_APPLICATIONS_MEMBER_FILE_NAME");
+copy("./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/$_System_Application_Integrity_LIST_APPLICATIONS_MEMBER_FILE_NAME","./Applications/Member/Visibility/Member/$_System_Application_Integrity_LIST_APPLICATIONS_MEMBER_FILE_NAME");
 
 } // [ + ] WHILE: Retrieving :: All :: Applications :: Member :: From The Database Management System Server Database
 
