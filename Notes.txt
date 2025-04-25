@@ -1,0 +1,5 @@
+Check the Cerberus.php and correct the if ($_GLOBAL_COOKIE_THEME) { THEME_RESOLUTION = "" }
+
+place the programming code in the correction section of the Cerberus.php kernel file.
+
+go back and update all of the themes to work on cerberuscms6.. upload all of it to sourceforge.. work on new animated / video themes for each version using CPK.
