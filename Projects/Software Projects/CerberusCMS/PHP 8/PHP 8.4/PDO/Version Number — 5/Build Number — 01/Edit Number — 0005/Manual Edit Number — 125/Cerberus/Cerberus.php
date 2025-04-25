@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
  ============================================================================================================
  + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -6363,7 +6363,7 @@ if ($_KERNEL_APPLICATION_MODULE_ADMINISTRATION_FILE_STATUS >= "1") {
  ============================================================================================================
 */
 
-if (file_exists("./Applications/Administration/$_KERNEL_APPLICATION_MODULE_ADMINISTRATION_FILE_NAME")) {
+if (file_exists("./Applications/Administration/Visibility/Administration/$_KERNEL_APPLICATION_MODULE_ADMINISTRATION_FILE_NAME")) {
 
 /*
  ============================================================================================================
@@ -6588,7 +6588,7 @@ if ($_KERNEL_APPLICATION_MODULE_MEMBER_FILE_STATUS >= "1") {
  ============================================================================================================
 */
 
-if (file_exists("./Applications/Member/$_KERNEL_APPLICATION_MODULE_MEMBER_FILE_NAME")) {
+if (file_exists("./Applications/Member/Visibility/Member/$_KERNEL_APPLICATION_MODULE_MEMBER_FILE_NAME")) {
 
 /*
  ============================================================================================================
