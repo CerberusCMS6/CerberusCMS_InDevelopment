@@ -5145,7 +5145,7 @@ $_Kernel_Set_Member_Account_POST_SET_THEME_32K	 								= $_POST['IAM_Set_Theme_
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_144PI) {
 	
-	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_144PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme", "144PI/$_Kernel_Set_Member_Account_POST_SET_THEME_144PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5160,7 +5160,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_144PI) {
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_240PI) {
 	
-	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_240PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme", "240PI/$_Kernel_Set_Member_Account_POST_SET_THEME_240PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5175,7 +5175,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_240PI) {
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_340PI) {
 	
-	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_340PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme", "340PI/$_Kernel_Set_Member_Account_POST_SET_THEME_340PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5190,7 +5190,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_340PI) {
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_480PI) {
 	
-	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_480PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme", "480PI/$_Kernel_Set_Member_Account_POST_SET_THEME_480PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5205,7 +5205,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_480PI) {
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_520PI) {
 	
-	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_520PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme", "520PI/$_Kernel_Set_Member_Account_POST_SET_THEME_520PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5220,7 +5220,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_520PI) {
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_640PI) {
 	
-	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_640PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme", "640PI/$_Kernel_Set_Member_Account_POST_SET_THEME_640PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5235,7 +5235,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_640PI) {
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_720PI) {
 	
-	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_720PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme", "720PI/$_Kernel_Set_Member_Account_POST_SET_THEME_720PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5250,7 +5250,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_720PI) {
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_1080PI) {
 	
-	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_1080PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme", "1080PI/$_Kernel_Set_Member_Account_POST_SET_THEME_1080PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5265,7 +5265,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_1080PI) {
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_2040PI) {
 	
-	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_2040PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme", "2040PI/$_Kernel_Set_Member_Account_POST_SET_THEME_2040PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5280,7 +5280,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_2040PI) {
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_2160PI) {
 	
-	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_2160PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme", "2160PI/$_Kernel_Set_Member_Account_POST_SET_THEME_2160PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5295,7 +5295,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_2160PI) {
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_4K) {
 	
-	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_4K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme", "4K/$_Kernel_Set_Member_Account_POST_SET_THEME_4K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5310,7 +5310,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_4K) {
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_8K) {
 	
-	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_8K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme", "8K/$_Kernel_Set_Member_Account_POST_SET_THEME_8K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5325,7 +5325,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_8K) {
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_16K) {
 	
-	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_16K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme", "16K/$_Kernel_Set_Member_Account_POST_SET_THEME_16K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5340,7 +5340,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_16K) {
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_32K) {
 	
-	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_32K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme", "32K/$_Kernel_Set_Member_Account_POST_SET_THEME_32K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -6381,7 +6381,7 @@ if ($_KERNEL_APPLICATION_MODULE_ADMINISTRATION_FILE_PERMISSION >= "3") {
 
 if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null && $_GLOBAL_MEMBER_ACCESS_LEVEL >= 3) {
 
-	include_once "./Applications/Administration/$_KERNEL_APPLICATION_MODULE_ADMINISTRATION_FILE_NAME";
+	include_once "./Applications/Administration/Visibility/Administration/$_KERNEL_APPLICATION_MODULE_ADMINISTRATION_FILE_NAME";
 
 /*
  ============================================================================================================
@@ -6598,7 +6598,7 @@ if (file_exists("./Applications/Member/Visibility/Member/$_KERNEL_APPLICATION_MO
 
 if ($_KERNEL_APPLICATION_MODULE_MEMBER_FILE_PERMISSION == "0") {
 
-	include_once "./Applications/Member/$_KERNEL_APPLICATION_MODULE_MEMBER_FILE_NAME";
+	include_once "./Applications/Member/Visibility/Member/$_KERNEL_APPLICATION_MODULE_MEMBER_FILE_NAME";
 
 } else {
 
@@ -6618,7 +6618,7 @@ if ($_KERNEL_APPLICATION_MODULE_MEMBER_FILE_PERMISSION == "1") {
 
 if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null && $_GLOBAL_MEMBER_ACCESS_LEVEL >= 1) {
 
-	include_once "./Applications/Member/$_KERNEL_APPLICATION_MODULE_MEMBER_FILE_NAME";
+	include_once "./Applications/Member/Visibility/Member/$_KERNEL_APPLICATION_MODULE_MEMBER_FILE_NAME";
 
 /*
  ============================================================================================================
@@ -6650,7 +6650,7 @@ if ($_KERNEL_APPLICATION_MODULE_MEMBER_FILE_PERMISSION == "2") {
 
 if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null && $_GLOBAL_MEMBER_ACCESS_LEVEL >= 2) {
 
-	include_once "./Applications/Member/$_KERNEL_APPLICATION_MODULE_MEMBER_FILE_NAME";
+	include_once "./Applications/Member/Visibility/Member/$_KERNEL_APPLICATION_MODULE_MEMBER_FILE_NAME";
 
 /*
  ============================================================================================================
