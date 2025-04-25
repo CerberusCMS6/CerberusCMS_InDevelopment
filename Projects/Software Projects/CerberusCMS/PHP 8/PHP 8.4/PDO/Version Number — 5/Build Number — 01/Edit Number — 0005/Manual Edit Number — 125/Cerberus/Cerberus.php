@@ -2723,6 +2723,20 @@ if ($_DB_Query_Kernel_Networking_Status_Security_Check_Blocked_Networks_Number_o
 /*
  ============================================================================================================
  +
+ + Internal Loop :: Theme :: Check For Video Resolution and Cookie
+ +
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_COOKIE_DIRECTORY_THEME != null) {
+
+$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION = "";
+
+}
+
+/*
+ ============================================================================================================
+ +
  + Internal Security :: Web Browser :: User-Agent :: Check For Empty and Null Data
  +
  ============================================================================================================
