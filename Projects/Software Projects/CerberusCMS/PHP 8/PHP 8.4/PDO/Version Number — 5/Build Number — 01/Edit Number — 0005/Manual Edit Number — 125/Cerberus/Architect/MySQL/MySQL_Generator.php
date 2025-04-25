@@ -1304,7 +1304,7 @@ web_pages_data TEXT,
 web_pages_timestamp_installation VARCHAR(100),
 web_pages_timestamp_update VARCHAR(100),
 PRIMARY KEY (id)
-)");
+);
 ";
 
 /*
