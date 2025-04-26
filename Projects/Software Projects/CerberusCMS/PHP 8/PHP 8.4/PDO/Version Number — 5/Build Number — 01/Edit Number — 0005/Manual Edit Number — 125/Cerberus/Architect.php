@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
  ============================================================================================================
  + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -4606,18 +4606,18 @@ $_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("INSERT INTO {$
 
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Creating Read-Only Backup of Application Module Directories... Wait.<BR><BR>");
 
-mkdir("./System/Security/Integrity/Backup");
-mkdir("./System/Security/Integrity/Backup/Applications");
-mkdir("./System/Security/Integrity/Backup/Applications/Administration");
-mkdir("./System/Security/Integrity/Backup/Applications/Background");
-mkdir("./System/Security/Integrity/Backup/Applications/Custom");
-mkdir("./System/Security/Integrity/Backup/Applications/Member");
-mkdir("./System/Security/Integrity/Backup/Applications/Moderator");
-mkdir("./System/Security/Integrity/Backup/Applications/Panel");
-mkdir("./System/Security/Integrity/Backup/Applications/Public");
-mkdir("./System/Security/Integrity/Backup/Applications/Root");
-mkdir("./System/Security/Integrity/Backup/Applications/Services");
-mkdir("./System/Security/Integrity/Backup/Applications/Video_Games/");
+//mkdir("./System/Security/Integrity/Backup");
+//mkdir("./System/Security/Integrity/Backup/Applications");
+//mkdir("./System/Security/Integrity/Backup/Applications/Administration");
+//mkdir("./System/Security/Integrity/Backup/Applications/Background");
+//mkdir("./System/Security/Integrity/Backup/Applications/Custom");
+//mkdir("./System/Security/Integrity/Backup/Applications/Member");
+//mkdir("./System/Security/Integrity/Backup/Applications/Moderator");
+//mkdir("./System/Security/Integrity/Backup/Applications/Panel");
+//mkdir("./System/Security/Integrity/Backup/Applications/Public");
+//mkdir("./System/Security/Integrity/Backup/Applications/Root");
+//mkdir("./System/Security/Integrity/Backup/Applications/Services");
+//mkdir("./System/Security/Integrity/Backup/Applications/Video_Games/");
 
 	echo ("[ Done ]<BR><BR>");
 
@@ -4625,32 +4625,32 @@ mkdir("./System/Security/Integrity/Backup/Applications/Video_Games/");
 
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Administration/... Wait.<BR><BR>");
 
-copy("./Applications/Administration/Accounts","./System/Security/Integrity/Backup/Applications/Administration/Accounts");
-copy("./Applications/Administration/Applications","./System/Security/Integrity/Backup/Applications/Administration/Applications");
-copy("./Applications/Administration/Archive","./System/Security/Integrity/Backup/Applications/Administration/Archive");
-copy("./Applications/Administration/Control_Panel","./System/Security/Integrity/Backup/Applications/Administration/Control_Panel");
-copy("./Applications/Administration/Emulators","./System/Security/Integrity/Backup/Applications/Administration/Emulators");
-copy("./Applications/Administration/File_Categories","./System/Security/Integrity/Backup/Applications/Administration/File_Categories");
-copy("./Applications/Administration/File_Manager","./System/Security/Integrity/Backup/Applications/Administration/File_Manger");
-copy("./Applications/Administration/Forum","./System/Security/Integrity/Backup/Applications/Administration/Forum");
-copy("./Applications/Administration/GIT","./System/Security/Integrity/Backup/Applications/Administration/GIT");
-copy("./Applications/Administration/Messenger","./System/Security/Integrity/Backup/Applications/Administration/Messenger");
-copy("./Applications/Administration/Networking","./System/Security/Integrity/Backup/Applications/Administration/Networking");
-copy("./Applications/Administration/Panels","./System/Security/Integrity/Backup/Applications/Administration/Panels");
-copy("./Applications/Administration/PlugIns","./System/Security/Integrity/Backup/Applications/Administration/PlugIns");
-copy("./Applications/Administration/PHP_Information.php","./System/Security/Integrity/Backup/Applications/Administration/PHP_Information.php");
-copy("./Applications/Administration/Publish","./System/Security/Integrity/Backup/Applications/Administration/Publish");
-copy("./Applications/Administration/Ranks","./System/Security/Integrity/Backup/Applications/Administration/Ranks");
-copy("./Applications/Administration/Referrers","./System/Security/Integrity/Backup/Applications/Administration/Referrers");
-copy("./Applications/Administration/Robot_Monitor","./System/Security/Integrity/Backup/Applications/Administration/Robot_Monitor");
-copy("./Applications/Administration/Settings","./System/Security/Integrity/Backup/Applications/Administration/Settings");
-copy("./Applications/Administration/Submissions","./System/Security/Integrity/Backup/Applications/Administration/Submissions");
-copy("./Applications/Administration/Terminal","./System/Security/Integrity/Backup/Applications/Administration/Terminal");
-copy("./Applications/Administration/Themes","./System/Security/Integrity/Backup/Applications/Administration/Themes");
-copy("./Applications/Administration/Update","./System/Security/Integrity/Backup/Applications/Administration/Update");
-copy("./Applications/Administration/VoIP","./System/Security/Integrity/Backup/Applications/Administration/VoIP");
-copy("./Applications/Administration/Web_Pages","./System/Security/Integrity/Backup/Applications/Administration/Web_Pages");
-copy("./Applications/Administration/index.php","./System/Security/Integrity/Backup/Applications/Administration/index.php");
+copy("./Applications/Administration/Visibility/Administration/Accounts","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Accounts");
+copy("./Applications/Administration/Visibility/Administration/Applications","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Applications");
+copy("./Applications/Administration/Visibility/Administration/Archive","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Archive");
+copy("./Applications/Administration/Visibility/Administration/Control_Panel","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Control_Panel");
+copy("./Applications/Administration/Visibility/Administration/Emulators","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Emulators");
+copy("./Applications/Administration/Visibility/Administration/File_Categories","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/File_Categories");
+copy("./Applications/Administration/Visibility/Administration/File_Manager","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/File_Manger");
+copy("./Applications/Administration/Visibility/Administration/Forum","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Forum");
+copy("./Applications/Administration/Visibility/Administration/GIT","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/GIT");
+copy("./Applications/Administration/Visibility/Administration/Messenger","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Messenger");
+copy("./Applications/Administration/Visibility/Administration/Networking","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Networking");
+copy("./Applications/Administration/Visibility/Administration/Panels","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Panels");
+copy("./Applications/Administration/Visibility/Administration/PlugIns","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/PlugIns");
+copy("./Applications/Administration/Visibility/Administration/PHP_Information.php","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/PHP_Information.php");
+copy("./Applications/Administration/Visibility/Administration/Publish","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Publish");
+copy("./Applications/Administration/Visibility/Administration/Ranks","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Ranks");
+copy("./Applications/Administration/Visibility/Administration/Referrers","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Referrers");
+copy("./Applications/Administration/Visibility/Administration/Robot_Monitor","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Robot_Monitor");
+copy("./Applications/Administration/Visibility/Administration/Settings","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Settings");
+copy("./Applications/Administration/Visibility/Administration/Submissions","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Submissions");
+copy("./Applications/Administration/Visibility/Administration/Terminal","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Terminal");
+copy("./Applications/Administration/Visibility/Administration/Themes","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Themes");
+copy("./Applications/Administration/Visibility/Administration/Update","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Update");
+copy("./Applications/Administration/Visibility/Administration/VoIP","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/VoIP");
+copy("./Applications/Administration/Visibility/Administration/Web_Pages","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Web_Pages");
+copy("./Applications/Administration/Visibility/Administration/index.php","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/index.php");
 
 	echo ("[ Done ]<BR><BR>");
 
@@ -4672,57 +4672,57 @@ copy("./Applications/Custom/index.php","./System/Security/Integrity/Backup/Appli
 
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Member/... Wait.<BR><BR>");
 
-copy("./Applications/Member/Account_Data","./System/Security/Integrity/Backup/Applications/Member/Account_Data");
-copy("./Applications/Member/Account_Recovery","./System/Security/Integrity/Backup/Applications/Member/Account_Recovery");
-copy("./Applications/Member/Active_Members","./System/Security/Integrity/Backup/Applications/Member/Active_Members");
-copy("./Applications/Member/All_News","./System/Security/Integrity/Backup/Applications/Member/All_News");
-copy("./Applications/Member/All_Shouts","./System/Security/Integrity/Backup/Applications/Member/All_Shouts");
-copy("./Applications/Member/Application_List","./System/Security/Integrity/Backup/Applications/Member/Application_List");
-copy("./Applications/Member/Articles","./System/Security/Integrity/Backup/Applications/Member/Articles");
-copy("./Applications/Member/Calculator","./System/Security/Integrity/Backup/Applications/Member/Calculator");
-copy("./Applications/Member/Calendar","./System/Security/Integrity/Backup/Applications/Member/Calendar");
-copy("./Applications/Member/Clock","./System/Security/Integrity/Backup/Applications/Member/Clock");
-copy("./Applications/Member/Comment","./System/Security/Integrity/Backup/Applications/Member/Comment");
-copy("./Applications/Member/Contact_Administrator","./System/Security/Integrity/Backup/Applications/Member/Contact_Administrator");
-copy("./Applications/Member/Control_Panel","./System/Security/Integrity/Backup/Applications/Member/Control_Panel");
-copy("./Applications/Member/Devices","./System/Security/Integrity/Backup/Applications/Member/Devices");
-copy("./Applications/Member/Documentation","./System/Security/Integrity/Backup/Applications/Member/Documentation");
-copy("./Applications/Member/Download","./System/Security/Integrity/Backup/Applications/Member/Download");
-copy("./Applications/Member/Electronic_Mail","./System/Security/Integrity/Backup/Applications/Member/Electronic_Mail");
-copy("./Applications/Member/Emulators","./System/Security/Integrity/Backup/Applications/Member/Emulators");
-copy("./Applications/Member/Files","./System/Security/Integrity/Backup/Applications/Member/Files");
-copy("./Applications/Member/Forum","./System/Security/Integrity/Backup/Applications/Member/Forum");
-copy("./Applications/Member/Forward","./System/Security/Integrity/Backup/Applications/Member/Forward");
-copy("./Applications/Member/Friend","./System/Security/Integrity/Backup/Applications/Member/Friend");
-copy("./Applications/Member/Language","./System/Security/Integrity/Backup/Applications/Member/Language");
-copy("./Applications/Member/Legal","./System/Security/Integrity/Backup/Applications/Member/Legal");
-copy("./Applications/Member/Lightning_Calculate","./System/Security/Integrity/Backup/Applications/Member/Lightning_Calculate");
-copy("./Applications/Member/List","./System/Security/Integrity/Backup/Applications/Member/List");
-copy("./Applications/Member/Login","./System/Security/Integrity/Backup/Applications/Member/Login");
-copy("./Applications/Member/Market","./System/Security/Integrity/Backup/Applications/Member/Market");
-copy("./Applications/Member/Media_Player","./System/Security/Integrity/Backup/Applications/Member/Media_Player");
-copy("./Applications/Member/Member_Directory","./System/Security/Integrity/Backup/Applications/Member/Member_Directory");
-copy("./Applications/Member/Messenger","./System/Security/Integrity/Backup/Applications/Member/Messenger");
-copy("./Applications/Member/News","./System/Security/Integrity/Backup/Applications/Member/News");
-copy("./Applications/Member/Notepad","./System/Security/Integrity/Backup/Applications/Member/Notepad");
-copy("./Applications/Member/Pages","./System/Security/Integrity/Backup/Applications/Member/Pages");
-copy("./Applications/Member/Profile","./System/Security/Integrity/Backup/Applications/Member/Profile");
-copy("./Applications/Member/Recommendations","./System/Security/Integrity/Backup/Applications/Member/Recommendations");
-copy("./Applications/Member/Referrers","./System/Security/Integrity/Backup/Applications/Member/Referrers");
-copy("./Applications/Member/Register","./System/Security/Integrity/Backup/Applications/Member/Register");
-copy("./Applications/Member/Reset_Password","./System/Security/Integrity/Backup/Applications/Member/Reset_Password");
-copy("./Applications/Member/Search","./System/Security/Integrity/Backup/Applications/Member/Search");
-copy("./Applications/Member/Submit_News","./System/Security/Integrity/Backup/Applications/Member/Submit_News");
-copy("./Applications/Member/System","./System/Security/Integrity/Backup/Applications/Member/System");
-copy("./Applications/Member/System_Message","./System/Security/Integrity/Backup/Applications/Member/System_Message");
-copy("./Applications/Member/Theme","./System/Security/Integrity/Backup/Applications/Member/Theme");
-copy("./Applications/Member/Travel","./System/Security/Integrity/Backup/Applications/Member/Travel");
-copy("./Applications/Member/Update_Account","./System/Security/Integrity/Backup/Applications/Member/Update_Account");
-copy("./Applications/Member/Update_Password","./System/Security/Integrity/Backup/Applications/Member/Update_Password");
-copy("./Applications/Member/Upload","./System/Security/Integrity/Backup/Applications/Member/Upload");
-copy("./Applications/Member/VoIP","./System/Security/Integrity/Backup/Applications/Member/VoIP");
-copy("./Applications/Member/Webspace","./System/Security/Integrity/Backup/Applications/Member/Webspace");
-copy("./Applications/Member/index.php","./System/Security/Integrity/Backup/Applications/Member/index.php");
+copy("./Applications/Member/Visibility/Member/Account_Data","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Account_Data");
+copy("./Applications/Member/Visibility/Member/Account_Recovery","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Account_Recovery");
+copy("./Applications/Member/Visibility/Member/Active_Members","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Active_Members");
+copy("./Applications/Member/Visibility/Member/All_News","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/All_News");
+copy("./Applications/Member/Visibility/Member/All_Shouts","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/All_Shouts");
+copy("./Applications/Member/Visibility/Member/Application_List","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Application_List");
+copy("./Applications/Member/Visibility/Member/Articles","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Articles");
+copy("./Applications/Member/Visibility/Member/Calculator","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Calculator");
+copy("./Applications/Member/Visibility/Member/Calendar","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Calendar");
+copy("./Applications/Member/Visibility/Member/Clock","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Clock");
+copy("./Applications/Member/Visibility/Member/Comment","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Comment");
+copy("./Applications/Member/Visibility/Member/Contact_Administrator","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Contact_Administrator");
+copy("./Applications/Member/Visibility/Member/Control_Panel","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Control_Panel");
+copy("./Applications/Member/Visibility/Member/Devices","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Devices");
+copy("./Applications/Member/Visibility/Member/Documentation","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Documentation");
+copy("./Applications/Member/Visibility/Member/Download","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Download");
+copy("./Applications/Member/Visibility/Member/Electronic_Mail","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Electronic_Mail");
+copy("./Applications/Member/Visibility/Member/Emulators","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Emulators");
+copy("./Applications/Member/Visibility/Member/Files","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Files");
+copy("./Applications/Member/Visibility/Member/Forum","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Forum");
+copy("./Applications/Member/Visibility/Member/Forward","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Forward");
+copy("./Applications/Member/Visibility/Member/Friend","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Friend");
+copy("./Applications/Member/Visibility/Member/Language","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Language");
+copy("./Applications/Member/Visibility/Member/Legal","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Legal");
+copy("./Applications/Member/Visibility/Member/Lightning_Calculate","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Lightning_Calculate");
+copy("./Applications/Member/Visibility/Member/List","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/List");
+copy("./Applications/Member/Visibility/Member/Login","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Login");
+copy("./Applications/Member/Visibility/Member/Market","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Market");
+copy("./Applications/Member/Visibility/Member/Media_Player","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Media_Player");
+copy("./Applications/Member/Visibility/Member/Member_Directory","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Member_Directory");
+copy("./Applications/Member/Visibility/Member/Messenger","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Messenger");
+copy("./Applications/Member/Visibility/Member/News","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/News");
+copy("./Applications/Member/Visibility/Member/Notepad","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Notepad");
+copy("./Applications/Member/Visibility/Member/Pages","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Pages");
+copy("./Applications/Member/Visibility/Member/Profile","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Profile");
+copy("./Applications/Member/Visibility/Member/Recommendations","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Recommendations");
+copy("./Applications/Member/Visibility/Member/Referrers","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Referrers");
+copy("./Applications/Member/Visibility/Member/Register","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Register");
+copy("./Applications/Member/Visibility/Member/Reset_Password","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Reset_Password");
+copy("./Applications/Member/Visibility/Member/Search","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Search");
+copy("./Applications/Member/Visibility/Member/Submit_News","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Submit_News");
+copy("./Applications/Member/Visibility/Member/System","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/System");
+copy("./Applications/Member/Visibility/Member/System_Message","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/System_Message");
+copy("./Applications/Member/Visibility/Member/Theme","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Theme");
+copy("./Applications/Member/Visibility/Member/Travel","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Travel");
+copy("./Applications/Member/Visibility/Member/Update_Account","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Update_Account");
+copy("./Applications/Member/Visibility/Member/Update_Password","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Update_Password");
+copy("./Applications/Member/Visibility/Member/Upload","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Upload");
+copy("./Applications/Member/Visibility/Member/VoIP","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/VoIP");
+copy("./Applications/Member/Visibility/Member/Webspace","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Webspace");
+copy("./Applications/Member/Visibility/Member/index.php","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/index.php");
 
 	echo ("[ Done ]<BR><BR>");
 
