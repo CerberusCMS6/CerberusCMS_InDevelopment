@@ -4574,6 +4574,8 @@ $_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("INSERT INTO {$
  ============================================================================================================
 */
 
+	echo ("<IMG SRC=\"./Theme/$_INTERNAL_FILE_ARCHITECT_INSTALL_DIRECTORY_THEME_VIDEO_RESOLUTION/Global/Image/Icon_Architect/Loops.gif\" WIDTH=\"50\" HEIGHT=\"50\" CLASS=\"MemberProfile\"></IMG><BR><BR>");
+
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Installing Integrity... Wait.<BR>");
 
 	echo ("[ Done ]<BR><BR>");
