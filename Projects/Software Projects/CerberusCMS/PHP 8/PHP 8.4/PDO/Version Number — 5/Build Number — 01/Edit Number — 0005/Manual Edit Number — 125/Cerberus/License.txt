@@ -1,4 +1,4 @@
-﻿                             .-.							   
+                             .-.							   
                             {{@}}							   
             <>               8@8							   
           .::::.             888							   
@@ -53,7 +53,7 @@ https://www.GITHub.com/CerberusCMS5
 DEMONSTRATION SERVERS :: FREE
 https://CerberusCMS5.SourceForge.net
 ============================================================================================================================================================
-No Commercial Software License
+No Commercial Software License. This software is given out completely for free of monetary value. This software does not come with any warranty express or implied.
 
 ***************************
 \
