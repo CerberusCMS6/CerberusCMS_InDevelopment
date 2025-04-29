@@ -2844,8 +2844,8 @@ if ($_GLOBAL_REMOTE_SERVER_HTTP_USER_AGENT_DISPLAY == "") {
 /*
  ============================================================================================================
  +
- + Internal Security :: Cookie :: Tampered Data :: Local-File-Inclusion, Remote-File-Inclusion, S.Q.L. Injection
- +
+ + Internal Security :: Check :: Cookie :: Tampered Data :: Local-File-Inclusion, Remote-File-Inclusion, S.Q.L. Injection
+ + - Cookie: Language -
  ============================================================================================================
 */
 
@@ -2914,6 +2914,13 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_LANGUAGE,".") == 1) {
 
 } // [ + ] IF: Registered Member Account :: Cookie :: Language :: String :: Is Tampered, Containing: . :: Filter String and Redirect
 
+/*
+ ============================================================================================================
+ +
+ + Internal Security :: Check :: Cookie :: Tampered Data :: Local-File-Inclusion, Remote-File-Inclusion, S.Q.L. Injection
+ + - Cookie: UserName -
+ ============================================================================================================
+*/
 
 /*
  ============================================================================================================
@@ -2982,6 +2989,14 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_USERNAME,".") == 1) {
 
 /*
  ============================================================================================================
+ +
+ + Internal Security :: Check :: Cookie :: Tampered Data :: Local-File-Inclusion, Remote-File-Inclusion, S.Q.L. Injection
+ + - Cookie: Password -
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
  + Check :: Registered Member Account :: Cookie :: Password
  ============================================================================================================
 */
@@ -3031,6 +3046,14 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_PASSWORD,"`") == 1) {
 	exit;
 
 } // [ + ] IF: Registered Member Account :: Cookie :: Password :: String :: Is Tampered, Containing: ` :: Filter String and Redirect
+
+/*
+ ============================================================================================================
+ +
+ + Internal Security :: Check :: Cookie :: Tampered Data :: Local-File-Inclusion, Remote-File-Inclusion, S.Q.L. Injection
+ + - Cookie: Electronic Mail Address -
+ ============================================================================================================
+*/
 
 /*
  ============================================================================================================
@@ -3086,7 +3109,15 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS,"`") == 1) {
 
 /*
  ============================================================================================================
- + Check :: Non-Registered Visitor :: Web Browser :: Cookie :: Theme
+ +
+ + Internal Security :: Check :: Cookie :: Tampered Data :: Local-File-Inclusion, Remote-File-Inclusion, S.Q.L. Injection
+ + - Cookie: Theme Directory -
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Check :: Non-Registered Visitor :: Web Browser :: Cookie :: Directory :: Theme
  ============================================================================================================
 */
 
@@ -3095,11 +3126,11 @@ if ($_GLOBAL_COOKIE_DIRECTORY_THEME == ".." || $_GLOBAL_COOKIE_DIRECTORY_THEME =
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit and Escaping Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
-} // [ + ] IF: Non-Registered Visitor :: Cookie :: Theme :: String :: Is Exploit Data, Redirect To Logout
+} // [ + ] IF: Non-Registered Visitor :: Cookie :: Directory :: Theme :: String :: Is Exploit Data, Redirect To Logout
 
 /*
  ==========================================================================
- + IF: Web Browser :: Cookie :: String :: Theme :: Contains Programming Code OR Exploit Code
+ + IF: Web Browser :: Cookie :: String :: Directory :: Theme :: Contains Programming Code OR Exploit Code
  ==========================================================================
 */
 
@@ -3108,11 +3139,11 @@ if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME,"<") == 1) {
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
-} // [ + ] IF: Non-Registered Visitor :: Cookie :: Theme :: String :: Is Tampered, Containing: < :: Filter String and Redirect
+} // [ + ] IF: Non-Registered Visitor :: Cookie :: Directory :: Theme :: String :: Is Tampered, Containing: < :: Filter String and Redirect
 
 /*
  ==========================================================================
- + IF: Web Browser :: Cookie :: String :: Theme :: Contains Programming Code OR Exploit Code
+ + IF: Web Browser :: Cookie :: String :: Directory :: Theme :: Contains Programming Code OR Exploit Code
  ==========================================================================
 */
 
@@ -3121,11 +3152,11 @@ if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME,">") == 1) {
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
-} // [ + ] IF: Non-Registered Visitor :: Cookie :: Theme :: String :: Is Tampered, Containing: > :: Filter String and Redirect
+} // [ + ] IF: Non-Registered Visitor :: Cookie :: Directory :: Theme :: String :: Is Tampered, Containing: > :: Filter String and Redirect
 
 /*
  ==========================================================================
- + IF: Web Browser :: Cookie :: String :: Theme :: Contains Programming Code OR Exploit Code
+ + IF: Web Browser :: Cookie :: String :: Directory :: Theme :: Contains Programming Code OR Exploit Code
  ==========================================================================
 */
 
@@ -3134,13 +3165,73 @@ if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME,"`") == 1) {
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
-} // [ + ] IF: Non-Registered Visitor :: Cookie :: Theme :: String :: Is Tampered, Containing: ` :: Filter String and Redirect
+} // [ + ] IF: Non-Registered Visitor :: Cookie :: Directory :: Theme :: String :: Is Tampered, Containing: ` :: Filter String and Redirect
+
+/*
+ ============================================================================================================
+ +
+ + Internal Security :: Check :: Cookie :: Tampered Data :: Local-File-Inclusion, Remote-File-Inclusion, S.Q.L. Injection
+ + - Cookie: Theme Directory Video Resolution -
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Check :: Non-Registered Visitor :: Web Browser :: Cookie :: Directory :: Theme :: Video Resolution
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION == ".." || $_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION == "." || $_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION == "@" || $_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION == "`") {
+
+	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit and Escaping Found - Redirect To Logout Section, Destroy All Cookies
+	exit;
+
+} // [ + ] IF: Non-Registered Visitor :: Cookie :: Theme :: Video Resolution :: String :: Is Exploit Data, Redirect To Logout
+
+/*
+ ==========================================================================
+ + IF: Web Browser :: Cookie :: String :: Directory :: Theme :: Video Resolution :: Contains Programming Code OR Exploit Code
+ ==========================================================================
+*/
+
+if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION,"<") == 1) {
+
+	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
+	exit;
+
+} // [ + ] IF: Non-Registered Visitor :: Cookie :: Directory :: Theme :: Video Resolution :: String :: Is Tampered, Containing: < :: Filter String and Redirect
+
+/*
+ ==========================================================================
+ + IF: Web Browser :: Cookie :: String :: Directory :: Theme :: Video Resolution :: Contains Programming Code OR Exploit Code
+ ==========================================================================
+*/
+
+if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION,">") == 1) {
+
+	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
+	exit;
+
+} // [ + ] IF: Non-Registered Visitor :: Cookie :: Directory :: Theme :: Video Resolution :: String :: Is Tampered, Containing: > :: Filter String and Redirect
+
+/*
+ ==========================================================================
+ + IF: Web Browser :: Cookie :: String :: Directory :: Theme :: Video Resolution :: Contains Programming Code OR Exploit Code
+ ==========================================================================
+*/
+
+if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION,"`") == 1) {
+
+	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
+	exit;
+
+} // [ + ] IF: Non-Registered Visitor :: Cookie :: Directory :: Theme :: Video Resolution :: String :: Is Tampered, Containing: ` :: Filter String and Redirect
 
 /*
  ============================================================================================================
  +
  + Internal Security :: Web Browser :: Cookie :: String :: Enforce String Character Length Limitations
- +
+ + - Cookie: Language -
  ============================================================================================================
 */
 
@@ -3158,6 +3249,14 @@ if (strlen($_GLOBAL_COOKIE_MEMBER_LANGUAGE) >= "15") {
 } // [ + ] IF: Registered Member Account :: Cookie :: String :: Language :: Character Length Data Is Greater Than OR Equal To 15 Characters: Instantly Destroy Cookies, Sessions and Logout
 
 /*
+ ============================================================================================================
+ +
+ + Internal Security :: Web Browser :: Cookie :: String :: Enforce String Character Length Limitations
+ + - Cookie: UserName -
+ ============================================================================================================
+*/
+
+/*
  ==========================================================================
  + IF: Web Browser :: Cookie :: String :: UserName :: String :: Character Length
  ==========================================================================
@@ -3169,6 +3268,14 @@ if (strlen($_GLOBAL_COOKIE_MEMBER_USERNAME) >= "25") {
 	exit;
 
 } // [ + ] IF: Registered Member Account :: Cookie :: String :: UserName :: Character Length Data Is Greater Than OR Equal To 15 Characters: Instantly Destroy Cookies, Sessions and Logout
+
+/*
+ ============================================================================================================
+ +
+ + Internal Security :: Web Browser :: Cookie :: String :: Enforce String Character Length Limitations
+ + - Cookie: Password -
+ ============================================================================================================
+*/
 
 /*
  ==========================================================================
@@ -3184,6 +3291,14 @@ if (strlen($_GLOBAL_COOKIE_MEMBER_PASSWORD) >= "256") {
 } // [ + ] IF: Registered Member Account :: Cookie :: String :: Password :: Character Length Data Is Greater Than OR Equal To 256 Characters: Instantly Destroy Cookies, Sessions and Logout
 
 /*
+ ============================================================================================================
+ +
+ + Internal Security :: Web Browser :: Cookie :: String :: Enforce String Character Length Limitations
+ + - Cookie: Electronic Mail Address -
+ ============================================================================================================
+*/
+
+/*
  ==========================================================================
  + IF: Web Browser :: Cookie :: String :: Electronic Mail Address :: String :: Character Length
  ==========================================================================
@@ -3195,6 +3310,48 @@ if (strlen($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS) >= "100") {
 	exit;
 
 } // [ + ] IF: Registered Member Account :: Cookie :: String :: Electronic Mail Address :: Character Length Data Is Greater Than OR Equal To 100 Characters: Instantly Destroy Cookies, Sessions and Logout
+
+/*
+ ============================================================================================================
+ +
+ + Internal Security :: Web Browser :: Cookie :: String :: Enforce String Character Length Limitations
+ + - Cookie: Theme Directory -
+ ============================================================================================================
+*/
+
+/*
+ ==========================================================================
+ + IF: Web Browser :: Cookie :: String :: Electronic Mail Address :: String :: Character Length
+ ==========================================================================
+*/
+
+if (strlen($_GLOBAL_COOKIE_DIRECTORY_THEME) >= "100") {
+
+	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+	exit;
+
+} // [ + ] IF: Registered Member Account :: Cookie :: String :: Directory :: Theme :: Character Length Data Is Greater Than OR Equal To 100 Characters: Instantly Destroy Cookies, Sessions and Logout
+
+/*
+ ============================================================================================================
+ +
+ + Internal Security :: Web Browser :: Cookie :: String :: Enforce String Character Length Limitations
+ + - Cookie: Theme Directory Video Resolution -
+ ============================================================================================================
+*/
+
+/*
+ ==========================================================================
+ + IF: Web Browser :: Cookie :: String :: Electronic Mail Address :: String :: Character Length
+ ==========================================================================
+*/
+
+if (strlen($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION) >= "100") {
+
+	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+	exit;
+
+} // [ + ] IF: Registered Member Account :: Cookie :: String :: Directory :: Theme :: Video Resolution :: Character Length Data Is Greater Than OR Equal To 100 Characters: Instantly Destroy Cookies, Sessions and Logout
 
 /*
  ============================================================================================================
