@@ -5167,7 +5167,7 @@ $_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_32K	 						= $_POST[
  ============================================================================================================
 */
 
-if ($_Kernel_Set_Member_Account_POST_SET_THEME_144PI) {
+if ($_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_144PI) {
 	
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
@@ -5185,7 +5185,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_144PI) {
  ============================================================================================================
 */
 
-if ($_Kernel_Set_Member_Account_POST_SET_THEME_240PI) {
+if ($_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_240PI) {
 
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
@@ -5203,7 +5203,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_240PI) {
  ============================================================================================================
 */
 
-if ($_Kernel_Set_Member_Account_POST_SET_THEME_340PI) {
+if ($_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_340PI) {
 
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
@@ -5221,7 +5221,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_340PI) {
  ============================================================================================================
 */
 
-if ($_Kernel_Set_Member_Account_POST_SET_THEME_480PI) {
+if ($_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_480PI) {
 
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
@@ -5239,7 +5239,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_480PI) {
  ============================================================================================================
 */
 
-if ($_Kernel_Set_Member_Account_POST_SET_THEME_520PI) {
+if ($_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_520PI) {
 
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
@@ -5257,7 +5257,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_520PI) {
  ============================================================================================================
 */
 
-if ($_Kernel_Set_Member_Account_POST_SET_THEME_640PI) {
+if ($_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_640PI) {
 
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
@@ -5275,7 +5275,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_640PI) {
  ============================================================================================================
 */
 
-if ($_Kernel_Set_Member_Account_POST_SET_THEME_720PI) {
+if ($_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_720PI) {
 
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
@@ -5293,7 +5293,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_720PI) {
  ============================================================================================================
 */
 
-if ($_Kernel_Set_Member_Account_POST_SET_THEME_1080PI) {
+if ($_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_1080PI) {
 
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
@@ -5311,7 +5311,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_1080PI) {
  ============================================================================================================
 */
 
-if ($_Kernel_Set_Member_Account_POST_SET_THEME_2040PI) {
+if ($_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_2040PI) {
 
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
@@ -5329,7 +5329,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_2040PI) {
  ============================================================================================================
 */
 
-if ($_Kernel_Set_Member_Account_POST_SET_THEME_2160PI) {
+if ($_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_2160PI) {
 
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
@@ -5347,7 +5347,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_2160PI) {
  ============================================================================================================
 */
 
-if ($_Kernel_Set_Member_Account_POST_SET_THEME_4K) {
+if ($_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_4K) {
 
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
@@ -5365,7 +5365,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_4K) {
  ============================================================================================================
 */
 
-if ($_Kernel_Set_Member_Account_POST_SET_THEME_8K) {
+if ($_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_8K) {
 
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
@@ -5383,7 +5383,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_8K) {
  ============================================================================================================
 */
 
-if ($_Kernel_Set_Member_Account_POST_SET_THEME_16K) {
+if ($_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_16K) {
 
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_16K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
@@ -5400,7 +5400,7 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_16K) {
  ============================================================================================================
 */
 
-if ($_Kernel_Set_Member_Account_POST_SET_THEME_32K) {
+if ($_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_32K) {
 
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_32K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
