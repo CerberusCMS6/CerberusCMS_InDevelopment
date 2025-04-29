@@ -1836,6 +1836,7 @@ if ($_GLOBAL_MEMBER_ACCOUNT_DEVICE_WEB_BROWSER_AUTHORIZED != "$_GLOBAL_REMOTE_SE
 	setcookie("kernel_member_security_fingerprint", "", time()-42000);
 	setcookie("kernel_member_username", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 
 /*
  ============================================================================================================
@@ -1902,6 +1903,7 @@ if ($_GLOBAL_MEMBER_ACCOUNT_DEVICE_MAC_ADDRESS_AUTHORIZED != "$_GLOBAL_REMOTE_DE
 	setcookie("kernel_member_security_fingerprint", "", time()-42000);
 	setcookie("kernel_member_username", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 
 /*
  ============================================================================================================
@@ -1984,6 +1986,7 @@ if ($_DB_Query_Kernel_Security_Update_Member_Account_Force_Logout) {
 	setcookie("kernel_member_security_fingerprint", "", time()-42000);
 	setcookie("kernel_member_username", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 
 /*
  ============================================================================================================
@@ -2026,6 +2029,7 @@ if ($_GLOBAL_MEMBER_STATUS_ACCOUNT_LOCKED > "0") {
 	setcookie("kernel_member_security_fingerprint", "", time()-42000);
 	setcookie("kernel_member_username", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 
 /*
  ============================================================================================================
