@@ -2857,6 +2857,7 @@ if ($_GLOBAL_REMOTE_SERVER_HTTP_USER_AGENT_DISPLAY == "") {
 
 if ($_GLOBAL_COOKIE_MEMBER_LANGUAGE == ".." || $_GLOBAL_COOKIE_MEMBER_LANGUAGE == "." || $_GLOBAL_COOKIE_MEMBER_LANGUAGE == "@" || $_GLOBAL_COOKIE_MEMBER_LANGUAGE == "`") {
 
+	setcookie("kernel_member_language", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit and Escaping Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -2870,6 +2871,7 @@ if ($_GLOBAL_COOKIE_MEMBER_LANGUAGE == ".." || $_GLOBAL_COOKIE_MEMBER_LANGUAGE =
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_LANGUAGE,"<") == 1) {
 
+	setcookie("kernel_member_language", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -2883,6 +2885,7 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_LANGUAGE,"<") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_LANGUAGE,">") == 1) {
 
+	setcookie("kernel_member_language", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -2896,6 +2899,7 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_LANGUAGE,">") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_LANGUAGE,"`") == 1) {
 
+	setcookie("kernel_member_language", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -2909,6 +2913,7 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_LANGUAGE,"`") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_LANGUAGE,".") == 1) {
 
+	setcookie("kernel_member_language", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -2930,6 +2935,7 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_LANGUAGE,".") == 1) {
 
 if ($_GLOBAL_COOKIE_MEMBER_USERNAME == ".." || $_GLOBAL_COOKIE_MEMBER_USERNAME == "." || $_GLOBAL_COOKIE_MEMBER_USERNAME == "@" || $_GLOBAL_COOKIE_MEMBER_USERNAME == "`") {
 
+	setcookie("kernel_member_username", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit and Escaping Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -2943,6 +2949,7 @@ if ($_GLOBAL_COOKIE_MEMBER_USERNAME == ".." || $_GLOBAL_COOKIE_MEMBER_USERNAME =
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_USERNAME,"<") == 1) {
 
+	setcookie("kernel_member_username", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -2956,6 +2963,7 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_USERNAME,"<") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_USERNAME,">") == 1) {
 
+	setcookie("kernel_member_username", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -2969,6 +2977,7 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_USERNAME,">") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_USERNAME,"`") == 1) {
 
+	setcookie("kernel_member_username", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -2982,6 +2991,7 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_USERNAME,"`") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_USERNAME,".") == 1) {
 
+	setcookie("kernel_member_username", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3003,6 +3013,7 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_USERNAME,".") == 1) {
 
 if ($_GLOBAL_COOKIE_MEMBER_PASSWORD == ".." || $_GLOBAL_COOKIE_MEMBER_PASSWORD == "." || $_GLOBAL_COOKIE_MEMBER_PASSWORD == "@" || $_GLOBAL_COOKIE_MEMBER_PASSWORD == "`") {
 
+	setcookie("kernel_member_password", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit and Escaping Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3016,6 +3027,7 @@ if ($_GLOBAL_COOKIE_MEMBER_PASSWORD == ".." || $_GLOBAL_COOKIE_MEMBER_PASSWORD =
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_PASSWORD,"<") == 1) {
 
+	setcookie("kernel_member_password", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3029,6 +3041,7 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_PASSWORD,"<") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_PASSWORD,">") == 1) {
 
+	setcookie("kernel_member_password", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3042,6 +3055,7 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_PASSWORD,">") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_PASSWORD,"`") == 1) {
 
+	setcookie("kernel_member_password", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3063,6 +3077,7 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_PASSWORD,"`") == 1) {
 
 if ($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS == ".." || $_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS == "." || $_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS == "@" || $_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS == "`") {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit and Escaping Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3076,6 +3091,7 @@ if ($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS == ".." || $_GLOBAL_COOKIE_ME
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS,"<") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3089,6 +3105,7 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS,"<") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS,">") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3102,6 +3119,7 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS,">") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS,"`") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3123,6 +3141,7 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS,"`") == 1) {
 
 if ($_GLOBAL_COOKIE_DIRECTORY_THEME == ".." || $_GLOBAL_COOKIE_DIRECTORY_THEME == "." || $_GLOBAL_COOKIE_DIRECTORY_THEME == "@" || $_GLOBAL_COOKIE_DIRECTORY_THEME == "`") {
 
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit and Escaping Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3136,6 +3155,7 @@ if ($_GLOBAL_COOKIE_DIRECTORY_THEME == ".." || $_GLOBAL_COOKIE_DIRECTORY_THEME =
 
 if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME,"<") == 1) {
 
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3149,6 +3169,7 @@ if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME,"<") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME,">") == 1) {
 
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3162,6 +3183,7 @@ if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME,">") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME,"`") == 1) {
 
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3183,6 +3205,7 @@ if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME,"`") == 1) {
 
 if ($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION == ".." || $_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION == "." || $_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION == "@" || $_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION == "`") {
 
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit and Escaping Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3196,6 +3219,7 @@ if ($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION == ".." || $_GLOBAL_COOKIE_
 
 if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION,"<") == 1) {
 
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3209,6 +3233,7 @@ if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION,"<") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION,">") == 1) {
 
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3222,6 +3247,7 @@ if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION,">") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION,"`") == 1) {
 
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3243,6 +3269,7 @@ if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION,"`") == 1) {
 
 if (strlen($_GLOBAL_COOKIE_MEMBER_LANGUAGE) >= "15") {
 
+	setcookie("kernel_member_language", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
 
@@ -3264,6 +3291,7 @@ if (strlen($_GLOBAL_COOKIE_MEMBER_LANGUAGE) >= "15") {
 
 if (strlen($_GLOBAL_COOKIE_MEMBER_USERNAME) >= "25") {
 
+	setcookie("kernel_member_username", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
 
@@ -3285,6 +3313,7 @@ if (strlen($_GLOBAL_COOKIE_MEMBER_USERNAME) >= "25") {
 
 if (strlen($_GLOBAL_COOKIE_MEMBER_PASSWORD) >= "256") {
 
+	setcookie("kernel_member_password", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
 
@@ -3306,6 +3335,7 @@ if (strlen($_GLOBAL_COOKIE_MEMBER_PASSWORD) >= "256") {
 
 if (strlen($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS) >= "100") {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
 
@@ -3327,6 +3357,7 @@ if (strlen($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS) >= "100") {
 
 if (strlen($_GLOBAL_COOKIE_DIRECTORY_THEME) >= "100") {
 
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
 
@@ -3348,6 +3379,7 @@ if (strlen($_GLOBAL_COOKIE_DIRECTORY_THEME) >= "100") {
 
 if (strlen($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION) >= "100") {
 
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
 
