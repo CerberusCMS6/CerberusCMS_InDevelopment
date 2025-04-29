@@ -774,11 +774,19 @@ $_GLOBAL_SYSTEM_SETTINGS_KERNEL_BACKUP_INSTALLATION_DATE_INSTALLATION			= $_DB_Q
 
 /*
  ============================================================================================================
- + Global :: Cookie :: Variables :: Non-Registered Visitor :: Theme
+ + Global :: Cookie :: Variables :: Non-Registered Visitor :: Directory :: Theme
  ============================================================================================================
 */
 
 $_GLOBAL_COOKIE_DIRECTORY_THEME								= $_COOKIE['kernel_visitor_directory_theme'];
+
+/*
+ ============================================================================================================
+ + Global :: Cookie :: Variables :: Non-Registered Visitor :: Directory :: Theme :: Video Resolution
+ ============================================================================================================
+*/
+
+$_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION					= $_COOKIE['kernel_visitor_directory_theme_video_resolution'];
 
 /*
  ============================================================================================================
@@ -2723,20 +2731,6 @@ if ($_DB_Query_Kernel_Networking_Status_Security_Check_Blocked_Networks_Number_o
 /*
  ============================================================================================================
  +
- + Internal Loop :: Theme :: Check For Video Resolution and Cookie
- +
- ============================================================================================================
-*/
-
-if ($_GLOBAL_COOKIE_DIRECTORY_THEME != null) {
-
-$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION = "";
-
-}
-
-/*
- ============================================================================================================
- +
  + Internal Security :: Web Browser :: User-Agent :: Check For Empty and Null Data
  +
  ============================================================================================================
@@ -3367,6 +3361,7 @@ $_GLOBAL_MEMBER_SETTINGS_DIRECTORY_THEME								= $_GLOBAL_SYSTEM_SETTINGS_DIREC
 if ($_GLOBAL_COOKIE_DIRECTORY_THEME != null) {
 
 $_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME								= $_GLOBAL_COOKIE_DIRECTORY_THEME;
+$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION						= $_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION;
 
 } // [ + ] IF: Non-Logged-In Visitor :: Cookie :: Theme :: Exists
 
@@ -5136,20 +5131,35 @@ if ($_GET["$_INTERNAL_APPLICATION_MODULE_INTERNAL"] == "Language") {
 
 if ($_GET["$_INTERNAL_APPLICATION_MODULE_INTERNAL"] == "Theme") {
 
-$_Kernel_Set_Member_Account_POST_SET_THEME_144PI	 							= $_POST['IAM_Set_Theme_144PI'];
-$_Kernel_Set_Member_Account_POST_SET_THEME_240PI	 							= $_POST['IAM_Set_Theme_240PI'];
-$_Kernel_Set_Member_Account_POST_SET_THEME_340PI	 							= $_POST['IAM_Set_Theme_340PI'];
-$_Kernel_Set_Member_Account_POST_SET_THEME_480PI	 							= $_POST['IAM_Set_Theme_480PI'];
-$_Kernel_Set_Member_Account_POST_SET_THEME_520PI	 							= $_POST['IAM_Set_Theme_520PI'];
-$_Kernel_Set_Member_Account_POST_SET_THEME_640PI	 							= $_POST['IAM_Set_Theme_640PI'];
-$_Kernel_Set_Member_Account_POST_SET_THEME_720PI	 							= $_POST['IAM_Set_Theme_720PI'];
-$_Kernel_Set_Member_Account_POST_SET_THEME_1080PI	 							= $_POST['IAM_Set_Theme_1080PI'];
-$_Kernel_Set_Member_Account_POST_SET_THEME_2040PI	 							= $_POST['IAM_Set_Theme_2040PI'];
-$_Kernel_Set_Member_Account_POST_SET_THEME_2160PI	 							= $_POST['IAM_Set_Theme_2160PI'];
-$_Kernel_Set_Member_Account_POST_SET_THEME_4K	 								= $_POST['IAM_Set_Theme_4K'];
-$_Kernel_Set_Member_Account_POST_SET_THEME_8K	 								= $_POST['IAM_Set_Theme_8K'];
-$_Kernel_Set_Member_Account_POST_SET_THEME_16K	 								= $_POST['IAM_Set_Theme_16K'];
-$_Kernel_Set_Member_Account_POST_SET_THEME_32K	 								= $_POST['IAM_Set_Theme_32K'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_144PI	 						= $_POST['IAM_Set_Theme_Directory_144PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_240PI	 						= $_POST['IAM_Set_Theme_Directory_240PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_340PI	 						= $_POST['IAM_Set_Theme_Directory_340PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_480PI	 						= $_POST['IAM_Set_Theme_Directory_480PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_520PI	 						= $_POST['IAM_Set_Theme_Directory_520PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_640PI	 						= $_POST['IAM_Set_Theme_Directory_640PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_720PI	 						= $_POST['IAM_Set_Theme_Directory_720PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_1080PI	 						= $_POST['IAM_Set_Theme_Directory_1080PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_2040PI	 						= $_POST['IAM_Set_Theme_Directory_2040PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_2160PI	 						= $_POST['IAM_Set_Theme_Directory_2160PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_4K	 							= $_POST['IAM_Set_Theme_Directory_4K'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_8K	 							= $_POST['IAM_Set_Theme_Directory_8K'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_16K	 						= $_POST['IAM_Set_Theme_Directory_16K'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_32K	 						= $_POST['IAM_Set_Theme_Directory_32K'];
+
+$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_144PI	 					= $_POST['IAM_Set_Theme_Video_Resolution_144PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_240PI	 					= $_POST['IAM_Set_Theme_Video_Resolution_240PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_340PI	 					= $_POST['IAM_Set_Theme_Video_Resolution_340PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_480PI	 					= $_POST['IAM_Set_Theme_Video_Resolution_480PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_520PI	 					= $_POST['IAM_Set_Theme_Video_Resolution_520PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_640PI	 					= $_POST['IAM_Set_Theme_Video_Resolution_640PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_720PI	 					= $_POST['IAM_Set_Theme_Video_Resolution_720PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_1080PI	 					= $_POST['IAM_Set_Theme_Video_Resolution_1080PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_2040PI	 					= $_POST['IAM_Set_Theme_Video_Resolution_2040PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_2160PI	 					= $_POST['IAM_Set_Theme_Video_Resolution_2160PI'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_4K	 						= $_POST['IAM_Set_Theme_Video_Resolution_4K'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_8K	 						= $_POST['IAM_Set_Theme_Video_Resolution_8K'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_16K	 						= $_POST['IAM_Set_Theme_Video_Resolution_16K'];
+$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_32K	 						= $_POST['IAM_Set_Theme_Video_Resolution_32K'];
 
 /*
  ============================================================================================================
@@ -5159,7 +5169,10 @@ $_Kernel_Set_Member_Account_POST_SET_THEME_32K	 								= $_POST['IAM_Set_Theme_
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_144PI) {
 	
-	setcookie("kernel_visitor_directory_theme", "144PI/$_Kernel_Set_Member_Account_POST_SET_THEME_144PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_144PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_144PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5173,8 +5186,11 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_144PI) {
 */
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_240PI) {
-	
-	setcookie("kernel_visitor_directory_theme", "240PI/$_Kernel_Set_Member_Account_POST_SET_THEME_240PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_240PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_240PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5188,8 +5204,11 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_240PI) {
 */
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_340PI) {
-	
-	setcookie("kernel_visitor_directory_theme", "340PI/$_Kernel_Set_Member_Account_POST_SET_THEME_340PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_340PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_340PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5203,8 +5222,11 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_340PI) {
 */
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_480PI) {
-	
-	setcookie("kernel_visitor_directory_theme", "480PI/$_Kernel_Set_Member_Account_POST_SET_THEME_480PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_480PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_480PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5218,8 +5240,11 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_480PI) {
 */
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_520PI) {
-	
-	setcookie("kernel_visitor_directory_theme", "520PI/$_Kernel_Set_Member_Account_POST_SET_THEME_520PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_520PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_520PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5233,8 +5258,11 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_520PI) {
 */
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_640PI) {
-	
-	setcookie("kernel_visitor_directory_theme", "640PI/$_Kernel_Set_Member_Account_POST_SET_THEME_640PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_640PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_640PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5248,8 +5276,11 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_640PI) {
 */
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_720PI) {
-	
-	setcookie("kernel_visitor_directory_theme", "720PI/$_Kernel_Set_Member_Account_POST_SET_THEME_720PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_720PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_720PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5263,8 +5294,11 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_720PI) {
 */
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_1080PI) {
-	
-	setcookie("kernel_visitor_directory_theme", "1080PI/$_Kernel_Set_Member_Account_POST_SET_THEME_1080PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_1080PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_1080PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5278,8 +5312,11 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_1080PI) {
 */
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_2040PI) {
-	
-	setcookie("kernel_visitor_directory_theme", "2040PI/$_Kernel_Set_Member_Account_POST_SET_THEME_2040PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_2040PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_2040PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5293,8 +5330,11 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_2040PI) {
 */
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_2160PI) {
-	
-	setcookie("kernel_visitor_directory_theme", "2160PI/$_Kernel_Set_Member_Account_POST_SET_THEME_2160PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_2160PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_2160PI", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5308,8 +5348,11 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_2160PI) {
 */
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_4K) {
-	
-	setcookie("kernel_visitor_directory_theme", "4K/$_Kernel_Set_Member_Account_POST_SET_THEME_4K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_4K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_4K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5323,8 +5366,11 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_4K) {
 */
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_8K) {
-	
-	setcookie("kernel_visitor_directory_theme", "8K/$_Kernel_Set_Member_Account_POST_SET_THEME_8K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_8K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_8K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5338,8 +5384,10 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_8K) {
 */
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_16K) {
-	
-	setcookie("kernel_visitor_directory_theme", "16K/$_Kernel_Set_Member_Account_POST_SET_THEME_16K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_16K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_16K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5353,8 +5401,10 @@ if ($_Kernel_Set_Member_Account_POST_SET_THEME_16K) {
 */
 
 if ($_Kernel_Set_Member_Account_POST_SET_THEME_32K) {
-	
-	setcookie("kernel_visitor_directory_theme", "32K/$_Kernel_Set_Member_Account_POST_SET_THEME_32K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "$_Kernel_Set_Member_Account_POST_SET_THEME_DIRECTORY_32K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "$_Kernel_Set_Member_Account_POST_SET_THEME_VIDEO_RESOLUTION_32K", time()+$_GLOBAL_SYSTEM_COOKIE_TIME);
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Theme&Message=ThemeSet&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
