@@ -202,7 +202,8 @@ echo ("
 												Theme Selection :: 144 :: Progressive / Interlaced
 											<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_INTERNAL&#61;Theme&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
-													<SELECT NAME=\"IAM_Set_Theme_144PI\">
+													<INPUT TYPE=\"HIDDEN\" NAME=\"IAM_Set_Theme_Video_Resolution_144PI\" VALUE=\"144PI\">
+													<SELECT NAME=\"IAM_Set_Theme_Directory_144PI\">
 ");
 
 /*
@@ -269,7 +270,8 @@ echo ("
 												Theme Selection :: 240 :: Progressive / Interlaced
 											<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_INTERNAL&#61;Theme&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
-													<SELECT NAME=\"IAM_Set_Theme_240PI\">
+													<INPUT TYPE=\"HIDDEN\" NAME=\"IAM_Set_Theme_Video_Resolution_240PI\" VALUE=\"240PI\">
+													<SELECT NAME=\"IAM_Set_Theme_Directory_240PI\">
 ");
 
 /*
@@ -336,7 +338,8 @@ echo ("
 												Theme Selection :: 340 :: Progressive / Interlaced
 											<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_INTERNAL&#61;Theme&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
-													<SELECT NAME=\"IAM_Set_Theme_340PI\">
+													<INPUT TYPE=\"HIDDEN\" NAME=\"IAM_Set_Theme_Video_Resolution_340PI\" VALUE=\"340PI\">
+													<SELECT NAME=\"IAM_Set_Theme_Directory_340PI\">
 ");
 
 /*
@@ -403,7 +406,8 @@ echo ("
 												Theme Selection :: 480 :: Progressive / Interlaced
 											<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_INTERNAL&#61;Theme&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
-													<SELECT NAME=\"IAM_Set_Theme_480PI\">
+													<INPUT TYPE=\"HIDDEN\" NAME=\"IAM_Set_Theme_Video_Resolution_480PI\" VALUE=\"480PI\">
+													<SELECT NAME=\"IAM_Set_Theme_Directory_480PI\">
 ");
 
 /*
@@ -470,7 +474,8 @@ echo ("
 												Theme Selection :: 520 :: Progressive / Interlaced
 											<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_INTERNAL&#61;Theme&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
-													<SELECT NAME=\"IAM_Set_Theme_520PI\">
+													<INPUT TYPE=\"HIDDEN\" NAME=\"IAM_Set_Theme_Video_Resolution_520PI\" VALUE=\"520PI\">
+													<SELECT NAME=\"IAM_Set_Theme_Directory_520PI\">
 ");
 
 /*
@@ -537,7 +542,8 @@ echo ("
 												Theme Selection :: 640 :: Progressive / Interlaced
 											<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_INTERNAL&#61;Theme&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
-													<SELECT NAME=\"IAM_Set_Theme_640PI\">
+													<INPUT TYPE=\"HIDDEN\" NAME=\"IAM_Set_Theme_Video_Resolution_640PI\" VALUE=\"640PI\">
+													<SELECT NAME=\"IAM_Set_Theme_Directory_640PI\">
 ");
 
 /*
@@ -604,7 +610,8 @@ echo ("
 												Theme Selection :: 720 :: Progressive / Interlaced
 											<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_INTERNAL&#61;Theme&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
-													<SELECT NAME=\"IAM_Set_Theme_720PI\">
+													<INPUT TYPE=\"HIDDEN\" NAME=\"IAM_Set_Theme_Video_Resolution_720PI\" VALUE=\"720PI\">
+													<SELECT NAME=\"IAM_Set_Theme_Directory_720PI\">
 ");
 
 /*
@@ -671,7 +678,8 @@ echo ("
 												Theme Selection :: 1080 :: Progressive / Interlaced
 											<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_INTERNAL&#61;Theme&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
-													<SELECT NAME=\"IAM_Set_Theme_1080PI\">
+													<INPUT TYPE=\"HIDDEN\" NAME=\"IAM_Set_Theme_Video_Resolution_1080PI\" VALUE=\"1080PI\">
+													<SELECT NAME=\"IAM_Set_Theme_Directory_1080PI\">
 ");
 
 /*
@@ -738,7 +746,8 @@ echo ("
 												Theme Selection :: 2040 :: Progressive / Interlaced
 											<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_INTERNAL&#61;Theme&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
-													<SELECT NAME=\"IAM_Set_Theme_2040PI\">
+													<INPUT TYPE=\"HIDDEN\" NAME=\"IAM_Set_Theme_Video_Resolution_2040PI\" VALUE=\"2040PI\">
+													<SELECT NAME=\"IAM_Set_Theme_Directory_2040PI\">
 ");
 
 /*
@@ -805,7 +814,8 @@ echo ("
 												Theme Selection :: 2160 :: Progressive / Interlaced
 											<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_INTERNAL&#61;Theme&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
-													<SELECT NAME=\"IAM_Set_Theme_2160PI\">
+													<INPUT TYPE=\"HIDDEN\" NAME=\"IAM_Set_Theme_Video_Resolution_2160PI\" VALUE=\"2160PI\">
+													<SELECT NAME=\"IAM_Set_Theme_Directory_2160PI\">
 ");
 
 /*
@@ -872,7 +882,8 @@ echo ("
 												Theme Selection :: 4K :: Progressive / Interlaced
 											<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_INTERNAL&#61;Theme&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
-													<SELECT NAME=\"IAM_Set_Theme_4K\">
+													<INPUT TYPE=\"HIDDEN\" NAME=\"IAM_Set_Theme_Video_Resolution_4K\" VALUE=\"4K\">
+													<SELECT NAME=\"IAM_Set_Theme_Directory_4K\">
 ");
 
 /*
@@ -939,7 +950,8 @@ echo ("
 												Theme Selection :: 8K :: Progressive / Interlaced
 											<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_INTERNAL&#61;Theme&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
-													<SELECT NAME=\"IAM_Set_Theme_8K\">
+													<INPUT TYPE=\"HIDDEN\" NAME=\"IAM_Set_Theme_Video_Resolution_8K\" VALUE=\"8K\">
+													<SELECT NAME=\"IAM_Set_Theme_Directory_8K\">
 ");
 
 /*
@@ -1006,7 +1018,8 @@ echo ("
 												Theme Selection :: 16K :: Progressive / Interlaced
 											<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_INTERNAL&#61;Theme&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
-													<SELECT NAME=\"IAM_Set_Theme_16K\">
+													<INPUT TYPE=\"HIDDEN\" NAME=\"IAM_Set_Theme_Video_Resolution_16K\" VALUE=\"16K\">
+													<SELECT NAME=\"IAM_Set_Theme_Directory_16K\">
 ");
 
 /*
@@ -1073,7 +1086,8 @@ echo ("
 												Theme Selection :: 32K :: Progressive / Interlaced
 											<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_INTERNAL&#61;Theme&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
-													<SELECT NAME=\"IAM_Set_Theme_32K\">
+													<INPUT TYPE=\"HIDDEN\" NAME=\"IAM_Set_Theme_Video_Resolution_32K\" VALUE=\"32K\">
+													<SELECT NAME=\"IAM_Set_Theme_Directory_32K\">
 ");
 
 /*
