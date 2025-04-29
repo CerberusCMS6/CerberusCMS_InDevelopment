@@ -3301,7 +3301,7 @@ if ($_KERNEL_INTERNAL_LOOP_PERMISSIONS_CHANGEMODE_READ_DIRECTORY_UPLOAD_FILES ==
 /*
  ============================================================================================================
  +
- + System Settings :: Loop :: Registered Member Account :: Set System Theme IF: Registered Member Account :: Settings :: Theme Is Empty
+ + System Settings :: Loop :: Registered Member Account :: Set System Theme Directory and Theme Video Resolution
  +
  ============================================================================================================
 */
@@ -3338,11 +3338,9 @@ $_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME								= $_GLOBAL_MEMBER_SETTINGS_DIREC
 
 } // [ + ] IF: Registered Member Account :: Settings :: Theme Directory Settings Is Null
 
-} // [ + ] IF: Registered Member Account :: Is: Logged-In And Valid Credentials Are Set
-
 /*
  ============================================================================================================
- + IF: Non-Logged-In Visitor :: Settings :: Theme Is Empty, Set System Theme
+ + IF: Registered Member Account :: Settings :: Theme :: IS: Null or Empty String: SET Member Theme Directory Settings To: Global System Theme Directory
  ============================================================================================================
 */
 
@@ -3350,11 +3348,21 @@ if ($_GLOBAL_MEMBER_SETTINGS_DIRECTORY_THEME == "") {
 
 $_GLOBAL_MEMBER_SETTINGS_DIRECTORY_THEME								= $_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME;
 
-} // [ + ] IF: Non-Logged-In Visitor :: Settings :: Theme Is Empty, Set System Theme
+} // [ + ] IF: Registered Member Account :: Settings :: Theme :: IS: Null or Empty String: SET Member Theme Directory Settings To: Global System Theme Directory
+
+} // [ + ] IF: Registered Member Account :: Is: Logged-In And Valid Credentials Are Set
 
 /*
  ============================================================================================================
- + IF: Non-Logged-In Visitor :: Cookie :: Theme :: Exists :: Set Theme
+ +
+ + System Settings :: Loop :: Non-Registered Visitor :: Set System-Wide Cookie Specified Theme Details IF: Non-Registered Visitor Cookie Specified Theme Is: NOT Null
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + IF: Non-Registered Visitor :: Settings :: Cookie :: Theme :: Directory :: Is: NOT Null, Change Theme Directory and Theme Video Resolution
  ============================================================================================================
 */
 
@@ -3363,7 +3371,7 @@ if ($_GLOBAL_COOKIE_DIRECTORY_THEME != null) {
 $_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME								= $_GLOBAL_COOKIE_DIRECTORY_THEME;
 $_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION						= $_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION;
 
-} // [ + ] IF: Non-Logged-In Visitor :: Cookie :: Theme :: Exists
+} // [ + ] IF: Non-Registered Visitor :: Settings :: Cookie :: Theme :: Directory :: IS: Set, Change Theme Directory and Theme Video Resolution
 
 /*
  ============================================================================================================
