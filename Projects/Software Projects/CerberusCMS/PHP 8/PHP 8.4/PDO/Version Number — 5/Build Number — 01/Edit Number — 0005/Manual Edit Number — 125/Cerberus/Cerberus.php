@@ -587,12 +587,26 @@ $_GLOBAL_SYSTEM_STATUS_OFFILINE_MODE							= $_DB_Query_Kernel_Select_System_Set
 
 /*
  ============================================================================================================
- + Global :: System :: S.Q.L. Settings: Theme and Web Site Specific
+ + Global :: System :: S.Q.L. Settings: Web Browser Site Title
  ============================================================================================================
 */
 
 $_GLOBAL_SYSTEM_SITE_TITLE								= $_DB_Query_Kernel_Select_System_Settings_Fetch_Array['settings_system_website_title'];
+
+/*
+ ============================================================================================================
+ + Global :: System :: S.Q.L. Settings: Sound Extension
+ ============================================================================================================
+*/
+
 $_GLOBAL_SYSTEM_SOUND_EXTENSION								= $_DB_Query_Kernel_Select_System_Settings_Fetch_Array['settings_system_file_extension_audio'];
+
+/*
+ ============================================================================================================
+ + Global :: System :: S.Q.L. Settings: Graphical User Interface, Theme Directory and Theme Video Resolution
+ ============================================================================================================
+*/
+
 $_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME						= $_DB_Query_Kernel_Select_System_Settings_Fetch_Array['settings_system_directory_theme'];
 $_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION				= $_DB_Query_Kernel_Select_System_Settings_Fetch_Array['settings_system_directory_theme_video_resolution'];
 
