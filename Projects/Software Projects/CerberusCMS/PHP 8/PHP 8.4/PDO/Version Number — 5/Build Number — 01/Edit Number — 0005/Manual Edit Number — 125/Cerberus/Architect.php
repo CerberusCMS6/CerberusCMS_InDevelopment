@@ -4606,7 +4606,7 @@ $_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("INSERT INTO {$
  ============================================================================================================
 */
 
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Creating Read-Only Backup of Application Module Directories... Wait.<BR><BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Creating Read-Only Backup of Application Module Directories... Wait.<BR>");
 
 //mkdir("./System/Security/Integrity/Backup");
 //mkdir("./System/Security/Integrity/Backup/Applications");
@@ -4625,7 +4625,7 @@ $_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("INSERT INTO {$
 
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Creating Read-Only Backup of Application Modules... Wait.<BR><BR>");
 
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Administration/... Wait.<BR><BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Administration/... Wait.<BR>");
 
 copy("./Applications/Administration/Visibility/Administration/Accounts","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Accounts");
 copy("./Applications/Administration/Visibility/Administration/Applications","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Applications");
@@ -4656,7 +4656,7 @@ copy("./Applications/Administration/Visibility/Administration/index.php","./Syst
 
 	echo ("[ Done ]<BR><BR>");
 
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Background/... Wait.<BR><BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Background/... Wait.<BR>");
 
 copy("./Applications/Background/Log_Administration","./System/Security/Integrity/Backup/Applications/Background/Log_Administration");
 copy("./Applications/Background/Log_Background","./System/Security/Integrity/Backup/Applications/Background/Log_Background");
@@ -4666,13 +4666,13 @@ copy("./Applications/Background/index.php","./System/Security/Integrity/Backup/A
 
 	echo ("[ Done ]<BR><BR>");
 
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Custom/... Wait.<BR><BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Custom/... Wait.<BR>");
 
 copy("./Applications/Custom/index.php","./System/Security/Integrity/Backup/Applications/Custom/index.php");
 
 	echo ("[ Done ]<BR><BR>");
 
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Member/... Wait.<BR><BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Member/... Wait.<BR>");
 
 copy("./Applications/Member/Visibility/Member/Account_Data","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Account_Data");
 copy("./Applications/Member/Visibility/Member/Account_Recovery","./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/Account_Recovery");
@@ -4728,14 +4728,14 @@ copy("./Applications/Member/Visibility/Member/index.php","./System/Security/Inte
 
 	echo ("[ Done ]<BR><BR>");
 
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Moderator/... Wait.<BR><BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Moderator/... Wait.<BR>");
 
 copy("./Applications/Moderator/Forum","./System/Security/Integrity/Backup/Applications/Moderator/Forum");
 copy("./Applications/Moderator/index.php","./System/Security/Integrity/Backup/Applications/Moderator/index.php");
 
 	echo ("[ Done ]<BR><BR>");
 
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Panel/... Wait.<BR><BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Panel/... Wait.<BR>");
 
 copy("./Applications/Panel/Administration.panel","./System/Security/Integrity/Backup/Applications/Panel/Administration.panel");
 copy("./Applications/Panel/Applications_Panel.panel","./System/Security/Integrity/Backup/Applications/Panel/Applications_Panel.panel");
@@ -4758,21 +4758,21 @@ copy("./Applications/Panel/index.php","./System/Security/Integrity/Backup/Applic
 
 	echo ("[ Done ]<BR><BR>");
 
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Public/... Wait.<BR><BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Public/... Wait.<BR>");
 
 copy("./Applications/Public/Engine_Validation","./System/Security/Integrity/Backup/Applications/Public/Engine_Validation");
 copy("./Applications/Public/index.php","./System/Security/Integrity/Backup/Applications/Public/index.php");
 
 	echo ("[ Done ]<BR><BR>");
 
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Root/... Wait.<BR><BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Root/... Wait.<BR>");
 
 copy("./Applications/Root/Tasks","./System/Security/Integrity/Backup/Applications/Root/Tasks");
 copy("./Applications/Root/index.php","./System/Security/Integrity/Backup/Applications/Root/index.php");
 
 	echo ("[ Done ]<BR><BR>");
 
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Services/... Wait.<BR><BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Services/... Wait.<BR>");
 
 copy("./Applications/Services/Commander","./System/Security/Integrity/Backup/Applications/Services/Commander");
 copy("./Applications/Services/Control_Panel","./System/Security/Integrity/Backup/Applications/Services/Control_Panel");
@@ -4784,7 +4784,7 @@ copy("./Applications/Services/index.php","./System/Security/Integrity/Backup/App
 
 	echo ("[ Done ]<BR><BR>");
 
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Video_Games/... Wait.<BR><BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Integrity: Copying Application Modules From: ./Applications/Video_Games/... Wait.<BR>");
 
 copy("./Applications/Video_Games/index.php","./System/Security/Integrity/Backup/Applications/Video_Games/index.php");
 
@@ -4838,7 +4838,7 @@ if ($_GET["InternalApplication"] == "Unlink_Installation") {
 
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Secure-Delete :: Default Architect Log Files and index Files... Wait.<BR><BR>");
 
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Filling Data Storage Medium Space With Zero Files... Wait.<BR><BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Filling Data Storage Medium Space With Zero Files... Wait.<BR>");
 
 unlink("./$_INTERNAL_FILE_ARCHITECT_DIRECTORY/Log/Interaction/index.php");
 unlink("./$_INTERNAL_FILE_ARCHITECT_DIRECTORY/Log/Interaction/Log.txt");
@@ -4856,7 +4856,7 @@ unlink("./$_INTERNAL_FILE_ARCHITECT_DIRECTORY/Log/index.php");
 
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Secure-Delete :: Default MySQL Generator Applications and index Files... Wait.<BR><BR>");
 
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Filling Data Storage Medium Space With Zero Files... Wait.<BR><BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Filling Data Storage Medium Space With Zero Files... Wait.<BR>");
 
 unlink("./$_INTERNAL_FILE_ARCHITECT_DIRECTORY/MySQL/index.php");
 unlink("./$_INTERNAL_FILE_ARCHITECT_DIRECTORY/MySQL/MySQL_Generator.php");
@@ -4871,7 +4871,7 @@ unlink("./$_INTERNAL_FILE_ARCHITECT_DIRECTORY/MySQL/MySQL_Generator.php");
 
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Secure-Delete :: Default Installation ToolKit Application and index Files... Wait.<BR><BR>");
 
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Filling Data Storage Medium Space With Zero Files... Wait.<BR><BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Filling Data Storage Medium Space With Zero Files... Wait.<BR>");
 
 unlink("./$_INTERNAL_FILE_ARCHITECT_DIRECTORY/ToolKit/index.php");
 unlink("./$_INTERNAL_FILE_ARCHITECT_DIRECTORY/ToolKit/Installation_ToolKit.php");
