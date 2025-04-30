@@ -213,7 +213,7 @@ $_Application_Module_Member_Application_List_DB_Query_List_Kernel							= $_GLOB
  ============================================================================================================
 */
 
-$_Application_Module_Member_Application_List_FIND_DIRECTORY_APPLICATIONS_MEMBER						= "./Applications/Member/";
+$_Application_Module_Member_Application_List_FIND_DIRECTORY_APPLICATIONS_MEMBER						= "./Applications/Member/Visibility/Member";
 $_Application_Module_Member_Application_List_OPEN_DIRECTORY_APPLICATIONS_MEMBER						= opendir($_Application_Module_Member_Application_List_FIND_DIRECTORY_APPLICATIONS_MEMBER);
 
 /*
@@ -586,9 +586,9 @@ $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FIL
 $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_STATUS				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array['application_file_status'];
 $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_TIMESTAMP_INSTALLATION		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array['application_file_timestamp_installation'];
 $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_VERSION				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array['application_file_version'];
-$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_SIZE					= filesize("./Applications/Member/$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME");
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_SIZE					= filesize("./Applications/Administration/Visibility/Administration/$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME");
 $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_SIZE_KILOBYTES			= $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_SIZE / 1024;
-$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_HASH_SHA256				= hash_file('sha256', "./Applications/Administration/$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME");
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_HASH_SHA256				= hash_file('sha256', "./Applications/Administration/Visibility/Administration/$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME");
 
 echo ("
 														<HR><B>File :: Application Module :: Administration :: File Name: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME</B><HR>
@@ -630,7 +630,7 @@ echo ("
 
 														<B>Timestamps :: Installation</B><BR>
 														* Timestamp :: Application Module :: Administration :: Database Entry :: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_TIMESTAMP_INSTALLATION<BR>
-														<A HREF=\"./Applications/Administration/$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Source Code :: For The Application Module :: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME ::\">Display Source Code</A><HR><BR>
+														<A HREF=\"./Applications/Administration/Visibility/Administration/$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Source Code :: For The Application Module :: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME ::\">Display Source Code</A><HR><BR>
 ");
 
 } // [ + ] WHILE: Retrieving :: All Administration-Level Application Module Entries From Database Management System Server Database
@@ -672,9 +672,9 @@ $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_PERMIS
 $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_STATUS				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array['application_file_status'];
 $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_TIMESTAMP_INSTALLATION		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array['application_file_timestamp_installation'];
 $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_VERSION				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array['application_file_version'];
-$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_SIZE					= filesize("./Applications/Member/$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME");
+$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_SIZE					= filesize("./Applications/Member/Visibility/Member/$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME");
 $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_SIZE_KILOBYTES			= $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_SIZE / 1024;
-$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_HASH_SHA256				= hash_file('sha256', "./Applications/Member/$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME");
+$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_HASH_SHA256				= hash_file('sha256', "./Applications/Member/Visibility/Member/$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME");
 
 echo ("
 														<HR><B>File :: Application Module :: Member :: File Name: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME</B><HR>
@@ -716,7 +716,7 @@ echo ("
 
 														<B>Timestamps :: Installation</B><BR>
 														* Timestamp :: Application Module :: Member :: Database Entry :: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_TIMESTAMP_INSTALLATION<BR>
-														<A HREF=\"./Applications/Member/$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Source Code :: For The Application Module :: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME ::\">Display Source Code</A><HR><BR>
+														<A HREF=\"./Applications/Member/Visibility/Member/$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Source Code :: For The Application Module :: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME ::\">Display Source Code</A><HR><BR>
 ");
 
 } // [ + ] WHILE: Retrieving :: All Application Module Entries From Database Management System Server Database
