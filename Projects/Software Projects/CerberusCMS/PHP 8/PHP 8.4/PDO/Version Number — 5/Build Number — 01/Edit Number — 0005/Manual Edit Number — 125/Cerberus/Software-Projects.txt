@@ -1,58 +1,46 @@
-                             .-.							   
-                            {{@}}							   
-            <>               8@8							   
-          .::::.             888							   
-      @\\/W\/\/W\//@         8@8							   
-       \\/^\/\/^\//      _   )8(    _							   
-        \_O_<>_O_/     (@)__/8@8\__(@)							   
-   ____________________ `~"-=):(=-"~`							   
-  |<><><>  |  |  <><><>|     |.|							   
-  |<>      |  |      <>|     |T|							   
-  |<>      |  |      <>|     |'|							   
-  |<>   .--------.   <>|     |.|							   
-  |     |   ()   |     |     |I|							   
-  |_____| (O\/O) |_____|     |'|							   
-  |     \   /\   /     |     |.|							   
-  |------\  \/  /------|     |N|							   
-  |       '.__.'       |     |'|							   
-  |        |  |        |     |.|							   
-  :        |  |        :     |K|							   
-   \<>     |  |     <>/      |'|							   
-    \<>    |  |    <>/       |.|							   
-     \<>   |  |   <>/        |E|							   
-      `\<> |  | <>/'         |'|							   
-        `-.|  |.-`           \ /							   
-           '--'               ^			   TINKE SOFTWARE
-                                            Free and Open Source Software
-                            - 100% Free, Original, Clean and Quality Software Projects -
+		⢀⣴⣿⣿⡟⠋⢻⣷⣄⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣾⣿⣷⣿⣿⣿⣿⣿⣶⣾⣿⣿⠿⠿⠿⠶⠄⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠉⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⠟⠻⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣆⣤⠿⢶⣦⡀⠀⠀⠀            G.C.'s Blue Raven, S.P. and Software⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠑⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠸⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠙⠛⠋⠉⠉ 			Free and Open Source Software
+			- 100% Free, Original, Clean and Quality Software Projects -
 
-Tinke Software is a Free and Open Source Software Organization that is named after a Frisian word, meaning: To Think.
+G.C.'s Blue Raven, S.P. and Software is a Free and Open Source Software Organization that is named after the Blue Raven, a symbol of complete freedom and
+security from darkness where when the Eagle is not.
+
 This Free and Open Source Software Organization stores, maintains, develops and dispenses Free and Open Source Software Projects owned by this organization.
-This Free and Open Source Software Organization was digitally registered in California, U.S.A. in 2016 by Gary Christopher Johnson.
-
-Tinke Software is associated with Sowilo Software which is a Commercial Software Organization.
+This Free and Open Source Software Organization was digitally registered in Rosedale, California, United States of America in 2025 by Gary Christopher Johnson.
 
 Official Web Servers
-https://www.TinkeSoftware.com
+* https://www.CerberusCMS.com
 
 Official Electronic Mail Addresses
-TinkeSoftware@Protonmail.com
+* CerberusCMS6@Protonmail.com
 
 Official GIT Software Project Hosting
-https://www.GitHub.com/TinkeSoftware
-https://www.BitBucket.com/TinkeSoftware
-https://www.LaunchPad.net/TinkeSoftware
+* https://www.GITHub.com/CerberusCMS6
+* https://www.BitBucket.com/CerberusCMS6
+* https://www.LaunchPad.net/CerberusCMS6
 
 Official Software Project Hosting
-https://www.SourceForge.net/u/tinkesoftware/profile/
+https://www.SourceForge.net/u/cerberuscms6/profile/
 
 Official Social Media Accounts
-TinkeSoftware @ Instagram
-TinkeSoftware @ Twitter
-TinkeSoftware @ FaceBook
-TinkeSoftware @ PhotoBucket
+CerberusCMS6 @ Instagram
+CerberusCMS6 @ Twitter
+CerberusCMS6 @ FaceBook
+CerberusCMS6 @ PhotoBucket
 
-- Tinke Software's Official Free and Open Source Software Projects -
+- G.C.'s Blue Raven, S.P. and Software's Official Free and Open Source Software Projects -
 
   _____        __                      _____          __           __    __  ___                                       __    ____         __          
  / ___/__ ____/ /  ___ ______ _____   / ___/__  ___  / /____ ___  / /_  /  |/  /__ ____  ___ ____ ____ __ _  ___ ___  / /_  / __/_ _____ / /____ __ _ 
