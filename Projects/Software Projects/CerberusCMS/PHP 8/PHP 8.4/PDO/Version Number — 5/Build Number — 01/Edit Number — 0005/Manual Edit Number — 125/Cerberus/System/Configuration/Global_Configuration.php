@@ -525,7 +525,7 @@ $_PROJECT_VERSION_FILE_NUMBER						= "0.7.7";
  ============================================================================================================
 */
 
-$_PROJECT_STRING_LEGAL_COPYRIGHT					= "&copy; Tinke Software, G.C. Johnson Works 2000 - Present-Day";
+$_PROJECT_STRING_LEGAL_COPYRIGHT					= "&copy; G.C.'s Blue Raven S.P. and Software, G.C. Johnson Works 2000 - Present-Day";
 $_PROJECT_STRING_LEGAL_ELECTRONIC_MAIL_ADDRESS				= "CerberusCMS6@Proton.me";
 $_PROJECT_STRING_LEGAL_NAME_AUTHOR					= "G.C. Johnson";
 $_PROJECT_STRING_NAME_EXTENDED						= "Cerberus Content Management System";
@@ -570,8 +570,8 @@ $_PROJECT_WEB_SERVER_TECHNOLOGY_VERSION_PHP_ZEND			= zend_version();
  ============================================================================================================
 */
 
-$_PROJECT_DEVELOPER_STRING_NAME_SHORT					= "Tinke";
-$_PROJECT_DEVELOPER_STRING_NAME_EXTENDED				= "Tinke Software";
+$_PROJECT_DEVELOPER_STRING_NAME_SHORT					= "G.C.'s Blue Raven";
+$_PROJECT_DEVELOPER_STRING_NAME_EXTENDED				= "G.C.'s Blue Raven, S.P. and Software";
 
 /*
  ============================================================================================================
