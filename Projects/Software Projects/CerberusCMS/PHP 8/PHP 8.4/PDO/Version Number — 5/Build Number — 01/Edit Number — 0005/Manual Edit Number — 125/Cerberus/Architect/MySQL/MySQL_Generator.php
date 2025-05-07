@@ -318,7 +318,7 @@ echo ("
  ============================================================================================================
  +
  +
- + MySQL Generator :: Variables
+ + [ @ ] MySQL Generator :: Variables
  +
  +
  ============================================================================================================
@@ -372,6 +372,194 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_BACKGROUND_FILE_004						= hash_fil
 
 /*
  ============================================================================================================
+ +
+ +Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Administration :: Services Root
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Retrieve :: File Integrity :: Applications :: Panel :: Visibility :: Administration :: Services Root
+ ============================================================================================================
+*/
+
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_001					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Applications_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_002					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Clock.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_003					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Language.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_004					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Latest_Articles.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_005					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Latest_Files.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_006					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Latest_Members.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_007					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Latest_Shouts.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_008					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Live_Video.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_009					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Location.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_010					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Media_Player.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_011					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Member_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_012					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Networking.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_013					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Project_Badges.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_014					= hash_file('sha256', "./Applications/Panel/Visibility/Services/RSS_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_015					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Theme.panel");
+
+/*
+ ============================================================================================================
+ +
+ +Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Administration :: Root
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Retrieve :: File Integrity :: Applications :: Panel :: Visibility :: Administration :: Root
+ ============================================================================================================
+*/
+
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_001					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Applications_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_002					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Clock.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_003					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Language.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_004					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Latest_Articles.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_005					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Latest_Files.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_006					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Latest_Members.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_007					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Latest_Shouts.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_008					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Live_Video.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_009					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Location.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_010					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Media_Player.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_011					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Member_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_012					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Networking.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_013					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Project_Badges.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_014					= hash_file('sha256', "./Applications/Panel/Visibility/Root/RSS_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_015					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Theme.panel");
+
+/*
+ ============================================================================================================
+ +
+ +Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Administration
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Retrieve :: File Integrity :: Applications :: Panel :: Visibility :: Administration
+ ============================================================================================================
+*/
+
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_001				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Applications_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_002				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Clock.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_003				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Language.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_004				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Latest_Articles.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_005				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Latest_Files.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_006				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Latest_Members.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_007				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Latest_Shouts.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_008				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Live_Video.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_009				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Location.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_010				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Media_Player.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_011				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Member_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_012				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Networking.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_013				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Project_Badges.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_014				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/RSS_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_015				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Theme.panel");
+
+/*
+ ============================================================================================================
+ +
+ +Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Background
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Retrieve :: File Integrity :: Applications :: Panel :: Visibility :: Background
+ ============================================================================================================
+*/
+
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_001					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Applications_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_002					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Clock.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_003					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Language.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_004					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Latest_Articles.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_005					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Latest_Files.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_006					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Latest_Members.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_007					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Latest_Shouts.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_008					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Live_Video.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_009					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Location.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_010					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Media_Player.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_011					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Member_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_012					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Networking.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_013					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Project_Badges.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_014					= hash_file('sha256', "./Applications/Panel/Visibility/Background/RSS_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_015					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Theme.panel");
+
+/*
+ ============================================================================================================
+ +
+ +Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Member
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Retrieve :: File Integrity :: Applications :: Panel :: Visibility :: Member
+ ============================================================================================================
+*/
+
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_001					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Applications_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_002					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Clock.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_003					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Language.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_004					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Latest_Articles.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_005					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Latest_Files.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_006					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Latest_Members.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_007					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Latest_Shouts.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_008					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Live_Video.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_009					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Location.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_010					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Media_Player.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_011					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Member_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_012					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Networking.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_013					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Project_Badges.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_014					= hash_file('sha256', "./Applications/Panel/Visibility/Member/RSS_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_015					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Theme.panel");
+
+/*
+ ============================================================================================================
+ +
+ +Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Moderator
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Retrieve :: File Integrity :: Applications :: Panel :: Visibility :: Moderator
+ ============================================================================================================
+*/
+
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_001					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Applications_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_002					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Clock.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_003					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Language.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_004					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Latest_Articles.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_005					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Latest_Files.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_006					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Latest_Members.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_007					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Latest_Shouts.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_008					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Live_Video.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_009					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Location.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_010					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Media_Player.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_011					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Member_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_012					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Networking.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_013					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Project_Badges.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_014					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/RSS_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_015					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Theme.panel");
+
+/*
+ ============================================================================================================
+ +
+ +Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Public
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
  + Retrieve :: File Integrity :: Applications :: Panel :: Visibility :: Public
  ============================================================================================================
 */
@@ -394,6 +582,14 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_015			
 
 /*
  ============================================================================================================
+ +
+ +Variables :: File Integrity :: Application Modules :: Administration :: Services Root-Administration
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
  + Retrieve :: File Integrity :: Applications :: Administration :: Services Root-Administration
  ============================================================================================================
 */
@@ -408,11 +604,27 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_SERVICES_ROOT_FILE_0
 
 /*
  ============================================================================================================
+ +
+ +Variables :: File Integrity :: Application Modules :: Administration :: Root-Administration
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
  + Retrieve :: File Integrity :: Applications :: Root-Administration
  ============================================================================================================
 */
 
 $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_ROOT_FILE_001					= hash_file('sha256', "./Applications/Root/Tasks");
+
+/*
+ ============================================================================================================
+ +
+ +Variables :: File Integrity :: Application Modules :: Administration
+ +
+ ============================================================================================================
+*/
 
 /*
  ============================================================================================================
