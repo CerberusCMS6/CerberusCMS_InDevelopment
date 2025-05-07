@@ -1258,6 +1258,10 @@ application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 );
 
+/* ------------------------------------------------------------------------- */
+/*                         Application Links                                 */
+/* ------------------------------------------------------------------------- */
+
 /* Application Links */
 
 CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_application_links (
@@ -1269,6 +1273,10 @@ application_link_timestamp_installation VARCHAR(100),
 PRIMARY KEY (id)
 );
 
+/* ------------------------------------------------------------------------- */
+/*                             Articles                                      */
+/* ------------------------------------------------------------------------- */
+
 /* Articles */
 
 CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_articles (
@@ -1279,6 +1287,10 @@ article_time VARCHAR(50),
 article_title VARCHAR(50),
 PRIMARY KEY (id)
 );
+
+/* ------------------------------------------------------------------------- */
+/*                               Comments                                    */
+/* ------------------------------------------------------------------------- */
 
 /* Comments */
 
@@ -1292,6 +1304,10 @@ comment_time VARCHAR(50),
 PRIMARY KEY (id)
 );
 
+/* ------------------------------------------------------------------------- */
+/*                             File Categories                               */
+/* ------------------------------------------------------------------------- */
+
 /* File Categories */
 
 CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_file_categories (
@@ -1301,6 +1317,10 @@ file_category_time VARCHAR(50),
 file_category_title VARCHAR(50),
 PRIMARY KEY (id)
 );
+
+/* ------------------------------------------------------------------------- */
+/*                                 Files                                     */
+/* ------------------------------------------------------------------------- */
 
 /* Files */
 
@@ -1318,6 +1338,10 @@ file_uploader VARCHAR(50),
 PRIMARY KEY (id)
 );
 
+/* ------------------------------------------------------------------------- */
+/*                                 Forum                                     */
+/* ------------------------------------------------------------------------- */
+
 /* Forum */
 
 CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_forum_forum (
@@ -1328,6 +1352,10 @@ forum_timestamp VARCHAR(50),
 forum_title VARCHAR(200),
 PRIMARY KEY (id)
 );
+
+/* ------------------------------------------------------------------------- */
+/*                        Forum :: Topics                                    */
+/* ------------------------------------------------------------------------- */
 
 /* Forum Topics */
 
@@ -1343,6 +1371,10 @@ topic_title VARCHAR(200),
 PRIMARY KEY (id)
 );
 
+/* ------------------------------------------------------------------------- */
+/*                        Forum :: Topic :: Messages                         */
+/* ------------------------------------------------------------------------- */
+
 /* Forum Topic Messages */
 
 CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_forum_topic_message (
@@ -1356,6 +1388,10 @@ message_timestamp_last_update VARCHAR(50),
 PRIMARY KEY (id)
 );
 
+/* ------------------------------------------------------------------------- */
+/*                                  Kernel                                   */
+/* ------------------------------------------------------------------------- */
+
 /* Kernel */
 
 CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_kernel (
@@ -1366,6 +1402,10 @@ kernel_file_name VARCHAR(100),
 kernel_file_version VARCHAR(20),
 PRIMARY KEY (id)
 );
+
+/* ------------------------------------------------------------------------- */
+/*                                  Links                                   */
+/* ------------------------------------------------------------------------- */
 
 /* Links */
 
@@ -1378,6 +1418,10 @@ link_title VARCHAR(50),
 link_url VARCHAR(250),
 PRIMARY KEY (id)
 );
+
+/* ------------------------------------------------------------------------- */
+/*                        Registered Member Accounts                         */
+/* ------------------------------------------------------------------------- */
 
 /* Registered Member Accounts */
 
@@ -1538,6 +1582,10 @@ member_username VARCHAR(50),
 PRIMARY KEY (id)
 );
 
+/* ------------------------------------------------------------------------- */
+/*                  Messenger :: Plain-Text-File Room                        */
+/* ------------------------------------------------------------------------- */
+
 /* Messenger :: Plain-Text-File Room */
 
 CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_messenger_clear_text_file_room (
@@ -1553,6 +1601,10 @@ messenger_room_password_maintenance VARCHAR(100),
 messenger_room_status_visibility CHAR(1),
 PRIMARY KEY (id)
 );
+
+/* ------------------------------------------------------------------------- */
+/*             Messenger :: Plain-Text S.Q.L. Messages                       */
+/* ------------------------------------------------------------------------- */
 
 /* Messenger :: Plain-Text S.Q.L. Messages */
 
@@ -1573,6 +1625,10 @@ messenger_room_name VARCHAR(100),
 PRIMARY KEY (id)
 );
 
+/* ------------------------------------------------------------------------- */
+/*               Messenger :: Encrypted-Text-File Room                       */
+/* ------------------------------------------------------------------------- */
+
 /* Messenger :: Encrypted-Text-File Room */
 
 CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_messenger_encrypted_text_file_room (
@@ -1588,6 +1644,10 @@ messenger_room_password_maintenance VARCHAR(100),
 messenger_room_status_visibility CHAR(1),
 PRIMARY KEY (id)
 );
+
+/* ------------------------------------------------------------------------- */
+/*            Messenger :: Encrypted-Text S.Q.L. Messages                    */
+/* ------------------------------------------------------------------------- */
 
 /* Messenger :: Encrypted-Text S.Q.L. Messages */
 
@@ -1608,6 +1668,10 @@ messenger_room_timestamp_creation VARCHAR(100),
 PRIMARY KEY (id)
 );
 
+/* ------------------------------------------------------------------------- */
+/*                 Messenger :: P2P :: Clear-Text File                       */
+/* ------------------------------------------------------------------------- */
+
 /* Messenger :: P2P :: Clear-Text File */
 
 CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_messenger_p2p_clear_text_file_room (
@@ -1620,6 +1684,10 @@ messenger_room_username_local VARCHAR(100),
 messenger_room_username_remote VARCHAR(100),
 PRIMARY KEY (id)
 );
+
+/* ------------------------------------------------------------------------- */
+/*             Messenger :: P2P :: Encrypted-Text File                       */
+/* ------------------------------------------------------------------------- */
 
 /* Messenger :: P2P :: Encrypted-Text File */
 
@@ -1634,6 +1702,10 @@ messenger_room_username_remote VARCHAR(100),
 PRIMARY KEY (id)
 );
 
+/* ------------------------------------------------------------------------- */
+/*                               Networking                                  */
+/* ------------------------------------------------------------------------- */
+
 /* Networking */
 
 CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_networking (
@@ -1645,6 +1717,10 @@ blocked_ip_address_text TEXT,
 blocked_redirect_url VARCHAR(250),
 PRIMARY KEY (id)
 );
+
+/* ------------------------------------------------------------------------- */
+/*                           News Articles                                   */
+/* ------------------------------------------------------------------------- */
 
 /* News Articles */
 
@@ -1661,6 +1737,10 @@ news_title VARCHAR(50),
 PRIMARY KEY (id)
 );
 
+/* ------------------------------------------------------------------------- */
+/*                           News Submissions                                */
+/* ------------------------------------------------------------------------- */
+
 /* News Submissions */
 
 CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_news_submissions (
@@ -1670,6 +1750,10 @@ news_submission_data TEXT,
 news_submission_time VARCHAR(50),
 PRIMARY KEY (id)
 );
+
+/* ------------------------------------------------------------------------- */
+/*                                Notepad                                    */
+/* ------------------------------------------------------------------------- */
 
 /* Notepad */
 
@@ -1685,7 +1769,11 @@ note_timestamp VARCHAR(50),
 PRIMARY KEY (id)
 );
 
-/* Plugins */
+/* ------------------------------------------------------------------------- */
+/*                               Plug-Ins                                    */
+/* ------------------------------------------------------------------------- */
+
+/* Plug-Ins */
 
 CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_plugins (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
@@ -1698,6 +1786,10 @@ plugin_file_timestamp_installation VARCHAR(100),
 plugin_file_version VARCHAR(10),
 PRIMARY KEY (id)
 );
+
+/* ------------------------------------------------------------------------- */
+/*                               Ranks                                       */
+/* ------------------------------------------------------------------------- */
 
 /* Ranks */
 
@@ -1717,6 +1809,10 @@ rank_gender_none VARCHAR(25),
 PRIMARY KEY (id)
 );
 
+/* ------------------------------------------------------------------------- */
+/*                         Services Commander                                */
+/* ------------------------------------------------------------------------- */
+
 /* Services Commander */
 
 CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_services_commander (
@@ -1728,6 +1824,10 @@ command_timestamp VARCHAR(100),
 command_type CHAR(1),
 PRIMARY KEY (id)
 );
+
+/* ------------------------------------------------------------------------- */
+/*                         Services Tasks                                    */
+/* ------------------------------------------------------------------------- */
 
 /* Services Tasks */
 
@@ -1743,6 +1843,10 @@ task_time_minute VARCHAR(2),
 task_time_second VARCHAR(2),
 PRIMARY KEY (id)
 );
+
+/* ------------------------------------------------------------------------- */
+/*                         Settings                                          */
+/* ------------------------------------------------------------------------- */
 
 /* Settings */
 
@@ -1813,6 +1917,10 @@ settings_system_services_module_status_tasks CHAR(1),
 PRIMARY KEY (id)
 );
 
+/* ------------------------------------------------------------------------- */
+/*                               Shout Messages                              */
+/* ------------------------------------------------------------------------- */
+
 /* Shout Messages */
 
 CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_shout_messages (
@@ -1828,6 +1936,10 @@ message_video_live VARCHAR(250),
 PRIMARY KEY (id)
 );
 
+/* ------------------------------------------------------------------------- */
+/*                               Statistics                                  */
+/* ------------------------------------------------------------------------- */
+
 /* Statistics */
 
 CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_statistics (
@@ -1837,6 +1949,10 @@ statistics_total_number_of_document_executions_unique CHAR(15),
 statistics_installation_date VARCHAR(50),
 PRIMARY KEY (id)
 );
+
+/* ------------------------------------------------------------------------- */
+/*                           System Messages                                 */
+/* ------------------------------------------------------------------------- */
 
 /* System Messages */
 
@@ -1848,6 +1964,10 @@ system_message_member VARCHAR(50),
 system_message_timestamp VARCHAR(100),
 PRIMARY KEY (id)
 );
+
+/* ------------------------------------------------------------------------- */
+/*                               Tasks                                       */
+/* ------------------------------------------------------------------------- */
 
 /* Tasks */
 
@@ -1863,6 +1983,10 @@ tasks_time_minute VARCHAR(2),
 tasks_time_second VARCHAR(2),
 PRIMARY KEY (id)
 );
+
+/* ------------------------------------------------------------------------- */
+/*                               Web Pages                                   */
+/* ------------------------------------------------------------------------- */
 
 /* Web Pages */
 
