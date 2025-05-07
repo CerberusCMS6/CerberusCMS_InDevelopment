@@ -1126,13 +1126,173 @@ $_MySQL_Generator_PRINT_MySQL_TABLES	= "
 /*                     Applications :: Administration                        */
 /* ------------------------------------------------------------------------- */
 
+/* Applications :: Adminstration :: Visibility :: Administration */
+
+CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_applications_administration_visibility_administration (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+);
+
+/* Applications :: Adminstration :: Visibility :: Member */
+
+CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_applications_administration_visibility_member (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+);
+
+/* Applications :: Adminstration :: Visibility :: Moderator */
+
+CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_applications_administration_visibility_moderator (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+);
+
+/* Applications :: Adminstration :: Visibility :: Public */
+
+CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_applications_administration_visibility_public (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+);
+
+/* Applications :: Adminstration :: Visibility :: Administration :: Root-Administration */
+
+CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_applications_administration_visibility_root (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+);
+
+/* Applications :: Adminstration :: Visibility :: Administration :: Services Root-Administration */
+
+CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_applications_administration_visibility_services (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+);
+
 /* ------------------------------------------------------------------------- */
 /*          Applications :: Administration :: Root-Administration            */
 /* ------------------------------------------------------------------------- */
 
+/* Applications :: Adminstration :: Root-Administration */
+
+CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_applications_administration_root (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+);
+
 /* ------------------------------------------------------------------------- */
 /*      Applications :: Administration :: Services Root-Administration       */
 /* ------------------------------------------------------------------------- */
+
+/* Applications :: Adminstration :: Services Root-Administration */
+
+CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_applications_administration_root_services (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+);
 
 /* ------------------------------------------------------------------------- */
 /*              Applications :: Registered Member Account                    */
@@ -1241,6 +1401,130 @@ PRIMARY KEY (id)
 /* Applications :: Registered Member Account :: Visibility :: Administration :: Services Root-Administration */
 
 CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_applications_member_visibility_services (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+);
+
+/* ------------------------------------------------------------------------- */
+/*                        Applications :: Panels                             */
+/* ------------------------------------------------------------------------- */
+
+/* Applications :: Panel :: Visibility :: Administration */
+
+CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_applications_panel_visibility_administration (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+);
+
+/* Applications :: Panel :: Visibility :: Member */
+
+CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_applications_panel_visibility_member (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+);
+
+/* Applications :: Panel :: Visibility :: Moderator */
+
+CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_applications_panel_visibility_moderator (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+);
+
+/* Applications :: Panel :: Visibility :: Public */
+
+CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_applications_panel_visibility_public (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+);
+
+/* Applications :: Panel :: Visibility :: Administration :: Root-Administration */
+
+CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_applications_panel_visibility_root (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+);
+
+/* Applications :: Panel :: Visibility :: Administration :: Services Root-Administration */
+
+CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_applications_panel_visibility_services (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 application_file_integrity VARCHAR(512),
 application_file_integrity_installation VARCHAR(512),
