@@ -373,7 +373,7 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_BACKGROUND_FILE_004						= hash_fil
 /*
  ============================================================================================================
  +
- +Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Administration :: Services Root
+ + Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Administration :: Services Root
  +
  ============================================================================================================
 */
@@ -403,7 +403,7 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_015					= 
 /*
  ============================================================================================================
  +
- +Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Administration :: Root
+ + Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Administration :: Root
  +
  ============================================================================================================
 */
@@ -433,7 +433,7 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_015					
 /*
  ============================================================================================================
  +
- +Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Administration
+ + Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Administration
  +
  ============================================================================================================
 */
@@ -463,7 +463,7 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FIL
 /*
  ============================================================================================================
  +
- +Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Background
+ + Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Background
  +
  ============================================================================================================
 */
@@ -493,7 +493,7 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_015				
 /*
  ============================================================================================================
  +
- +Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Member
+ + Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Member
  +
  ============================================================================================================
 */
@@ -523,7 +523,7 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_015					= h
 /*
  ============================================================================================================
  +
- +Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Moderator
+ + Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Moderator
  +
  ============================================================================================================
 */
@@ -553,7 +553,7 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_015					
 /*
  ============================================================================================================
  +
- +Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Public
+ + Variables :: File Integrity :: Application Modules :: Panel :: Visibility :: Public
  +
  ============================================================================================================
 */
@@ -583,7 +583,7 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_015			
 /*
  ============================================================================================================
  +
- +Variables :: File Integrity :: Application Modules :: Administration :: Services Root-Administration
+ + Variables :: File Integrity :: Application Modules :: Administration :: Services Root-Administration
  +
  ============================================================================================================
 */
@@ -605,7 +605,7 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_SERVICES_ROOT_FILE_0
 /*
  ============================================================================================================
  +
- +Variables :: File Integrity :: Application Modules :: Administration :: Root-Administration
+ + Variables :: File Integrity :: Application Modules :: Administration :: Root-Administration
  +
  ============================================================================================================
 */
@@ -621,7 +621,7 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_ROOT_FILE_001					= 
 /*
  ============================================================================================================
  +
- +Variables :: File Integrity :: Application Modules :: Administration
+ + Variables :: File Integrity :: Application Modules :: Administration
  +
  ============================================================================================================
 */
