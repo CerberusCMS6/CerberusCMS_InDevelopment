@@ -1,0 +1,199 @@
+<?php
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    ()  ()  --  ()
+ +  ()  --  ()  ()
+ +  ------------------------------
+ +  Panel Application Module
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Master Root Directory => Applications => Panel => Project_Badges
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|6|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ +
+ + [ ^ ] Application Module :: Panel :: Cerberus Badges
+ +
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ + [ @ ] Display :: Panel :: Project Badges
+ +
+ +
+ ============================================================================================================
+*/
+
+echo ("
+											<A HREF=\"$_PROJECT_SERVER_URL_SOURCEFORGE_SECURE\" TITLE=\":: $_PROJECT_STRING_NAME_EXTENDED :: Official Software Project Page Hosted On SourceForge ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/Cerberus_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: $_PROJECT_STRING_NAME_EXTENDED :: Official Software Project Page Hosted On SourceForge ::\">
+											</A><BR><BR>
+
+											<A HREF=\"https://www.ArchLinux.org\" TITLE=\":: Arch-Linux Operating System :: Official Arch-Linux Operating System Project Web Server ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/Arch-Linux_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: Arch-Linux Operating System :: Official Arch-Linux Operating System Web Server ::\">
+											</A><BR><BR>
+
+											<A HREF=\"https://www.Debian.org\" TITLE=\":: Debian-Linux Operating System :: Official Debian-Linux Operating System Project Web Server ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/Debian-Linux_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: Debian-Linux Operating System :: Official Debian-Linux Operating System Web Server ::\">
+											</A><BR><BR>
+											
+											<A HREF=\"https://www.FreeBSD.org\" TITLE=\":: FreeB.S.D. Operating System :: Official Free-B.S.D. Operating System Project Web Server ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/FreeBSD_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: FreeB.S.D. Operating System :: Official Free-B.S.D. Operating System Project Web Server ::\">
+											</A><BR><BR>
+
+											<A HREF=\"https://www.Apache.org\" TITLE=\":: Apache HTTP Server Lite :: Official Apache Software Project Web Server ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/Apache_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: Apache HTTP Lite :: Official Apache Software Project Web Server ::\">
+											</A><BR><BR>
+
+											<A HREF=\"https://www.IIS.net/\" TITLE=\":: Microsoft &reg; Windows &reg; &trade; Internet Information Services HTTP Server :: Official Microsoft &reg; Windows &reg; &trade; Project Web Server ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/MicrosoftIIS_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: Microsoft &reg; Windows &reg; &trade; Internet Information Services HTTP Server :: Official Microsoft &reg; Windows &reg; &trade; Project Web Server ::\">
+											</A><BR><BR>
+
+											<A HREF=\"https://www.CoreBoot.org\" TITLE=\":: CoreBoot Firmware :: Official CoreBoot Firmware Project Web Server ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/CoreBoot_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: CoreBoot Firmware :: Official CoreBoot Firmware Project Web Server ::\">
+											</A><BR><BR>
+
+											<A HREF=\"https://www.Plasma-Mobile.org/\" TITLE=\":: K Desktop Environment Plasma Edition Mobile :: Digital Security Hardened Edition :: Official KDE Plasma Edition Mobile Project Web Server ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/KDEPlasmaMobile_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: K Desktop Environment Plasma Edition Mobile :: Digital Security Hardened Edition :: Official KDE Plasma Edition Mobile Project Web Server ::\">
+											</A><BR><BR>
+
+											<A HREF=\"https://wiki.LineageOS.org/devices\" TITLE=\":: LineageOS :: Digital Security Hardened Edition :: Official LineageOS Project Web Server ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/LineageOS_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: LineageOS :: Digital Security Hardened Edition :: Official LineageOS Project Web Server ::\">
+											</A><BR><BR>
+
+											<A HREF=\"https://www.FreshTomato.org\" TITLE=\":: Tomato Firmware :: Digital Security Hardened Edition :: Official Tomato Firmware Project Web Server ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/TomatoFirmware_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: Tomato Firmware :: Digital Security Hardened Edition :: Official Tomato Firmware Project Web Server ::\">
+											</A><BR><BR>
+
+											<A HREF=\"https://wiki.ArchLinux.org/title/Dnscrypt-proxy\" TITLE=\":: Domain-Name-Server-Encryption :: DNSCrypt-Proxy :: Official DNSCrypt-Proxy Project Web Server ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/DNSCrypt_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: Domain-Name-Server-Encryption :: DNSCrypt-Proxy :: Official DNSCrypt-Proxy Project Web Server ::\">
+											</A><BR><BR>
+
+											<A HREF=\"https://www.OpenDNS.com/setupguide/\" TITLE=\":: Domain-Name-Server-Security :: OpenDNS :: Official OpenDNS Project Web Server ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/OpenDNS_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: Domain-Name-Server-Security :: OpenDNS :: Official OpenDNS Project Web Server ::\">
+											</A><BR><BR>
+
+											<A HREF=\"https://www.OpenSSL.org\" TITLE=\":: Official Open Secure-Socket-Layer Project Web Server ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/OpenSSL_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: Official Open Secure-Socket-Layer Project Web Server ::\">
+											</A><BR><BR>
+
+											<A HREF=\"https://www.GITHub.com/OpenVPN\" TITLE=\":: Network Packet Encryption :: OpenVPN :: Official OpenVPN Project GITHub Repository ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/OpenVPN_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: Network Packet Encryption :: OpenVPN :: Official OpenVPN Project GITHub Repository ::\">
+											</A><BR><BR>
+
+											<A HREF=\"https://www.PHP.net/manual/en/book.gnupg.php\" TITLE=\":: Official Open Pretty-Good-Privacy Encryption :: Pre-Hyper-Text-Post-Processor Project Web Server ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/PGP_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: Official Open Pretty-Good-Privacy Encryption :: Pre-Hyper-Text-Post-Processor Project Web Server ::\">
+											</A><BR><BR>
+
+											<A HREF=\"https://www.PHP.net/manual/en/function.openssl-encrypt.php\" TITLE=\":: Official Advanced Encryption Standard Encryption :: Pre-Hyper-Text-Post-Processor Project Web Server ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/AES_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: Official Advanced Encryption Standard Encryption :: Pre-Hyper-Text-Post-Processor Project Web Server ::\">
+											</A><BR><BR>
+
+											<A HREF=\"https://www.GNUPG.org\" TITLE=\":: Official GNU Privacy Guard Encryption :: GNUPG Project Web Server ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/GNUPG_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: Official GNU Privacy Guard Encryption :: GNUPG Project Web Server ::\">
+											</A><BR><BR>
+											
+											<A HREF=\"https://www.Chromium.org/\" TITLE=\":: Chromium :: Official Web-Browser Software Project Web Serer ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/Chromium_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: Chromium :: Official Web-Browser Software Project Web Serer ::\">
+											</A><BR><BR>
+											
+											<A HREF=\"https://www.Mozilla.org/firefox/\" TITLE=\":: Mozilla FireFox :: Official Web-Browser Software Project Web Server ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/FireFox_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: Mozilla FireFox :: Official Web-Browser Software Project Web Server ::\">
+											</A><BR><BR>
+
+											<A HREF=\"$_PROJECT_SERVER_URL_BITBUCKET_SECURE\" TITLE=\":: $_PROJECT_STRING_NAME_EXTENDED :: Clean Code Project :: Official BITBucket Repository ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/BITBucket_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: $_PROJECT_STRING_NAME_EXTENDED :: Clean Code Project :: Official BITBucket Repository ::\">
+											</A><BR><BR>
+											
+											<A HREF=\"$_PROJECT_SERVER_URL_GITHUB_SECURE\" TITLE=\":: $_PROJECT_STRING_NAME_EXTENDED :: Clean Code Project :: Official GITHub Repository ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/GITHub_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: $_PROJECT_STRING_NAME_EXTENDED :: Clean Code Project :: Official GITHub Repository ::\">
+											</A><BR><BR>
+
+											<A HREF=\"$_PROJECT_SERVER_URL_GITHUB_SECURE\" TITLE=\":: $_PROJECT_STRING_NAME_EXTENDED :: Clean Code Project :: Official GITHub Repository ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/CleanCode_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" ALT=\":: $_PROJECT_STRING_NAME_EXTENDED :: Clean Code Project :: Official GITHub Repository ::\">
+											</A><BR><BR>
+											
+											<A TITLE=\":: $_PROJECT_STRING_NAME_EXTENDED Is Hand Written In Southern California ::\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/MadeInCalifornia.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" WIDTH=\"125\" HEIGHT=\"50\" ALT=\":: $_PROJECT_STRING_NAME_EXTENDED Is Hand Written In Southern California ::\">
+											</A><BR><BR>
+
+											<A TITLE=\":: Official Hyper-Text-Markup-Language Version: 5 ::\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/HTML5_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" WIDTH=\"125\" HEIGHT=\"50\" ALT=\":: Official Hyper-Text-Markup-Language Version: 5 ::\">
+											</A><BR><BR>
+											
+											<A TITLE=\":: $_PROJECT_STRING_NAME_EXTENDED Is A 100% Pure and Clean Pre-HyperText-Post-Processor Software Project Handwritten In Pure Pre-HyperText-Post-Processor Programming Code - JavaScript Programming Code Is Banned From This Project ::\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/NoScript_Badge.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"50\" CLASS=\"PanelProjectBadge\" WIDTH=\"125\" HEIGHT=\"50\" ALT=\":: $_PROJECT_STRING_NAME_EXTENDED Is A 100% Pure and Clean Pre-HyperText-Post-Processor Software Project Handwritten In Pure Pre-HyperText-Post-Processor Programming Code - JavaScript Programming Code Is Banned From This Project ::\">
+											</A><BR><BR>
+
+											<A HREF=\"https://www.Apache.org\" TITLE=\":: Apache Software Foundation ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/Apache.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" CLASS=\"PanelProjectBadge\" ALT=\":: Apache Software Foundation ::\">
+											</A><BR>
+
+											<A HREF=\"https://www.MySQL.com\" TITLE=\":: MySQL Database Management System ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/MySQL.gif\" CLASS=\"PanelProjectBadge\" ALT=\":: MySQL Database Management System ::\"></A><BR>
+											
+											<A HREF=\"https://www.PHP.net\" TITLE=\":: Post-Hyper-Text Pre-Processor / Pre-Hyper-Text-Post-Processor ( P.H.P. ) Scripting Language ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/PHP.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" CLASS=\"PanelProjectBadge\" ALT=\":: Post-Hyper-Text Pre-Processor / Pre-Hyper-Text-Post-Processor ( P.H.P. ) Scripting Language ::\">
+											</A><BR>
+											
+											<A HREF=\"http://tool.motoricerca.info/robots-checker.phtml\" TITLE=\":: Official Robots Validation Service ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/Robots.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" CLASS=\"PanelProjectBadge\" ALT=\":: Official Robots Validation Service ::\">
+											</A><BR>
+											
+											<A HREF=\"https://jigsaw.w3.org/css-validator/\" TITLE=\":: Official Cascading Style Sheet Validation Service ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/W3C_CSS.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" CLASS=\"PanelProjectBadge\" ALT=\":: Official Cascading Style Sheet Validation Service ::\">
+											</A><BR>
+											
+											<A HREF=\"https://validator.w3.org/\" TITLE=\":: Official Hyper-Text Markup Language Validation Service ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/W3C_HTML.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" CLASS=\"PanelProjectBadge\" ALT=\":: Official Hyper-Text Markup Language Validation Service ::\">
+											</A><BR>
+
+											<A HREF=\"https://validator.w3.org/feed/\" TITLE=\":: Official Really Simple Syndication Validation Service ::\" TARGET=\"_NEW\">
+												<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Badges/W3C_RSS.png?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" CLASS=\"PanelProjectBadge\" ALT=\":: Official Really Simple Syndication Validation Service ::\">
+											</A>
+											<HR>
+");
+?>
