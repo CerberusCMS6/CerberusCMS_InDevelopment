@@ -2543,6 +2543,116 @@ application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
 
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_panel_visibility_member<BR>");
+
+/* Applications :: Panel :: Visibility :: Member */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_applications_panel_visibility_member (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+)");
+
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_panel_visibility_moderator<BR>");
+
+/* Applications :: Panel :: Visibility :: Moderator */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_applications_panel_visibility_moderator (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+)");
+
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_panel_visibility_public<BR>");
+
+/* Applications :: Panel :: Visibility :: Public */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_applications_panel_visibility_public (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+)");
+
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_panel_visibility_root<BR>");
+
+/* Applications :: Panel :: Visibility :: Root */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_applications_panel_visibility_root (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+)");
+
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_panel_visibility_services<BR>");
+
+/* Applications :: Panel :: Visibility :: Services */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_applications_panel_visibility_services (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+)");
+
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_administration_background<BR>");
 
 /* ------------------------------------------------------------------------- */
@@ -4221,22 +4331,6 @@ $_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("INSERT INTO {$
 $_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_panel_visibility_services(application_panel_alignment,application_file_integrity,application_file_integrity_installation,application_file_name,application_file_permission,application_file_permission_camera,application_file_permission_microphone,application_file_permission_location_gps,application_file_permission_location_glo,application_file_permission_location_ip_address,application_file_status,application_file_timestamp_installation,application_file_visibility,application_file_version,application_panel_row,application_panel_title)VALUES('1','$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_003','$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_003','Language','0','1','1','1','1','1','1','$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP','0','$_PROJECT_VERSION_FILE_NUMBER','014','<CENTER><B>Languages</B></CENTER><HR>')");
 $_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_panel_visibility_services(application_panel_alignment,application_file_integrity,application_file_integrity_installation,application_file_name,application_file_permission,application_file_permission_camera,application_file_permission_microphone,application_file_permission_location_gps,application_file_permission_location_glo,application_file_permission_location_ip_address,application_file_status,application_file_timestamp_installation,application_file_visibility,application_file_version,application_panel_row,application_panel_title)VALUES('1','$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_015','$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_015','Theme','0','1','1','1','1','1','1','$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP','0','$_PROJECT_VERSION_FILE_NUMBER','015','<CENTER><B>Theme Selection</B></CENTER><HR>')");
 $_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_panel_visibility_services(application_panel_alignment,application_file_integrity,application_file_integrity_installation,application_file_name,application_file_permission,application_file_permission_camera,application_file_permission_microphone,application_file_permission_location_gps,application_file_permission_location_glo,application_file_permission_location_ip_address,application_file_status,application_file_timestamp_installation,application_file_visibility,application_file_version,application_panel_row,application_panel_title)VALUES('1','$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_014','$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_014','RSS_Panel','0','1','1','1','1','1','1','$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP','0','$_PROJECT_VERSION_FILE_NUMBER','016','<CENTER><B>Real-Simple-Syndication</B></CENTER><HR>')");
-
-/* Install :: Default Custom Applications and Their Data */
-
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_custom(
-custom_application_data,
-custom_application_name,
-custom_application_timestamp_installation,
-custom_application_timestamp_update,
-custom_application_visibility
-)VALUES(
-'Hello and welcome to $_PROJECT_STRING_NAME_EXTENDED ! If you are reading this sentence then $_PROJECT_STRING_NAME_EXTENDED was successfully installed to this Web Server !',
-'Welcome !',
-'$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP',
-'$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP',
-'0'
-)");
 
 /*
  ============================================================================================================
