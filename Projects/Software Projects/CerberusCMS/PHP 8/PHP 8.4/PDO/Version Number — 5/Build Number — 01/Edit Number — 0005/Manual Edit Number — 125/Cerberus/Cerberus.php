@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
  ============================================================================================================
  + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -231,15 +231,27 @@ if (file_exists($_GLOBAL_SYSTEM_INSTALLATION_FILE)) {
 
 /*
  ============================================================================================================
- + IF: Global :: System :: Configuration File Exists, Include It
+ + DEFINE: Global :: System :: Configuration File :: File Name and Location
  ============================================================================================================
 */
 
 $_GLOBAL_SYSTEM_CONFIGURATION_FILE							= "./System/Configuration/Global_Configuration.php";
 
+/*
+ ============================================================================================================
+ + IF: Global :: System :: Configuration File Exists, Include It
+ ============================================================================================================
+*/
+
 if (file_exists($_GLOBAL_SYSTEM_CONFIGURATION_FILE)) {
 
 	include_once "$_GLOBAL_SYSTEM_CONFIGURATION_FILE";
+
+/*
+ ============================================================================================================
+ + ELSE: Global :: System :: Configuration File Does Not Exists, Print Error Message
+ ============================================================================================================
+*/
 
 } else {
 
@@ -1330,7 +1342,7 @@ $_GLOBAL_LOCAL_SERVER_TIME_UNIX_CONVERTED_TO_LOCAL					= gmdate("l, F j, Y g:i:s
 
 /**
  * Almost all of the computer programming math functions are bullshit. All of the real mathematics needs to be manually programmed with PEMDAS methods. This entire block needs to be perfected.
- * It will probably take me about a week to write out all of the programming code here because Unix-Epoch Time is bullshit.
+ * It will probably take me about a week to write out all of the programming code here because Unix-Epoch Time is bullshit and Unix-Epoch Time only half-way works.
 */
 
 $_GLOBAL_LOCAL_SERVER_TIME_UNIX_SECONDS							= $_GLOBAL_LOCAL_SERVER_TIME_UNIX;
@@ -1570,15 +1582,27 @@ if ($_GLOBAL_SETTING_SYSTEM_SECURITY_MODULE_STATUS_MASTER_SANITIZATION >= 1) {
 
 /*
  ============================================================================================================
- + IF: Global :: System :: Security :: File: Master Sanitization :: Exists, Include It
+ + DEFINE: Global :: System :: Security :: File: Master Sanitization :: File Name and Location
  ============================================================================================================
 */
 
 $_GLOBAL_SYSTEM_SECURITY_MODULE_FILE_MASTER_SANITIZATION					= "./System/Security/Module/Sanitization/$_GLOBAL_SETTING_SYSTEM_SECURITY_MODULE_DIRECTORY_MASTER_SANITIZATION/Sanitization.$_INTERNAL_FILE_EXTENSION";
 
+/*
+ ============================================================================================================
+ + IF: Global :: System :: Security :: File: Master Sanitization :: Exists, Include It
+ ============================================================================================================
+*/
+
 if (file_exists($_GLOBAL_SYSTEM_SECURITY_MODULE_FILE_MASTER_SANITIZATION)) {
 
 	include_once "$_GLOBAL_SYSTEM_SECURITY_MODULE_FILE_MASTER_SANITIZATION";
+
+/*
+ ============================================================================================================
+ + ELSE: Global :: System :: Security :: File: Master Sanitization :: Does Not Exists, Print Error Message
+ ============================================================================================================
+*/
 
 } else {
 
@@ -1618,6 +1642,12 @@ if (file_exists($_GLOBAL_SYSTEM_SECURITY_MODULE_FILE_MASTER_SANITIZATION)) {
 
 if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_COMMANDER >= "1") {
 
+/*
+ ============================================================================================================
+ + DEFINE: Internal :: Services :: Module :: File: Commander :: File Name and Location
+ ============================================================================================================
+*/
+
 $_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_COMMANDER								= "./System/Services/Commander";
 
 /*
@@ -1629,6 +1659,12 @@ $_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_COMMANDER								= "./System/Services/Comma
 if (file_exists($_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_COMMANDER)) {
 
 	include_once "$_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_COMMANDER";
+
+/*
+ ============================================================================================================
+ + ELSE: Internal :: Services :: Module :: File: Commander :: Does Not Exists, Print Error Message
+ ============================================================================================================
+*/
 
 } else {
 
@@ -1656,6 +1692,12 @@ if (file_exists($_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_COMMANDER)) {
 
 if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_INTEGRITY >= "1") {
 
+/*
+ ============================================================================================================
+ + DEFINE: Internal :: Services :: Module :: File: Integrity :: File Name and Location
+ ============================================================================================================
+*/
+
 $_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_INTEGRITY								= "./System/Services/Integrity";
 
 /*
@@ -1667,6 +1709,12 @@ $_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_INTEGRITY								= "./System/Services/Integ
 if (file_exists($_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_INTEGRITY)) {
 
 	include_once "$_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_INTEGRITY";
+
+/*
+ ============================================================================================================
+ + ELSE: Internal :: Services :: Module :: File: Integrity :: Does Not Exists, Print Error Message
+ ============================================================================================================
+*/
 
 } else {
 
@@ -1694,6 +1742,12 @@ if (file_exists($_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_INTEGRITY)) {
 
 if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_LOOPS >= "1") {
 
+/*
+ ============================================================================================================
+ + DEFINE: Internal :: Services :: Module :: File: Loops :: File Name and Location
+ ============================================================================================================
+*/
+
 $_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_LOOPS								= "./System/Services/Loops";
 
 /*
@@ -1705,6 +1759,12 @@ $_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_LOOPS								= "./System/Services/Loops";
 if (file_exists($_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_LOOPS)) {
 
 	include_once "$_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_LOOPS";
+
+/*
+ ============================================================================================================
+ + ELSE: Internal :: Services :: Module :: File: Loops :: Does Not Exists, Print Error Message
+ ============================================================================================================
+*/
 
 } else {
 
@@ -1732,6 +1792,12 @@ if (file_exists($_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_LOOPS)) {
 
 if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_SERVICES >= "1") {
 
+/*
+ ============================================================================================================
+ + DEFINE: Internal :: Services :: Module :: File: Services :: File Name and Location
+ ============================================================================================================
+*/
+
 $_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_SERVICES								= "./System/Services/Services";
 
 /*
@@ -1743,6 +1809,12 @@ $_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_SERVICES								= "./System/Services/Servic
 if (file_exists($_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_SERVICES)) {
 
 	include_once "$_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_SERVICES";
+
+/*
+ ============================================================================================================
+ + ELSE: Internal :: Services :: Module :: File: Services :: Does Not Exist, Print Error Message
+ ============================================================================================================
+*/
 
 } else {
 
@@ -1770,17 +1842,29 @@ if (file_exists($_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_SERVICES)) {
 
 if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_TASKS >= "1") {
 
+/*
+ ============================================================================================================
+ + DEFINE: Internal :: Services :: Module :: File: Tasks :: File Name and Location
+ ============================================================================================================
+*/
+
 $_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_TASKS								= "./System/Services/Tasks";
 
 /*
  ============================================================================================================
- + IF: Internal :: Services :: Module :: File: Tasks :: Exists, Include It
+ + IF: Internal :: Services :: Module :: File: Tasks :: Does Not Exists, Print Error Message
  ============================================================================================================
 */
 
 if (file_exists($_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_TASKS)) {
 
 	include_once "$_GLOBAL_SYSTEM_SERVICES_MODULE_FILE_TASKS";
+
+/*
+ ============================================================================================================
+ + ELSE: Internal :: Services :: Module :: File: Tasks :: Does Not Exists, Include It
+ ============================================================================================================
+*/
 
 } else {
 
@@ -1846,6 +1930,12 @@ if ($_GLOBAL_MEMBER_ACCOUNT_DEVICE_WEB_BROWSER_AUTHORIZED != "$_GLOBAL_REMOTE_SE
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Login&Message=ForcedLogoutUserAgent&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
+
+/*
+ ============================================================================================================
+ + ELSE: Do Nothing
+ ============================================================================================================
+*/
 
 } else {
 /**
@@ -1914,6 +2004,12 @@ if ($_GLOBAL_MEMBER_ACCOUNT_DEVICE_MAC_ADDRESS_AUTHORIZED != "$_GLOBAL_REMOTE_DE
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Login&Message=ForcedLogoutMACAddress&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
 
+/*
+ ============================================================================================================
+ + ELSE: Do Nothing
+ ============================================================================================================
+*/
+
 } else {
 /**
  * Do Nothing
@@ -1965,9 +2061,22 @@ $_DB_Query_Kernel_Security_Update_Member_Account_Force_Logout			= $_KERNEL_MYSQL
 */
 
 if ($_DB_Query_Kernel_Security_Update_Member_Account_Force_Logout) {
-/**
- * Do Nothing
-**/
+
+/*
+ ============================================================================================================
+ + Redirect To :: Registered Member Account :: Force Logout Message :: Forced Logout Flag
+ ============================================================================================================
+*/
+
+	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Login&Message=ForcedLogout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+	exit;
+
+/*
+ ============================================================================================================
+ + ELSE: Do Nothing
+ ============================================================================================================
+*/
+
 } else {
 /**
  * Do Nothing
@@ -1996,6 +2105,12 @@ if ($_DB_Query_Kernel_Security_Update_Member_Account_Force_Logout) {
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Login&Message=ForcedLogout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
+
+/*
+ ============================================================================================================
+ + ELSE: Do Nothing
+ ============================================================================================================
+*/
 
 } else {
 /**
@@ -2039,6 +2154,12 @@ if ($_GLOBAL_MEMBER_STATUS_ACCOUNT_LOCKED > "0") {
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Login&Message=AccountLocked&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
+
+/*
+ ============================================================================================================
+ + ELSE: Do Nothing
+ ============================================================================================================
+*/
 
 } else {
 /**
@@ -2515,7 +2636,7 @@ $_DB_Query_Kernel_Security_Check_Cookie_Member_UserName_AND_Password_Number_Of_R
 
 /*
  ============================================================================================================
- + IF: Credential Cookie Data Stored In Web Browser Match The Database Management System Server Database Entry Exactly
+ + IF: Credential Cookie Data Stored In The Web Browser Match The Database Management System Server Database Entry Exactly
  ============================================================================================================
 */
 
@@ -2523,6 +2644,13 @@ if ($_DB_Query_Kernel_Security_Check_Cookie_Member_UserName_AND_Password_Number_
 /**
  * Do Nothing
 **/
+
+/*
+ ============================================================================================================
+ + ELSE: Credential Cookie Data Stored In The Web Browser Does Not Match The Database Management System Server Database Entry, Force Logout
+ ============================================================================================================
+*/
+
 } else {
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Fake Data Found In Credential Cookies - Redirect To Logout Section, Destroy All Cookies
@@ -2567,7 +2695,7 @@ $_DB_Query_Kernel_Security_Check_Cookie_Member_Electronic_Mail_Address_Number_Of
 
 /*
  ============================================================================================================
- + IF: Cookie Data Stored In Browser Match Database Management System Server Database Entry Exactly
+ + IF: Cookie Data Stored In Browser Matches The Database Management System Server Database Entry Exactly
  ============================================================================================================
 */
 
@@ -2575,6 +2703,13 @@ if ($_DB_Query_Kernel_Security_Check_Cookie_Member_Electronic_Mail_Address_Numbe
 /**
  * Do Nothing
 **/
+
+/*
+ ============================================================================================================
+ + ELSE: Cookie Data Stored In Browser Does Not Match The Database Management System Server Database Entry, Force Logout
+ ============================================================================================================
+*/
+
 } else {
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Fake Data Found In Cookies - Redirect To Logout Section, Destroy All Cookies
@@ -2637,6 +2772,12 @@ if (!file_exists($_MEMBER_DIRECTORY_INDEX_FILE)) {
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Fake Data Found - Redirect To Logout Section
 	exit;
 
+/*
+ ============================================================================================================
+ + ELSE: UserName String Found In Registered Member Account UserName Cookie Does Match The Physical Directory and File, Do Nothing
+ ============================================================================================================
+*/
+
 } else {
 /**
  * Do Nothing
@@ -2679,6 +2820,12 @@ if (!file_exists($_MEMBER_DIRECTORY_MASTER_LIST_ELECTRONIC_MAIL_ADDRESS_FILE)) {
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Fake Data Found - Redirect To Internal Application: Logout
 	exit;
+
+/*
+ ============================================================================================================
+ + ELSE: File DOES Exist: Master List :: Electronic Mail Addresses :: Registered Member Account :: Electronic Mail Address File, Do Nothing
+ ============================================================================================================
+*/
 
 } else {
 /**
@@ -3407,6 +3554,12 @@ if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_LOCATION >= 1) {
 
 	include_once "./System/Plug-Ins/Location/$_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_LOCATION/Location.$_INTERNAL_FILE_EXTENSION";
 
+/*
+ ============================================================================================================
+ + ELSE: The Location Plug-In Is Off, Print Message
+ ============================================================================================================
+*/
+
 } else {
 
 	$_GLOBAL_SYSTEM_PLUGIN_LOCATION_MESSAGE_DEACTIVATED				= "<CENTER>Kernel Message: The Location Plug-In Application Module Is: De-Activated</CENTER>";
@@ -3430,6 +3583,12 @@ if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_LOCATION >= 1) {
 if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_SAFEHTML >= 1) {
 
 	include_once "./System/Plug-Ins/Safe-HTML/$_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_SAFEHTML/Safe-HTML.$_INTERNAL_FILE_EXTENSION";
+
+/*
+ ============================================================================================================
+ + ELSE: The Safe-Hyper-Text-Markup-Language Plug-In Is Off, Print Message
+ ===========================================================================================================
+*/
 
 } else {
 
@@ -3496,6 +3655,13 @@ if ($_KERNEL_INTERNAL_LOOP_PERMISSIONS_CHANGEMODE_READ_DIRECTORY_UPLOAD_FILES ==
 /**
  * Skip These Files
 **/
+
+/*
+ ============================================================================================================
+ + ELSE: Change-Mode :: Permissions :: Directory and Files :: Upload
+ ============================================================================================================
+*/
+
 } else {
 
 	//chmod("$_KERNEL_INTERNAL_LOOP_PERMISSIONS_CHANGEMODE_FIND_DIRECTORY_UPLOAD", octdec($_KERNEL_INTERNAL_LOOP_PERMISSIONS_CHANGEMODE_VALUE_DIRECTORY_UPLOAD));
@@ -3906,7 +4072,7 @@ $_DB_Query_Kernel_Update_Member_Rank 							= $_KERNEL_MYSQL_IMPROVED_DATABASE_S
 
 /*
  ============================================================================================================
- + IF: Database Server Query :: Update :: Registered Member Account :: Rank
+ + IF: Database Management System Server :: Database :: Query :: Update :: Registered Member Account :: Rank
  ============================================================================================================
 */
 
@@ -3914,6 +4080,13 @@ if ($_DB_Query_Kernel_Update_Member_Rank) {
 /**
  * Do Nothing
 **/
+
+/*
+ ============================================================================================================
+ + ELSE: Database Management System Server :: Database :: Query :: Update :: Registered Member Account :: Rank :: Error :: Print Message
+ ============================================================================================================
+*/
+
 } else {
 
 										echo ($_Message_Kernel_ERROR_SQL_RANK);
@@ -4297,6 +4470,12 @@ $_INTERNAL_SECURITY_GENERATED_MEMBER_FINGERPRINT_HASHED						= hash('sha512', $_
 
 $_INTERNAL_SECURITY_GENERATED_COOKIE_MEMBER_FINGERPRINT_HASHED					= hash('sha512', $_INTERNAL_SECURITY_GENERATED_MEMBER_FINGERPRINT_CLEARTEXT.$_INTERNAL_SECURITY_GENERATED_MEMBER_COOKIE_FINGERPRINT_STRING_RANDOM_NUMBER.$_INTERNAL_SECURITY_GENERATED_MEMBER_COOKIE_FINGERPRINT_STRING_DATE_TIME);
 
+/*
+ ============================================================================================================
+ + ELSE: Check For Valid Registered Member Account Credential Data In Browser Cookies :: Credentials DO NOT Exist
+ ============================================================================================================
+*/
+
 } else {
 
 /*
@@ -4419,7 +4598,7 @@ $DB_Query_Kernel_Authenticate_Check_Member_Account_Entry_Number_Of_Rows				= $DB
 
 /*
  ============================================================================================================
- + Database Server Query: Check Database For Existing Registered Member Account With Provided Credentials
+ + IF: Database Management System :: Database :: Server :: Query: Check Database For Existing Registered Member Account With Provided Credentials
  ============================================================================================================
 */
 
@@ -4449,13 +4628,19 @@ $DB_Query_Kernel_Authenticate_Check_Member_Account_Credentials_Member_Device_Aut
 if ($DB_Query_Kernel_Authenticate_Check_Member_Account_Credentials_Member_Status_Account_Active >= "1") {
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Login&Message=AccountActive&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
-	exit;	
+	exit;
+
+/*
+ ============================================================================================================
+ + ELSE: Registered Member Account :: Status :: Inactive :: Check Internet Protocol Address
+ ============================================================================================================
+*/
 
 } else {
 
 /*
  ============================================================================================================
- + IF: Registered Member Account :: Device :: Authentication :: Authorized :: Internet Protocol Address IS NOT Current Internet Protocol Address
+ + IF: Registered Member Account :: Device :: Authentication :: Authorized :: Internet Protocol Address IS NOT Current Internet Protocol Address, Logout
  ============================================================================================================
 */
 
@@ -4463,6 +4648,12 @@ if ($DB_Query_Kernel_Authenticate_Check_Member_Account_Credentials_Member_Device
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Login&Authorization=IP_Address&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
+
+/*
+ ============================================================================================================
+ + ELSE: Registered Member Account :: Device :: Authentication :: IS NOT Authorized :: Internet Protocol Address IS NOT Current Internet Protocol Address :: Check For Account Lock
+ ============================================================================================================
+*/
 
 } else {
 
@@ -4477,6 +4668,12 @@ if ($DB_Query_Kernel_Authenticate_Check_Member_Account_Credentials_Member_Status
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Login&Message=AccountLocked&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
 
+/*
+ ============================================================================================================
+ + ELSE: Registered Member Account Status Is: NOT Locked :: Check For Account Authentication Attempt Number
+ ============================================================================================================
+*/
+
 } else {
 
 /*
@@ -4489,6 +4686,12 @@ if ($DB_Query_Kernel_Authenticate_Check_Member_Account_Credentials_Member_Attemp
 
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Login&Message=AuthenticationAttempt&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
+
+/*
+ ============================================================================================================
+ + ELSE: Registered Member Account Authentication Attempt Is: Less Than 5, Verify Password
+ ============================================================================================================
+*/
 
 } else {
 
@@ -4771,8 +4974,14 @@ if ($_DB_Query_Kernel_Login_Set_Member_Status_Account_IP_Address_Last_Authentica
 	
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Control_Panel&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit();
+
+/*
+ ============================================================================================================
+ + ELSE: Registered Member Account UserName, Electronic Mail Address AND Password Failed Authentication -> Write To Authentication Log
+ ============================================================================================================
+*/
 	
-} else { // Registered Member Account UserName, Electronic Mail Address AND Password Failed Authentication -> Write To Authentication Log
+} else { // [ + ] Registered Member Account UserName, Electronic Mail Address AND Password Failed Authentication -> Write To Authentication Log
 
 /*
  ============================================================================================================
@@ -4978,7 +5187,7 @@ if ($DB_Query_Kernel_Member_Account_Update_Attempt_Authentication) {
 
 // [ C ] $DB_Query_Kernel_Authenticate_Check_Member_Account_Credentials_Array->free_result();
 
-} else { // Database Server Query :: Check :: Number of Rows :: Registered Member Account Based On Provided Credentials
+} else { // [ + ] Database Server Query :: Check :: Number of Rows :: Registered Member Account Based On Provided Credentials
 
 /*
  ============================================================================================================
@@ -5878,11 +6087,23 @@ if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_TIME >= "1") {
 
 if ($_GLOBAL_SYSTEM_STATUS_OFFILINE_MODE >= 1) {
 
+/*
+ ============================================================================================================
+ + IF: Registered Member Account :: Access Level :: Is: Greater Than OR Equal To: 2, Moderator Privileges :: Print Offline Mode Message
+ ============================================================================================================
+*/
+
 if ($_GLOBAL_MEMBER_ACCESS_LEVEL >= 2) {
 
 	echo ($_Message_Kernel_OFFLINE_MODE_ENABLED);
 
 } else {
+
+/*
+ ============================================================================================================
+ + ELSE: Registered Member Account :: Access Level :: Is: Less Than OR Equal To: 1, Registered Member Account Privileges :: Re-Direct To The Offline Mode Message
+ ============================================================================================================
+*/
 
 	header("Location: ./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/HTML/Offline.html?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5944,7 +6165,7 @@ header("Expires: 0");
 
 /*
  ============================================================================================================
- + IF: Page Data Compression Is Set To On, Initialize Page Compression
+ + IF: Page Data Compression Is Set To: On, Initialize Web Page Output With Compression
  ============================================================================================================
 */
 
@@ -5953,6 +6174,12 @@ if ($_GLOBAL_SYSTEM_STATUS_GZIP >= 1) {
 	ob_start("ob_gzhandler");
 
 	$_GLOBAL_SYSTEM_STATUS_GZIP_DISPLAY						= "GZIP :: Compression: ON";
+
+/*
+ ============================================================================================================
+ + ELSE: Page Data Compression Is Set To: Off, Initialize Web Page Output Without Compression
+ ============================================================================================================
+*/
 
 } else {
 
@@ -6118,7 +6345,7 @@ if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null &
  ============================================================================================================
 */
 
-$_DB_Query_Kernel_Applications_Panel_Aligned_Left 					= $_KERNEL_MYSQL_IMPROVED_DATABASE_SERVER_CONNECT->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_panel WHERE application_panel_alignment='0' AND application_panel_file_status='1' ORDER BY application_panel_row ASC");
+$_DB_Query_Kernel_Applications_Panel_Aligned_Left 					= $_KERNEL_MYSQL_IMPROVED_DATABASE_SERVER_CONNECT->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_panel_visiblity_public WHERE application_panel_alignment='0' AND application_panel_file_status='1' ORDER BY application_panel_row ASC");
 
 /*
  ============================================================================================================
@@ -6266,6 +6493,12 @@ if ($_GLOBAL_MEMBER_IP_ADDRESS_AUTHORIZED != "$_GLOBAL_REMOTE_SERVER_ADDRESS") {
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Login&Authorization=IP_Address&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
 
+/*
+ ============================================================================================================
+ + ELSE: Registered Member Account Authorized Internet Protocol Address IS Current Connected Internet Protocol Address, Do Nothing
+ ============================================================================================================
+*/
+
 } else {
 /**
  * Do Nothing
@@ -6273,6 +6506,12 @@ if ($_GLOBAL_MEMBER_IP_ADDRESS_AUTHORIZED != "$_GLOBAL_REMOTE_SERVER_ADDRESS") {
 } // [ + ] IF: Registered Member Account Authorized Internet Protocol Address IS NOT The Current Internet Protocol Address, Immediately Logout
 
 } // [ + ] IF: Registered Member Account Is Logged-In And Valid Credentials Are Set
+
+/*
+ ============================================================================================================
+ + ELSE: The Database Management System Server Database :: Setting :: For Restricted Internet Protocol Address Enforcement :: Is: Off, Do Nothing
+ ============================================================================================================
+*/
 
 } else {
 /**
@@ -6316,7 +6555,7 @@ if ($_GLOBAL_MEMBER_IP_ADDRESS_AUTHORIZED != "$_GLOBAL_REMOTE_SERVER_ADDRESS") {
  ============================================================================================================
 */
 
-$_DB_Query_Kernel_Select_Applications_Services							= $_KERNEL_MYSQL_IMPROVED_DATABASE_SERVER_CONNECT->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_services ORDER BY id ASC");
+$_DB_Query_Kernel_Select_Applications_Services							= $_KERNEL_MYSQL_IMPROVED_DATABASE_SERVER_CONNECT->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_administration_root_services ORDER BY id ASC");
 
 /*
  ============================================================================================================
@@ -6456,7 +6695,7 @@ if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null &
  ============================================================================================================
 */
 
-$_DB_Query_Kernel_Select_Applications_Root							= $_KERNEL_MYSQL_IMPROVED_DATABASE_SERVER_CONNECT->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_root ORDER BY id ASC");
+$_DB_Query_Kernel_Select_Applications_Root							= $_KERNEL_MYSQL_IMPROVED_DATABASE_SERVER_CONNECT->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_administration_root ORDER BY id ASC");
 
 /*
  ============================================================================================================
@@ -6596,7 +6835,7 @@ if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null &
  ============================================================================================================
 */
 
-$_DB_Query_Kernel_Select_Applications_Administration 						= $_KERNEL_MYSQL_IMPROVED_DATABASE_SERVER_CONNECT->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_administration ORDER BY id ASC");
+$_DB_Query_Kernel_Select_Applications_Administration 						= $_KERNEL_MYSQL_IMPROVED_DATABASE_SERVER_CONNECT->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_administration_visibility_administration ORDER BY id ASC");
 
 /*
  ============================================================================================================
@@ -6777,6 +7016,12 @@ if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null &
 
 										include_once "$_FIND_DIRECTORY_APPLICATIONS_MODERATION/$_READ_DIRECTORY_APPLICATIONS_MODERATION";
 
+/*
+ ============================================================================================================
+ + ELSE: Registered Member Account :: Access Level :: Is: < 2, Print Application Access Restriction Message
+ ============================================================================================================
+*/
+
 } else {
 
 	echo ($_Message_Kernel_APPLICATION_MODERATION_APPLICATION_ACCESS_RESTRICTED_MODERATION);
@@ -6821,7 +7066,7 @@ closedir($_READ_DIRECTORY_APPLICATIONS_MODERATION);
  ============================================================================================================
 */
 
-$_DB_Query_Kernel_Select_Applications_Member 							= $_KERNEL_MYSQL_IMPROVED_DATABASE_SERVER_CONNECT->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications ORDER BY id ASC");
+$_DB_Query_Kernel_Select_Applications_Member 							= $_KERNEL_MYSQL_IMPROVED_DATABASE_SERVER_CONNECT->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_member_visibility_member ORDER BY id ASC");
 
 /*
  ============================================================================================================
@@ -6879,11 +7124,17 @@ if ($_KERNEL_APPLICATION_MODULE_MEMBER_FILE_PERMISSION == "0") {
 
 	include_once "./Applications/Member/Visibility/Member/$_KERNEL_APPLICATION_MODULE_MEMBER_FILE_NAME";
 
+/*
+ ============================================================================================================
+ + ELSE: Application Module :: File Permission :: Is: NOT Public and No Registered Member Account Credentials Exist, Check File Permission
+ ============================================================================================================
+*/
+
 } else {
 
 /*
  ============================================================================================================
- + IF: Application Module :: File Permission :: Is: Registered Member Account
+ + IF: Application Module :: File Permission :: Is: Access Level :: Registered Member Account
  ============================================================================================================
 */
 
@@ -6910,6 +7161,12 @@ if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null &
 	echo ($_Message_Kernel_APPLICATION_MEMBER_APPLICATION_ACCESS_RESTRICTED_MEMBER);
 
 } // [ + ] IF: Registered Member Account :: Cookies :: Credentials :: Exist, are Valid and Registered Member Account Access-Level Is: >= 1
+
+/*
+ ============================================================================================================
+ + ELSE: Application Module :: File Permission :: Is NOT: Access Level :: Registered Member Account
+ ============================================================================================================
+*/
 
 } else {
 
@@ -7066,7 +7323,7 @@ echo ($_GLOBAL_THEME_LAYOUT_3);
  ============================================================================================================
 */
 
-$_DB_Query_Kernel_Applications_Panel_Aligned_Right 					= $_KERNEL_MYSQL_IMPROVED_DATABASE_SERVER_CONNECT->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_panel WHERE application_panel_alignment='1' AND application_panel_file_status='1' ORDER BY application_panel_row ASC");
+$_DB_Query_Kernel_Applications_Panel_Aligned_Right 					= $_KERNEL_MYSQL_IMPROVED_DATABASE_SERVER_CONNECT->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_panel_visibility_public WHERE application_panel_alignment='1' AND application_panel_file_status='1' ORDER BY application_panel_row ASC");
 
 /*
  ============================================================================================================
