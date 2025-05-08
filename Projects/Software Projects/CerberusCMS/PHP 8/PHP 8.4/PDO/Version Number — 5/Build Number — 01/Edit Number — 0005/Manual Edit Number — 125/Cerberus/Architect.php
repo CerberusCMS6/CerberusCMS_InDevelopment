@@ -1683,7 +1683,7 @@ echo ("
 
 		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		<B>Pre-Installation Notes</B>
-		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\"><BR>
 
 		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		<B>Quick Installation Notes</B>
@@ -1706,6 +1706,7 @@ echo ("
 		Sometimes it is difficult to install anything on a shared hosting Web Server or another kind of Web Server that you do not have physical access to.<BR>
 		so in light of those situations: Architect has been designed to split up the installation process of this system to make it easier to install everything either automatically or by installing it manually part by part.<BR><BR>
 
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		<B>Directory and File Permissions Notes</B>
 		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		[&nbsp;!&nbsp;]&nbsp;*Nix Server Users ( Linux, Unix, B.S.D., G.N.U., etcetera. ): See <A HREF=\"https://en.wikipedia.org/wiki/Chmod\" TARGET=\"_NEW\" TITLE=\":: Open & Display The Wikipedia Entry For :: Access Control List / Change-Mode ( CHMOD ) ::\">Change-Mode ( CHMOD )</A> the following<BR>
@@ -1770,6 +1771,7 @@ echo ("
 		[&nbsp;!&nbsp;]&nbsp;Microsoft Windows Server Users: All of $_PROJECT_STRING_NAME_EXTENDED' Files are set to the 'Read Only' flag by default. In order to install $_PROJECT_STRING_NAME_EXTENDED correctly you must remove the 'Read Only' flag on each file listed in the Architect Installation Walkthrough.<BR>
 		[&nbsp;!&nbsp;]&nbsp;If you would like additional security for the Administration Control Panel you will need to configure an <I>.htaccess</I> file and then install that configured <I>.htaccess</I> file into the <I>./Application/Administration/</I> directory before proceeding with this installation.<BR><BR>
 
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		<B>Digital Information Security Notes</B>
 		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		[&nbsp;!&nbsp;]&nbsp;$_PROJECT_STRING_NAME_EXTENDED' programming code has been tested manually as well as by vulnerability and exploit scanning software<BR>
@@ -1868,42 +1870,50 @@ echo ("
 		[&nbsp;!&nbsp;]&nbsp;If you are unable to install the Structured-Query-Language Tables automatically by this web application, click [ <A HREF=\"./$_INTERNAL_FILE_ARCHITECT_DIRECTORY/MySQL/MySQL_Generator.php\" TITLE=\":: Open & Display The Structured-Query-Language Data Generator Application ::\" TARGET=\"_NEW\">here</A> ] to manually generate the S.Q.L. Structure and the S.Q.L. Data.<BR>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once the Structured-Query-Language Table Structure and its data is generated correctly, copy the Structured-Query-Language Tables with generated Table Prefix Name and then manually paste the generated Structured-Query-Language Data Structure into your web server Structured-Query-Language Manager / Editor and click install.<BR><BR>
 
-		<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		<B>Tools :: Pre-Installation</B>
-		<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\"><BR>
 
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		<B>Tools :: Pre-Installation :: Database Management System Server :: Database</B>
 		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		=>&nbsp;<A HREF=\"?InternalApplication&#61;Install_Database\" TARGET=\"_NEW\" TITLE=\":: Open & Display ::The Internal Application :: Structured-Query-Language Database Installer ::\">Installer :: Automatic :: Structured-Query-Language Database Server :: Database</A><BR><BR>
-		
+
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		<B>Tools :: Pre-Installation :: Database Management System Server :: Table Structure</B>
 		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		=>&nbsp;<A HREF=\"?InternalApplication&#61;Install_DatabaseTableStructure\" TARGET=\"_NEW\" TITLE=\":: Open & Display ::The Internal Application :: Structured-Query-Language Database Table Installer ::\">Installer :: Automatic :: Structured-Query-Language Database Server :: Table Structure</A><BR>
 		=>&nbsp;<A HREF=\"./$_INTERNAL_FILE_ARCHITECT_DIRECTORY/MySQL/MySQL_Generator.php\" TARGET=\"_NEW\" TITLE=\":: Open & Display :: The Internal Application :: Structured-Query-Language Database Table Structure Generator ::\">Installer :: Manual :: Generate :: Structured-Query-Language Database Server :: Table Structure</A><BR><BR>
 
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		<B>Tools :: Pre-Installation :: Database Management System Server :: Database Data</B>
 		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		=>&nbsp;<A HREF=\"?InternalApplication&#61;Install_Defaults\" TARGET=\"_NEW\" TITLE=\":: Open & Display :: The Installer :: Administration Account & Default Database Management System Server Database Data ::\">Installer :: Automatic :: Administration Account and Database Management System Server Database Data</A><BR>
 		=>&nbsp;<A HREF=\"?InternalApplication&#61;Install_Administration\" TARGET=\"_NEW\" TITLE=\":: Open & Display :: The Installer :: Administration Account Installer ::\">Installer :: Automatic :: Administration Account</A><BR>
 		=>&nbsp;<A HREF=\"?InternalApplication&#61;Install_DatabaseData\" TARGET=\"_NEW\" TITLE=\":: Open & Display :: The Installer :: Default Database Management System Server Database Data ::\">Installer :: Automatic :: Default Database Management System Server Database Data</A><BR><BR>
 
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		<B>ToolKits</B>
 		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		=>&nbsp;<A HREF=\"./$_INTERNAL_FILE_ARCHITECT_DIRECTORY/ToolKit/Installation_ToolKit.php\" TARGET=\"_NEW\" TITLE=\":: Open & Display The Pre-Installation ToolKit ::\">ToolKit :: Pre-Installation</A><BR><BR>
 
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		<B>Files :: Integrity</B>
 		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		=>&nbsp;<A HREF=\"?InternalApplication&#61;File_Integrity\" TITLE=\":: Open & Display :: The Internal Application :: File Integrity ::\">File Integrity :: Application Modules</A><BR><BR>
 
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		<B>Files :: Permissions</B>
 		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		=>&nbsp;<A HREF=\"?InternalApplication&#61;File_Permissions\" TITLE=\":: Open & Display :: The Internal Application :: Change-Mode ( CHMOD ) File Permissions Loop ::\">Permissions Loops :: Directories</A><BR>
 		=>&nbsp;<A HREF=\"?InternalApplication&#61;File_Permissions\" TITLE=\":: Open & Display :: The Internal Application :: Change-Mode ( CHMOD ) File Permissions Loop ::\">Permissions Loops :: Files</A><BR><BR>
 
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		<B>Maintenance :: Diagnostics</B>
 		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		=>&nbsp;<A HREF=\"./Maintenance/Diagnostics/$_INTERNAL_FILE_MAINTENANCE_DIAGNOSTICS\" TARGET=\"_NEW\" TITLE=\":: Open & Display The System Diagnostics Application ::\">System Maintenance :: Diagnostics Application</A><BR><BR>
 
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		<B>Maintenance :: Repair</B>
 		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		=>&nbsp;<A HREF=\"./Maintenance/Repair/$_INTERNAL_FILE_MAINTENANCE_REPAIR\" TARGET=\"_NEW\" TITLE=\":: Open & Display The System Repair Application ::\">System Maintenance :: Repair Application</A><BR><BR>
