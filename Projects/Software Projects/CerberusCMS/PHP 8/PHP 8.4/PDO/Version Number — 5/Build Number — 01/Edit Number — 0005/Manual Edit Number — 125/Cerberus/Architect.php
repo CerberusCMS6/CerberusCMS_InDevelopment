@@ -2183,8 +2183,6 @@ if ($_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_SELECT_DATABASE_NAME) {
  ============================================================================================================
 */
 
-/* Applications :: Non-Registered Visitor and Registered Member Account */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_administration_visibility_administration<BR>");
 
 /* ------------------------------------------------------------------------- */
@@ -2645,11 +2643,15 @@ application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
 
-/* Custom Applications */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_custom<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_applications_custom (
+/* ------------------------------------------------------------------------- */
+/*                       Custom Applications                                 */
+/* ------------------------------------------------------------------------- */
+
+/* Custom Applications */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_applications_custom (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 custom_application_data TEXT,
 custom_application_name VARCHAR(250),
@@ -2657,80 +2659,15 @@ custom_application_timestamp_installation VARCHAR(100),
 PRIMARY KEY (id)
 )");
 
-/* Applications :: Root */
-	
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_root<BR>");
-
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_applications_root (
-id MEDIUMINT NOT NULL AUTO_INCREMENT,
-application_file_integrity VARCHAR(512),
-application_file_integrity_installation VARCHAR(512),
-application_file_name VARCHAR(100),
-application_file_permission CHAR(1),
-application_file_permission_camera CHAR(1),
-application_file_permission_microphone CHAR(1),
-application_file_permission_location_gps CHAR(1),
-application_file_permission_location_glo CHAR(1),
-application_file_permission_location_internet_protocol_address CHAR(1),
-application_file_status CHAR(1),
-application_file_timestamp_installation VARCHAR(100),
-application_file_visibility CHAR(1),
-application_file_version VARCHAR(10),
-PRIMARY KEY (id)
-)");
-
-/* Applications :: Services */
-	
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_services<BR>");
-
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_applications_services (
-id MEDIUMINT NOT NULL AUTO_INCREMENT,
-application_file_integrity VARCHAR(512),
-application_file_integrity_installation VARCHAR(512),
-application_file_name VARCHAR(100),
-application_file_permission CHAR(1),
-application_file_permission_camera CHAR(1),
-application_file_permission_microphone CHAR(1),
-application_file_permission_location_gps CHAR(1),
-application_file_permission_location_glo CHAR(1),
-application_file_permission_location_internet_protocol_address CHAR(1),
-application_file_status CHAR(1),
-application_file_timestamp_installation VARCHAR(100),
-application_file_visibility CHAR(1),
-application_file_version VARCHAR(10),
-PRIMARY KEY (id)
-)");
-
-/* Application Panels */
-	
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_panel<BR>");
-
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_applications_panel (
-id MEDIUMINT NOT NULL AUTO_INCREMENT,
-application_panel_alignment CHAR(1),
-application_panel_file_integrity VARCHAR(512),
-application_panel_file_integrity_installation VARCHAR(512),
-application_panel_file_name VARCHAR(250),
-application_panel_file_permission CHAR(1),
-application_panel_file_permission_camera CHAR(1),
-application_panel_file_permission_microphone CHAR(1),
-application_panel_file_permission_location_gps CHAR(1),
-application_panel_file_permission_location_glo CHAR(1),
-application_panel_file_permission_location_ip_address CHAR(1),
-application_panel_file_status CHAR(1),
-application_panel_file_timestamp_installation VARCHAR(100),
-application_panel_file_version VARCHAR(10),
-application_panel_file_visibility CHAR(1),
-application_panel_row CHAR(5),
-application_panel_title VARCHAR(250),
-PRIMARY KEY (id)
-)");
-
-/* Application Links */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ application_links<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_application_links (
+/* ------------------------------------------------------------------------- */
+/*                         Application Links                                 */
+/* ------------------------------------------------------------------------- */
+
+/* Application Links */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_application_links (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 application_link_name VARCHAR(250),
 application_link_row CHAR(3),
@@ -2739,11 +2676,15 @@ application_link_timestamp_installation VARCHAR(100),
 PRIMARY KEY (id)
 )");
 
-/* Articles */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ articles<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_articles (
+/* ------------------------------------------------------------------------- */
+/*                             Articles                                      */
+/* ------------------------------------------------------------------------- */
+
+/* Articles */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_articles (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 article_author VARCHAR(50),
 article_data TEXT,
@@ -2752,11 +2693,15 @@ article_title VARCHAR(50),
 PRIMARY KEY (id)
 )");
 
-/* Comments */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ comments<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_comments (
+/* ------------------------------------------------------------------------- */
+/*                               Comments                                    */
+/* ------------------------------------------------------------------------- */
+
+/* Comments */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_comments (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 comment_author VARCHAR(50),
 comment_data TEXT,
@@ -2766,11 +2711,15 @@ comment_time VARCHAR(50),
 PRIMARY KEY (id)
 )");
 
-/* File Categories */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ file_categories<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_file_categories (
+/* ------------------------------------------------------------------------- */
+/*                             File Categories                               */
+/* ------------------------------------------------------------------------- */
+
+/* File Categories */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_file_categories (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 file_category_description VARCHAR(250),
 file_category_time VARCHAR(50),
@@ -2778,11 +2727,15 @@ file_category_title VARCHAR(50),
 PRIMARY KEY (id)
 )");
 
-/* Files */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ files<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_files (
+/* ------------------------------------------------------------------------- */
+/*                                 Files                                     */
+/* ------------------------------------------------------------------------- */
+
+/* Files */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_files (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 file_author VARCHAR(50),
 file_category VARCHAR(250),
@@ -2796,11 +2749,15 @@ file_uploader VARCHAR(50),
 PRIMARY KEY (id)
 )");
 
-/* Forum */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ forum_forum<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_forum_forum (
+/* ------------------------------------------------------------------------- */
+/*                                 Forum                                     */
+/* ------------------------------------------------------------------------- */
+
+/* Forum */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_forum_forum (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 forum_access_level CHAR(1),
 forum_description TEXT,
@@ -2809,11 +2766,15 @@ forum_title VARCHAR(200),
 PRIMARY KEY (id)
 )");
 
-/* Forum Topics */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ forum_topic<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_forum_topic (
+/* ------------------------------------------------------------------------- */
+/*                        Forum :: Topics                                    */
+/* ------------------------------------------------------------------------- */
+
+/* Forum Topics */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_forum_topic (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 topic_access_level CHAR(1),
 topic_description TEXT,
@@ -2825,11 +2786,15 @@ topic_title VARCHAR(200),
 PRIMARY KEY (id)
 )");
 
-/* Forum Topic Messages */
-	
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ forum_topic_message<BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ forum_topic_messages<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_forum_topic_message (
+/* ------------------------------------------------------------------------- */
+/*                        Forum :: Topic :: Messages                         */
+/* ------------------------------------------------------------------------- */
+
+/* Forum Topic Messages */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_forum_topic_message (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 message_access_level CHAR(1),
 message_author VARCHAR(50),
@@ -2840,11 +2805,15 @@ message_timestamp_last_update VARCHAR(50),
 PRIMARY KEY (id)
 )");
 
-/* Kernel */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ kernel<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_kernel (
+/* ------------------------------------------------------------------------- */
+/*                                  Kernel                                   */
+/* ------------------------------------------------------------------------- */
+
+/* Kernel */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_kernel (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 kernel_file_date_installation VARCHAR(100),
 kernel_file_integrity VARCHAR(512),
@@ -2853,11 +2822,15 @@ kernel_file_version VARCHAR(20),
 PRIMARY KEY (id)
 )");
 
-/* Links */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ links<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_links (
+/* ------------------------------------------------------------------------- */
+/*                                  Links                                   */
+/* ------------------------------------------------------------------------- */
+
+/* Links */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_links (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 link_author VARCHAR(50),
 link_description TEXT,
@@ -2867,11 +2840,15 @@ link_url VARCHAR(250),
 PRIMARY KEY (id)
 )");
 
-/* Registered Member Accounts */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ members<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_members (
+/* ------------------------------------------------------------------------- */
+/*                        Registered Member Accounts                         */
+/* ------------------------------------------------------------------------- */
+
+/* Registered Member Accounts */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_members (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 member_access_level CHAR(1),
 member_account_device_web_browser VARCHAR(200),
@@ -3028,11 +3005,15 @@ member_username VARCHAR(50),
 PRIMARY KEY (id)
 )");
 
-/* Messenger :: Plain-Text-File Room */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ messenger_clear_text_file_room<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_messenger_clear_text_file_room (
+/* ------------------------------------------------------------------------- */
+/*                  Messenger :: Plain-Text-File Room                        */
+/* ------------------------------------------------------------------------- */
+
+/* Messenger :: Plain-Text-File Room */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_messenger_clear_text_file_room (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 messenger_room_creation_author VARCHAR(100),
 messenger_room_creation_author_device_ip_address VARCHAR(100),
@@ -3046,11 +3027,15 @@ messenger_room_status_visibility CHAR(1),
 PRIMARY KEY (id)
 )");
 
-/* Messenger :: Plain-Text S.Q.L. Messages */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ messenger_clear_text_messages<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_messenger_clear_text_messages (
+/* ------------------------------------------------------------------------- */
+/*             Messenger :: Plain-Text S.Q.L. Messages                       */
+/* ------------------------------------------------------------------------- */
+
+/* Messenger :: Plain-Text S.Q.L. Messages */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_messenger_clear_text_messages (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 messenger_room_creation_timestamp VARCHAR(100),
 messenger_room_message TEXT,
@@ -3067,11 +3052,15 @@ messenger_room_name VARCHAR(100),
 PRIMARY KEY (id)
 )");
 
-/* Messenger :: Encrypted-Text-File Room */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ messenger_encrypted_text_file_room<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_messenger_encrypted_text_file_room (
+/* ------------------------------------------------------------------------- */
+/*               Messenger :: Encrypted-Text-File Room                       */
+/* ------------------------------------------------------------------------- */
+
+/* Messenger :: Encrypted-Text-File Room */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_messenger_encrypted_text_file_room (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 messenger_room_creation_author VARCHAR(100),
 messenger_room_creation_author_device_ip_address VARCHAR(100),
@@ -3085,11 +3074,15 @@ messenger_room_status_visibility CHAR(1),
 PRIMARY KEY (id)
 )");
 
-/* Messenger :: Encrypted-Text S.Q.L. Messages */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ messenger_encrypted_text_messages<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_messenger_encrypted_text_messages (
+/* ------------------------------------------------------------------------- */
+/*            Messenger :: Encrypted-Text S.Q.L. Messages                    */
+/* ------------------------------------------------------------------------- */
+
+/* Messenger :: Encrypted-Text S.Q.L. Messages */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_messenger_encrypted_text_messages (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 messenger_room_message TEXT,
 messenger_room_message_author VARCHAR(100),
@@ -3106,11 +3099,15 @@ messenger_room_timestamp_creation VARCHAR(100),
 PRIMARY KEY (id)
 )");
 
-/* Messenger :: P2P :: Clear-Text File */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ messenger_p2p_clear_text_file_room<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_messenger_p2p_clear_text_file_room (
+/* ------------------------------------------------------------------------- */
+/*                    Messenger :: P2P :: Clear-Text File                    */
+/* ------------------------------------------------------------------------- */
+
+/* Messenger :: P2P :: Clear-Text File */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_messenger_p2p_clear_text_file_room (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 messenger_room_creation_author VARCHAR(100),
 messenger_room_creation_author_device_ip_address VARCHAR(100),
@@ -3121,11 +3118,15 @@ messenger_room_username_remote VARCHAR(100),
 PRIMARY KEY (id)
 )");
 
-/* Messenger :: P2P :: Encrypted-Text File */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ messenger_p2p_encrypted_text_file_room<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_messenger_p2p_encrypted_text_file_room (
+/* ------------------------------------------------------------------------- */
+/*                Messenger :: P2P :: Encrypted-Text File                    */
+/* ------------------------------------------------------------------------- */
+
+/* Messenger :: P2P :: Encrypted-Text File */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_messenger_p2p_encrypted_text_file_room (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 messenger_room_creation_author VARCHAR(100),
 messenger_room_creation_author_device_ip_address VARCHAR(100),
@@ -3136,11 +3137,15 @@ messenger_room_username_remote VARCHAR(100),
 PRIMARY KEY (id)
 )");
 
-/* Networking */
-	
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ messenger_networking<BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ networking<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_networking (
+/* ------------------------------------------------------------------------- */
+/*                               Networking                                  */
+/* ------------------------------------------------------------------------- */
+
+/* Networking */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_networking (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 blocked_dns_address_string VARCHAR(250),
 blocked_dns_address_text TEXT,
@@ -3150,11 +3155,15 @@ blocked_redirect_url VARCHAR(250),
 PRIMARY KEY (id)
 )");
 
-/* News Articles */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ news<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_news (
+/* ------------------------------------------------------------------------- */
+/*                             News Articles                                 */
+/* ------------------------------------------------------------------------- */
+
+/* News Articles */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_news (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 news_author VARCHAR(50),
 news_avatar VARCHAR(50),
@@ -3167,11 +3176,15 @@ news_title VARCHAR(50),
 PRIMARY KEY (id)
 )");
 
-/* News Submissions */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ news_submissions<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_news_submissions (
+/* ------------------------------------------------------------------------- */
+/*                           News Submissions                                */
+/* ------------------------------------------------------------------------- */
+
+/* News Submissions */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_news_submissions (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 news_submission_author VARCHAR(50),
 news_submission_data TEXT,
@@ -3179,11 +3192,15 @@ news_submission_time VARCHAR(50),
 PRIMARY KEY (id)
 )");
 
-/* Notepad */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ notepad<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_notepad (
+/* ------------------------------------------------------------------------- */
+/*                                Notepad                                    */
+/* ------------------------------------------------------------------------- */
+
+/* Notepad */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_notepad (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 note_access_level VARCHAR(50),
 note_author VARCHAR(50),
@@ -3195,11 +3212,15 @@ note_timestamp VARCHAR(50),
 PRIMARY KEY (id)
 )");
 
-/* Plug-Ins */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ plugins<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_plugins(
+/* ------------------------------------------------------------------------- */
+/*                               Plug-Ins                                    */
+/* ------------------------------------------------------------------------- */
+
+/* Plug-Ins */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_plugins (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 plugin_file_integrity_current VARCHAR(512),
 plugin_file_integrity_installation VARCHAR(512),
@@ -3211,11 +3232,15 @@ plugin_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
 
-/* Ranks */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ ranks<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_ranks (
+/* ------------------------------------------------------------------------- */
+/*                               Ranks                                       */
+/* ------------------------------------------------------------------------- */
+
+/* Ranks */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_ranks (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 rank_gender_female_0 VARCHAR(25),
 rank_gender_female_1 VARCHAR(25),
@@ -3231,11 +3256,15 @@ rank_gender_none VARCHAR(25),
 PRIMARY KEY (id)
 )");
 
-/* Services Commander */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ services_commander<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_services_commander (
+/* ------------------------------------------------------------------------- */
+/*                         Services Commander                                */
+/* ------------------------------------------------------------------------- */
+
+/* Services Commander */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_services_commander (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 command_execute VARCHAR(500),
 command_receive VARCHAR(500),
@@ -3245,11 +3274,15 @@ command_type CHAR(1),
 PRIMARY KEY (id)
 )");
 
-/* Services Tasks */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ services_tasks<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_services_tasks (
+/* ------------------------------------------------------------------------- */
+/*                         Services Tasks                                    */
+/* ------------------------------------------------------------------------- */
+
+/* Services Tasks */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_services_tasks (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 task_author VARCHAR(50),
 task_data TEXT,
@@ -3262,11 +3295,15 @@ task_time_second VARCHAR(2),
 PRIMARY KEY (id)
 )");
 
-/* Settings */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ settings<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_settings (
+/* ------------------------------------------------------------------------- */
+/*                            Settings                                       */
+/* ------------------------------------------------------------------------- */
+
+/* Settings */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_settings (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 settings_system_time_cookies VARCHAR(10),
 settings_system_status_embedded_compression_gzip CHAR(1),
@@ -3333,11 +3370,15 @@ settings_system_services_module_status_tasks CHAR(1),
 PRIMARY KEY (id)
 )");
 
-/* Shout Messages */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ shout_messages<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_shout_messages (
+/* ------------------------------------------------------------------------- */
+/*                               Shout Messages                              */
+/* ------------------------------------------------------------------------- */
+
+/* Shout Messages */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_shout_messages (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 message_author VARCHAR(50),
 message_author_network_internet_protocol_address VARCHAR(250),
@@ -3350,11 +3391,15 @@ message_video_live VARCHAR(250),
 PRIMARY KEY (id)
 )");
 
-/* Statistics */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ statistics<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_statistics (
+/* ------------------------------------------------------------------------- */
+/*                               Statistics                                  */
+/* ------------------------------------------------------------------------- */
+
+/* Statistics */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_statistics (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 statistics_total_number_of_document_executions_non_unique CHAR(15),
 statistics_total_number_of_document_executions_unique CHAR(15),
@@ -3362,11 +3407,15 @@ statistics_installation_date VARCHAR(50),
 PRIMARY KEY (id)
 )");
 
-/* System Messages */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ system_message<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_system_message (
+/* ------------------------------------------------------------------------- */
+/*                           System Messages                                 */
+/* ------------------------------------------------------------------------- */
+
+/* System Messages */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_system_message (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 system_message_author VARCHAR(50),
 system_message_data TEXT,
@@ -3375,13 +3424,15 @@ system_message_timestamp VARCHAR(100),
 PRIMARY KEY (id)
 )");
 
-		echo ("[ Done ]<BR><BR>");
-	
-/* Tasks */
-	
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ tasks<BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _tasks<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_tasks (
+/* ------------------------------------------------------------------------- */
+/*                               Tasks                                       */
+/* ------------------------------------------------------------------------- */
+
+/* Tasks */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_tasks (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 tasks_author VARCHAR(50),
 tasks_data TEXT,
@@ -3394,11 +3445,15 @@ tasks_time_second VARCHAR(2),
 PRIMARY KEY (id)
 )");
 
-/* Web Pages */
-	
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ web_pages<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_web_pages (
+/* ------------------------------------------------------------------------- */
+/*                               Web Pages                                   */
+/* ------------------------------------------------------------------------- */
+
+/* Web Pages */
+
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_web_pages (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 web_pages_author VARCHAR(50),
 web_pages_data TEXT,
