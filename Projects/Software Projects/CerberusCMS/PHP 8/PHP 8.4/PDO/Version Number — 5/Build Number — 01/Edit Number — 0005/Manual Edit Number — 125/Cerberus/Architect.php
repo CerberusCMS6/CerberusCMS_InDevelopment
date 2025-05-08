@@ -2197,8 +2197,6 @@ application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
 
-	echo ("[ Done ]<BR><BR>");
-
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_administration_visibility_member<BR>");
 
 /* Applications :: Adminstration :: Visibility :: Member */
@@ -2220,8 +2218,6 @@ application_file_visibility CHAR(1),
 application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
-
-	echo ("[ Done ]<BR><BR>");
 
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_administration_visibility_moderator<BR>");
 
@@ -2245,8 +2241,6 @@ application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
 
-	echo ("[ Done ]<BR><BR>");
-
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_administration_visibility_public<BR>");
 
 /* Applications :: Adminstration :: Visibility :: Public */
@@ -2268,8 +2262,6 @@ application_file_visibility CHAR(1),
 application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
-
-	echo ("[ Done ]<BR><BR>");
 
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_administration_visibility_root<BR>");
 
@@ -2293,8 +2285,6 @@ application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
 
-	echo ("[ Done ]<BR><BR>");
-
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_administration_visibility_services<BR>");
 
 /* Applications :: Adminstration :: Visibility :: Administration :: Services Root-Administration */
@@ -2316,8 +2306,6 @@ application_file_visibility CHAR(1),
 application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
-
-	echo ("[ Done ]<BR><BR>");
 
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_administration_root<BR>");
 
@@ -2345,8 +2333,6 @@ application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
 
-	echo ("[ Done ]<BR><BR>");
-
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_administration_root_services<BR>");
 
 /* ------------------------------------------------------------------------- */
@@ -2372,8 +2358,6 @@ application_file_visibility CHAR(1),
 application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
-
-	echo ("[ Done ]<BR><BR>");
 
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_member_visibility_administration<BR>");
 
@@ -2401,8 +2385,6 @@ application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
 
-	echo ("[ Done ]<BR><BR>");
-
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_member_visibility_member<BR>");
 
 /* Applications :: Registered Member Account :: Visibility :: Member */
@@ -2424,8 +2406,6 @@ application_file_visibility CHAR(1),
 application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
-
-	echo ("[ Done ]<BR><BR>");
 
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_member_visibility_moderator<BR>");
 
@@ -2449,8 +2429,6 @@ application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
 
-	echo ("[ Done ]<BR><BR>");
-
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_member_visibility_public<BR>");
 
 /* Applications :: Registered Member Account :: Visibility :: Public */
@@ -2472,8 +2450,6 @@ application_file_visibility CHAR(1),
 application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
-
-	echo ("[ Done ]<BR><BR>");
 
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_member_visibility_root<BR>");
 
@@ -2497,8 +2473,6 @@ application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
 
-	echo ("[ Done ]<BR><BR>");
-
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_member_visibility_services<BR>");
 
 /* Applications :: Registered Member Account :: Visibility :: Administration :: Services Root-Administration */
@@ -2520,8 +2494,6 @@ application_file_visibility CHAR(1),
 application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
-
-	echo ("[ Done ]<BR><BR>");
 
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_panel_visibility_administration<BR>");
 
@@ -2549,8 +2521,6 @@ application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
 
-	echo ("[ Done ]<BR><BR>");
-
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_panel_visibility_member<BR>");
 
 /* Applications :: Panel :: Visibility :: Member */
@@ -2572,8 +2542,6 @@ application_file_visibility CHAR(1),
 application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
-
-	echo ("[ Done ]<BR><BR>");
 
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_panel_visibility_moderator<BR>");
 
@@ -2597,8 +2565,6 @@ application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
 
-	echo ("[ Done ]<BR><BR>");
-
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_panel_visibility_public<BR>");
 
 /* Applications :: Panel :: Visibility :: Public */
@@ -2621,8 +2587,6 @@ application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
 
-	echo ("[ Done ]<BR><BR>");
-
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_panel_visibility_root<BR>");
 
 /* Applications :: Panel :: Visibility :: Administration :: Root-Administration */
@@ -2644,8 +2608,6 @@ application_file_visibility CHAR(1),
 application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
-
-	echo ("[ Done ]<BR><BR>");
 
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ applications_panel_visibility_services<BR>");
 
