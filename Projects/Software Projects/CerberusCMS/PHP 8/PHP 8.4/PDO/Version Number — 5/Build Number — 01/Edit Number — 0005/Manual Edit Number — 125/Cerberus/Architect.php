@@ -3576,9 +3576,9 @@ $_ARCHITECT_POST_ADMINISTRATOR_ACCOUNT_RECOVERY_KEY								= "$_ARCHITECT_ADMINI
 if ((!$_ARCHITECT_POST_ADMINISTRATOR_ACCOUNT_USERNAME) || (!$_ARCHITECT_POST_ADMINISTRATOR_ACCOUNT_PASSWORD_1) || (!$_ARCHITECT_POST_ADMINISTRATOR_ACCOUNT_PASSWORD_2)) {
 
 echo ("
-	<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+	<HR ALIGN=\"CENTER\" WIDTH=\"20%\">
 	<CENTER>Install :: Administration-Level Account</CENTER>
-	<HR ALIGN=\"LEFT\" WIDTH=\"20%\"><BR>
+	<HR ALIGN=\"CENTER\" WIDTH=\"20%\"><BR>
 	<FORM ACTION=\"?InternalApplication&#61;Install_Defaults\" METHOD=\"post\">
 		Create The Administration Account:<BR>
 		It Is Recommended To Use a Random Password Generator and a Password Storage Application Such as KeePass Password Safe<BR>
