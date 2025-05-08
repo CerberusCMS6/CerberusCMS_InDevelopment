@@ -7606,7 +7606,7 @@ echo ("
  ============================================================================================================
  +
  +
- + [ @ ] Internal Resources :: Flushing and Destroying Initializations
+ + [ @ ] Internal Resources :: Flushing and Destroying Programming Code Object Initializations
  +
  +
  ============================================================================================================
@@ -7615,7 +7615,7 @@ echo ("
 /*
  ============================================================================================================
  +
- + Flushing and Destroying All Previous Object Initializations
+ + Flush and Destroy All Previously Initialized Programming Code Objects
  +
  ============================================================================================================
 */
@@ -7638,7 +7638,7 @@ ob_end_clean();
 
 /*
  ============================================================================================================
- + Kill Everything Initialized and Running :: System-Wide
+ + Kill :: Everything Initialized and Running :: System-Wide
  ============================================================================================================
 */
 
