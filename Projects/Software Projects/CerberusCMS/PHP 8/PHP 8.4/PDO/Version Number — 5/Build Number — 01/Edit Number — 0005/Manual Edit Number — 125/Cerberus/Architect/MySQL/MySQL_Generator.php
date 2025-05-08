@@ -361,14 +361,22 @@ $_MySQL_Generator_POST_ADMINISTRATOR_PASSWORD_HASH_MD5								= md5($_MySQL_Gene
 
 /*
  ============================================================================================================
+ +
+ + Variables :: File Integrity :: Application Modules :: Background
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
  + Retrieve :: File Integrity :: Applications :: Background
  ============================================================================================================
 */
 
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_BACKGROUND_FILE_001						= hash_file('sha256', "./Applications/Background/Log_Administration");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_BACKGROUND_FILE_002						= hash_file('sha256', "./Applications/Background/Log_Background");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_BACKGROUND_FILE_003						= hash_file('sha256', "./Applications/Background/Log_Member");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_BACKGROUND_FILE_004						= hash_file('sha256', "./Applications/Background/Log_Visitor");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_BACKGROUND_FILE_001						= hash_file('sha256', "../../Applications/Background/Log_Administration");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_BACKGROUND_FILE_002						= hash_file('sha256', "../../Applications/Background/Log_Background");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_BACKGROUND_FILE_003						= hash_file('sha256', "../../Applications/Background/Log_Member");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_BACKGROUND_FILE_004						= hash_file('sha256', "../../Applications/Background/Log_Visitor");
 
 /*
  ============================================================================================================
@@ -384,21 +392,21 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_BACKGROUND_FILE_004						= hash_fil
  ============================================================================================================
 */
 
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_001					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Applications_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_002					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Clock.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_003					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Language.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_004					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Latest_Articles.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_005					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Latest_Files.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_006					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Latest_Members.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_007					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Latest_Shouts.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_008					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Live_Video.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_009					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Location.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_010					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Media_Player.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_011					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Member_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_012					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Networking.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_013					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Project_Badges.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_014					= hash_file('sha256', "./Applications/Panel/Visibility/Services/RSS_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_015					= hash_file('sha256', "./Applications/Panel/Visibility/Services/Theme.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_001					= hash_file('sha256', "../../Applications/Panel/Visibility/Services/Applications_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_002					= hash_file('sha256', "../../Applications/Panel/Visibility/Services/Clock.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_003					= hash_file('sha256', "../../Applications/Panel/Visibility/Services/Language.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_004					= hash_file('sha256', "../../Applications/Panel/Visibility/Services/Latest_Articles.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_005					= hash_file('sha256', "../../Applications/Panel/Visibility/Services/Latest_Files.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_006					= hash_file('sha256', "../../Applications/Panel/Visibility/Services/Latest_Members.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_007					= hash_file('sha256', "../../Applications/Panel/Visibility/Services/Latest_Shouts.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_008					= hash_file('sha256', "../../Applications/Panel/Visibility/Services/Live_Video.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_009					= hash_file('sha256', "../../Applications/Panel/Visibility/Services/Location.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_010					= hash_file('sha256', "../../Applications/Panel/Visibility/Services/Media_Player.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_011					= hash_file('sha256', "../../Applications/Panel/Visibility/Services/Member_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_012					= hash_file('sha256', "../../Applications/Panel/Visibility/Services/Networking.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_013					= hash_file('sha256', "../../Applications/Panel/Visibility/Services/Project_Badges.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_014					= hash_file('sha256', "../../Applications/Panel/Visibility/Services/RSS_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_015					= hash_file('sha256', "../../Applications/Panel/Visibility/Services/Theme.panel");
 
 /*
  ============================================================================================================
@@ -414,21 +422,21 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_ROOT_SERVICES_FILE_015					= 
  ============================================================================================================
 */
 
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_001					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Applications_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_002					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Clock.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_003					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Language.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_004					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Latest_Articles.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_005					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Latest_Files.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_006					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Latest_Members.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_007					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Latest_Shouts.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_008					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Live_Video.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_009					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Location.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_010					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Media_Player.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_011					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Member_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_012					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Networking.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_013					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Project_Badges.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_014					= hash_file('sha256', "./Applications/Panel/Visibility/Root/RSS_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_015					= hash_file('sha256', "./Applications/Panel/Visibility/Root/Theme.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_001					= hash_file('sha256', "../../Applications/Panel/Visibility/Root/Applications_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_002					= hash_file('sha256', "../../Applications/Panel/Visibility/Root/Clock.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_003					= hash_file('sha256', "../../Applications/Panel/Visibility/Root/Language.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_004					= hash_file('sha256', "../../Applications/Panel/Visibility/Root/Latest_Articles.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_005					= hash_file('sha256', "../../Applications/Panel/Visibility/Root/Latest_Files.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_006					= hash_file('sha256', "../../Applications/Panel/Visibility/Root/Latest_Members.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_007					= hash_file('sha256', "../../Applications/Panel/Visibility/Root/Latest_Shouts.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_008					= hash_file('sha256', "../../Applications/Panel/Visibility/Root/Live_Video.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_009					= hash_file('sha256', "../../Applications/Panel/Visibility/Root/Location.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_010					= hash_file('sha256', "../../Applications/Panel/Visibility/Root/Media_Player.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_011					= hash_file('sha256', "../../Applications/Panel/Visibility/Root/Member_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_012					= hash_file('sha256', "../../Applications/Panel/Visibility/Root/Networking.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_013					= hash_file('sha256', "../../Applications/Panel/Visibility/Root/Project_Badges.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_014					= hash_file('sha256', "../../Applications/Panel/Visibility/Root/RSS_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_015					= hash_file('sha256', "../../Applications/Panel/Visibility/Root/Theme.panel");
 
 /*
  ============================================================================================================
@@ -444,21 +452,21 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ROOT_FILE_015					
  ============================================================================================================
 */
 
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_001				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Applications_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_002				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Clock.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_003				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Language.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_004				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Latest_Articles.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_005				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Latest_Files.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_006				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Latest_Members.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_007				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Latest_Shouts.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_008				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Live_Video.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_009				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Location.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_010				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Media_Player.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_011				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Member_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_012				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Networking.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_013				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Project_Badges.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_014				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/RSS_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_015				= hash_file('sha256', "./Applications/Panel/Visibility/Administration/Theme.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_001				= hash_file('sha256', "../../Applications/Panel/Visibility/Administration/Applications_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_002				= hash_file('sha256', "../../Applications/Panel/Visibility/Administration/Clock.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_003				= hash_file('sha256', "../../Applications/Panel/Visibility/Administration/Language.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_004				= hash_file('sha256', "../../Applications/Panel/Visibility/Administration/Latest_Articles.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_005				= hash_file('sha256', "../../Applications/Panel/Visibility/Administration/Latest_Files.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_006				= hash_file('sha256', "../../Applications/Panel/Visibility/Administration/Latest_Members.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_007				= hash_file('sha256', "../../Applications/Panel/Visibility/Administration/Latest_Shouts.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_008				= hash_file('sha256', "../../Applications/Panel/Visibility/Administration/Live_Video.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_009				= hash_file('sha256', "../../Applications/Panel/Visibility/Administration/Location.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_010				= hash_file('sha256', "../../Applications/Panel/Visibility/Administration/Media_Player.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_011				= hash_file('sha256', "../../Applications/Panel/Visibility/Administration/Member_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_012				= hash_file('sha256', "../../Applications/Panel/Visibility/Administration/Networking.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_013				= hash_file('sha256', "../../Applications/Panel/Visibility/Administration/Project_Badges.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_014				= hash_file('sha256', "../../Applications/Panel/Visibility/Administration/RSS_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FILE_015				= hash_file('sha256', "../../Applications/Panel/Visibility/Administration/Theme.panel");
 
 /*
  ============================================================================================================
@@ -474,21 +482,21 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_ADMINISTRATION_FIL
  ============================================================================================================
 */
 
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_001					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Applications_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_002					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Clock.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_003					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Language.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_004					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Latest_Articles.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_005					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Latest_Files.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_006					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Latest_Members.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_007					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Latest_Shouts.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_008					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Live_Video.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_009					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Location.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_010					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Media_Player.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_011					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Member_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_012					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Networking.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_013					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Project_Badges.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_014					= hash_file('sha256', "./Applications/Panel/Visibility/Background/RSS_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_015					= hash_file('sha256', "./Applications/Panel/Visibility/Background/Theme.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_001					= hash_file('sha256', "../../Applications/Panel/Visibility/Background/Applications_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_002					= hash_file('sha256', "../../Applications/Panel/Visibility/Background/Clock.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_003					= hash_file('sha256', "../../Applications/Panel/Visibility/Background/Language.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_004					= hash_file('sha256', "../../Applications/Panel/Visibility/Background/Latest_Articles.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_005					= hash_file('sha256', "../../Applications/Panel/Visibility/Background/Latest_Files.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_006					= hash_file('sha256', "../../Applications/Panel/Visibility/Background/Latest_Members.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_007					= hash_file('sha256', "../../Applications/Panel/Visibility/Background/Latest_Shouts.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_008					= hash_file('sha256', "../../Applications/Panel/Visibility/Background/Live_Video.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_009					= hash_file('sha256', "../../Applications/Panel/Visibility/Background/Location.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_010					= hash_file('sha256', "../../Applications/Panel/Visibility/Background/Media_Player.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_011					= hash_file('sha256', "../../Applications/Panel/Visibility/Background/Member_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_012					= hash_file('sha256', "../../Applications/Panel/Visibility/Background/Networking.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_013					= hash_file('sha256', "../../Applications/Panel/Visibility/Background/Project_Badges.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_014					= hash_file('sha256', "../../Applications/Panel/Visibility/Background/RSS_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_015					= hash_file('sha256', "../../Applications/Panel/Visibility/Background/Theme.panel");
 
 /*
  ============================================================================================================
@@ -504,21 +512,21 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_BACKGROUND_015				
  ============================================================================================================
 */
 
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_001					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Applications_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_002					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Clock.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_003					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Language.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_004					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Latest_Articles.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_005					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Latest_Files.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_006					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Latest_Members.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_007					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Latest_Shouts.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_008					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Live_Video.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_009					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Location.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_010					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Media_Player.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_011					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Member_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_012					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Networking.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_013					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Project_Badges.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_014					= hash_file('sha256', "./Applications/Panel/Visibility/Member/RSS_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_015					= hash_file('sha256', "./Applications/Panel/Visibility/Member/Theme.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_001					= hash_file('sha256', "../../Applications/Panel/Visibility/Member/Applications_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_002					= hash_file('sha256', "../../Applications/Panel/Visibility/Member/Clock.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_003					= hash_file('sha256', "../../Applications/Panel/Visibility/Member/Language.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_004					= hash_file('sha256', "../../Applications/Panel/Visibility/Member/Latest_Articles.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_005					= hash_file('sha256', "../../Applications/Panel/Visibility/Member/Latest_Files.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_006					= hash_file('sha256', "../../Applications/Panel/Visibility/Member/Latest_Members.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_007					= hash_file('sha256', "../../Applications/Panel/Visibility/Member/Latest_Shouts.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_008					= hash_file('sha256', "../../Applications/Panel/Visibility/Member/Live_Video.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_009					= hash_file('sha256', "../../Applications/Panel/Visibility/Member/Location.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_010					= hash_file('sha256', "../../Applications/Panel/Visibility/Member/Media_Player.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_011					= hash_file('sha256', "../../Applications/Panel/Visibility/Member/Member_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_012					= hash_file('sha256', "../../Applications/Panel/Visibility/Member/Networking.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_013					= hash_file('sha256', "../../Applications/Panel/Visibility/Member/Project_Badges.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_014					= hash_file('sha256', "../../Applications/Panel/Visibility/Member/RSS_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_015					= hash_file('sha256', "../../Applications/Panel/Visibility/Member/Theme.panel");
 
 /*
  ============================================================================================================
@@ -534,21 +542,21 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MEMBER_015					= h
  ============================================================================================================
 */
 
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_001					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Applications_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_002					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Clock.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_003					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Language.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_004					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Latest_Articles.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_005					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Latest_Files.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_006					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Latest_Members.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_007					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Latest_Shouts.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_008					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Live_Video.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_009					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Location.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_010					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Media_Player.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_011					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Member_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_012					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Networking.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_013					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Project_Badges.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_014					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/RSS_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_015					= hash_file('sha256', "./Applications/Panel/Visibility/Moderator/Theme.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_001					= hash_file('sha256', "../../Applications/Panel/Visibility/Moderator/Applications_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_002					= hash_file('sha256', "../../Applications/Panel/Visibility/Moderator/Clock.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_003					= hash_file('sha256', "../../Applications/Panel/Visibility/Moderator/Language.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_004					= hash_file('sha256', "../../Applications/Panel/Visibility/Moderator/Latest_Articles.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_005					= hash_file('sha256', "../../Applications/Panel/Visibility/Moderator/Latest_Files.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_006					= hash_file('sha256', "../../Applications/Panel/Visibility/Moderator/Latest_Members.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_007					= hash_file('sha256', "../../Applications/Panel/Visibility/Moderator/Latest_Shouts.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_008					= hash_file('sha256', "../../Applications/Panel/Visibility/Moderator/Live_Video.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_009					= hash_file('sha256', "../../Applications/Panel/Visibility/Moderator/Location.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_010					= hash_file('sha256', "../../Applications/Panel/Visibility/Moderator/Media_Player.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_011					= hash_file('sha256', "../../Applications/Panel/Visibility/Moderator/Member_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_012					= hash_file('sha256', "../../Applications/Panel/Visibility/Moderator/Networking.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_013					= hash_file('sha256', "../../Applications/Panel/Visibility/Moderator/Project_Badges.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_014					= hash_file('sha256', "../../Applications/Panel/Visibility/Moderator/RSS_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_015					= hash_file('sha256', "../../Applications/Panel/Visibility/Moderator/Theme.panel");
 
 /*
  ============================================================================================================
@@ -564,21 +572,21 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_MODERATOR_015					
  ============================================================================================================
 */
 
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_001					= hash_file('sha256', "./Applications/Panel/Visibility/Public/Applications_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_002					= hash_file('sha256', "./Applications/Panel/Visibility/Public/Clock.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_003					= hash_file('sha256', "./Applications/Panel/Visibility/Public/Language.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_004					= hash_file('sha256', "./Applications/Panel/Visibility/Public/Latest_Articles.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_005					= hash_file('sha256', "./Applications/Panel/Visibility/Public/Latest_Files.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_006					= hash_file('sha256', "./Applications/Panel/Visibility/Public/Latest_Members.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_007					= hash_file('sha256', "./Applications/Panel/Visibility/Public/Latest_Shouts.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_008					= hash_file('sha256', "./Applications/Panel/Visibility/Public/Live_Video.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_009					= hash_file('sha256', "./Applications/Panel/Visibility/Public/Location.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_010					= hash_file('sha256', "./Applications/Panel/Visibility/Public/Media_Player.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_011					= hash_file('sha256', "./Applications/Panel/Visibility/Public/Member_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_012					= hash_file('sha256', "./Applications/Panel/Visibility/Public/Networking.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_013					= hash_file('sha256', "./Applications/Panel/Visibility/Public/Project_Badges.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_014					= hash_file('sha256', "./Applications/Panel/Visibility/Public/RSS_Panel.panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_015					= hash_file('sha256', "./Applications/Panel/Visibility/Public/Theme.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_001					= hash_file('sha256', "../../Applications/Panel/Visibility/Public/Applications_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_002					= hash_file('sha256', "../../Applications/Panel/Visibility/Public/Clock.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_003					= hash_file('sha256', "../../Applications/Panel/Visibility/Public/Language.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_004					= hash_file('sha256', "../../Applications/Panel/Visibility/Public/Latest_Articles.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_005					= hash_file('sha256', "../../Applications/Panel/Visibility/Public/Latest_Files.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_006					= hash_file('sha256', "../../Applications/Panel/Visibility/Public/Latest_Members.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_007					= hash_file('sha256', "../../Applications/Panel/Visibility/Public/Latest_Shouts.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_008					= hash_file('sha256', "../../Applications/Panel/Visibility/Public/Live_Video.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_009					= hash_file('sha256', "../../Applications/Panel/Visibility/Public/Location.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_010					= hash_file('sha256', "../../Applications/Panel/Visibility/Public/Media_Player.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_011					= hash_file('sha256', "../../Applications/Panel/Visibility/Public/Member_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_012					= hash_file('sha256', "../../Applications/Panel/Visibility/Public/Networking.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_013					= hash_file('sha256', "../../Applications/Panel/Visibility/Public/Project_Badges.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_014					= hash_file('sha256', "../../Applications/Panel/Visibility/Public/RSS_Panel.panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_015					= hash_file('sha256', "../../Applications/Panel/Visibility/Public/Theme.panel");
 
 /*
  ============================================================================================================
@@ -594,13 +602,13 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_PANEL_VISIBILITY_PUBLIC_FILE_015			
  ============================================================================================================
 */
 
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_SERVICES_ROOT_FILE_001			= hash_file('sha256', "./Applications/Services/Commander");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_SERVICES_ROOT_FILE_002			= hash_file('sha256', "./Applications/Services/Control_Panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_SERVICES_ROOT_FILE_003			= hash_file('sha256', "./Applications/Services/Integrity");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_SERVICES_ROOT_FILE_004			= hash_file('sha256', "./Applications/Services/Kernel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_SERVICES_ROOT_FILE_005			= hash_file('sha256', "./Applications/Services/Loops");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_SERVICES_ROOT_FILE_006			= hash_file('sha256', "./Applications/Services/Services");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_SERVICES_ROOT_FILE_007			= hash_file('sha256', "./Applications/Services/Tasks");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_SERVICES_ROOT_FILE_001			= hash_file('sha256', "../../Applications/Services/Commander");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_SERVICES_ROOT_FILE_002			= hash_file('sha256', "../../Applications/Services/Control_Panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_SERVICES_ROOT_FILE_003			= hash_file('sha256', "../../Applications/Services/Integrity");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_SERVICES_ROOT_FILE_004			= hash_file('sha256', "../../Applications/Services/Kernel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_SERVICES_ROOT_FILE_005			= hash_file('sha256', "../../Applications/Services/Loops");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_SERVICES_ROOT_FILE_006			= hash_file('sha256', "../../Applications/Services/Services");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_SERVICES_ROOT_FILE_007			= hash_file('sha256', "../../Applications/Services/Tasks");
 
 /*
  ============================================================================================================
@@ -616,7 +624,7 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_SERVICES_
  ============================================================================================================
 */
 
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ROOT_FILE_001				= hash_file('sha256', "./Applications/Root/Tasks");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ROOT_FILE_001				= hash_file('sha256', "../../Applications/Root/Tasks");
 
 /*
  ============================================================================================================
@@ -632,29 +640,29 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ROOT_FILE
  ============================================================================================================
 */
 
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_001			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Accounts");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_002			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Applications");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_003			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Archive");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_004			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Control_Panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_005			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Emulators");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_006			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/File_Categories");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_007			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Forum");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_008			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/GIT");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_009			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Messenger");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_010			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Networking");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_011			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Panels");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_012			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/PHP_Information.php");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_013			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/PlugIns");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_014			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Publish");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_015			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Ranks");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_016			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Referrers");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_017			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Robot_Monitor");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_018			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Settings");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_019			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Submissions");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_020			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Terminal");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_021			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Themes");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_022			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Update");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_023			= hash_file('sha256', "./Applications/Administration/Visibility/Administration/Web_Pages");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_001			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Accounts");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_002			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Applications");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_003			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Archive");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_004			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Control_Panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_005			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Emulators");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_006			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/File_Categories");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_007			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Forum");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_008			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/GIT");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_009			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Messenger");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_010			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Networking");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_011			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Panels");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_012			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/PHP_Information.php");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_013			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/PlugIns");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_014			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Publish");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_015			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Ranks");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_016			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Referrers");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_017			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Robot_Monitor");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_018			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Settings");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_019			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Submissions");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_020			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Terminal");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_021			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Themes");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_022			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Update");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTRATION_FILE_023			= hash_file('sha256', "../../Applications/Administration/Visibility/Administration/Web_Pages");
 
 /*
  ============================================================================================================
@@ -670,57 +678,57 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_ADMINISTRATION_VISIBILITY_ADMINISTR
  ============================================================================================================
 */
 
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_001					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Account_Data");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_002					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Account_Recovery");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_003					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Active_Members");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_004					= hash_file('sha256', "./Applications/Member/Visibility/Administration/All_News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_005					= hash_file('sha256', "./Applications/Member/Visibility/Administration/All_Shouts");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_006					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Application_List");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_007					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Articles");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_008					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Calculator");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_009					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Calendar");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_010					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Clock");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_011					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Comment");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_012					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Contact_Administrator");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_013					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Contacts");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_014					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Control_Panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_015					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Devices");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_016					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Documentation");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_017					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Download");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_018					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Electronic_Mail");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_019					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Emulators");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_020					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Files");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_021					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Forum");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_022					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Forward");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_023					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Friend");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_024					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Language");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_025					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Legal");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_026					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Lightning_Calculate");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_027					= hash_file('sha256', "./Applications/Member/Visibility/Administration/List");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_028					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Login");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_029					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Market");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_030					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Media_Player");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_031					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Member_Directory");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_032					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Messenger");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_033					= hash_file('sha256', "./Applications/Member/Visibility/Administration/News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_034					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Notepad");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_035					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Pages");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_036					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Profile");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_037					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Recommendations");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_038					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Referrers");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_039					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Register");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_040					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Reset_Password");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_041					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Search");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_042					= hash_file('sha256', "./Applications/Member/Visibility/Administration/System");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_043					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Submit_News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_044					= hash_file('sha256', "./Applications/Member/Visibility/Administration/System_Message");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_045					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Theme");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_046					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Travel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_047					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Update_Account");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_048					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Update_Password");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_049					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Upload");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_050					= hash_file('sha256', "./Applications/Member/Visibility/Administration/VoIP");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_051					= hash_file('sha256', "./Applications/Member/Visibility/Administration/Webspace");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_001					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Account_Data");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_002					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Account_Recovery");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_003					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Active_Members");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_004					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/All_News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_005					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/All_Shouts");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_006					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Application_List");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_007					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Articles");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_008					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Calculator");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_009					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Calendar");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_010					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Clock");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_011					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Comment");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_012					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Contact_Administrator");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_013					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Contacts");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_014					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Control_Panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_015					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Devices");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_016					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Documentation");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_017					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Download");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_018					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Electronic_Mail");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_019					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Emulators");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_020					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Files");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_021					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Forum");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_022					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Forward");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_023					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Friend");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_024					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Language");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_025					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Legal");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_026					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Lightning_Calculate");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_027					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/List");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_028					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Login");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_029					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Market");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_030					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Media_Player");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_031					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Member_Directory");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_032					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Messenger");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_033					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_034					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Notepad");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_035					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Pages");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_036					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Profile");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_037					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Recommendations");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_038					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Referrers");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_039					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Register");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_040					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Reset_Password");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_041					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Search");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_042					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/System");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_043					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Submit_News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_044					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/System_Message");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_045					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Theme");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_046					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Travel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_047					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Update_Account");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_048					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Update_Password");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_049					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Upload");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_050					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/VoIP");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FILE_051					= hash_file('sha256', "../../Applications/Member/Visibility/Administration/Webspace");
 
 /*
  ============================================================================================================
@@ -728,57 +736,57 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ADMINISTRATION_FI
  ============================================================================================================
 */
 
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_001					= hash_file('sha256', "./Applications/Member/Visibility/Member/Account_Data");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_002					= hash_file('sha256', "./Applications/Member/Visibility/Member/Account_Recovery");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_003					= hash_file('sha256', "./Applications/Member/Visibility/Member/Active_Members");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_004					= hash_file('sha256', "./Applications/Member/Visibility/Member/All_News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_005					= hash_file('sha256', "./Applications/Member/Visibility/Member/All_Shouts");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_006					= hash_file('sha256', "./Applications/Member/Visibility/Member/Application_List");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_007					= hash_file('sha256', "./Applications/Member/Visibility/Member/Articles");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_008					= hash_file('sha256', "./Applications/Member/Visibility/Member/Calculator");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_009					= hash_file('sha256', "./Applications/Member/Visibility/Member/Calendar");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_010					= hash_file('sha256', "./Applications/Member/Visibility/Member/Clock");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_011					= hash_file('sha256', "./Applications/Member/Visibility/Member/Comment");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_012					= hash_file('sha256', "./Applications/Member/Visibility/Member/Contact_Administrator");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_013					= hash_file('sha256', "./Applications/Member/Visibility/Member/Contacts");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_014					= hash_file('sha256', "./Applications/Member/Visibility/Member/Control_Panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_015					= hash_file('sha256', "./Applications/Member/Visibility/Member/Devices");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_016					= hash_file('sha256', "./Applications/Member/Visibility/Member/Documentation");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_017					= hash_file('sha256', "./Applications/Member/Visibility/Member/Download");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_018					= hash_file('sha256', "./Applications/Member/Visibility/Member/Electronic_Mail");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_019					= hash_file('sha256', "./Applications/Member/Visibility/Member/Emulators");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_020					= hash_file('sha256', "./Applications/Member/Visibility/Member/Files");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_021					= hash_file('sha256', "./Applications/Member/Visibility/Member/Forum");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_022					= hash_file('sha256', "./Applications/Member/Visibility/Member/Forward");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_023					= hash_file('sha256', "./Applications/Member/Visibility/Member/Friend");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_024					= hash_file('sha256', "./Applications/Member/Visibility/Member/Language");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_025					= hash_file('sha256', "./Applications/Member/Visibility/Member/Legal");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_026					= hash_file('sha256', "./Applications/Member/Visibility/Member/Lightning_Calculate");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_027					= hash_file('sha256', "./Applications/Member/Visibility/Member/List");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_028					= hash_file('sha256', "./Applications/Member/Visibility/Member/Login");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_029					= hash_file('sha256', "./Applications/Member/Visibility/Member/Market");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_030					= hash_file('sha256', "./Applications/Member/Visibility/Member/Media_Player");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_031					= hash_file('sha256', "./Applications/Member/Visibility/Member/Member_Directory");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_032					= hash_file('sha256', "./Applications/Member/Visibility/Member/Messenger");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_033					= hash_file('sha256', "./Applications/Member/Visibility/Member/News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_034					= hash_file('sha256', "./Applications/Member/Visibility/Member/Notepad");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_035					= hash_file('sha256', "./Applications/Member/Visibility/Member/Pages");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_036					= hash_file('sha256', "./Applications/Member/Visibility/Member/Profile");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_037					= hash_file('sha256', "./Applications/Member/Visibility/Member/Recommendations");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_038					= hash_file('sha256', "./Applications/Member/Visibility/Member/Referrers");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_039					= hash_file('sha256', "./Applications/Member/Visibility/Member/Register");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_040					= hash_file('sha256', "./Applications/Member/Visibility/Member/Reset_Password");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_041					= hash_file('sha256', "./Applications/Member/Visibility/Member/Search");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_042					= hash_file('sha256', "./Applications/Member/Visibility/Member/System");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_043					= hash_file('sha256', "./Applications/Member/Visibility/Member/Submit_News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_044					= hash_file('sha256', "./Applications/Member/Visibility/Member/System_Message");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_045					= hash_file('sha256', "./Applications/Member/Visibility/Member/Theme");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_046					= hash_file('sha256', "./Applications/Member/Visibility/Member/Travel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_047					= hash_file('sha256', "./Applications/Member/Visibility/Member/Update_Account");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_048					= hash_file('sha256', "./Applications/Member/Visibility/Member/Update_Password");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_049					= hash_file('sha256', "./Applications/Member/Visibility/Member/Upload");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_050					= hash_file('sha256', "./Applications/Member/Visibility/Member/VoIP");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_051					= hash_file('sha256', "./Applications/Member/Visibility/Member/Webspace");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_001					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Account_Data");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_002					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Account_Recovery");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_003					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Active_Members");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_004					= hash_file('sha256', "../../Applications/Member/Visibility/Member/All_News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_005					= hash_file('sha256', "../../Applications/Member/Visibility/Member/All_Shouts");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_006					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Application_List");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_007					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Articles");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_008					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Calculator");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_009					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Calendar");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_010					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Clock");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_011					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Comment");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_012					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Contact_Administrator");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_013					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Contacts");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_014					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Control_Panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_015					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Devices");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_016					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Documentation");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_017					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Download");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_018					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Electronic_Mail");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_019					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Emulators");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_020					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Files");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_021					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Forum");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_022					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Forward");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_023					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Friend");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_024					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Language");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_025					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Legal");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_026					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Lightning_Calculate");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_027					= hash_file('sha256', "../../Applications/Member/Visibility/Member/List");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_028					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Login");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_029					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Market");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_030					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Media_Player");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_031					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Member_Directory");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_032					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Messenger");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_033					= hash_file('sha256', "../../Applications/Member/Visibility/Member/News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_034					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Notepad");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_035					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Pages");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_036					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Profile");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_037					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Recommendations");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_038					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Referrers");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_039					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Register");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_040					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Reset_Password");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_041					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Search");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_042					= hash_file('sha256', "../../Applications/Member/Visibility/Member/System");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_043					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Submit_News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_044					= hash_file('sha256', "../../Applications/Member/Visibility/Member/System_Message");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_045					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Theme");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_046					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Travel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_047					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Update_Account");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_048					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Update_Password");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_049					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Upload");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_050					= hash_file('sha256', "../../Applications/Member/Visibility/Member/VoIP");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_051					= hash_file('sha256', "../../Applications/Member/Visibility/Member/Webspace");
 
 /*
  ============================================================================================================
@@ -786,57 +794,57 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MEMBER_FILE_051		
  ============================================================================================================
 */
 
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_001					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Account_Data");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_002					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Account_Recovery");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_003					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Active_Members");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_004					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/All_News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_005					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/All_Shouts");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_006					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Application_List");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_007					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Articles");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_008					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Calculator");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_009					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Calendar");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_010					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Clock");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_011					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Comment");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_012					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Contact_Administrator");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_013					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Contacts");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_014					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Control_Panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_015					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Devices");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_016					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Documentation");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_017					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Download");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_018					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Electronic_Mail");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_019					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Emulators");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_020					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Files");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_021					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Forum");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_022					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Forward");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_023					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Friend");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_024					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Language");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_025					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Legal");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_026					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Lightning_Calculate");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_027					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/List");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_028					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Login");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_029					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Market");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_030					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Media_Player");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_031					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Member_Directory");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_032					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Messenger");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_033					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_034					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Notepad");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_035					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Pages");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_036					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Profile");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_037					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Recommendations");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_038					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Referrers");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_039					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Register");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_040					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Reset_Password");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_041					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Search");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_042					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/System");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_043					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Submit_News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_044					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/System_Message");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_045					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Theme");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_046					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Travel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_047					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Update_Account");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_048					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Update_Password");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_049					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Upload");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_050					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/VoIP");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_051					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Webspace");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_001					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Account_Data");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_002					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Account_Recovery");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_003					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Active_Members");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_004					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/All_News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_005					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/All_Shouts");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_006					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Application_List");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_007					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Articles");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_008					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Calculator");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_009					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Calendar");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_010					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Clock");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_011					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Comment");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_012					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Contact_Administrator");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_013					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Contacts");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_014					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Control_Panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_015					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Devices");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_016					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Documentation");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_017					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Download");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_018					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Electronic_Mail");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_019					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Emulators");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_020					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Files");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_021					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Forum");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_022					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Forward");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_023					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Friend");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_024					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Language");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_025					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Legal");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_026					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Lightning_Calculate");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_027					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/List");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_028					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Login");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_029					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Market");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_030					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Media_Player");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_031					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Member_Directory");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_032					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Messenger");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_033					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_034					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Notepad");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_035					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Pages");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_036					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Profile");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_037					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Recommendations");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_038					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Referrers");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_039					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Register");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_040					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Reset_Password");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_041					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Search");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_042					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/System");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_043					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Submit_News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_044					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/System_Message");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_045					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Theme");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_046					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Travel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_047					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Update_Account");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_048					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Update_Password");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_049					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Upload");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_050					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/VoIP");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_051					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Webspace");
 
 /*
  ============================================================================================================
@@ -844,57 +852,57 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_MODERATOR_FILE_05
  ============================================================================================================
 */
 
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_001					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Account_Data");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_002					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Account_Recovery");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_003					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Active_Members");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_004					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/All_News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_005					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/All_Shouts");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_006					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Application_List");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_007					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Articles");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_008					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Calculator");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_009					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Calendar");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_010					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Clock");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_011					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Comment");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_012					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Contact_Administrator");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_013					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Contacts");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_014					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Control_Panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_015					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Devices");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_016					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Documentation");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_017					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Download");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_018					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Electronic_Mail");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_019					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Emulators");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_020					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Files");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_021					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Forum");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_022					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Forward");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_023					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Friend");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_024					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Language");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_025					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Legal");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_026					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Lightning_Calculate");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_027					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/List");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_028					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Login");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_029					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Market");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_030					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Media_Player");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_031					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Member_Directory");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_032					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Messenger");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_033					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_034					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Notepad");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_035					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Pages");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_036					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Profile");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_037					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Recommendations");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_038					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Referrers");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_039					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Register");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_040					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Reset_Password");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_041					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Search");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_042					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/System");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_043					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Submit_News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_044					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/System_Message");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_045					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Theme");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_046					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Travel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_047					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Update_Account");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_048					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Update_Password");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_049					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Upload");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_050					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/VoIP");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_051					= hash_file('sha256', "./Applications/Member/Visibility/Moderator/Webspace");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_001					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Account_Data");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_002					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Account_Recovery");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_003					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Active_Members");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_004					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/All_News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_005					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/All_Shouts");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_006					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Application_List");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_007					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Articles");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_008					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Calculator");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_009					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Calendar");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_010					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Clock");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_011					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Comment");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_012					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Contact_Administrator");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_013					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Contacts");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_014					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Control_Panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_015					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Devices");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_016					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Documentation");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_017					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Download");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_018					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Electronic_Mail");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_019					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Emulators");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_020					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Files");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_021					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Forum");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_022					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Forward");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_023					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Friend");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_024					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Language");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_025					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Legal");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_026					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Lightning_Calculate");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_027					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/List");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_028					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Login");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_029					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Market");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_030					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Media_Player");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_031					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Member_Directory");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_032					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Messenger");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_033					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_034					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Notepad");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_035					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Pages");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_036					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Profile");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_037					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Recommendations");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_038					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Referrers");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_039					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Register");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_040					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Reset_Password");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_041					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Search");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_042					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/System");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_043					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Submit_News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_044					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/System_Message");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_045					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Theme");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_046					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Travel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_047					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Update_Account");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_048					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Update_Password");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_049					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Upload");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_050					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/VoIP");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_051					= hash_file('sha256', "../../Applications/Member/Visibility/Moderator/Webspace");
 
 /*
  ============================================================================================================
@@ -902,57 +910,57 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_051		
  ============================================================================================================
 */
 
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_001					= hash_file('sha256', "./Applications/Member/Visibility/Public/Account_Data");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_002					= hash_file('sha256', "./Applications/Member/Visibility/Public/Account_Recovery");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_003					= hash_file('sha256', "./Applications/Member/Visibility/Public/Active_Members");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_004					= hash_file('sha256', "./Applications/Member/Visibility/Public/All_News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_005					= hash_file('sha256', "./Applications/Member/Visibility/Public/All_Shouts");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_006					= hash_file('sha256', "./Applications/Member/Visibility/Public/Application_List");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_007					= hash_file('sha256', "./Applications/Member/Visibility/Public/Articles");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_008					= hash_file('sha256', "./Applications/Member/Visibility/Public/Calculator");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_009					= hash_file('sha256', "./Applications/Member/Visibility/Public/Calendar");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_010					= hash_file('sha256', "./Applications/Member/Visibility/Public/Clock");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_011					= hash_file('sha256', "./Applications/Member/Visibility/Public/Comment");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_012					= hash_file('sha256', "./Applications/Member/Visibility/Public/Contact_Administrator");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_013					= hash_file('sha256', "./Applications/Member/Visibility/Public/Contacts");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_014					= hash_file('sha256', "./Applications/Member/Visibility/Public/Control_Panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_015					= hash_file('sha256', "./Applications/Member/Visibility/Public/Devices");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_016					= hash_file('sha256', "./Applications/Member/Visibility/Public/Documentation");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_017					= hash_file('sha256', "./Applications/Member/Visibility/Public/Download");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_018					= hash_file('sha256', "./Applications/Member/Visibility/Public/Electronic_Mail");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_019					= hash_file('sha256', "./Applications/Member/Visibility/Public/Emulators");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_020					= hash_file('sha256', "./Applications/Member/Visibility/Public/Files");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_021					= hash_file('sha256', "./Applications/Member/Visibility/Public/Forum");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_022					= hash_file('sha256', "./Applications/Member/Visibility/Public/Forward");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_023					= hash_file('sha256', "./Applications/Member/Visibility/Public/Friend");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_024					= hash_file('sha256', "./Applications/Member/Visibility/Public/Language");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_025					= hash_file('sha256', "./Applications/Member/Visibility/Public/Legal");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_026					= hash_file('sha256', "./Applications/Member/Visibility/Public/Lightning_Calculate");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_027					= hash_file('sha256', "./Applications/Member/Visibility/Public/List");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_028					= hash_file('sha256', "./Applications/Member/Visibility/Public/Login");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_029					= hash_file('sha256', "./Applications/Member/Visibility/Public/Market");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_030					= hash_file('sha256', "./Applications/Member/Visibility/Public/Media_Player");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_031					= hash_file('sha256', "./Applications/Member/Visibility/Public/Member_Directory");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_032					= hash_file('sha256', "./Applications/Member/Visibility/Public/Messenger");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_033					= hash_file('sha256', "./Applications/Member/Visibility/Public/News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_034					= hash_file('sha256', "./Applications/Member/Visibility/Public/Notepad");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_035					= hash_file('sha256', "./Applications/Member/Visibility/Public/Pages");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_036					= hash_file('sha256', "./Applications/Member/Visibility/Public/Profile");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_037					= hash_file('sha256', "./Applications/Member/Visibility/Public/Recommendations");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_038					= hash_file('sha256', "./Applications/Member/Visibility/Public/Referrers");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_039					= hash_file('sha256', "./Applications/Member/Visibility/Public/Register");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_040					= hash_file('sha256', "./Applications/Member/Visibility/Public/Reset_Password");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_041					= hash_file('sha256', "./Applications/Member/Visibility/Public/Search");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_042					= hash_file('sha256', "./Applications/Member/Visibility/Public/System");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_043					= hash_file('sha256', "./Applications/Member/Visibility/Public/Submit_News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_044					= hash_file('sha256', "./Applications/Member/Visibility/Public/System_Message");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_045					= hash_file('sha256', "./Applications/Member/Visibility/Public/Theme");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_046					= hash_file('sha256', "./Applications/Member/Visibility/Public/Travel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_047					= hash_file('sha256', "./Applications/Member/Visibility/Public/Update_Account");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_048					= hash_file('sha256', "./Applications/Member/Visibility/Public/Update_Password");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_049					= hash_file('sha256', "./Applications/Member/Visibility/Public/Upload");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_050					= hash_file('sha256', "./Applications/Member/Visibility/Public/VoIP");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_051					= hash_file('sha256', "./Applications/Member/Visibility/Public/Webspace");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_001					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Account_Data");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_002					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Account_Recovery");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_003					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Active_Members");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_004					= hash_file('sha256', "../../Applications/Member/Visibility/Public/All_News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_005					= hash_file('sha256', "../../Applications/Member/Visibility/Public/All_Shouts");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_006					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Application_List");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_007					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Articles");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_008					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Calculator");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_009					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Calendar");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_010					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Clock");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_011					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Comment");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_012					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Contact_Administrator");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_013					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Contacts");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_014					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Control_Panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_015					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Devices");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_016					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Documentation");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_017					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Download");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_018					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Electronic_Mail");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_019					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Emulators");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_020					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Files");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_021					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Forum");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_022					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Forward");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_023					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Friend");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_024					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Language");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_025					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Legal");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_026					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Lightning_Calculate");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_027					= hash_file('sha256', "../../Applications/Member/Visibility/Public/List");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_028					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Login");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_029					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Market");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_030					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Media_Player");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_031					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Member_Directory");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_032					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Messenger");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_033					= hash_file('sha256', "../../Applications/Member/Visibility/Public/News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_034					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Notepad");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_035					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Pages");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_036					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Profile");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_037					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Recommendations");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_038					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Referrers");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_039					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Register");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_040					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Reset_Password");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_041					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Search");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_042					= hash_file('sha256', "../../Applications/Member/Visibility/Public/System");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_043					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Submit_News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_044					= hash_file('sha256', "../../Applications/Member/Visibility/Public/System_Message");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_045					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Theme");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_046					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Travel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_047					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Update_Account");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_048					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Update_Password");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_049					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Upload");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_050					= hash_file('sha256', "../../Applications/Member/Visibility/Public/VoIP");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_051					= hash_file('sha256', "../../Applications/Member/Visibility/Public/Webspace");
 
 /*
  ============================================================================================================
@@ -960,57 +968,57 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_PUBLIC_FILE_051		
  ============================================================================================================
 */
 
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_001					= hash_file('sha256', "./Applications/Member/Visibility/Root/Account_Data");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_002					= hash_file('sha256', "./Applications/Member/Visibility/Root/Account_Recovery");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_003					= hash_file('sha256', "./Applications/Member/Visibility/Root/Active_Members");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_004					= hash_file('sha256', "./Applications/Member/Visibility/Root/All_News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_005					= hash_file('sha256', "./Applications/Member/Visibility/Root/All_Shouts");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_006					= hash_file('sha256', "./Applications/Member/Visibility/Root/Application_List");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_007					= hash_file('sha256', "./Applications/Member/Visibility/Root/Articles");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_008					= hash_file('sha256', "./Applications/Member/Visibility/Root/Calculator");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_009					= hash_file('sha256', "./Applications/Member/Visibility/Root/Calendar");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_010					= hash_file('sha256', "./Applications/Member/Visibility/Root/Clock");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_011					= hash_file('sha256', "./Applications/Member/Visibility/Root/Comment");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_012					= hash_file('sha256', "./Applications/Member/Visibility/Root/Contact_Administrator");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_013					= hash_file('sha256', "./Applications/Member/Visibility/Root/Contacts");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_014					= hash_file('sha256', "./Applications/Member/Visibility/Root/Control_Panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_015					= hash_file('sha256', "./Applications/Member/Visibility/Root/Devices");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_016					= hash_file('sha256', "./Applications/Member/Visibility/Root/Documentation");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_017					= hash_file('sha256', "./Applications/Member/Visibility/Root/Download");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_018					= hash_file('sha256', "./Applications/Member/Visibility/Root/Electronic_Mail");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_019					= hash_file('sha256', "./Applications/Member/Visibility/Root/Emulators");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_020					= hash_file('sha256', "./Applications/Member/Visibility/Root/Files");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_021					= hash_file('sha256', "./Applications/Member/Visibility/Root/Forum");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_022					= hash_file('sha256', "./Applications/Member/Visibility/Root/Forward");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_023					= hash_file('sha256', "./Applications/Member/Visibility/Root/Friend");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_024					= hash_file('sha256', "./Applications/Member/Visibility/Root/Language");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_025					= hash_file('sha256', "./Applications/Member/Visibility/Root/Legal");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_026					= hash_file('sha256', "./Applications/Member/Visibility/Root/Lightning_Calculate");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_027					= hash_file('sha256', "./Applications/Member/Visibility/Root/List");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_028					= hash_file('sha256', "./Applications/Member/Visibility/Root/Login");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_029					= hash_file('sha256', "./Applications/Member/Visibility/Root/Market");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_030					= hash_file('sha256', "./Applications/Member/Visibility/Root/Media_Player");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_031					= hash_file('sha256', "./Applications/Member/Visibility/Root/Member_Directory");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_032					= hash_file('sha256', "./Applications/Member/Visibility/Root/Messenger");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_033					= hash_file('sha256', "./Applications/Member/Visibility/Root/News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_034					= hash_file('sha256', "./Applications/Member/Visibility/Root/Notepad");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_035					= hash_file('sha256', "./Applications/Member/Visibility/Root/Pages");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_036					= hash_file('sha256', "./Applications/Member/Visibility/Root/Profile");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_037					= hash_file('sha256', "./Applications/Member/Visibility/Root/Recommendations");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_038					= hash_file('sha256', "./Applications/Member/Visibility/Root/Referrers");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_039					= hash_file('sha256', "./Applications/Member/Visibility/Root/Register");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_040					= hash_file('sha256', "./Applications/Member/Visibility/Root/Reset_Password");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_041					= hash_file('sha256', "./Applications/Member/Visibility/Root/Search");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_042					= hash_file('sha256', "./Applications/Member/Visibility/Root/System");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_043					= hash_file('sha256', "./Applications/Member/Visibility/Root/Submit_News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_044					= hash_file('sha256', "./Applications/Member/Visibility/Root/System_Message");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_045					= hash_file('sha256', "./Applications/Member/Visibility/Root/Theme");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_046					= hash_file('sha256', "./Applications/Member/Visibility/Root/Travel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_047					= hash_file('sha256', "./Applications/Member/Visibility/Root/Update_Account");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_048					= hash_file('sha256', "./Applications/Member/Visibility/Root/Update_Password");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_049					= hash_file('sha256', "./Applications/Member/Visibility/Root/Upload");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_050					= hash_file('sha256', "./Applications/Member/Visibility/Root/VoIP");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_051					= hash_file('sha256', "./Applications/Member/Visibility/Root/Webspace");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_001					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Account_Data");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_002					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Account_Recovery");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_003					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Active_Members");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_004					= hash_file('sha256', "../../Applications/Member/Visibility/Root/All_News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_005					= hash_file('sha256', "../../Applications/Member/Visibility/Root/All_Shouts");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_006					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Application_List");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_007					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Articles");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_008					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Calculator");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_009					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Calendar");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_010					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Clock");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_011					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Comment");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_012					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Contact_Administrator");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_013					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Contacts");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_014					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Control_Panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_015					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Devices");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_016					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Documentation");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_017					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Download");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_018					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Electronic_Mail");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_019					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Emulators");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_020					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Files");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_021					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Forum");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_022					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Forward");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_023					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Friend");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_024					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Language");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_025					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Legal");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_026					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Lightning_Calculate");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_027					= hash_file('sha256', "../../Applications/Member/Visibility/Root/List");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_028					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Login");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_029					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Market");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_030					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Media_Player");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_031					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Member_Directory");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_032					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Messenger");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_033					= hash_file('sha256', "../../Applications/Member/Visibility/Root/News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_034					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Notepad");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_035					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Pages");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_036					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Profile");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_037					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Recommendations");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_038					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Referrers");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_039					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Register");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_040					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Reset_Password");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_041					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Search");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_042					= hash_file('sha256', "../../Applications/Member/Visibility/Root/System");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_043					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Submit_News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_044					= hash_file('sha256', "../../Applications/Member/Visibility/Root/System_Message");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_045					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Theme");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_046					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Travel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_047					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Update_Account");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_048					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Update_Password");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_049					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Upload");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_050					= hash_file('sha256', "../../Applications/Member/Visibility/Root/VoIP");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_051					= hash_file('sha256', "../../Applications/Member/Visibility/Root/Webspace");
 
 /*
  ============================================================================================================
@@ -1018,57 +1026,57 @@ $_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_ROOT_FILE_051				
  ============================================================================================================
 */
 
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_001				= hash_file('sha256', "./Applications/Member/Visibility/Services/Account_Data");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_002				= hash_file('sha256', "./Applications/Member/Visibility/Services/Account_Recovery");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_003				= hash_file('sha256', "./Applications/Member/Visibility/Services/Active_Members");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_004				= hash_file('sha256', "./Applications/Member/Visibility/Services/All_News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_005				= hash_file('sha256', "./Applications/Member/Visibility/Services/All_Shouts");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_006				= hash_file('sha256', "./Applications/Member/Visibility/Services/Application_List");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_007				= hash_file('sha256', "./Applications/Member/Visibility/Services/Articles");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_008				= hash_file('sha256', "./Applications/Member/Visibility/Services/Calculator");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_009				= hash_file('sha256', "./Applications/Member/Visibility/Services/Calendar");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_010				= hash_file('sha256', "./Applications/Member/Visibility/Services/Clock");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_011				= hash_file('sha256', "./Applications/Member/Visibility/Services/Comment");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_012				= hash_file('sha256', "./Applications/Member/Visibility/Services/Contact_Administrator");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_013				= hash_file('sha256', "./Applications/Member/Visibility/Services/Contacts");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_014				= hash_file('sha256', "./Applications/Member/Visibility/Services/Control_Panel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_015				= hash_file('sha256', "./Applications/Member/Visibility/Services/Devices");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_016				= hash_file('sha256', "./Applications/Member/Visibility/Services/Documentation");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_017				= hash_file('sha256', "./Applications/Member/Visibility/Services/Download");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_018				= hash_file('sha256', "./Applications/Member/Visibility/Services/Electronic_Mail");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_019				= hash_file('sha256', "./Applications/Member/Visibility/Services/Emulators");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_020				= hash_file('sha256', "./Applications/Member/Visibility/Services/Files");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_021				= hash_file('sha256', "./Applications/Member/Visibility/Services/Forum");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_022				= hash_file('sha256', "./Applications/Member/Visibility/Services/Forward");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_023				= hash_file('sha256', "./Applications/Member/Visibility/Services/Friend");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_024				= hash_file('sha256', "./Applications/Member/Visibility/Services/Language");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_025				= hash_file('sha256', "./Applications/Member/Visibility/Services/Legal");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_026				= hash_file('sha256', "./Applications/Member/Visibility/Services/Lightning_Calculate");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_027				= hash_file('sha256', "./Applications/Member/Visibility/Services/List");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_028				= hash_file('sha256', "./Applications/Member/Visibility/Services/Login");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_029				= hash_file('sha256', "./Applications/Member/Visibility/Services/Market");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_030				= hash_file('sha256', "./Applications/Member/Visibility/Services/Media_Player");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_031				= hash_file('sha256', "./Applications/Member/Visibility/Services/Member_Directory");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_032				= hash_file('sha256', "./Applications/Member/Visibility/Services/Messenger");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_033				= hash_file('sha256', "./Applications/Member/Visibility/Services/News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_034				= hash_file('sha256', "./Applications/Member/Visibility/Services/Notepad");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_035				= hash_file('sha256', "./Applications/Member/Visibility/Services/Pages");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_036				= hash_file('sha256', "./Applications/Member/Visibility/Services/Profile");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_037				= hash_file('sha256', "./Applications/Member/Visibility/Services/Recommendations");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_038				= hash_file('sha256', "./Applications/Member/Visibility/Services/Referrers");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_039				= hash_file('sha256', "./Applications/Member/Visibility/Services/Register");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_040				= hash_file('sha256', "./Applications/Member/Visibility/Services/Reset_Password");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_041				= hash_file('sha256', "./Applications/Member/Visibility/Services/Search");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_042				= hash_file('sha256', "./Applications/Member/Visibility/Services/System");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_043				= hash_file('sha256', "./Applications/Member/Visibility/Services/Submit_News");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_044				= hash_file('sha256', "./Applications/Member/Visibility/Services/System_Message");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_045				= hash_file('sha256', "./Applications/Member/Visibility/Services/Theme");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_046				= hash_file('sha256', "./Applications/Member/Visibility/Services/Travel");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_047				= hash_file('sha256', "./Applications/Member/Visibility/Services/Update_Account");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_048				= hash_file('sha256', "./Applications/Member/Visibility/Services/Update_Password");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_049				= hash_file('sha256', "./Applications/Member/Visibility/Services/Upload");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_050				= hash_file('sha256', "./Applications/Member/Visibility/Services/VoIP");
-$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_051				= hash_file('sha256', "./Applications/Member/Visibility/Services/Webspace");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_001				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Account_Data");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_002				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Account_Recovery");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_003				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Active_Members");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_004				= hash_file('sha256', "../../Applications/Member/Visibility/Services/All_News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_005				= hash_file('sha256', "../../Applications/Member/Visibility/Services/All_Shouts");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_006				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Application_List");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_007				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Articles");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_008				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Calculator");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_009				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Calendar");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_010				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Clock");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_011				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Comment");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_012				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Contact_Administrator");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_013				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Contacts");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_014				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Control_Panel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_015				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Devices");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_016				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Documentation");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_017				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Download");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_018				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Electronic_Mail");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_019				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Emulators");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_020				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Files");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_021				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Forum");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_022				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Forward");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_023				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Friend");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_024				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Language");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_025				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Legal");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_026				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Lightning_Calculate");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_027				= hash_file('sha256', "../../Applications/Member/Visibility/Services/List");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_028				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Login");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_029				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Market");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_030				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Media_Player");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_031				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Member_Directory");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_032				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Messenger");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_033				= hash_file('sha256', "../../Applications/Member/Visibility/Services/News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_034				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Notepad");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_035				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Pages");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_036				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Profile");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_037				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Recommendations");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_038				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Referrers");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_039				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Register");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_040				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Reset_Password");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_041				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Search");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_042				= hash_file('sha256', "../../Applications/Member/Visibility/Services/System");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_043				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Submit_News");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_044				= hash_file('sha256', "../../Applications/Member/Visibility/Services/System_Message");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_045				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Theme");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_046				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Travel");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_047				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Update_Account");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_048				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Update_Password");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_049				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Upload");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_050				= hash_file('sha256', "../../Applications/Member/Visibility/Services/VoIP");
+$_ARCHITECT_INTEGRITY_FILES_FIND_APPLICATION_MEMBER_VISIBILITY_SERVICES_FILE_051				= hash_file('sha256', "../../Applications/Member/Visibility/Services/Webspace");
 
 /*
  ============================================================================================================
