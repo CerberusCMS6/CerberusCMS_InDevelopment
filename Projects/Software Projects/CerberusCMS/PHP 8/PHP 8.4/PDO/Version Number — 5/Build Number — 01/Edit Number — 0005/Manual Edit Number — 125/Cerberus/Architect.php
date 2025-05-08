@@ -1681,8 +1681,11 @@ echo ("
 			<TEXTAREA ROWS=\"20\" COLS=\"150\">$_ARCHITECT_INSTALL_FORM_GET_FILE_CONTENTS_LOG_FILE_INTERACTION_LOG</TEXTAREA>
 		</FORM><BR><BR>
 
-		<B>Pre-Installation Notes</B><HR>
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+		<B>Pre-Installation Notes</B>
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		<B>Quick Installation Notes</B>
 		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		Each Web Server Setup is completely different than every other Web Server Setup depending on how it is Built, Installed, Configured and Setup. Installing this Web Application will require some knowledge of what kind of Web Server it is loaded onto.<BR>
@@ -1865,7 +1868,10 @@ echo ("
 		[&nbsp;!&nbsp;]&nbsp;If you are unable to install the Structured-Query-Language Tables automatically by this web application, click [ <A HREF=\"./$_INTERNAL_FILE_ARCHITECT_DIRECTORY/MySQL/MySQL_Generator.php\" TITLE=\":: Open & Display The Structured-Query-Language Data Generator Application ::\" TARGET=\"_NEW\">here</A> ] to manually generate the S.Q.L. Structure and the S.Q.L. Data.<BR>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once the Structured-Query-Language Table Structure and its data is generated correctly, copy the Structured-Query-Language Tables with generated Table Prefix Name and then manually paste the generated Structured-Query-Language Data Structure into your web server Structured-Query-Language Manager / Editor and click install.<BR><BR>
 
-		<B>Tools :: Pre-Installation</B><HR>
+		<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+		<B>Tools :: Pre-Installation</B>
+		<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+
 		<B>Tools :: Pre-Installation :: Database Management System Server :: Database</B>
 		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		=>&nbsp;<A HREF=\"?InternalApplication&#61;Install_Database\" TARGET=\"_NEW\" TITLE=\":: Open & Display ::The Internal Application :: Structured-Query-Language Database Installer ::\">Installer :: Automatic :: Structured-Query-Language Database Server :: Database</A><BR><BR>
@@ -1902,7 +1908,9 @@ echo ("
 		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		=>&nbsp;<A HREF=\"./Maintenance/Repair/$_INTERNAL_FILE_MAINTENANCE_REPAIR\" TARGET=\"_NEW\" TITLE=\":: Open & Display The System Repair Application ::\">System Maintenance :: Repair Application</A><BR><BR>
 
-		<B>Server Software, Server Software Engine Versions and Extended Information</B><HR>
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+		<B>Server Software, Server Software Engine Versions and Extended Information</B>
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		<B>Detailed Server Software and User-Interface Information:</B><BR>
 		=>&nbsp;<A HREF=\"?InternalApplication&#61;ServerSoftware_Information\" TITLE=\":: Display Detailed Information About What Server Software Versions Are Currently Running On This Web Server ::\">Information About What Server Software Versions Are Currently Running On This Web Server</A><BR><BR>
 
@@ -1913,7 +1921,9 @@ echo ("
 		=>&nbsp;<A HREF=\"?InternalApplication&#61;PHP_Information\" TITLE=\":: View Detailed Information About What Pre-Hyper-Text-Post-Processor Parser Version Number & Zend Engine Version Number Is Currently Running On This Web Server ::\">Information About What P.H.P. Parser Version Number & Zend Engine Version Number Is Currently Running On This Web Server</A></B><BR>
 		=>&nbsp;<A HREF=\"?InternalApplication&#61;PHP_Extensions\" TITLE=\":: View Detailed Information About What Pre-Hyper-Text-Post-Processor Server Extensions Are Currently Loaded On This Pre-Hyper-Text-Post-Processor Engine Running On This Web Server ::\">Information About What Extensions Are Currently Loaded On This Executed P.H.P. Engine</A></B><BR><BR>
 
-		<B>Internal Documents</B><HR>
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+		<B>Internal Documents</B>
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		=>&nbsp;<A HREF=\"About.txt\" TITLE=\":: Open & Display The About File ::\">About</A><BR>
 		=>&nbsp;<A HREF=\"Bug_Tracker.txt\" TITLE=\":: Open & Display The Bug Tracker File ::\">Bug Tracker</A><BR>
 		=>&nbsp;<A HREF=\"Change-Log.txt\" TITLE=\":: Open & Display The Change Log File ::\">Change Log</A><BR>
@@ -2028,7 +2038,9 @@ if (!$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_NAME_CONNECT
 echo ("
 		Install The Structured-Query-Language Database Server Tables<BR>
 		<FORM ACTION=\"?InternalApplication&#61;Install_Database\" METHOD=\"post\">
-		Database Management System Server Connection :: Settings<HR>
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+		Database Management System Server Connection :: Settings
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		* <I>Database Management System Server :: Database :: Host-Name</I>:<BR>
 			<INPUT TYPE=\"TEXT\" NAME=\"Architect_Install_SQL_Database_Server_Database_Name_Connect_HostName\" VALUE=\"localhost\"><BR>
 		* <I>Database Management System Server :: Database :: Host-Name :: Port Number</I>:<BR>
@@ -2096,7 +2108,9 @@ if (!$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNE
 echo ("
 		Install The Structured-Query-Language Database Server Tables<BR>
 		<FORM ACTION=\"?InternalApplication&#61;Install_DatabaseTableStructure\" METHOD=\"post\">
-		Database Management System Server :: Connection :: Settings<HR>
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+		Database Management System Server :: Connection :: Settings
+		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		* <I>Database Management System Server :: Database :: Host-Name</I>:<BR>
 			<INPUT TYPE=\"TEXT\" NAME=\"Architect_Install_SQL_Database_Server_Database_Tables_Connect_HostName\" VALUE=\"localhost\"><BR>
 		* <I>Database Management System Server :: Database :: Host-Name :: Port Number</I>:<BR>
@@ -3481,7 +3495,9 @@ $_ARCHITECT_POST_ADMINISTRATOR_ACCOUNT_RECOVERY_KEY								= "$_ARCHITECT_ADMINI
 if ((!$_ARCHITECT_POST_ADMINISTRATOR_ACCOUNT_USERNAME) || (!$_ARCHITECT_POST_ADMINISTRATOR_ACCOUNT_PASSWORD_1) || (!$_ARCHITECT_POST_ADMINISTRATOR_ACCOUNT_PASSWORD_2)) {
 
 echo ("
-	<HR><CENTER>Install :: Administration-Level Account</CENTER><HR><BR>
+	<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+	<CENTER>Install :: Administration-Level Account</CENTER>
+	<HR ALIGN=\"LEFT\" WIDTH=\"20%\"><BR>
 	<FORM ACTION=\"?InternalApplication&#61;Install_Defaults\" METHOD=\"post\">
 		Create The Administration Account:<BR>
 		It Is Recommended To Use a Random Password Generator and a Password Storage Application Such as KeePass Password Safe<BR>
@@ -3516,7 +3532,7 @@ echo ("
 
 if ($_ARCHITECT_POST_ADMINISTRATOR_ACCOUNT_PASSWORD_1 == "$_ARCHITECT_POST_ADMINISTRATOR_ACCOUNT_PASSWORD_2") {
 
-	echo ("<HR><CENTER>Installation Process Started</CENTER><HR>");
+	echo ("<HR ALIGN=\"CENTER\" WIDTH=\"20%\"><CENTER>Installation Devel Started</CENTER><HR ALIGN=\"CENTER\" WIDTH=\"20%\">");
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Installing Default S.Q.L. Data to Database Server Tables:<BR>");
 
 include_once ("./System/Configuration/Global_Configuration.php");
@@ -6325,7 +6341,7 @@ copy("./Applications/Video_Games/index.php","./System/Security/Integrity/Backup/
 
 if ($_GET["InternalApplication"] == "Unlink_Installation") {
 
-	echo ("<HR><CENTER>Unlinking Installation Files</CENTER><HR><BR>");
+	echo ("<HR ALIGN=\"CENTER\" WIDTH=\"20%\"><CENTER>Unlinking Installation Files</CENTER><HR ALIGN=\"CENTER\" WIDTH=\"20%\"><BR>");
 
 	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Secure-Delete :: Default Architect Log Files and index Files... Wait.<BR><BR>");
 
@@ -6538,7 +6554,7 @@ echo ("
 
 if ($_GET["InternalApplication"] == "PHP_Information") {
 
-	echo ("<HR>Currenty Running PHP Server Engine Information<HR><BR>");
+	echo ("<HR>Current Pre-Hyper-Text-Post-Processor Server Engine Information<HR><BR>");
 	phpinfo();
 	echo ("<BR>");
 
@@ -6554,11 +6570,11 @@ if ($_GET["InternalApplication"] == "PHP_Information") {
 
 if ($_GET["InternalApplication"] == "PHP_Extensions") {
 
-	echo ("<HR>Currently Loaded PHP Extensions<HR><BR>");
+	echo ("<HR>Current Pre-Hyper-Text-Post-Processor Extensions Loaded<HR><BR>");
 	print_r(get_loaded_extensions());
 	echo ("<BR>");
 
-} // [ + ] IF: Internal Application: PHP_Extensions Is Activated
+} // [ + ] IF: Internal Application: PHP_Extensions :: Is: Activated
 
 /*
  ============================================================================================================
