@@ -1551,6 +1551,20 @@ PRIMARY KEY (id)
 );
 
 /* ------------------------------------------------------------------------- */
+/*                       Custom Applications                                 */
+/* ------------------------------------------------------------------------- */
+
+/* Custom Applications */
+
+CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_applications_custom (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+custom_application_data TEXT,
+custom_application_name VARCHAR(250),
+custom_application_timestamp_installation VARCHAR(100),
+PRIMARY KEY (id)
+);
+
+/* ------------------------------------------------------------------------- */
 /*                         Application Links                                 */
 /* ------------------------------------------------------------------------- */
 
