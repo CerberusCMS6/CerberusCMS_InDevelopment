@@ -1550,9 +1550,8 @@ application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 );
 
-
 /* ------------------------------------------------------------------------- */
-/*             Applications :: Administration :: Background                 */
+/*             Applications :: Administration :: Background                  */
 /* ------------------------------------------------------------------------- */
 
 /* Applications :: Adminstration :: Background */
