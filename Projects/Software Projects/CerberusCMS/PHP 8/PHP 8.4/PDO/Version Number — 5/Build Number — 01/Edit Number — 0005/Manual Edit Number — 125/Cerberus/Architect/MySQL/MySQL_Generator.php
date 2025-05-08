@@ -1550,6 +1550,31 @@ application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 );
 
+
+/* ------------------------------------------------------------------------- */
+/*             Applications :: Administration :: Background                 */
+/* ------------------------------------------------------------------------- */
+
+/* Applications :: Adminstration :: Background */
+
+CREATE TABLE {$_MySQL_Generator_POST_ACCESS_DATABASE_TABLE_NAME_PREFIX}_applications_administration_background (
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
+PRIMARY KEY (id)
+);
+
 /* ------------------------------------------------------------------------- */
 /*                       Custom Applications                                 */
 /* ------------------------------------------------------------------------- */
