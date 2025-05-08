@@ -7351,6 +7351,12 @@ $_KERNEL_APPLICATION_PANEL_ALIGNED_RIGHT_FILE_VISIBILITY					= $_DB_Query_Kernel
 $_KERNEL_APPLICATION_PANEL_ALIGNED_RIGHT_ROW							= $_DB_Query_Kernel_Applications_Panel_Aligned_Right_Fetch_Array['application_panel_row'];
 $_KERNEL_APPLICATION_PANEL_ALIGNED_RIGHT_TITLE							= $_DB_Query_Kernel_Applications_Panel_Aligned_Right_Fetch_Array['application_panel_title'];
 
+/*
+ ============================================================================================================
+ + IF: Registered Member Account :: Credentials Exist :: AND :: Registered Member Account :: Access Level :: Is: Greater Than OR Equal To: Application Panel Permission Requirements, Include Application Panel
+ ============================================================================================================
+*/
+
 if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null && $_GLOBAL_MEMBER_ACCESS_LEVEL >= $_KERNEL_APPLICATION_PANEL_ALIGNED_RIGHT_FILE_PERMISSION) {
 
 			echo ($_THIS_THEME_APPLICATION_PANEL_1);
@@ -7361,7 +7367,19 @@ if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null &
 
 			echo ($_THIS_THEME_APPLICATION_PANEL_2);
 
+/*
+ ============================================================================================================
+ + ELSE: Registered Member Account :: Credentials Exist :: AND :: Registered Member Account :: Access Level :: Is NOT: Greater Than OR Equal To: Application Panel Permission Requirements, Include Lower Access Level Application Panel
+ ============================================================================================================
+*/
+
 } else {
+
+/*
+ ============================================================================================================
+ + IF: Registered Member Account :: Cookie :: DOES NOT Exist AND Application Panel Permission Is: Less Than OR Equal To: Public, Include Public Access Level Application Panel
+ ============================================================================================================
+*/
 
 if (!$_GLOBAL_COOKIE_MEMBER_USERNAME && $_KERNEL_APPLICATION_PANEL_ALIGNED_RIGHT_FILE_PERMISSION <= 0) {
 
@@ -7526,11 +7544,23 @@ if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null) 
  ============================================================================================================
 */
 
+/*
+ ============================================================================================================
+ + ELSE: Database Management System Database Server :: Database Server Name Connection :: Error :: Print Error Message
+ ============================================================================================================
+*/
+
 } else {
 
 		echo ("Kernel Message: Error, I Cannot Connect To The Structured Query Language Database Server Name: $_ACCESS_DATABASE_SERVER_DATABASE_NAME. Please Check The Database Server Access Credentials File.");
 
 } // [ + ] IF: Connection To :: Database Server Name :: Variable Has Executed
+
+/*
+ ============================================================================================================
+ + ELSE: Database Management System Database Server :: Database Server Host-Name Connection :: Error :: Print Error Message
+ ============================================================================================================
+*/
 
 } else {
 
@@ -7540,7 +7570,7 @@ if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null) 
 
 /*
  ============================================================================================================
- + Kill: Database Server Connection: S.Q.L. Database Server Configured Strings
+ + Close: Database Management System Server :: Database :: Connection
  ============================================================================================================
 */
 
@@ -7548,11 +7578,17 @@ if ($_KERNEL_MYSQL_IMPROVED_DATABASE_SERVER_CONNECT->close()) {
 
 			echo ("Database Server Connection Closed For Internet Protocol Address: <A HREF=\"$_SYSTEM_SERVER_NETWORKING_RESOLVER_WHOIS/$_GLOBAL_REMOTE_SERVER_ADDRESS\" TITLE=\":: View Detailed Who-Is Information For Internet Protocol Address: $_GLOBAL_REMOTE_SERVER_ADDRESS ::\" TARGET=\"_NEW\">$_GLOBAL_REMOTE_SERVER_ADDRESS</A>&nbsp;|&nbsp;");
 
+/*
+ ============================================================================================================
+ + Close: Database Management System Server :: Database :: Connection :: Error, Print Message
+ ============================================================================================================
+*/
+
 } else {
 
 			echo ("Kernel Message: Error: I Cannot Close The Database Server Connection For Internet Protocol Address: <A HREF=\"http://WhoIs.sc/$_GLOBAL_REMOTE_SERVER_ADDRESS\" TITLE=\":: View Detailed Who-Is Information For Internet Protocol Address: $_GLOBAL_REMOTE_SERVER_ADDRESS ::\" TARGET=\"_NEW\">$_GLOBAL_REMOTE_SERVER_ADDRESS</A>&nbsp;|&nbsp;");
 
-} // [ + ] IF: Close :: Database Server Connection
+} // [ + ] IF: Close: Database Management System Server :: Database :: Connection
 
 echo ("
 			This Web Page Will Close After One Hour Of Inactivity
