@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
  ============================================================================================================
  + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2977,8 +2977,8 @@ member_number_phone_home VARCHAR(20),
 member_number_phone_work VARCHAR(20),
 member_password VARCHAR(250),
 member_physical_biometrics_blood_type VARCHAR(10),
-member_physical_biometrics_color_eye_1 VARCHAR(10),
-member_physical_biometrics_color_eye_2 VARCHAR(10),
+member_physical_biometrics_color_eye_1 VARCHAR(15),
+member_physical_biometrics_color_eye_2 VARCHAR(15),
 member_physical_biometrics_color_hair VARCHAR(10),
 member_physical_biometrics_height VARCHAR(4),
 member_physical_biometrics_weight VARCHAR(4),
