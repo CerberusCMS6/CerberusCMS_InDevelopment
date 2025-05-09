@@ -79,8 +79,10 @@ $_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_S
 $_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_VISIBILITY		= $_POST['AMA_Applications_Install_Application_File_Visibility'];
 $_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_VERSION 			= $_POST['AMA_Applications_Install_Application_File_Version'];
 
-$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_INTEGRITY_PHYSICAL	= hash_file('sha256', "./Applications/Member/Visibility/Member/$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_NAME");
-$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_INTEGRITY_INSTALLATION	= hash_file('sha256', "./Applications/Member/Visibility/Member/$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_NAME");
+$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_INTEGRITY_PHYSICAL	= hash_file('sha256', "./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_NAME");
+$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_INTEGRITY_INSTALLATION	= hash_file('sha256', "./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_NAME");
+
+$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_NAME_REMOVE_EXTENSION	= substr($_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_NAME, 0, strrpos($_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_NAME, "."));
 
 /*
  ============================================================================================================
@@ -119,7 +121,7 @@ echo ("
 														<INPUT TYPE=\"text\" NAME=\"AMA_Applications_Install_Application_File_Name\" MAXLENGTH=\"100\"><BR><BR>
 
 													Application Module :: File :: Visibility<BR>
-														<SELECT NAME=\"AMA_Applications_Install_Application_File_Visibility\" MAXLENGTH=\"1\">
+														<SELECT NAME=\"AMA_Applications_Install_Application_File_Visibility_1\" MAXLENGTH=\"1\">
 															<OPTION VALUE=\"0\">Public</OPTION>
 															<OPTION VALUE=\"1\">Member</OPTION>
 															<OPTION VALUE=\"2\">Moderator</OPTION>
@@ -165,12 +167,6 @@ echo ("
 															<OPTION VALUE=\"1\">ON</OPTION>
 														</SELECT><BR><BR>
 
-													Application Module :: Permissions :: Location :: By Region<BR>
-														<SELECT NAME=\"AMA_Applications_Install_Application_File_Permission_Location_Region\" MAXLENGTH=\"1\">
-															<OPTION VALUE=\"0\">OFF</OPTION>
-															<OPTION VALUE=\"1\">ON</OPTION>
-														</SELECT><BR><BR>
-
 													Application Module :: Permissions :: Location :: By Internet Protocol Address<BR>
 														<SELECT NAME=\"AMA_Applications_Install_Application_File_Permission_Location_IP\" MAXLENGTH=\"1\">
 															<OPTION VALUE=\"0\">OFF</OPTION>
@@ -185,11 +181,11 @@ echo ("
 														
 													Application Module :: File :: Integrity<BR>
 													Secure-Hash-Algorithm, 256<BR>
-														<TEXTAREA ROWS=\"10\" COLS=\"50\" NAME=\"AMA_Applications_Install_Application_File_Integrity_Physical\" MAXLENGTH=\"256\">Integrity Will Automatically Be Recalculated</TEXTAREA><BR><BR>
+														<TEXTAREA ROWS=\"10\" COLS=\"50\" NAME=\"AMA_Applications_Install_Application_File_Integrity_Physical\" MAXLENGTH=\"256\">Application Module File Integrity Will Automatically Be Recalculated Upon Upload of This Application Module File</TEXTAREA><BR><BR>
 
 													Application Module :: File :: Integrity :: From This Installation<BR>
 													Secure-Hash-Algorithm, 256<BR>
-														<TEXTAREA ROWS=\"10\" COLS=\"50\" NAME=\"AMA_Applications_Install_Application_File_Integrity_Installation\" MAXLENGTH=\"256\">Integrity Will Automatically Be Recalculated</TEXTAREA><BR>
+														<TEXTAREA ROWS=\"10\" COLS=\"50\" NAME=\"AMA_Applications_Install_Application_File_Integrity_Installation\" MAXLENGTH=\"256\">Application Module File Integrity Will Automatically Be Recalculated Upon Upload of This Application Module File</TEXTAREA><BR>
 													<INPUT TYPE=\"submit\" VALUE=\"Install Application\">
 												</FORM><BR><BR>
 ");
@@ -198,7 +194,7 @@ echo ("
 
 /*
  ============================================================================================================
- + Database Server Query :: Insert :: Application Installation Data Into Database
+ + Database Management System Server :: Database :: Query :: Insert :: Application Installation Data Into Database
  ============================================================================================================
 */
 
@@ -228,19 +224,22 @@ application_file_version
 '$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_PERMISSION_LOCATION_IP',
 '$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_STATUS',
 '$_GLOBAL_LOCAL_SERVER_DATE_STANDARD',
-'$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_VISIBILITY'
+'$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_VISIBILITY',
 '$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_VERSION'
 )");
 
 /*
  ============================================================================================================
- + IF: Database Server Query :: Insert :: Application Installation Data Into Database
+ + IF: Database Management System Server :: Database :: Query :: Insert :: Application Installation Data Into Database
  ============================================================================================================
 */
 
 if ($_Application_Module_Administration_Applications_DB_Query_Insert_Application) {
 
 											echo ($_Application_Module_Administration_Message_Applications_APPLICATION_INSTALL_SUCCESSFUL);
+
+copy("/System/Security/Integrity/Backup/Applications/Member/Visibility/Member/$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_NAME","./Applications/Member/Visibility/Member/$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_NAME_REMOVE_EXTENSION");
+rename("$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_NAME","$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_NAME_REMOVE_EXTENSION");
 
 } else {
 
@@ -250,13 +249,13 @@ if ($_Application_Module_Administration_Applications_DB_Query_Insert_Application
 
 /*
  ============================================================================================================
- + Kill :: Database Management System :: Database :: Server :: Query: Insert :: Application
+ + Kill :: Database Management System Server :: Database :: Query :: Insert :: Application Installation Data Into Database
  ============================================================================================================
 */
 
 // [ C ] $_Application_Module_Administration_Applications_DB_Query_Insert_Application->free_result();
 
-} // [ + ] IF: Install Application Form Has Not Executed
+} // [ + ] IF: Install Application :: Input Form :: Variables :: HAVE NOT Executed
 
 /*
  ============================================================================================================
@@ -346,7 +345,7 @@ copy("/System/Security/Integrity/Backup/Applications/Member/Visibility/Member/$_
 
 $_Application_Module_Administration_Applications_DB_Query_Select_Application_File			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_member_visibility_member ORDER BY application_file_name ASC");
 
-											echo ("<HR><CENTER><B>Existing Application Entries</B></CENTER><HR>");
+											echo ("<HR WIDTH=\"50%\" ALIGN=\"CENTER\"><CENTER><B>Existing Application Module Entries</B></CENTER><HR WIDTH=\"50%\" ALIGN=\"CENTER\"><BR><BR>");
 
 /*
  ============================================================================================================
@@ -379,7 +378,7 @@ $_Application_Module_Administration_Applications_LIST_APPLICATION_FILE_INTEGRITY
 
 echo ("
 
-													Application File Name: <B>$_Application_Module_Administration_Applications_LIST_APPLICATION_FILE_NAME</B><HR>
+													<HR WIDTH=\"25%\" ALIGN=\"LEFT\">Application File Name: <B>$_Application_Module_Administration_Applications_LIST_APPLICATION_FILE_NAME</B><HR WIDTH=\"25%\" ALIGN=\"LEFT\">
 													=> <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Applications&amp;Delete&#61;$_Application_Module_Administration_Applications_LIST_APPLICATION_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Delete The Application :: $_Application_Module_Administration_Applications_LIST_APPLICATION_FILE_NAME\">Delete</A><BR>
 													=> <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Applications&amp;Update&#61;$_Application_Module_Administration_Applications_LIST_APPLICATION_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Update The Application :: $_Application_Module_Administration_Applications_LIST_APPLICATION_FILE_NAME\">Update</A><BR><BR>
 ");
