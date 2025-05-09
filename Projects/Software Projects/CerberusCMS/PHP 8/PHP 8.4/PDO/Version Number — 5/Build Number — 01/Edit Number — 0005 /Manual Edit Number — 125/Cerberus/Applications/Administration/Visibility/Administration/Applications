@@ -79,8 +79,8 @@ $_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_S
 $_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_VISIBILITY		= $_POST['AMA_Applications_Install_Application_File_Visibility'];
 $_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_VERSION 			= $_POST['AMA_Applications_Install_Application_File_Version'];
 
-$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_INTEGRITY_PHYSICAL	= hash_file('sha256', "./Applications/Member/$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_NAME");
-$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_INTEGRITY_INSTALLATION	= hash_file('sha256', "./Applications/Member/$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_NAME");
+$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_INTEGRITY_PHYSICAL	= hash_file('sha256', "./Applications/Member/Visibility/Member/$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_NAME");
+$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_INTEGRITY_INSTALLATION	= hash_file('sha256', "./Applications/Member/Visibility/Member/$_Application_Module_Administration_Applications_POST_INSTALL_APPLICATION_FILE_NAME");
 
 /*
  ============================================================================================================
@@ -202,7 +202,7 @@ echo ("
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Applications_DB_Query_Insert_Application				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications(
+$_Application_Module_Administration_Applications_DB_Query_Insert_Application				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_administration_visibility_member(
 application_file_integrity,
 application_file_integrity_installation,
 application_file_name,
@@ -246,11 +246,11 @@ if ($_Application_Module_Administration_Applications_DB_Query_Insert_Application
 
 											echo ($_Message_ERROR_ACTION_UNIVERSAL);
 
-} // [ + ] IF: Database Server Query :: Insert Application Data
+} // [ + ] IF: Database Management System Server :: Database :: Server :: Query :: Insert Application Data
 
 /*
  ============================================================================================================
- + Kill SQL Database Server Query: Insert :: Application
+ + Kill :: Database Management System :: Database :: Server :: Query: Insert :: Application
  ============================================================================================================
 */
 
@@ -272,7 +272,7 @@ if ($_Application_Module_Administration_Applications_DB_Query_Insert_Application
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Applications_FIND_DIRECTORY_UPLOAD_APPLICATION_MEMBER		= "./System/Security/Integrity/Backup/Applications/Member/";
+$_Application_Module_Administration_Applications_FIND_DIRECTORY_UPLOAD_APPLICATION_MEMBER		= "./System/Security/Integrity/Backup/Applications/Member/Visibility/Member/";
 $_Application_Module_Administration_Applications_FILE_UPLOAD 						= $_Application_Module_Administration_Applications_FIND_DIRECTORY_UPLOAD_APPLICATION_MEMBER . basename($_FILES['AMA_Applications_Upload_Application_File_Name']['name']);
 $_Application_Module_Administration_Applications_FILE_BASENAME						= basename($_FILES['AMA_Applications_Upload_Application_File_Name']['name']);
 $_Application_Module_Administration_Applications_POST_UPLOAD_DIRECTORY_TEMPORARY			= $_POST['AMA_Applications_Upload_Temporary'];
@@ -310,7 +310,7 @@ echo ("
  ============================================================================================================
 */
 
-if (file_exists("/System/Security/Integrity/Backup/Applications/Member/$_Application_Module_Administration_Applications_FILE_BASENAME")) {
+if (file_exists("/System/Security/Integrity/Backup/Applications/Member/Visibility/Member/$_Application_Module_Administration_Applications_FILE_BASENAME")) {
 
 													echo ($_Application_Module_Administration_Message_Applications_APPLICATION_UPLOAD_HALTED);
 
@@ -324,7 +324,7 @@ if (file_exists("/System/Security/Integrity/Backup/Applications/Member/$_Applica
 
 if (move_uploaded_file($_FILES['AMA_Applications_Upload_Application_File_Name']['tmp_name'], $_Application_Module_Administration_Applications_FILE_UPLOAD)) {
 
-copy("/System/Security/Integrity/Backup/Applications/Member/$_Application_Module_Administration_Applications_FILE_BASENAME","./Applications/Member/$_Application_Module_Administration_Applications_FILE_BASENAME");
+copy("/System/Security/Integrity/Backup/Applications/Member/Visibility/Member/$_Application_Module_Administration_Applications_FILE_BASENAME","./Applications/Member/Visibility/Member/$_Application_Module_Administration_Applications_FILE_BASENAME");
 
 													echo ($_Application_Module_Administration_Message_Applications_APPLICATION_UPLOAD_SUCCESSFUL);
 
@@ -344,7 +344,7 @@ copy("/System/Security/Integrity/Backup/Applications/Member/$_Application_Module
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Applications_DB_Query_Select_Application_File			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications ORDER BY application_file_name ASC");
+$_Application_Module_Administration_Applications_DB_Query_Select_Application_File			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_administration_visibility_member ORDER BY application_file_name ASC");
 
 											echo ("<HR><CENTER><B>Existing Application Entries</B></CENTER><HR>");
 
@@ -369,7 +369,7 @@ $_Application_Module_Administration_Applications_LIST_APPLICATION_FILE_STATUS 		
 $_Application_Module_Administration_Applications_LIST_APPLICATION_FILE_VISIBILITY			= $_Application_Module_Administration_Applications_DB_Query_Select_Application_File_Fetch_Array['application_file_visibility'];
 $_Application_Module_Administration_Applications_LIST_APPLICATION_FILE_VERSION 				= $_Application_Module_Administration_Applications_DB_Query_Select_Application_File_Fetch_Array['application_file_version'];
 
-$_Application_Module_Administration_Applications_LIST_APPLICATION_FILE_INTEGRITY_PHYSICAL		= hash_file('sha256', "./Applications/Member/$_Application_Module_Administration_Applications_LIST_APPLICATION_FILE_NAME");
+$_Application_Module_Administration_Applications_LIST_APPLICATION_FILE_INTEGRITY_PHYSICAL		= hash_file('sha256', "./Applications/Member/Visibility/Member/$_Application_Module_Administration_Applications_LIST_APPLICATION_FILE_NAME");
 
 /*
  ============================================================================================================
@@ -398,15 +398,15 @@ if ($_GET["Delete"] == "$_Application_Module_Administration_Applications_LIST_AP
 
 /*
  ============================================================================================================
- + Database Server Query :: Delete :: Application Module Entry
+ + Database Management System Server :: Database :: Server :: Query :: Delete :: Application Module Entry
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Applications_DB_Query_Delete_Application_ID				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("DELETE FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications WHERE id='$_Application_Module_Administration_Applications_LIST_APPLICATION_ID'");
+$_Application_Module_Administration_Applications_DB_Query_Delete_Application_ID				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("DELETE FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_administration_visibility_member WHERE id='$_Application_Module_Administration_Applications_LIST_APPLICATION_ID'");
 
 /*
  ============================================================================================================
- + IF: Database Server Query :: Delete :: Application Module Entry
+ + IF: Database Management System Server :: Database :: Server :: Query :: Delete :: Application Module Entry
  ============================================================================================================
 */
 
@@ -418,7 +418,7 @@ if ($_Application_Module_Administration_Applications_DB_Query_Delete_Application
  ============================================================================================================
 */
 
-if (unlink("Applications/Member/$_Application_Module_Administration_Applications_LIST_APPLICATION_FILE_NAME")) {
+if (unlink("Applications/Member/Visibility/Member/$_Application_Module_Administration_Applications_LIST_APPLICATION_FILE_NAME")) {
 /**
 * Do Nothing
 **/
@@ -430,11 +430,11 @@ if (unlink("Applications/Member/$_Application_Module_Administration_Applications
 
 											echo ($_Message_ERROR_ACTION_UNIVERSAL);
 
-} // [ + ] IF: Database Server Query :: Delete :: Application Module Entry
+} // [ + ] IF: Database Management System Server :: Database :: Server :: Query :: Delete :: Application Module Entry
 
 /*
  ============================================================================================================
- + Kill SQL Database Server Query: Delete Application By ID
+ + Kill :: Database Management System Server :: Database :: Server :: Query :: Delete :: Application Module By Entry ID
  ============================================================================================================
 */
 
@@ -474,7 +474,7 @@ $_Application_Module_Administration_Applications_POST_UPDATE_APPLICATION_FILE_ST
 $_Application_Module_Administration_Applications_POST_UPDATE_APPLICATION_FILE_VISIBILITY		= $_POST['AMA_Applications_Update_Application_File_Visibility'];
 $_Application_Module_Administration_Applications_POST_UPDATE_APPLICATION_FILE_VERSION 			= $_POST['AMA_Applications_Update_Application_File_Version'];
 
-$_Application_Module_Administration_Applications_LIST_UPDATE_APPLICATION_FILE_INTEGRITY			= hash_file('sha256', "./Applications/Member/$_Application_Module_Administration_Applications_POST_UPDATE_APPLICATION_FILE_NAME");
+$_Application_Module_Administration_Applications_LIST_UPDATE_APPLICATION_FILE_INTEGRITY			= hash_file('sha256', "./Applications/Member/Visibility/Member/$_Application_Module_Administration_Applications_POST_UPDATE_APPLICATION_FILE_NAME");
 
 /*
  ============================================================================================================
@@ -574,7 +574,7 @@ echo ("
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Applications_DB_Query_Update_Application_ID				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications SET 
+$_Application_Module_Administration_Applications_DB_Query_Update_Application_ID				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_administration_visibility_member SET 
 application_file_integrity='$_Application_Module_Administration_Applications_LIST_UPDATE_APPLICATION_FILE_INTEGRITY',
 application_file_integrity_installation='$_Application_Module_Administration_Applications_POST_UPDATE_APPLICATION_FILE_INTEGRITY_INSTALLATION',
 application_file_name='$_Application_Module_Administration_Applications_POST_UPDATE_APPLICATION_FILE_NAME',
