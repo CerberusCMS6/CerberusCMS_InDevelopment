@@ -202,7 +202,7 @@ echo ("
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Applications_DB_Query_Insert_Application				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_administration_visibility_member(
+$_Application_Module_Administration_Applications_DB_Query_Insert_Application				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_member_visibility_member(
 application_file_integrity,
 application_file_integrity_installation,
 application_file_name,
@@ -344,7 +344,7 @@ copy("/System/Security/Integrity/Backup/Applications/Member/Visibility/Member/$_
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Applications_DB_Query_Select_Application_File			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_administration_visibility_member ORDER BY application_file_name ASC");
+$_Application_Module_Administration_Applications_DB_Query_Select_Application_File			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_member_visibility_member ORDER BY application_file_name ASC");
 
 											echo ("<HR><CENTER><B>Existing Application Entries</B></CENTER><HR>");
 
@@ -402,7 +402,7 @@ if ($_GET["Delete"] == "$_Application_Module_Administration_Applications_LIST_AP
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Applications_DB_Query_Delete_Application_ID				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("DELETE FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_administration_visibility_member WHERE id='$_Application_Module_Administration_Applications_LIST_APPLICATION_ID'");
+$_Application_Module_Administration_Applications_DB_Query_Delete_Application_ID				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("DELETE FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_member_visibility_member WHERE id='$_Application_Module_Administration_Applications_LIST_APPLICATION_ID'");
 
 /*
  ============================================================================================================
@@ -574,7 +574,7 @@ echo ("
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Applications_DB_Query_Update_Application_ID				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_administration_visibility_member SET 
+$_Application_Module_Administration_Applications_DB_Query_Update_Application_ID				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_member_visibility_member SET 
 application_file_integrity='$_Application_Module_Administration_Applications_LIST_UPDATE_APPLICATION_FILE_INTEGRITY',
 application_file_integrity_installation='$_Application_Module_Administration_Applications_POST_UPDATE_APPLICATION_FILE_INTEGRITY_INSTALLATION',
 application_file_name='$_Application_Module_Administration_Applications_POST_UPDATE_APPLICATION_FILE_NAME',
