@@ -1,0 +1,44 @@
+- BASELINE APPLICATIONS
+* gApps Pico
+
+- NETWORK TOOLS
+* AdAway
+* DNSCrypt / DNSCrypt-Proxy
+* IPTables
+* MacChanger
+* Network Monitor
+* OpenVPN
+
+- COMMUNICATIONS
+* Google Voice
+* TeamSpeak
+* VoIP Client
+
+- DOWNLOAD
+* TTorrent Lite
+
+- TERMINALS
+* Terminal
+* Termux
+
+- MAINTENANCE
+* Call Recorder
+* Remote Administrator Client
+
+- DOCUMENT HANDLING
+* PDFReader
+
+- ENCRYPTION TOOLS
+* KeePass
+* Discord
+* PGPAuth
+
+- REPOSITORIES
+* FOSSHub / FOSS Repo
+
+- WEB BROWSER ADD-ONS
+* AdBlock Pro
+* Ghostery
+* HTTPSEverywhere
+* Mozilla FireFox
+* NoSCRIPT
