@@ -1,0 +1,100 @@
+﻿		⢀⣴⣿⣿⡟⠋⢻⣷⣄⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣾⣿⣷⣿⣿⣿⣿⣿⣶⣾⣿⣿⠿⠿⠿⠶⠄⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠉⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⠟⠻⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣆⣤⠿⢶⣦⡀⠀⠀⠀            G.C.'s Blue Raven, S.P. and Software⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠑⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠸⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠙⠛⠋⠉⠉ 			Free and Open Source Software
+			- 100% Free, Original, Clean and Quality Software Projects -
+
+/*
+============================================================================================================
+ +
+ +
+ + [ @ ] Software Licenses
+ +
+ +
+============================================================================================================
+*/
+
+***************************
+\
+- Commercial Software License
+/
+***************************
+
+Cerberus Content Management System - Commercial License
+
+(C) G.C.'s Blue Raven, Sole Proprietorship and Software, G.C. Johnson's Works 2000 - Present-Day
+
+SOFTWARE PROJECT REPOSITORIES
+https://www.SourceForge.net/project/cerberuscms5
+https://www.GITHub.com/CerberusCMS5
+
+DEMONSTRATION SERVERS :: FREE
+https://www.CerberusCMS.com
+https://CerberusCMS5.SourceForge.net
+============================================================================================================================================================
+No Commercial Software License Is Available For This Web Application Software Project.
+This software is given out completely for free of monetary value. This software does not come with any warranty at all express or implied and it is not for sale for money or for trade.
+
+***************************
+\
+- Non-Commercial Software License
+/
+***************************
+
+Cerberus Content Management System - Non-Commercial License
+
+(C) G.C.'s Blue Raven, Sole Proprietorship and Software, G.C. Johnson's Works 2005 - 2025.
+
+SOFTWARE PROJECT REPOSITORIES
+https://www.SourceForge.net/project/cerberuscms5
+https://www.GITHub.com/CerberusCMS5
+
+DEMONSTRATION SERVERS :: FREE
+https://www.CerberusCMS.com
+https://CerberusCMS5.SourceForge.net
+============================================================================================================================================================
+LET ("G.C.'s Blue Raven, Sole Proprietorship and Software") REGISTERED DIGITALLY IN THE YEAR 2025 IN Rosedale, California, United States -- FORMERLY KNOWN AS Tinke Software REGISTERED IN THE YEAR 2016 IN Rosedale, California, United
+States of America AND FORMERLY AS RuneSoft, Inc. and Rune Software, Inc. REGISTERED IN THE YEAR ~2001 IN Rosedale, California, United States of America BY Gary Christopher Johnson -- BE KNOWN AS ONE OF THE LICENSE AND RIGHTS HOLDER OF 
+CerberusCMS, Cerberus C.M.S., Cerberus Content Management System AND THE REPRESENTOR, LICENSE AND RIGHTS HOLDER OF Gary Christopher Johnson ALSO KNOWN AS G.C. Johnson's SOFTWARE WORKS.
+RuneSoft, Inc. and Rune Software, Inc. CANNOT BE CONFUSED WITH Rune Software, GmbH IN Tübingen, Germany WHICH WAS REGISTERED AFTER THE YEAR 2002 AND WHICH NAMED ORGANIZATIONS ARE SOLELY AND LEGALLY OWNED BY Gary Christopher Johnson
+OF Rosedale, California, United States of America
+
+----------------
+Rules
+----------------
+
+1a.) G.C.'s Blue Raven, Sole Proprietorship and Software permits you to operate Cerberus Content Management System on your own web server strictly by the following rules:
+1b.) You may make copies of Cerberus Content Management System and transfer, distribute them freely.
+1c.) You may not usurp, reproduce, copy or plagiarize any of the fundamentals, content or programming code released with Cerberus Content Management System in any other Software Project.
+1d.) You may modify the copy of the Cerberus Content Management System Project that you downloaded as well as add to it as you wish but your modifications cannot be included in any of the official Cerberus Content Management System Software Project Releases and you can not use the name Cerberus Content Management System with those modifications.
+1e.) You may not modify the master copies of Cerberus Content Management System from the Project Development Team.
+1f.) You may not recreate, reproduce or distribute Cerberus Content Management System.
+1g.) You may not sell for monetary gain Cerberus Content Management System.
+1h.) You may not mention the phrase: "Cerberus Content Management System", "CerberusCMS" or my name: "Gary Christopher Johnson" on any media, television broadcast, radio broadcast or any other type of digital broadcast.
+
+----------------
+Damages
+----------------
+
+2.) G.C.'s Blue Raven, Sole Proprietorship and Software, Gary Christopher Johnson, G.C. Johnson is not responsible for any damages incurred with the use of this software.
+
+----------------
+Warranty
+----------------
+
+3.) The software by this License ( Free Non-Commercial ) comes with no warranty of any kind, expressed or implied.
+============================================================================================================================================================
+THIS LICENSE MAY BE UPDATED AT ANY TIME WITH PRACTICAL NOTICE; YOU CAN FIND NOTICE OF THIS LICENSE BEING UPDATED AT:
+https://www.GITHub.com/CerberusCMS5/CerberusCMS_Licenses/Projects/Software Projects/CerberusCMS/License.txt
+http://CerberusCMS5.SourceForge.net/Cerberus/License.txt
+https://www.CerberusCMS.com/Projects/CerberusCMS/License.txt
