@@ -15,9 +15,10 @@
  +    ()    () - -
  +  ()  () ()()()()
  +  ------
- + Index Application
+ +
  + ----------------------------------------------------------------------------------------------------------
- + - This File, Location	 : Root Directory => Member => Setup => index.php
+ + - This File, Location	 : Root Directory => Member => Setup => Indexes => Files => Document =>
+ +				 : Streams => Year => Month => Day => Timestamp => Timestamp.php
  + - This File, Version		 : 0.7.7
  + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
  + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
@@ -73,7 +74,7 @@
  ============================================================================================================
 */
 
-$_DIRECTORY_FILE_DENIAL					= "../../System/Default/Messages/Directory_Denial.php";
+$_DIRECTORY_FILE_DENIAL					= "../../../../../../../../../../System/Default/Messages/Directory_Denial.php";
 
 /*
  ============================================================================================================
