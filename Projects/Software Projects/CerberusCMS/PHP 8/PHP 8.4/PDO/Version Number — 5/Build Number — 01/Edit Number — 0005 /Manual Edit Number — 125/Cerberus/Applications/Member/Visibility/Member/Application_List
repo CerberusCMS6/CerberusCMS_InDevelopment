@@ -157,7 +157,7 @@ $_Application_Module_Member_Application_List_FILE_SYSTEM_PLUGIN_LOCATION_DEFAULT
  ============================================================================================================
 */
 
-$_Application_Module_Member_Application_List_DB_Query_List_Applications_Background					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_background");
+$_Application_Module_Member_Application_List_DB_Query_List_Applications_Background					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_administration_background");
 
 /*
  ============================================================================================================
@@ -165,7 +165,7 @@ $_Application_Module_Member_Application_List_DB_Query_List_Applications_Backgrou
  ============================================================================================================
 */
 
-$_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_services");
+$_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_administration_root_services");
 
 /*
  ============================================================================================================
@@ -173,7 +173,7 @@ $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administ
  ============================================================================================================
 */
 
-$_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_root");
+$_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_administration_root");
 
 /*
  ============================================================================================================
@@ -181,7 +181,7 @@ $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administ
  ============================================================================================================
 */
 
-$_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_administration");
+$_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_administration_visibility_administration");
 
 /*
  ============================================================================================================
@@ -189,7 +189,7 @@ $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administ
  ============================================================================================================
 */
 
-$_Application_Module_Member_Application_List_DB_Query_List_Applications_Member						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications");
+$_Application_Module_Member_Application_List_DB_Query_List_Applications_Member						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_member_visibility_member");
 
 /*
  ============================================================================================================
@@ -197,7 +197,7 @@ $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member		
  ============================================================================================================
 */
 
-$_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_panel");
+$_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_panel_visibility_member");
 
 /*
  ============================================================================================================
