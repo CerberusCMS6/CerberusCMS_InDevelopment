@@ -1,0 +1,341 @@
+<?php
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    ()  ()  ()
+ +  ()  ()  ()
+ +  ------------------------------
+ +  Application Module
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Root Directory => Applications => Member => Electronic_Mail
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|6|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ +
+ + [ ^ ] Application Module :: Member :: Electronic Mail
+ +
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Application Module Header
+ ============================================================================================================
+*/
+
+ 												echo ($_Application_Module_Member_Message_Electronic_Mail_Header);
+
+/*
+ ============================================================================================================
+ + Database Server Query: Retrieve :: Registered Member Account Entry
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Electronic_Mail_DB_Query_SELECT_MEMBERS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members");
+
+/*
+ ============================================================================================================
+ + WHILE: Retrieving: Registered Member Account Entry Data :: From The Database Management System Server Database
+ ============================================================================================================
+*/
+
+while ($_Application_Module_Member_Electronic_Mail_DB_Query_SELECT_MEMBERS_Fetch_Array	= $_Application_Module_Member_Electronic_Mail_DB_Query_SELECT_MEMBERS->fetch_array(MYSQLI_BOTH)) {
+
+$_Application_Module_Member_Electronic_Mail_LIST_MEMBER_ID						= $_Application_Module_Member_Electronic_Mail_DB_Query_SELECT_MEMBERS_Fetch_Array['id'];
+$_Application_Module_Member_Electronic_Mail_LIST_MEMBER_ELECTRONIC_MAIL_ADDRESS				= $_Application_Module_Member_Electronic_Mail_DB_Query_SELECT_MEMBERS_Fetch_Array['member_electronic_mail_address'];
+$_Application_Module_Member_Electronic_Mail_LIST_MEMBER_ELECTRONIC_MAIL_ADDRESS_PGP_KEY_PANEL_PUBLIC	= $_Application_Module_Member_Electronic_Mail_DB_Query_SELECT_MEMBERS_Fetch_Array['member_security_pgp_key_panel_public'];
+$_Application_Module_Member_Electronic_Mail_LIST_MEMBER_USERNAME					= $_Application_Module_Member_Electronic_Mail_DB_Query_SELECT_MEMBERS_Fetch_Array['member_username'];
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Electronic Mail :: Registered Member Account
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Electronic_MailID"] == "$_Application_Module_Member_Electronic_Mail_LIST_MEMBER_ID") {
+
+/*
+ ============================================================================================================
+ + Send Electronic Mail :: Input Form :: Variables :: POST Variables
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT					= $_POST['AMM_Electronic_Mail_Message_ClearText'];
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT_HASH_SHA_256				= hash('sha256', $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+
+/*
+ ============================================================================================================
+ + IF: Send :: Electronic Mail Message :: Input Form :: Variables :: HAVE NOT Executed, Display :: Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT) {
+
+echo ("
+												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Electronic_Mail&amp;Electronic_MailID&#61;$_Application_Module_Member_Electronic_Mail_LIST_MEMBER_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													Send Private Clear-Text Electronic Mail Message To: <I><A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Member_Electronic_Mail_LIST_MEMBER_USERNAME\" TITLE=\":: Open & Display :: The Registered Member Account Profile Entry For :: $_Application_Module_Member_Electronic_Mail_LIST_MEMBER_USERNAME ::\">$_Application_Module_Member_Electronic_Mail_LIST_MEMBER_USERNAME</A></I><BR>
+														<TEXTAREA ROWS=\"15\" COLS=\"75\" NAME=\"AMM_Electronic_Mail_Message_ClearText\">Write the Electronic Mail Message here... Registered Member Account Electronic Mail Addresses are hidden to prevent malicious use of personal information.</TEXTAREA><BR>
+													<INPUT TYPE=\"submit\" VALUE=\"Send Electronic Message\">
+												</FORM>
+");
+
+} else {
+
+/*
+ ============================================================================================================
+ +
+ + Send :: Non-Encrypted :: Electronic Mail Message
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + IF: Mail: Send :: Non-Encrypted :: Electronic Mail Message
+ ============================================================================================================
+*/
+
+if(mail($_Application_Module_Member_Electronic_Mail_LIST_MEMBER_ELECTRONIC_MAIL_ADDRESS,"Electronic Mail Message From :: $_GLOBAL_COOKIE_MEMBER_USERNAME @ $_GLOBAL_SYSTEM_SITE_TITLE","
+Dear $_Application_Module_Member_Electronic_Mail_LIST_MEMBER_ELECTRONIC_MAIL_ADDRESS,
+----------------------------------------------------------------------------------------
+$_GLOBAL_COOKIE_MEMBER_USERNAME has sent you this Non-Encrypted Private Electronic Message from the Electronic Mail Application Module:
+
+\"$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT\"
+----------------------------------------------------------------------------------------
+Have a nice day,
+		    - $_GLOBAL_SYSTEM_SITE_TITLE
+
+Electronic Mail Message :: Details
+----------------------------------------------------------------------------------------
+- Network Information
+The Internet Protocol Address That Initiated This Electronic Mail Message Was :: Device :: This Web Server: $_GLOBAL_LOCAL_SERVER_ADDRESS
+The Internet Protocol Address That Initiated This Electronic Mail Message Was :: Device :: This Web Server :: Port Number: $_GLOBAL_LOCAL_SERVER_PORT
+The Internet Protocol Address That Initiated This Electronic Mail Message Was :: Device :: Connected Device: $_GLOBAL_REMOTE_SERVER_ADDRESS
+The Internet Protocol Address That Initiated This Electronic Mail Message Was :: Device :: Connected Device :: Port Number: $_GLOBAL_REMOTE_SERVER_PORT
+
+- Timestamp Information
+This Electronic Mail Message Timestamp Was :: This Web Server: $_GLOBAL_LOCAL_SERVER_DATE_STANDARD
+This Electronic Mail Message Timestamp Was :: Connected Device: $_GLOBAL_LOCAL_SERVER_TIME_UNIX
+
+- Digital Fingerprint Information
+This Electronic Mail Message Unique Fingerprint :: Secure Hash Algorithm, 256: $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT_HASH_SHA_256
+The Document Root Was: $_GLOBAL_LOCAL_SERVER_DOCUMENT_ROOT
+")) {
+
+											echo ($_Application_Module_Member_Message_Electronic_Mail_SEND);
+
+} else {
+
+											echo ($_Application_Module_Member_Message_Electronic_Mail_SEND_ERROR);
+
+} // [ + ] IF: Mail: Send :: Electronic Mail Message Notification
+
+} // [ + ] IF: Send :: Electronic Mail Message :: Input Form :: Variables :: HAVE Executed
+
+} // [ + ] IF: Internal Application: Electronic Mail Message :: Registered Member Account :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Encrypted Electronic Mail :: Registered Member Account
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Encrypted_Electronic_MailID"] == "$_Application_Module_Member_Electronic_Mail_LIST_MEMBER_ID") {
+
+/*
+ ============================================================================================================
+ + Send Encrypted Electronic Mail :: Input Form :: Variables :: POST Variables
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED					= $_POST['AMM_Electronic_Mail_Message_Encrypted'];
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED_HASH_SHA_256				= hash('sha256', $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+
+/*
+ ============================================================================================================
+ + IF: Send :: Encrypted Electronic Mail Message :: Input Form :: Variables :: HAVE NOT Executed, Display :: Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED) {
+
+echo ("
+												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Electronic_Mail&amp;Encrypted_Electronic_MailID&#61;$_Application_Module_Member_Electronic_Mail_LIST_MEMBER_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													Send Private and Pretty-Good-Privacy Encrypted Electronic Mail Message To: <I><A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Member_Electronic_Mail_LIST_MEMBER_USERNAME\" TITLE=\":: Open & Display :: The Registered Member Account Profile Entry For :: $_Application_Module_Member_Electronic_Mail_LIST_MEMBER_USERNAME ::\">$_Application_Module_Member_Electronic_Mail_LIST_MEMBER_USERNAME</A></I><BR>
+														Pretty-Good-Privacy :: Key Block :: Public<BR>
+														<TEXTAREA ROWS=\"15\" COLS=\"75\">$_Application_Module_Member_Electronic_Mail_LIST_MEMBER_ELECTRONIC_MAIL_ADDRESS_PGP_KEY_PANEL_PUBLIC</TEXTAREA><BR>
+														Message<BR>
+														<TEXTAREA ROWS=\"15\" COLS=\"75\" NAME=\"AMM_Electronic_Mail_Message_Encrypted\">Write the Clear-Text Electronic Mail Message here... This message will be encrypted and then signed by using the Pretty-Good-Privacy ( P.G.P. ) Encrypton Pre-HyperText-Post-Processor Plug-In. Registered Member Account Electronic Mail Addresses are hidden to prevent malicious use of personal information.</TEXTAREA><BR>
+													<INPUT TYPE=\"submit\" VALUE=\"Send Electronic Message\">
+												</FORM>
+");
+
+} else {
+
+/*
+ ============================================================================================================
+ +
+ + Send :: Encrypted :: Electronic Mail Message
+ +
+ ============================================================================================================
+*/
+
+echo ("* Electronic Mail Message Notification: Setting G.N.U. P.G.P. Home Environment... Wait.<BR>");
+
+putenv("GNUPGHOME=/tmp");
+
+echo ("Done.<BR><BR>");
+
+echo ("* Electronic Mail Message Notification: Getting P.G.P. Encryption Public Keys For UserName: <I>$_Application_Module_Member_Electronic_Mail_LIST_MEMBER_ELECTRONIC_MAIL_ADDRESS</I>... Wait.<BR>");
+
+$_Application_Module_Member_Electronic_Mail_ENCRYPTED_MESSAGE_PGP_KEY_PANEL_PUBLIC		= "$_Application_Module_Member_Electronic_Mail_LIST_MEMBER_ELECTRONIC_MAIL_ADDRESS_PGP_KEY_PANEL_PUBLIC";
+
+echo ("Done.<BR><BR>");
+
+echo ("* Electronic Mail Message Notification: Initializing The Pre-HyperText-Post-Processor G.N.U. P.G.P. Functions... Wait.<BR>");
+
+$_Application_Module_Member_Electronic_Mail_LIST_MEMBER_ELECTRONIC_MAIL_ADDRESS_PGP_ENC			= (null);
+$_Application_Module_Member_Electronic_Mail_ENCRYPTED_MESSAGE_GNUPGP_INITIALIZE				= gnupg_init();
+
+echo ("Done.<BR><BR>");
+
+echo ("* Electronic Mail Message Notification: Extracting This Specific G.N.U. P.G.P. Encryption Key Data... Wait.<BR>");
+
+var_dump($_Application_Module_Member_Electronic_Mail_ENCRYPTED_MESSAGE_GNUPGP_INITIALIZE);
+
+echo ("Done.<BR><BR>");
+
+$_Application_Module_Member_Electronic_Mail_ENCRYPTED_MESSAGE_GNUPGP_IMPORT				= gnupg_import($_Application_Module_Member_Electronic_Mail_ENCRYPTED_MESSAGE_GNUPGP_INITIALIZE, $_Application_Module_Member_Electronic_Mail_ENCRYPTED_MESSAGE_PGP_KEY_PANEL_PUBLIC);
+
+echo ("* Electronic Mail Message Notification: Extracting This Specific G.N.U. P.G.P. Encryption Key Data From Importation... Wait.<BR>");
+
+var_dump($_Application_Module_Member_Electronic_Mail_ENCRYPTED_MESSAGE_GNUPGP_IMPORT);
+
+echo ("Done.<BR><BR>");
+
+echo ("* Electronic Mail Message Notification: Adding Encryption Keys To This Electronic Mail Message... Wait.<BR>");
+
+$_Application_Module_Member_Electronic_Mail_ENCRYPTED_MESSAGE_GNUPGP_IMPORT				= gnupg_addencryptkey($_Application_Module_Member_Electronic_Mail_ENCRYPTED_MESSAGE_GNUPGP_INITIALIZE, "28deb45c98af0b968f5049244ebe36081c121eac");
+
+echo ("Done.<BR><BR>");
+
+echo ("* Electronic Mail Message Notification: Extracting Encryption Keys To This Electronic Mail Message... Wait.<BR>");
+
+var_dump($_Application_Module_Member_Electronic_Mail_ENCRYPTED_MESSAGE_GNUPGP_IMPORT);
+
+echo ("Done.<BR><BR>");
+
+echo ("* Electronic Mail Message Notification: Encrypting This Electronic Mail Message... Wait.<BR>");
+
+$_Application_Module_Member_Electronic_Mail_ENCRYPTED_MESSAGE_GNUPGP_ENCRYPT_DATA			= gnupg_encrypt($_Application_Module_Member_Electronic_Mail_ENCRYPTED_MESSAGE_GNUPGP_INITIALIZE, "$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED");
+
+echo ("Done.<BR><BR>");
+
+echo ("
+														Electronic Mail Message :: Clear-Text :: UTF-8<BR>
+															<TEXTAREA ROWS=\"15\" COLS=\"75\">$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED</TEXTAREA><BR>
+														Electronic Mail Message :: Encrypted :: Pretty-Good-Privacy<BR>
+															<TEXTAREA ROWS=\"15\" COLS=\"75\">$_Application_Module_Member_Electronic_Mail_ENCRYPTED_MESSAGE_GNUPGP_ENCRYPT_DATA</TEXTAREA><BR><BR>
+");
+
+/*
+ ============================================================================================================
+ + IF: Mail: Send :: Encrypted :: Electronic Mail Message
+ ============================================================================================================
+*/
+
+if(mail($_Application_Module_Member_Electronic_Mail_LIST_MEMBER_ELECTRONIC_MAIL_ADDRESS,"P.G.P. Encrypted Electronic Mail Message From :: $_GLOBAL_COOKIE_MEMBER_USERNAME @ $_GLOBAL_SYSTEM_SITE_TITLE","
+Dear $_Application_Module_Member_Electronic_Mail_LIST_MEMBER_ELECTRONIC_MAIL_ADDRESS,
+----------------------------------------------------------------------------------------
+
+$_GLOBAL_COOKIE_MEMBER_USERNAME has sent you this Pretty-Good-Privacy Encrypted Private Electronic Message from the Electronic Mail Application Module:
+
+$_Application_Module_Member_Electronic_Mail_ENCRYPTED_MESSAGE_GNUPGP_ENCRYPT_DATA
+
+----------------------------------------------------------------------------------------
+Have a nice day,
+		    - $_GLOBAL_SYSTEM_SITE_TITLE
+
+Electronic Mail Message :: Details
+----------------------------------------------------------------------------------------
+- Network Information
+The Internet Protocol Address That Initiated This Electronic Mail Message Was :: Device :: This Web Server: $_GLOBAL_LOCAL_SERVER_ADDRESS
+The Internet Protocol Address That Initiated This Electronic Mail Message Was :: Device :: This Web Server :: Port Number: $_GLOBAL_LOCAL_SERVER_PORT
+The Internet Protocol Address That Initiated This Electronic Mail Message Was :: Device :: Connected Device: $_GLOBAL_REMOTE_SERVER_ADDRESS
+The Internet Protocol Address That Initiated This Electronic Mail Message Was :: Device :: Connected Device :: Port Number: $_GLOBAL_REMOTE_SERVER_PORT
+
+- Timestamp Information
+This Electronic Mail Message Timestamp Was :: This Web Server: $_GLOBAL_LOCAL_SERVER_DATE_STANDARD
+This Electronic Mail Message Timestamp Was :: Connected Device: $_GLOBAL_LOCAL_SERVER_TIME_UNIX
+
+- Digital Fingerprint Information
+This Electronic Mail Message Unique Fingerprint :: Secure Hash Algorithm, 256: $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED_HASH_SHA_256
+The Document Root Was: $_GLOBAL_LOCAL_SERVER_DOCUMENT_ROOT
+")) {
+
+											echo ($_Application_Module_Member_Message_Electronic_Mail_SEND);
+
+} else {
+
+											echo ($_Application_Module_Member_Message_Electronic_Mail_SEND_ERROR);
+
+} // [ + ] IF: Mail: Send :: Encrypted Electronic Mail Message Notification
+
+} // [ + ] IF: Send :: Encrypted Electronic Mail Message :: Input Form :: Variables :: HAVE Executed
+
+} // [ + ] IF: Internal Application: Encrypted Electronic Mail Message :: Registered Member Account :: Is: Activated
+
+} // [ + ] WHILE: Retrieving :: Electronic Mail Addresses From Database Management System Server Database
+
+/*
+ ============================================================================================================
+ + Kill SQL Database Server Query: Select :: Electronic Mail Addresses From Registered Member Accounts
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Member_Electronic_Mail_DB_Query_SELECT_MEMBERS->free_result();
+?>
