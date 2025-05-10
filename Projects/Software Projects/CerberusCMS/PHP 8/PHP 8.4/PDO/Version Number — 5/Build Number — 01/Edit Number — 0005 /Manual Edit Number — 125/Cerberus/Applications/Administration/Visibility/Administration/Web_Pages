@@ -63,9 +63,9 @@
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Web_Pages_POST_LINK_NAME				= $_POST['AMA_Web_Pages_Install_Link_Name'];
-$_Application_Module_Administration_Web_Pages_POST_LINK_URL				= $_POST['AMA_Web_Pages_Install_Link_URL'];
-$_Application_Module_Administration_Web_Pages_POST_LINK_TYPE				= $_POST['AMA_Web_Pages_Install_Link_Type'];
+$_Application_Module_Administration_Web_Pages_POST_HYPERLINK_NAME				= $_POST['AMA_Web_Pages_Install_Hyperlink_Name'];
+$_Application_Module_Administration_Web_Pages_POST_HYPERLINK_URL				= $_POST['AMA_Web_Pages_Install_Hyperlink_URL'];
+$_Application_Module_Administration_Web_Pages_POST_HYPERLINK_TYPE				= $_POST['AMA_Web_Pages_Install_Hyperlink_Type'];
 
 /*
  ============================================================================================================
@@ -81,28 +81,28 @@ $_Application_Module_Administration_Web_Pages_POST_LINK_TYPE				= $_POST['AMA_We
  ============================================================================================================
 */
 
-if (!$_Application_Module_Administration_Web_Pages_POST_LINK_NAME) {
+if (!$_Application_Module_Administration_Web_Pages_POST_HYPERLINK_NAME) {
 
 echo ("
 											<CENTER><B>Install Link Entry</B></CENTER><HR>
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 													Link Entry Name<BR>
-														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Install_Link_Name\" MAXLENGTH=\"250\"><BR>
+														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Install_Hyperlink_Name\" MAXLENGTH=\"250\"><BR>
 													Link Entry Uniform-Resource-Location<BR>
 													Where Does This Link Lead To ? Example: <I>My_Pictures.html</I> OR <I>My_Pictures.php</I> OR <I>$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;ApplicationFileName</I><BR>
-														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Install_Link_URL\" VALUE=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;\" MAXLENGTH=\"250\"><BR>
+														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Install_Hyperlink_URL\" VALUE=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;\" MAXLENGTH=\"250\"><BR>
 													Link Entry Type<BR>
-														<SELECT NAME=\"AMA_Web_Pages_Install_Link_Type\">
+														<SELECT NAME=\"AMA_Web_Pages_Install_Hyperlink_Type\">
 															<OPTION VALUE=\"1\">Custom Text / HTML Document</OPTION>
 															<OPTION VALUE=\"2\">Uploaded Application</OPTION>
 														</SELECT><BR>
-													<INPUT TYPE=\"submit\" VALUE=\"Install Link Entry\">
+													<INPUT TYPE=\"submit\" VALUE=\"Install Hyperlink Entry\">
 												</FORM><BR>
 ");
 
 } else {
 
-if ($_Application_Module_Administration_Web_Pages_POST_LINK_TYPE == 1) {
+if ($_Application_Module_Administration_Web_Pages_POST_HYPERLINK_TYPE == 1) {
 
 /*
  ============================================================================================================
@@ -110,7 +110,7 @@ if ($_Application_Module_Administration_Web_Pages_POST_LINK_TYPE == 1) {
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_LINK			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_links(application_link_name,application_link_row,application_link_url)VALUES('$_Application_Module_Administration_Web_Pages_POST_LINK_NAME','1','?$_APPLICATION_MODULE_CUSTOM=$_Application_Module_Administration_Web_Pages_POST_LINK_URL')");
+$_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_LINK			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks(application_link_name,application_link_row,application_link_url)VALUES('$_Application_Module_Administration_Web_Pages_POST_HYPERLINK_NAME','1','?$_APPLICATION_MODULE_CUSTOM=$_Application_Module_Administration_Web_Pages_POST_HYPERLINK_URL')");
 
 } // [ + ] IF: Link Type IS Option: 1
 
@@ -120,9 +120,9 @@ $_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_LINK			= $_GLOBAL
  ============================================================================================================
 */
 
-if ($_Application_Module_Administration_Web_Pages_POST_LINK_TYPE == 2) {
+if ($_Application_Module_Administration_Web_Pages_POST_HYPERLINK_TYPE == 2) {
 
-$_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_LINK			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_links(application_link_name,application_link_row,application_link_url)VALUES('$_Application_Module_Administration_Web_Pages_POST_LINK_NAME','1','$_Application_Module_Administration_Web_Pages_POST_LINK_URL')");
+$_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_LINK			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks(application_link_name,application_link_row,application_link_url)VALUES('$_Application_Module_Administration_Web_Pages_POST_HYPERLINK_NAME','1','$_Application_Module_Administration_Web_Pages_POST_HYPERLINK_URL')");
 
 } // [ + ] IF: Link Type IS Option: 2
 
@@ -152,7 +152,7 @@ if ($_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_LINK) {
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_links ORDER BY application_link_row ASC");
+$_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks ORDER BY application_link_row ASC");
 $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS_NUMBER_OF_ROWS	= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS->num_rows;
 
 if ($_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS_NUMBER_OF_ROWS <= 0) {
@@ -161,7 +161,7 @@ if ($_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS_NUMBER_O
 
 } else {
 
-											echo ("<HR><CENTER><B>Existing Link Entries</B></CENTER><HR>");
+											echo ("<HR WIDTH=\"50%\" ALIGN=\"CENTER\"><CENTER><B>Existing Application Hyper-Link Entries</B></CENTER><HR WIDTH=\"50%\" ALIGN=\"CENTER\">");
 
 /*
  ============================================================================================================
@@ -371,7 +371,7 @@ echo ("
 													Custom Web Page :: Data<BR>
 												$_GLOBAL_PLUGIN_SYSTEM_TEXTEDITOR_BUTTONS<BR>
 														<TEXTAREA ROWS=\"15\" COLS=\"75\" NAME=\"AMA_Web_Pages_Install_Web_Page_Data\" ID=\"WYSIWYG\"></TEXTAREA><BR>
-													<INPUT TYPE=\"submit\" VALUE=\"Install Custom Application\">
+													<INPUT TYPE=\"submit\" VALUE=\"Install Web Page\">
 												</FORM>
 ");
 
