@@ -78,9 +78,10 @@ if ($_GET["Display"] == "Options") {
 echo ("
 Hardware :: Device :: Testing
 <HR ALIGN=\"LEFT\" WIDTH=\"25%\">
-* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Devices&amp;DeviceTest&#61;Camera_Microphone&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Hardware Device Testing :: Camera and Microphone ::\">Hardware :: Device :: Testing :: Camera and Microphone</A><BR>
-* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Devices&amp;DeviceTest&#61;Camera&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Hardware Device Testing :: Camera ::\">Hardware :: Device :: Testing :: Camera</A><BR>
-* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Devices&amp;DeviceTest&#61;Microphone&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Hardware Device Testing :: Microphone ::\">Hardware :: Device :: Testing :: Microphone</A><BR>
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Devices&amp;DeviceTest&#61;Camera_Microphone&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Testing and Debugging :: Hardware :: Device :: Chip :: Camera and Microphone ::\">Testing and Debugging :: Hardware :: Device :: Chip :: Camera and Microphone</A><BR>
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Devices&amp;DeviceTest&#61;Camera&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Testing and Debugging :: Hardware :: Device :: Chip :: Camera ::\">Testing and Debugging :: Hardware :: Device :: Chip :: Camera</A><BR>
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Devices&amp;DeviceTest&#61;Microphone&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Testing and Debugging :: Hardware :: Device :: Chip :: Microphone ::\">Testing and Debugging :: Hardware :: Device :: Chip :: Microphone</A><BR>
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Devices&amp;DeviceTest&#61;GPS&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Testing and Debugging :: Hardware :: Device :: Chip :: Global-Positioning-System Coordinates ::\">Testing and Debugging :: Hardware :: Device :: Chip :: Global-Positioning-System Coordinates</A><BR>
 ");
 
 } // [ + ] IF: Internal Application: Display :: Options
@@ -96,16 +97,18 @@ Hardware :: Device :: Testing
 if ($_GET["DeviceTest"] == "Camera_Microphone") {
 
 echo ("
-    <div>
-      <button type=\"button\" id=\"buttonStart\">Start</button>
-      <button type=\"button\" id=\"buttonStop\" disabled>Stop</button>
-    </div>
-    <div>
-      <video autoplay muted playsinline id=\"videoLive\"></video>
-    </div>
-    <div>
-      <video controls playsinline id=\"videoRecorded\"></video>
-    </div>
+			<DIV>
+				<BUTTON TYPE=\"button\" ID=\"buttonStart\">Start</button>
+				<BUTTON TYPE=\"button\" ID=\"buttonStop\" disabled>Stop</button>
+			</DIV>
+
+			<DIV>
+				<VIDEO AUTOPLAY MUTED PLAYSINLINE ID=\"videoLive\"></VIDEO>
+			</DIV>
+
+			<DIV>
+				<VIDEO CONTROLS PLAYSINLINE ID=\"videoRecorded\"></VIDEO>
+			</DIV>
 ");
 
 echo ($_Application_Module_PlugIn_Camera_DEVICE_TEST);
@@ -123,16 +126,18 @@ echo ($_Application_Module_PlugIn_Camera_DEVICE_TEST);
 if ($_GET["DeviceTest"] == "Camera") {
 
 echo ("
-    <div>
-      <button type=\"button\" id=\"buttonStart\">Start</button>
-      <button type=\"button\" id=\"buttonStop\" disabled>Stop</button>
-    </div>
-    <div>
-      <video autoplay muted playsinline id=\"videoLive\"></video>
-    </div>
-    <div>
-      <video controls playsinline id=\"videoRecorded\"></video>
-    </div>
+			<DIV>
+				<BUTTON TYPE=\"button\" ID=\"buttonStart\">Start</button>
+				<BUTTON TYPE=\"button\" ID=\"buttonStop\" disabled>Stop</button>
+			</DIV>
+
+			<DIV>
+				<VIDEO AUTOPLAY MUTED PLAYSINLINE ID=\"videoLive\"></VIDEO>
+			</DIV>
+
+			<DIV>
+				<VIDEO CONTROLS PLAYSINLINE ID=\"videoRecorded\"></VIDEO>
+			</DIV>
 ");
 
 echo ($_Application_Module_PlugIn_Camera_DEVICE_TEST_2);
@@ -146,4 +151,60 @@ echo ($_Application_Module_PlugIn_Camera_DEVICE_TEST_2);
  +
  ============================================================================================================
 */
+
+/*
+ ============================================================================================================
+ +
+ + [ @ ] IF: Internal Application: Device Test :: Global-Positioning-System Coordinates Chip
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["DeviceTest"] == "GPS") {
+
+echo ("
+<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Devices&amp;DeviceTest&#61;GPS\" METHOD=\"POST\">
+      <INPUT TYPE=\"hidden\" NAME=\"latitude\" ID=\"latitude\">
+      <INPUT TYPE=\"hidden\" NAME=\"longitude\" ID=\"longitude\">
+      <INPUT TYPE=\"submit\" NAME=\"submit\" VALUE=\"Display Current G.P.S. Coordinates\">
+</FORM>
+ 
+<SCRIPT TYPE=\"text/javascript\">
+	function getLocation() {
+		navigator.geolocation.getCurrentPosition(showPosition);
+}
+ 
+function showPosition(position) {
+	document.querySelector('#latitude').value = position.coords.latitude;
+	document.querySelector('#longitude').value = position.coords.longitude;
+}
+ 
+getLocation();
+</SCRIPT>
+");
+
+/*
+ ============================================================================================================
+ + IF: Internal Application: Device Test :: Global-Positioning-System Coordinates :: Chip :: Input Form :: Variables HAVE Executed, Display: G.P.S. Chip Location
+ ============================================================================================================
+*/
+ 
+if (isset($_POST['submit'])) {
+
+$_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LATITUDE					= $_POST['latitude'];
+$_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LONGITUDE					= $_POST['longitude'];
+
+echo ("
+		<BR><HR WIDTH=\"25%\" ALIGN=\"LEFT\">
+			Global-Positioning-System Coordinates :: Current
+		<HR WIDTH=\"25%\" ALIGN=\"LEFT\">
+			Global-Positioning-System Coordinates :: Device :: Chip: Latitude: $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LATITUDE<BR>
+			Global-Positioning-System Coordinates :: Device :: Chip: Longitude: $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LONGITUDE<BR>
+			Global-Positioning-System Coordinates :: Device :: Chip: Altitude To Sea-Level: $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_ALTITUDE<BR>
+			Highlight and Copy Together: $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LATITUDE, $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LONGITUDE<BR>
+");
+
+} // [ + ] IF: Internal Application: Device Test :: Global-Positioning-System Coordinates :: Chip :: Input Form :: Variables HAVE Executed, Display: G.P.S. Chip Location
+
+} // [ + ] IF: Internal Application: Device Test :: Global-Positioning-System Coordinates :: Chip :: Is: Activated
 ?>
