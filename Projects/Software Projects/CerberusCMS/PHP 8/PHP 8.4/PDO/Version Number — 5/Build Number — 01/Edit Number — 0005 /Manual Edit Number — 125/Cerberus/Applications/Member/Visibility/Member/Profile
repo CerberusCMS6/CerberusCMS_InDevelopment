@@ -1273,8 +1273,8 @@ echo ("
 												<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
 													<B>Location :: Last-Known :: Device-Reported :: Global-Positioning-System</B>
 												<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
-													&nbsp;*&nbsp;<B>Location :: Last Exact Device-Reported :: Global-Positioning-System In X, Y, Z :: From H.T.M.L.</B>: <I><A HREF=\"https://www.Google.com/maps/place/$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_Y\" TITLE=\":: Open & Display :: The Log File For :: The Detailed Device-Reported :: From H.T.M.L. :: Global-Positioning-System Coordinates In: X, Y, Z ::\" TARGET=\"_NEW\">$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_Y :: $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_Z</A></I><BR>
-													&nbsp;*&nbsp;<B>Location :: Last Exact Device-Reported :: Global-Positioning-System In X, Y, Z :: From P.H.P.</B>: <I><A HREF=\"https://www.Google.com/maps/place/$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_Y\" TITLE=\":: Open & Display :: The Log File For :: The Detailed Device-Reported :: From P.H.P. :: Global-Positioning-System Coordinates In: X, Y, Z ::\" TARGET=\"_NEW\">$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_Y :: $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_Z</A></I><BR><BR>
+													&nbsp;*&nbsp;<B>Location :: Last Exact Device-Reported :: Global-Positioning-System Coordinates In X, Y, Z :: From H.T.M.L.</B>: <I><A HREF=\"https://www.Google.com/maps/place/$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_Y\" TITLE=\":: Open & Display :: The Log File For :: The Detailed Device-Reported :: From H.T.M.L. :: Global-Positioning-System Coordinates In: X, Y, Z ::\" TARGET=\"_NEW\">$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_Y :: $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_Z</A></I><BR>
+													&nbsp;*&nbsp;<B>Location :: Last Exact Device-Reported :: Global-Positioning-System Coordinates In X, Y, Z :: From P.H.P.</B>: <I><A HREF=\"https://www.Google.com/maps/place/$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_Y\" TITLE=\":: Open & Display :: The Log File For :: The Detailed Device-Reported :: From P.H.P. :: Global-Positioning-System Coordinates In: X, Y, Z ::\" TARGET=\"_NEW\">$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_Y :: $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_Z</A></I><BR><BR>
 
 												<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
 													<B>Location :: Last-Known :: Device-Reported :: Geographical-Localization-Objects</B>
@@ -1340,8 +1340,8 @@ echo ("
 												<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
 													<B>Location :: Last-Known :: Device-Reported :: Global-Positioning-System</B>
 												<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
-													&nbsp;*&nbsp;<B>Location :: Last Exact Device-Reported :: Global-Positioning-System In X, Y, Z :: From H.T.M.L.</B>: <I><A HREF=\"https://www.Google.com/maps/place/$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_Y\" TITLE=\":: Open & Display :: The Log File For :: The Detailed Device-Reported :: From H.T.M.L. :: Global-Positioning-System Coordinates In: X, Y, Z ::\" TARGET=\"_NEW\">$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_Y :: $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_Z</A></I><BR>
-													&nbsp;*&nbsp;<B>Location :: Last Exact Device-Reported :: Global-Positioning-System In X, Y, Z :: From P.H.P.</B>: <I><A HREF=\"https://www.Google.com/maps/place/$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_Y\" TITLE=\":: Open & Display :: The Log File For :: The Detailed Device-Reported :: From P.H.P. :: Global-Positioning-System Coordinates In: X, Y, Z ::\" TARGET=\"_NEW\">$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_Y :: $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_Z</A></I><BR><BR>
+													&nbsp;*&nbsp;<B>Location :: Last Exact Device-Reported :: Global-Positioning-System Coordinates In X, Y, Z :: From H.T.M.L.</B>: <I><A HREF=\"https://www.Google.com/maps/place/$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_Y\" TITLE=\":: Open & Display :: The Log File For :: The Detailed Device-Reported :: From H.T.M.L. :: Global-Positioning-System Coordinates In: X, Y, Z ::\" TARGET=\"_NEW\">$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_Y :: $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_Z</A></I><BR>
+													&nbsp;*&nbsp;<B>Location :: Last Exact Device-Reported :: Global-Positioning-System Coordinates In X, Y, Z :: From P.H.P.</B>: <I><A HREF=\"https://www.Google.com/maps/place/$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_Y\" TITLE=\":: Open & Display :: The Log File For :: The Detailed Device-Reported :: From P.H.P. :: Global-Positioning-System Coordinates In: X, Y, Z ::\" TARGET=\"_NEW\">$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_Y :: $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_Z</A></I><BR><BR>
 
 												<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
 													<B>Location :: Last-Known :: Device-Reported :: Geographical-Localization-Objects</B>
@@ -1419,8 +1419,8 @@ echo ("
 												<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
 													<B>Location :: Last-Known :: Device-Reported :: Global-Positioning-System</B>
 												<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
-													&nbsp;*&nbsp;<B>Location :: Last Exact Device-Reported :: Global-Positioning-System In X, Y, Z :: From H.T.M.L.</B>: <I><A HREF=\"https://www.Google.com/maps/place/$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_Y\" TITLE=\":: Open & Display :: The Log File For :: The Detailed Device-Reported :: From H.T.M.L. :: Global-Positioning-System Coordinates In: X, Y, Z ::\" TARGET=\"_NEW\">$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_Y :: $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_Z</A></I><BR>
-													&nbsp;*&nbsp;<B>Location :: Last Exact Device-Reported :: Global-Positioning-System In X, Y, Z :: From P.H.P.</B>: <I><A HREF=\"https://www.Google.com/maps/place/$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_Y\" TITLE=\":: Open & Display :: The Log File For :: The Detailed Device-Reported :: From P.H.P. :: Global-Positioning-System Coordinates In: X, Y, Z ::\" TARGET=\"_NEW\">$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_Y :: $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_Z</A></I><BR><BR>
+													&nbsp;*&nbsp;<B>Location :: Last Exact Device-Reported :: Global-Positioning-System Coordinates In X, Y, Z :: From H.T.M.L.</B>: <I><A HREF=\"https://www.Google.com/maps/place/$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_Y\" TITLE=\":: Open & Display :: The Log File For :: The Detailed Device-Reported :: From H.T.M.L. :: Global-Positioning-System Coordinates In: X, Y, Z ::\" TARGET=\"_NEW\">$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_Y :: $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_HTML_GPS_Z</A></I><BR>
+													&nbsp;*&nbsp;<B>Location :: Last Exact Device-Reported :: Global-Positioning-System Coordinates In X, Y, Z :: From P.H.P.</B>: <I><A HREF=\"https://www.Google.com/maps/place/$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_Y\" TITLE=\":: Open & Display :: The Log File For :: The Detailed Device-Reported :: From P.H.P. :: Global-Positioning-System Coordinates In: X, Y, Z ::\" TARGET=\"_NEW\">$_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_X, $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_Y :: $_Application_Module_Member_Profile_LIST_MEMBER_LOCATION_DEVICE_PHP_GPS_Z</A></I><BR><BR>
 
 												<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
 													<B>Location :: Last-Known :: Device-Reported :: Geographical-Localization-Objects</B>
@@ -2805,44 +2805,44 @@ if ($_GET["Search"] == "GPS") {
  ============================================================================================================
 */
 
-$_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_YEAR							= $_POST['AMM_Profile_GPS_Coorindates_Logs_Search_Specify_Date_Year'];
-$_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_MONTH							= $_POST['AMM_Profile_GPS_Coorindates_Logs_Search_Specify_Date_Month'];
-$_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_MONTH_DAY						= $_POST['AMM_Profile_GPS_Coorindates_Logs_Search_Specify_Date_Month_Day'];
+$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_YEAR						= $_POST['AMM_Profile_GPS_Coorindates_Logs_GPS_Search_Specify_Date_Year'];
+$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH						= $_POST['AMM_Profile_GPS_Coorindates_Logs_GPS_Search_Specify_Date_Month'];
+$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH_DAY						= $_POST['AMM_Profile_GPS_Coorindates_Logs_GPS_Search_Specify_Date_Month_Day'];
 
 if (!$_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_MONTH_DAY) {
 
 echo ("
-												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME&amp;Display&#61;Log&amp;Search&#61;Interaction&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME&amp;Display&#61;Log&amp;Search&#61;GPS&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 													<I><B>Log :: G.P.S. Coordinates Log :: Search :: Select Date</B></I>:<BR>
 													Year:<BR>
-														<INPUT TYPE=\"year\" NAME=\"AMM_Profile_Logs_Search_Specify_Date_Year\" VALUE=\"$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL\" MAXLENGTH=\"4\"><BR>
+														<INPUT TYPE=\"year\" NAME=\"AMM_Profile_Logs_GPS_Search_Specify_Date_Year\" VALUE=\"$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL\" MAXLENGTH=\"4\"><BR>
 													Month:<BR>
-														<INPUT TYPE=\"text\" NAME=\"AMM_Profile_Logs_Search_Specify_Date_Month\" VALUE=\"$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL\" MAXLENGTH=\"2\"><BR>
+														<INPUT TYPE=\"text\" NAME=\"AMM_Profile_Logs_GPS_Search_Specify_Date_Month\" VALUE=\"$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL\" MAXLENGTH=\"2\"><BR>
 													Day:<BR>
-														<INPUT TYPE=\"text\" NAME=\"AMM_Profile_Logs_Search_Specify_Date_Month_Day\" VALUE=\"$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_DAY_FULL\" MAXLENGTH=\"2\"><BR>
+														<INPUT TYPE=\"text\" NAME=\"AMM_Profile_Logs_GPS_Search_Specify_Date_Month_Day\" VALUE=\"$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_DAY_FULL\" MAXLENGTH=\"2\"><BR>
 													<INPUT TYPE=\"submit\" VALUE=\"Select Date\">
 												</FORM>
 ");
 
 } else {
 
-$_Application_Module_Member_Profile_POST_LOGS_INTERACTION_SEARCH_DATE_CONTENTS_FILE				= file_get_contents("./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/$_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_YEAR/$_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_MONTH/$_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_MONTH_DAY/Log_Member_Raw.txt");
-$_Application_Module_Member_Profile_POST_LOGS_INTERACTION_SEARCH_DATE_CONTENTS_HASH				= hash_file('sha256', "./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/$_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_YEAR/$_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_MONTH/$_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_MONTH_DAY/Log_Member_Raw.txt");
+$_Application_Module_Member_Profile_POST_LOGS_GPS_INTERACTION_SEARCH_DATE_CONTENTS_FILE				= file_get_contents("./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_YEAR/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH_DAY/Log_Member_GPS_Coordinates_HTML_Manual.html");
+$_Application_Module_Member_Profile_POST_LOGS_GPS_INTERACTION_SEARCH_DATE_CONTENTS_HASH				= hash_file('sha256', "./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_YEAR/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH_DAY/Log_Member_GPS_Coordinates_HTML_Manual.html");
 
-if (file_exists("./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/$_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_YEAR/$_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_MONTH/$_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_MONTH_DAY/Log_Member_Raw.txt")) {
+if (file_exists("./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_YEAR/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH_DAY/Log_Member_GPS_Coordinates_HTML_Manual.html")) {
 
 echo ("
-											Log :: Interaction Log :: For Selected Date :: Year: $_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_YEAR - Month: $_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_MONTH - Day: $_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_MONTH_DAY<BR>
-											File Integrity :: Secure-Hash-Algorithm, 256 :: Current File: $_Application_Module_Member_Profile_POST_LOGS_INTERACTION_SEARCH_DATE_CONTENTS_HASH<BR>
+											Log :: Interaction Log :: For Selected Date :: Year: $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_YEAR - Month: $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH - Day: $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH_DAY<BR>
+											File Integrity :: Secure-Hash-Algorithm, 256 :: Current File: $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_DATE_CONTENTS_HASH<BR>
 
 											<FORM>
-												<TEXTAREA ROWS=\"20\" COLS=\"125\">$_Application_Module_Member_Profile_POST_LOGS_INTERACTION_SEARCH_DATE_CONTENTS_FILE</TEXTAREA>
+												<TEXTAREA ROWS=\"20\" COLS=\"125\">$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_DATE_CONTENTS_FILE</TEXTAREA>
 											</FORM>
 ");
 
 } else {
 
-											echo ("Kernel Message: Log File: Global-Positioning-System Coordinates Does Not Exist For The Selected Date.<BR><BR>");
+											echo ("Kernel Message: Log File: Global-Positioning-System Coordinates Log File Does Not Exist For The Selected Date.<BR><BR>");
 											
 } // [ + ] IF: File Exists: Registered Member Account :: File :: Log File :: Global-Positioning-System Coordinates
 
