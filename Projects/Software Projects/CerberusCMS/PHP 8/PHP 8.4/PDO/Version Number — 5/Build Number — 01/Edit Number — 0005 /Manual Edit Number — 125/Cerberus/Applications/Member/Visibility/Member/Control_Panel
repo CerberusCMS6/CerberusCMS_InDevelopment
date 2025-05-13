@@ -973,11 +973,10 @@ if ($_GET["Display"] == "Interaction_Log") {
 if (file_exists("$_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_INTERACTION_LOG")) {
 
 echo ("
-		<HR><BR><BR>
-		------------------------------------------------------------------<BR>
-		Registered Member Account Activity and Interaction Log :: $_GLOBAL_LOCAL_SERVER_DATE<BR>
+		<BR><BR><HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+		Registered Member Account Activity and Interaction Log :: Retrieved: $_GLOBAL_LOCAL_SERVER_DATE_STANDARD<BR>
+		<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
 		Activity and Interaction Log File For: $_GLOBAL_COOKIE_MEMBER_USERNAME<BR>
-		------------------------------------------------------------------<BR>
 		Interaction Log File HASH, Secure-Hash-Algorithm, 256: $_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_INTERACTION_LOG_CONTENTS_HASH_SHA256
 		<FORM>
 			<TEXTAREA ROWS=\"20\" COLS=\"100\">$_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_INTERACTION_LOG_CONTENTS</TEXTAREA>
