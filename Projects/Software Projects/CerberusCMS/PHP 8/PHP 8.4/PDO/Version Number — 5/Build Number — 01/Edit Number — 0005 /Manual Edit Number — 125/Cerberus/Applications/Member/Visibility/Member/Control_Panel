@@ -96,13 +96,13 @@ $_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_INTERACTION_LOG_CONT
 
 /*
  ============================================================================================================
- + Registered Member Account :: Control Panel :: Variables :: Log :: Location Log
+ + Registered Member Account :: Control Panel :: Variables :: Log :: Location :: Global-Positioning-System Coordinates :: From H.T.M.L. :: Manual
  ============================================================================================================
 */
 
-$_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_LOCATION_LOG				= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Activity_Logging/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_DAY_FULL/Log_Member_Raw.txt";
-$_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_LOCATION_LOG_CONTENTS			= file_get_contents($_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_LOCATION_LOG);
-$_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_LOCATION_LOG_CONTENTS_HASH_SHA256		= hash_file('sha256', $_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_LOCATION_LOG);
+$_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_LOCATION_GPS_HTML_LOG			= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Activity_Logging/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_DAY_FULL/Log_Member_GPS_Coordinates_HTML_Manual.txt";
+$_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_LOCATION_GPS_HTML_CONTENTS			= file_get_contents($_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_LOCATION_GPS_HTML_LOG);
+$_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_LOCATION_GPS_HTML_CONTENTS_HASH_SHA256	= hash_file('sha256', $_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_LOCATION_GPS_HTML_LOG);
 
 /*
  ============================================================================================================
@@ -440,7 +440,16 @@ $_Application_Module_Control_Panel_Log_Member_GPS_Coordinates_HTML_Manual_FIND_F
 $_Application_Module_Control_Panel_Log_Member_GPS_Coordinates_HTML_Manual_OPEN_FILE_NAME		= fopen("$_Application_Module_Control_Panel_Log_Member_GPS_Coordinates_HTML_Manual_FIND_FILE_NAME", "a");
 
 if (fwrite($_Application_Module_Control_Panel_Log_Member_GPS_Coordinates_HTML_Manual_OPEN_FILE_NAME, "
-$_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LATITUDE, $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LONGITUDE<BR>
+-----------------------------------------------------------------------------------------------
+- Global-Positioning-System Coordinates Log Entry
+-----------------------------------------------------------------------------------------------
+* Global-Positioning-System Coordinates :: Timestamp :: Device :: This Web Server: $_GLOBAL_LOCAL_SERVER_DATE_STANDARD
+* Global-Positioning-System Coordinates :: Timestamp :: Device :: Connected Device: $_GLOBAL_LOCAL_SERVER_TIME_UNIX
+* Latitude: $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LATITUDE
+* Longitude: $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LONGITUDE
+* Altitude: $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_ALTITUDE
+* Highlight and Copy Together: $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LATITUDE, $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LONGITUDE
+
 ")) {
 
 echo ("*&nbsp;Global-Posititioning-System Coordinates Manually Inserted Into Log File.<BR>");
@@ -955,17 +964,17 @@ if ($_GET["Display"] == "Location_Log") {
  ============================================================================================================
 */
 
-if (file_exists("$_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_LOCATION_LOG")) {
+if (file_exists("$_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_LOCATION_GPS_HTML_LOG")) {
 
 echo ("
 		<HR><BR><BR>
 		------------------------------------------------------------------<BR>
-		Registered Member Account Activity and Location Log :: $_GLOBAL_LOCAL_SERVER_DATE<BR>
-		Activity and Location Log File For: $_GLOBAL_COOKIE_MEMBER_USERNAME<BR>
+		Registered Member Account :: Log File :: Location :: Global-Positioning-System Coordinates :: Manually :: $_GLOBAL_LOCAL_SERVER_DATE<BR>
+		Global-Positioning-System Coordinates Location Log File For: $_GLOBAL_COOKIE_MEMBER_USERNAME<BR>
 		------------------------------------------------------------------<BR>
-		Location Log File HASH, Secure-Hash-Algorithm, 256: $_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_LOCATION_LOG_CONTENTS_HASH_SHA256
+		Location Log File HASH, Secure-Hash-Algorithm, 256: $_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_LOCATION_GPS_HTML_CONTENTS_HASH_SHA256
 		<FORM>
-			<TEXTAREA ROWS=\"20\" COLS=\"100\">$_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_LOCATION_LOG_CONTENTS</TEXTAREA>
+			<TEXTAREA ROWS=\"20\" COLS=\"100\">$_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_LOCATION_GPS_HTML_CONTENTS</TEXTAREA>
 		</FORM>
 ");
 
