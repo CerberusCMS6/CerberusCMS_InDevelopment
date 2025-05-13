@@ -80,7 +80,7 @@ if ($_GET["Display"] == "All") {
  ============================================================================================================
 */
 
-$_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_custom ORDER BY id DESC");
+$_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_web_pages ORDER BY id DESC");
 $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_NUMBER_OF_ROWS	= $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES->num_rows;
 
 /*
@@ -108,9 +108,11 @@ if ($_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_NUMBE
 while ($_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array = $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES->fetch_array(MYSQLI_BOTH)) {
 
 $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_ID						= $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array['id'];
+$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_AUTHOR						= $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array['custom_application_author'];
 $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_DATA						= $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array['custom_application_data'];
 $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_NAME						= $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array['custom_application_name'];
-$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_TIMESTAMP					= $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array['custom_application_timestamp_installation'];
+$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_TIMESTAMP_INSTALLATION				= $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array['custom_application_timestamp_installation'];
+$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_TIMESTAMP_UPDATE				= $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array['custom_application_timestamp_update'];
 
 /*
  ============================================================================================================
@@ -119,7 +121,7 @@ $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_TIMESTAMP					= $_Application_Mo
 */
 
 echo ("
-* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_CUSTOM&#61;$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The :: Custom Web Page Entry :: $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_NAME ::\">$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_NAME</A><BR>
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Pages&amp;WebPageID&#61;$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The :: Custom Web Page Entry :: $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_NAME ::\">$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_NAME</A><BR>
 ");
 
 } // [ + ] WHILE: Retrieving All Custom Web Application Module Entries From The Database Management System Server
