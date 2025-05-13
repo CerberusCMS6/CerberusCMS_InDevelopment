@@ -532,6 +532,9 @@ $_PROJECT_STRING_NAME_EXTENDED						= "Cerberus Content Management System";
 $_PROJECT_STRING_NAME_SHORT						= "Cerberus";
 $_PROJECT_STRING_NAME_ROBOT_ELECTRONIC_MAIL				= "Cerberus";
 $_PROJECT_STRING_NAME_UNIX						= "CerberusCMS";
+$_PROJECT_STRING_DEFAULT_ACCOUNT_NAME_FIRST				= "Cerberus";
+$_PROJECT_STRING_DEFAULT_ACCOUNT_NAME_LAST				= "of Hades";
+$_PROJECT_STRING_DEFAULT_ACCOUNT_NAME_NICKNAME				= "CerberusCMS";
 
 /*
  ============================================================================================================
