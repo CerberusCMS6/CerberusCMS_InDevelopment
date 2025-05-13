@@ -492,6 +492,7 @@ $_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_VIDEO_PRO
 
 
 echo ("
+	<HR WIDTH=\"60%\" ALIGN=\"CENTER\">
 	<CENTER>
 	<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Audio&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Audio Gallery :: Management Options ::\">Audio</A> -
 	<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Document&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Document Gallery :: Management Options ::\">Document</A> -
@@ -499,7 +500,7 @@ echo ("
 	<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Video&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Video Gallery :: Management Options ::\">Video</A> -
 	<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;LiveVideo&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Live Video Gallery :: Management Options ::\">Live Video</A>
 	</CENTER>
-	<HR>
+	<HR WIDTH=\"60%\" ALIGN=\"CENTER\">
 ");
 
 /*
@@ -556,7 +557,7 @@ $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_DIR
  ============================================================================================================
 */
 
-if (!$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_DIRECTORY_TEMPORARY) {
+if (!$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_DIRECTORY || $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_DIRECTORY == "") {
 
 echo ("
 												<B>Gallery :: Audio :: Selection :: File :: Upload<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
