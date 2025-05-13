@@ -921,7 +921,7 @@ $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_
  ============================================================================================================
 */
 
-if (!$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_DIRECTORY_TEMPORARY) {
+if (!$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_DIRECTORY || $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_DIRECTORY == "") {
 
 echo ("
 												<B>Gallery :: Document :: Selection :: File :: Upload<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
@@ -1490,7 +1490,7 @@ $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_MUL
  ============================================================================================================
 */
 
-if (!$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_DIRECTORY_TEMPORARY) {
+if (!$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_DIRECTORY || $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_DIRECTORY == "") {
 
 echo ("
 												<B>Gallery :: Image :: Selection :: File :: Upload<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
