@@ -980,7 +980,7 @@ echo ("
 		------------------------------------------------------------------<BR>
 		Interaction Log File HASH, Secure-Hash-Algorithm, 256: $_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_INTERACTION_LOG_CONTENTS_HASH_SHA256
 		<FORM>
-			<TEXTAREA ROWS=\"20\" COLS=\"100\">$_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_INTERACTION_LOG</TEXTAREA>
+			<TEXTAREA ROWS=\"20\" COLS=\"100\">$_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_INTERACTION_LOG_CONTENTS</TEXTAREA>
 		</FORM>
 ");
 
