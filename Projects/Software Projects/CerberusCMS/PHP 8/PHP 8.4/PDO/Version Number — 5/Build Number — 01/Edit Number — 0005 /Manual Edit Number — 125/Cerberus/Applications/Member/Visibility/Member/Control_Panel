@@ -439,6 +439,15 @@ echo ("*&nbsp;The Current Global-Posititioning-System Coordinates Were Inserted 
 $_Application_Module_Control_Panel_Log_Member_GPS_Coordinates_HTML_Manual_FIND_FILE_NAME		= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Activity_Logging/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL/$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_DAY_FULL/Log_Member_GPS_Coordinates_HTML_Manual.html";
 $_Application_Module_Control_Panel_Log_Member_GPS_Coordinates_HTML_Manual_OPEN_FILE_NAME		= fopen("$_Application_Module_Control_Panel_Log_Member_GPS_Coordinates_HTML_Manual_FIND_FILE_NAME", "a");
 
+$_Application_Module_Control_Panel_Log_Member_GPS_Coordinates_HTML_Manual_RAW_FIND_FILE_NAME		= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Activity_Logging/Log_Member_GPS_Coordinates_Raw_Manual.php";
+$_Application_Module_Control_Panel_Log_Member_GPS_Coordinates_HTML_Manual_RAW_OPEN_FILE_NAME		= fopen("$_Application_Module_Control_Panel_Log_Member_GPS_Coordinates_HTML_Manual_RAW_FIND_FILE_NAME", "a");
+
+/*
+ ============================================================================================================
+ + IF: Write To File :: Registered Member Account :: Activity Log :: Raw Log :: Global-Positioning-System :: Coordinates :: H.T.M.L. :: Manual
+ ============================================================================================================
+*/
+
 if (fwrite($_Application_Module_Control_Panel_Log_Member_GPS_Coordinates_HTML_Manual_OPEN_FILE_NAME, "
 -----------------------------------------------------------------------------------------------<BR>
 - Global-Positioning-System Coordinates Log Entry<BR>
@@ -465,6 +474,39 @@ echo ("*&nbsp;The Current Global-Posititioning-System Coordinates Were Manually 
 */
 
 fclose($_Application_Module_Control_Panel_Log_Member_GPS_Coordinates_HTML_Manual_OPEN_FILE_NAME);
+
+/*
+ ============================================================================================================
+ + IF: Write To File :: Registered Member Account :: Activity Log :: Raw Log :: Global-Positioning-System :: Coordinates :: P.H.P. :: Manual
+ ============================================================================================================
+*/
+
+if (fwrite($_Application_Module_Control_Panel_Log_Member_GPS_Coordinates_HTML_Manual_RAW_OPEN_FILE_NAME, "
+-----------------------------------------------------------------------------------------------
+- Global-Positioning-System Coordinates Log Entry
+-----------------------------------------------------------------------------------------------
+* Global-Positioning-System Coordinates :: Timestamp :: Device :: This Web Server: $_GLOBAL_LOCAL_SERVER_DATE_STANDARD
+* Global-Positioning-System Coordinates :: Timestamp :: Device :: Connected Device: $_GLOBAL_LOCAL_SERVER_TIME_UNIX
+* Global-Positioning-System Coordinates :: Longitude: $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LATITUDE
+* Global-Positioning-System Coordinates :: Latitude: $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LONGITUDE
+* Global-Positioning-System Coordinates :: Altitude: $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_ALTITUDE
+* Internet Protocol Address :: Device :: This Web Server :: $_GLOBAL_LOCAL_SERVER_ADDRESS :: Port Number: $_GLOBAL_LOCAL_SERVER_PORT
+* Internet Protocol Address :: Device :: Connected Device :: $_GLOBAL_REMOTE_SERVER_ADDRESS :: Port Number: $_GLOBAL_REMOTE_SERVER_PORT
+* Highlight and Copy Together: $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LATITUDE, $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LONGITUDE
+* Google Maps: https://www.Google.com/maps/place/$_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LATITUDE, $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LONGITUDE
+")) {
+
+echo ("*&nbsp;The Current Global-Posititioning-System Coordinates Were Manually Inserted Into This Registered Member Account Log File.<BR>");
+
+} // [ + ] IF: Write To File :: Registered Member Account :: Activity Log :: Raw Log :: Global-Positioning-System :: Coordinates :: H.T.M.L. :: Manual
+
+/*
+ ============================================================================================================
+ + Close File :: Registered Member Account :: Activity Log :: Raw Log :: Global-Positioning-System :: Coordinates :: P.H.P. :: Manual
+ ============================================================================================================
+*/
+
+fclose($_Application_Module_Control_Panel_Log_Member_GPS_Coordinates_HTML_Manual_RAW_OPEN_FILE_NAME);
 
 } // [ + ] IF: Internal Application: Device Test :: Global-Positioning-System Coordinates :: Chip :: Input Form :: Variables HAVE Executed, Display: G.P.S. Chip Location
 
