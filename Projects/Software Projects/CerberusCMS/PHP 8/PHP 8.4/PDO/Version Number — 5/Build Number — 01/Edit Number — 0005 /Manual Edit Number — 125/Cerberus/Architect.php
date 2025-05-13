@@ -3522,6 +3522,7 @@ $_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
 web_page_author VARCHAR(50),
 web_page_data TEXT,
+web_page_name VARCHAR(250),
 web_page_timestamp_installation VARCHAR(100),
 web_page_timestamp_update VARCHAR(100),
 PRIMARY KEY (id)
@@ -5832,9 +5833,11 @@ copy("./System/Default/Friend/Friend.$_INTERNAL_FILE_EXTENSION","./Member/Master
 $_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_web_pages(
 web_page_author,
 web_page_data,
+web_page_name,
 web_page_timestamp_installation,
-web_page_timestamp_update,
+web_page_timestamp_update
 )VALUES(
+'Cerberus',
 'Hello and welcome to $_PROJECT_STRING_NAME_EXTENDED ! If you are reading this sentence then $_PROJECT_STRING_NAME_EXTENDED was successfully installed to this Web Server !',
 'Welcome !',
 '$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP',
