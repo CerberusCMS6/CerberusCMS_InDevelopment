@@ -500,7 +500,7 @@ echo ("
 	<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Video&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Video Gallery :: Management Options ::\">Video</A> -
 	<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;LiveVideo&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Live Video Gallery :: Management Options ::\">Live Video</A>
 	</CENTER>
-	<HR WIDTH=\"60%\" ALIGN=\"CENTER\">
+	<HR WIDTH=\"60%\" ALIGN=\"CENTER\"><BR>
 ");
 
 /*
@@ -560,7 +560,7 @@ $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_DIR
 if (!$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_DIRECTORY || $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_DIRECTORY == "") {
 
 echo ("
-												<B>Gallery :: Audio :: Selection :: File :: Upload<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Audio :: Selection :: File :: Upload<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
 											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Audio&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
 												
 												[ Maximum Audio File Upload Size: $_Application_Module_Member_Account_Data_MAXIMUM_UPLOAD_SIZE_FILE_AUDIO KB ]</B><BR>
@@ -707,7 +707,7 @@ copy("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Audio/Gallery/Backup/$_Appl
 */
 
 echo ("
-												<B>Gallery :: Audio :: Directory :: Create<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Audio :: Directory :: Create<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
 											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Audio&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
 													<INPUT TYPE=\"text\" NAME=\"AMM_Account_Data_Create_Directory_Gallery_Audio\" MAXLENGTH=\"50\"><BR>
 												<INPUT TYPE=\"submit\" VALUE=\"Create Audio Gallery\">
@@ -762,7 +762,7 @@ if (mkdir("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Audio/Gallery/Backup/$
 */
 
 echo ("
-												Gallery :: Audio :: Directory :: Delete<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\">Gallery :: Audio :: Directory :: Delete<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
 											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Audio&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 													<SELECT NAME=\"AMM_Account_Data_Delete_Directory_Gallery_Audio_Selection\">
 ");
@@ -924,7 +924,7 @@ $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_
 if (!$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_DIRECTORY || $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_DIRECTORY == "") {
 
 echo ("
-												<B>Gallery :: Document :: Selection :: File :: Upload<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Document :: Selection :: File :: Upload<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
 											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Document&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
 												[ Maximum Document File Upload Size: $_Application_Module_Member_Account_Data_MAXIMUM_UPLOAD_SIZE_FILE_DOCUMENT KB ]</B><BR>
 												Allowed File Extensions :: Document :: DOC, DOCX, PDF, PPT, TXT<BR>
@@ -1071,7 +1071,7 @@ copy("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Gallery/Backup/$_A
 */
 
 echo ("
-												<B>Gallery :: Document :: Directory :: Create<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Document :: Directory :: Create<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
 											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Document&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
 													<INPUT TYPE=\"text\" NAME=\"AMM_Account_Data_Create_Directory_Gallery_Document\" MAXLENGTH=\"50\"><BR>
 												<INPUT TYPE=\"submit\" VALUE=\"Create Gallery\">
@@ -1126,7 +1126,7 @@ if (mkdir("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Gallery/Backu
 */
 
 echo ("
-												Gallery :: Document :: Directory :: Delete<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\">Gallery :: Document :: Directory :: Delete<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
 											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Document&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 													<SELECT NAME=\"AMM_Account_Data_Delete_Directory_Gallery_Document_Selection\">
 ");
@@ -1270,7 +1270,7 @@ if ($_GET["Type"] == "Image") {
 if (!$_Application_Module_Member_Account_Data_POST_DELETE_FILE_GALLERY_IMAGE_PROFILE) {
 
 echo ("
-												<B>Gallery :: Image :: Profile Image :: File :: Delete</B><HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Image :: Profile Image :: File :: Delete</B><HR WIDTH=\"35%\" ALIGN=\"LEFT\">
 											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Image&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 													<SELECT NAME=\"AMM_Account_Data_Delete_File_Gallery_Image_Profile\">
 ");
@@ -1373,7 +1373,7 @@ $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_PROFILE_DIREC
 if (!$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_PROFILE_DIRECTORY_TEMPORARY) {
 
 echo ("
-												<BR><B>Gallery :: Image :: Profile Image :: File :: Upload<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<BR><HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Image :: Profile Image :: File :: Upload<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
 											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Image&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
 												[ Maximum Image File Upload Size: $_Application_Module_Member_Account_Data_MAXIMUM_UPLOAD_SIZE_FILE_IMAGE KB ]</B><BR>
 												Allowed File Extensions :: Image :: BMP, GIF, JPG, JPEG, PNG<BR>
@@ -1493,7 +1493,7 @@ $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_MUL
 if (!$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_DIRECTORY || $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_DIRECTORY == "") {
 
 echo ("
-												<B>Gallery :: Image :: Selection :: File :: Upload<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Image :: Selection :: File :: Upload<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
 											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Image&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
 												[ Maximum Image File Upload Size: $_Application_Module_Member_Account_Data_MAXIMUM_UPLOAD_SIZE_FILE_IMAGE KB ]</B><BR>
 												Allowed File Extensions :: Image :: BMP, GIF, JPG, JPEG, PNG<BR>
@@ -1630,8 +1630,7 @@ copy("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Image/Gallery/Backup/$_Appl
 */
 
 echo ("
-												<B>Gallery :: Image :: Directory :: Create</B>
-											<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Image :: Directory :: Create</B><HR WIDTH=\"35%\" ALIGN=\"LEFT\">
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Image&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 													<INPUT TYPE=\"text\" NAME=\"AMM_Account_Data_Create_Directory_Gallery_Image\" MAXLENGTH=\"50\"><BR>
 													<INPUT TYPE=\"submit\" VALUE=\"Create Gallery\">
@@ -1686,7 +1685,7 @@ if (mkdir("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Image/Gallery/Backup/$
 */
 
 echo ("
-												Gallery :: Image :: Directory :: Delete<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\">Gallery :: Image :: Directory :: Delete<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
 											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Image&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 													<SELECT NAME=\"AMM_Account_Data_Delete_Directory_Gallery_Image_Selection\">
 ");
@@ -1830,7 +1829,7 @@ if ($_GET["Type"] == "Video") {
 if (!$_Application_Module_Member_Account_Data_POST_DELETE_FILE_GALLERY_VIDEO_PROFILE_IMAGE) {
 
 echo ("
-												<B>Gallery :: Video :: Video Profile Image :: File :: Delete</B><HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Video :: Video Profile Image :: File :: Delete</B><HR WIDTH=\"35%\" ALIGN=\"LEFT\">
 											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Video&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 													<SELECT NAME=\"AMM_Account_Data_Delete_File_Gallery_Video_Profile_Image\">
 ");
@@ -1933,7 +1932,7 @@ $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE
 if (!$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_DIRECTORY_TEMPORARY) {
 
 echo ("
-												<BR><B>Gallery :: Video :: Profile Video Image :: File :: Upload<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<BR><HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Video :: Profile Video Image :: File :: Upload<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
 											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Video&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
 												[ Maximum Video File Upload Size: $_Application_Module_Member_Account_Data_MAXIMUM_UPLOAD_SIZE_FILE_VIDEO KB ]</B><BR>
 												Allowed File Extensions :: Video :: MOV, MP4, WAV, WEBM<BR>
@@ -2054,7 +2053,7 @@ $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_DIR
 if (!$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_DIRECTORY || $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_DIRECTORY == "") {
 
 echo ("
-												<B>Gallery :: Video :: Selection :: File :: Upload<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Video :: Selection :: File :: Upload<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
 											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Video&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
 												[ Maximum Video File Upload Size: $_Application_Module_Member_Account_Data_MAXIMUM_UPLOAD_SIZE_FILE_VIDEO KB ]</B><BR>
 												Allowed File Extensions :: Video :: MOV, MP4, WAV, WEBM<BR>
@@ -2192,7 +2191,7 @@ copy("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Video/Gallery/Backup/$_Appl
 */
 
 echo ("
-												<B>Gallery :: Video :: Directory :: Create<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Video :: Directory :: Create<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
 											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Video&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
 													<INPUT TYPE=\"text\" NAME=\"AMM_Account_Data_Create_Directory_Gallery_Video\" MAXLENGTH=\"50\"><BR>
 												<INPUT TYPE=\"submit\" VALUE=\"Create Gallery\">
@@ -2247,7 +2246,7 @@ if (mkdir("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Video/Gallery/Backup/$
 */
 
 echo ("
-												Gallery :: Video :: Directory :: Delete<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\">Gallery :: Video :: Directory :: Delete<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
 											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Video&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 													<SELECT NAME=\"AMM_Account_Data_Delete_Directory_Gallery_Video_Selection\">
 ");
