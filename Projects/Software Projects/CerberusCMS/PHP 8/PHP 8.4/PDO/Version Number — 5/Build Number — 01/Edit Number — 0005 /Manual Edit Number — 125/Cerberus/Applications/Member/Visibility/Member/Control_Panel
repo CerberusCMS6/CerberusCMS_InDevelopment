@@ -454,7 +454,7 @@ if (fwrite($_Application_Module_Control_Panel_Log_Member_GPS_Coordinates_HTML_Ma
 * Google Maps: <A HREF=\"https://www.Google.com/maps/place/$_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LATITUDE, $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LONGITUDE\" TITLE=\":: Open & Display :: Google Maps :: Global-Positioning-System Coordinates :: For :: $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LATITUDE, $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LONGITUDE\" TARGET=\"_NEW\">$_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LATITUDE, $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LONGITUDE</A><BR><BR>
 ")) {
 
-echo ("*&nbsp;The Current Global-Posititioning-System Coordinates Were Manually Inserted Into The Log File.<BR>");
+echo ("*&nbsp;The Current Global-Posititioning-System Coordinates Were Manually Inserted Into This Registered Member Account Log File.<BR>");
 
 } // [ + ] IF: Write To File :: Registered Member Account :: Activity Log :: Raw Log :: Global-Positioning-System :: Coordinates :: H.T.M.L. :: Manual
 
