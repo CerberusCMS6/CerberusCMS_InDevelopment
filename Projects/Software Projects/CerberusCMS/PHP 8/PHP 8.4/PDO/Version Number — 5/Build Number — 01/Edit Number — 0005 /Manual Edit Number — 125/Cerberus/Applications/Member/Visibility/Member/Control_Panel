@@ -194,6 +194,10 @@ echo ("
 <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Contacts&amp;Display&#61;All&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: This Registered Member Account :: Contact List and Options ::\"><IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Icon_Member/Icon_Account_Contacts.$_GLOBAL_SYSTEM_IMAGE_EXTENSION?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" HEIGHT=\"50\" WIDTH=\"50\"></IMG></A>&nbsp;
 <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Friend&amp;Display&#61;All&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: This Registered Member Account :: Friend List and Options ::\"><IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Icon_Member/Icon_Account_Friends.$_GLOBAL_SYSTEM_IMAGE_EXTENSION?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" HEIGHT=\"50\" WIDTH=\"50\"></IMG></A><BR><BR>
 
+<B>Registered Member Account :: Options :: Location</B><BR>
+<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Control_Panel&amp;Display&#61;LogGPS_Automatic&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: This Registered Member Account :: Location :: Log My Global-Positioning-System Coordinates :: Automatically ::\"><IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Icon_Member/Icon_LogGPS_Automatic.$_GLOBAL_SYSTEM_IMAGE_EXTENSION?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" HEIGHT=\"50\" WIDTH=\"50\"></IMG></A>&nbsp;
+<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Control_Panel&amp;Display&#61;LogGPS_Manual&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: This Registered Member Account :: Location :: Log My Global-Positioning-System Coordinates :: Manually ::\"><IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Icon_Member/Icon_LogGPS_Manual.$_GLOBAL_SYSTEM_IMAGE_EXTENSION?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" HEIGHT=\"50\" WIDTH=\"50\"></IMG></A><BR><BR>
+
 <B>Registered Member Account :: Options :: Messaging</B><BR>
 <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Messenger&amp;Display&#61;Conversations&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Send & Receive :: Instant Messenger :: Private Messages ::\"><IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Icon_Member/Icon_Account_Messages_Private_Messages.$_GLOBAL_SYSTEM_IMAGE_EXTENSION?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" HEIGHT=\"50\" WIDTH=\"50\"></IMG></A>&nbsp;
 <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Messenger&amp;Display&#61;MessengerOptions&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Send & Receive :: Instant Messenger :: Group Messages ::\"><IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Icon_Member/Icon_Account_Messages_Messenger.$_GLOBAL_SYSTEM_IMAGE_EXTENSION?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" HEIGHT=\"50\" WIDTH=\"50\"></IMG></A>&nbsp;
@@ -354,6 +358,73 @@ $DB->free($_Application_Module_Member_Control_Panel_DB_Query_UPDATE_MEMBERS);
 /*
  ============================================================================================================
  +
+ + IF: Internal Application: Display :: Location :: Log Global-Positioning-System Coordinates :: Manually
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Display"] == "LogGPS_Manual") {
+
+echo ("
+<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Control_Panel&amp;Display&#61;LogGPS_Manual\" METHOD=\"POST\">
+      <INPUT TYPE=\"hidden\" NAME=\"latitude\" ID=\"latitude\">
+      <INPUT TYPE=\"hidden\" NAME=\"longitude\" ID=\"longitude\">
+      <INPUT TYPE=\"submit\" NAME=\"submit\" VALUE=\"Display and Log Current G.P.S. Coordinates\">
+</FORM>
+ 
+<SCRIPT TYPE=\"text/javascript\">
+	function getLocation() {
+		navigator.geolocation.getCurrentPosition(showPosition);
+}
+ 
+function showPosition(position) {
+	document.querySelector('#latitude').value = position.coords.latitude;
+	document.querySelector('#longitude').value = position.coords.longitude;
+}
+ 
+getLocation();
+</SCRIPT>
+");
+
+/*
+ ============================================================================================================
+ + IF: Internal Application: Device Test :: Global-Positioning-System Coordinates :: Chip :: Input Form :: Variables HAVE Executed, Display: G.P.S. Chip Location
+ ============================================================================================================
+*/
+ 
+if (isset($_POST['submit'])) {
+
+$_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LATITUDE					= $_POST['latitude'];
+$_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LONGITUDE					= $_POST['longitude'];
+
+echo ("
+		<BR><HR WIDTH=\"25%\" ALIGN=\"LEFT\">
+			Global-Positioning-System Coordinates :: Current
+		<HR WIDTH=\"25%\" ALIGN=\"LEFT\">
+			*&nbsp;Global-Positioning-System Coordinates :: Device :: Chip: Latitude: $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LATITUDE<BR>
+			*&nbsp;Global-Positioning-System Coordinates :: Device :: Chip: Longitude: $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LONGITUDE<BR>
+			*&nbsp;Global-Positioning-System Coordinates :: Device :: Chip: Altitude To Sea-Level: $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_ALTITUDE<BR>
+			*&nbsp;Highlight and Copy Together: $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LATITUDE, $_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LONGITUDE<BR>
+");
+
+$_Application_Module_Member_ControlP_Panel_DB_Query_UPDATE_MEMBER_ACCOUNT_GPS_HTML_XYZ			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members SET
+member_location_device_html_gps_x='$_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LATITUDE',
+member_location_device_html_gps_y='$_Application_Module_Member_Devices_POST_DEVICE_TEST_GPS_CHIP_LONGITUDE'
+WHERE member_username='$_GLOBAL_COOKIE_MEMBER_USERNAME'");
+
+if ($_Application_Module_Member_ControlP_Panel_DB_Query_UPDATE_MEMBER_ACCOUNT_GPS_HTML_XYZ) {
+
+echo ("*&nbsp;Global-Posititioning-System Coordinates Database Entry Updated.<BR>");
+
+} // [ + ] IF: Database Management System Server :: Database :: Query :: Update :: Registered Member Account :: Global-Positioning-System :: Coordinates :: From :: Hyper-Text-Markup-Language :: Get Location
+
+} // [ + ] IF: Internal Application: Device Test :: Global-Positioning-System Coordinates :: Chip :: Input Form :: Variables HAVE Executed, Display: G.P.S. Chip Location
+
+} // [ + ] IF: Internal Application: Control Panel :: Registered Member Account :: Display :: Log Global-Positioning-System-Coordinates :: Manual :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
  + IF: Internal Application: Display :: Archive
  +
  ============================================================================================================
@@ -419,7 +490,7 @@ $_Application_Module_Member_Control_Panel_ARCHIVE_CREATE_ARCHIVE_INITIALIZE->clo
 
 } // [ + ] IF: Internal Application: Control Panel :: Registered Member Account :: Display :: Archive :: Option :: CreateArchive
 
-} // [ + ] IF: Internal Application: Control Panel :: Registered Member Account :: Display :: Archive
+} // [ + ] IF: Internal Application: Control Panel :: Registered Member Account :: Display :: Archive :: Is: Activated
 
 /*
  ============================================================================================================
