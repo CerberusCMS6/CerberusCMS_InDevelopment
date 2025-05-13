@@ -2809,25 +2809,26 @@ $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_YEAR						=
 $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH						= $_POST['AMM_Profile_GPS_Coorindates_Logs_GPS_Search_Specify_Date_Month'];
 $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH_DAY						= $_POST['AMM_Profile_GPS_Coorindates_Logs_GPS_Search_Specify_Date_Month_Day'];
 
-if (!$_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_MONTH_DAY) {
+if (!$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH_DAY) {
 
 echo ("
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME&amp;Display&#61;Log&amp;Search&#61;GPS&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 													<I><B>Log :: G.P.S. Coordinates Log :: Search :: Select Date</B></I>:<BR>
 													Year:<BR>
-														<INPUT TYPE=\"year\" NAME=\"AMM_Profile_Logs_GPS_Search_Specify_Date_Year\" VALUE=\"$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL\" MAXLENGTH=\"4\"><BR>
+														<INPUT TYPE=\"year\" NAME=\"AMM_Profile_GPS_Coorindates_Logs_GPS_Search_Specify_Date_Year\" VALUE=\"$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL\" MAXLENGTH=\"4\"><BR>
 													Month:<BR>
-														<INPUT TYPE=\"text\" NAME=\"AMM_Profile_Logs_GPS_Search_Specify_Date_Month\" VALUE=\"$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL\" MAXLENGTH=\"2\"><BR>
+														<INPUT TYPE=\"text\" NAME=\"AMM_Profile_GPS_Coorindates_Logs_GPS_Search_Specify_Date_Month\" VALUE=\"$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL\" MAXLENGTH=\"2\"><BR>
 													Day:<BR>
-														<INPUT TYPE=\"text\" NAME=\"AMM_Profile_Logs_GPS_Search_Specify_Date_Month_Day\" VALUE=\"$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_DAY_FULL\" MAXLENGTH=\"2\"><BR>
+														<INPUT TYPE=\"text\" NAME=\"AMM_Profile_GPS_Coorindates_Logs_GPS_Search_Specify_Date_Month_Day\" VALUE=\"$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_DAY_FULL\" MAXLENGTH=\"2\"><BR>
 													<INPUT TYPE=\"submit\" VALUE=\"Select Date\">
 												</FORM>
 ");
 
 } else {
 
-$_Application_Module_Member_Profile_POST_LOGS_GPS_INTERACTION_SEARCH_DATE_CONTENTS_FILE				= file_get_contents("./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_YEAR/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH_DAY/Log_Member_GPS_Coordinates_HTML_Manual.html");
-$_Application_Module_Member_Profile_POST_LOGS_GPS_INTERACTION_SEARCH_DATE_CONTENTS_HASH				= hash_file('sha256', "./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_YEAR/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH_DAY/Log_Member_GPS_Coordinates_HTML_Manual.html");
+$_Application_Module_Member_Profile_POST_LOGS_GPS_FILE							= "./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_YEAR/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH_DAY/Log_Member_GPS_Coordinates_HTML_Manual.html";
+$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_DATE_CONTENTS_FILE				= file_get_contents("./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_YEAR/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH_DAY/Log_Member_GPS_Coordinates_HTML_Manual.html");
+$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_DATE_CONTENTS_HASH				= hash_file('sha256', "./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_YEAR/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH_DAY/Log_Member_GPS_Coordinates_HTML_Manual.html");
 
 if (file_exists("./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_YEAR/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH_DAY/Log_Member_GPS_Coordinates_HTML_Manual.html")) {
 
@@ -2835,9 +2836,8 @@ echo ("
 											Log :: Interaction Log :: For Selected Date :: Year: $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_YEAR - Month: $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH - Day: $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH_DAY<BR>
 											File Integrity :: Secure-Hash-Algorithm, 256 :: Current File: $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_DATE_CONTENTS_HASH<BR>
 
-											<FORM>
-												<TEXTAREA ROWS=\"20\" COLS=\"125\">$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_DATE_CONTENTS_FILE</TEXTAREA>
-											</FORM>
+											<OBJECT DATA=\"$_Application_Module_Member_Profile_POST_LOGS_GPS_FILE\" WIDTH=\"75%\" HEIGHT=\"250\">
+											</OBJECT>
 ");
 
 } else {
@@ -2889,7 +2889,7 @@ echo ("
 if ($_GET["Type"] == "Authentication") {
 
 $_Application_Module_Member_Profile_CONTENTS_AUTHENTICATION_LOG_PUBLIC_FILE_BOX						= file_get_contents("./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/Authentication_Log_Public.php");
-$_Application_Module_Member_Profile_CONTENTS_AUTHENTICATION_LOG_PUBLIC_FILE_BOX_HASH_SHA_256		= hash_file('sha256', "./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/Authentication_Log_Public.php");
+$_Application_Module_Member_Profile_CONTENTS_AUTHENTICATION_LOG_PUBLIC_FILE_BOX_HASH_SHA_256				= hash_file('sha256', "./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/Authentication_Log_Public.php");
 
 echo ("
 											Interaction Log :: File Integrity :: HASH, SHA-256: $_Application_Module_Member_Profile_CONTENTS_AUTHENTICATION_LOG_PUBLIC_FILE_BOX_HASH_SHA_256<HR>
@@ -2905,7 +2905,7 @@ echo ("
  ============================================================================================================
  +
  +
- + [ @ ] Internal Application: Display :: Log :: Type :: Global-Positioning-System
+ + [ @ ] Internal Application: Display :: Log :: Type :: Global-Positioning-System Coordinates
  +
  +
  ============================================================================================================
@@ -2913,9 +2913,18 @@ echo ("
 
 if ($_GET["Type"] == "GPS") {
 
-echo ("Nothing here yet...");
+$_Application_Module_Member_Profile_CONTENTS_GPS_LOG_PUBLIC_FILE_BOX						= file_get_contents("./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/Log_Member_GPS_Coordinates_Raw_Manual.php");
+$_Application_Module_Member_Profile_CONTENTS_GPS_LOG_PUBLIC_FILE_BOX_HASH_SHA_256				= hash_file('sha256', "./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/Log_Member_GPS_Coordinates_Raw_Manual.php");
 
-} // [ + ] IF: Internal Application: Display :: Log :: Type :: Global-Positioning-System :: Is: Activated
+echo ("
+											Global-Positioning-System Coordinates Log :: File Integrity :: HASH, SHA-256: $_Application_Module_Member_Profile_CONTENTS_GPS_LOG_PUBLIC_FILE_BOX_HASH_SHA_256<HR>
+
+											<FORM>
+												<TEXTAREA ROWS=\"20\" COLS=\"120\">$_Application_Module_Member_Profile_CONTENTS_GPS_LOG_PUBLIC_FILE_BOX</TEXTAREA>
+											</FORM>
+");
+
+} // [ + ] IF: Internal Application: Display :: Log :: Type :: Global-Positioning-System Coordinates :: Is: Activated
 
 } // [ + ] IF: Internal Application: Display :: Log Is Activated
 
