@@ -2707,9 +2707,19 @@ PRIMARY KEY (id)
 
 $_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_applications_custom (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
-custom_application_data TEXT,
-custom_application_name VARCHAR(250),
-custom_application_timestamp_installation VARCHAR(100),
+application_file_integrity VARCHAR(512),
+application_file_integrity_installation VARCHAR(512),
+application_file_name VARCHAR(100),
+application_file_permission CHAR(1),
+application_file_permission_camera CHAR(1),
+application_file_permission_microphone CHAR(1),
+application_file_permission_location_gps CHAR(1),
+application_file_permission_location_glo CHAR(1),
+application_file_permission_location_internet_protocol_address CHAR(1),
+application_file_status CHAR(1),
+application_file_timestamp_installation VARCHAR(100),
+application_file_visibility CHAR(1),
+application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
 
@@ -2957,6 +2967,7 @@ member_location_device_php_gps_x VARCHAR(250),
 member_location_device_php_gps_y VARCHAR(250),
 member_location_device_php_gps_z VARCHAR(250),
 member_location_device_glo TEXT,
+member_location_device_area VARCHAR(100),
 member_location_device_region VARCHAR(100),
 member_location_device_timezone VARCHAR(100),
 member_location_given_area VARCHAR(100),
@@ -3509,10 +3520,10 @@ PRIMARY KEY (id)
 
 $_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_web_pages (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
-web_pages_author VARCHAR(50),
-web_pages_data TEXT,
-web_pages_timestamp_installation VARCHAR(100),
-web_pages_timestamp_update VARCHAR(100),
+web_page_author VARCHAR(50),
+web_page_data TEXT,
+web_page_timestamp_installation VARCHAR(100),
+web_page_timestamp_update VARCHAR(100),
 PRIMARY KEY (id)
 )");
 
@@ -4426,6 +4437,7 @@ member_location_device_php_gps_x,
 member_location_device_php_gps_y,
 member_location_device_php_gps_z,
 member_location_device_glo,
+member_location_device_area,
 member_location_device_region,
 member_location_device_timezone,
 member_location_given_area,
@@ -4579,6 +4591,7 @@ member_username
 'Unknown :: Location :: Device :: PHP :: GPS Y',
 'Unknown :: Location :: Device :: PHP :: GPS Z',
 'Unknown :: Location :: Device :: GLO',
+'Unknown :: Location :: Device :: Area',
 'Unknown :: Location :: Device :: Region',
 'Unknown :: Location :: Device :: Timezone',
 'Unknown :: Location :: Given :: Area',
@@ -4740,6 +4753,7 @@ member_location_device_php_gps_x,
 member_location_device_php_gps_y,
 member_location_device_php_gps_z,
 member_location_device_glo,
+member_location_device_area,
 member_location_device_region,
 member_location_device_timezone,
 member_location_given_area,
@@ -4893,6 +4907,7 @@ member_username
 'Unknown :: Location :: Device :: PHP :: GPS Y',
 'Unknown :: Location :: Device :: PHP :: GPS Z',
 'Unknown :: Location :: Device :: GLO',
+'Unknown :: Location :: Device :: Area',
 'Unknown :: Location :: Device :: Region',
 'Unknown :: Location :: Device :: Timezone',
 'Unknown :: Location :: Given :: Area',
@@ -5058,6 +5073,7 @@ member_location_device_php_gps_x,
 member_location_device_php_gps_y,
 member_location_device_php_gps_z,
 member_location_device_glo,
+member_location_device_area,
 member_location_device_region,
 member_location_device_timezone,
 member_location_given_area,
@@ -5211,6 +5227,7 @@ member_username
 'Unknown :: Location :: Device :: PHP :: GPS Y',
 'Unknown :: Location :: Device :: PHP :: GPS Z',
 'Unknown :: Location :: Device :: GLO',
+'Unknown :: Location :: Device :: Area',
 'Unknown :: Location :: Device :: Region',
 'Unknown :: Location :: Device :: Timezone',
 'Unknown :: Location :: Given :: Area',
@@ -5810,15 +5827,17 @@ copy("./System/Default/Friend/Friend.$_INTERNAL_FILE_EXTENSION","./Member/Master
  ============================================================================================================
 */
 
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Installing Custom Web Applications... Wait.<BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Installing Custom Web Page... Wait.<BR>");
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_custom(
-custom_application_data,
-custom_application_name,
-custom_application_timestamp_installation
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_web_pages(
+web_page_author,
+web_page_data,
+web_page_timestamp_installation,
+web_page_timestamp_update,
 )VALUES(
 'Hello and welcome to $_PROJECT_STRING_NAME_EXTENDED ! If you are reading this sentence then $_PROJECT_STRING_NAME_EXTENDED was successfully installed to this Web Server !',
 'Welcome !',
+'$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP',
 '$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP'
 )");
 
