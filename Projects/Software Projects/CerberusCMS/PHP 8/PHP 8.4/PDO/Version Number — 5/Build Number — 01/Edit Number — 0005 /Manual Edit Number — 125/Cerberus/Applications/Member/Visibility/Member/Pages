@@ -129,10 +129,10 @@ if ($_GET["Display"] == "Links") {
  ============================================================================================================
 */
 
-									echo ("Web Page Entries<HR ALIGN=\"LEFT\" WIDTH=\"25%\">");
+									echo ("<BR><HR ALIGN=\"LEFT\" WIDTH=\"25%\">Web Page Entries<HR ALIGN=\"LEFT\" WIDTH=\"25%\">");
 
 echo ("
-* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Pages&amp;WebPageID&#61;$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The :: Custom Web Page Entry :: $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_NAME ::\">$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_NAME</A><BR>
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Pages&amp;PageID&#61;$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The :: Custom Web Page Entry :: $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_NAME ::\">$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_NAME</A><BR>
 ");
 
 /*
@@ -148,6 +148,26 @@ if ($_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_NUMBE
 } // [ + ] IF: Database Management System Server :: Database :: Number of Rows :: Web Page Entries :: Is: Less Than OR Equal To: Zero
 
 } // [ + ] IF: Internal Application: Display :: Web Page Links
+
+/*
+ ============================================================================================================
+ +
+ + [ @ ] IF: Internal Application: Display :: Web Page Entry
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["PageID"] == "$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_ID") {
+
+echo ("
+<BR>Web Page Name: $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_NAME<I></I><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_DATA
+<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+<I>This Web Page Was Created By: $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_AUTHOR On: $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_TIMESTAMP_INSTALLATION</I><BR>
+<I>Last Update: $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_TIMESTAMP_UPDATE</I>
+");
+
+} // [ + ] IF: Internal Application: Display :: Web Page Entry
 
 } // [ + ] WHILE: Retrieving All Custom Web Application Module Entries From The Database Management System Server
 
