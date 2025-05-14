@@ -2723,7 +2723,7 @@ application_file_version VARCHAR(10),
 PRIMARY KEY (id)
 )");
 
-	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ application_links<BR>");
+	echo ("<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT> Architec: Installing Table: $_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX _ application_hyperlinks<BR>");
 
 /* ------------------------------------------------------------------------- */
 /*                         Application Links                                 */
@@ -2731,12 +2731,12 @@ PRIMARY KEY (id)
 
 /* Application Links */
 
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_application_links (
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_CONNECT_INITIALIZE->query("CREATE TABLE {$_ARCHITECT_INSTALL_FORM_POST_INSTALL_DATABASE_SERVER_DATABASE_TABLES_CONNECT_DATABASE_TABLE_PREFIX}_application_hyperlinks (
 id MEDIUMINT NOT NULL AUTO_INCREMENT,
-application_link_name VARCHAR(250),
-application_link_row CHAR(3),
-application_link_url VARCHAR(250),
-application_link_timestamp_installation VARCHAR(100),
+application_hyperlink_name VARCHAR(250),
+application_hyperlink_row CHAR(3),
+application_hyperlink_url VARCHAR(250),
+application_hyperlink_timestamp_installation VARCHAR(100),
 PRIMARY KEY (id)
 )");
 
