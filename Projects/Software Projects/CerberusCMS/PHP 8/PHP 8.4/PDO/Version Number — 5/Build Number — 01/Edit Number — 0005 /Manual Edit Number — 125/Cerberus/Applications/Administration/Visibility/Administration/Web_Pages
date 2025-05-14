@@ -110,7 +110,7 @@ if ($_Application_Module_Administration_Web_Pages_POST_HYPERLINK_TYPE == 1) {
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_LINK			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks(application_link_name,application_link_row,application_link_url)VALUES('$_Application_Module_Administration_Web_Pages_POST_HYPERLINK_NAME','1','?$_APPLICATION_MODULE_CUSTOM=$_Application_Module_Administration_Web_Pages_POST_HYPERLINK_URL')");
+$_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_LINK			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks(application_hyperlink_name,application_hyperlink_row,application_hyperlink_url)VALUES('$_Application_Module_Administration_Web_Pages_POST_HYPERLINK_NAME','1','?$_APPLICATION_MODULE_CUSTOM=$_Application_Module_Administration_Web_Pages_POST_HYPERLINK_URL')");
 
 } // [ + ] IF: Link Type IS Option: 1
 
@@ -122,7 +122,7 @@ $_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_LINK			= $_GLOBAL
 
 if ($_Application_Module_Administration_Web_Pages_POST_HYPERLINK_TYPE == 2) {
 
-$_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_LINK			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks(application_link_name,application_link_row,application_link_url)VALUES('$_Application_Module_Administration_Web_Pages_POST_HYPERLINK_NAME','1','$_Application_Module_Administration_Web_Pages_POST_HYPERLINK_URL')");
+$_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_HYPERLINK		= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks(application_hyperlink_name,application_hyperlink_row,application_hyperlink_url)VALUES('$_Application_Module_Administration_Web_Pages_POST_HYPERLINK_NAME','1','$_Application_Module_Administration_Web_Pages_POST_HYPERLINK_URL')");
 
 } // [ + ] IF: Link Type IS Option: 2
 
@@ -132,7 +132,7 @@ $_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_LINK			= $_GLOBAL
  ============================================================================================================
 */
 
-if ($_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_LINK) {
+if ($_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_HYPERLINK) {
 
 											echo ($_Application_Module_Administration_Message_Web_Pages_LINK_INSTALLED_SUCCESSFULLY);
 
@@ -152,7 +152,7 @@ if ($_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_LINK) {
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks ORDER BY application_link_row ASC");
+$_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks ORDER BY application_hyperlink_row ASC");
 $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS_NUMBER_OF_ROWS	= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS->num_rows;
 
 if ($_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS_NUMBER_OF_ROWS <= 0) {
@@ -169,7 +169,7 @@ if ($_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS_NUMBER_O
  ============================================================================================================
 */
 
-while ($_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS_Fetch_Array = $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Administration_Web_Pages_DB_Query_SELECT_HYPERLINKS_Fetch_Array = $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_HYPERLINKS->fetch_array(MYSQLI_BOTH)) {
 
 /*
  ============================================================================================================
@@ -179,10 +179,10 @@ while ($_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS_Fetch
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Web_Pages_LIST_LINK_ID				= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS_Fetch_Array['id'];
-$_Application_Module_Administration_Web_Pages_LIST_LINK_NAME				= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS_Fetch_Array['application_link_name'];
-$_Application_Module_Administration_Web_Pages_LIST_LINK_ROW				= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS_Fetch_Array['application_link_row'];
-$_Application_Module_Administration_Web_Pages_LIST_LINK_URL				= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS_Fetch_Array['application_link_url'];
+$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_ID				= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_HYPERLINKS_Fetch_Array['id'];
+$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_NAME			= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_HYPERLINKS_Fetch_Array['application_hyperlink_name'];
+$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_ROW			= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_HYPERLINKS_Fetch_Array['application_hyperlink_row'];
+$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_URL			= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_HYPERLINKS_Fetch_Array['application_hyperlink_url'];
 
 /*
  ============================================================================================================
@@ -193,9 +193,9 @@ $_Application_Module_Administration_Web_Pages_LIST_LINK_URL				= $_Application_M
 */
 
 echo ("
-												Link Entry Name: <B>$_Application_Module_Administration_Web_Pages_LIST_LINK_NAME</B><HR>
-												=> <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;DeleteLinkID&#61;$_Application_Module_Administration_Web_Pages_LIST_LINK_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Delete The Application Link :: $_Application_Module_Administration_Web_Pages_LIST_LINK_NAME ::\">Delete</A><BR>
-												=> <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;UpdateLinkID&#61;$_Application_Module_Administration_Web_Pages_LIST_LINK_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Update The Application Link :: $_Application_Module_Administration_Web_Pages_LIST_LINK_NAME ::\">Update</A><BR><BR>
+												Link Entry Name: <B>$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_NAME</B><HR>
+												=> <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;DeleteLinkID&#61;$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Delete The Application Hyperlink :: $_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_NAME ::\">Delete</A><BR>
+												=> <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;UpdateLinkID&#61;$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Update The Application Hyperlink :: $_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_NAME ::\">Update</A><BR><BR>
 ");
 
 /*
@@ -206,13 +206,13 @@ echo ("
  ============================================================================================================
 */
 
-if ($_GET["DeleteLinkID"] == "$_Application_Module_Administration_Web_Pages_LIST_LINK_ID") {
+if ($_GET["DeleteLinkID"] == "$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_ID") {
 
-$_Application_Module_Administration_Web_Pages_DB_Query_DELETE_LINK			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("DELETE FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_links WHERE id='$_Application_Module_Administration_Web_Pages_LIST_LINK_ID'");
+$_Application_Module_Administration_Web_Pages_DB_Query_DELETE_HYPERLINK			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("DELETE FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks WHERE id='$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_ID'");
 
-if ($_Application_Module_Administration_Web_Pages_DB_Query_DELETE_LINK) {
+if ($_Application_Module_Administration_Web_Pages_DB_Query_DELETE_HYPERLINK) {
 
-											echo ($_Application_Module_Administration_Message_Web_Pages_LINK_DELETED_SUCCESSFULLY);
+											echo ($_Application_Module_Administration_Message_Web_Pages_HYPERLINK_DELETED_SUCCESSFULLY);
 
 } else {
 
@@ -227,7 +227,7 @@ if ($_Application_Module_Administration_Web_Pages_DB_Query_DELETE_LINK) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Web_Pages_DB_Query_DELETE_LINK->free_result();
+// [ C ] $_Application_Module_Administration_Web_Pages_DB_Query_DELETE_HYPERLINK->free_result();
 
 } // [ + ] IF: Internal Application: Delete Link By ID Is Activated
 
@@ -239,7 +239,7 @@ if ($_Application_Module_Administration_Web_Pages_DB_Query_DELETE_LINK) {
  ============================================================================================================
 */
 
-if ($_GET["UpdateLinkID"] == "$_Application_Module_Administration_Web_Pages_LIST_LINK_ID") {
+if ($_GET["UpdateLinkID"] == "$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_ID") {
 
 /*
  ============================================================================================================
@@ -247,9 +247,9 @@ if ($_GET["UpdateLinkID"] == "$_Application_Module_Administration_Web_Pages_LIST
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Web_Pages_POST_UPDATE_LINK_NAME			= $_POST['AMA_Web_Pages_Update_Link_Name'];
-$_Application_Module_Administration_Web_Pages_POST_UPDATE_LINK_ROW			= $_POST['AMA_Web_Pages_Update_Link_Row'];
-$_Application_Module_Administration_Web_Pages_POST_UPDATE_LINK_URL			= $_POST['AMA_Web_Pages_Update_Link_URL'];
+$_Application_Module_Administration_Web_Pages_POST_UPDATE_HYPERLINK_NAME		= $_POST['AMA_Web_Pages_Update_Hyperlink_Name'];
+$_Application_Module_Administration_Web_Pages_POST_UPDATE_HYPERLINK_ROW			= $_POST['AMA_Web_Pages_Update_Hyperlink_Row'];
+$_Application_Module_Administration_Web_Pages_POST_UPDATE_HYPERLINK_URL			= $_POST['AMA_Web_Pages_Update_Hyperlink_URL'];
 
 /*
  ============================================================================================================
@@ -265,19 +265,19 @@ $_Application_Module_Administration_Web_Pages_POST_UPDATE_LINK_URL			= $_POST['A
  ============================================================================================================
 */
 
-if ((!$_Application_Module_Administration_Web_Pages_POST_UPDATE_LINK_NAME) || (!$_Application_Module_Administration_Web_Pages_POST_UPDATE_LINK_ROW) || (!$_Application_Module_Administration_Web_Pages_POST_UPDATE_LINK_URL)) {
+if ((!$_Application_Module_Administration_Web_Pages_POST_UPDATE_HYPERLINK_NAME) || (!$_Application_Module_Administration_Web_Pages_POST_UPDATE_HYPERLINK_ROW) || (!$_Application_Module_Administration_Web_Pages_POST_UPDATE_HYPERLINK_URL)) {
 
 echo ("
 											<BR><BR><HR><CENTER><B>Currently Updating Link Entry: <I>$_Application_Module_Administration_Web_Pages_LIST_LINK_NAME</I></B></CENTER><HR>
-												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;UpdateLinkID&#61;$_Application_Module_Administration_Web_Pages_LIST_LINK_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;UpdateLinkID&#61;$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 													Link Entry :: Name<BR>
-														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Update_Link_Name\" VALUE=\"$_Application_Module_Administration_Web_Pages_LIST_LINK_NAME\" MAXLENGTH=\"250\"><BR>
+														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Update_Hyperlink_Name\" VALUE=\"$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_NAME\" MAXLENGTH=\"250\"><BR>
 													Link Entry :: Row<BR>
 													Which Row ? 1-X Example: 1 would place this Link to the top of the Links list<BR>
-														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Update_Link_Row\" VALUE=\"$_Application_Module_Administration_Web_Pages_LIST_LINK_ROW\" MAXLENGTH=\"3\"><BR>
+														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Update_Hyperlink_Row\" VALUE=\"$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_ROW\" MAXLENGTH=\"3\"><BR>
 													Link Entry Uniform-Resource-Location:<BR>
 													Where Does This Link Lead To ? Example: <I>My_Pictures.html</I> OR <I>My_Pictures.php</I> OR <I>?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;ApplicationFileName</I><BR>
-														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Update_Link_URL\" VALUE=\"$_Application_Module_Administration_Web_Pages_LIST_LINK_URL\" MAXLENGTH=\"250\"><BR>
+														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Update_Hyperlink_URL\" VALUE=\"$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_URL\" MAXLENGTH=\"250\"><BR>
 													<INPUT TYPE=\"submit\" VALUE=\"Update Link Entry\">
 												</FORM><HR><BR><BR>
 ");
@@ -290,7 +290,7 @@ echo ("
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Web_Pages_DB_Query_UPDATE_LINK			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_links SET application_link_name='$_Application_Module_Administration_Web_Pages_POST_UPDATE_LINK_NAME',application_link_row='$_Application_Module_Administration_Web_Pages_POST_UPDATE_LINK_ROW',application_link_url='$_Application_Module_Administration_Web_Pages_POST_UPDATE_LINK_URL' WHERE id='$_Application_Module_Administration_Web_Pages_LIST_LINK_ID'");
+$_Application_Module_Administration_Web_Pages_DB_Query_UPDATE_HYPERLINK			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks SET application_hyperlink_name='$_Application_Module_Administration_Web_Pages_POST_UPDATE_HYPERLINK_NAME',application_hyperlink_row='$_Application_Module_Administration_Web_Pages_POST_UPDATE_HYPERLINK_ROW',application_hyperlink_url='$_Application_Module_Administration_Web_Pages_POST_UPDATE_HYPERLINK_URL' WHERE id='$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_ID'");
 
 /*
  ============================================================================================================
@@ -298,7 +298,7 @@ $_Application_Module_Administration_Web_Pages_DB_Query_UPDATE_LINK			= $_GLOBAL_
  ============================================================================================================
 */
 
-if ($_Application_Module_Administration_Web_Pages_DB_Query_UPDATE_LINK) {
+if ($_Application_Module_Administration_Web_Pages_DB_Query_UPDATE_HYPERLINK) {
 
 											echo ($_Application_Module_Administration_Message_Web_Pages_LINK_UPDATED_SUCCESSFULLY);
 
@@ -385,7 +385,7 @@ echo ("
 
 mkdir("./Applications/Pages/$_Application_Module_Administration_Web_Pages_POST_INSTALL_CUSTOM_APPLICATION_NAME");
 
-$_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_CUSTOM_APPLICATION			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_custom(custom_application_data,custom_application_name,custom_application_timestamp_installation)VALUES('$_Application_Module_Administration_Web_Pages_POST_INSTALL_CUSTOM_APPLICATION_DATA','$_Application_Module_Administration_Web_Pages_POST_INSTALL_CUSTOM_APPLICATION_NAME','$_GLOBAL_LOCAL_SERVER_DATE_STANDARD')");
+$_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_CUSTOM_APPLICATION			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_web_pages(web_page_author,web_page_data,web_page_name,web_page_timestamp_installation)VALUES('$_GLOBAL_COOKIE_MEMBER_USERNAME','$_Application_Module_Administration_Web_Pages_POST_INSTALL_CUSTOM_APPLICATION_DATA','$_Application_Module_Administration_Web_Pages_POST_INSTALL_CUSTOM_APPLICATION_NAME','$_GLOBAL_LOCAL_SERVER_DATE_STANDARD')");
 
 /*
  ============================================================================================================
@@ -420,7 +420,7 @@ if ($_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_CUSTOM_APPLIC
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPLICATIONS			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_custom ORDER BY custom_application_name ASC");
+$_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPLICATIONS			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_web_pages ORDER BY web_page_name ASC");
 
 echo ("<BR><HR><CENTER><B>Existing Custom Application Entries</B></CENTER><HR>");
 
@@ -432,18 +432,20 @@ while ($_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPL
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_ID				= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPLICATIONS_Fetch_Array['id'];
-$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_DATA				= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPLICATIONS_Fetch_Array['custom_application_data'];
-$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_NAME				= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPLICATIONS_Fetch_Array['custom_application_name'];
-$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_TIMESTAMP				= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPLICATIONS_Fetch_Array['custom_application_timestamp_installation'];
+$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_ID					= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPLICATIONS_Fetch_Array['id'];
+$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_AUTHOR				= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPLICATIONS_Fetch_Array['web_page_author'];
+$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_DATA				= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPLICATIONS_Fetch_Array['web_page_data'];
+$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_NAME				= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPLICATIONS_Fetch_Array['web_page_name'];
+$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_TIMESTAMP_INSTALLATION		= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPLICATIONS_Fetch_Array['web_page_timestamp_installation'];
+$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_TIMESTAMP_UPDATE			= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPLICATIONS_Fetch_Array['web_page_timestamp_update'];
 
-$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_DATA				= str_replace($_GLOBAL_PLUGIN_SAFEHTML_CODE_BACK, $_GLOBAL_PLUGIN_SAFEHTML_CODE_BACK_REPLACE, $_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_DATA);
-$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_DATA				= str_replace($_GLOBAL_PLUGIN_SAFEHTML_SMILEYS_BACK, $_GLOBAL_PLUGIN_SAFEHTML_SMILEYS_BACK_REPLACE, $_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_DATA);
+$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_DATA				= str_replace($_GLOBAL_PLUGIN_SAFEHTML_CODE_BACK, $_GLOBAL_PLUGIN_SAFEHTML_CODE_BACK_REPLACE, $_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_DATA);
+$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_DATA				= str_replace($_GLOBAL_PLUGIN_SAFEHTML_SMILEYS_BACK, $_GLOBAL_PLUGIN_SAFEHTML_SMILEYS_BACK_REPLACE, $_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_DATA);
 
 echo ("
-												Custom Web Application Name: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_CUSTOM&#61;$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Custom Web Application :: $_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_NAME\">$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_NAME</A><HR>
-													=> <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;DeleteCustomApplicationID&#61;$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Delete The Custom Web Application :: $_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_NAME ::\">Delete</A><BR>
-													=> <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;UpdateCustomApplicationID&#61;$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Update The Custom Web Application :: $_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_NAME ::\">Update</A><BR><BR>
+												Custom Web Page Name: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_CUSTOM&#61;$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Custom Web Application :: $_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_NAME\">$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_NAME</A><HR>
+													=> <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;DeleteWebPageID&#61;$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Delete The Web Page :: $_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_NAME ::\">Delete</A><BR>
+													=> <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;UpdateWebPageID&#61;$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Update The Web Page :: $_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_NAME ::\">Update</A><BR><BR>
 ");
 
 /*
@@ -454,9 +456,9 @@ echo ("
  ============================================================================================================
 */
 
-if ($_GET["DeleteCustomApplicationID"] == "$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_ID") {
+if ($_GET["DeleteWebPageID"] == "$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_ID") {
 
-$_Application_Module_Administration_Web_Pages_DB_Query_DELETE_PAGE			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("DELETE FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_custom WHERE id='$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_ID'");
+$_Application_Module_Administration_Web_Pages_DB_Query_DELETE_WEB_PAGE			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("DELETE FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_web_pages WHERE id='$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_ID'");
 
 /*
  ============================================================================================================
@@ -464,7 +466,7 @@ $_Application_Module_Administration_Web_Pages_DB_Query_DELETE_PAGE			= $_GLOBAL_
  ============================================================================================================
 */
 
-if ($_Application_Module_Administration_Web_Pages_DB_Query_DELETE_PAGE) {
+if ($_Application_Module_Administration_Web_Pages_DB_Query_DELETE_WEB_PAGE) {
 
 											echo ($_Application_Module_Administration_Message_Web_Pages_WEB_PAGE_DELETED_SUCCESSFULLY);
 
@@ -482,7 +484,7 @@ if ($_Application_Module_Administration_Web_Pages_DB_Query_DELETE_PAGE) {
 
 // [ C ] $_Application_Module_Administration_Web_Pages_DB_Query_DELETE_PAGE->free_result();
 
-} // [ + ] IF: Internal Application: Delete Custom Application By ID Is Activated
+} // [ + ] IF: Internal Application: Delete :: Web Page By ID Is Activated
 
 /*
  ============================================================================================================
@@ -492,7 +494,7 @@ if ($_Application_Module_Administration_Web_Pages_DB_Query_DELETE_PAGE) {
  ============================================================================================================
 */
 
-if ($_GET["UpdateCustomApplicationID"] == "$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_ID") {
+if ($_GET["UpdateWebPageID"] == "$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_ID") {
 
 /*
  ============================================================================================================
@@ -500,12 +502,12 @@ if ($_GET["UpdateCustomApplicationID"] == "$_Application_Module_Administration_W
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Web_Pages_POST_UPDATE_CUSTOM_APPLICATION_NAME			= $_POST['AMA_Web_Pages_Update_Custom_Application_Name'];
-$_Application_Module_Administration_Web_Pages_POST_UPDATE_CUSTOM_APPLICATION_DATA			= $_POST['AMA_Web_Pages_Update_Custom_Application_Data'];
-$_Application_Module_Administration_Web_Pages_POST_UPDATE_CUSTOM_APPLICATION_TIME			= $_POST['AMA_Web_Pages_Update_Custom_Application_Timestamp'];
+$_Application_Module_Administration_Web_Pages_POST_UPDATE_WEB_PAGE_NAME				= $_POST['AMA_Web_Pages_Update_Web_Page_Name'];
+$_Application_Module_Administration_Web_Pages_POST_UPDATE_WEB_PAGE_DATA				= $_POST['AMA_Web_Pages_Update_Web_Page_Data'];
+$_Application_Module_Administration_Web_Pages_POST_UPDATE_WEB_PAGE_TIMESTAMP_INSTALLATION	= $_POST['AMA_Web_Pages_Update_Web_Page_Timestamp_Installation'];
 
-$_Application_Module_Administration_Web_Pages_POST_UPDATE_CUSTOM_APPLICATION_DATA			= str_replace($_GLOBAL_PLUGIN_SAFEHTML_CODE, $_GLOBAL_PLUGIN_SAFEHTML_CODE_REPLACE, $_Application_Module_Administration_Web_Pages_POST_UPDATE_CUSTOM_APPLICATION_DATA);
-$_Application_Module_Administration_Web_Pages_POST_UPDATE_CUSTOM_APPLICATION_DATA			= str_replace($_GLOBAL_PLUGIN_SAFEHTML_SMILEYS, $_GLOBAL_PLUGIN_SAFEHTML_SMILEYS_REPLACE, $_Application_Module_Administration_Web_Pages_POST_UPDATE_CUSTOM_APPLICATION_DATA);
+$_Application_Module_Administration_Web_Pages_POST_UPDATE_WEB_PAGE_DATA				= str_replace($_GLOBAL_PLUGIN_SAFEHTML_CODE, $_GLOBAL_PLUGIN_SAFEHTML_CODE_REPLACE, $_Application_Module_Administration_Web_Pages_POST_UPDATE_WEB_PAGE_DATA);
+$_Application_Module_Administration_Web_Pages_POST_UPDATE_WEB_PAGE_DATA				= str_replace($_GLOBAL_PLUGIN_SAFEHTML_SMILEYS, $_GLOBAL_PLUGIN_SAFEHTML_SMILEYS_REPLACE, $_Application_Module_Administration_Web_Pages_POST_UPDATE_WEB_PAGE_DATA);
 
 /*
  ============================================================================================================
@@ -521,18 +523,18 @@ $_Application_Module_Administration_Web_Pages_POST_UPDATE_CUSTOM_APPLICATION_DAT
  ============================================================================================================
 */
 
-if ((!$_Application_Module_Administration_Web_Pages_POST_UPDATE_CUSTOM_APPLICATION_NAME) || (!$_Application_Module_Administration_Web_Pages_POST_UPDATE_CUSTOM_APPLICATION_DATA)) {
+if ((!$_Application_Module_Administration_Web_Pages_POST_UPDATE_WEB_PAGE_NAME) || (!$_Application_Module_Administration_Web_Pages_POST_UPDATE_WEB_PAGE_DATA)) {
 
 echo ("
-											<BR><BR><HR><CENTER><B>Currently Updating Custom Application Entry: <I>$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_NAME</I></B></CENTER><HR>
-												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;UpdateCustomApplicationID&#61;$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
-													Custom Application Entry :: Name<BR>
-														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Update_Custom_Application_Name\" VALUE=\"$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_NAME\" MAXLENGTH=\"250\"><BR>
-													Custom Application Entry :: Timestamp :: Installation<BR>
-														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Update_Custom_Application_Timestamp\" VALUE=\"$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_TIMESTAMP\" MAXLENGTH=\"250\"><BR>
-													Custom Application Entry :: Data<BR>
-														<TEXTAREA ROWS=\"15\" COLS=\"75\" NAME=\"AMA_Web_Pages_Update_Custom_Application_Data\">$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_DATA</TEXTAREA><BR>
-													<INPUT TYPE=\"submit\" VALUE=\"Update Custom Web Application\">
+											<BR><BR><HR><CENTER><B>Currently Updating Custom Application Entry: <I>$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_NAME</I></B></CENTER><HR>
+												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;UpdateCustomApplicationID&#61;$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													Web Page Entry :: Name<BR>
+														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Update_Web_Page_Name\" VALUE=\"$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_NAME\" MAXLENGTH=\"250\"><BR>
+													Web Page Entry :: Timestamp :: Installation<BR>
+														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Update_Web_Page_Timestamp_Installation\" VALUE=\"$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_TIMESTAMP\" MAXLENGTH=\"250\"><BR>
+													Web Page Entry :: Data<BR>
+														<TEXTAREA ROWS=\"15\" COLS=\"75\" NAME=\"AMA_Web_Pages_Update_Web_Page_Data\">$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_DATA</TEXTAREA><BR>
+													<INPUT TYPE=\"submit\" VALUE=\"Update Web Page\">
 												</FORM><HR><BR><BR>
 ");
 
@@ -540,13 +542,13 @@ echo ("
 
 /*
  ============================================================================================================
- + IF: Database Server Query :: Update :: Custom Application
+ + IF: Database Server Query :: Update :: Web Page
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Web_Pages_DB_Query_UPDATE_CUSTOM_APPLICATION			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_custom SET custom_application_data='$_Application_Module_Administration_Web_Pages_POST_UPDATE_CUSTOM_APPLICATION_DATA',custom_application_name='$_Application_Module_Administration_Web_Pages_POST_UPDATE_CUSTOM_APPLICATION_NAME',custom_application_timestamp_installation='$_Application_Module_Administration_Web_Pages_POST_UPDATE_CUSTOM_APPLICATION_TIME' WHERE id='$_Application_Module_Administration_Web_Pages_LIST_CUSTOM_APPLICATION_ID'");
+$_Application_Module_Administration_Web_Pages_DB_Query_UPDATE_WEB_PAGE			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_web_pages SET web_page_data='$_Application_Module_Administration_Web_Pages_POST_UPDATE_WEB_PAGE_DATA',web_page_name='$_Application_Module_Administration_Web_Pages_POST_UPDATE_WEB_PAGE_NAME',web_page_timestamp_installation='$_Application_Module_Administration_Web_Pages_POST_UPDATE_WEB_PAGE_TIMESTAMP_INSTALLATION' WHERE id='$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_ID'");
 
-if ($_Application_Module_Administration_Web_Pages_DB_Query_UPDATE_CUSTOM_APPLICATION) {
+if ($_Application_Module_Administration_Web_Pages_DB_Query_UPDATE_WEB_PAGE) {
 
 											echo ($_Application_Module_Administration_Message_Web_Pages_WEB_PAGE_UPDATED_SUCCESSFULLY);
 
