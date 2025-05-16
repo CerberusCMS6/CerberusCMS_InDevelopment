@@ -1,0 +1,977 @@
+<?php
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale and Los Angeles In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS5@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    ()  ()  ()
+ +  ()  ()  ()
+ +  ------------------------------
+ +  Application Module
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Root Directory => Applications => Member => Application_List
+ + - This File, Version		 : 0.7.4
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Friday, September 13th of 2024
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Hades -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|5|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,001
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ +
+ + [ ^ ] Application Module :: Member :: Application List
+ +
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Application Module Header
+ ============================================================================================================
+*/
+
+											echo ($_Application_Module_Member_Message_Application_List_Header);
+
+/*
+ ============================================================================================================
+ +
+ + Application List :: Variables
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Application List :: Kernel File :: Variables
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Application_List_FILE_KERNEL_FILE_CONTENTS							= file_get_contents("./$_INTERNAL_FILE_KERNEL");
+$_Application_Module_Member_Application_List_FILE_KERNEL_FILE_SIZE							= filesize("./$_INTERNAL_FILE_KERNEL");
+$_Application_Module_Member_Application_List_FILE_KERNEL_FILE_SIZE_KILOBYTES						= $_Application_Module_Member_Application_List_FILE_KERNEL_FILE_SIZE / 1024;
+$_Application_Module_Member_Application_List_FILE_KERNEL_FILE_HASH_SHA256						= hash_file('sha256', "./$_INTERNAL_FILE_KERNEL");
+
+/*
+ ============================================================================================================
+ + Application List :: Maintenance :: Diagnostics File :: Variables
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Application_List_FILE_MODULE_MAINTENANCE_DIAGNOSTICS_FILE_CONTENTS				= file_get_contents("./Maintenance/Diagnostics/$_INTERNAL_FILE_MAINTENANCE_DIAGNOSTICS");
+$_Application_Module_Member_Application_List_FILE_MODULE_MAINTENANCE_DIAGNOSTICS_FILE_SIZE				= filesize("./Maintenance/Diagnostics/$_INTERNAL_FILE_MAINTENANCE_DIAGNOSTICS");
+$_Application_Module_Member_Application_List_FILE_MODULE_MAINTENANCE_DIAGNOSTICS_FILE_SIZE_KILOBYTES			= $_Application_Module_Member_Application_List_FILE_MODULE_MAINTENANCE_DIAGNOSTICS_FILE_SIZE / 1024;
+$_Application_Module_Member_Application_List_FILE_MODULE_MAINTENANCE_DIAGNOSTICS_FILE_HASH_SHA256			= hash_file('sha256', "./Maintenance/Diagnostics/$_INTERNAL_FILE_MAINTENANCE_DIAGNOSTICS");
+
+/*
+ ============================================================================================================
+ + Application List :: Configuration File :: Variables
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Application_List_FILE_MODULE_CONFIGURATION_FILE						= "./System/Configuration/Global_Configuration.php";
+$_Application_Module_Member_Application_List_FILE_MODULE_CONFIGURATION_FILE_CONTENTS					= file_get_contents("$_Application_Module_Member_Application_List_FILE_MODULE_CONFIGURATION_FILE");
+$_Application_Module_Member_Application_List_FILE_MODULE_CONFIGURATION_FILE_SIZE					= filesize("$_Application_Module_Member_Application_List_FILE_MODULE_CONFIGURATION_FILE");
+$_Application_Module_Member_Application_List_FILE_MODULE_CONFIGURATION_FILE_SIZE_KILOBYTES				= $_Application_Module_Member_Application_List_FILE_MODULE_CONFIGURATION_FILE_SIZE / 1024;
+$_Application_Module_Member_Application_List_FILE_MODULE_CONFIGURATION_FILE_HASH_SHA256					= hash_file('sha256', "$_Application_Module_Member_Application_List_FILE_MODULE_CONFIGURATION_FILE");
+
+/*
+ ============================================================================================================
+ + Application List :: Security Module :: Master Sanitization :: Variables
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Application_List_FILE_MODULE_SYSTEM_SECURITY_MASTER_SANITIZATION_FILE			= "./System/Security/Module/Sanitization/Default/Sanitization.$_INTERNAL_FILE_EXTENSION";
+$_Application_Module_Member_Application_List_FILE_MODULE_SYSTEM_SECURITY_MASTER_SANITIZATION_FILE_CONTENTS		= file_get_contents("$_Application_Module_Member_Application_List_FILE_MODULE_SYSTEM_SECURITY_MASTER_SANITIZATION_FILE");
+$_Application_Module_Member_Application_List_FILE_MODULE_SYSTEM_SECURITY_MASTER_SANITIZATION_FILE_SIZE			= filesize("$_Application_Module_Member_Application_List_FILE_MODULE_SYSTEM_SECURITY_MASTER_SANITIZATION_FILE");
+$_Application_Module_Member_Application_List_FILE_MODULE_SYSTEM_SECURITY_MASTER_SANITIZATION_FILE_SIZE_KILOBYTES	= $_Application_Module_Member_Application_List_FILE_MODULE_SYSTEM_SECURITY_MASTER_SANITIZATION_FILE_SIZE / 1024;
+$_Application_Module_Member_Application_List_FILE_MODULE_SYSTEM_SECURITY_MASTER_SANITIZATION_FILE_HASH_SHA256		= hash_file('sha256', "$_Application_Module_Member_Application_List_FILE_MODULE_SYSTEM_SECURITY_MASTER_SANITIZATION_FILE");
+
+/*
+ ============================================================================================================
+ + Application List :: Language Module :: English
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Application_List_FILE_MODULE_LANGUAGE_ENGLISH_FILE						= "./System/Language/English/Language.$_INTERNAL_FILE_EXTENSION";
+$_Application_Module_Member_Application_List_FILE_MODULE_LANGUAGE_ENGLISH_FILE_CONTENTS					= file_get_contents("$_Application_Module_Member_Application_List_FILE_MODULE_LANGUAGE_ENGLISH_FILE");
+$_Application_Module_Member_Application_List_FILE_MODULE_LANGUAGE_ENGLISH_FILE_SIZE					= filesize("$_Application_Module_Member_Application_List_FILE_MODULE_LANGUAGE_ENGLISH_FILE");
+$_Application_Module_Member_Application_List_FILE_MODULE_LANGUAGE_ENGLISH_FILE_SIZE_KILOBYTES				= $_Application_Module_Member_Application_List_FILE_MODULE_LANGUAGE_ENGLISH_FILE_SIZE / 1024;
+$_Application_Module_Member_Application_List_FILE_MODULE_LANGUAGE_ENGLISH_FILE_HASH_SHA256				= hash_file('sha256', "$_Application_Module_Member_Application_List_FILE_MODULE_LANGUAGE_ENGLISH_FILE");
+
+/*
+ ============================================================================================================
+ + Application List :: System :: Plug-In :: Location :: Default
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Application_List_FILE_SYSTEM_PLUGIN_LOCATION_DEFAULT_FILE					= "./System/Plug-Ins/Location/Default/Location.$_INTERNAL_FILE_EXTENSION";
+$_Application_Module_Member_Application_List_FILE_SYSTEM_PLUGIN_LOCATION_DEFAULT_FILE_CONTENTS				= file_get_contents("$_Application_Module_Member_Application_List_FILE_SYSTEM_PLUGIN_LOCATION_DEFAULT_FILE");
+$_Application_Module_Member_Application_List_FILE_SYSTEM_PLUGIN_LOCATION_DEFAULT_FILE_SIZE				= filesize("$_Application_Module_Member_Application_List_FILE_SYSTEM_PLUGIN_LOCATION_DEFAULT_FILE");
+$_Application_Module_Member_Application_List_FILE_SYSTEM_PLUGIN_LOCATION_DEFAULT_FILE_SIZE_KILOBYTES			= $_Application_Module_Member_Application_List_FILE_SYSTEM_PLUGIN_LOCATION_DEFAULT_FILE_SIZE / 1024;
+$_Application_Module_Member_Application_List_FILE_SYSTEM_PLUGIN_LOCATION_DEFAULT_FILE_HASH_SHA256			= hash_file('sha256', "$_Application_Module_Member_Application_List_FILE_SYSTEM_PLUGIN_LOCATION_DEFAULT_FILE");
+
+/*
+ ============================================================================================================
+ +
+ + Database Server Queries :: Retrieve :: All :: Application Modules
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Database Server Query :: Retrieve :: All :: Applcication Module Entries :: Background-Level Applications
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Application_List_DB_Query_List_Applications_Background					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_background");
+
+/*
+ ============================================================================================================
+ + Database Server Query :: Retrieve :: All :: Applcication Module Entries :: Services Root Administration-Level Applications
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_services");
+
+/*
+ ============================================================================================================
+ + Database Server Query :: Retrieve :: All :: Applcication Module Entries :: Root Administration-Level Applications
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_root");
+
+/*
+ ============================================================================================================
+ + Database Server Query :: Retrieve :: All :: Applcication Module Entries :: Administration-Level Applications
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_administration");
+
+/*
+ ============================================================================================================
+ + Database Server Query :: Retrieve :: All :: Applcication Module Entries :: Member-Level Applications
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Application_List_DB_Query_List_Applications_Member						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications");
+
+/*
+ ============================================================================================================
+ + Database Server Query :: Retrieve :: All :: Applcication Module Entries :: Panel-Level Applications
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_panel");
+
+/*
+ ============================================================================================================
+ + Database Server Query :: Retrieve :: All :: Kernel Module Entries
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Application_List_DB_Query_List_Kernel							= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_kernel");
+
+/*
+ ============================================================================================================
+ + Find and Open: Directory: Applications :: Member
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Application_List_FIND_DIRECTORY_APPLICATIONS_MEMBER						= "./Applications/Member/";
+$_Application_Module_Member_Application_List_OPEN_DIRECTORY_APPLICATIONS_MEMBER						= opendir($_Application_Module_Member_Application_List_FIND_DIRECTORY_APPLICATIONS_MEMBER);
+
+/*
+ ============================================================================================================
+ +
+ + [ @ ] Display :: Application Module :: Application List :: Options
+ +
+ ============================================================================================================
+*/
+
+echo ("
+<HR ALIGN=\"CENTER\" WIDTH=\"50%\">
+	<CENTER>
+		::&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Application_List&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: Application List :: Options\">Options</A>&nbsp;::
+		&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Application_List&amp;Display&#61;ApplicationIcons&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: Application List :: Applications\">Applications With Icons</A>&nbsp;::
+		&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Application_List&amp;Display&#61;ApplicationList&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: Application List :: Applications\">Applications With List</A>&nbsp;::
+	</CENTER>
+<HR ALIGN=\"CENTER\" WIDTH=\"50%\">
+");
+
+/*
+ ============================================================================================================
+ +
+ + [ @ ] IF: Internal Application: Display :: Application Icons
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Display"] == "ApplicationIcons") {
+
+/*
+ ============================================================================================================
+ + WHILE: Reading :: Directory :: Applications :: Member
+ ============================================================================================================
+*/
+
+while (($_Application_Module_Member_Application_List_READ_DIRECTORY_APPLICATIONS_MEMBER = readdir($_Application_Module_Member_Application_List_OPEN_DIRECTORY_APPLICATIONS_MEMBER))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploit :: Local-File-Inclusion and Remote-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Application_List_READ_DIRECTORY_APPLICATIONS_MEMBER == "." || $_Application_Module_Member_Application_List_READ_DIRECTORY_APPLICATIONS_MEMBER == ".." || $_Application_Module_Member_Application_List_READ_DIRECTORY_APPLICATIONS_MEMBER == "index.php") {
+/**
+ * Do Nothing
+**/
+} else {
+
+echo ("
+<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;$_Application_Module_Member_Application_List_READ_DIRECTORY_APPLICATIONS_MEMBER\" TITLE=\":: Open & Display :: The Application Module :: Member :: $_Application_Module_Member_Application_List_READ_DIRECTORY_APPLICATIONS_MEMBER ::\"><IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Icon_Applications/Member/$_Application_Module_Member_Application_List_READ_DIRECTORY_APPLICATIONS_MEMBER.$_GLOBAL_SYSTEM_IMAGE_EXTENSION?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"125\" HEIGHT=\"125\" CLASS=\"MemberProfile\"></IMG></A>&nbsp;
+");
+
+} // [ + ] IF: Stop :: Exploit :: Local-File-Inclusion and Remote-File-Inclusion
+
+} // [ + ] WHILE: Reading :: Directory :: Applications :: Member
+
+/*
+ ============================================================================================================
+ + Close Directory :: Applications :: Member
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Application_List_OPEN_DIRECTORY_APPLICATIONS_MEMBER);
+
+} // [ + ] IF: Internal Application: Display :: Applications :: Member :: With Application Icons
+
+/*
+ ============================================================================================================
+ +
+ + [ @ ] IF: Internal Application: Display :: Application List
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Display"] == "ApplicationList") {
+
+/*
+ ============================================================================================================
+ +
+ + [ @ ] Display :: Permissions Key :: Application Module Entries
+ +
+ ============================================================================================================
+*/
+
+echo ("
+														<B>Key :: Application Module :: Permissions :: Requirements :: Privilege-Level</B><BR>
+														* 0: Public<BR>
+														* 1: Registered Member<BR>
+														* 2: Moderator<BR>
+														* 3: Administrator<BR>
+														* 4: Root Administrator<BR>
+														* 5: Services Root Administrator<BR>
+														* 6: Background<BR><BR>
+
+														<B>Key :: Application Module :: Status</B><BR>
+														* 0: Deactivated<BR>
+														* 2: Activated<BR><BR>
+");
+
+/*
+ ============================================================================================================
+ +
+ + Application Modules :: Background-Level
+ +
+ ============================================================================================================
+*/
+
+														echo ("<HR ALIGN=\"CENTER\" WIDTH=\"50%\"><CENTER><B>Application Modules :: Background-Level</B></CENTER><HR ALIGN=\"CENTER\" WIDTH=\"50%\"><BR>");
+
+/*
+ ============================================================================================================
+ + WHILE: Retrieiving :: All Background-Level Application Entries From The Database Management System Server Database
+ ============================================================================================================
+*/
+
+while ($_Application_Module_Member_Application_List_DB_Query_List_Applications_Background_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background->fetch_array(MYSQLI_BOTH)) {
+
+$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_ID					= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background_Fetch_Array['id'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_NAME				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background_Fetch_Array['application_file_name'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_INTEGRITY				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background_Fetch_Array['application_file_integrity'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_INTEGRITY_INSTALLATION		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background_Fetch_Array['application_file_integrity_installation'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_PERMISSION			= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background_Fetch_Array['application_file_permission'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_PERMISSION_CAMERA			= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background_Fetch_Array['application_file_permission_camera'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_PERMISSION_MICROPHONE		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background_Fetch_Array['application_file_permission_microphone'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_PERMISSION_LOCATION_GPS		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background_Fetch_Array['application_file_permission_location_gps'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_PERMISSION_LOCATION_GLO		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background_Fetch_Array['application_file_permission_location_glo'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_PERMISSION_LOCATION_IP		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background_Fetch_Array['application_file_permission_location_internet_protocol_address'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_STATUS				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background_Fetch_Array['application_file_status'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_TIMESTAMP_INSTALLATION		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background_Fetch_Array['application_file_timestamp_installation'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_VERSION				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background_Fetch_Array['application_file_version'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_SIZE				= filesize("./Applications/Background/$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_NAME");
+$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_SIZE_KILOBYTES			= $_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_SIZE / 1024;
+$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_HASH_SHA256			= hash_file('sha256', "./Applications/Background/$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_NAME");
+
+echo ("
+														<HR><B>File :: Application Module :: Background :: File Name: $_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_NAME</B><HR>
+
+														<B>Application Module :: Background :: Permissions</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+														<B>Permissions :: File</B><BR>
+														* File :: Application Module :: Background :: Permissions :: Access :: File: $_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_PERMISSION<BR><BR>
+
+														<B>Permissions :: Device</B><BR>
+														* File :: Application Module :: Background :: Permissions :: Access :: Device :: Camera: $_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_PERMISSION_CAMERA<BR>
+														* File :: Application Module :: Background :: Permissions :: Access :: Device :: Microphone: $_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_PERMISSION_MICROPHONE<BR><BR>
+
+														<B>Permissions :: Location</B><BR>
+														* File :: Application Module :: Background :: Permissions :: Access :: Location :: Global-Positioning-System: $_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_PERMISSION_LOCATION_GPS<BR>
+														* File :: Application Module :: Background :: Permissions :: Access :: Location :: Geographical-Localization-Objects: $_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_PERMISSION_LOCATION_GLO<BR>
+														* File :: Application Module :: Background :: Permissions :: Access :: Location :: Internet Protocol Address: $_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_PERMISSION_LOCATION_IP<BR><BR>
+
+														<B>Application Module :: Background :: Status</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+														* File :: Application Module :: Background :: Status :: Activated: $_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_STATUS<BR><BR>
+
+														<B>Application Module :: Background :: File Details</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+														<B>Details :: File</B><BR>
+														* File :: Application Module :: Background :: Database Entry :: ID Number: $_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_ID<BR>
+														* File :: Application Module :: Background :: Database Entry :: File Name: $_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_NAME<BR>
+														* File :: Application Module :: Background :: Database Entry :: File Version: $_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_VERSION<BR><BR>
+
+														<B>Integrity :: Database Management System Server Database Entries</B><BR>
+														* Integrity :: Application Module :: Background :: File Size :: Database Entry :: HASH :: Master :: Secure-Hash-Algorithm-256 :: <BR><BR>
+														* Integrity :: Application Module :: Background :: File Size :: Database Entry :: HASH :: Local :: Secure-Hash-Algorithm-256<BR>
+															$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_INTEGRITY<BR><BR>
+														* Integrity :: Application Module :: Background :: File Size :: Database Entry :: HASH :: Local :: From Installation :: Secure-Hash-Algorithm-256<BR>
+															$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_INTEGRITY_INSTALLATION<BR><BR>
+
+														<B>Integrity :: Physical File</B><BR>
+														* Integrity :: Application Module :: Background :: File Size :: Physical File :: HASH :: Secure-Hash-Algorithm-256<BR>
+															$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_HASH_SHA256<BR><BR>
+														* Integrity :: Application Module :: Background :: File Size :: Physical File :: In Bytes :: $_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_SIZE<BR>
+														* Integrity :: Application Module :: Background :: File Size :: Physical File :: In KiloBytes :: $_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_SIZE_KILOBYTES<BR><BR>
+
+														<B>Timestamp :: Installation</B><BR>
+														* Timestamp :: Application Module :: Background :: Database Entry :: $_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_TIMESTAMP_INSTALLATION<BR>
+														<A HREF=\"./Applications/Background/$_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_NAME?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Source Code :: For The Application Module :: $_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_NAME ::\">Display Source Code</A><HR><BR>
+");
+
+} // [ + ] WHILE: Retrieving :: All Background-Level Application Module Entries From Database Management System Server Database
+
+/*
+ ============================================================================================================
+ +
+ + Application Modules :: Services Root Administration-Level
+ +
+ ============================================================================================================
+*/
+
+														echo ("<HR ALIGN=\"CENTER\" WIDTH=\"50%\"><CENTER><B>Application Modules :: Services Root Administration-Level</B></CENTER><HR ALIGN=\"CENTER\" WIDTH=\"50%\"><BR>");
+
+/*
+ ============================================================================================================
+ + WHILE: Retrieiving :: All Services Root Administration-Level Application Entries From The Database Management System Server Database
+ ============================================================================================================
+*/
+
+while ($_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services->fetch_array(MYSQLI_BOTH)) {
+
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_ID					= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services_Fetch_Array['id'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_NAME				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services_Fetch_Array['application_file_name'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_INTEGRITY			= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services_Fetch_Array['application_file_integrity'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_INTEGRITY_INSTALLATION		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services_Fetch_Array['application_file_integrity_installation'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_PERMISSION			= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services_Fetch_Array['application_file_permission'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_PERMISSION_CAMERA		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services_Fetch_Array['application_file_permission_camera'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_PERMISSION_MICROPHONE		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services_Fetch_Array['application_file_permission_microphone'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_PERMISSION_LOCATION_GPS		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services_Fetch_Array['application_file_permission_location_gps'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_PERMISSION_LOCATION_GLO		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services_Fetch_Array['application_file_permission_location_glo'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_PERMISSION_LOCATION_IP		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services_Fetch_Array['application_file_permission_location_internet_protocol_address'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_STATUS				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services_Fetch_Array['application_file_status'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_TIMESTAMP_INSTALLATION		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services_Fetch_Array['application_file_timestamp_installation'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_VERSION				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services_Fetch_Array['application_file_version'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_SIZE				= filesize("./Applications/Member/$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_NAME");
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_SIZE_KILOBYTES			= $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_SIZE / 1024;
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_HASH_SHA256			= hash_file('sha256', "./Applications/Services/$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_NAME");
+
+echo ("
+														<HR><B>File :: Application Module :: Administration :: Root :: Services :: File Name: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_NAME</B><HR>
+
+														<B>Application Module :: Administration :: Root :: Services :: Permissions</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+														<B>Permissions :: File</B><BR>
+														* File :: Application Module :: Administration :: Root :: Services :: Permissions :: Access :: File: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_PERMISSION<BR><BR>
+
+														<B>Permissions :: Device</B><BR>
+														* File :: Application Module :: Administration :: Root :: Services :: Permissions :: Access :: Device :: Camera: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_PERMISSION_CAMERA<BR>
+														* File :: Application Module :: Administration :: Root :: Services :: Permissions :: Access :: Device :: Microphone: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_PERMISSION_MICROPHONE<BR><BR>
+
+														<B>Permissions :: Location</B><BR>
+														* File :: Application Module :: Administration :: Root :: Services :: Permissions :: Access :: Location :: Global-Positioning-System: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_PERMISSION_LOCATION_GPS<BR>
+														* File :: Application Module :: Administration :: Root :: Services :: Permissions :: Access :: Location :: Geographical-Localization-Objects: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_PERMISSION_LOCATION_GLO<BR>
+														* File :: Application Module :: Administration :: Root :: Services :: Permissions :: Access :: Location :: Internet Protocol Address: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_PERMISSION_LOCATION_IP<BR><BR>
+
+														<B>Application Module :: Administration :: Root :: Services :: Status</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+														* File :: Application Module :: Administration :: Root :: Services :: Status :: Activated: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_STATUS<BR><BR>
+
+														<B>Application Module :: Administration :: Root :: Services :: File Details</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+														<B>Details :: File</B><BR>
+														* File :: Application Module :: Administration :: Root :: Services :: Database Entry :: ID Number: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_ID<BR>
+														* File :: Application Module :: Administration :: Root :: Services :: Database Entry :: File Name: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_NAME<BR>
+														* File :: Application Module :: Administration :: Root :: Services :: Database Entry :: File Version: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_VERSION<BR><BR>
+
+														<B>Integrity :: Database Management System Server Database Entries</B><BR>
+														* Integrity :: Application Module :: Administration :: Root :: Services :: File Size :: Database Entry :: HASH :: Master :: Secure-Hash-Algorithm-256<BR><BR>
+														* Integrity :: Application Module :: Administration :: Root :: Services :: File Size :: Database Entry :: HASH :: Local :: Secure-Hash-Algorithm-256<BR>
+															$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_INTEGRITY<BR><BR>
+														* Integrity :: Application Module :: Administration :: Root :: Services :: File Size :: Database Entry :: HASH :: Local :: From Installation :: Secure-Hash-Algorithm-256<BR>
+															$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_INTEGRITY_INSTALLATION<BR><BR>
+
+														<B>Integrity :: Physical File</B><BR>
+														* Integrity :: Application Module :: Administration :: Root :: Services :: File Size :: Physical File :: HASH :: Secure-Hash-Algorithm-256<BR>
+															$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_HASH_SHA256<BR><BR>
+														* Integrity :: Application Module :: Administration :: Root :: Services :: File Size :: Physical File :: In Bytes :: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_SIZE<BR>
+														* Integrity :: Application Module :: Administration :: Root :: Services :: File Size :: Physical File :: In KiloBytes :: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_SIZE_KILOBYTES<BR><BR>
+
+														<B>Timestamps :: Installation</B><BR>
+														* Timestamp :: Application Module :: Administration :: Root :: Services :: Database Entry :: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_TIMESTAMP_INSTALLATION<BR>
+														<A HREF=\"./Applications/Services/$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_NAME?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Source Code :: For The Application Module :: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_NAME ::\">Display Source Code</A><HR><BR>
+");
+
+} // [ + ] WHILE: Retrieving :: All Services Root Administration-Level Application Module Entries From Database Management System Server Database
+
+/*
+ ============================================================================================================
+ +
+ + Application Modules :: Root Administration-Level
+ +
+ ============================================================================================================
+*/
+
+														echo ("<HR ALIGN=\"CENTER\" WIDTH=\"50%\"><CENTER><B>Application Modules :: Root Administration-Level</B></CENTER><HR ALIGN=\"CENTER\" WIDTH=\"50%\"><BR>");
+
+
+/*
+ ============================================================================================================
+ + WHILE: Retrieiving :: All Root Administration-Level Application Entries From The Database Management System Server Database
+ ============================================================================================================
+*/
+
+while ($_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root->fetch_array(MYSQLI_BOTH)) {
+
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_ID					= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Fetch_Array['id'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_NAME				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Fetch_Array['application_file_name'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_INTEGRITY			= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Fetch_Array['application_file_integrity'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_INTEGRITY_INSTALLATION		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Fetch_Array['application_file_integrity_installation'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_PERMISSION			= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Fetch_Array['application_file_permission'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_PERMISSION_CAMERA		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Fetch_Array['application_file_permission_camera'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_PERMISSION_MICROPHONE		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Fetch_Array['application_file_permission_microphone'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_PERMISSION_LOCATION_GPS		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Fetch_Array['application_file_permission_location_gps'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_PERMISSION_LOCATION_GLO		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Fetch_Array['application_file_permission_location_glo'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_PERMISSION_LOCATION_IP		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Fetch_Array['application_file_permission_location_internet_protocol_address'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_STATUS				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Fetch_Array['application_file_status'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_TIMESTAMP_INSTALLATION		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Fetch_Array['application_file_timestamp_installation'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_VERSION				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Fetch_Array['application_file_version'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_SIZE				= filesize("./Applications/Member/$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_NAME");
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_SIZE_KILOBYTES			= $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_SIZE / 1024;
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_HASH_SHA256			= hash_file('sha256', "./Applications/Root/$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_NAME");
+
+echo ("
+														<HR><B>File :: Application Module :: Administration :: Root :: File Name: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_NAME</B><HR>
+
+														<B>Application Module :: Administration :: Root :: Permissions</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+														<B>Permissions :: File</B><BR>
+														* File :: Application Module :: Administration :: Root :: Permissions :: Access :: File: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_PERMISSION<BR><BR>
+
+														<B>Permissions :: Device</B><BR>
+														* File :: Application Module :: Administration :: Root :: Permissions :: Access :: Device :: Camera: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_PERMISSION_CAMERA<BR>
+														* File :: Application Module :: Administration :: Root :: Permissions :: Access :: Device :: Microphone: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_PERMISSION_MICROPHONE<BR><BR>
+
+														<B>Permissions :: Location</B><BR>
+														* File :: Application Module :: Administration :: Root :: Permissions :: Access :: Location :: Global-Positioning-System: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_PERMISSION_LOCATION_GPS<BR>
+														* File :: Application Module :: Administration :: Root :: Permissions :: Access :: Location :: Geographical-Localization-Objects: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_PERMISSION_LOCATION_GLO<BR>
+														* File :: Application Module :: Administration :: Root :: Permissions :: Access :: Location :: Internet Protocol Address: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_PERMISSION_LOCATION_IP<BR><BR>
+
+														<B>Application Module :: Administration :: Root :: Status</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+														* File :: Application Module :: Administration :: Root :: Status :: Activated: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_STATUS<BR><BR>
+
+														<B>Application Module :: Administration :: Root :: File Details</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+														<B>Details :: File</B><BR>
+														* File :: Application Module :: Administration :: Root :: Database Entry :: ID Number: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_ID<BR>
+														* File :: Application Module :: Administration :: Root :: Database Entry :: File Name: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_NAME<BR>
+														* File :: Application Module :: Administration :: Root :: Database Entry :: File Version: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_VERSION<BR><BR>
+
+														<B>Integrity :: Database Management System Server Database Entries</B><BR>
+														* Integrity :: Application Module :: Administration :: Root :: File Size :: Database Entry :: HASH :: Master :: Secure-Hash-Algorithm-256<BR><BR>
+														* Integrity :: Application Module :: Administration :: Root :: File Size :: Database Entry :: HASH :: Local :: Secure-Hash-Algorithm-256<BR>
+															$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_INTEGRITY<BR><BR>
+														* Integrity :: Application Module :: Administration :: Root :: File Size :: Database Entry :: HASH :: Local :: From Installation :: Secure-Hash-Algorithm-256<BR>
+															$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_INTEGRITY_INSTALLATION<BR><BR>
+
+														<B>Integrity :: Physical File</B><BR>
+														* Integrity :: Application Module :: Administration :: Root :: File Size :: Physical File :: HASH :: Secure-Hash-Algorithm-256<BR>
+															$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_HASH_SHA256<BR><BR>
+														* Integrity :: Application Module :: Administration :: Root :: File Size :: Physical File :: In Bytes :: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_SIZE<BR>
+														* Integrity :: Application Module :: Administration :: Root :: File Size :: Physical File :: In KiloBytes :: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_SIZE_KILOBYTES<BR><BR>
+
+														<B>Timestamps :: Installation</B><BR>
+														* Timestamp :: Application Module :: Administration :: Root :: Database Entry :: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_TIMESTAMP_INSTALLATION<BR>
+														<A HREF=\"./Applications/Root/$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_NAME?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Source Code :: For The Application Module :: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_NAME ::\">Display Source Code</A><HR><BR>
+");
+
+} // [ + ] WHILE: Retrieving :: All Root Administration-Level Application Module Entries From Database Management System Server Database
+
+/*
+ ============================================================================================================
+ +
+ + Application Modules :: Administration-Level
+ +
+ ============================================================================================================
+*/
+
+														echo ("<HR ALIGN=\"CENTER\" WIDTH=\"50%\"><CENTER><B>Application Modules :: Administration-Level</B></CENTER><HR ALIGN=\"CENTER\" WIDTH=\"50%\"><BR>");
+
+/*
+ ============================================================================================================
+ + WHILE: Retrieiving :: All Administration-Level Application Entries From The Database Management System Server Database
+ ============================================================================================================
+*/
+
+while ($_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration->fetch_array(MYSQLI_BOTH)) {
+
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ID						= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array['id'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME					= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array['application_file_name'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_INTEGRITY				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array['application_file_integrity'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_INTEGRITY_INSTALLATION		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array['application_file_integrity_installation'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_PERMISSION				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array['application_file_permission'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_PERMISSION_CAMERA			= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array['application_file_permission_camera'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_PERMISSION_MICROPHONE			= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array['application_file_permission_microphone'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_PERMISSION_LOCATION_GPS		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array['application_file_permission_location_gps'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_PERMISSION_LOCATION_GLO		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array['application_file_permission_location_glo'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_PERMISSION_LOCATION_IP		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array['application_file_permission_location_internet_protocol_address'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_STATUS				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array['application_file_status'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_TIMESTAMP_INSTALLATION		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array['application_file_timestamp_installation'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_VERSION				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array['application_file_version'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_SIZE					= filesize("./Applications/Member/$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME");
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_SIZE_KILOBYTES			= $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_SIZE / 1024;
+$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_HASH_SHA256				= hash_file('sha256', "./Applications/Administration/$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME");
+
+echo ("
+														<HR><B>File :: Application Module :: Administration :: File Name: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME</B><HR>
+
+														<B>Application Module :: Administration :: Permissions</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+														<B>Permissions :: File</B><BR>
+														* File :: Application Module :: Administration :: Permissions :: Access :: File: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_PERMISSION<BR><BR>
+
+														<B>Permissions :: Device</B><BR>
+														* File :: Application Module :: Administration :: Permissions :: Access :: Device :: Camera: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_PERMISSION_CAMERA<BR>
+														* File :: Application Module :: Administration :: Permissions :: Access :: Device :: Microphone: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_PERMISSION_MICROPHONE<BR><BR>
+
+														<B>Permissions :: Location</B><BR>
+														* File :: Application Module :: Administration :: Permissions :: Access :: Location :: Global-Positioning-System: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_PERMISSION_LOCATION_GPS<BR>
+														* File :: Application Module :: Administration :: Permissions :: Access :: Location :: Geographical-Localization-Objects: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_PERMISSION_LOCATION_GLO<BR>
+														* File :: Application Module :: Administration :: Permissions :: Access :: Location :: Internet Protocol Address: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_PERMISSION_LOCATION_IP<BR><BR>
+
+														<B>Application Module :: Administration :: Status</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+														* File :: Application Module :: Administration :: Status :: Activated: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_STATUS<BR><BR>
+
+														<B>Application Module :: Administration :: File Details</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+														<B>Details :: File</B><BR>
+														* File :: Application Module :: Administration :: Database Entry :: ID Number: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ID<BR>
+														* File :: Application Module :: Administration :: Database Entry :: File Name: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Application Module :: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME ::\">$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME</A><BR>
+														* File :: Application Module :: Administration :: Database Entry :: File Version: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_VERSION<BR><BR>
+
+														<B>Integrity :: Database Management System Server Database Entries</B><BR>
+														* Integrity :: Application Module :: Administration :: File Size :: Database Entry :: HASH :: Master :: Secure-Hash-Algorithm-256<BR><BR>
+														* Integrity :: Application Module :: Administration :: File Size :: Database Entry :: HASH :: Local :: Secure-Hash-Algorithm-256<BR>
+															$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_INTEGRITY<BR><BR>
+														* Integrity :: Application Module :: Administration :: File Size :: Database Entry :: HASH :: Local :: From Installation :: Secure-Hash-Algorithm-256<BR>
+															$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_INTEGRITY_INSTALLATION<BR><BR>
+
+														<B>Integrity :: Physical File</B><BR>
+														* Integrity :: Application Module :: Administration :: File Size :: Physical File :: HASH :: Secure-Hash-Algorithm-256<BR>
+															$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_HASH_SHA256<BR><BR>
+														* Integrity :: Application Module :: Administration :: File Size :: Physical File :: In Bytes :: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_SIZE<BR>
+														* Integrity :: Application Module :: Administration :: File Size :: Physical File :: In KiloBytes :: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_SIZE_KILOBYTES<BR><BR>
+
+														<B>Timestamps :: Installation</B><BR>
+														* Timestamp :: Application Module :: Administration :: Database Entry :: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_TIMESTAMP_INSTALLATION<BR>
+														<A HREF=\"./Applications/Administration/$_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Source Code :: For The Application Module :: $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME ::\">Display Source Code</A><HR><BR>
+");
+
+} // [ + ] WHILE: Retrieving :: All Administration-Level Application Module Entries From Database Management System Server Database
+
+/*
+ ============================================================================================================
+ +
+ + Application Modules :: Member-Level
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + List All Member-Level Application Entries
+ ============================================================================================================
+*/
+
+														echo ("<HR ALIGN=\"CENTER\" WIDTH=\"50%\"><CENTER><B>Application Modules :: Member-Level</B></CENTER><HR ALIGN=\"CENTER\" WIDTH=\"50%\"><BR>");
+
+/*
+ ============================================================================================================
+ + WHILE: Retrieiving :: All Member-Level Application Entries From The Database Management System Server Database
+ ============================================================================================================
+*/
+
+while ($_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member->fetch_array(MYSQLI_BOTH)) {
+
+$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_ID						= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array['id'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME					= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array['application_file_name'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_INTEGRITY				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array['application_file_integrity'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_INTEGRITY_INSTALLATION		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array['application_file_integrity_installation'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_PERMISSION				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array['application_file_permission'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_PERMISSION_CAMERA			= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array['application_file_permission_camera'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_PERMISSION_MICROPHONE			= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array['application_file_permission_microphone'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_PERMISSION_LOCATION_GPS		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array['application_file_permission_location_gps'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_PERMISSION_LOCATION_GLO		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array['application_file_permission_location_glo'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_PERMISSION_LOCATION_IP		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array['application_file_permission_location_internet_protocol_address'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_STATUS				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array['application_file_status'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_TIMESTAMP_INSTALLATION		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array['application_file_timestamp_installation'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_VERSION				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array['application_file_version'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_SIZE					= filesize("./Applications/Member/$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME");
+$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_SIZE_KILOBYTES			= $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_SIZE / 1024;
+$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_HASH_SHA256				= hash_file('sha256', "./Applications/Member/$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME");
+
+echo ("
+														<HR><B>File :: Application Module :: Member :: File Name: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME</B><HR>
+
+														<B>Application Module :: Member :: Permissions</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+														<B>Permissions :: File</B><BR>
+														* File :: Application Module :: Member :: Permissions :: Access :: File: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_PERMISSION<BR><BR>
+
+														<B>Permissions :: Device</B><BR>
+														* File :: Application Module :: Member :: Permissions :: Access :: Device :: Camera: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_PERMISSION_CAMERA<BR>
+														* File :: Application Module :: Member :: Permissions :: Access :: Device :: Microphone: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_PERMISSION_MICROPHONE<BR><BR>
+
+														<B>Permissions :: Location</B><BR>
+														* File :: Application Module :: Member :: Permissions :: Access :: Location :: Global-Positioning-System: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_PERMISSION_LOCATION_GPS<BR>
+														* File :: Application Module :: Member :: Permissions :: Access :: Location :: Geographical-Localization-Objects: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_PERMISSION_LOCATION_GLO<BR>
+														* File :: Application Module :: Member :: Permissions :: Access :: Location :: Internet Protocol Address: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_PERMISSION_LOCATION_IP<BR><BR>
+
+														<B>Application Module :: Member :: Status</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+														* File :: Application Module :: Member :: Status :: Activated: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_STATUS<BR><BR>
+
+														<B>Application Module :: Member :: File Details</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+														<B>Details :: File</B><BR>
+														* File :: Application Module :: Member :: Database Entry :: ID Number: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_ID<BR>
+														* File :: Application Module :: Member :: Database Entry :: File Name: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Application Module :: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME ::\">$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME</A><BR>
+														* File :: Application Module :: Member :: Database Entry :: File Version: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_VERSION<BR><BR>
+
+														<B>Integrity :: Database Management System Server Database Entries</B><BR>
+														* Integrity :: Application Module :: Member :: File Size :: Database Entry :: HASH :: Master :: Secure-Hash-Algorithm-256<BR><BR>
+														* Integrity :: Application Module :: Member :: File Size :: Database Entry :: HASH :: Local :: Secure-Hash-Algorithm-256<BR>
+															$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_INTEGRITY<BR><BR>
+														* Integrity :: Application Module :: Member :: File Size :: Database Entry :: HASH :: Local :: From Installation :: Secure-Hash-Algorithm-256<BR>
+															$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_INTEGRITY_INSTALLATION<BR><BR>
+
+														<B>Integrity :: Physical File</B><BR>
+														* Integrity :: Application Module :: Member :: File Size :: Physical File :: HASH :: Secure-Hash-Algorithm-256<BR>
+															$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_HASH_SHA256<BR><BR>
+														* Integrity :: Application Module :: Member :: File Size :: Physical File :: In Bytes :: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_SIZE<BR>
+														* Integrity :: Application Module :: Member :: File Size :: Physical File :: In KiloBytes :: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_SIZE_KILOBYTES<BR><BR>
+
+														<B>Timestamps :: Installation</B><BR>
+														* Timestamp :: Application Module :: Member :: Database Entry :: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_TIMESTAMP_INSTALLATION<BR>
+														<A HREF=\"./Applications/Member/$_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Source Code :: For The Application Module :: $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME ::\">Display Source Code</A><HR><BR>
+");
+
+} // [ + ] WHILE: Retrieving :: All Application Module Entries From Database Management System Server Database
+
+/*
+ ============================================================================================================
+ + List All Application Panel Entries
+ ============================================================================================================
+*/
+
+														echo ("<HR ALIGN=\"CENTER\" WIDTH=\"50%\"><CENTER><B>Application Modules :: Panels</B></CENTER><HR ALIGN=\"CENTER\" WIDTH=\"50%\"><BR>");
+
+/*
+ ============================================================================================================
+ + WHILE: Retrieiving :: All Panel-Level Application Entries From The Database Management System Server Database
+ ============================================================================================================
+*/
+
+while ($_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel->fetch_array(MYSQLI_BOTH)) {
+
+$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_ID						= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel_Fetch_Array['id'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_NAME					= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel_Fetch_Array['application_panel_file_name'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_INTEGRITY				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel_Fetch_Array['application_panel_file_integrity'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_INTEGRITY_INSTALLATION			= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel_Fetch_Array['application_panel_file_integrity_installation'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_PERMISSION				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel_Fetch_Array['application_panel_file_permission'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_PERMISSION_CAMERA			= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel_Fetch_Array['application_panel_file_permission_camera'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_PERMISSION_MICROPHONE			= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel_Fetch_Array['application_panel_file_permission_microphone'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_PERMISSION_LOCATION_GPS		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel_Fetch_Array['application_panel_file_permission_location_gps'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_PERMISSION_LOCATION_GLO		= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel_Fetch_Array['application_panel_file_permission_location_glo'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_PERMISSION_LOCATION_IP			= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel_Fetch_Array['application_panel_file_permission_location_ip_address'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_STATUS					= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel_Fetch_Array['application_panel_file_status'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_TIMESTAMP_INSTALLATION			= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel_Fetch_Array['application_panel_file_timestamp_installation'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_VERSION				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel_Fetch_Array['application_panel_file_version'];
+$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_SIZE					= filesize("./Applications/Panel/$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_NAME.panel");
+$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_SIZE_KILOBYTES				= $_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_SIZE / 1024;
+$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_HASH_SHA256				= hash_file('sha256', "./Applications/Panel/$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_NAME.panel");
+
+echo ("
+														<HR><B>File :: Application Module :: Panel :: File Name: $_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_NAME</B><HR>
+
+														<B>Application Module :: Panel :: Permissions</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+														<B>Permissions :: File</B><BR>
+														* File :: Application Module :: Panel :: Permissions :: Access :: File: $_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_PERMISSION<BR><BR>
+
+														<B>Permissions :: Device</B><BR>
+														* File :: Application Module :: Panel :: Permissions :: Access :: Device :: Camera: $_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_PERMISSION_CAMERA<BR>
+														* File :: Application Module :: Panel :: Permissions :: Access :: Device :: Microphone: $_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_PERMISSION_MICROPHONE<BR><BR>
+
+														<B>Permissions :: Location</B><BR>
+														* File :: Application Module :: Panel :: Permissions :: Access :: Location :: Global-Positioning-System: $_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_PERMISSION_LOCATION_GPS<BR>
+														* File :: Application Module :: Panel :: Permissions :: Access :: Location :: Geographical-Localization-Objects: $_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_PERMISSION_LOCATION_GLO<BR>
+														* File :: Application Module :: Panel :: Permissions :: Access :: Location :: Internet Protocol Address: $_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_PERMISSION_LOCATION_IP<BR><BR>
+
+														<B>Application Module :: Panel :: Status</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+														* File :: Application Module :: Panel :: Status :: Activated: $_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_STATUS<BR><BR>
+
+														<B>Application Module :: Panel :: File Details</B><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+														<B>Details :: File</B><BR>
+														* File :: Application Module :: Panel :: Database Entry :: ID Number: $_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_ID<BR>
+														* File :: Application Module :: Panel :: Database Entry :: File Name: $_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_NAME<BR>
+														* File :: Application Module :: Panel :: Database Entry :: File Version: $_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_VERSION<BR><BR>
+
+														<B>Integrity :: Database Management System Server Database Entries</B><BR>
+														* Integrity :: Application Module :: Panel :: File Size :: Database Entry :: HASH :: Master :: Secure-Hash-Algorithm-256<BR><BR>
+														* Integrity :: Application Module :: Panel :: File Size :: Database Entry :: HASH :: Local :: Secure-Hash-Algorithm-256<BR>
+															$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_INTEGRITY<BR><BR>
+														* Integrity :: Application Module :: Panel :: File Size :: Database Entry :: HASH :: Local :: From Installation :: Secure-Hash-Algorithm-256<BR>
+															$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_INTEGRITY_INSTALLATION<BR><BR>
+
+														<B>Integrity :: Physical File</B><BR>
+														* Integrity :: Application Module :: Panel :: File Size :: Physical File :: HASH :: Secure-Hash-Algorithm-256<BR>
+															$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_HASH_SHA256<BR><BR>
+														* Integrity :: Application Module :: Panel :: File Size :: Physical File :: In Bytes :: $_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_SIZE<BR>
+														* Integrity :: Application Module :: Panel :: File Size :: Physical File :: In KiloBytes :: $_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_SIZE_KILOBYTES<BR><BR>
+
+														<B>Timestamps :: Installation</B><BR>
+														* Timestamp :: Application Module :: Panel :: Database Entry :: $_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_TIMESTAMP_INSTALLATION<BR>
+														<A HREF=\"./Applications/Panel/$_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_NAME.panel?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Source Code :: For The Application Module :: $_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_NAME ::\">Display Source Code</A><HR><BR>
+");
+
+} // [ + ] WHILE: Retrieving :: All Panel-Level Application Module Entries From Database Management System Server Database
+
+/*
+ ============================================================================================================
+ + WHILE: Retrieiving :: All Services Root Administration-Level Application Entries From The Database Management System Server Database
+ ============================================================================================================
+*/
+
+while ($_Application_Module_Member_Application_List_DB_Query_List_Kernel_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Kernel->fetch_array(MYSQLI_BOTH)) {
+
+$_Application_Module_Member_Application_List_LIST_KERNEL_ENTRY_ID					= $_Application_Module_Member_Application_List_DB_Query_List_Kernel_Fetch_Array['id'];
+$_Application_Module_Member_Application_List_LIST_KERNEL_ENTRY_FILE_DATE_INSTALLATION			= $_Application_Module_Member_Application_List_DB_Query_List_Kernel_Fetch_Array['kernel_file_date_installation'];
+$_Application_Module_Member_Application_List_LIST_KERNEL_ENTRY_FILE_INTEGRITY				= $_Application_Module_Member_Application_List_DB_Query_List_Kernel_Fetch_Array['kernel_file_integrity'];
+$_Application_Module_Member_Application_List_LIST_KERNEL_ENTRY_FILE_NAME				= $_Application_Module_Member_Application_List_DB_Query_List_Kernel_Fetch_Array['kernel_file_name'];
+$_Application_Module_Member_Application_List_LIST_KERNEL_ENTRY_FILE_VERSION				= $_Application_Module_Member_Application_List_DB_Query_List_Kernel_Fetch_Array['kernel_file_version'];
+
+/*
+ ============================================================================================================
+ + Display :: Contents :: File :: Kernel :: Kernel File
+ ============================================================================================================
+*/
+
+echo ("
+		<B>File :: Kernel :: File Name: $_INTERNAL_FILE_KERNEL</B><HR>
+		* Integrity :: File :: System :: Kernel File :: HASH, Secure-Hash-Algorithm-256 :: Master Database Server:<BR>
+		* Integrity :: File :: System :: Kernel File :: HASH, Secure-Hash-Algorithm-256 :: Local Database Server: $_Application_Module_Member_Application_List_LIST_KERNEL_ENTRY_FILE_INTEGRITY<BR>
+		* Integrity :: File :: System :: Kernel File :: HASH, Secure-Hash-Algorithm-256 :: Local File: $_Application_Module_Member_Application_List_FILE_KERNEL_FILE_HASH_SHA256<BR>
+		* Integrity :: File :: System :: Kernel File :: File Size :: In Bytes :: $_Application_Module_Member_Application_List_FILE_KERNEL_FILE_SIZE<BR>
+		* Integrity :: File :: System :: Kernel File :: File Size :: In KiloBytes :: $_Application_Module_Member_Application_List_FILE_KERNEL_FILE_SIZE_KILOBYTES<BR>
+		* Integrity :: File :: System :: Kernel File :: Version :: $_Application_Module_Member_Application_List_LIST_KERNEL_ENTRY_FILE_VERSION<BR>
+		<FORM>
+			<TEXTAREA ROWS=\"20\" COLS=\"120\">$_Application_Module_Member_Application_List_FILE_KERNEL_FILE_CONTENTS</TEXTAREA>
+		</FORM><BR><BR>
+");
+
+} // [ + ] WHILE: Retrieving :: Kernel File Entries :: From The Database Management System Server Database
+
+/*
+ ============================================================================================================
+ + Display :: Contents :: File :: Configuration :: System Configuration File
+ ============================================================================================================
+*/
+
+echo ("
+		<B>File :: Module :: System :: Configuration :: Configuration File :: File Name: $_Application_Module_Member_Application_List_FILE_MODULE_CONFIGURATION_FILE</B><HR>
+		* Integrity :: File :: System :: Configuration :: Configuration File :: HASH, Secure-Hash-Algorithm-256 :: Master Database Server:<BR>
+		* Integrity :: File :: System :: Configuration :: Configuration File :: HASH, Secure-Hash-Algorithm-256 :: Local Database Server:<BR>
+		* Integrity :: File :: System :: Configuration :: Configuration File :: HASH, Secure-Hash-Algorithm-256 :: Local File: $_Application_Module_Member_Application_List_FILE_MODULE_CONFIGURATION_FILE_HASH_SHA256<BR>
+		* Integrity :: File :: System :: Configuration :: Configuration File :: File Size :: In Bytes :: $_Application_Module_Member_Application_List_FILE_MODULE_CONFIGURATION_FILE_SIZE<BR>
+		* Integrity :: File :: System :: Configuration :: Configuration File :: File Size :: In KiloBytes :: $_Application_Module_Member_Application_List_FILE_MODULE_CONFIGURATION_FILE_SIZE_KILOBYTES<BR>
+		<FORM>
+			<TEXTAREA ROWS=\"20\" COLS=\"120\">$_Application_Module_Member_Application_List_FILE_MODULE_CONFIGURATION_FILE_CONTENTS</TEXTAREA>
+		</FORM><BR><BR>
+");
+
+/*
+ ============================================================================================================
+ + Display :: Contents :: File :: Security Module :: Master Sanitization File
+ ============================================================================================================
+*/
+
+echo ("
+		<B>File :: Module :: System :: Security :: Sanitization :: Default :: File Name: $_Application_Module_Member_Application_List_FILE_MODULE_SYSTEM_SECURITY_MASTER_SANITIZATION_FILE</B><HR>
+		* Integrity :: File :: System :: Security :: Module :: Sanitization :: HASH, Secure-Hash-Algorithm-256 :: Master Database Server:<BR>
+		* Integrity :: File :: System :: Security :: Module :: Sanitization :: HASH, Secure-Hash-Algorithm-256 :: Local Database Server:<BR>
+		* Integrity :: File :: System :: Security :: Module :: Sanitization :: HASH, Secure-Hash-Algorithm-256 :: Local File: $_Application_Module_Member_Application_List_FILE_MODULE_SYSTEM_SECURITY_MASTER_SANITIZATION_FILE_HASH_SHA256<BR>
+		* Integrity :: File :: System :: Security :: Module :: Sanitization :: File Size :: In Bytes :: $_Application_Module_Member_Application_List_FILE_MODULE_SYSTEM_SECURITY_MASTER_SANITIZATION_FILE_SIZE<BR>
+		* Integrity :: File :: System :: Security :: Module :: Sanitization :: File Size :: In KiloBytes :: $_Application_Module_Member_Application_List_FILE_MODULE_SYSTEM_SECURITY_MASTER_SANITIZATION_FILE_SIZE_KILOBYTES<BR>
+		<FORM>
+			<TEXTAREA ROWS=\"20\" COLS=\"120\">$_Application_Module_Member_Application_List_FILE_MODULE_SYSTEM_SECURITY_MASTER_SANITIZATION_FILE_CONTENTS</TEXTAREA>
+		</FORM><BR><BR>
+");
+
+/*
+ ============================================================================================================
+ + Display :: Contents :: File :: Maintenance :: Diagnostics :: Diagnostics File
+ ============================================================================================================
+*/
+
+echo ("
+		<B>File :: Module :: Maintenance :: Diagnostics :: File Name: $_INTERNAL_FILE_MAINTENANCE_DIAGNOSTICS</B><HR>
+		* Integrity :: File :: Maintenance :: Diagnostics :: HASH, Secure-Hash-Algorithm-256 :: Master Database Server:<BR>
+		* Integrity :: File :: Maintenance :: Diagnostics :: HASH, Secure-Hash-Algorithm-256 :: Local Database Server:<BR>
+		* Integrity :: File :: Maintenance :: Diagnostics :: HASH, Secure-Hash-Algorithm-256 :: Local File: $_Application_Module_Member_Application_List_FILE_MODULE_MAINTENANCE_DIAGNOSTICS_FILE_HASH_SHA256<BR>
+		* Integrity :: File :: Maintenance :: Diagnostics :: File Size :: In Bytes :: $_Application_Module_Member_Application_List_FILE_MODULE_MAINTENANCE_DIAGNOSTICS_FILE_SIZE<BR>
+		* Integrity :: File :: Maintenance :: Diagnostics :: File Size :: In KiloBytes :: $_Application_Module_Member_Application_List_FILE_MODULE_MAINTENANCE_DIAGNOSTICS_FILE_SIZE_KILOBYTES<BR>
+		<FORM>
+			<TEXTAREA ROWS=\"20\" COLS=\"120\">$_Application_Module_Member_Application_List_FILE_MODULE_MAINTENANCE_DIAGNOSTICS_FILE_CONTENTS</TEXTAREA>
+		</FORM><BR><BR>
+");
+
+/*
+ ============================================================================================================
+ + Display :: Contents :: File :: Language :: English :: Language File
+ ============================================================================================================
+*/
+
+echo ("
+		<B>File :: Module :: Language :: English :: File Name: $_Application_Module_Member_Application_List_FILE_MODULE_LANGUAGE_ENGLISH_FILE</B><HR>
+		* Integrity :: File :: Language :: English :: HASH, Secure-Hash-Algorithm-256 :: Master Database Server:<BR>
+		* Integrity :: File :: Language :: English :: HASH, Secure-Hash-Algorithm-256 :: Local Database Server:<BR>
+		* Integrity :: File :: Language :: English :: HASH, Secure-Hash-Algorithm-256 :: Local File: $_Application_Module_Member_Application_List_FILE_MODULE_LANGUAGE_ENGLISH_FILE_HASH_SHA256<BR>
+		* Integrity :: File :: Language :: English :: File Size :: In Bytes :: $_Application_Module_Member_Application_List_FILE_MODULE_LANGUAGE_ENGLISH_FILE_SIZE<BR>
+		* Integrity :: File :: Language :: English :: File Size :: In KiloBytes :: $_Application_Module_Member_Application_List_FILE_MODULE_LANGUAGE_ENGLISH_FILE_SIZE_KILOBYTES<BR>
+		<FORM>
+			<TEXTAREA ROWS=\"20\" COLS=\"120\">$_Application_Module_Member_Application_List_FILE_MODULE_LANGUAGE_ENGLISH_FILE_CONTENTS</TEXTAREA>
+		</FORM><BR><BR>
+");
+
+/*
+ ============================================================================================================
+ + Display :: Contents :: File :: System :: Plug-In :: Location :: Default Location File
+ ============================================================================================================
+*/
+
+echo ("
+		<B>File :: Module :: System :: Plug-In :: Location :: Default :: File Name: $_Application_Module_Member_Application_List_FILE_SYSTEM_PLUGIN_LOCATION_DEFAULT_FILE</B><HR>
+		* Integrity :: File :: System :: Plug-In :: Location :: HASH, Secure-Hash-Algorithm-256 :: Master Database Server:<BR>
+		* Integrity :: File :: System :: Plug-In :: Location :: HASH, Secure-Hash-Algorithm-256 :: Local Database Server:<BR>
+		* Integrity :: File :: System :: Plug-In :: Location :: HASH, Secure-Hash-Algorithm-256 :: Local File: $_Application_Module_Member_Application_List_FILE_SYSTEM_PLUGIN_LOCATION_DEFAULT_FILE_HASH_SHA256<BR>
+		* Integrity :: File :: System :: Plug-In :: Location :: File Size :: In Bytes: $_Application_Module_Member_Application_List_FILE_SYSTEM_PLUGIN_LOCATION_DEFAULT_FILE_SIZE<BR>
+		* Integrity :: File :: System :: Plug-In :: Location :: File Size :: In KiloBytes: $_Application_Module_Member_Application_List_FILE_SYSTEM_PLUGIN_LOCATION_DEFAULT_FILE_SIZE_KILOBYTES<BR>
+		<FORM>
+			<TEXTAREA ROWS=\"20\" COLS=\"120\">$_Application_Module_Member_Application_List_FILE_SYSTEM_PLUGIN_LOCATION_DEFAULT_FILE_CONTENTS</TEXTAREA>
+		</FORM><BR><BR>
+");
+
+} // [ + ] IF: Internal Application: Display :: Application List
+
+/*
+ ============================================================================================================
+ + Kill SQL Database Server Query: Select All Applications Module Entries :: Background-Level
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background->free_result();
+
+/*
+ ============================================================================================================
+ + Kill SQL Database Server Query: Select All Applications Module Entries :: Services Root Administration-Level
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services->free_result();
+
+/*
+ ============================================================================================================
+ + Kill SQL Database Server Query: Select All Applications Module Entries :: Root Administration-Level
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root->free_result();
+
+/*
+ ============================================================================================================
+ + Kill SQL Database Server Query: Select All Applications Module Entries :: Administration-Level
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration->free_result();
+
+/*
+ ============================================================================================================
+ + Kill SQL Database Server Query: Select All Applications Module Entries :: Member
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member->free_result();
+
+/*
+ ============================================================================================================
+ + Kill SQL Database Server Query: Select All Application Panel Entries :: Panel
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel->free_result();
+?>
