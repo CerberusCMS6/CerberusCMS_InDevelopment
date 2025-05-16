@@ -84,7 +84,7 @@ $_Application_Module_Administration_Web_Pages_POST_HYPERLINK_TYPE				= $_POST['A
 if (!$_Application_Module_Administration_Web_Pages_POST_HYPERLINK_NAME) {
 
 echo ("
-											<CENTER><B>Install Link Entry</B></CENTER><HR>
+											<BR><BR><HR WIDTH=\"50%\" ALIGN=\"CENTER\"><CENTER><B>Install Hyper-Link Entry</B></CENTER><HR WIDTH=\"50%\" ALIGN=\"CENTER\">
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 													Link Entry Name<BR>
 														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Install_Hyperlink_Name\" MAXLENGTH=\"250\"><BR>
@@ -161,7 +161,7 @@ if ($_Application_Module_Administration_Web_Pages_DB_Query_SELECT_HYPERLINKS_NUM
 
 } else {
 
-											echo ("<HR WIDTH=\"50%\" ALIGN=\"CENTER\"><CENTER><B>Existing Application Hyper-Link Entries</B></CENTER><HR WIDTH=\"50%\" ALIGN=\"CENTER\">");
+											echo ("<HR WIDTH=\"50%\" ALIGN=\"CENTER\"><CENTER><B>Existing Application Hyper-Link Entries</B></CENTER><HR WIDTH=\"50%\" ALIGN=\"CENTER\"><BR>");
 
 /*
  ============================================================================================================
@@ -270,7 +270,7 @@ $_Application_Module_Administration_Web_Pages_POST_UPDATE_HYPERLINK_URL			= $_PO
 if ((!$_Application_Module_Administration_Web_Pages_POST_UPDATE_HYPERLINK_NAME) || (!$_Application_Module_Administration_Web_Pages_POST_UPDATE_HYPERLINK_ROW) || (!$_Application_Module_Administration_Web_Pages_POST_UPDATE_HYPERLINK_URL)) {
 
 echo ("
-											<BR><BR><HR><CENTER><B>Currently Updating Link Entry: <I>$_Application_Module_Administration_Web_Pages_LIST_LINK_NAME</I></B></CENTER><HR>
+											<BR><BR><HR ALIGN=\"CENTER\" WIDTH=\"50%\"><CENTER><B>Currently Updating Link Entry: <I>$_Application_Module_Administration_Web_Pages_LIST_LINK_NAME</I></B></CENTER><HR ALIGN=\"CENTER\" WIDTH=\"50%\">
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;UpdateLinkID&#61;$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 													Link Entry :: Name<BR>
 														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Update_Hyperlink_Name\" VALUE=\"$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_NAME\" MAXLENGTH=\"250\"><BR>
@@ -280,8 +280,8 @@ echo ("
 													Link Entry Uniform-Resource-Location:<BR>
 													Where Does This Link Lead To ? Example: <I>My_Pictures.html</I> OR <I>My_Pictures.php</I> OR <I>?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;ApplicationFileName</I><BR>
 														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Update_Hyperlink_URL\" VALUE=\"$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_URL\" MAXLENGTH=\"250\"><BR>
-													<INPUT TYPE=\"submit\" VALUE=\"Update Link Entry\">
-												</FORM><HR><BR><BR>
+													<INPUT TYPE=\"submit\" VALUE=\"Update Hyper-Link Entry\">
+												</FORM><HR ALIGN=\"CENTER\" WIDTH=\"50%\"><BR><BR>
 ");
 
 } else {
@@ -366,14 +366,14 @@ $_Application_Module_Administration_Web_Pages_POST_INSTALL_CUSTOM_APPLICATION_DA
 if ((!$_Application_Module_Administration_Web_Pages_POST_INSTALL_CUSTOM_APPLICATION_NAME) || (!$_Application_Module_Administration_Web_Pages_POST_INSTALL_CUSTOM_APPLICATION_DATA)) {
 
 echo ("
-											<BR><BR><HR><CENTER><B>Install Custom Web Page Entry</B></CENTER><HR>
+											<BR><BR><HR ALIGN=\"CENTER\" WIDTH=\"50%\"><CENTER><B>Install Custom Web Page Entry</B></CENTER><HR ALIGN=\"CENTER\" WIDTH=\"50%\">
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 													Custom Web Page :: Name<BR>
 														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Install_Web_Page_Name\" MAXLENGTH=\"250\"><BR>
 													Custom Web Page :: Data<BR>
 												$_GLOBAL_PLUGIN_SYSTEM_TEXTEDITOR_BUTTONS<BR>
 														<TEXTAREA ROWS=\"15\" COLS=\"75\" NAME=\"AMA_Web_Pages_Install_Web_Page_Data\" ID=\"WYSIWYG\"></TEXTAREA><BR>
-													<INPUT TYPE=\"submit\" VALUE=\"Install Web Page\">
+													<INPUT TYPE=\"submit\" VALUE=\"Install Web Page Entry\">
 												</FORM>
 ");
 
@@ -424,7 +424,7 @@ if ($_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_CUSTOM_APPLIC
 
 $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPLICATIONS			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_web_pages ORDER BY web_page_name ASC");
 
-echo ("<BR><HR><CENTER><B>Existing Custom Application Entries</B></CENTER><HR>");
+echo ("<BR><HR ALIGN=\"CENTER\" WIDTH=\"50%\"><CENTER><B>Existing Custom Application Entries</B></CENTER><HR ALIGN=\"CENTER\" WIDTH=\"50%\">");
 
 while ($_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPLICATIONS_Fetch_Array = $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPLICATIONS->fetch_array(MYSQLI_BOTH)) {
 
@@ -445,7 +445,9 @@ $_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_DATA				= str_replac
 $_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_DATA				= str_replace($_GLOBAL_PLUGIN_SAFEHTML_SMILEYS_BACK, $_GLOBAL_PLUGIN_SAFEHTML_SMILEYS_BACK_REPLACE, $_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_DATA);
 
 echo ("
-												Custom Web Page Name: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_CUSTOM&#61;$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Custom Web Application :: $_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_NAME\">$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_NAME</A><HR>
+											<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+												Custom Web Page Name: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_CUSTOM&#61;$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Custom Web Application :: $_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_NAME\">$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_NAME</A>
+											<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
 													=> <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;DeleteWebPageID&#61;$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Delete The Web Page :: $_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_NAME ::\">Delete</A><BR>
 													=> <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;UpdateWebPageID&#61;$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Update The Web Page :: $_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_NAME ::\">Update</A><BR><BR>
 ");
@@ -528,7 +530,7 @@ $_Application_Module_Administration_Web_Pages_POST_UPDATE_WEB_PAGE_DATA				= str
 if ((!$_Application_Module_Administration_Web_Pages_POST_UPDATE_WEB_PAGE_NAME) || (!$_Application_Module_Administration_Web_Pages_POST_UPDATE_WEB_PAGE_DATA)) {
 
 echo ("
-											<BR><BR><HR><CENTER><B>Currently Updating Custom Application Entry: <I>$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_NAME</I></B></CENTER><HR>
+											<BR><BR><HR><CENTER><B>Currently Updating Custom Web Page Entry: <I>$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_NAME</I></B></CENTER><HR>
 												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;UpdateCustomApplicationID&#61;$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 													Web Page Entry :: Name<BR>
 														<INPUT TYPE=\"text\" NAME=\"AMA_Web_Pages_Update_Web_Page_Name\" VALUE=\"$_Application_Module_Administration_Web_Pages_LIST_WEB_PAGE_NAME\" MAXLENGTH=\"250\"><BR>
