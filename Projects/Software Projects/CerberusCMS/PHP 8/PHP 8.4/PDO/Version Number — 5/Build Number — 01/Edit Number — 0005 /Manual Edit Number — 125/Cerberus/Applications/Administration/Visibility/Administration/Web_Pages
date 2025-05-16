@@ -94,7 +94,7 @@ echo ("
 													Link Entry Type<BR>
 														<SELECT NAME=\"AMA_Web_Pages_Install_Hyperlink_Type\">
 															<OPTION VALUE=\"1\">Custom Text / HTML Document</OPTION>
-															<OPTION VALUE=\"2\">Uploaded Application</OPTION>
+															<OPTION VALUE=\"2\">Uploaded Custom Application</OPTION>
 														</SELECT><BR>
 													<INPUT TYPE=\"submit\" VALUE=\"Install Hyperlink Entry\">
 												</FORM><BR>
@@ -134,7 +134,7 @@ $_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_HYPERLINK		= $_GL
 
 if ($_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_HYPERLINK) {
 
-											echo ($_Application_Module_Administration_Message_Web_Pages_LINK_INSTALLED_SUCCESSFULLY);
+											echo ($_Application_Module_Administration_Message_Web_Pages_HYPERLINK_INSTALLED_SUCCESSFULLY);
 
 } else {
 
@@ -155,9 +155,9 @@ if ($_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_HYPERLINK) {
 $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_HYPERLINKS			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks ORDER BY application_hyperlink_row ASC");
 $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_HYPERLINKS_NUMBER_OF_ROWS		= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_HYPERLINKS->num_rows;
 
-if ($_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS_NUMBER_OF_ROWS <= 0) {
+if ($_Application_Module_Administration_Web_Pages_DB_Query_SELECT_HYPERLINKS_NUMBER_OF_ROWS <= 0) {
 
-											echo ($_Application_Module_Administration_Message_Web_Pages_NO_LINKS_EXIST);
+											echo ($_Application_Module_Administration_Message_Web_Pages_NO_HYPERLINKS_EXIST);
 
 } else {
 
@@ -193,9 +193,11 @@ $_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_URL			= $_Applicati
 */
 
 echo ("
-												Link Entry Name: <B>$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_NAME</B><HR>
-												=> <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;DeleteLinkID&#61;$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Delete The Application Hyperlink :: $_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_NAME ::\">Delete</A><BR>
-												=> <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;UpdateLinkID&#61;$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Update The Application Hyperlink :: $_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_NAME ::\">Update</A><BR><BR>
+												<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+													Hyperlink Entry Name: <B>$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_NAME</B>
+												<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+													=> <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;DeleteLinkID&#61;$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Delete The Application Hyperlink :: $_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_NAME ::\">Delete</A><BR>
+													=> <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Web_Pages&amp;UpdateLinkID&#61;$_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Update The Application Hyperlink :: $_Application_Module_Administration_Web_Pages_LIST_HYPERLINK_NAME ::\">Update</A><BR><BR>
 ");
 
 /*
@@ -300,7 +302,7 @@ $_Application_Module_Administration_Web_Pages_DB_Query_UPDATE_HYPERLINK			= $_GL
 
 if ($_Application_Module_Administration_Web_Pages_DB_Query_UPDATE_HYPERLINK) {
 
-											echo ($_Application_Module_Administration_Message_Web_Pages_LINK_UPDATED_SUCCESSFULLY);
+											echo ($_Application_Module_Administration_Message_Web_Pages_HYPERLINK_UPDATED_SUCCESSFULLY);
 
 } else {
 
