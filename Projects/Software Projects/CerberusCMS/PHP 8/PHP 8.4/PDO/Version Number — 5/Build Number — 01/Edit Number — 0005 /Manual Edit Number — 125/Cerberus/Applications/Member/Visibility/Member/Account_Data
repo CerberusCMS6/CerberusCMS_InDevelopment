@@ -1,0 +1,2369 @@
+<?php
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    ()  ()  ()
+ +  ()  ()  ()
+ +  ------------------------------
+ +  Application Module
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Root Directory => Applications => Member => Account_Data
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|6|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+-============================================================================================================
+-+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-+------------------------------------------------------------------------------------------------------()---
+-+---()----------()----()()()-()()()-()()()-()--()-()()()-()()()-()()()----()---()()()---()-----------()--()-
+-+-()--()------()--()--()-----()-----()--()-()--()-()--()---()---()()()--()--()---()---()--()-----------()---
+-+---()-------()-()-()-()()()-()()()-()()()-()()()-()--()---()---()()()-()-()-()--()--()-()-()---------------
+-+-----------------------------------------------------------------------------------------------------------
+-+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Version~Number~:~0.7.4~
+-============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ +
+ + [ ^ ] Application Module :: Member :: Account Data
+ +
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Application Module Header
+ ============================================================================================================
+*/
+
+											echo ("$_Application_Module_Member_Message_Account_Data_Header");
+
+/*
+ ============================================================================================================
+ +
+ +
+ + [ @ ] Application Variables
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ + Random Number Generators
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_RANDOM_GENERATOR_NUMBERS					= rand(1000000000,9999999999);
+
+/*
+ ============================================================================================================
+ +
+ + String Hashing and String Encryption
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_RANDOM_GENERATOR_NUMBERS_HASH_MD5				= hash('md5',$_Application_Module_Member_Account_Data_RANDOM_GENERATOR_NUMBERS);
+
+/*
+ ============================================================================================================
+ +
+ + Application Variables :: Find and Open :: Registered Member Account :: Private Directories
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Find and Open :: Registered Member Account :: Private Directory :: Upload :: Audio :: Gallery
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_FIND_DIRECTORY_MEMBER_GALLERY_AUDIO			= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Audio/Gallery";
+$_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_AUDIO			= opendir($_Application_Module_Member_Account_Data_UPLOAD_FIND_DIRECTORY_MEMBER_GALLERY_AUDIO);
+
+/*
+ ============================================================================================================
+ + Find and Open :: Registered Member Account :: Private Directory :: Delete :: Audio :: Gallery
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_DELETE_FIND_DIRECTORY_MEMBER_GALLERY_AUDIO			= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Audio/Gallery";
+$_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_AUDIO			= opendir($_Application_Module_Member_Account_Data_DELETE_FIND_DIRECTORY_MEMBER_GALLERY_AUDIO);
+
+/*
+ ============================================================================================================
+ + Find and Open :: Registered Member Account :: Private Directory :: Audio :: Document
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_FIND_DIRECTORY_MEMBER_GALLERY_DOCUMENT			= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Gallery";
+$_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_DOCUMENT			= opendir($_Application_Module_Member_Account_Data_UPLOAD_FIND_DIRECTORY_MEMBER_GALLERY_DOCUMENT);
+
+/*
+ ============================================================================================================
+ + Find and Open :: Registered Member Account :: Private Directory :: Gallery :: Image
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_FIND_DIRECTORY_MEMBER_GALLERY_IMAGE			= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Image/Gallery";
+$_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_IMAGE			= opendir($_Application_Module_Member_Account_Data_UPLOAD_FIND_DIRECTORY_MEMBER_GALLERY_IMAGE);
+
+/*
+ ============================================================================================================
+ + Find and Open :: Registered Member Account :: Private Directory :: Delete :: Audio :: Document
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_DELETE_FIND_DIRECTORY_MEMBER_GALLERY_DOCUMENT			= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Gallery";
+$_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_DOCUMENT			= opendir($_Application_Module_Member_Account_Data_DELETE_FIND_DIRECTORY_MEMBER_GALLERY_DOCUMENT);
+
+/*
+ ============================================================================================================
+ + Find and Open :: Registered Member Account :: Private Directory :: Image :: Gallery :: Profile Images
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_FIND_DIRECTORY_MEMBER_GALLERY_IMAGE_PROFILE		= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Image/Profile";
+$_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_IMAGE_PROFILE		= opendir($_Application_Module_Member_Account_Data_UPLOAD_FIND_DIRECTORY_MEMBER_GALLERY_IMAGE_PROFILE);
+
+/*
+ ============================================================================================================
+ + Find and Delete :: Registered Member Account :: Private Directory :: Image :: Gallery :: Selection
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_DELETE_FIND_DIRECTORY_MEMBER_GALLERY_IMAGE_PROFILE		= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Image/Profile";
+$_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_IMAGE_PROFILE		= opendir($_Application_Module_Member_Account_Data_DELETE_FIND_DIRECTORY_MEMBER_GALLERY_IMAGE_PROFILE);
+
+/*
+ ============================================================================================================
+ + Find and Delete :: Registered Member Account :: Private Directory :: Gallery :: Image :: Selection
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_DELETE_FIND_DIRECTORY_MEMBER_GALLERY_IMAGE_SELECTION		= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Image/Gallery";
+$_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_IMAGE_SELECTION		= opendir($_Application_Module_Member_Account_Data_DELETE_FIND_DIRECTORY_MEMBER_GALLERY_IMAGE_SELECTION);
+
+/*
+ ============================================================================================================
+ + Find and Open :: Registered Member Account :: Private Directory :: Upload :: Gallery :: Video
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_FIND_MEMBER_DIRECTORY_GALLERY_VIDEO_SELECTION		= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Video/Gallery";
+$_Application_Module_Member_Account_Data_UPLOAD_OPEN_MEMBER_DIRECTORY_GALLERY_VIDEO_SELECTION		= opendir($_Application_Module_Member_Account_Data_UPLOAD_FIND_MEMBER_DIRECTORY_GALLERY_VIDEO_SELECTION);
+
+/*
+ ============================================================================================================
+ + Find and Open :: Registered Member Account :: Private Directory :: Gallery :: Video :: Profile Image
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_FIND_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE	= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Video/Profile";
+$_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE	= opendir($_Application_Module_Member_Account_Data_UPLOAD_FIND_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE);
+
+/*
+ ============================================================================================================
+ + Find and Open :: Registered Member Account :: Private Directory :: Gallery :: Video :: Live
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_FIND_DIRECTORY_MEMBER_GALLERY_VIDEO_LIVE		= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Video/Live";
+$_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_VIDEO_LIVE		= opendir($_Application_Module_Member_Account_Data_UPLOAD_FIND_DIRECTORY_MEMBER_GALLERY_VIDEO_LIVE);
+
+/*
+ ============================================================================================================
+ + Find and Open :: Registered Member Account :: Private Directory :: Delete :: Gallery :: Video
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_DELETE_FIND_DIRECTORY_MEMBER_GALLERY_VIDEO_SELECTION		= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Video/Gallery";
+$_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_VIDEO_SELECTION		= opendir($_Application_Module_Member_Account_Data_DELETE_FIND_DIRECTORY_MEMBER_GALLERY_VIDEO_SELECTION);
+
+/*
+ ============================================================================================================
+ + Find and Open :: Registered Member Account :: Private Directory :: Delete :: Gallery :: Video
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_DELETE_FIND_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION = "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Video/Profile";
+$_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION = opendir($_Application_Module_Member_Account_Data_DELETE_FIND_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION);
+
+/*
+ ============================================================================================================
+ +
+ + Application Variables :: Restrictions and Control :: Data
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Application Variables :: Restrictions :: Upload :: File Size
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_MAXIMUM_UPLOAD_SIZE_FILE_AUDIO					= $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_AUDIO / 1024;
+$_Application_Module_Member_Account_Data_MAXIMUM_UPLOAD_SIZE_FILE_DOCUMENT				= $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_DOCUMENT / 1024;
+$_Application_Module_Member_Account_Data_MAXIMUM_UPLOAD_SIZE_FILE_IMAGE					= $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_IMAGE / 1024;
+$_Application_Module_Member_Account_Data_MAXIMUM_UPLOAD_SIZE_FILE_VIDEO					= $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_VIDEO / 1024;
+
+/*
+ ============================================================================================================
+ +
+ + Application Variables :: Post Variables
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ + Application Variables :: Post Variables :: Audio
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Application Variables :: Post Variables :: Delete :: Gallery :: Audio
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_AUDIO_SELECTION			= $_POST['AMM_Account_Data_Delete_Directory_Gallery_Audio_Selection'];
+
+/*
+ ============================================================================================================
+ + Application Variables :: Post Variables :: Upload :: Gallery :: Audio
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_AUDIO_FILE			= $_POST['AMM_Account_Data_Upload_Directory_Gallery_Audio_File'];
+
+/*
+ ============================================================================================================
+ + Application Variables :: Post Variables :: Upload :: Gallery :: Audio :: Selection
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_AUDIO_SELECTION			= $_POST['AMM_Account_Data_Upload_Gallery_Audio_Selection_Directory'];
+
+/*
+ ============================================================================================================
+ +
+ + Application Variables :: Post Variables :: Document
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Application Variables :: Post Variables :: Delete :: Gallery :: Document
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_DOCUMENT_SELECTION		= $_POST['AMM_Account_Data_Delete_Directory_Gallery_Document_Selection'];
+
+/*
+ ============================================================================================================
+ + Application Variables :: Post Variables :: Upload :: Gallery :: Document
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_DOCUMENT_FILE			= $_POST['AMM_Account_Data_Upload_Directory_Gallery_Document_File'];
+
+/*
+ ============================================================================================================
+ + Application Variables :: Post Variables :: Upload :: Gallery :: Document :: Selection
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_DOCUMENT_SELECTION		= $_POST['AMM_Account_Data_Upload_Gallery_Document_Selection_Directory'];
+
+/*
+ ============================================================================================================
+ +
+ + Application Variables :: Post Variables :: Image
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Application Variables :: Post Variables :: Delete :: Gallery :: Image :: Profile :: Image
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_POST_DELETE_FILE_GALLERY_IMAGE_PROFILE				= $_POST['AMM_Account_Data_Delete_File_Gallery_Image_Profile'];
+$_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_IMAGE_SELECTION			= $_POST['AMM_Account_Data_Delete_Directory_Gallery_Image_Selection'];
+
+/*
+ ============================================================================================================
+ + Application Variables :: Post Variables :: Upload :: Gallery :: Image :: Profile
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_IMAGE_PROFILE_FILE		= $_POST['AMM_Account_Data_Upload_Directory_Gallery_Image_Profile_File'];
+
+/*
+ ============================================================================================================
+ + Application Variables :: Post Variables :: Upload :: Gallery :: Image
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_IMAGE_FILE			= $_POST['AMM_Account_Data_Upload_Directory_Gallery_Image_File'];
+$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_IMAGE				= $_POST['AMM_Account_Data_Upload_Directory_Gallery_Image'];
+
+/*
+ ============================================================================================================
+ + Application Variables :: Post Variables :: Upload :: Gallery :: Image :: Selection
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_IMAGE_SELECTION			= $_POST['AMM_Account_Data_Upload_Gallery_Image_Selection_Directory'];
+
+/*
+ ============================================================================================================
+ +
+ + Application Variables :: Post Variables :: Video
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Application Variables :: Post Variables :: Delete :: Gallery :: Video :: Profile :: Video
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_POST_DELETE_FILE_GALLERY_VIDEO_PROFILE_IMAGE			= $_POST['AMM_Account_Data_Delete_File_Gallery_Video_Profile_Image'];
+$_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_VIDEO_SELECTION			= $_POST['AMM_Account_Data_Delete_Directory_Gallery_Video_Selection'];
+
+/*
+ ============================================================================================================
+ + Application Variables :: Post Variables :: Upload :: Gallery :: Video :: Profile
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_VIDEO_PROFILE_FILE		= $_POST['AMM_Account_Data_Upload_Directory_Gallery_Video_Profile_File'];
+
+/*
+ ============================================================================================================
+ + Application Variables :: Post Variables :: Upload :: Gallery :: Video
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_VIDEO_FILE			= $_POST['AMM_Account_Data_Upload_Directory_Gallery_Video_File'];
+$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_VIDEO				= $_POST['AMM_Account_Data_Upload_Directory_Gallery_Video'];
+
+/*
+ ============================================================================================================
+ + Application Variables :: Post Variables :: Upload :: Gallery :: Video :: Selection
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_VIDEO_SELECTION			= $_POST['AMM_Account_Data_Upload_Gallery_Video_Selection_Directory'];
+
+/*
+ ============================================================================================================
+ + Application Variables :: Post Variables :: Gallery :: Directory :: Create
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_AUDIO				= $_POST['AMM_Account_Data_Create_Directory_Gallery_Audio'];
+$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_DOCUMENT				= $_POST['AMM_Account_Data_Create_Directory_Gallery_Document'];
+$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_IMAGE				= $_POST['AMM_Account_Data_Create_Directory_Gallery_Image'];
+$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_VIDEO				= $_POST['AMM_Account_Data_Create_Directory_Gallery_Video'];
+$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_VIDEO_LIVE			= $_POST['AMM_Account_Data_Create_Directory_Gallery_Video_Live'];
+
+/*
+ ============================================================================================================
+ + Application Variables :: Post Variables :: Watermark :: Gallery :: Image
+ ============================================================================================================
+*/
+
+//$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_IMAGE_STAMP			= imagecreatefrompng('stamp.png');
+//$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_IMAGE_IM				= imagecreatefromjpeg('photo.jpeg');
+
+/*
+ ============================================================================================================
+ + IF: Application Variables :: Post Variables :: Gallery :: Directory :: Delete :: Audio :: Is: Backup
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_AUDIO_SELECTION == "Backup") {
+
+$_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_AUDIO_SELECTION					= "";
+
+} // [ + ] IF: Application Variables :: Post Variables :: Gallery :: Directory :: Delete :: Audio :: Is: Backup, Replace Value
+
+/*
+ ============================================================================================================
+ + IF: Application Variables :: Post Variables :: Gallery :: Directory :: Delete :: Document:: Is: Backup
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_DOCUMENT_SELECTION == "Backup") {
+
+$_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_DOCUMENT_SELECTION				= "";
+
+} // [ + ] IF: Application Variables :: Post Variables :: Gallery :: Directory :: Delete :: Document :: Is: Backup, Replace Value
+
+/*
+ ============================================================================================================
+ + IF: Application Variables :: Post Variables :: Gallery :: Directory :: Delete :: Image :: Is: Backup
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_IMAGE_SELECTION == "Backup") {
+
+$_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_IMAGE_SELECTION					= "";
+
+} // [ + ] IF: Application Variables :: Post Variables :: Gallery :: Directory :: Delete :: Image :: Is: Backup, Replace Value
+
+/*
+ ============================================================================================================
+ + IF: Application Variables :: Post Variables :: Gallery :: Directory :: Delete :: Video :: Is: Backup
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_VIDEO_SELECTION == "Backup") {
+
+$_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_VIDEO_SELECTION					= "";
+
+} // [ + ] IF: Application Variables :: Post Variables :: Gallery :: Directory :: Delete :: Video :: Is: Backup, Replace Value
+
+/*
+ ============================================================================================================
+ + IF: Application Variables :: Post Variables :: Gallery :: Directory :: Delete :: Video :: Is: Backup
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION == "Backup") {
+
+$_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION	= "";
+
+} // [ + ] IF: Application Variables :: Post Variables :: Gallery :: Directory :: Delete :: Video Profile Image :: Is: Backup, Replace Value
+
+
+echo ("
+	<HR WIDTH=\"60%\" ALIGN=\"CENTER\">
+	<CENTER>
+	<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Audio&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Audio Gallery :: Management Options ::\">Audio</A> -
+	<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Document&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Document Gallery :: Management Options ::\">Document</A> -
+	<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Image&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Image Gallery :: Management Options ::\">Image</A> -
+	<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Video&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Video Gallery :: Management Options ::\">Video</A> -
+	<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;LiveVideo&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Live Video Gallery :: Management Options ::\">Live Video</A>
+	</CENTER>
+	<HR WIDTH=\"60%\" ALIGN=\"CENTER\"><BR>
+");
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Gallery
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Display"] == "Gallery") {
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Gallery :: Type :: Audio
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Type"] == "Audio") {
+
+/*
+ ============================================================================================================
+ +
+ + Upload :: Registered Member Account :: Gallery :: Audio :: Selection
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_DIRECTORY						= $_POST['AMM_Account_Data_Upload_Gallery_Audio_Selection_Directory'];
+
+/*
+ ============================================================================================================
+ + Find and Open :: Directory :: Temporary :: Upload
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_AUDIO_SELECTION_FIND_DIRECTORY_TEMPORARY_UPLOAD				= "./Temporary/Upload/";
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_AUDIO_SELECTION_DATA 							= $_Application_Module_Member_Account_Data_UPLOAD_GALLERY_AUDIO_SELECTION_FIND_DIRECTORY_TEMPORARY_UPLOAD . basename($_FILES['AMM_Account_Data_Upload_File_Gallery_Audio_Selection_Multiple']['name']);
+
+/*
+ ============================================================================================================
+ + Define :: Gallery :: Audio :: Selection :: Allowed File Extensions
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_EXTENSIONS_ALLOWED					= "jpg gif png bmp jpeg";
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_DIRECTORY_TEMPORARY				= $_POST['AMM_Account_Data_Upload_Gallery_Audio_Selection_Directory_Temporary'];
+
+/*
+ ============================================================================================================
+ + IF: Gallery :: Audio :: Selection :: Upload File :: Input Form Variables HAVE NOT Executed, Display Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_DIRECTORY || $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_DIRECTORY == "") {
+
+echo ("
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Audio :: Selection :: File :: Upload<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Audio&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
+												
+												[ Maximum Audio File Upload Size: $_Application_Module_Member_Account_Data_MAXIMUM_UPLOAD_SIZE_FILE_AUDIO KB ]</B><BR>
+												Allowed File Extensions :: Audio :: AAC, ALAC, FLAC, MP3, OGG, WAV, WMA<BR>
+													<INPUT TYPE=\"file\" NAME=\"AMM_Account_Data_Upload_File_Gallery_Audio_Selection_Multiple[]\" MAXLENGTH=\"150\" MULTIPLE><BR>
+													<INPUT TYPE=\"hidden\" NAME=\"AMM_Account_Data_Upload_Gallery_Audio_Selection_Directory_Temporary\" VALUE=\"1\">
+													<SELECT NAME=\"AMM_Account_Data_Upload_Gallery_Audio_Selection_Directory\">
+");
+
+/*
+ ============================================================================================================
+ + Find and Open :: Registered Member Account :: Directory :: Gallery :: Audio :: Selection
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_FIND_DIRECTORY_MEMBER_GALLERY_AUDIO_SELECTION		= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Audio/Gallery";
+$_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_AUDIO_SELECTION		= opendir($_Application_Module_Member_Account_Data_UPLOAD_FIND_DIRECTORY_MEMBER_GALLERY_AUDIO_SELECTION);
+
+/*
+ ============================================================================================================
+ + WHILE :: Reading :: Directory :: Registered Member Account :: Gallery :: Audio
+ ============================================================================================================
+*/
+
+while (($_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_AUDIO_SELECTION = readdir($_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_AUDIO_SELECTION))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploit: Remote-File-Inclusion AND Local-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_AUDIO_SELECTION == "." || $_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_AUDIO_SELECTION == ".." || $_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_AUDIO_SELECTION == "Backup" || $_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_AUDIO_SELECTION == "index.php") {
+/**
+ * Do Nothing
+**/
+} else {
+
+														echo ("<OPTION VALUE=\"$_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_AUDIO_SELECTION\">$_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_AUDIO_SELECTION</OPTION>");
+
+} // [ + ] IF: Specified :: Directory :: Registered Member Account :: Directory :: Audio Directory Selection AND Files ARE NOT Specified Registered Member Account :: Audio Directory Selection AND Files
+
+} // [ + ] WHILE: Reading Specified Registered Member Account :: Directory :: Audio Directory Selection
+
+/*
+ ============================================================================================================
+ + Close :: Directory :: Registered Member Account :: Gallery :: Audio :: Selection :: Directory
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Account_Data_UPLOAD_OPEN_MEMBER_DIRECTORY_GALLERY_AUDIO_SELECTION);
+
+echo ("
+													</SELECT><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Upload File\">
+											</FORM><BR>
+");
+
+/*
+ ============================================================================================================
+ + ELSE: Gallery :: Audio :: Selection :: Upload File :: Input Form Variables HAVE Executed, Proceed Upload
+ ============================================================================================================
+*/
+
+} else {
+
+/*
+ ============================================================================================================
+ + ELSE: Galery :: Audio :: Selection :: Upload File :: Variable Is Executed
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_COUNT_FILES					= count($_FILES['AMM_Account_Data_Upload_File_Gallery_Audio_Selection_Multiple']['name']);
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_TOTAL_FILES_UPLOADED				= 0;
+
+/*
+ ============================================================================================================
+ + FOR: Total Number of Files Uploaded: Compared To Files Counted: To Be Less Than: Zero, Increment
+ ============================================================================================================
+*/
+
+for ($i=0; $i < $_Application_Module_Member_Account_Data_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_COUNT_FILES; $i++) {
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_NAME						= $_FILES['AMM_Account_Data_Upload_File_Gallery_Audio_Selection_Multiple']['name'][$i];
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_LOCATION					= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Audio/Gallery/Backup/$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_AUDIO_SELECTION/$_GLOBAL_LOCAL_SERVER_DATE_TIME_NUMERICAL_FULL - $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_NAME";
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_EXTENSION					= pathinfo($_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_LOCATION,PATHINFO_EXTENSION);
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_EXTENSION					= strtolower($_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_EXTENSION);
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_EXTENSION_VALID				= array("aac","alac","flac","m4a","mp3","ogg","wav","wma");
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_MAXIMUM_FILE_SIZE				= $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_AUDIO / 1024;
+
+/*
+ ============================================================================================================
+ + IF: Files Uploaded :: In Array :: Allowed File Extensions :: Gallery :: Audio :: Selection
+ ============================================================================================================
+*/
+
+if (in_array(strtolower($_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_EXTENSION), $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_EXTENSION_VALID)) {
+
+/*
+ ============================================================================================================
+ + IF: Move Uploaded File: From Temporary Upload Directory :: To :: Registered Member Account :: Directory :: Audio :: Selection Directory
+ ============================================================================================================
+*/
+
+if (move_uploaded_file($_FILES['AMM_Account_Data_Upload_File_Gallery_Audio_Selection_Multiple']['tmp_name'][$i],"$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_LOCATION")) {
+
+copy("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Audio/Gallery/Backup/$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_AUDIO_SELECTION/$_GLOBAL_LOCAL_SERVER_DATE_TIME_NUMERICAL_FULL - $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_NAME","./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Audio/Gallery/$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_AUDIO_SELECTION/$_GLOBAL_LOCAL_SERVER_DATE_TIME_NUMERICAL_FULL - $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_NAME");
+
+                        $_Application_Module_Member_Account_Data_UPLOAD_GALLERY_AUDIO_SELECTION_FILE_TOTAL_FILES_UPLOADED++;
+
+											header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Account_Data&Display=Gallery&Type=Audio&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+											exit();
+											
+/*
+ ============================================================================================================
+ + ELSE: Uploaded File Error: From Temporary Upload Directory :: To :: Registered Member Account :: Directory :: Audio :: Selection Directory
+ ============================================================================================================
+*/
+
+} else {
+
+											echo ("Kernel Message: Error: The Uploaded Files Cannot Be Moved.<BR>");
+
+} // [ + ] IF: Move Uploaded File :: Gallery Type :: Audio :: Selection :: From: Temporary Upload Directory :: To: Registered Member Account :: Gallery :: Audio :: Selection Directory
+
+} // [ + ] IF: In Array: String TO LowerCase Characters: Gallery Type :: Audio :: Selection :: Uploaded File AND Check: For Valid File Extension
+
+} // [ + ] FOR: Counted Uploaded File(s): Gallery Type :: Audio :: Selection: To Be Equal To Zero OR Less Than The Number of Uploaded Files, Increment Number of Files
+
+} // [ + ] IF: Internal Application: Display :: Gallery Type :: Audio :: Selection :: Input Form Variables HAVE Executed
+
+/*
+ ============================================================================================================
+ +
+ + Create :: Directory :: Gallery :: Audio
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Display :: Create :: Gallery :: Audio :: Input Form
+ ============================================================================================================
+*/
+
+echo ("
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Audio :: Directory :: Create<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Audio&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
+													<INPUT TYPE=\"text\" NAME=\"AMM_Account_Data_Create_Directory_Gallery_Audio\" MAXLENGTH=\"50\"><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Create Audio Gallery\">
+											</FORM><BR>
+");
+
+/*
+ ============================================================================================================
+ + IF: Create :: Gallery :: Audio :: Input Form :: Variables Have Executed
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_AUDIO) {
+
+/*
+ ============================================================================================================
+ + IF: Create :: Directory :: Gallery :: Audio
+ ============================================================================================================
+*/
+
+if (mkdir("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Audio/Gallery/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_AUDIO")) {
+
+											echo ("Kernel Message: Directory Created Successfully: ./Files/Audio/Gallery/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_AUDIO<BR>");
+											
+if (mkdir("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Audio/Gallery/Backup/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_AUDIO")) {
+
+											echo ("Kernel Message: Directory Created Successfully: ./Files/Audio/Gallery/Backup/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_AUDIO<BR>");
+											
+} else {
+
+											echo ("Kernel Message: Error, The Directory: ./Files/Audio/Gallery/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_AUDIO Currently Exists<BR>");
+											
+} // [ + ] IF: Create Directory :: Registered Member Account :: Gallery :: Audio :: Custom Directory :: Backup		
+
+											header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Account_Data&Display=Gallery&Type=Audio&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+											exit();
+											
+} else {
+
+											echo ("Kernel Message: Error, The Directory: ./Files/Audio/Gallery/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_AUDIO Currently Exists<BR>");
+
+} // [ + ] IF: Create Directory :: Registered Member Account :: Gallery :: Audio :: Custom Directory
+
+} // [ + ] IF: Create Directory :: Registered Member Account :: Gallery :: Audio :: Custom Directory :: Variables Have Executed
+
+/*
+ ============================================================================================================
+ +
+ + List :: Registered Member Account :: Files :: Gallery :: Audio
+ +
+ ============================================================================================================
+*/
+
+echo ("
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\">Gallery :: Audio :: Directory :: Delete<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Audio&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													<SELECT NAME=\"AMM_Account_Data_Delete_Directory_Gallery_Audio_Selection\">
+");
+
+/*
+ ============================================================================================================
+ + WHILE :: Reading :: Directory :: Registered Member Account :: Gallery :: Audio :: Selection
+ ============================================================================================================
+*/
+
+while (($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_AUDIO = readdir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_AUDIO))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploit: Remote-File-Inclusion AND Local-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_AUDIO == "." || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_AUDIO == ".." || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_AUDIO == "Backup" || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_AUDIO == "index.php") {
+/**
+ * Do Nothing
+**/
+} else {
+
+														echo ("<OPTION VALUE=\"$_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_AUDIO\">$_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_AUDIO</OPTION>");
+
+} // [ + ] IF: Specified :: Directory :: Registered Member Account :: Directory :: Audio Directory AND Files ARE NOT Specified Registered Member Account :: Directory :: Audio Directory AND Files
+
+} // [ + ] WHILE: Reading Specified Member Account :: Directory :: Audio Directory
+
+/*
+ ============================================================================================================
+ + Close :: Directory :: Registered Member Account :: Gallery :: Audio :: Selection
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_AUDIO);
+
+echo ("
+													</SELECT><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Delete Gallery\">
+											</FORM><BR>
+");
+
+/*
+ ============================================================================================================
+ + IF: Delete :: Registered Member Account :: Gallery :: Audio :: Selection :: Variable HAS Executed
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_AUDIO_SELECTION) {
+
+echo ("File System: Directory Found: $_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_AUDIO_SELECTION<BR><BR>");
+
+/*
+ ============================================================================================================
+ + WHILE :: Reading :: Directory :: Registered Member Account :: Gallery :: Audio :: Selection
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT		= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Audio/Gallery/$_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_AUDIO_SELECTION";
+$_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT		= opendir($_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT);
+
+while (($_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT = readdir($_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploit: Remote-File-Inclusion AND Local-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT == "." || $_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT == "..") {
+/**
+ * Do Nothing
+**/
+} else {
+
+echo ("File System: File Found: $_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT<BR><BR>");
+
+/*
+ ============================================================================================================
+ + IF: Delete :: Registered Member Account :: Gallery :: Audio :: Selection and Files
+ ============================================================================================================
+*/
+
+echo ("File System: Message: Deleting File: $_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT<BR>");
+
+unlink("$_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT/$_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT");
+
+echo ("File System: Message: Removing Directory: $_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT<BR>");
+
+} // [ + ] IF: Specified :: Directory :: Registered Member Account :: Directory :: AUdio Directory AND Files ARE NOT Specified Registered Member Account Audio Directory AND Files
+
+} // [ + ] WHILE: Reading :: Selected :: Registered Member Account :: Directory :: Audio Directory
+
+rmdir($_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT);
+
+											echo ($_Application_Module_Member_Message_Account_Data_DELETE_DIRECTORY_SUCCESSFUL);
+
+/*
+ ============================================================================================================
+ + Close :: Directory :: Registered Member Account :: Gallery :: Audio :: Selection
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT);
+
+											header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Account_Data&Display=Gallery&Type=Audio&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+											exit();
+
+} // [ + ] IF: Remove Directory: Registered Member Account :: Gallery :: Audio :: Selection :: Input Form Variables HAVE Executed
+
+} // [ + ] IF: Internal Application: Display :: Gallery Type :: Audio :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Gallery :: Type :: Document
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Type"] == "Document") {
+
+/*
+ ============================================================================================================
+ +
+ + Upload :: Registered Member Account :: Gallery :: Document :: Selection
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_DIRECTORY					= $_POST['AMM_Account_Data_Upload_Gallery_Document_Selection_Directory'];
+
+/*
+ ============================================================================================================
+ + Find and Open :: Directory :: Temporary :: Upload
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_DOCUMENT_SELECTION_FIND_DIRECTORY_TEMPORARY_UPLOAD			= "./Temporary/Upload/";
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_DOCUMENT_SELECTION_DATA 						= $_Application_Module_Member_Account_Data_UPLOAD_GALLERY_DOCUMENT_SELECTION_FIND_DIRECTORY_TEMPORARY_UPLOAD . basename($_FILES['AMM_Account_Data_Upload_File_Gallery_Document_Selection_Multiple']['name']);
+
+/*
+ ============================================================================================================
+ + Define :: Gallery :: Document :: Selection :: Allowed File Extensions
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_EXTENSIONS_ALLOWED				= "docx doc pdf txt";
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_DIRECTORY_TEMPORARY				= $_POST['AMM_Account_Data_Upload_Gallery_Document_Selection_Directory_Temporary'];
+
+/*
+ ============================================================================================================
+ + IF: Gallery :: Document :: Selection :: Upload File :: Input Form Variables HAVE NOT Executed, Display Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_DIRECTORY || $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_DIRECTORY == "") {
+
+echo ("
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Document :: Selection :: File :: Upload<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Document&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
+												[ Maximum Document File Upload Size: $_Application_Module_Member_Account_Data_MAXIMUM_UPLOAD_SIZE_FILE_DOCUMENT KB ]</B><BR>
+												Allowed File Extensions :: Document :: DOC, DOCX, PDF, PPT, TXT<BR>
+													<INPUT TYPE=\"file\" NAME=\"AMM_Account_Data_Upload_File_Gallery_Document_Selection_Multiple[]\" MAXLENGTH=\"150\" MULTIPLE><BR>
+													<INPUT TYPE=\"hidden\" NAME=\"AMM_Account_Data_Upload_Gallery_Document_Selection_Directory_Temporary\" VALUE=\"1\">
+													<SELECT NAME=\"AMM_Account_Data_Upload_Gallery_Document_Selection_Directory\">
+");
+
+/*
+ ============================================================================================================
+ + Find and Open :: Registered Member Account :: Directory :: Gallery :: Document :: Selection
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_FIND_DIRECTORY_MEMBER_GALLERY_DOCUMENT_SELECTION			= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Gallery";
+$_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_DOCUMENT_SELECTION			= opendir($_Application_Module_Member_Account_Data_UPLOAD_FIND_DIRECTORY_MEMBER_GALLERY_DOCUMENT_SELECTION);
+
+/*
+ ============================================================================================================
+ + WHILE :: Reading :: Directory :: Registered Member Account :: Gallery :: Document
+ ============================================================================================================
+*/
+
+while (($_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_DOCUMENT_SELECTION = readdir($_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_DOCUMENT_SELECTION))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploit: Remote-File-Inclusion AND Local-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_DOCUMENT_SELECTION == "." || $_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_DOCUMENT_SELECTION == ".." || $_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_DOCUMENT_SELECTION == "Backup" || $_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_DOCUMENT_SELECTION == "index.php") {
+/**
+ * Do Nothing
+**/
+} else {
+
+														echo ("<OPTION VALUE=\"$_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_DOCUMENT_SELECTION\">$_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_DOCUMENT_SELECTION</OPTION>");
+
+} // [ + ] IF: Specified :: Directory :: Registered Member Account :: Directory :: Document Directory Selection AND Files ARE NOT Specified Registered Member Account :: Document Directory Selection AND Files
+
+} // [ + ] WHILE: Reading Specified Registered Member Account :: Directory :: Document Directory Selection
+
+/*
+ ============================================================================================================
+ + Close :: Directory :: Registered Member Account :: Gallery :: Document :: Selection :: Directory
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_DOCUMENT_SELECTION);
+
+echo ("
+													</SELECT><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Upload File\">
+											</FORM><BR>
+");
+
+/*
+ ============================================================================================================
+ + ELSE: Gallery :: Document :: Selection :: Upload File :: Input Form Variables HAVE Executed, Proceed Upload
+ ============================================================================================================
+*/
+
+} else {
+
+/*
+ ============================================================================================================
+ + ELSE: Galery :: Audio :: Selection :: Upload File :: Variable Is Executed
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_COUNT_FILES					= count($_FILES['AMM_Account_Data_Upload_File_Gallery_Document_Selection_Multiple']['name']);
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_TOTAL_FILES_UPLOADED				= 0;
+
+/*
+ ============================================================================================================
+ + FOR: Total Number of Files Uploaded: Compared To Files Counted: To Be Less Than: Zero, Increment
+ ============================================================================================================
+*/
+
+for ($i=0; $i < $_Application_Module_Member_Account_Data_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_COUNT_FILES; $i++) {
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_NAME					= $_FILES['AMM_Account_Data_Upload_File_Gallery_Document_Selection_Multiple']['name'][$i];
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_LOCATION					= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Gallery/$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_DOCUMENT_SELECTION/$_GLOBAL_LOCAL_SERVER_DATE_TIME_NUMERICAL_FULL - $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_NAME";
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_EXTENSION					= pathinfo($_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_LOCATION,PATHINFO_EXTENSION);
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_EXTENSION					= strtolower($_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_EXTENSION);
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_EXTENSION_VALID				= array("doc","docx","pdf","ppt","txt");
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_MAXIMUM_FILE_SIZE				= $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_DOCUMENT / 1024;
+
+/*
+ ============================================================================================================
+ + IF: Files Uploaded :: In Array :: Allowed File Extensions :: Gallery :: Document :: Selection
+ ============================================================================================================
+*/
+
+if (in_array(strtolower($_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_EXTENSION), $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_EXTENSION_VALID)) {
+
+/*
+ ============================================================================================================
+ + IF: Move Uploaded File: From Temporary Upload Directory :: To :: Registered Member Account :: Directory :: Document :: Selection Directory
+ ============================================================================================================
+*/
+
+if (move_uploaded_file($_FILES['AMM_Account_Data_Upload_File_Gallery_Document_Selection_Multiple']['tmp_name'][$i],"$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_LOCATION")) {
+
+                        $_Application_Module_Member_Account_Data_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_TOTAL_FILES_UPLOADED++;
+						
+copy("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Gallery/Backup/$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_DOCUMENT_SELECTION/$_GLOBAL_LOCAL_SERVER_DATE_TIME_NUMERICAL_FULL - $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_NAME","./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Gallery/$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_DOCUMENT_SELECTION/$_GLOBAL_LOCAL_SERVER_DATE_TIME_NUMERICAL_FULL - $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_DOCUMENT_SELECTION_FILE_NAME");
+
+
+											header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Account_Data&Display=Gallery&Type=Document&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+											exit();
+											
+/*
+ ============================================================================================================
+ + ELSE: Uploaded File Error: From Temporary Upload Directory :: To :: Registered Member Account :: Directory :: Document :: Selection Directory
+ ============================================================================================================
+*/
+
+} else {
+
+											echo ("Kernel Message: Error: The Uploaded Files Cannot Be Moved.");
+
+} // [ + ] IF: Move Uploaded File :: Gallery Type :: Document :: Selection :: From: Temporary Upload Directory :: To: Registered Member Account :: Gallery :: Document :: Selection Directory
+
+} // [ + ] IF: In Array: String TO LowerCase Characters: Gallery Type :: Document :: Selection :: Uploaded File AND Check: For Valid File Extension
+
+} // [ + ] FOR: Counted Uploaded File(s): Gallery Type :: Document :: Selection: To Be Equal To Zero OR Less Than The Number of Uploaded Files, Increment Number of Files
+
+} // [ + ] IF: Internal Application: Display :: Gallery Type :: Document :: Selection :: Input Form Variables HAVE Executed
+
+/*
+ ============================================================================================================
+ +
+ + Create :: Directory :: Gallery :: Document
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Display :: Create :: Gallery :: Document :: Input Form
+ ============================================================================================================
+*/
+
+echo ("
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Document :: Directory :: Create<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Document&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
+													<INPUT TYPE=\"text\" NAME=\"AMM_Account_Data_Create_Directory_Gallery_Document\" MAXLENGTH=\"50\"><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Create Gallery\">
+											</FORM><BR>
+");
+
+/*
+ ============================================================================================================
+ + IF: Create :: Gallery :: Document :: Input Form :: Variables Have Executed
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_DOCUMENT) {
+
+/*
+ ============================================================================================================
+ + IF: Create :: Directory :: Gallery :: Document
+ ============================================================================================================
+*/
+
+if (mkdir("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Gallery/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_DOCUMENT")) {
+
+											echo ("Kernel Message: Directory Created Successfully: ./Files/Document/Gallery/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_DOCUMENT<BR>");
+											
+if (mkdir("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Gallery/Backup/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_DOCUMENT")) {
+
+											echo ("Kernel Message: Directory Created Successfully: ./Files/Document/Gallery/Backup/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_DOCUMENT<BR>");
+											
+} else {
+
+											echo ("Kernel Message: Error, The Directory: ./Files/Document/Gallery/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_DOCUMENT Currently Exists<BR>");
+											
+} // [ + ] IF: Create Directory :: Registered Member Account :: Gallery :: Document :: Custom Directory :: Backup
+
+											header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Account_Data&Display=Gallery&Type=Document&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+											exit();
+											
+} else {
+
+											echo ("Kernel Message: Error, The Directory: $_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_DOCUMENT Currently Exists<BR>");
+
+} // [ + ] IF: Create Directory :: Registered Member Account :: Gallery :: Document
+
+} // [ + ] IF: Create Directory :: Registered Member Account :: Gallery :: Document Variables Have Executed
+
+/*
+ ============================================================================================================
+ +
+ + List :: Registered Member Account :: Files :: Gallery :: Document
+ +
+ ============================================================================================================
+*/
+
+echo ("
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\">Gallery :: Document :: Directory :: Delete<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Document&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													<SELECT NAME=\"AMM_Account_Data_Delete_Directory_Gallery_Document_Selection\">
+");
+
+/*
+ ============================================================================================================
+ + WHILE :: Reading :: Directory :: Registered Member Account :: Gallery :: Document :: Selection
+ ============================================================================================================
+*/
+
+while (($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_DOCUMENT = readdir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_DOCUMENT))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploit: Remote-File-Inclusion AND Local-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_DOCUMENT == "." || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_DOCUMENT == ".." || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_DOCUMENT == "Backup" || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_DOCUMENT == "Activity_Logging" || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_DOCUMENT == "Electronic_Mail" || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_DOCUMENT == "Friends" || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_DOCUMENT == "GPS" || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_DOCUMENT == "Streams" || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_DOCUMENT == "index.php") {
+/**
+ * Do Nothing
+**/
+} else {
+
+														echo ("<OPTION VALUE=\"$_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_DOCUMENT\">$_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_DOCUMENT</OPTION>");
+
+} // [ + ] IF: Specified :: Directory :: Registered Member Account :: Directory :: Document Directory AND Files ARE NOT Specified Registered Member Account :: Directory :: Document Directory AND Files
+
+} // [ + ] WHILE: Reading Specified Member Account :: Directory :: Document Directory
+
+/*
+ ============================================================================================================
+ + Close :: Directory :: Registered Member Account :: Gallery :: Document :: Selection
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_DOCUMENT);
+
+echo ("
+													</SELECT><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Delete Gallery\">
+											</FORM><BR>
+");
+
+/*
+ ============================================================================================================
+ + IF: Delete :: Registered Member Account :: Gallery :: Document :: Selection :: Variable HAS Executed
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_DOCUMENT_SELECTION) {
+
+echo ("File System: Directory Found: $_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_DOCUMENT_SELECTION<BR><BR>");
+
+/*
+ ============================================================================================================
+ + WHILE :: Reading :: Directory :: Registered Member Account :: Gallery :: Document :: Selection
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT		= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Gallery/$_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_DOCUMENT_SELECTION";
+$_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT		= opendir($_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT);
+
+while (($_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT = readdir($_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploit: Remote-File-Inclusion AND Local-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT == "." || $_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT == "..") {
+/**
+ * Do Nothing
+**/
+} else {
+
+echo ("File System: File Found: $_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT<BR><BR>");
+
+/*
+ ============================================================================================================
+ + IF: Delete :: Registered Member Account :: Gallery :: Document :: Selection and Files
+ ============================================================================================================
+*/
+
+echo ("File System: Message: Deleting File: $_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT<BR>");
+
+unlink("$_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT/$_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT");
+
+echo ("File System: Message: Removing Directory: $_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT<BR>");
+
+} // [ + ] IF: Specified :: Directory :: Registered Member Account :: Directory :: Document Directory AND Files ARE NOT Specified Registered Member Account Document Directory AND Files
+
+} // [ + ] WHILE: Reading :: Selected :: Registered Member Account :: Directory :: Document Directory
+
+rmdir($_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT);
+
+											echo ($_Application_Module_Member_Message_Account_Data_DELETE_DIRECTORY_SUCCESSFUL);
+
+/*
+ ============================================================================================================
+ + Close :: Directory :: Registered Member Account :: Gallery :: Document :: Selection
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT);
+
+											header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Account_Data&Display=Gallery&Type=Document&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+											exit();
+											
+} // [ + ] IF: Remove Directory: Registered Member Account :: Gallery :: Document :: Selection :: Input Form Variables HAVE Executed
+
+} // [ + ] IF: Internal Application: Display :: Gallery Type :: Document :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Gallery :: Type :: Image
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Type"] == "Image") {
+
+/*
+ ============================================================================================================
+ +
+ + Delete :: Registered Member Account :: Images :: Registered Member Account Profile Images
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ + IF: Registered Member Account :: Gallery :: Images :: Profile Images :: Delete :: Input Form Variables HAVE NOT Executed, Display Input Form
+ +
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Account_Data_POST_DELETE_FILE_GALLERY_IMAGE_PROFILE) {
+
+echo ("
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Image :: Profile Image :: File :: Delete</B><HR WIDTH=\"35%\" ALIGN=\"LEFT\">
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Image&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													<SELECT NAME=\"AMM_Account_Data_Delete_File_Gallery_Image_Profile\">
+");
+
+/*
+ ============================================================================================================
+ + WHILE :: Read :: Directory :: Registered Member Account :: Images :: Registered Member Account Profile Images
+ ============================================================================================================
+*/
+
+while ($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_IMAGE_PROFILE = readdir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_IMAGE_PROFILE)) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploit: Remote-File-Inclusion AND Local-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_IMAGE_PROFILE == "." || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_IMAGE_PROFILE == ".." || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_IMAGE_PROFILE == "Backup" || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_IMAGE_PROFILE == "index.php") {
+/**
+ * Do Nothing
+**/
+} else {
+
+														echo ("<OPTION VALUE=\"$_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_IMAGE_PROFILE\">$_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_IMAGE_PROFILE </OPTION>");
+
+} // [ + ] IF: Specified :: Registered Member Account :: Directory :: Profile Image Directory AND Files ARE NOT Specified Member Account Profile Image Directory AND Files
+
+} // [ + ] WHILE: Reading :: Specified Registered Member Account :: Directory :: Profile Image Directory
+
+/*
+ ============================================================================================================
+ + Close :: Directory :: Registered Member Account Image Directory :: Profile Images
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_IMAGE_PROFILE);
+
+echo ("
+													</SELECT><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Delete File\">
+											</FORM>
+");
+
+} else {
+
+/*
+ ============================================================================================================
+ + IF: Delete :: File :: Registered Member Account Image :: Selected Registered Member Account Profile Image
+ ============================================================================================================
+*/
+
+if (unlink("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Image/Profile/$_Application_Module_Member_Account_Data_POST_DELETE_FILE_GALLERY_IMAGE_PROFILE")) {
+
+											echo ($_Application_Module_Member_Message_Account_Data_DELETE_SUCCESSFUL);
+
+											header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Account_Data&Display=Gallery&Type=Image&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+											exit();
+											
+} else {
+
+											echo ($_Application_Module_Member_Message_Account_Data_DELETE_ERROR);
+
+} // [ + ] IF: Unlink: Registered Member Account :: Image :: Profile Image
+
+} // [ + ] IF: Specified :: Registered Member Account :: Directory :: Profile Image Directory IS NOT Specified Registered Member Account Profile Image Directory
+
+/*
+ ============================================================================================================
+ +
+ + Upload :: Registered Member Account :: Gallery :: Image :: Profile Image
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Find and Open :: Directory :: Temporary :: Upload
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_IMAGE_PROFILE_FIND_DIRECTORY_TEMPORARY_UPLOAD				= "./Temporary/Upload/";
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_IMAGE_PROFILE_DATA							= $_Application_Module_Member_Account_Data_UPLOAD_GALLERY_IMAGE_PROFILE_FIND_DIRECTORY_TEMPORARY_UPLOAD . basename($_FILES['AMM_Account_Data_Upload_File_Gallery_Image_Profile_Multiple']['name']);
+
+/*
+ ============================================================================================================
+ + Define :: Gallery :: Image :: Profile Image :: Allowed File Extensions
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_EXTENSIONS_ALLOWED					= "jpg gif png bmp jpeg";
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_PROFILE_DIRECTORY_TEMPORARY					= $_POST['AMM_Account_Data_Upload_File_Gallery_Image_Profile_Directory_Temporary'];
+
+/*
+ ============================================================================================================
+ + IF: Gallery :: Image :: Profile Image :: Upload File :: Input Form Variables HAVE NOT Executed, Display Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_PROFILE_DIRECTORY_TEMPORARY) {
+
+echo ("
+												<BR><HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Image :: Profile Image :: File :: Upload<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Image&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
+												[ Maximum Image File Upload Size: $_Application_Module_Member_Account_Data_MAXIMUM_UPLOAD_SIZE_FILE_IMAGE KB ]</B><BR>
+												Allowed File Extensions :: Image :: BMP, GIF, JPG, JPEG, PNG<BR>
+													<INPUT TYPE=\"file\" NAME=\"AMM_Account_Data_Upload_File_Gallery_Image_Profile_Multiple[]\" MAXLENGTH=\"150\" MULTIPLE><BR>
+													<INPUT TYPE=\"hidden\" NAME=\"AMM_Account_Data_Upload_File_Gallery_Image_Profile_Directory_Temporary\" VALUE=\"1\">
+												<INPUT TYPE=\"submit\" VALUE=\"Upload File\">
+											</FORM><BR>
+");
+
+/*
+ ============================================================================================================
+ + ELSE: Gallery :: Image :: Profile Image :: Upload File :: Input Form Variables HAVE Executed, Proceed Upload
+ ============================================================================================================
+*/
+
+} else {
+
+/*
+ ============================================================================================================
+ + ELSE: Gallery :: Image :: Selection :: Upload File :: Variable Is Executed
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_COUNT_FILES						= count($_FILES['AMM_Account_Data_Upload_File_Gallery_Image_Profile_Multiple']['name']);
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_TOTAL_FILES_UPLOADED					= 0;
+
+/*
+ ============================================================================================================
+ + FOR: Total Number of Files Uploaded: Compared To Files Counted: To Be Less Than: Zero, Increment
+ ============================================================================================================
+*/
+
+for ($i=0; $i < $_Application_Module_Member_Account_Data_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_COUNT_FILES; $i++) {
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_NAME						= $_FILES['AMM_Account_Data_Upload_File_Gallery_Image_Profile_Multiple']['name'][$i];
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_LOCATION					= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Image/Profile/Backup/$_GLOBAL_LOCAL_SERVER_DATE_TIME_NUMERICAL_FULL - $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_NAME";
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_EXTENSION					= pathinfo($_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_LOCATION,PATHINFO_EXTENSION);
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_EXTENSION					= strtolower($_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_EXTENSION);
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_EXTENSION_VALID					= array("bmp","gif","jpg","jpeg","png");
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_MAXIMUM_FILE_SIZE				= $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_IMAGE / 1024;
+
+/*
+ ============================================================================================================
+ + IF: Files Uploaded :: In Array :: Allowed File Extensions :: Gallery :: Image :: Profile Image
+ ============================================================================================================
+*/
+
+if (in_array(strtolower($_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_EXTENSION), $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_EXTENSION_VALID)) {
+
+/*
+ ============================================================================================================
+ + IF: Move Uploaded File: From Temporary Upload Directory :: To :: Registered Member Account :: Image :: Profile Image Directory
+ ============================================================================================================
+*/
+
+if (move_uploaded_file($_FILES['AMM_Account_Data_Upload_File_Gallery_Image_Profile_Multiple']['tmp_name'][$i],"$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_LOCATION")) {
+
+                        $_Application_Module_Member_Account_Data_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_TOTAL_FILES_UPLOADED++;
+						
+copy("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Image/Profile/Backup/$_GLOBAL_LOCAL_SERVER_DATE_TIME_NUMERICAL_FULL - $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_NAME","./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Image/Profile/$_GLOBAL_LOCAL_SERVER_DATE_TIME_NUMERICAL_FULL - $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_PROFILE_FILE_NAME");
+
+											header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Account_Data&Display=Gallery&Type=Image&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+											exit();
+											
+/*
+ ============================================================================================================
+ + ELSE: Uploaded File Error: From Temporary Upload Directory :: To :: Registered Member Account :: Image :: Profile Image Directory
+ ============================================================================================================
+*/
+
+} else {
+
+											echo ("Kernel Message: Error: The Uploaded Files Cannot Be Moved.");
+
+} // [ + ] IF: Move Uploaded File :: Gallery Type :: Image :: Profile Image :: From: Temporary Upload Directory :: To: Registered Member Account :: Gallery :: Image :: Profile Image Directory
+
+} // [ + ] IF: In Array: String TO LowerCase Characters: Gallery Type :: Image :: Profile Image :: Uploaded File AND Check: For Valid File Extension
+
+} // [ + ] FOR: Counted Uploaded File(s): Gallery Type :: Image :: Profile Image: To Be Equal To Zero OR Less Than The Number of Uploaded Files, Increment Number of Files
+
+} // [ + ] IF: Internal Application: Display :: Gallery Type :: Image :: Profile Image :: Input Form Variables HAVE Executed
+
+/*
+ ============================================================================================================
+ +
+ + Upload :: Registered Member Account :: Gallery :: Image :: Selection
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Find and Open :: Directory :: Temporary :: Upload
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_IMAGE_SELECTION_FIND_DIRECTORY_TEMPORARY_UPLOAD				= "./Temporary/Upload/";
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_IMAGE_SELECTION_DATA							= $_Application_Module_Member_Account_Data_UPLOAD_GALLERY_IMAGE_SELECTION_FIND_DIRECTORY_TEMPORARY_UPLOAD . basename($_FILES['AMM_Account_Data_Upload_File_Gallery_Image_Selection_Multiple']['name']);
+
+/*
+ ============================================================================================================
+ + Define :: Gallery :: Image :: Selection :: Allowed File Extensions
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_EXTENSIONS_ALLOWED					= "jpg gif png bmp jpeg";
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_DIRECTORY_TEMPORARY				= $_POST['AMM_Account_Data_Upload_File_Gallery_Image_Selection_Directory_Temporary'];
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_DIRECTORY          				= $_POST['AMM_Account_Data_Upload_File_Gallery_Image_Selection_Directory'];
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_MULTIPLE                              		= $_POST['AMM_Account_Data_Upload_File_Gallery_Image_Selection_Multiple'];
+
+/*
+ ============================================================================================================
+ + IF: Gallery :: Image :: Selection :: Upload File :: Input Form Variables HAVE NOT Executed, Display Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_DIRECTORY || $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_DIRECTORY == "") {
+
+echo ("
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Image :: Selection :: File :: Upload<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Image&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
+												[ Maximum Image File Upload Size: $_Application_Module_Member_Account_Data_MAXIMUM_UPLOAD_SIZE_FILE_IMAGE KB ]</B><BR>
+												Allowed File Extensions :: Image :: BMP, GIF, JPG, JPEG, PNG<BR>
+													<INPUT TYPE=\"file\" NAME=\"AMM_Account_Data_Upload_File_Gallery_Image_Selection_Multiple[]\" MAXLENGTH=\"150\" MULTIPLE><BR>
+													<SELECT NAME=\"AMM_Account_Data_Upload_File_Gallery_Image_Selection_Directory\">
+");
+
+/*
+ ============================================================================================================
+ + WHILE :: Reading :: Directory :: Registered Member Account :: Gallery :: Image :: Selection
+ ============================================================================================================
+*/
+
+while (($_Application_Module_Member_Account_Data_UPLOAD_READ_DIRECTORY_MEMBER_GALLERY_IMAGE = readdir($_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_IMAGE))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploit: Remote-File-Inclusion AND Local-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_UPLOAD_READ_DIRECTORY_MEMBER_GALLERY_IMAGE == "." || $_Application_Module_Member_Account_Data_UPLOAD_READ_DIRECTORY_MEMBER_GALLERY_IMAGE == ".." || $_Application_Module_Member_Account_Data_UPLOAD_READ_DIRECTORY_MEMBER_GALLERY_IMAGE == "Backup" || $_Application_Module_Member_Account_Data_UPLOAD_READ_DIRECTORY_MEMBER_GALLERY_IMAGE == "index.php") {
+/**
+ * Do Nothing
+**/
+} else {
+
+														echo ("<OPTION VALUE=\"$_Application_Module_Member_Account_Data_UPLOAD_READ_DIRECTORY_MEMBER_GALLERY_IMAGE\">$_Application_Module_Member_Account_Data_UPLOAD_READ_DIRECTORY_MEMBER_GALLERY_IMAGE</OPTION>");
+
+} // [ + ] IF: Specified :: Directory :: Registered Member Account Image Directory AND Files ARE NOT Specified Registered Member Account Image Directory AND Files
+
+} // [ + ] WHILE: Reading Specified Member Account Image Directory
+
+/*
+ ============================================================================================================
+ + Close :: Directory :: Registered Member Account :: Gallery :: Image :: Selection
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_IMAGE);
+
+echo ("
+						</SELECT>
+                                                <INPUT TYPE=\"hidden\" NAME=\"AMM_Account_Data_Upload_File_Gallery_Image_Selection_Directory_Temporary\" VALUE=\"1\"><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Upload File\">
+											</FORM><BR>
+");
+
+/*
+ ============================================================================================================
+ + ELSE: Gallery :: Image :: Selection :: Upload File :: Input Form Variables HAVE Executed, Proceed Upload
+ ============================================================================================================
+*/
+
+} else {
+
+/*
+ ============================================================================================================
+ + ELSE: Gallery :: Image :: Selection :: Upload File :: Variable Is Executed
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_COUNT_FILES						= count($_FILES['AMM_Account_Data_Upload_File_Gallery_Image_Selection_Multiple']['name']);
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_TOTAL_FILES_UPLOADED					= 0;
+
+/*
+ ============================================================================================================
+ + FOR: Total Number of Files Uploaded: Compared To Files Counted: To Be Less Than: Zero, Increment
+ ============================================================================================================
+*/
+
+for ($i=0; $i < $_Application_Module_Member_Account_Data_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_COUNT_FILES; $i++) {
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_NAME						= $_FILES['AMM_Account_Data_Upload_File_Gallery_Image_Selection_Multiple']['name'][$i];
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_LOCATION					= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Image/Gallery/Backup/$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_DIRECTORY/$_GLOBAL_LOCAL_SERVER_DATE_TIME_NUMERICAL_FULL - $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_NAME";
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_EXTENSION					= pathinfo($_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_LOCATION,PATHINFO_EXTENSION);
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_EXTENSION					= strtolower($_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_EXTENSION);
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_EXTENSION_VALID				= array("bmp","gif","jpg","jpeg","png");
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_MAXIMUM_FILE_SIZE				= $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_IMAGE / 1024;
+
+/*
+ ============================================================================================================
+ + IF: Files Uploaded :: In Array :: Allowed File Extensions :: Gallery :: Image :: Gallery
+ ============================================================================================================
+*/
+
+if (in_array(strtolower($_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_EXTENSION), $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_EXTENSION_VALID)) {
+
+/*
+ ============================================================================================================
+ + IF: Move Uploaded File: From Temporary Upload Directory :: To :: Registered Member Account :: Image :: Gallery
+ ============================================================================================================
+*/
+
+if (move_uploaded_file($_FILES['AMM_Account_Data_Upload_File_Gallery_Image_Selection_Multiple']['tmp_name'][$i],"$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_LOCATION")) {
+
+                        $_Application_Module_Member_Account_Data_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_TOTAL_FILES_UPLOADED++;
+
+copy("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Image/Gallery/Backup/$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_DIRECTORY/$_GLOBAL_LOCAL_SERVER_DATE_TIME_NUMERICAL_FULL - $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_NAME","./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Image/Gallery/$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_DIRECTORY/$_GLOBAL_LOCAL_SERVER_DATE_TIME_NUMERICAL_FULL - $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_NAME");
+
+											header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Account_Data&Display=Gallery&Type=Image&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+											exit();
+
+/*
+ ============================================================================================================
+ + ELSE: Uploaded File Error: From Temporary Upload Directory :: To :: Registered Member Account :: Image :: Selection
+ ============================================================================================================
+*/
+
+} else {
+
+											echo ("Kernel Message: Error: The Uploaded Files Cannot Be Moved.");
+
+} // [ + ] IF: Move Uploaded File :: Gallery Type :: Image :: Selection :: From: Temporary Upload Directory :: To: Registered Member Account :: Gallery :: Image :: Selected Image Gallery Directory
+
+} // [ + ] IF: In Array: String TO LowerCase Characters: Gallery Type :: Image :: Selection :: Uploaded File AND Check: For Valid File Extension
+
+} // [ + ] FOR: Counted Uploaded File(s): Gallery Type :: Image :: Selection: To Be Equal To Zero OR Less Than The Number of Uploaded Files, Increment Number of Files
+
+} // [ + ] IF: Internal Application: Display :: Gallery Type :: Image :: Selection :: Input Form Variables HAVE Executed
+
+/*
+ ============================================================================================================
+ +
+ + Create :: Directory :: Gallery :: Image
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Display :: Create :: Gallery :: Image :: Input Form
+ ============================================================================================================
+*/
+
+echo ("
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Image :: Directory :: Create</B><HR WIDTH=\"35%\" ALIGN=\"LEFT\">
+												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Image&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													<INPUT TYPE=\"text\" NAME=\"AMM_Account_Data_Create_Directory_Gallery_Image\" MAXLENGTH=\"50\"><BR>
+													<INPUT TYPE=\"submit\" VALUE=\"Create Gallery\">
+												</FORM><BR>
+");
+
+/*
+ ============================================================================================================
+ + IF: Create :: Gallery :: Image :: Input Form :: Variables Have Executed
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_IMAGE) {
+
+/*
+ ============================================================================================================
+ + IF: Create :: Directory :: Gallery :: Image
+ ============================================================================================================
+*/
+
+if (mkdir("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Image/Gallery/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_IMAGE")) {
+
+											echo ("Kernel Message: Directory Created Successfully: ./Files/Image/Gallery/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_IMAGE<BR>");
+											
+if (mkdir("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Image/Gallery/Backup/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_IMAGE")) {
+
+											echo ("Kernel Message: Directory Created Successfully: ./Files/Image/Gallery/Backup/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_IMAGE<BR>");
+											
+} else {
+
+											echo ("Kernel Message: Error, The Directory: ./Files/Image/Gallery/Backup/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_IMAGE Currently Exists<BR>");
+											
+} // [ + ] IF: Create Directory :: Registered Member Account :: Gallery :: Image :: Custom Directory :: Backup
+
+											header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Account_Data&Display=Gallery&Type=Image&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+											exit();
+											
+} else {
+
+											echo ("Kernel Message: Error, The Directory: ./Files/Image/Gallery/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_IMAGE Currently Exists<BR>");
+
+} // [ + ] IF: Create Directory :: Registered Member Account :: Gallery :: Image
+
+} // [ + ] IF: Create Directory :: Registered Member Account :: Gallery :: Image Variables Have Executed
+
+/*
+ ============================================================================================================
+ +
+ + List :: Registered Member Account :: Files :: Gallery :: Images
+ +
+ ============================================================================================================
+*/
+
+echo ("
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\">Gallery :: Image :: Directory :: Delete<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Image&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													<SELECT NAME=\"AMM_Account_Data_Delete_Directory_Gallery_Image_Selection\">
+");
+
+/*
+ ============================================================================================================
+ + WHILE :: Reading :: Directory :: Registered Member Account :: Gallery :: Image :: Selection
+ ============================================================================================================
+*/
+
+while (($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_IMAGE_SELECTION = readdir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_IMAGE_SELECTION))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploit: Remote-File-Inclusion AND Local-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_IMAGE_SELECTION == "." || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_IMAGE_SELECTION == ".." || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_IMAGE_SELECTION == "Backup" || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_IMAGE_SELECTION == "index.php") {
+/**
+ * Do Nothing
+**/
+} else {
+
+														echo ("<OPTION VALUE=\"$_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_IMAGE_SELECTION\">$_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_IMAGE_SELECTION</OPTION>");
+
+} // [ + ] IF: Specified :: Directory :: Registered Member Account Image Directory AND Files ARE NOT Specified Registered Member Account Image Directory AND Files
+
+} // [ + ] WHILE: Reading Specified Member Account Image Directory
+
+/*
+ ============================================================================================================
+ + Close :: Directory :: Registered Member Account :: Gallery :: Image :: Selection
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_IMAGE_SELECTION);
+
+echo ("
+													</SELECT><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Delete Gallery\">
+											</FORM><BR>
+");
+
+/*
+ ============================================================================================================
+ + IF: Delete :: Registered Member Account :: Gallery :: Image :: Selection :: Variable HAS Executed
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_IMAGE_SELECTION) {
+
+echo ("File System: Directory Found: $_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_IMAGE_SELECTION<BR><BR>");
+
+/*
+ ============================================================================================================
+ + WHILE :: Reading :: Directory :: Registered Member Account :: Gallery :: Image :: Selection
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT		= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Image/Gallery/$_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_IMAGE_SELECTION";
+$_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT		= opendir($_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT);
+
+while (($_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT = readdir($_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploit: Remote-File-Inclusion AND Local-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT == "." || $_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT == "..") {
+/**
+ * Do Nothing
+**/
+} else {
+
+echo ("File System: File Found: $_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT<BR><BR>");
+
+/*
+ ============================================================================================================
+ + IF: Delete :: Registered Member Account :: Gallery :: Image :: Selection and Files
+ ============================================================================================================
+*/
+
+echo ("File System: Message: Deleting File: $_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT<BR>");
+
+unlink("$_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT/$_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT");
+
+echo ("File System: Message: Removing Directory: $_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT<BR>");
+
+} // [ + ] IF: Specified :: Directory :: Registered Member Account Image Directory AND Files ARE NOT Specified Registered Member Account Image Directory AND Files
+
+} // [ + ] WHILE: Reading :: Selected :: Registered Member Account Image Directory
+
+rmdir($_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT);
+
+											echo ($_Application_Module_Member_Message_Account_Data_DELETE_DIRECTORY_SUCCESSFUL);
+
+/*
+ ============================================================================================================
+ + Close :: Directory :: Registered Member Account :: Gallery :: Image :: Selection
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT);
+
+											header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Account_Data&Display=Gallery&Type=Image&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+											exit();
+											
+} // [ + ] IF: Remove Directory: Registered Member Account :: Gallery :: Image :: Selection :: Input Form Variables HAVE Executed
+
+} // [ + ] IF: Internal Application: Display :: Gallery Type :: Image :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Gallery :: Type :: Video
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Type"] == "Video") {
+
+/*
+ ============================================================================================================
+ +
+ + Delete :: Registered Member Account :: Video :: Registered Member Account :: Video Profile Images
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ + IF: Registered Member Account :: Gallery :: Video :: Video Profile Images :: Delete :: Input Form Variables HAVE NOT Executed, Display Input Form
+ +
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Account_Data_POST_DELETE_FILE_GALLERY_VIDEO_PROFILE_IMAGE) {
+
+echo ("
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Video :: Video Profile Image :: File :: Delete</B><HR WIDTH=\"35%\" ALIGN=\"LEFT\">
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Video&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													<SELECT NAME=\"AMM_Account_Data_Delete_File_Gallery_Video_Profile_Image\">
+");
+
+/*
+ ============================================================================================================
+ + WHILE :: Read :: Directory :: Registered Member Account :: Video :: Registered Member Account Profile Images
+ ============================================================================================================
+*/
+
+while (($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION = readdir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploit: Remote-File-Inclusion AND Local-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION == "." || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION == ".." || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION == "Backup" || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION == "index.php") {
+/**
+ * Do Nothing
+**/
+} else {
+
+														echo ("<OPTION VALUE=\"$_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION\">$_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION</OPTION>");
+
+} // [ + ] IF: Specified :: Registered Member Account :: Directory :: Video :: Video Profile Image Directory AND Files ARE NOT Specified Member Account Image Directory AND Files
+
+} // [ + ] WHILE: Reading :: Specified Registered Member Account :: Directory :: Video :: Video Profile Image Directory
+
+/*
+ ============================================================================================================
+ + Close :: Directory :: Registered Member Account Image Directory :: Profile Images
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE);
+
+echo ("
+													</SELECT><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Delete File\">
+											</FORM>
+");
+
+} else {
+
+/*
+ ============================================================================================================
+ + IF: Delete :: File :: Registered Member Account :: Video :: Selected Registered Member Account Video Profile Image
+ ============================================================================================================
+*/
+
+if (unlink("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Video/Profile/$_Application_Module_Member_Account_Data_POST_DELETE_FILE_GALLERY_VIDEO_PROFILE_IMAGE")) {
+
+											echo ($_Application_Module_Member_Message_Account_Data_DELETE_SUCCESSFUL);
+
+											header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Account_Data&Display=Gallery&Type=Video&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+											exit();
+											
+} else {
+
+											echo ($_Application_Module_Member_Message_Account_Data_DELETE_ERROR);
+
+} // [ + ] IF: Unlink: Registered Member Account :: Image :: Video :: Video Profile Image
+
+} // [ + ] IF: Specified :: Registered Member Account :: Directory :: Video :: Profile Video Image Directory IS NOT Specified Registered Member Account Video Profile Image Directory
+
+/*
+ ============================================================================================================
+ +
+ + Upload :: Registered Member Account :: Gallery :: Video :: Video Profile Image
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Find and Open :: Directory :: Temporary :: Upload
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FIND_DIRECTORY_TEMPORARY_UPLOAD			= "./Temporary/Upload/";
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_DATA 						= $_Application_Module_Member_Account_Data_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FIND_DIRECTORY_TEMPORARY_UPLOAD . basename($_FILES['AMM_Account_Data_Upload_File_Gallery_Video_Profile_Image_Multiple']['name']);
+
+/*
+ ============================================================================================================
+ + Define :: Gallery :: Video :: Video Profile Image :: Allowed File Extensions
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_EXTENSIONS_ALLOWED				= "wav mov webm mp4";
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_DIRECTORY_TEMPORARY				= $_POST['AMM_Account_Data_Upload_File_Gallery_Video_Profile_Image_Directory_Temporary'];
+
+/*
+ ============================================================================================================
+ + IF: Gallery :: Video :: Video Profile Image :: Upload File :: Input Form Variables HAVE NOT Executed, Display Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_DIRECTORY_TEMPORARY) {
+
+echo ("
+												<BR><HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Video :: Profile Video Image :: File :: Upload<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Video&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
+												[ Maximum Video File Upload Size: $_Application_Module_Member_Account_Data_MAXIMUM_UPLOAD_SIZE_FILE_VIDEO KB ]</B><BR>
+												Allowed File Extensions :: Video :: MOV, MP4, WAV, WEBM<BR>
+													<INPUT TYPE=\"file\" NAME=\"AMM_Account_Data_Upload_File_Gallery_Video_Profile_Image_Multiple[]\" MAXLENGTH=\"150\" MULTIPLE><BR>
+													<INPUT TYPE=\"hidden\" NAME=\"AMM_Account_Data_Upload_File_Gallery_Video_Profile_Image_Directory_Temporary\" VALUE=\"1\">
+												<INPUT TYPE=\"submit\" VALUE=\"Upload File\">
+											</FORM><BR>
+");
+
+/*
+ ============================================================================================================
+ + ELSE: Gallery :: Video :: Video Profile Image :: Upload File :: Input Form Variables HAVE Executed, Proceed Upload
+ ============================================================================================================
+*/
+
+} else {
+
+/*
+ ============================================================================================================
+ + ELSE: Gallery :: Video :: Selection :: Upload File :: Variable Is Executed
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_COUNT_FILES					= count($_FILES['AMM_Account_Data_Upload_File_Gallery_Video_Profile_Image_Multiple']['name']);
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_TOTAL_FILES_UPLOADED				= 0;
+
+/*
+ ============================================================================================================
+ + FOR: Total Number of Files Uploaded: Compared To Files Counted: To Be Less Than: Zero, Increment
+ ============================================================================================================
+*/
+
+for ($i=0; $i < $_Application_Module_Member_Account_Data_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_COUNT_FILES; $i++) {
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_NAME					= $_FILES['AMM_Account_Data_Upload_File_Gallery_Video_Profile_Image_Multiple']['name'][$i];
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_LOCATION					= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Video/Profile/Backup/$_GLOBAL_LOCAL_SERVER_DATE_TIME_NUMERICAL_FULL - $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_NAME";
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_EXTENSION					= pathinfo($_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_LOCATION,PATHINFO_EXTENSION);
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_EXTENSION					= strtolower($_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_EXTENSION);
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_EXTENSION_VALID				= array("mp4","wmv","mov","webm","mkv");
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_MAXIMUM_FILE_SIZE				= $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_VIDEO / 1024;
+
+/*
+ ============================================================================================================
+ + IF: Files Uploaded :: In Array :: Allowed File Extensions :: Gallery :: Video :: Video Profile Image
+ ============================================================================================================
+*/
+
+if (in_array(strtolower($_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_EXTENSION), $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_EXTENSION_VALID)) {
+
+/*
+ ============================================================================================================
+ + IF: Move Uploaded File: From Temporary Upload Directory :: To :: Registered Member Account :: Video :: Video Profile Image Directory
+ ============================================================================================================
+*/
+
+if (move_uploaded_file($_FILES['AMM_Account_Data_Upload_File_Gallery_Video_Profile_Image_Multiple']['tmp_name'][$i],"$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_LOCATION")) {
+
+                        $_Application_Module_Member_Account_Data_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_TOTAL_FILES_UPLOADED++;
+						
+copy("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Video/Profile/Backup/$_GLOBAL_LOCAL_SERVER_DATE_TIME_NUMERICAL_FULL - $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_NAME","./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Video/Profile/$_GLOBAL_LOCAL_SERVER_DATE_TIME_NUMERICAL_FULL - $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_PROFILE_IMAGE_FILE_NAME");
+
+											header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Account_Data&Display=Gallery&Type=Video&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+											exit();
+											
+/*
+ ============================================================================================================
+ + ELSE: Uploaded File Error: From Temporary Upload Directory :: To :: Registered Member Account :: Video :: Video Profile Image Directory
+ ============================================================================================================
+*/
+
+} else {
+
+											echo ("Kernel Message: Error: The Uploaded Files Cannot Be Moved.");
+
+} // [ + ] IF: Move Uploaded File :: Gallery Type :: Video :: Video Profile Image :: From: Temporary Upload Directory :: To: Registered Member Account :: Gallery :: Video :: Video :: Video Profile Image Directory
+
+} // [ + ] IF: In Array: String TO LowerCase Characters: Gallery Type :: Video :: Video Profile Image :: Uploaded File AND Check: For Valid File Extension
+
+} // [ + ] FOR: Counted Uploaded File(s): Gallery Type :: Video :: Video Profile Image: To Be Equal To Zero OR Less Than The Number of Uploaded Files, Increment Number of Files
+
+} // [ + ] IF: Internal Application: Display :: Gallery Type :: Video :: Video Profile Image :: Input Form Variables HAVE Executed
+
+/*
+ ============================================================================================================
+ +
+ + Upload :: Registered Member Account :: Gallery :: Video :: Selection
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_DIRECTORY						= $_POST['AMM_Account_Data_Upload_Gallery_Video_Selection_Directory'];
+
+/*
+ ============================================================================================================
+ + Find and Open :: Directory :: Temporary :: Upload
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_VIDEO_SELECTION_FIND_DIRECTORY_TEMPORARY_UPLOAD				= "./Temporary/Upload/";
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_VIDEO_SELECTION_DATA 							= $_Application_Module_Member_Account_Data_UPLOAD_GALLERY_VIDEO_SELECTION_FIND_DIRECTORY_TEMPORARY_UPLOAD . basename($_FILES['AMM_Account_Data_Upload_File_Gallery_Video_Selection_Multiple']['name']);
+
+/*
+ ============================================================================================================
+ + Define :: Gallery :: Video :: Selection :: Allowed File Extensions
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_VIDEO_SELECTION_FILE_EXTENSIONS_ALLOWED					= "wav mov webm mp4 mkv";
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_DIRECTORY_TEMPORARY				= $_POST['AMM_Account_Data_Upload_Gallery_Video_Selection_Directory_Temporary'];
+
+
+/*
+ ============================================================================================================
+ + IF: Gallery :: Video :: Selection :: Upload File :: Input Form Variables HAVE NOT Executed, Display Input Form
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_DIRECTORY || $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_DIRECTORY == "") {
+
+echo ("
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Video :: Selection :: File :: Upload<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Video&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
+												[ Maximum Video File Upload Size: $_Application_Module_Member_Account_Data_MAXIMUM_UPLOAD_SIZE_FILE_VIDEO KB ]</B><BR>
+												Allowed File Extensions :: Video :: MOV, MP4, WAV, WEBM<BR>
+													<INPUT TYPE=\"file\" NAME=\"AMM_Account_Data_Upload_File_Gallery_Video_Selection_Multiple[]\" MAXLENGTH=\"150\" MULTIPLE><BR>
+													<INPUT TYPE=\"hidden\" NAME=\"AMM_Account_Data_Upload_Gallery_Video_Selection_Directory_Temporary\" VALUE=\"1\">
+													<SELECT NAME=\"AMM_Account_Data_Upload_Gallery_Video_Selection_Directory\">
+");
+
+/*
+ ============================================================================================================
+ + WHILE :: Reading :: Directory :: Registered Member Account :: Gallery :: Video
+ ============================================================================================================
+*/
+
+while (($_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_VIDEO_SELECTION = readdir($_Application_Module_Member_Account_Data_UPLOAD_OPEN_MEMBER_DIRECTORY_GALLERY_VIDEO_SELECTION))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploit: Remote-File-Inclusion AND Local-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_VIDEO_SELECTION == "." || $_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_VIDEO_SELECTION == ".." || $_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_VIDEO_SELECTION == "Backup" || $_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_VIDEO_SELECTION == "index.php") {
+/**
+ * Do Nothing
+**/
+} else {
+
+														echo ("<OPTION VALUE=\"$_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_VIDEO_SELECTION\">$_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_VIDEO_SELECTION</OPTION>");
+
+} // [ + ] IF: Specified :: Directory :: Registered Member Account :: Gallery :: Video Gallery Directory Selection AND Files ARE NOT Specified Registered Member Account :: Video Directory Selection AND Files
+
+} // [ + ] WHILE: Reading Specified Registered Member Account :: Gallery :: Video Gallery Directory Selection
+
+/*
+ ============================================================================================================
+ + Close :: Directory :: Registered Member Account :: Gallery :: Video :: Selection :: Directory
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Account_Data_UPLOAD_OPEN_MEMBER_DIRECTORY_GALLERY_VIDEO_SELECTION);
+
+echo ("
+													</SELECT><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Upload File\">
+											</FORM><BR>
+");
+
+/*
+ ============================================================================================================
+ + ELSE: Gallery :: Video :: Selection :: Upload File :: Input Form Variables HAVE Executed, Proceed Upload
+ ============================================================================================================
+*/
+
+} else {
+
+/*
+ ============================================================================================================
+ + ELSE: Galery :: Video :: Selection :: Upload File :: Variable Is Executed
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_VIDEO_SELECTION_FILE_COUNT_FILES					= count($_FILES['AMM_Account_Data_Upload_File_Gallery_Video_Selection_Multiple']['name']);
+$_Application_Module_Member_Account_Data_UPLOAD_GALLERY_VIDEO_SELECTION_FILE_TOTAL_FILES_UPLOADED				= 0;
+
+/*
+ ============================================================================================================
+ + FOR: Total Number of Files Uploaded: Compared To Files Counted: To Be Less Than: Zero, Increment
+ ============================================================================================================
+*/
+
+for ($i=0; $i < $_Application_Module_Member_Account_Data_UPLOAD_GALLERY_VIDEO_SELECTION_FILE_COUNT_FILES; $i++) {
+
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_FILE_NAME						= $_FILES['AMM_Account_Data_Upload_File_Gallery_Video_Selection_Multiple']['name'][$i];
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_FILE_LOCATION					= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Video/Gallery/$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_VIDEO_SELECTION/$_GLOBAL_LOCAL_SERVER_DATE_TIME_NUMERICAL_FULL - $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_FILE_NAME";
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_FILE_EXTENSION					= pathinfo($_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_FILE_LOCATION,PATHINFO_EXTENSION);
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_FILE_EXTENSION					= strtolower($_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_FILE_EXTENSION);
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_FILE_EXTENSION_VALID				= array("mp4","wmv","mov","webm","mkv");
+$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_FILE_MAXIMUM_FILE_SIZE				= $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_VIDEO / 1024;
+
+/*
+ ============================================================================================================
+ + IF: Files Uploaded :: In Array :: Allowed File Extensions :: Gallery :: Video :: Selection
+ ============================================================================================================
+*/
+
+if (in_array(strtolower($_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_FILE_EXTENSION), $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_FILE_EXTENSION_VALID)) {
+
+/*
+ ============================================================================================================
+ + IF: Move Uploaded File: From Temporary Upload Directory :: To :: Registered Member Account :: Video :: Selection Directory
+ ============================================================================================================
+*/
+
+if (move_uploaded_file($_FILES['AMM_Account_Data_Upload_File_Gallery_Video_Selection_Multiple']['tmp_name'][$i],"$_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_FILE_LOCATION")) {
+
+                        $_Application_Module_Member_Account_Data_UPLOAD_GALLERY_VIDEO_SELECTION_FILE_TOTAL_FILES_UPLOADED++;
+						
+copy("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Video/Gallery/Backup/$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_VIDEO_SELECTION/$_GLOBAL_LOCAL_SERVER_DATE_TIME_NUMERICAL_FULL - $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_VIDEO_SELECTION_FILE_NAME","./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Video/Gallery/$_Application_Module_Member_Account_Data_POST_UPLOAD_DIRECTORY_GALLERY_VIDEO_SELECTION/$_GLOBAL_LOCAL_SERVER_DATE_TIME_NUMERICAL_FULL - $_Application_Module_Member_Account_Data_POST_UPLOAD_GALLERY_IMAGE_SELECTION_FILE_NAME");
+
+
+											header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Account_Data&Display=Gallery&Type=Video&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+											exit();
+											
+/*
+ ============================================================================================================
+ + ELSE: Uploaded File Error: From Temporary Upload Directory :: To :: Registered Member Account :: Video :: Selection Directory
+ ============================================================================================================
+*/
+
+} else {
+
+											echo ("Kernel Message: Error: The Uploaded Files Cannot Be Moved.");
+
+} // [ + ] IF: Move Uploaded File :: Gallery Type :: Video :: Selection :: From: Temporary Upload Directory :: To: Registered Member Account :: Gallery :: Video :: Selection Directory
+
+} // [ + ] IF: In Array: String TO LowerCase Characters: Gallery Type :: Video :: Selection :: Uploaded File AND Check: For Valid File Extension
+
+} // [ + ] FOR: Counted Uploaded File(s): Gallery Type :: Video :: Selection: To Be Equal To Zero OR Less Than The Number of Uploaded Files, Increment Number of Files
+
+} // [ + ] IF: Internal Application: Display :: Gallery Type :: Video :: Selection :: Input Form Variables HAVE Executed
+
+/*
+ ============================================================================================================
+ +
+ + Create :: Directory :: Gallery :: Video
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Display :: Create :: Gallery :: Video :: Input Form
+ ============================================================================================================
+*/
+
+echo ("
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\"><B>Gallery :: Video :: Directory :: Create<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Video&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
+													<INPUT TYPE=\"text\" NAME=\"AMM_Account_Data_Create_Directory_Gallery_Video\" MAXLENGTH=\"50\"><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Create Gallery\">
+											</FORM><BR>
+");
+
+/*
+ ============================================================================================================
+ + IF: Create :: Gallery :: Video :: Input Form :: Variables Have Executed
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_VIDEO) {
+
+/*
+ ============================================================================================================
+ + IF: Create :: Directory :: Gallery :: Video
+ ============================================================================================================
+*/
+
+if (mkdir("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Video/Gallery/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_VIDEO")) {
+
+											echo ("Kernel Message: Directory Created Successfully: ./Files/Video/Gallery/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_VIDEO<BR>");
+
+if (mkdir("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Video/Gallery/Backup/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_VIDEO")) {
+
+											echo ("Kernel Message: Directory Created Successfully: ./Files/Video/Gallery/Backup/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_VIDEO<BR>");
+											
+} else {
+
+											echo ("Kernel Message: Error, The Directory: ./Files/Video/Gallery/Backup/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_VIDEO Currently Exists<BR>");
+											
+} // [ + ] IF: Create Directory :: Registered Member Account :: Gallery :: Video :: Custom Directory :: Backup
+
+											header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Account_Data&Display=Gallery&Type=Video&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+											exit();
+											
+} else {
+
+											echo ("Kernel Message: Error, The Directory: ./Files/Video/Gallery/$_Application_Module_Member_Account_Data_POST_CREATE_DIRECTORY_GALLERY_VIDEO Currently Exists<BR>");
+
+} // [ + ] IF: Create Directory :: Registered Member Account :: Gallery :: Video
+
+} // [ + ] IF: Create Directory :: Registered Member Account :: Gallery :: Video Variables Have Executed
+
+/*
+ ============================================================================================================
+ +
+ + List :: Registered Member Account :: Files :: Gallery :: Video
+ +
+ ============================================================================================================
+*/
+
+echo ("
+												<HR WIDTH=\"35%\" ALIGN=\"LEFT\">Gallery :: Video :: Directory :: Delete<HR WIDTH=\"35%\" ALIGN=\"LEFT\">
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Data&amp;Display&#61;Gallery&amp;Type&#61;Video&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													<SELECT NAME=\"AMM_Account_Data_Delete_Directory_Gallery_Video_Selection\">
+");
+
+/*
+ ============================================================================================================
+ + WHILE :: Reading :: Directory :: Registered Member Account :: Gallery :: Video :: Selection
+ ============================================================================================================
+*/
+
+while (($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_VIDEO_SELECTION = readdir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_VIDEO_SELECTION))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploit: Remote-File-Inclusion AND Local-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_VIDEO_SELECTION == "." || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_VIDEO_SELECTION == ".." || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_VIDEO_SELECTION == "Backup" || $_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_VIDEO_SELECTION == "index.php") {
+/**
+ * Do Nothing
+**/
+} else {
+
+														echo ("<OPTION VALUE=\"$_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_VIDEO_SELECTION\">$_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_VIDEO_SELECTION</OPTION>");
+
+} // [ + ] IF: Specified :: Directory :: Registered Member Account :: Directory :: Video Directory AND Files ARE NOT Specified Registered Member Account :: Directory :: Video Directory AND Files
+
+} // [ + ] WHILE: Reading Specified Member Account :: Directory :: Video Directory
+
+/*
+ ============================================================================================================
+ + Close :: Directory :: Registered Member Account :: Gallery :: Video :: Selection
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION);
+
+echo ("
+													</SELECT><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Delete Gallery\">
+											</FORM><BR>
+");
+
+/*
+ ============================================================================================================
+ + IF: Delete :: Registered Member Account :: Gallery :: Video :: Selection :: Variable HAS Executed
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_VIDEO_SELECTION) {
+
+echo ("File System: Directory Found: $_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_VIDEO_SELECTION<BR><BR>");
+
+/*
+ ============================================================================================================
+ + WHILE :: Reading :: Directory :: Registered Member Account :: Gallery :: Video :: Selection
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT		= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Video/Gallery/$_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_VIDEO_SELECTION";
+$_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT		= opendir($_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT);
+
+while (($_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT = readdir($_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploit: Remote-File-Inclusion AND Local-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT == "." || $_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT == "..") {
+/**
+ * Do Nothing
+**/
+} else {
+
+echo ("File System: File Found: $_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT<BR><BR>");
+
+/*
+ ============================================================================================================
+ + IF: Delete :: Registered Member Account :: Gallery :: Video :: Selection and Files
+ ============================================================================================================
+*/
+
+echo ("File System: Message: Deleting File: $_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT<BR>");
+
+unlink("$_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT/$_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT");
+
+echo ("File System: Message: Removing Directory: $_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT<BR>");
+
+} // [ + ] IF: Specified :: Directory :: Registered Member Account :: Video Directory AND Files ARE NOT Specified Registered Member Account Image Directory AND Files
+
+} // [ + ] WHILE: Reading :: Selected :: Registered Member Account :: Video Directory
+
+rmdir($_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT);
+
+											echo ($_Application_Module_Member_Message_Account_Data_DELETE_DIRECTORY_SUCCESSFUL);
+
+/*
+ ============================================================================================================
+ + Close :: Directory :: Registered Member Account :: Gallery :: Video :: Selection
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT);
+
+											header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Account_Data&Display=Gallery&Type=Video&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+											exit();
+											
+} // [ + ] IF: Remove Directory: Registered Member Account :: Gallery :: Video :: Selection :: Input Form Variables HAVE Executed
+
+} // [ + ] IF: Internal Application: Display :: Gallery Type :: Video :: Is: Activated
+
+if ($_GET["Type"] == "LiveVideo") {
+
+} // [ + ] IF: Internal Application: Gallery :: Galery Type :: LiveVideo :: Is: Activated
+
+} // [ + ] IF: Internal Application: Display :: Gallery :: Is: Activated
+?>
