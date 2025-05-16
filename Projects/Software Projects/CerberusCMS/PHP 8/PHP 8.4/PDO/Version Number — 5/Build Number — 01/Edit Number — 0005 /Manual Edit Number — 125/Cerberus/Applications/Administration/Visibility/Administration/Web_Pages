@@ -152,8 +152,8 @@ if ($_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_HYPERLINK) {
  ============================================================================================================
 */
 
-$_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks ORDER BY application_hyperlink_row ASC");
-$_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS_NUMBER_OF_ROWS	= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS->num_rows;
+$_Application_Module_Administration_Web_Pages_DB_Query_SELECT_HYPERLINKS			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks ORDER BY application_hyperlink_row ASC");
+$_Application_Module_Administration_Web_Pages_DB_Query_SELECT_HYPERLINKS_NUMBER_OF_ROWS		= $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_HYPERLINKS->num_rows;
 
 if ($_Application_Module_Administration_Web_Pages_DB_Query_SELECT_LINKS_NUMBER_OF_ROWS <= 0) {
 
