@@ -424,7 +424,7 @@ if ($_Application_Module_Administration_Web_Pages_DB_Query_INSTALL_CUSTOM_APPLIC
 
 $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPLICATIONS			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_web_pages ORDER BY web_page_name ASC");
 
-echo ("<BR><HR ALIGN=\"CENTER\" WIDTH=\"50%\"><CENTER><B>Existing Custom Application Entries</B></CENTER><HR ALIGN=\"CENTER\" WIDTH=\"50%\">");
+echo ("<BR><HR ALIGN=\"CENTER\" WIDTH=\"50%\"><CENTER><B>Existing Custom Application Entries</B></CENTER><HR ALIGN=\"CENTER\" WIDTH=\"50%\"><BR>");
 
 while ($_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPLICATIONS_Fetch_Array = $_Application_Module_Administration_Web_Pages_DB_Query_SELECT_CUSTOM_APPLICATIONS->fetch_array(MYSQLI_BOTH)) {
 
