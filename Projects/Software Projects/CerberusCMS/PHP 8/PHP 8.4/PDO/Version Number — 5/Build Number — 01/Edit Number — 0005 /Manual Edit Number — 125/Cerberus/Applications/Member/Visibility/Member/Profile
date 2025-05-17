@@ -2728,6 +2728,69 @@ if ($_GET["Display"] == "Log") {
  ============================================================================================================
  +
  +
+ + [ @ ] Internal Application: Display :: Log :: Search :: Authentication
+ +
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Search"] == "Authentication") {
+
+/*
+ ============================================================================================================
+ + Variables :: Post Variables :: Select Date
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_YEAR							= $_POST['AMM_Profile_Logs_Search_Specify_Date_Year'];
+$_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_MONTH							= $_POST['AMM_Profile_Logs_Search_Specify_Date_Month'];
+$_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_MONTH_DAY						= $_POST['AMM_Profile_Logs_Search_Specify_Date_Month_Day'];
+
+if (!$_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_MONTH_DAY) {
+
+echo ("
+												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME&amp;Display&#61;Log&amp;Search&#61;Authentication&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+													<I><B>Log :: Authentication Log :: Search :: Select Date</B></I>:<BR>
+													Year:<BR>
+														<INPUT TYPE=\"year\" NAME=\"AMM_Profile_Logs_Search_Specify_Date_Year\" VALUE=\"$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL\" MAXLENGTH=\"4\"><BR>
+													Month:<BR>
+														<INPUT TYPE=\"text\" NAME=\"AMM_Profile_Logs_Search_Specify_Date_Month\" VALUE=\"$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL\" MAXLENGTH=\"2\"><BR>
+													Day:<BR>
+														<INPUT TYPE=\"text\" NAME=\"AMM_Profile_Logs_Search_Specify_Date_Month_Day\" VALUE=\"$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_DAY_FULL\" MAXLENGTH=\"2\"><BR>
+													<INPUT TYPE=\"submit\" VALUE=\"Select Date\">
+												</FORM>
+");
+
+} else {
+
+$_Application_Module_Member_Profile_POST_LOGS_AUTHENTICATION_SEARCH_DATE_CONTENTS_FILE				= file_get_contents("./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/Authentication_Log_Public.php");
+$_Application_Module_Member_Profile_POST_LOGS_AUTHENTICATION_SEARCH_DATE_CONTENTS_HASH				= hash_file('sha256', "./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/Authentication_Log_Public.php");
+
+if (file_exists("./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/Authentication_Log_Public.php")) {
+
+echo ("
+											Log :: Authentication Log :: For Selected Date :: Year: $_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_YEAR - Month: $_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_MONTH - Day: $_Application_Module_Member_Profile_POST_LOGS_SEARCH_SELECT_DATE_MONTH_DAY<BR>
+											File Integrity :: Secure-Hash-Algorithm, 256 :: Current File: $_Application_Module_Member_Profile_POST_LOGS_AUTHENTICATION_SEARCH_DATE_CONTENTS_HASH<BR>
+
+											<FORM>
+												<TEXTAREA ROWS=\"20\" COLS=\"125\">$_Application_Module_Member_Profile_POST_LOGS_AUTHENTICATION_SEARCH_DATE_CONTENTS_FILE</TEXTAREA>
+											</FORM>
+");
+
+} else {
+
+											echo ("Kernel Message: Log File: Authentication Does Not Exist For The Selected Date.<BR><BR>");
+											
+} // [ + ] IF: File Exists: Registered Member Account :: File :: Log File :: Authentication
+
+} // [ + ] IF: Internal Application: Display :: Log :: Search :: Authentication :: Input Form Variables HAVE NOT Executed
+
+} // [ + ] IF: Internal Application: Display :: Log :: Search :: Authentication :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ +
  + [ @ ] Internal Application: Display :: Log :: Search :: Interaction
  +
  +
@@ -2833,7 +2896,7 @@ $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_DATE_CONTENTS_HASH				=
 if (file_exists("./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Activity_Logging/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_YEAR/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH/$_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH_DAY/Log_Member_GPS_Coordinates_HTML_Manual.html")) {
 
 echo ("
-											Log :: Interaction Log :: For Selected Date :: Year: $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_YEAR - Month: $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH - Day: $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH_DAY<BR>
+											Log :: Global-Positioning-System Coordinates Log :: For Selected Date :: Year: $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_YEAR - Month: $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH - Day: $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_SELECT_DATE_MONTH_DAY<BR>
 											File Integrity :: Secure-Hash-Algorithm, 256 :: Current File: $_Application_Module_Member_Profile_POST_LOGS_GPS_SEARCH_DATE_CONTENTS_HASH<BR>
 
 											<OBJECT DATA=\"$_Application_Module_Member_Profile_POST_LOGS_GPS_FILE\" WIDTH=\"75%\" HEIGHT=\"250\">
