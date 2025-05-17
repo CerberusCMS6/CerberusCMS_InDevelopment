@@ -116,6 +116,7 @@ if ($_Application_Module_Panel_Media_Player_READ_DIRECTORY_AUDIO_MUSIC == "." ||
 $_Application_Module_Panel_Media_Player_READ_DIRECTORY_AUDIO_MUSIC_FILTERED_ARRAY		= array(".mp3",".wma",".flac",".ogg");
 $_Application_Module_Panel_Media_Player_READ_DIRECTORY_AUDIO_MUSIC_FILTERED			= str_replace("_", " ", "$_Application_Module_Panel_Media_Player_READ_DIRECTORY_AUDIO_MUSIC");
 $_Application_Module_Panel_Media_Player_READ_DIRECTORY_AUDIO_MUSIC_FILTERED			= str_replace($_Application_Module_Panel_Media_Player_READ_DIRECTORY_AUDIO_MUSIC_FILTERED_ARRAY, "", "$_Application_Module_Panel_Media_Player_READ_DIRECTORY_AUDIO_MUSIC");
+$_Application_Module_Panel_Media_Player_READ_DIRECTORY_AUDIO_MUSIC_FILTERED			= substr($_Application_Module_Panel_Media_Player_READ_DIRECTORY_AUDIO_MUSIC,0,20);
 
 											echo ("<OPTION VALUE=\"./Upload/Audio/Music/$_Application_Module_Panel_Media_Player_READ_DIRECTORY_AUDIO_MUSIC\">$_Application_Module_Panel_Media_Player_READ_DIRECTORY_AUDIO_MUSIC_FILTERED</OPTION>");
 
@@ -125,8 +126,9 @@ $_Application_Module_Panel_Media_Player_READ_DIRECTORY_AUDIO_MUSIC_FILTERED			= 
 
 echo ("
 													</SELECT><BR>
-													<INPUT TYPE=\"submit\" VALUE=\"Play Media\">
+													<INPUT TYPE=\"submit\" VALUE=\"Play Music\">
 												</FORM><BR>
+												<MARQUEE DIRECTION=\"LEFT\"><A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Application Module :: Media Player ::\">$_Application_Module_Panel_Media_Player_READ_DIRECTORY_VIDEO_MUSIC_FILTERED</A></MARQUEE><BR><BR>
 ");
 
 /*
@@ -169,6 +171,7 @@ if ($_Application_Module_Panel_Media_Player_READ_DIRECTORY_VIDEO_MOVIES == "." |
 $_Application_Module_Panel_Media_Player_READ_DIRECTORY_VIDEO_MOVIES_FILTERED_ARRAY		= array(".avi",".mkv",".mov",".mp4",".wmv",".webm");
 $_Application_Module_Panel_Media_Player_READ_DIRECTORY_VIDEO_MOVIES_FILTERED			= str_replace("_", " ", "$_Application_Module_Panel_Media_Player_READ_DIRECTORY_VIDEO_MOVIES");
 $_Application_Module_Panel_Media_Player_READ_DIRECTORY_VIDEO_MOVIES_FILTERED			= str_replace($_Application_Module_Panel_Media_Player_READ_DIRECTORY_VIDEO_MOVIES_FILTERED_ARRAY, "", "$_Application_Module_Panel_Media_Player_READ_DIRECTORY_VIDEO_MOVIES");
+$_Application_Module_Panel_Media_Player_READ_DIRECTORY_VIDEO_MOVIES_FILTERED			= substr($_Application_Module_Panel_Media_Player_READ_DIRECTORY_VIDEO_MOVIES_FILTERED,0,20);
 
 											echo ("<OPTION VALUE=\"./Upload/Video/Movies/$_Application_Module_Panel_Media_Player_READ_DIRECTORY_VIDEO_MOVIES\">$_Application_Module_Panel_Media_Player_READ_DIRECTORY_VIDEO_MOVIES_FILTERED</OPTION>");
 
@@ -178,8 +181,10 @@ $_Application_Module_Panel_Media_Player_READ_DIRECTORY_VIDEO_MOVIES_FILTERED			=
 
 echo ("
 													</SELECT><BR>
-													<INPUT TYPE=\"submit\" VALUE=\"Play Media\">
-												</FORM><HR>
+													<INPUT TYPE=\"submit\" VALUE=\"Play Movie\">
+												</FORM><BR>
+												<MARQUEE DIRECTION=\"LEFT\"><A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Application Module :: Media Player ::\">$_Application_Module_Panel_Media_Player_READ_DIRECTORY_VIDEO_MOVIES_FILTERED</A></MARQUEE>
+												<HR>
 												<CENTER>[&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Media_Player&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Application Module :: Media Player ::\">Options</A>&nbsp;]
 ");
 
