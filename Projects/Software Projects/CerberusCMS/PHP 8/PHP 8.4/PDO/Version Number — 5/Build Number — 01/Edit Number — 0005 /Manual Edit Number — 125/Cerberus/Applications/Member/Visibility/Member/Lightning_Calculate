@@ -6736,15 +6736,21 @@ Example: 10/5ths = 10 * .20 OR 2 Wholes<BR><BR>
 
 Section Note: Repitition should be done in 30 minute sessions with 10 minute breaks in between each 30 minute session.<BR><BR>
 
-<B>— Conversions :: Decimals</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+<B>— Conversions :: Decimals</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
 * Conversion :: Decimal TO Fraction<BR>
 * Conversion :: Decimal TO Percentage<BR><BR>
 
-<B>— Conversions :: Fractions</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+<B>— Conversions :: Fractions</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
 * Conversion :: Fraction TO Decimal<BR>
 * Conversion :: Fraction TO Percentage<BR><BR>
 
-<B>— Conversions :: Percentages</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+<B>— Conversions :: Percentages</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
 * Conversion :: Percentages TO Decimal<BR>
 * Conversion :: Percentages TO Fraction<BR><BR>
 
@@ -6756,7 +6762,9 @@ Example: What Is The Perfect Cube of: 73 ?<BR><BR>
 
 Section Note: Repitition should be done in 30 minute sessions with 10 minute breaks in between each 30 minute session.<BR><BR>
 
-<B>— Perfect Whole Numbers :: Exponents :: 2 Places or 2 Digits :: ^ n</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+<B>— Perfect Whole Numbers :: Exponents :: 2 Places or 2 Digits :: ^ n</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Exponents&amp;Type&#61;2Places_2Exponent&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Exercise :: 2 Places :: ^ 2 ::  From 2 :: Perfect Square</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Exponents&amp;Type&#61;2Places_3Exponent&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Exercise :: 2 Places :: ^ 3 ::  From 2 :: Perfect Cube</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Exponents&amp;Type&#61;2Places_4Exponent&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Exercise :: 2 Places :: ^ 4 ::  From 2 :: Perfect 4-Cube</A><BR>
@@ -6767,7 +6775,9 @@ Section Note: Repitition should be done in 30 minute sessions with 10 minute bre
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Exponents&amp;Type&#61;2Places_9Exponent&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Exercise :: 2 Places :: ^ 9 ::  From 2 :: Perfect 9-Cube</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Exponents&amp;Type&#61;2Places_10Exponent&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Exercise :: 2 Places :: ^ 10 :: From 2 :: Perfect 10-Cube</A><BR><BR>
 
-<B>— Perfect Whole Numbers :: Random Numbers :: Exponents :: 3 Places OR 3 Digits :: ^ n</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+<B>— Perfect Whole Numbers :: Random Numbers :: Exponents :: 3 Places OR 3 Digits :: ^ n</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Exponents&amp;Type&#61;3Places_2Exponent&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Exercise :: 3 Places :: ^ 2 ::  From 3 :: Perfect Square</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Exponents&amp;Type&#61;3Places_3Exponent&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Exercise :: 3 Places :: ^ 3 ::  From 3 :: Perfect Cube</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Exponents&amp;Type&#61;3Places_4Exponent&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Exercise :: 3 Places :: ^ 4 ::  From 3 :: Perfect 4-Cube</A><BR>
@@ -6778,7 +6788,9 @@ Section Note: Repitition should be done in 30 minute sessions with 10 minute bre
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Exponents&amp;Type&#61;3Places_9Exponent&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Exercise :: 3 Places :: ^ 9 ::  From 3 :: Perfect 9-Cube</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Exponents&amp;Type&#61;3Places_10Exponent&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Exercise :: 3 Places :: ^ 10 :: From 3 :: Perfect 10-Cube</A><BR><BR>
 
-<B>— Perfect Whole Numbers :: Random Numbers :: Exponents :: 4 Places OR 4 Digits :: ^ n</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+<B>— Perfect Whole Numbers :: Random Numbers :: Exponents :: 4 Places OR 4 Digits :: ^ n</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Exponents&amp;Type&#61;4Places_2Exponent&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Exercise :: 4 Places :: ^ 2 ::  From 4 :: Perfect Square</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Exponents&amp;Type&#61;4Places_3Exponent&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Exercise :: 4 Places :: ^ 3 ::  From 4 :: Perfect Cube</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Exponents&amp;Type&#61;4Places_4Exponent&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Exercise :: 4 Places :: ^ 4 ::  From 4 :: Perfect 4-Cube</A><BR>
@@ -6797,7 +6809,9 @@ Example: What Is The Perfect x2 Digit OR x2 Place Cube Root of: 614,125 ?<BR><BR
 
 Section Note: Repitition should be done in 30 minute sessions with 10 minute breaks in between each 30 minute session.<BR><BR>
 
-<B>— Exponents :: 2 Places OR 2 Digits :: √Root n</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+<B>— Exponents :: 2 Places OR 2 Digits :: √Root n</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;ExponentRoots&amp;Type&#61;2Places_2Root&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Roots :: Exercise :: 2 Places :: √Root 2 :: Perfect Square</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;ExponentRoots&amp;Type&#61;2Places_3Root&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Roots :: Exercise :: 2 Places :: √Root 3 :: Perfect Cube</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;ExponentRoots&amp;Type&#61;2Places_4Root&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Roots :: Exercise :: 2 Places :: √Root 4 :: Perfect 4-Cube</A><BR>
@@ -6808,7 +6822,9 @@ Section Note: Repitition should be done in 30 minute sessions with 10 minute bre
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;ExponentRoots&amp;Type&#61;2Places_9Root&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Roots :: Exercise :: 2 Places :: √Root 9 :: Perfect 9-Cube</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;ExponentRoots&amp;Type&#61;2Places_10Root&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Roots :: Exercise :: 2 Places :: √Root 10 :: Perfect 10-Cube</A><BR><BR>
 
-<B>— Exponents :: 3 Places OR 3 Digits :: √Root n</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+<B>— Exponents :: 3 Places OR 3 Digits :: √Root n</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;ExponentRoots&amp;Type&#61;3Places_2Root&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Roots :: Exercise :: 3 Places :: √Root 2 :: Perfect Square</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;ExponentRoots&amp;Type&#61;3Places_3Root&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Roots :: Exercise :: 3 Places :: √Root 3 :: Perfect Cube</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;ExponentRoots&amp;Type&#61;3Places_4Root&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Roots :: Exercise :: 3 Places :: √Root 4 :: Perfect 4-Cube</A><BR>
@@ -6819,7 +6835,9 @@ Section Note: Repitition should be done in 30 minute sessions with 10 minute bre
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;ExponentRoots&amp;Type&#61;3Places_9Root&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Roots :: Exercise :: 3 Places :: √Root 9 :: Perfect 9-Cube</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;ExponentRoots&amp;Type&#61;3Places_10Root&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Roots :: Exercise :: 3 Places :: √Root 10 :: Perfect 10-Cube</A><BR><BR>
 
-<B>— Exponents :: 4 Places OR 4 Digits :: √Root n</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+<B>— Exponents :: 4 Places OR 4 Digits :: √Root n</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;ExponentRoots&amp;Type&#61;4Places_2Root&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Roots :: Exercise :: 4 Places :: √Root 2 :: Perfect Square</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;ExponentRoots&amp;Type&#61;4Places_3Root&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Roots :: Exercise :: 4 Places :: √Root 3 :: Perfect Cube</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;ExponentRoots&amp;Type&#61;4Places_4Root&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Roots :: Exercise :: 4 Places :: √Root 4 :: Perfect 4-Cube</A><BR>
@@ -6888,27 +6906,27 @@ Example: 4(2x + 1)
 <BR><BR>
 
 <HR ALIGN=\"LEFT\" WIDTH=\"50%\">
-<B>— Polynomials :: 5-Degree OR Quintic Equations</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>— Polynomials :: 5-Degree OR Quintic Equations</B>
 <HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 <BR><BR>
 
 <HR ALIGN=\"LEFT\" WIDTH=\"50%\">
-<B>— Polynomials :: 6-Degree OR Sextic Equations</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>— Polynomials :: 6-Degree OR Sextic Equations</B>
 <HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 <BR><BR>
 
 <HR ALIGN=\"LEFT\" WIDTH=\"50%\">
-<B>— Polynomials :: 7-Degree OR Saptic Equations</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>— Polynomials :: 7-Degree OR Saptic Equations</B>
 <HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 <BR><BR>
 
 <HR ALIGN=\"LEFT\" WIDTH=\"50%\">
-<B>— Polynomials :: 8-Degree OR Octic Equations</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>— Polynomials :: 8-Degree OR Octic Equations</B>
 <HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 <BR><BR>
 
 <HR ALIGN=\"LEFT\" WIDTH=\"50%\">
-<B>— Polynomials :: 9-Degree OR Nonic Equations</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>— Polynomials :: 9-Degree OR Nonic Equations</B>
 <HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 <BR><BR>
 
