@@ -5045,16 +5045,22 @@ $_Application_Module_Member_Lightning_Calculate_EXPONENTS_3PLACES_3ROOT_PRODUCT	
 if ($_GET["Display"] == "Options") {
 
 echo ("
-About<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+About
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Display&#61;AboutTheAuthor\" TITLE=\":: Open & Display :: The Internal Application: About The Author ::\">About The Author</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Display&#61;ApplicationDetails\" TITLE=\":: Open & Display :: This Application Module Details ::\">This Application Module Details</A><BR><BR>
 
-History<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+History
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Display&#61;History\" TITLE=\":: Open & Display :: The Internal Application: Introduction To: The History of Location-Memory and The Arts of Memory ::\">Introduction To: The History of Location-Memory and The Arts of Memory</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Display&#61;MethodofLoci\" TITLE=\":: Open & Display :: The Internal Application: Introduction To: The Arts of Memory - The First Method of Loci ::\">Introduction To: The Arts of Memory: The First Method of Loci</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Display&#61;MemorizeLanguage\" TITLE=\":: Open & Display :: The Internal Application: Introduction To: The Arts of Memory - Memorize Any Language Within 365 Days ::\">Introduction To: The Arts of Memory: Memorize Any Language Within 365 Days</A><BR><BR>
 
-Training<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+Training
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 <B>Training :: Instructions</B><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Display&#61;TrainingCourse\" TITLE=\":: Open & Display :: The Internal Application: Physical and Mental Training Course Instructions ::\">Physical and Mental Training Course Instructions</A><BR><BR>
 
@@ -6125,7 +6131,9 @@ Total: 6 Months OR 183 Days OR 26.14285714285714 Weeks OR 4,392 Hours OR 263,520
 if ($_GET["Display"] == "Exercises") {
 
 echo ("
-<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Addition and Summation</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Addition and Summation</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 Example: 1234567891 + 1234567891<BR><BR>
 
 Section Notes: Repitition should be done in 30 minute sessions with 10 minute breaks in between the 30 minute sessions.<BR><BR>
@@ -6205,7 +6213,9 @@ Section Notes: Repitition should be done in 30 minute sessions with 10 minute br
 <B>Perfect Whole Numbers :: Random Numbers :: Randomly Generated :: Mixed Numbers :: First Addend With Ten Digits OR Ten Places</B><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Addition&amp;Type&#61;10D_10D&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Addition :: Exercise :: 10 Places + 10 Places</A><BR><BR>
 
-<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Subtraction and Differences</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Subtraction and Differences</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 Example: 9813473376 - 934522<BR><BR>
 
 Section Notes: Repitition should be done in 30 minute sessions with 10 minute breaks in between the 30 minute sessions.<BR><BR>
@@ -6285,12 +6295,16 @@ Section Notes: Repitition should be done in 30 minute sessions with 10 minute br
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Subtraction&amp;Type&#61;10D_2D&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Differences :: Exercise :: 10 Places - 2 Places</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Subtraction&amp;Type&#61;10D_1D&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Differences :: Exercise :: 10 Places - 1 Place</A><BR><BR>
 
-<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Short Division and Long Division</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Short Division and Long Division</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 Example: 9813473376 ÷ 9<BR><BR>
 
 Section Note: By mastering Mental Division of Short Division and Long Division one will also master Mental Fractions. All Fractions are simply a quick display that represent whole and decimal numbers to make the Mathematical Statements summarized or \"look clean\".<BR><BR>
 
-<B>— Forward :: Short Division</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+<B>— Forward :: Short Division</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
 <B>Perfect Whole Numbers :: Random Numbers :: Randomly Generated :: Mixed Numbers :: First Divisor With One Digit OR One Place</B><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Division_Short&amp;Type&#61;1D_1D&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Short Division :: Exercise :: 1 Places / 1 Place</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Division_Short&amp;Type&#61;1D_2D&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Short Division :: Exercise :: 2 Places / 1 Place</A><BR>
@@ -6315,7 +6329,9 @@ Section Note: By mastering Mental Division of Short Division and Long Division o
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Division_Short&amp;Type&#61;2D_9D&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Short Division :: Exercise :: 9 Places / 2 Places</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Division_Short&amp;Type&#61;2D_10D&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Short Division :: Exercise :: 10 Places / 2 Places</A><BR><BR>
 
-<B>— Forward :: Long Division</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+<B>— Forward :: Long Division</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
 Example: 987654321 ÷ 9813473376<BR><BR>
 
 <B>Perfect Whole Numbers :: Random Numbers :: Randomly Generated :: Mixed Numbers :: First Divisor With Three Digits OR Three Places</B><BR>
@@ -6414,7 +6430,9 @@ Example: 987654321 ÷ 9813473376<BR><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Division_Long&amp;Type&#61;10D_9D&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Long Division :: Exercise :: 9 Places / 10 Places</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Division_Long&amp;Type&#61;10D_10D&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Long Division :: Exercise :: 10 Places / 10 Places</A><BR><BR>
 
-<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Multiplication and Extraction :: Base Number Repitition</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Multiplication and Extraction :: Base Number Repitition</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 Section Note: Repitition should be done in 30 minute sessions with 10 minute breaks in between each 30 minute session.<BR><BR>
 
 <B>Perfect Whole Numbers :: Random Numbers :: Randomly Generated :: Base Number Repitition :: Multiplicand With 1 Place</B><BR>
@@ -6467,7 +6485,9 @@ Section Note: Repitition should be done in 30 minute sessions with 10 minute bre
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Multiplication&amp;Type&#61;5BNR_9BNR&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Multiplication :: Exercise :: Base Number Repitition :: 5 Places * 9 Places</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Multiplication&amp;Type&#61;5BNR_10BNR&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Multiplication :: Exercise :: Base Number Repitition :: 5 Places * 10 Places</A><BR><BR>
 
-<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Multiplication and Extraction :: Mixed Numbers</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Multiplication and Extraction :: Mixed Numbers</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 Section Note: Repitition should be done in 30 minute sessions with 10 minute breaks in between each 30 minute session.<BR><BR>
 
 <B>Perfect Whole Numbers :: Random Numbers :: Randomly Generated :: Mixed Numbers :: Multiplicand With 1 Place OR 1 Digit</B><BR>
@@ -6495,7 +6515,9 @@ Section Note: Repitition should be done in 30 minute sessions with 10 minute bre
 <B>Perfect Whole Numbers :: Random Numbers :: Randomly Generated :: Mixed Numbers :: Multiplicand With 5 Places OR 5 Digits</B><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Multiplication&amp;Type&#61;5D_5D&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Multiplication :: Exercise :: Mixed Numbers :: 5 Place * 5 Places</A><BR><BR>
 
-<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Percentages</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Percentages</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 Example: 10 % of 200<BR><BR>
 
 Section Note: Repitition should be done in 30 minute sessions with 10 minute breaks in between each 30 minute session.<BR><BR>
@@ -6600,7 +6622,9 @@ Section Note: Repitition should be done in 30 minute sessions with 10 minute bre
 * 10 Places % of 9 Places<BR>
 * 10 Places % of 10 Places<BR><BR>
 
-<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Modulus</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Modulus</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 Example: 5 / 9 = 1.4<BR><BR>
 
 Section Note: Repitition should be done in 30 minute sessions with 10 minute breaks in between each 30 minute session.<BR><BR>
@@ -6705,7 +6729,9 @@ Section Note: Repitition should be done in 30 minute sessions with 10 minute bre
 * 10 Places Modulus of 9 Places<BR>
 * 10 Places Modulus of 10 Places<BR><BR>
 
-<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Fractions</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Fractions</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 Example: 10/5ths = 10 * .20 OR 2 Wholes<BR><BR>
 
 Section Note: Repitition should be done in 30 minute sessions with 10 minute breaks in between each 30 minute session.<BR><BR>
@@ -6722,7 +6748,9 @@ Section Note: Repitition should be done in 30 minute sessions with 10 minute bre
 * Conversion :: Percentages TO Decimal<BR>
 * Conversion :: Percentages TO Fraction<BR><BR>
 
-<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Exponents</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Exponents</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 Example: What Is The Perfect Square of: 55 ?<BR>
 Example: What Is The Perfect Cube of: 73 ?<BR><BR>
 
@@ -6761,7 +6789,9 @@ Section Note: Repitition should be done in 30 minute sessions with 10 minute bre
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Exponents&amp;Type&#61;4Places_9Exponent&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Exercise :: 4 Places :: ^ 9 ::  From 4 :: Perfect 9-Cube</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;Exponents&amp;Type&#61;4Places_10Exponent&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Exercise :: 4 Places :: ^ 10 :: From 4 :: Perfect 10-Cube</A><BR><BR>
 
-<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Exponent Roots</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Exponent Roots</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 Example: What Is The Perfect x2 Digit OR x2 Place Square Root of: 1,600 ?<BR>
 Example: What Is The Perfect x2 Digit OR x2 Place Cube Root of: 614,125 ?<BR><BR>
 
@@ -6800,7 +6830,9 @@ Section Note: Repitition should be done in 30 minute sessions with 10 minute bre
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;ExponentRoots&amp;Type&#61;4Places_9Root&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Roots :: Exercise :: 4 Places :: √Root 9 :: Perfect 9-Cube</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Lightning_Calculate&amp;Exercise&#61;ExponentRoots&amp;Type&#61;4Places_10Root&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">Mental Exponents :: Roots :: Exercise :: 4 Places :: √Root 10 :: Perfect 10-Cube</A><BR><BR>
 
-<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Mixed Arithmetic</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Mixed Arithmetic</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 Example: 28 * 2 / 4 + 667 = 681<BR><BR>
 
 Section Note: Repitition should be done in 30 minute sessions with 10 minute breaks in between each 30 minute session.<BR><BR>
@@ -6809,44 +6841,85 @@ Section Note: Repitition should be done in 30 minute sessions with 10 minute bre
 * Random - 4 Factors<BR>
 * Random - 5 Factors<BR><BR>
 
-<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Number Theory</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Number Theory</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 <BR><BR>
 
-<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Geometry</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Geometry</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 <BR><BR>
 
-<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Extra Dimensional Geometry</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Extra Dimensional Geometry</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 <BR><BR>
 
-<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Alegbra</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Alegbra</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 <BR><BR>
 
-<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Linear Algebra</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Linear Algebra</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 <BR><BR>
 
-<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Pre-Calculus</BIG></B><HR>
-Example: 4(2x + 1)<BR><BR>
-
-<B>— Polynomials :: 2-Degree OR Quadratic Equations</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\"><BR><BR>
-
-<B>— Polynomials :: 3-Degree OR Cubic Equations</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\"><BR><BR>
-
-<B>— Polynomials :: 4-Degree OR Quartic Equations</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\"><BR><BR>
-
-<B>— Polynomials :: 5-Degree OR Quintic Equations</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\"><BR><BR>
-
-<B>— Polynomials :: 6-Degree OR Sextic Equations</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\"><BR><BR>
-
-<B>— Polynomials :: 7-Degree OR Saptic Equations</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\"><BR><BR>
-
-<B>— Polynomials :: 8-Degree OR Octic Equations</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\"><BR><BR>
-
-<B>— Polynomials :: 9-Degree OR Nonic Equations</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\"><BR><BR>
-
-<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Calculus</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Pre-Calculus</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+Example: 4(2x + 1)
 <BR><BR>
 
-<B><BIG>Memory and Mathematics :: Lightning Mental Calendar Calculating</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>— Polynomials :: 2-Degree OR Quadratic Equations</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<BR><BR>
+
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>— Polynomials :: 3-Degree OR Cubic Equations</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<BR><BR>
+
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>— Polynomials :: 4-Degree OR Quartic Equations</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<BR><BR>
+
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>— Polynomials :: 5-Degree OR Quintic Equations</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<BR><BR>
+
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>— Polynomials :: 6-Degree OR Sextic Equations</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<BR><BR>
+
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>— Polynomials :: 7-Degree OR Saptic Equations</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<BR><BR>
+
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>— Polynomials :: 8-Degree OR Octic Equations</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<BR><BR>
+
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>— Polynomials :: 9-Degree OR Nonic Equations</B><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<BR><BR>
+
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Perfect Whole Numbers :: Random Numbers :: Lightning Mental Calculus</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<BR><BR>
+
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Memory and Mathematics :: Lightning Mental Calendar Calculating</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 Example: What Day of The Week Was: August, 1st 1925 ?<BR>
 Example: John Steinbeck Was Born On: February, 27th, 1902.. What Day of The Week Was That ?<BR>
 Example: What Moon Phase Will Be In Place Next Month On This Day ?<BR>
@@ -6864,7 +6937,9 @@ Section Note: Repitition should be done in 30 minute sessions with 10 minute bre
 * Event Prediction<BR>
 * Leap Year Calculating<BR><BR>
 
-<B><BIG>Memory and Navigation :: Lightning Mental Navigation</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Memory and Navigation :: Lightning Mental Navigation</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 Example: If The Sun Rises 20 Degrees More Than Yesterday: What Way Is North ?<BR><BR>
 
 Section Note: Repitition should be done in 30 minute sessions with 10 minute breaks in between each 30 minute session.<BR><BR>
@@ -6873,7 +6948,9 @@ Section Note: Repitition should be done in 30 minute sessions with 10 minute bre
 * Navigation From Sun and Moon<BR>
 * Navigation From Stars<BR><BR>
 
-<B><BIG>Intelligence :: Lightning Mental Human Anthropology</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Intelligence :: Lightning Mental Human Anthropology</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 * Determining Human Ethnicity From Facial and Body Structure<BR>
 * Determining Human Age In Seconds<BR>
 * Determining Human Age In Minutes<BR>
@@ -6882,7 +6959,9 @@ Section Note: Repitition should be done in 30 minute sessions with 10 minute bre
 * Determining Human Age In Months<BR>
 * Determining Human Age of Death<BR><BR>
 
-<B><BIG>Memory :: Random :: Lightning Mental Dot Counting</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Memory :: Random :: Lightning Mental Dot Counting</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 * Random Dots - 10s<BR>
 * Random Dots - 100s<BR>
 * Random Dots - 1,000s<BR>
@@ -6898,13 +6977,17 @@ Section Note: Repitition should be done in 30 minute sessions with 10 minute bre
 * Random Dots - 10,000,000,000,000s<BR>
 * Random Dots - 100,000,000,000,000s<BR><BR>
 
-<B><BIG>Memory :: Random :: Faces, Names and Numbers</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Memory :: Random :: Faces, Names and Numbers</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 * Memorizing Faces, Names and Numbers :: Numbers, 10s - Faces, 10s<BR>
 * Memorizing Faces, Names and Numbers :: Numbers, 10s - Faces, 100s<BR>
 * Memorizing Faces, Names and Numbers :: Numbers, 10s - Faces, 1,000s<BR>
 * Memorizing Faces, Names and Numbers :: Numbers, 10s - Faces, 10,000s<BR><BR>
 
-<B><BIG>Memory :: Random :: Memorize Random Number Strings</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Memory :: Random :: Memorize Random Number Strings</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 Memorize :: Example :: 123456789012345678901234567890 In 60 Seconds<BR><BR>
 
 * Memorizing Number Strings :: 00005 Places<BR>
@@ -6932,7 +7015,9 @@ Memorize :: Example :: 123456789012345678901234567890 In 60 Seconds<BR><BR>
 * Memorizing Number Strings :: 00115 Places<BR>
 * Memorizing Number Strings :: 00120 Places<BR><BR>
 
-<B><BIG>Playing Cards Counting</BIG></B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B><BIG>Playing Cards Counting</BIG></B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 * 01 Deck, 52 Card Deck<BR>
 * 02 Decks, 104 Card Stacked Deck<BR>
 * 03 Decks, 156 Card Stacked Deck<BR>
