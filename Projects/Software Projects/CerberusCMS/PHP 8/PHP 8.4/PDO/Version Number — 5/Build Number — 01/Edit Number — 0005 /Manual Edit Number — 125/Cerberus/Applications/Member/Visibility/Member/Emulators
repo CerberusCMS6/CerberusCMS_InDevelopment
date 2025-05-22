@@ -195,7 +195,7 @@ if ($_Application_Module_Member_Emulators_POST_SELECT_GAME_CONSOLE_TYPE == "7") 
 
 echo ("
 											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Emulators&amp;Include&#61;GameFile&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"POST\">
-												Video Game Console :: H.T.M.L. 5 Canvas<BR>
+												Video Game Console :: H.T.M.L. 5 :: Canvas<BR>
 													<INPUT TYPE=\"HIDDEN\" NAME=\"AMM_Emulators_Select_Game_Console_Type\" VALUE=\"7\">
 													<SELECT NAME=\"AMM_Emulators_Select_Game_Console_ROM_HTML5_Canvas\" MAXLENGTH=\"50\">
 ");
@@ -325,7 +325,7 @@ if ($_Application_Module_Member_Emulators_POST_SELECT_GAME_CONSOLE_TYPE == "7") 
 
 echo ("
 <CENTER>
-	H.T.M.L. 5 Canvas :: Video Game File :: $_Application_Module_Member_Emulators_POST_SELECT_GAME_CONSOLE_ROM_HTML5_CANVAS<BR>
+	H.T.M.L. 5 :: Canvas :: Video Game File :: $_Application_Module_Member_Emulators_POST_SELECT_GAME_CONSOLE_ROM_HTML5_CANVAS<BR>
 	<OBJECT DATA=\"./Applications/Video_Games/HTML5/Canvas/$_Application_Module_Member_Emulators_POST_SELECT_GAME_CONSOLE_ROM_HTML5_CANVAS/index.html\" WIDTH=\"80%\" HEIGHT=\"650\"></OBJECT>
 </CENTER>
 ");
