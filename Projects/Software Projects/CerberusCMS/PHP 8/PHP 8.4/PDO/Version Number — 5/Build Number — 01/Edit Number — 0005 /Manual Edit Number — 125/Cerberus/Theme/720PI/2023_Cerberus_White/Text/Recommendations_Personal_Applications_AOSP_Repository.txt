@@ -6,13 +6,36 @@
 * DNSCrypt / DNSCrypt-Proxy
 * IPTables
 * MacChanger
+* Network Log
 * Network Monitor
 * OpenVPN
+* WireShark
+
+- SOCIAL MEDIA
+* FaceBook
+* InstaGram
+* Twitter // X
+
+- GROCERY AND SUSTENANCE
+* 7-11
+* Albertsons
+* Gelsons
+* Ralphs
+* Vons
+
+- WORD PROCESSING
+* Libre Office
+* Microsoft Office
 
 - COMMUNICATIONS
+* AndroIRC
+* Discord
 * Google Voice
+* Mastadon
+* Skype
 * TeamSpeak
 * VoIP Client
+* Wire
 
 - DOWNLOAD
 * TTorrent Lite
@@ -25,20 +48,60 @@
 * Call Recorder
 * Remote Administrator Client
 
+- MEDIA PLAYERS
+* SoundCloud
+* VLC Media Player
+* XBMC // KODI Media Center
+
 - DOCUMENT HANDLING
 * PDFReader
 
 - ENCRYPTION TOOLS
 * KeePass
-* Discord
 * PGPAuth
 
 - REPOSITORIES
 * FOSSHub / FOSS Repo
 
+- WEB BROWSERS
+* Chrome
+* Chromium
+* Fennec
+* Mozilla FireFox
+* Opera
+
 - WEB BROWSER ADD-ONS
 * AdBlock Pro
 * Ghostery
 * HTTPSEverywhere
-* Mozilla FireFox
 * NoSCRIPT
+
+- TRAVEL ASSIST
+* Google Earth
+* Google Maps
+* Google Street View
+* Lyft
+* Uber
+
+- CRYPTO CURRENCY WALLETS
+* CoinBase
+* Crypto ( Crypto.com )
+
+- VIDEO GAME CONSOLE EMULATORS
+* Super Nintendo ( SNESX )
+* Playstation 1
+* Playstation 2
+* Playstation Portable ( PPSSPP )
+
+- UNIVERSE
+* Celestia
+
+- ELECTRONIC MAIL
+* Google Mail
+* Proton Mail
+* TutaNota
+* Yahoo Mail
+
+- HOUSING
+* AirBNB
+* Hostel
