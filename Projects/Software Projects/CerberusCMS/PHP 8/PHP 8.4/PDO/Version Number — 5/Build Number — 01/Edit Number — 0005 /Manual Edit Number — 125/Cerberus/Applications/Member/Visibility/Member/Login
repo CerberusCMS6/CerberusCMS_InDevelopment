@@ -224,27 +224,33 @@ $_Application_Module_Member_Login_SECURITY_RANDOM_STRING_GENERATOR_LENGTH_NUMBER
 */
 
 echo ("
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+											Authentication Application
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_INTERNAL&#61;Login&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
-													<I>Member' Account Electronic Mail Address</I>:<BR>
+													<I>Member' Account Electronic Mail Address</I><BR>
 														<INPUT TYPE=\"text\" NAME=\"IAM_Login_Electronic_Mail_Address\" MAXLENGTH=\"50\"><BR>
-													<I>Member' Account UserName</I>:<BR>
+													<I>Member' Account UserName</I><BR>
 														<INPUT TYPE=\"text\" NAME=\"IAM_Login_UserName\" MAXLENGTH=\"50\"><BR>
-													<I>Member' Account Password</I>:<BR>
+													<I>Member' Account Password</I><BR>
 														<INPUT TYPE=\"password\" NAME=\"IAM_Login_Password\" MAXLENGTH=\"250\"><BR>
 													<INPUT TYPE=\"submit\" VALUE=\"Login\">
-												<HR>
 											</FORM><BR>
 
-											Additional Options
-											<HR>
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+											Additional Authentication Options
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											Registered Member Account :: Options :: Authentication :: Connection :: Insecure
-											<HR ALIGN=\"LEFT\" WIDTH=\"35%\">
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											* <A HREF=\"$_ACCESS_URL_CLEARTEXT/$_INTERNAL_FILE_KERNEL?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Login&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Hyper-Text-Transfer-Protocol-Insecure Over Clear-Text Insecure Connection ::\">Connection :: Insecure :: Clear-Text</A><BR>
 											Note: <I>Clear-Text Web Server Connections are non-secure clear-text connections that are made between an electronic device and a web server over Hyper-Text-Transfer-Protocol. <A HREF=\"https://en.Wikipedia.org/wiki/HTTP\" TITLE=\":: Open & Display :: The Wikipedia Article Entry :: For :: Hyper-Text-Transfer-Protocol ::\" TARGET=\"_NEW\">Hyper-Text-Transfer-Protocol</A> is an application layer that is in the <A HREF=\"https://en.Wikipedia.org/wiki/Internet_protocol_suite\" TITLE=\":: Open & Display :: The Wikipedia Article Entry :: For :: Internet Protocol Suite ::\" TARGET=\"_TARGET\">Internet Protocol Suite</A>. All Clear-Text connections are not secure and they can easily be read by any server that is physically placed between your device and the Web Server that this Web Application
 											is running on.</I><BR><BR>
 
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											Registered Member Account :: Options :: Authentication :: Connection :: Secure :: Secure Socket Layer
-											<HR ALIGN=\"LEFT\" WIDTH=\"35%\">
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											* <A HREF=\"$_ACCESS_URL_SECURE_SSL_CUSTOM/$_INTERNAL_FILE_KERNEL?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Login&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Hyper-Text-Transfer-Protocol-Secure Over Secure Socket Layer Encrypted Connection :: SSL :: Custom ::\">Connection :: Secure :: SSL :: Custom</A><BR>
 											* <A HREF=\"$_ACCESS_URL_SECURE_SSL/$_INTERNAL_FILE_KERNEL?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Login&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Hyper-Text-Transfer-Protocol-Secure Over Secure Socket Layer Encrypted Connection :: SSL :: Standard ::\">Connection :: Secure :: SSL :: Standard</A><BR>
 											* <A HREF=\"$_ACCESS_URL_SECURE_SSL_OPENSSL/$_INTERNAL_FILE_KERNEL?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Login&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Hyper-Text-Transfer-Protocol-Secure Over Secure Socket Layer Encrypted Connection :: SSL :: OpenSSL ::\">Connection :: Secure :: SSL :: OpenSSL</A><BR>
@@ -252,37 +258,43 @@ echo ("
 											Hyper-Text-Transfer-Protocol-Secure. <A HREF=\"https://en.Wikipedia.org/wiki/Transport_Layer_Security#SSL_1.0,_2.0,_and_3.0\" TITLE=\":: Open & Display :: The Wikipedia Article Entry :: For :: Secure Socket Layer ::\" TARGET=\"_NEW\">Secure Socket Layer</A> is an encryption layer that provides encryption programming and encryption mathematics that encrypts the data packets that are transferred between the device and the web server. There are different versions of Secure Socket Layer. OpenSSL is an open source version of Secure Socket Layer and there are also
 											entirely custom written Secure Socket Layer Programming Libraries with custom encryption algorithms that are based on custom mathematics.</I><BR><BR>
 
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											Registered Member Account :: Options :: Authentication :: Connection :: Secure :: Transport Layer Security
-											<HR ALIGN=\"LEFT\" WIDTH=\"35%\">
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											* <A HREF=\"$_ACCESS_URL_SECURE_TLS_CUSTOM/$_INTERNAL_FILE_KERNEL?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Login&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Hyper-Text-Transfer-Protocol-Secure Over Transport Layer Security Encrypted Connection :: Custom ::\">Connection :: Secure :: TLS :: Custom</A><BR>
 											* <A HREF=\"$_ACCESS_URL_SECURE_TLS/$_INTERNAL_FILE_KERNEL?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Login&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Hyper-Text-Transfer-Protocol-Secure Over Transport Layer Security Encrypted Connection :: Standard ::\">Connection :: Secure :: TLS :: Standard</A><BR>
 											Note: <I><A HREF=\"https://en.Wikipedia.org/wiki/Transport_Layer_Security\" TITLE=\":: Open & Display :: The Wikipedia Article Entry :: For :: Transport Layer Security ::\" TARGET=\"_NEW\">Transport Layer Security</A> are a set of Cryptographic Libraries that are used in the Internet Protocol Suite. There are Standard Open Source Cryptographic Libararies and there are also Custom Written Cryptographic Libraries where all of the encryption mathematics are custom written. <A HREF=\"https://en.Wikipedia.org/wiki/Transmission_Control_Protocol\" TITLE=\":: Open & Display :: The Wikipedia Article Entry :: For :: Transmission-Control-Protocol ::\" TARGET=\"_NEW\">Transmission-Control-Protocol</A> and <A HREF=\"https://en.Wikipedia.org/wiki/User_Datagram_Protocol\" TITLE=\":: Open & Display :: The Wikipedia Article Entry :: For :: User-Datagram-Protocol ::\" TARGET=\"_NEW\">User-Datagram-Protocol</A> are the Protocols that are usually used in the electronic transmission of data.</I><BR><BR>
 
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											Registered Member Account :: Options :: Authentication :: Connection :: Secure :: Other
-											<HR ALIGN=\"LEFT\" WIDTH=\"35%\">
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											* <A HREF=\"$_ACCESS_URL_SECURE/$_INTERNAL_FILE_KERNEL?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Login&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Hyper-Text-Transfer-Protocol-Secure Over Secure Encrypted Connection :: Other ::\">Connection :: Secure :: Other</A><BR><BR>
 
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											Registered Member Account :: Options :: Authentication :: Account Control
-											<HR ALIGN=\"LEFT\" WIDTH=\"35%\">
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Login&amp;Authenticated&#61;Kill_Account_Current&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Initiate The Kill Currently Authenticated Registered Member Account Options ::\">Registered Member Account :: Account Control :: Authenticated :: Kill Authentication :: Current</A><BR>
 											* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Login&amp;Authenticated&#61;Kill_Account_Ghost&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Initiate The Kill Ghost Authenticated Registered Member Account Options ::\">Registered Member Account :: Account Control :: Authenticated :: Kill Authentication :: Ghost</A><BR>
 											Note: <I>Did you authenticate into your Registered Member Account on this system and then forget to de-authenticate or did you clear the Web Browser Cookies before de-authenticating your Registered Member Account ? Was your Registered Member Account hijacked ? Use these options to force a de-authentication on your Registered Member Account now.</I><BR><BR>
-											
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											Registered Member Account :: Options :: Authentication :: Authorization
-											<HR ALIGN=\"LEFT\" WIDTH=\"35%\">
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											<B>Factor :: Internet Protocol Address</B><BR>
 											* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Login&amp;Authorization&#61;IP_Address&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Initiate The Internet Protocol Address Authorization Process ::\">Internet Protocol Address :: Authorization :: Token :: Request</A><BR>
 											* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Login&amp;Authorization&#61;IP_Token&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Authorize Authentication With The Valid Internet Protocol Address Authorization Token ::\">Internet Protocol Address :: Authorization :: Token :: Input</A><BR>
 											Note: <I>Automatic Two-Factor authentication is now enforced on this Web Application. All authentication requires a security token to be sent to the Electronic Mail Address on the Registered Member Account or the Mobile Phone Number on the Registered Member Account.</I><BR><BR>
 
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											Registered Member Account :: Options :: Credentials
-											<HR ALIGN=\"LEFT\" WIDTH=\"35%\">
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Recovery&amp;Display&#61;Options&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Initiate The Registered Member Account Recovery Options ::\">Registered Member Account :: Recovery</A></CENTER><BR>
 											* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Reset_Password&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Reset Your Registered Member Account Password Or Other Registered Member Account Credentials ::\">Registered Member Account :: Credentials :: Password :: Reset</A><BR>
 											Note: <I>Was your Registered Member Account Locked or did you forget the Password ? Use these options to recover your Registered Member Account.</I><BR><BR>
 
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											Registered Member Account :: Registration
-											<HR ALIGN=\"LEFT\" WIDTH=\"35%\">
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Register&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Initiate The Member Account Registration Process With $_GLOBAL_SYSTEM_SITE_TITLE ::\">Register</A><BR>
 											Note: <I>Would you like to Register a Member Account on this system ? Use these options to Register a Member Account. The Registration Process requires Registrar Status first and then Account Activation before acquiring a Registered Member Account.</I><BR><BR>
 											
