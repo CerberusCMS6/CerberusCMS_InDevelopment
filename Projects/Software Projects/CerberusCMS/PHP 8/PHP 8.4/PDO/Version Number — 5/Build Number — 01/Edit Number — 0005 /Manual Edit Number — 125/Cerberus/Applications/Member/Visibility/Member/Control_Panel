@@ -306,12 +306,14 @@ if (!$_Application_Module_Member_Control_Panel_POST_ACCOUNT_ACTIVATION_KEY) {
 if ($_Application_Module_Member_Control_Panel_LIST_MEMBER_STATUS_ACCOUNT_ACTIVATION <= 0) {
 
 echo ("
-											<BR><BR>$_Application_Module_Member_Message_Control_Panel_KEY_ACTIVATE<HR>
-												<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Control_Panel\" METHOD=\"POST\">
-													Account Activation Key:<BR>
-														<INPUT TYPE=\"TEXT\" NAME=\"AMM_Control_Panel_Account_Activation_Key\" MAXLENGTH=\"32\"><BR>
-													<INPUT TYPE=\"SUBMIT\" VALUE=\"Activate\">
-												</FORM>
+											<BR><BR><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+													$_Application_Module_Member_Message_Control_Panel_KEY_ACTIVATE
+												<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+													<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Control_Panel\" METHOD=\"POST\">
+														Account Activation Key<BR>
+															<INPUT TYPE=\"TEXT\" NAME=\"AMM_Control_Panel_Account_Activation_Key\" MAXLENGTH=\"32\"><BR>
+														<INPUT TYPE=\"SUBMIT\" VALUE=\"Activate\">
+													</FORM>
 ");
 
 } // [ + ] IF: Registered Member Account :: IS NOT Activated
@@ -609,8 +611,9 @@ $_Application_Module_Member_Control_Panel_ARCHIVE_CREATE_ARCHIVE_INITIALIZE->clo
 if ($_GET["Display"] == "Authorizations") {
 
 echo ("
-<HR>
-<B>Registered Member Account Security Programming :: Device :: Authorization</B><BR>
+<BR><HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>Registered Member Account Security Programming :: Device :: Authorization</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 Registered Member Account Authentication Authorization Security Programming Code provides the means to Authorize and Revoke Authentication Authorizations for Device details instantly if the System Settings for Restricted Device Authorizations Is: Disabled.<BR><BR>
 
 Internet Protocol Addresses usually cannot be spoofed, but if an attacker or a malicious hacker looking to gain access to your Registered Member Account here knows the Internet Protocol Address Location that you Authenticated into this Registered Member Account from they could physically go to that Location and Authenticate into your
@@ -667,15 +670,21 @@ it impossible for anyone else who should not have access to the Registered Membe
 Once after you have Successfully Authenticated into your Registered Member Account all that is needed is to Revoke the Authorizations for each Device Detail and or then Update the Password on the Registered Member Account to make it
 impossible for anyone else to Authenticate into this Registered Member Account.<BR><BR>
 
-<B>Current Settings :: System :: Security :: Restrictions :: Registered Member Account :: Authentication :: Authorizations :: Multi-Factor</B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>Current Settings :: System :: Security :: Restrictions :: Registered Member Account :: Authentication :: Authorizations :: Multi-Factor</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 * Registered Member Account :: Restriction :: Authentication :: Multi-Factor :: Internet Protocol Address: $_GLOBAL_SYSTEM_SETTING_ACCOUNT_SECURITY_DEVICE_AUTHENTICATION_MULTIFACTOR_IP<BR><BR>
 
-<B>Current Settings :: System :: Security :: Restrictions :: Registered Member Account :: Device :: Authorizations</B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>Current Settings :: System :: Security :: Restrictions :: Registered Member Account :: Device :: Authorizations</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 * Registered Member Account :: Restriction :: Device :: Authorization :: Internet Protocol Address: $_GLOBAL_SYSTEM_SETTING_ACCOUNT_SECURITY_RESTRICT_AUTHORIZED_INTERNET_PROTOCOL_ADDRESS<BR>
 * Registered Member Account :: Restriction :: Device :: Authorization :: MAC Address: $_GLOBAL_SYSTEM_SETTING_ACCOUNT_SECURITY_RESTRICT_AUTHORIZED_MAC_ADDRESS<BR>
 * Registered Member Account :: Restriction :: Device :: Authorization :: Web Browser: $_GLOBAL_SYSTEM_SETTING_ACCOUNT_SECURITY_RESTRICT_AUTHORIZED_WEB_BROWSER<BR><BR>
 
-<B>Current Details :: Device :: Live</B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>Current Details :: Device :: Live</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 
 * Device :: Internet Protocol Address<BR>
 <TEXTAREA ROWS=\"5\" COLS=\"25\" MAXLENGTH=\"1000\">$_GLOBAL_REMOTE_SERVER_ADDRESS :: Conecting Port Number :: $_GLOBAL_REMOTE_SERVER_PORT</TEXTAREA><BR><BR>
@@ -686,7 +695,9 @@ impossible for anyone else to Authenticate into this Registered Member Account.<
 * Device :: Web Browser :: User-Agent String<BR>
 <TEXTAREA ROWS=\"5\" COLS=\"25\" MAXLENGTH=\"1000\">$_GLOBAL_REMOTE_SERVER_HTTP_USER_AGENT</TEXTAREA><BR><BR>
 
-<B>Current Details :: Device :: From :: Database Management System Server :: Database Entry :: Registered Member Account</B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>Current Details :: Device :: From :: Database Management System Server :: Database Entry :: Registered Member Account</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 
 * Device :: Internet Protocol Address<BR>
 <TEXTAREA ROWS=\"5\" COLS=\"25\" MAXLENGTH=\"1000\">$_GLOBAL_MEMBER_IP_ADDRESS_CURRENT</TEXTAREA><BR><BR>
@@ -697,7 +708,9 @@ impossible for anyone else to Authenticate into this Registered Member Account.<
 * Device :: Web Browser :: User-Agent String<BR>
 <TEXTAREA ROWS=\"5\" COLS=\"25\" MAXLENGTH=\"1000\">$_GLOBAL_MEMBER_ACCOUNT_DEVICE_WEB_BROWSER</TEXTAREA><BR><BR>
 
-<B>Device Details :: From Registered Member Account :: Database Entry :: Authentication :: Multi-Factor :: Authorized</B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>Device Details :: From Registered Member Account :: Database Entry :: Authentication :: Multi-Factor :: Authorized</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 
 * Device :: Internet Protocol Address<BR>
 <TEXTAREA ROWS=\"5\" COLS=\"25\" MAXLENGTH=\"1000\">$_GLOBAL_MEMBER_IP_ADDRESS_AUTHORIZED_MULTIFACTOR</TEXTAREA><BR><BR>
@@ -705,7 +718,9 @@ impossible for anyone else to Authenticate into this Registered Member Account.<
 * Security Token<BR>
 <TEXTAREA ROWS=\"5\" COLS=\"25\" MAXLENGTH=\"1000\">$_GLOBAL_MEMBER_AUTHENTICATION_AUTHORIZATION_SECURITY_TOKEN</TEXTAREA><BR><BR>
 
-<B>Device Details :: From Registered Member Account :: Database Entry :: Authorized</B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>Device Details :: From Registered Member Account :: Database Entry :: Authorized</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 
 * Device :: Internet Protocol Address<BR>
 <TEXTAREA ROWS=\"5\" COLS=\"25\" MAXLENGTH=\"1000\">$_GLOBAL_MEMBER_IP_ADDRESS_AUTHORIZED</TEXTAREA><BR><BR>
@@ -716,7 +731,9 @@ impossible for anyone else to Authenticate into this Registered Member Account.<
 * Device :: Web Browser :: User-Agent String<BR>
 <TEXTAREA ROWS=\"5\" COLS=\"25\" MAXLENGTH=\"1000\">$_GLOBAL_MEMBER_ACCOUNT_DEVICE_WEB_BROWSER_AUTHORIZED</TEXTAREA><BR><BR>
 
-<B>Digital Fingerprints :: Registered Member Account</B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>Digital Fingerprints :: Registered Member Account</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 Digital Fingerprint :: Generated :: Random :: Clear-Text:<BR>
 $_INTERNAL_SECURITY_GENERATED_MEMBER_FINGERPRINT_CLEARTEXT<BR><BR>
 
@@ -732,11 +749,15 @@ $_GLOBAL_MEMBER_SECURITY_FINGERPRINT_HASHED<BR><BR>
 Digital Fingerprint :: Cookie :: HASHED:<BR>
 $_GLOBAL_COOKIE_MEMBER_SECURITY_FINGERPRINT<BR><BR>
 
-<B>Revoke Current :: Registered Member Account :: Authentication :: Multi-Factor</B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>Revoke Current :: Registered Member Account :: Authentication :: Multi-Factor</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Control_Panel&amp;Display&#61;Authorizations&amp;Revoke&#61;MultiFactor_IP\" TITLE=\":: Revoke :: Authentication :: Device :: Authorization :: Internet Protocol Address ::\">Revoke Current :: Registered Member Account :: Authentication :: Multi-Factor :: Authorization :: Internet Protocol Address</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Control_Panel&amp;Display&#61;Authorizations&amp;Revoke&#61;SecurityToken\" TITLE=\":: Revoke :: Authentication :: Device :: Authorization :: Security Token ::\">Revoke Current :: Registered Member Account :: Authentication :: Multi-Factor :: Authorization :: Security Token</A><BR><BR>
 
-<B>Revoke Current :: Registered Member Account :: Device :: Authorizations</B><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+<B>Revoke Current :: Registered Member Account :: Device :: Authorizations</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Control_Panel&amp;Display&#61;Authorizations&amp;Revoke&#61;IP\" TITLE=\":: Revoke Current :: Registered Member Account :: Device :: Authorization :: Internet Protocol Address ::\">Revoke Current :: Registered Member Account :: Device :: Authorized :: Internet Protocol Address</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Control_Panel&amp;Display&#61;Authorizations&amp;Revoke&#61;MAC_Address\" TITLE=\":: Revoke Current :: Registered Member Account :: Device :: Authorization :: MAC Address ::\">Revoke Current :: Registered Member Account :: Device :: Authorized :: MAC Address</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Control_Panel&amp;Display&#61;Authorizations&amp;Revoke&#61;Web_Browser\" TITLE=\":: Revoke Current :: Registered Member Account :: Device :: Authorization :: Web Browser ::\">Revoke Current :: Registered Member Account :: Device :: Authorized :: Web Browser</A><BR><BR>
@@ -1024,7 +1045,7 @@ if ($_GET["Display"] == "Location_Log") {
 if (file_exists("$_Application_Module_Member_Control_Panel_CONTENTS_LOG_FILE_LOCATION_GPS_HTML_LOG")) {
 
 echo ("
-		<HR><BR><BR>
+		<BR><BR>
 		<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
 		Registered Member Account :: Log :: Location :: Global-Positioning-System Coordinates :: Manually Inserted :: Retrieved: $_GLOBAL_LOCAL_SERVER_DATE_STANDARD<BR>
 		<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
