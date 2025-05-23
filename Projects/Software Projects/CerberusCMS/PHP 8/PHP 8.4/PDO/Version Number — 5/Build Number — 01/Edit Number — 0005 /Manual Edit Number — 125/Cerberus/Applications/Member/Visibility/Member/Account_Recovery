@@ -184,7 +184,9 @@ $_Application_Module_Member_Account_Recovery_POST_STEP_2_UPDATE_MEMBER_PASSWORD_
 if ($_GET["Display"] == "Options") {
 
 echo ("
-Registered Member Account Recovery :: Options<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+Registered Member Account :: Recovery :: Options
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Recovery&amp;Option&#61;Initiate&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display The Internal Application :: Initiate The Registered Member Account Recovery Process ::\">Initiate The Registered Member Account Recovery Process</A><BR>
 ");
 
@@ -203,7 +205,7 @@ if ($_GET["Option"] == "Initiate") {
 if ((!$_Application_Module_Member_Account_Recovery_POST_STEP_1_MEMBER_ELECTRONIC_MAIL_ADDRESS) || (!$_Application_Module_Member_Account_Recovery_POST_STEP_1_MEMBER_USERNAME)) {
 
 echo ("
-This is the Registered Member Account Recovery process. You are required to provide Five to Seven Secret Details that are listed on the specified Registered Member Account in order to Recover it. These details are not displayed anywhere on this system or elsewhere. This Secret information is required in order to successfully Recover the specified Registered Member Account and Update the Credentials on it. You will at least need to know the Registered Member Account UserName and the Registered Member Account primary Electronic Mail Address on the Registered Member Account in order to initiate the Registered Member Account Recovery Process. If you fail to successfully recover this Registered Member Account it will be permanently locked afterwhich this Registered Member Account can only then be Unlocked and Reset by the person with access to any of the Electronic Mail Addresses or any of the Mobile Phone Numbers listed on the Registered Member Account or by the Administration-Level team. All of the Account Recovery attempts will be thoroughly logged step-by-step and will be viewable by the Administration-Level team as well as by the specific Registered Member Account that is undergoing the Registered Member Account Recovery Process.<BR><BR>
+This is the Registered Member Account Recovery process. You are required to provide five to seven secret details that are listed on the specified Registered Member Account in order to recover it. These details are not displayed anywhere else on this system or elsewhere. This secret information is required in order to successfully recover the specified Registered Member Account and update the credentials on it. You will at least need to know the Registered Member Account UserName and the Registered Member Account primary Electronic Mail Address on the Registered Member Account in order to initiate the Registered Member Account Recovery Process. IF: you fail to successfully recover this Registered Member Account it will be permanently locked afterwhich this Registered Member Account can only then be Unlocked and Reset by the person with access to any of the Electronic Mail Addresses or any of the Mobile Phone Numbers that are listed on the Registered Member Account or it could be recovered for you by contacting the Administration-Level team by electronic mail message with a video of you stating a request to recover the Registered Member Account for you. All of the Account Recovery attempts will be thoroughly logged step-by-step and will be viewable by the Administration-Level team as well as by the specific Registered Member Account that is undergoing the Registered Member Account Recovery Process.<BR><BR>
 
 The Information logged is very extensive and includes:<BR><BR>
 * The Connecting Domain Name Server Resolver<BR>
@@ -211,9 +213,10 @@ The Information logged is very extensive and includes:<BR><BR>
 * The Internet Protocol Address<BR>
 * The Internet Protocol Address Connection Socket<BR>
 * The Web Browser User-Agent String<BR>
+* The Global-Positioning-System Coordinates In: Longitude, Latitude and with Altitude To Sea-Level<BR>
 * More...<BR><BR>
 
-Virtual Private Networks and Hidden Networks are usually filtered out automatically by the Networking System therefore the Registered Member Account Recovery Process will require an unfiltered Home or Public Internet Connection such as from a University, a Public Library or from your house.<BR><BR>
+Virtual Private Networks and Hidden Networks are usually filtered out automatically by the Networking System therefore the Registered Member Account Recovery Process will require an unfiltered Home or public internet connection such as from a university, a public library or from your house.<BR><BR>
 <FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Recovery&amp;Option&#61;Initiate&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 		Registered Member Account :: Electronic Mail Address<BR>
 			<INPUT TYPE=\"text\" NAME=\"AMM_Account_Recovery_Initial_Member_Electronic_Mail_Address\" MAXLENGTH=\"50\"><BR>
@@ -284,13 +287,15 @@ echo ("
 This Registered Member Account Is Currently: $_Application_Module_Members_Account_Recovery_Initial_LIST_MEMBER_STATUS_ACCOUNT_LOCKED_DISPLAY<BR><BR>
 Do You Know This Registered Member Account Recovery Key ?<BR><BR>
 
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 Options :: Account Recovery :: Recovery Key
-<HR ALIGN=\"LEFT\" WIDTH=\10%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 <I>I Know This Registered Member Account Recovery Key</I><BR>
 <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Recovery&amp;RecoveryMethod&#61;Recovery_Key&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Dispaly :: The Internal Application: Account Recovery :: Option :: Recovery Method :: Recovery Key ::\">Enter Recovery Key</A><BR><BR>
 
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 Options :: Account Recovery :: Other Methods
-<HR ALIGN=\"LEFT\" WIDTH=\10%\">
+<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 <I>I Do Not Know This Registered Member Account Recovery Key</I><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Recovery&amp;RecoveryMethod&#61;SMS&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Dispaly :: The Internal Application: Account Recovery :: Option :: Recovery Method :: Recovery Code :: Short Message Service ::\">Request :: Recovery Code :: Short Message Service</A><BR>
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Recovery&amp;RecoveryMethod&#61;Electronic_Mail&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Dispaly :: The Internal Application: Account Recovery :: Option :: Recovery Method :: Recovery Code :: Electronic Mail Message ::\">Request :: Recovery Code :: Electronic Mail Message</A><BR>
@@ -538,7 +543,7 @@ if ($_GET["RecoveryMethod"] == "SMS") {
 echo ("
 <FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Account_Recovery&amp;RecoveryMethod&#61;SMS&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"POST\">
 		* Registered Member Account :: Phone Number<BR>
-		* <I>Mobile Device Service Provider</I>:<BR>
+		* <I>Mobile Device Service Provider</I><BR>
 			<SELECT NAME=\AMM_Account_Recovery_Recovery_SMS_Mobile_Device_Carrier\">
 				<OPTION VALUE=\"\">United States of America</OPTION>
 				<OPTION VALUE=\"\">------------------------------------------</OPTION>
