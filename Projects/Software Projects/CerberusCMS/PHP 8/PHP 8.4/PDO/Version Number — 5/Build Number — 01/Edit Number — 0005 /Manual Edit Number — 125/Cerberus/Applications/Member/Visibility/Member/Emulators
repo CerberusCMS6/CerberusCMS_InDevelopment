@@ -224,19 +224,22 @@ $_Application_Module_Member_Login_SECURITY_RANDOM_STRING_GENERATOR_LENGTH_NUMBER
 */
 
 echo ("
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+											Authentication Application
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_INTERNAL&#61;Login&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
-													<I>Member' Account Electronic Mail Address</I>:<BR>
+													<I>Member' Account Electronic Mail Address</I><BR>
 														<INPUT TYPE=\"text\" NAME=\"IAM_Login_Electronic_Mail_Address\" MAXLENGTH=\"50\"><BR>
-													<I>Member' Account UserName</I>:<BR>
+													<I>Member' Account UserName</I><BR>
 														<INPUT TYPE=\"text\" NAME=\"IAM_Login_UserName\" MAXLENGTH=\"50\"><BR>
-													<I>Member' Account Password</I>:<BR>
+													<I>Member' Account Password</I><BR>
 														<INPUT TYPE=\"password\" NAME=\"IAM_Login_Password\" MAXLENGTH=\"250\"><BR>
 													<INPUT TYPE=\"submit\" VALUE=\"Login\">
 											</FORM><BR>
 
 										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
-											Additional Options
-										<HR ALIGN=\"LEFT\" WIDTH=\"50%\"><BR><BR>
+											Additional Authentication Options
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\"><BR>
 
 										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
 											Registered Member Account :: Options :: Authentication :: Connection :: Insecure
