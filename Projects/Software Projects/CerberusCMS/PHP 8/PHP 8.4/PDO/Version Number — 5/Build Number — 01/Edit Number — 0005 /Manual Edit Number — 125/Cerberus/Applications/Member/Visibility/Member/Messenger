@@ -663,7 +663,7 @@ echo ("
  ============================================================================================================
 */
 
-} else {
+} else { // [ + ] ELSE: Generate Room Variables HAVE Executed, Generate :: Visible Clear-Text File Messenger Room File
 
 /*
  ============================================================================================================
@@ -684,6 +684,22 @@ if (!file_exists("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Applicati
 mkdir("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_GENERATE_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME");
 
 						echo ("*&nbsp;Done<BR>");
+
+						echo ("*&nbsp;Creating Visible Clear-Text File Messenger Room Directory: <I>$_Application_Module_Member_Messenger_POST_GENERATE_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Participants</I>...<BR>");
+
+mkdir("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_GENERATE_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Participants");
+
+						echo ("*&nbsp;Done<BR>");
+
+						echo ("*&nbsp;Creating Visible Clear-Text File Messenger Room Directory: <I>$_Application_Module_Member_Messenger_POST_GENERATE_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Files/Messages</I>...<BR>");
+
+mkdir("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_GENERATE_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Files//Messages");
+
+						echo ("*&nbsp;Done<BR>");
+
+						echo ("*&nbsp;Copying Default Index File To Clear-Text File Messenger Room Directory: <I>$_Application_Module_Member_Messenger_POST_GENERATE_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Files/Messages</I>...<BR>");
+
+copy("./Temporary/Messenger/Setup/index.php","./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_GENERATE_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Files/Messages/index.php");
 
 						echo ("*&nbsp;Copying Default Index File To Clear-Text File Messenger Room Directory: <I>$_Application_Module_Member_Messenger_POST_GENERATE_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME</I>...<BR>");
 
@@ -754,6 +770,7 @@ fclose($_Application_Module_Member_Messenger_GENERATE_FIND_VISIBLE_CLEAR_TEXT_ME
 
 						echo ("*&nbsp;Creating Clear-Text File Messenger Room File Directories $_Application_Module_Member_Messenger_POST_GENERATE_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME<BR>");
 
+mkdir("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_GENERATE_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Messages");
 mkdir("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_GENERATE_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Files");
 mkdir("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_GENERATE_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Files/Archive");
 mkdir("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_GENERATE_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Files/Audio");
@@ -845,11 +862,11 @@ if ($_Application_Module_Member_Messenger_DB_Query_INSERT_CLEAR_TEXT_FILE_MESSEN
 
 /*
  ============================================================================================================
- + ELSE: Database Management System Server :: Database :: Query Has Failed, Display Error Message
+ + ELSE: Database Management System Server :: Database :: Query :: Has Failed, Display Error Message
  ============================================================================================================
 */
 
-} else {
+} else { // [ + ] ELSE: Database Management System Server :: Database :: Query :: Has Failed, Display Error Message
 
 						echo ("*&nbsp;Error: Cannot Insert S.Q.L. Data.<HR>");
 
@@ -869,7 +886,7 @@ if ($_Application_Module_Member_Messenger_DB_Query_INSERT_CLEAR_TEXT_FILE_MESSEN
  ============================================================================================================
 */
 
-} else {
+} else { // [ + ] ELSE: Instant Messenger Room Name Is Pre-Existing
 
 echo ("Messenger: Messenger Room Name Already Exists... Cannot create.");
 
@@ -1065,6 +1082,69 @@ $_Application_Module_Member_Messenger_DIRECTORY_OPEN_VIDEO_CLEAR_TEXT_FILE_MESSE
 
 /*
  ============================================================================================================
+ + Retrieve and List :: Clear-Text File Messenger Room :: File List :: Participants
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Messenger_DIRECTORY_FIND_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM				= "./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Participants";
+$_Application_Module_Member_Messenger_DIRECTORY_OPEN_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM				= opendir($_Application_Module_Member_Messenger_DIRECTORY_FIND_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM);
+
+/*
+ ============================================================================================================
+ +
+ + Read Directory :: Clear-Text File Messenger Room :: File Directory :: Messages
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + WHILE: Reading Directory :: Clear-Text File Messenger Room :: Messages :: Write Message List To File List
+ ============================================================================================================
+*/
+
+while (($_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES))) {
+
+$_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES_CONTENTS		= file_get_contents("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Messages/$_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES");
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES == "." || $_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES == ".." || $_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES == "index.php" || $_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES == "Files.html") {
+/**
+ * Do Nothing
+**/
+} else { // [ + ] ELSE: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
+
+$_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_OPEN_MESSAGE_ENTRIES			= fopen("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME.html", "a");
+
+/*
+ ============================================================================================================
+ + IF: Write Message To Clear-Text File Messenger Room Name :: File List :: Messages
+ ============================================================================================================
+*/
+
+fwrite($_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_OPEN_MESSAGE_ENTRIES, "
+$_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES_CONTENTS
+");
+
+} // [ + ] IF: Specified Archive Directory AND Files ARE NOT Specified Archive Directory AND Files
+
+} // [ + ] WHILE: Reading Specified Archive Directory AND Files
+
+/*
+ ============================================================================================================
+ + Close Directory :: Clear-Text File :: Messenger Room :: Directory :: Messages
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES);
+
+/*
+ ============================================================================================================
  +
  + Read Directory :: Clear-Text File Messenger Room :: File Directory :: Archive
  +
@@ -1073,23 +1153,29 @@ $_Application_Module_Member_Messenger_DIRECTORY_OPEN_VIDEO_CLEAR_TEXT_FILE_MESSE
 
 /*
  ============================================================================================================
- + While Reading Directory :: Clear-Text File Messenger Room :: Archive :: Write Audio List To File List
+ + WHILE: Reading Directory :: Clear-Text File Messenger Room :: Archive :: Write Archive List To File List
  ============================================================================================================
 */
 
 while (($_Application_Module_Member_Messenger_DIRECTORY_READ_ARCHIVE_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_ARCHIVE_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
 
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
+ ============================================================================================================
+*/
+
 if ($_Application_Module_Member_Messenger_DIRECTORY_READ_ARCHIVE_CLEAR_TEXT_FILE_MESSENGER_ROOM == "." || $_Application_Module_Member_Messenger_DIRECTORY_READ_ARCHIVE_CLEAR_TEXT_FILE_MESSENGER_ROOM == ".." || $_Application_Module_Member_Messenger_DIRECTORY_READ_ARCHIVE_CLEAR_TEXT_FILE_MESSENGER_ROOM == "index.php" || $_Application_Module_Member_Messenger_DIRECTORY_READ_ARCHIVE_CLEAR_TEXT_FILE_MESSENGER_ROOM == "Files.html") {
 /**
  * Do Nothing
 **/
-} else {
+} else { // [ + ] ELSE: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
 
 $_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST_ARCHIVE						= fopen("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Files/Archive/Files.html", "a");
 
 /*
  ============================================================================================================
- + IF: Write Message To Clear-Text File Messenger Room Name :: File List :: Audio
+ + IF: Write Message To Clear-Text File Messenger Room Name :: File List :: Archive
  ============================================================================================================
 */
 
@@ -1126,17 +1212,23 @@ closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_ARCHIVE_CLEAR_TEXT
 
 /*
  ============================================================================================================
- + While Reading Directory :: Clear-Text File Messenger Room :: Audio :: Write Audio List To File List
+ + WHILE: Reading Directory :: Clear-Text File Messenger Room :: Audio :: Write Audio List To File List
  ============================================================================================================
 */
 
 while (($_Application_Module_Member_Messenger_DIRECTORY_READ_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
 
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
+ ============================================================================================================
+*/
+
 if ($_Application_Module_Member_Messenger_DIRECTORY_READ_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM == "." || $_Application_Module_Member_Messenger_DIRECTORY_READ_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM == ".." || $_Application_Module_Member_Messenger_DIRECTORY_READ_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM == "index.php" || $_Application_Module_Member_Messenger_DIRECTORY_READ_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM == "Files.html") {
 /**
  * Do Nothing
 **/
-} else {
+} else { // [ + ] ELSE: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
 
 $_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST_AUDIO						= fopen("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Files/Audio/Files.html", "a");
 
@@ -1179,17 +1271,23 @@ closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_AUDIO_CLEAR_TEXT_F
 
 /*
  ============================================================================================================
- + While Reading Directory :: Clear-Text File Messenger Room :: Document :: Write Document List To File List
+ + WHILE: Reading Directory :: Clear-Text File Messenger Room :: Document :: Write Document List To File List
  ============================================================================================================
 */
 
 while (($_Application_Module_Member_Messenger_DIRECTORY_READ_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
 
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
+ ============================================================================================================
+*/
+
 if ($_Application_Module_Member_Messenger_DIRECTORY_READ_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM == "." || $_Application_Module_Member_Messenger_DIRECTORY_READ_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM == ".." || $_Application_Module_Member_Messenger_DIRECTORY_READ_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM == "index.php" || $_Application_Module_Member_Messenger_DIRECTORY_READ_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM == "Files.html") {
 /**
  * Do Nothing
 **/
-} else {
+} else { // [ + ] ELSE: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
 
 $_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST_DOCUMENT					= fopen("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Files/Document/Files.html", "a");
 
@@ -1232,17 +1330,23 @@ closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_DOCUMENT_CLEAR_TEX
 
 /*
  ============================================================================================================
- + While Reading Directory :: Clear-Text File Messenger Room :: Image :: Write Image List To File List
+ + WHILE: Reading Directory :: Clear-Text File Messenger Room :: Image :: Write Image List To File List
  ============================================================================================================
 */
 
 while (($_Application_Module_Member_Messenger_DIRECTORY_READ_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
 
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
+ ============================================================================================================
+*/
+
 if ($_Application_Module_Member_Messenger_DIRECTORY_READ_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM == "." || $_Application_Module_Member_Messenger_DIRECTORY_READ_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM == ".." || $_Application_Module_Member_Messenger_DIRECTORY_READ_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM == "index.php" || $_Application_Module_Member_Messenger_DIRECTORY_READ_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM == "Files.html") {
 /**
  * Do Nothing
 **/
-} else {
+} else { // [ + ] ELSE: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
 
 $_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST_IMAGE						= fopen("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Files/Image/Files.html", "a");
 
@@ -1285,17 +1389,23 @@ closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_IMAGE_CLEAR_TEXT_F
 
 /*
  ============================================================================================================
- + While Reading Directory :: Clear-Text File Messenger Room :: Video :: Write Document List To File List
+ + WHILE: Reading Directory :: Clear-Text File Messenger Room :: Video :: Write Document List To File List
  ============================================================================================================
 */
 
 while (($_Application_Module_Member_Messenger_DIRECTORY_READ_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
 
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
+ ============================================================================================================
+*/
+
 if ($_Application_Module_Member_Messenger_DIRECTORY_READ_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM == "." || $_Application_Module_Member_Messenger_DIRECTORY_READ_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM == ".." || $_Application_Module_Member_Messenger_DIRECTORY_READ_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM == "index.php" || $_Application_Module_Member_Messenger_DIRECTORY_READ_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM == "Files.html") {
 /**
  * Do Nothing
 **/
-} else {
+} else { // [ + ] ELSE: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
 
 $_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST_VIDEO						= fopen("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Files/Video/Files.html", "a");
 
@@ -1327,6 +1437,58 @@ fwrite($_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_F
 */
 
 closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM);
+
+/*
+ ============================================================================================================
+ +
+ + Read Directory :: Clear-Text File Messenger Room :: File Directory :: Participants
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + WHILE: Reading Directory :: Clear-Text File Messenger Room :: Participants :: Write Participant List To File List
+ ============================================================================================================
+*/
+
+while (($_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == "." || $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == ".." || $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == "index.php" || $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == "Files.html") {
+/**
+ * Do Nothing
+**/
+} else { // [ + ] ELSE: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
+
+$_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST_PARTICIPANTS						= fopen("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Participants/Participants.html", "w");
+
+/*
+ ============================================================================================================
+ + IF: Write Message To Clear-Text File Messenger Room Name :: File List :: Participants
+ ============================================================================================================
+*/
+
+fwrite($_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST_PARTICIPANTS, "
+<A HREF=\"?$_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM\" TITLE=\":: Open & Display :: The Application Module :: Profile :: Entry :: For :: $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM ::\" TARGET=\"_NEW\">$_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM</A> // <I>$_GLOBAL_LOCAL_SERVER_DATE_STANDARD</I><BR>
+");
+
+} // [ + ] IF: Specified Participants Directory AND Files ARE NOT Specified Participants Directory AND Files
+
+} // [ + ] WHILE: Reading Specified Participants Directory AND Files
+
+/*
+ ============================================================================================================
+ + Close Directory :: Clear-Text File :: Messenger Room :: Directory :: Participants
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM);
 
 /*
  =============================================================================================================
@@ -1454,6 +1616,11 @@ echo ("
 												<OBJECT DATA=\"./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Files/Archive/Files.html?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_FILEINCLUSION_RANDOM_STRING_GENERATION\" WIDTH=\"90%\" HEIGHT=\"150\"></OBJECT><BR><BR>
 ");
 
+echo ("												
+												Messenger Room Participants :: <A HREF=\"./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Participants/Participants.html?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Participants List For This Visible Clear-Text File Messenger Room :: \" TARGET=\"_NEW\">Participants</A><BR>
+												<OBJECT DATA=\"./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Participants/Participants.html?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_FILEINCLUSION_RANDOM_STRING_GENERATION\" WIDTH=\"90%\" HEIGHT=\"150\"></OBJECT><BR><BR>
+");
+
 echo ("
 
 													<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Messenger&amp;EraseMessengerRoom&#61;$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"POST\">
@@ -1496,6 +1663,12 @@ echo ("
 														* This Visible Clear-Text File Messenger Room Was Created By: <I>$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_CREATION_AUTHOR @ $_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_CREATION_AUTHOR_DEVICE_IP_ADDRESS</I><BR>
 														* This Visible Clear-Text File Messenger Room Was Created On: <I>$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_CREATION_DATE</I><BR><BR>
 ");
+
+/*
+ ============================================================================================================
+ + ELSE: File DOES NOT Exist: Clear-Text File Messenger Room Name
+ ============================================================================================================
+*/
 
 } else {
 
@@ -1550,11 +1723,23 @@ if ($_GET["UploadFile"] == "Audio") {
 
 											echo ("* Checking For Audio File Extension Type...<BR>");
 
+/*
+ ============================================================================================================
+ + IF: File Is In Array: Allowed File Extensions :: Audio, Prepare File
+ ============================================================================================================
+*/
+
 if (in_array($_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION, $_Application_Module_Member_Messenger_ALLOWED_FILE_EXTENSION_AUDIO)) {
 
 $_Application_Module_Messenger_UPLOAD_FILE_AUDIO_PREPARE_FILE									= "1";
 
-} else {
+/*
+ ============================================================================================================
+ + ELSE: File Is NOT In Array: Allowed File Extensions :: Audio, Delete File
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: Is NOT In Array: Allowed File Extensions :: Audio, Delete File
 
 $_Application_Module_Messenger_UPLOAD_FILE_AUDIO_PREPARE_FILE									= "0";
 
@@ -1590,7 +1775,13 @@ if (file_exists("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Applicatio
 
 											echo ("* This Audio File Upload Has Halted.<BR>");
 
-} else {
+/*
+ ============================================================================================================
+ + ELSE: File DOES NOT Exist, Allow File Upload AND Move To Temporary Directory
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: File DOES NOT Exist, Allow File Upload AND Move To Temporary Directory
 
 /*
  ============================================================================================================
@@ -1632,7 +1823,13 @@ copy("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SE
 
 } // [ + ] IF: File :: Audio :: Already Exists Within: Audio Directory
 
-} else {
+/*
+ ============================================================================================================
+ + ELSE: File DOES NOT Exist, Allow File Upload AND Move To Temporary Directory
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: File DOES NOT Exist, Allow File Upload AND Move To Temporary Directory
 
 											echo ("* This Audio File Extension Type Is Not Allowed...<BR>");
 
@@ -1660,11 +1857,23 @@ if ($_GET["UploadFile"] == "Document") {
 
 											echo ("* Checking For Document File Extension Type...<BR>");
 
+/*
+ ============================================================================================================
+ + IF: File Is In Array: Allowed File Extensions :: Document, Prepare File
+ ============================================================================================================
+*/
+
 if (in_array($_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION, $_Application_Module_Member_Messenger_ALLOWED_FILE_EXTENSION_DOCUMENT)) {
 
 $_Application_Module_Messenger_UPLOAD_FILE_DOCUMENT_PREPARE_FILE									= "1";
 
-} else {
+/*
+ ============================================================================================================
+ + ELSE: File Is NOT In Array: Allowed File Extensions :: Document, Delete File
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: File Is NOT In Array: Allowed File Extensions :: Document, Delete File
 
 $_Application_Module_Messenger_UPLOAD_FILE_DOCUMENT_PREPARE_FILE									= "0";
 
@@ -1700,7 +1909,13 @@ if (file_exists("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Applicatio
 
 											echo ("* This Document File Upload Was Halted.<BR>");
 
-} else {
+/*
+ ============================================================================================================
+ + ELSE: File Is In Array: Allowed File Extensions :: Document, Upload File
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: File Is In Array: Allowed File Extensions :: Document, Upload File
 
 /*
  ============================================================================================================
@@ -1742,7 +1957,13 @@ copy("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SE
 
 } // [ + ] IF: File :: Document :: Already Exists Within: Document Directory
 
-} else {
+/*
+ ============================================================================================================
+ + ELSE: File Is NOT In Array: Allowed File Extensions :: Document, Display Error Message AND Delete File
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: File Is NOT In Array: Allowed File Extensions :: Document, Display Error Message AND Delete File
 
 											echo ("* Document File Extension Type Is Not Allowed...<BR>");
 
@@ -1770,11 +1991,23 @@ if ($_GET["UploadFile"] == "Image") {
 
 											echo ("* Checking For This Image File Extension Type...<BR>");
 
+/*
+ ============================================================================================================
+ + IF: File Is In Array: Allowed File Extensions :: Image, Prepare File
+ ============================================================================================================
+*/
+
 if (in_array($_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION, $_Application_Module_Member_Messenger_ALLOWED_FILE_EXTENSION_IMAGE)) {
 
 $_Application_Module_Messenger_UPLOAD_FILE_IMAGE_PREPARE_FILE									= "1";
 
-} else {
+/*
+ ============================================================================================================
+ + IF: File Is In Array: Allowed File Extensions :: Image, Delete File
+ ============================================================================================================
+*/
+
+} else { // [ + ] IF: File Is In Array: Allowed File Extensions :: Image, Delete File
 
 $_Application_Module_Messenger_UPLOAD_FILE_IMAGE_PREPARE_FILE									= "0";
 
@@ -1852,7 +2085,13 @@ copy("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SE
 
 } // [ + ] IF: File :: Image :: Already Exists Within: Image Directory
 
-} else {
+/*
+ ============================================================================================================
+ + ELSE: File Is NOT Array: Allowed File Extensions :: Image, Delete File AND Display Error Message
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: File Is NOT Array: Allowed File Extensions :: Image, Delete File AND Display Error Message
 
 											echo ("* Image File Extension Type Is Not Allowed...<BR>");
 
@@ -1880,11 +2119,23 @@ if ($_GET["UploadFile"] == "Video") {
 
 											echo ("* Checking For This Video File Extension Type...<BR>");
 
+/*
+ ============================================================================================================
+ + IF: File Is In Array: Allowed File Extensions :: Video, Prepare File
+ ============================================================================================================
+*/
+
 if (in_array($_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION, $_Application_Module_Member_Messenger_ALLOWED_FILE_EXTENSION_VIDEO)) {
 
 $_Application_Module_Messenger_UPLOAD_FILE_VIDEO_PREPARE_FILE									= "1";
 
-} else {
+/*
+ ============================================================================================================
+ + ELSE: File Is NOT In Array: Allowed File Extensions :: Video, Delete File
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: File Is NOT In Array: Allowed File Extensions :: Video, Delete File
 
 $_Application_Module_Messenger_UPLOAD_FILE_VIDEO_PREPARE_FILE									= "0";
 
@@ -1920,7 +2171,13 @@ if (file_exists("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Applicatio
 
 											echo ("* This Video File Upload Halted.<BR>");
 
-} else {
+/*
+ ============================================================================================================
+ + ELSE: File Is NOT In Array: Allowed File Extensions :: Video, Delete File AND Display Error Message
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: File Is In Array: Allowed File Extensions :: Video, Upload File AND Move File
 
 /*
  ============================================================================================================
@@ -1962,7 +2219,13 @@ copy("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SE
 
 } // [ + ] IF: File :: Video :: Already Exists Within: Video Directory
 
-} else {
+/*
+ ============================================================================================================
+ + ELSE: File Is NOT In Array: Allowed File Extensions :: Video, Delete File AND Display Error Message
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: File Is NOT In Array: Allowed File Extensions :: Video, Delete File AND Display Error Message
 
 											echo ("* This Video File Extension Type Is Not Allowed...<BR>");
 
@@ -1994,6 +2257,7 @@ echo ("* To Visible Clear-Text Messenger File Name: ./Temporary/Messenger/Text-F
 
 $_Application_Module_Member_Messenger_FIND_VISIBILE_CLEAR_TEXT_MESSENGER_MESSAGES_FILE_LOG					= fopen("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN - Log.html", "a");
 $_Application_Module_Member_Messenger_FIND_VISIBILE_CLEAR_TEXT_MESSENGER_MESSAGES_FILE						= fopen("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN.html", "a");
+$_Application_Module_Member_Messenger_FIND_VISIBILE_CLEAR_TEXT_MESSENGER_MESSAGES_FILE_SNIPPET					= fopen("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/Messages/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_COOKIE_MEMBER_USERNAME", "a");
 
 /*
  ============================================================================================================
@@ -2010,6 +2274,7 @@ if (fwrite($_Application_Module_Member_Messenger_FIND_VISIBILE_CLEAR_TEXT_MESSEN
 							<BIG>&ldquo;</BIG><I>$_Application_Module_Member_Messenger_POST_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_MESSAGE</I><BIG>&rdquo;</BIG><BR>
 							<HR ALIGN=\"LEFT\" WIDTH=\"20%\"><BR>
 
+							<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 							Message Details
 							<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 							<B>Timestamps</B><BR>
@@ -2017,8 +2282,8 @@ if (fwrite($_Application_Module_Member_Messenger_FIND_VISIBILE_CLEAR_TEXT_MESSEN
 							<B>* Timestamp :: This Message :: Device :: Connected Device:</B>&nbsp;<A HREF=\"$_SYSTEM_SERVER_NETWORKING_RESOLVER_TIMESTAMP_UNIX_EPOCH\" TITLE=\":: Open & Display :: This Official Web Server :: External :: Unix' Timestamp Converter ::\" TARGET=\"_NEW\">$_GLOBAL_LOCAL_SERVER_TIME_UNIX</A><BR><BR>
 
 							<B>Location :: Internet Protocol Address</B><BR>
-							<B>* Internet Protocol Address, Sent To :: Device :: This Web Server:</B>&nbsp;<A HREF=\"$_SYSTEM_SERVER_NETWORKING_RESOLVER_WHOIS/$_GLOBAL_LOCAL_SERVER_ADDRESS\" TITLE=\":: Open & Display :: The Who-Is Information :: For This Internet Protocol Address ::\" TARGET=\"_NEW\">$_GLOBAL_LOCAL_SERVER_ADDRESS :: $_GLOBAL_LOCAL_SERVER_PORT</A><BR>
-							<B>* Internet Protocol Address, Sent From :: Device :: Connected Device:</B>&nbsp;<A HREF=\"$_SYSTEM_SERVER_NETWORKING_RESOLVER_WHOIS/$_GLOBAL_REMOTE_SERVER_ADDRESS\" TITLE=\":: Open & Display :: The Who-Is Information :: For This Internet Protocol Address ::\" TARGET=\"_NEW\">$_GLOBAL_REMOTE_SERVER_ADDRESS :: $_GLOBAL_REMOTE_SERVER_PORT</A><BR><BR>
+							<B>* Internet Protocol Address :: Device :: This Web Server:</B>&nbsp;<A HREF=\"$_SYSTEM_SERVER_NETWORKING_RESOLVER_WHOIS/$_GLOBAL_LOCAL_SERVER_ADDRESS\" TITLE=\":: Open & Display :: The Who-Is Information :: For This Internet Protocol Address ::\" TARGET=\"_NEW\">$_GLOBAL_LOCAL_SERVER_ADDRESS :: $_GLOBAL_LOCAL_SERVER_PORT</A><BR>
+							<B>* Internet Protocol Address :: Device :: Connected Device:</B>&nbsp;<A HREF=\"$_SYSTEM_SERVER_NETWORKING_RESOLVER_WHOIS/$_GLOBAL_REMOTE_SERVER_ADDRESS\" TITLE=\":: Open & Display :: The Who-Is Information :: For This Internet Protocol Address ::\" TARGET=\"_NEW\">$_GLOBAL_REMOTE_SERVER_ADDRESS :: $_GLOBAL_REMOTE_SERVER_PORT</A><BR><BR>
 
 							<B>Device :: Details</B><BR>
 							<B>* Web Browser :: Sent From :: Device :: Connected Device:</B>&nbsp;$_GLOBAL_REMOTE_SERVER_HTTP_USER_AGENT_DISPLAY :: $_GLOBAL_REMOTE_SERVER_PORT<BR>
@@ -2045,13 +2310,40 @@ fwrite($_Application_Module_Member_Messenger_FIND_VISIBILE_CLEAR_TEXT_MESSENGER_
 
 echo ("* Done...<BR>");
 
+/*
+ ============================================================================================================
+ + IF: Write Message To Clear-Text File Messenger Room Name Messenger Log File
+ ============================================================================================================
+*/
+
+fwrite($_Application_Module_Member_Messenger_FIND_VISIBILE_CLEAR_TEXT_MESSENGER_MESSAGES_FILE_SNIPPET, "
+					<A HREF=\"../../../../../../$_GLOBAL_MEMBER_IMAGE_PROFILE_DISPLAY\" TARGET=\"_NEW\" TITLE=\":: Open & Display :: This Registered Member Account :: Profile Image :: \"><IMG SRC=\"../../../../../../$_GLOBAL_MEMBER_IMAGE_PROFILE_DISPLAY\" WIDTH=\"75\" HEIGHT=\"75\" CLASS=\"MessengerImageMemberProfile\"></A>
+						&nbsp;
+						<B><I><A HREF=\"../../../../../../$_INTERNAL_FILE_KERNEL?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_GLOBAL_COOKIE_MEMBER_USERNAME\" TITLE=\":: Open & Display :: This Registered Member Account :: Profile ::\" TARGET=\"_NEW\">$_GLOBAL_COOKIE_MEMBER_USERNAME</A> Wrote This Message:</B></I><BR>
+							<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+							<BIG>&ldquo;</BIG><I>$_Application_Module_Member_Messenger_POST_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_MESSAGE</I><BIG>&rdquo;</BIG><BR>
+							<HR ALIGN=\"LEFT\" WIDTH=\"20%\"><BR>
+						<BR><BR>
+");
+
+echo ("* Done...<BR>");
+
+copy("./Temporary/Messenger/Setup/Files/Files.txt","./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/Participants/$_GLOBAL_COOKIE_MEMBER_USERNAME");
+copy("./Temporary/Messenger/Setup/Files/index.php","./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/Participants/index.php");
+
 echo ("* Automatically Redirecting To Visible Clear-Text File Messenger Room: $_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN<BR>");
 
 	header("Location: ./$_INTERNAL_FILE_KERNEL?$_INTERNAL_APPLICATION_MODULE_MEMBER=Messenger&SelectedClearTextFile=$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 
+/*
+ ============================================================================================================
+ + ELSE: Write Message To Clear-Text File Messenger Room Name :: Error, Display Error Message
+ ============================================================================================================
+*/
+
 } else {
 
-echo ("* Error: Unable To Write To Clear-Text File Messenger Room File.<BR>");
+echo ("* Messenger Message: Error: Unable To Write To Clear-Text File Messenger Room File.<BR>");
 
 /*
  ============================================================================================================
@@ -2195,7 +2487,13 @@ fclose($_Application_Module_Member_Messenger_ERASE_FIND_VISIBLE_CLEAR_TEXT_MESSE
 
 	header("Location: ./$_INTERNAL_FILE_KERNEL?$_INTERNAL_APPLICATION_MODULE_MEMBER=Messenger&SelectedClearTextFile=$_Application_Module_Member_Messenger_POST_ERASE_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 
-} else {
+/*
+ ============================================================================================================
+ + ELSE :: Error :: Incorrect Password
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE :: Error :: Incorrect Password
 
 	header("Location: ./$_INTERNAL_FILE_KERNEL?$_INTERNAL_APPLICATION_MODULE_MEMBER=Messenger&SelectedClearTextFile=$_Application_Module_Member_Messenger_POST_ERASE_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 
@@ -2213,7 +2511,13 @@ echo ("* Error: Incorrect Password: $_Application_Module_Member_Messenger_POST_E
 
 	header("Location: ./$_INTERNAL_FILE_KERNEL?$_INTERNAL_APPLICATION_MODULE_MEMBER=Messenger&SelectedClearTextFile=$_Application_Module_Member_Messenger_POST_ERASE_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 
-} else {
+/*
+ ============================================================================================================
+ + ELSE :: Do Nothing
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE :: Error :: Incorrect Password
 /**
  * Do Nothing
 **/
