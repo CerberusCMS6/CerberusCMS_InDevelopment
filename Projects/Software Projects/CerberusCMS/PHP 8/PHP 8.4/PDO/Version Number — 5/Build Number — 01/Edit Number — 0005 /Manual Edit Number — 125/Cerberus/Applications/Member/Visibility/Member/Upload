@@ -123,7 +123,7 @@ $_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[14]			= "wma";
  ============================================================================================================
 */
 
-$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_EXECUTABLE		= array();
+$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_ARCHIVE		= array();
 $_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_ARCHIVE[0]		= "zip";
 $_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_ARCHIVE[1]		= "rar";
 $_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_ARCHIVE[2]		= "tar";
@@ -383,7 +383,7 @@ if (filesize($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE) > $_GLOBAL_
  ============================================================================================================
 */
 
-if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE_ARCHIVE") {
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_ARCHIVE") {
 
 $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Archive";
 
@@ -395,7 +395,7 @@ $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Uploa
  ============================================================================================================
 */
 
-if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE_AUDIO") {
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_AUDIO") {
 
 $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Audio";
 
@@ -407,7 +407,7 @@ $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Uploa
  ============================================================================================================
 */
 
-if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE_DOCUMENT") {
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_DOCUMENT") {
 
 $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Document";
 
@@ -419,7 +419,7 @@ $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Uploa
  ============================================================================================================
 */
 
-if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE_IMAGE") {
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_IMAGE") {
 
 $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Image";
 
@@ -431,7 +431,7 @@ $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Uploa
  ============================================================================================================
 */
 
-if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE_VIDEO") {
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_VIDEO") {
 
 $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Video";
 
@@ -443,7 +443,7 @@ $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Uploa
  ============================================================================================================
 */
 
-if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE_EXECUTABLE") {
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_EXECUTABLE") {
 
 $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Executable";
 
