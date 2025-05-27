@@ -372,14 +372,24 @@ if (filesize($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE) > $_GLOBAL_
 /*
  ============================================================================================================
  +
- + Check For Successfully Uploaded File Type Defined In File Type Arrays :: Archive :: ZIP
+ +
+ + Check For Uploaded File Type Defined In File Type Array
+ +
  +
  ============================================================================================================
 */
 
 /*
  ============================================================================================================
- + IF: Successfully Uploaded File Type Defined In File Type Arrays :: Archive :: ZIP
+ +
+ + IF: Uploaded File :: File Extension :: Type :: Is: Archive
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: File Extension :: Type :: Is: Archive :: ZIP
  ============================================================================================================
 */
 
@@ -391,7 +401,7 @@ $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Uploa
 
 /*
  ============================================================================================================
- + IF: Successfully Uploaded File Type Defined In File Type Arrays :: Archive :: TAR
+ + IF: Uploaded File :: File Extension :: Type :: Is: Archive :: TAR
  ============================================================================================================
 */
 
@@ -403,7 +413,7 @@ $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Uploa
 
 /*
  ============================================================================================================
- + IF: Successfully Uploaded File Type Defined In File Type Arrays :: Archive :: TAR.GZ
+ + IF: Uploaded File :: File Extension :: Type :: Is: Archive :: TAR.GZ
  ============================================================================================================
 */
 
@@ -415,7 +425,7 @@ $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Uploa
 
 /*
  ============================================================================================================
- + IF: Successfully Uploaded File Type Defined In File Type Arrays :: Archive :: RAR
+ + IF: Uploaded File :: File Extension :: Type :: Is: Archive :: RAR
  ============================================================================================================
 */
 
@@ -427,43 +437,219 @@ $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Uploa
 
 /*
  ============================================================================================================
- + IF: Successfully Uploaded File Type Defined In File Type Arrays :: Audio
+ +
+ + IF: Uploaded File :: File Extension :: Type :: Is: Audio
+ +
  ============================================================================================================
 */
-
-if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_AUDIO") {
-
-$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Audio";
-
-} // [ + ] IF: Successfully Uploaded File Extension Type Is: Audio
 
 /*
  ============================================================================================================
- + IF: Successfully Uploaded File Type Defined In File Type Arrays :: Document
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Audio :: MP3
  ============================================================================================================
 */
 
-if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_DOCUMENT") {
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "mp3") {
 
-$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Document";
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Audio/";
 
-} // [ + ] IF: Successfully Uploaded File Extension Type Is: Document
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive :: MP3
 
 /*
  ============================================================================================================
- + IF: Successfully Uploaded File Type Defined In File Type Arrays :: Image
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Audio :: AAC
  ============================================================================================================
 */
 
-if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_IMAGE") {
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "aac") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Audio/";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive :: AAC
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Audio :: AAX
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "aax") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Audio/";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive :: AAX
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Audio :: AIFF
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "AIFF") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Audio/";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive :: AIFF
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Audio :: ALAC
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "alac") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Audio/";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive :: ALAC
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Audio :: FLAC
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "flac") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Audio/";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive :: FLAC
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Audio :: M4A
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "m4a") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Audio/";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive :: M4A
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Audio :: OGG
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "ogg") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Audio/";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive :: OGG
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Audio :: WAV
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "wav") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Audio/";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive :: WAV
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Audio :: WMA
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "wma") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Audio/";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive :: WMA
+
+/*
+ ============================================================================================================
+ +
+ + IF: Uploaded File :: File Extension :: Type :: Is: Document
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Document :: DOC
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "doc") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Document/";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive :: DOC
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Document :: DOCX
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "docx") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Document/";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive :: DOCX
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Document :: TXT
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "txt") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Document/";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive :: TXT
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Document :: PDF
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "pdf") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Document/";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive :: PDF
+
+/*
+ ============================================================================================================
+ +
+ + IF: Uploaded File :: File Extension :: Type :: Is: Image
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Image :: JPG
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "jpg") {
 
 $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Image";
 
-} // [ + ] IF: Successfully Uploaded File Extension Type Is: Image
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Image :: JPG
 
 /*
  ============================================================================================================
- + IF: Successfully Uploaded File Type Defined In File Type Arrays :: Video
+ +
+ + IF: Uploaded File :: File Extension :: Type :: Is: Video
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Video
  ============================================================================================================
 */
 
@@ -475,7 +661,15 @@ $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Uploa
 
 /*
  ============================================================================================================
- + IF: Successfully Uploaded File Type Defined In File Type Arrays :: Executable
+ +
+ + IF: Uploaded File :: File Extension :: Type :: Is: Executable
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Executable
  ============================================================================================================
 */
 
