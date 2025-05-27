@@ -89,9 +89,9 @@ $_Application_Module_Member_Upload_MAXIMUM_UPLOAD_LIMIT_FILE			= $_GLOBAL_SYSTEM
  ============================================================================================================
 */
 
-$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY			= "./Temporary/";
-$_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE				= $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY . basename($_FILES['AMM_Upload_File_Name']['name']);
-$_Application_Module_Member_Upload_SPECIFY_UPLOAD_IMAGE				= $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY . basename($_FILES['AMM_Upload_Image_Name']['name']);
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY			= "./Temporary/Upload/";
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE				= $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY . basename($_FILES['AMM_Upload_File_Name_File']['name']);
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_IMAGE				= $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY . basename($_FILES['AMM_Upload_File_Name_Image']['name']);
 
 /*
  ============================================================================================================
@@ -191,8 +191,8 @@ $_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_VIDEO[9]		= "mpg";
  ============================================================================================================
 */
 
-$_Application_Module_Member_Upload_FILE_PATHINFO_FILE 				= pathinfo($_FILES['AMM_Upload_File_Name']['name']);
-$_Application_Module_Member_Upload_FILE_PATHINFO_IMAGE 				= pathinfo($_FILES['AMM_Upload_Image_Name']['name']);
+$_Application_Module_Member_Upload_FILE_PATHINFO_FILE 				= pathinfo($_FILES['AMM_Upload_File_Name_File']['name']);
+$_Application_Module_Member_Upload_FILE_PATHINFO_IMAGE 				= pathinfo($_FILES['AMM_Upload_File_Name_Image']['name']);
 $_Application_Module_Member_Upload_EXTENSION_FILE 				= $_Application_Module_Member_Upload_FILE_PATHINFO_FILE['extension'];
 $_Application_Module_Member_Upload_EXTENSION_IMAGE 				= $_Application_Module_Member_Upload_FILE_PATHINFO_IMAGE['extension'];
 $_Application_Module_Member_Upload_BASENAME_FILE 				= $_Application_Module_Member_Upload_FILE_PATHINFO_FILE['basename'];
@@ -287,14 +287,14 @@ echo ("
 													<TEXTAREA ROWS=\"15\" COLS=\"75\" MAXLENGTH=\"2000\" NAME=\"AMM_Upload_File_Data\" ID=\"WYSIWYG\">description of this file...</TEXTAREA><BR>
 												* File:<BR>
 												[ Maximum File Name Length: 50 Characters ]<BR>
-													<INPUT TYPE=\"file\" name=\"AMM_Upload_File_Name_File\"><BR>
+													<INPUT TYPE=\"file\" NAME=\"AMM_Upload_File_Name_File\" MAXLENGTH=\"50\"><BR>
 												* Image:<BR>
 												[ Maximum File Name Length: 50 Characters ]<BR>
-													<INPUT TYPE=\"file\" name=\"AMM_Upload_File_Name_Image\"><BR>
+													<INPUT TYPE=\"file\" NAME=\"AMM_Upload_File_Name_Image\" MAXLENGTH=\"50\"><BR>
 												<INPUT TYPE=\"submit\" VALUE=\"Upload\">
 											</FORM><BR>
 											Maximum File Size :: In Kilo-BITS :: File: $_Application_Module_Member_Upload_MAXIMUM_UPLOAD_LIMIT_FILE<BR>
-											Maximum File Size :: In Kilo-BITS :: File Image: 150<BR>
+											Maximum File Size :: In Kilo-BITS :: File Image: 15000<BR>
 ");
 
 } else {
@@ -305,7 +305,7 @@ echo ("
  ============================================================================================================
 */
 
-if (move_uploaded_file($_FILES['AMM_Upload_Image_Name']['tmp_name'], $_Application_Module_Member_Upload_SPECIFY_UPLOAD_IMAGE) && move_uploaded_file($_FILES['AMM_Upload_File_Name']['tmp_name'], $_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE)) {
+if (move_uploaded_file($_FILES['AMM_Upload_File_Name_Image']['tmp_name'], $_Application_Module_Member_Upload_SPECIFY_UPLOAD_IMAGE) && move_uploaded_file($_FILES['AMM_Upload_File_Name_File']['tmp_name'], $_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE)) {
 
 											echo ($_Application_Module_Member_Message_Upload_FILE_TEMPORARY);
 
@@ -358,7 +358,7 @@ if (file_exists("./Upload/$_Application_Module_Member_Upload_BASENAME_FILE") || 
  ============================================================================================================
 */
 
-if (filesize($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE) > $_GLOBAL_SYSTEM_UPLOAD_SIZE_PUBLIC || filesize($_Application_Module_Member_Upload_SPECIFY_UPLOAD_IMAGE) > 160000) {
+if (filesize($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE) > $_GLOBAL_SYSTEM_UPLOAD_SIZE_PUBLIC_FILE_CATEGORIES || filesize($_Application_Module_Member_Upload_SPECIFY_UPLOAD_IMAGE) > 15000000) {
 
 											unlink("./Temporary/$_Application_Module_Member_Upload_BASENAME_FILE");
 											unlink("./Temporary/$_Application_Module_Member_Upload_BASENAME_IMAGE");
@@ -442,7 +442,7 @@ $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Uploa
 */
 
 											copy("./Temporary/$_Application_Module_Member_Upload_BASENAME_FILE","./$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE/$_Application_Module_Member_Upload_BASENAME_FILE");
-											copy("./Temporary/$_Application_Module_Member_Upload_BASENAME_IMAGE","./Upload/Default//$_Application_Module_Member_Upload_BASENAME_IMAGE");
+											copy("./Temporary/$_Application_Module_Member_Upload_BASENAME_IMAGE","./Upload/Default/$_Application_Module_Member_Upload_BASENAME_IMAGE");
 
 											unlink("./Temporary/$_Application_Module_Member_Upload_BASENAME_FILE");
 											unlink("./Temporary/$_Application_Module_Member_Upload_BASENAME_IMAGE");
@@ -492,11 +492,11 @@ if ($_Application_Module_Member_Upload_DB_Query_INSERT_FILE) {
 
 											echo ($_Application_Module_Member_Message_Upload_FILE_UPLOAD_ERROR);
 
-} // [ + ] IF: Insert File Entry Database Server Query Variable Has Executed
+} // [ + ] IF: Database Management System Database :: Server :: Query :: Insert File :: Variable Has Executed
 
-} // [ + ] IF: File Entry Already Exists In Database Server
+} // [ + ] IF: File Entry Already Exists In Database Management System Database Server
 
-} // [ + ] IF: File Size Is Great Than Allowed File Size
+} // [ + ] IF: File Size Is GREATER THAN Allowed File Size
 
 } else {
 
