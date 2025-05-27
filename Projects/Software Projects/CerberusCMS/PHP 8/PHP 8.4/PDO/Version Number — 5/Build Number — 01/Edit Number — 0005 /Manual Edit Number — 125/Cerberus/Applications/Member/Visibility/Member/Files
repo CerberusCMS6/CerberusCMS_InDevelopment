@@ -203,7 +203,7 @@ echo ("
 												<TABLE WIDTH=\"100%\" CELLPADDING=\"0\" CELLSPACING=\"0\" BORDER=\"0\">
 													<TR>
 														<TD WIDTH=\"1%\" VALIGN=\"TOP\"><CENTER><A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Files&amp;FileID&#61;$_Application_Module_Member_Files_LIST_FILE_FOR_CATEGORY_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The File Entry :: $_Application_Module_Member_Files_LIST_FILE_FOR_CATEGORY_TITLE ::\"><IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/File_Categories/Folder_File.$_GLOBAL_SYSTEM_IMAGE_EXTENSION?&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" ALT=\"$_Application_Module_Member_Files_LIST_FILE_FOR_CATEGORY_TITLE\" WIDTH=\"60\" HEIGHT=\"60\"></A></CENTER></TD>
-														<TD WIDTH=\"99%\" VALIGN=\"TOP\"><B>File</B>:&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Files&amp;FileID&#61;$_Application_Module_Member_Files_LIST_FILE_FOR_CATEGORY_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The File Entry :: $_Application_Module_Member_Files_LIST_FILE_FOR_CATEGORY_TITLE ::\">$_Application_Module_Member_Files_LIST_FILE_FOR_CATEGORY_TITLE</A><HR><B>Downloaded</B>: $_Application_Module_Member_Files_LIST_FILE_FOR_CATEGORY_NUMBER_OF_DOWNLOADS Time(s).</TD>
+														<TD WIDTH=\"99%\" VALIGN=\"TOP\"><HR ALIGN=\"LEFT\" WIDTH=\"30%\"><B>File</B>:&nbsp;<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Files&amp;FileID&#61;$_Application_Module_Member_Files_LIST_FILE_FOR_CATEGORY_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The File Entry :: $_Application_Module_Member_Files_LIST_FILE_FOR_CATEGORY_TITLE ::\">$_Application_Module_Member_Files_LIST_FILE_FOR_CATEGORY_TITLE</A><HR ALIGN=\"LEFT\" WIDTH=\"30%\"><B>Downloaded</B>: $_Application_Module_Member_Files_LIST_FILE_FOR_CATEGORY_NUMBER_OF_DOWNLOADS Time(s).</TD>
 													</TR>
 												</TABLE>
 											</CENTER><BR>
@@ -296,13 +296,13 @@ if ($_GET["FileID"] == "$_Application_Module_Member_Files_LIST_FILE_ID") {
  ============================================================================================================
 */
 
-if (!file_exists("./Upload/$_Application_Module_Member_Files_LIST_FILE_IMAGE")) {
+if (!file_exists("$_Application_Module_Member_Files_LIST_FILE_IMAGE")) {
 
 $_Application_Module_Member_Files_LIST_FILE_IMAGE					= "./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Icon/No_Image.$_GLOBAL_SYSTEM_IMAGE_EXTENSION";
 
 } else {
 
-$_Application_Module_Member_Files_LIST_FILE_IMAGE					= "./Upload/$_Application_Module_Member_Files_LIST_FILE_IMAGE";
+$_Application_Module_Member_Files_LIST_FILE_IMAGE					= "$_Application_Module_Member_Files_LIST_FILE_IMAGE";
 
 } // [ + ] IF: Internal Application: File Category Entry :: File Entry By ID :: Is: Activated
 
@@ -312,7 +312,7 @@ echo ("
 											<CENTER>
 												<TABLE WIDTH=\"100%\" CELLPADDING=\"0\" CELLSPACING=\"0\" BORDER=\"0\">
 													<TR>
-														<TD WIDTH=\"1%\" VALIGN=\"TOP\"><A HREF=\"$_Application_Module_Member_Files_LIST_FILE_IMAGE?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\"><IMG SRC=\"$_Application_Module_Member_Files_LIST_FILE_IMAGE?&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" TITLE=\"Expand Image :: $_Application_Module_Member_Files_LIST_FILE_TITLE\" WIDTH=\"110\" ALT=\"Expand Image :: $_Application_Module_Member_Files_LIST_FILE_IMAGE\" HEIGHT=\"110\"></A></TD>
+														<TD WIDTH=\"1%\" VALIGN=\"TOP\"><A HREF=\"$_Application_Module_Member_Files_LIST_FILE_IMAGE?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\"><IMG SRC=\"$_Application_Module_Member_Files_LIST_FILE_IMAGE?&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" TITLE=\"Expand Image :: $_Application_Module_Member_Files_LIST_FILE_TITLE\" WIDTH=\"110\" ALT=\"Expand Image :: $_Application_Module_Member_Files_LIST_FILE_IMAGE\" HEIGHT=\"110\" CLASS=\"MemberProfile\"></A></TD>
 														<TD WIDTH=\"99%\" VALIGN=\"TOP\"><B>File Description</B>:<BR>$_Application_Module_Member_Files_LIST_FILE_DESCRIPTION</TD>
 													</TR>
 												</TABLE>
