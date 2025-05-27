@@ -372,22 +372,58 @@ if (filesize($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE) > $_GLOBAL_
 /*
  ============================================================================================================
  +
- + Check For Successfully Uploaded File Type Defined In File Type Arrays
+ + Check For Successfully Uploaded File Type Defined In File Type Arrays :: Archive :: ZIP
  +
  ============================================================================================================
 */
 
 /*
  ============================================================================================================
- + IF: Successfully Uploaded File Type Defined In File Type Arrays :: Archive
+ + IF: Successfully Uploaded File Type Defined In File Type Arrays :: Archive :: ZIP
  ============================================================================================================
 */
 
-if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_ARCHIVE") {
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "zip") {
 
 $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Archive";
 
-} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive :: ZIP
+
+/*
+ ============================================================================================================
+ + IF: Successfully Uploaded File Type Defined In File Type Arrays :: Archive :: TAR
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "tar") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Archive";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive :: TAR
+
+/*
+ ============================================================================================================
+ + IF: Successfully Uploaded File Type Defined In File Type Arrays :: Archive :: TAR.GZ
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "tar.gz") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Archive";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive :: TAR.GZ
+
+/*
+ ============================================================================================================
+ + IF: Successfully Uploaded File Type Defined In File Type Arrays :: Archive :: RAR
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "rar") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Archive";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive :: RAR
 
 /*
  ============================================================================================================
@@ -501,6 +537,7 @@ if ($_Application_Module_Member_Upload_DB_Query_UPDATE_MEMBER) {
 if ($_Application_Module_Member_Upload_DB_Query_INSERT_FILE) {
 
 											echo ($_Application_Module_Member_Message_Upload_FILE_UPLOAD_SUCCESSFUL);
+											echo ("$_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE");
 
 } else {
 
