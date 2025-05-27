@@ -108,12 +108,26 @@ $_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[3]			= "bmp";
 $_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[4]			= "pdf";
 $_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[5]			= "zip";
 $_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[6]			= "rar";
-$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[7]			= "wmv";
-$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[8]			= "swf";
-$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[9]			= "wav";
-$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[10]			= "mp3";
-$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[11]			= "mov";
-$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[12]			= "wma";
+$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[7]			= "tar";
+$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[8]			= "tar.gz";
+$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[9]			= "wmv";
+$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[10]			= "swf";
+$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[11]			= "wav";
+$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[12]			= "mp3";
+$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[13]			= "mov";
+$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSIONS[14]			= "wma";
+
+/*
+ ============================================================================================================
+ + File Extensions :: Archive
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_EXECUTABLE		= array();
+$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_ARCHIVE[0]		= "zip";
+$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_ARCHIVE[1]		= "rar";
+$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_ARCHIVE[2]		= "tar";
+$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_ARCHIVE[3]		= "tar.gz";
 
 /*
  ============================================================================================================
@@ -375,6 +389,18 @@ if (filesize($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE) > $_GLOBAL_
  +
  ============================================================================================================
 */
+
+/*
+ ============================================================================================================
+ + IF: Successfully Uploaded File Type Defined In File Type Arrays :: Archive
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE_ARCHIVE") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Archive";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Archive
 
 /*
  ============================================================================================================
