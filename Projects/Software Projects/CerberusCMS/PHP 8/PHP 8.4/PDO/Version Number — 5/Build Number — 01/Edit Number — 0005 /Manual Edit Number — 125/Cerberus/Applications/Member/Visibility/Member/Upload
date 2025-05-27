@@ -82,7 +82,7 @@ $_Application_Module_Member_Upload_DB_Query_SELECT_CATEGORIES			= $_GLOBAL_DATAB
 */
 
 $_Application_Module_Member_Upload_MAXIMUM_UPLOAD_LIMIT_FILE			= $_GLOBAL_SYSTEM_UPLOAD_SIZE_PUBLIC_FILE_CATEGORIES / 1024;
-$_Application_Module_Member_Upload_MAXIMUM_UPLOAD_LIMIT_FILE_IMAGE		= $_GLOBAL_SYSTEM_UPLOAD_SIZE_PUBLIC_FILE_CATEGORIES / $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_IMAGE;
+$_Application_Module_Member_Upload_MAXIMUM_UPLOAD_LIMIT_FILE_IMAGE		= $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_IMAGE / 1024;
 
 /*
  ============================================================================================================
