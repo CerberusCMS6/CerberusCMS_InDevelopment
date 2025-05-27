@@ -641,6 +641,54 @@ $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Uploa
 
 /*
  ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Image :: JPEG
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "jpeg") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Image";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Image :: JPEG
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Image :: PNG
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "png") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Image";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Image :: PNG
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Image :: gif
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "gif") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Image";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Image :: GIF
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Image :: PNG
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "png") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Image";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Image :: PNG
+
+/*
+ ============================================================================================================
  +
  + IF: Uploaded File :: File Extension :: Type :: Is: Video
  +
@@ -649,15 +697,123 @@ $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Uploa
 
 /*
  ============================================================================================================
- + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Video
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Video :: MP4
  ============================================================================================================
 */
 
-if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_VIDEO") {
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "mp4") {
 
 $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Video";
 
-} // [ + ] IF: Successfully Uploaded File Extension Type Is: Video
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Image :: MP4
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Video :: MOV
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "mov") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Video";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Image :: MOV
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Video :: WMV
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "wmv") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Video";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Image :: WMV
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Video :: AVI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "avi") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Video";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Image :: AVI
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Video :: flv
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "flv") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Video";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Image :: FLV
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Video :: SWF
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "swf") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Video";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Image :: SWF
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Video :: WEBM
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "webm") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Video";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Image :: WEBM
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Video :: QT
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "qt") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Video";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Image :: QT
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Video :: AVI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "mpeg") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Video";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Image :: MPEG
+
+/*
+ ============================================================================================================
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Video :: MPG
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "mpg") {
+
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Video";
+
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Image :: MPG
 
 /*
  ============================================================================================================
@@ -669,15 +825,15 @@ $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Uploa
 
 /*
  ============================================================================================================
- + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Executable
+ + IF: Uploaded File :: Extension Type :: Is: Defined In File Extension Type Arrays :: AS :: Executable :: EXE
  ============================================================================================================
 */
 
-if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "$_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_EXECUTABLE") {
+if ($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE == "exe") {
 
-$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Executable";
+$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Upload/Video";
 
-} // [ + ] IF: Successfully Uploaded File Extension Type Is: Executable
+} // [ + ] IF: Successfully Uploaded File Extension Type Is: Image :: EXE
 
 /*
  ============================================================================================================
