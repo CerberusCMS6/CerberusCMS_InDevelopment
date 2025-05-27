@@ -208,8 +208,10 @@ $_Application_Module_Member_Upload_ALLOWED_FILE_EXTENSION_VIDEO[9]		= "mpg";
 
 $_Application_Module_Member_Upload_FILE_PATHINFO_FILE 				= pathinfo($_FILES['AMM_Upload_File_Name_File']['name']);
 $_Application_Module_Member_Upload_FILE_PATHINFO_IMAGE 				= pathinfo($_FILES['AMM_Upload_File_Name_Image']['name']);
+
 $_Application_Module_Member_Upload_EXTENSION_FILE 				= $_Application_Module_Member_Upload_FILE_PATHINFO_FILE['extension'];
 $_Application_Module_Member_Upload_EXTENSION_IMAGE 				= $_Application_Module_Member_Upload_FILE_PATHINFO_IMAGE['extension'];
+
 $_Application_Module_Member_Upload_BASENAME_FILE 				= $_Application_Module_Member_Upload_FILE_PATHINFO_FILE['basename'];
 $_Application_Module_Member_Upload_BASENAME_IMAGE 				= $_Application_Module_Member_Upload_FILE_PATHINFO_IMAGE['basename'];
 
@@ -358,7 +360,7 @@ if ($_Application_Module_Member_Upload_PREPARE_FILE == "1") {
  ============================================================================================================
 */
 
-if (file_exists("./Upload/$_Application_Module_Member_Upload_BASENAME_FILE") || file_exists("./Upload/$_Application_Module_Member_Upload_BASENAME_IMAGE")) {
+if (file_exists("./Temporary/Upload/$_Application_Module_Member_Upload_BASENAME_FILE") || file_exists("./Temporary/Upload/$_Application_Module_Member_Upload_BASENAME_IMAGE")) {
 
 											echo ($_Application_Module_Member_Message_Upload_FILE_EXISTS_ERROR);
 
@@ -375,8 +377,8 @@ if (file_exists("./Upload/$_Application_Module_Member_Upload_BASENAME_FILE") || 
 
 if (filesize($_Application_Module_Member_Upload_SPECIFY_UPLOAD_FILE) > $_GLOBAL_SYSTEM_UPLOAD_SIZE_PUBLIC_FILE_CATEGORIES || filesize($_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_IMAGE) > 15000000) {
 
-											unlink("./Temporary/$_Application_Module_Member_Upload_BASENAME_FILE");
-											unlink("./Temporary/$_Application_Module_Member_Upload_BASENAME_IMAGE");
+											unlink("./Temporary/Upload/$_Application_Module_Member_Upload_BASENAME_FILE");
+											unlink("./Temporary/Upload/$_Application_Module_Member_Upload_BASENAME_IMAGE");
 
 											echo ($_Application_Module_Member_Message_Upload_FILE_TOO_LARGE);
 
@@ -474,7 +476,7 @@ $_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE	= "./Uploa
 											unlink("./Temporary/Upload/$_Application_Module_Member_Upload_BASENAME_FILE");
 											unlink("./Temporary/Upload/$_Application_Module_Member_Upload_BASENAME_IMAGE");
 
-$_Application_Module_Member_Upload_DB_Query_INSERT_FILE				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_files(file_author,file_category,file_description,file_image,file_location,file_number_of_downloads,file_time,file_title,file_uploader)VALUES('$_Application_Module_Member_Upload_POST_FILE_AUTHOR','$_Application_Module_Member_Upload_POST_FILE_CATEGORY','$_Application_Module_Member_Upload_POST_FILE_DATA','$_Application_Module_Member_Upload_BASENAME_IMAGE','$_Application_Module_Member_Upload_BASENAME_FILE','0','$_GLOBAL_LOCAL_SERVER_DATE_STANDARD','$_Application_Module_Member_Upload_POST_FILE_TITLE','$_GLOBAL_COOKIE_MEMBER_USERNAME')");
+$_Application_Module_Member_Upload_DB_Query_INSERT_FILE				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_files(file_author,file_category,file_description,file_image,file_location,file_number_of_downloads,file_time,file_title,file_uploader)VALUES('$_Application_Module_Member_Upload_POST_FILE_AUTHOR','$_Application_Module_Member_Upload_POST_FILE_CATEGORY','$_Application_Module_Member_Upload_POST_FILE_DATA','./Upload/Default/$_Application_Module_Member_Upload_BASENAME_IMAGE','$_Application_Module_Member_Upload_SPECIFY_UPLOAD_DIRECTORY_FILE_TYPE/$_Application_Module_Member_Upload_BASENAME_FILE','0','$_GLOBAL_LOCAL_SERVER_DATE_STANDARD','$_Application_Module_Member_Upload_POST_FILE_TITLE','$_GLOBAL_COOKIE_MEMBER_USERNAME')");
 
 /*
  ============================================================================================================
@@ -527,8 +529,8 @@ if ($_Application_Module_Member_Upload_DB_Query_INSERT_FILE) {
 
 } else {
 
-											unlink("./Temporary/$_Application_Module_Member_Upload_BASENAME_FILE");
-											unlink("./Temporary/$_Application_Module_Member_Upload_BASENAME_IMAGE");
+											unlink("./Temporary/Upload/$_Application_Module_Member_Upload_BASENAME_FILE");
+											unlink("./Temporary/Upload/$_Application_Module_Member_Upload_BASENAME_IMAGE");
 
 											echo ($_Application_Module_Member_Message_Upload_FILE_EXTENSION_ERROR);
 } // [ + ] IF: Prepared Files Are Allowed
