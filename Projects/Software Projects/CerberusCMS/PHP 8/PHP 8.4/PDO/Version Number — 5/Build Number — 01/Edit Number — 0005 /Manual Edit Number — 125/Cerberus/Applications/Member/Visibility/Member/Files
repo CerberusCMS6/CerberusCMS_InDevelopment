@@ -408,7 +408,7 @@ if (!file_exists("$_Application_Module_Member_Files_LIST_FILE_LOCATION")) {
 $_Application_Module_Member_Files_DB_Query_SELECT_COMMENTS 				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_comments WHERE comment_application_id='$_Application_Module_Member_Files_LIST_FILE_ID' AND comment_application_name='FILES'");
 $_Application_Module_Member_Files_DB_Query_SELECT_COMMENTS_NUMBER_OF_ROWS		= $_Application_Module_Member_Files_DB_Query_SELECT_COMMENTS->num_rows;
 
-											echo ("<CENTER>&nbsp;</CENTER><CENTER>&nbsp;</CENTER><CENTER><B>[ <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Files&amp;FileID&#61;$_Application_Module_Member_Files_LIST_FILE_ID&amp;Display&#61;Comment_Field&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Comment On The File Entry :: $_Application_Module_Member_Files_LIST_FILE_TITLE\">Comments</A> ]</B></CENTER><HR><CENTER>&nbsp;</CENTER>");
+											echo ("<HR ALIGN=\"CENTER\" WIDTH=\"50%\"><CENTER><B>[ <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Files&amp;FileID&#61;$_Application_Module_Member_Files_LIST_FILE_ID&amp;Display&#61;Comment_Field&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Comment On The File Entry :: $_Application_Module_Member_Files_LIST_FILE_TITLE\">Comments</A> ]</B></CENTER><HR ALIGN=\"CENTER\" WIDTH=\"50%\">");
 
 /*
  ============================================================================================================
