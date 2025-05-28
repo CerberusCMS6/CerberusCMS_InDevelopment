@@ -1,0 +1,1420 @@
+<?php
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    () ()()() --- ()
+ +  ()  () () ()()()
+ +  ------------------------------
+ +  Administration-Level Application Module
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Root Directory => Applications => Administration => Themes
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|6|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ +
+ + [ ^ ] Application Module :: Administration :: Themes
+ +
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ + System Settings :: Update Form :: Themes :: Variables :: Post Variables
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_144PI				= $_POST['AMA_Themes_Update_Directory_Theme_144PI'];
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_240PI				= $_POST['AMA_Themes_Update_Directory_Theme_240PI'];
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_340PI				= $_POST['AMA_Themes_Update_Directory_Theme_340PI'];
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_480PI				= $_POST['AMA_Themes_Update_Directory_Theme_480PI'];
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_520PI				= $_POST['AMA_Themes_Update_Directory_Theme_520PI'];
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_640PI				= $_POST['AMA_Themes_Update_Directory_Theme_640PI'];
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_720PI				= $_POST['AMA_Themes_Update_Directory_Theme_720PI'];
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_1080PI				= $_POST['AMA_Themes_Update_Directory_Theme_1080PI'];
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_2040PI				= $_POST['AMA_Themes_Update_Directory_Theme_2040PI'];
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_2160PI				= $_POST['AMA_Themes_Update_Directory_Theme_2160PI'];
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_4K				= $_POST['AMA_Themes_Update_Directory_Theme_4K'];
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_8K				= $_POST['AMA_Themes_Update_Directory_Theme_8K'];
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_16K				= $_POST['AMA_Themes_Update_Directory_Theme_16K'];
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_32K				= $_POST['AMA_Themes_Update_Directory_Theme_32K'];
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_VIDEO_RESOLUTION			= $_POST['AMA_Themes_Update_Directory_Theme_Video_Resolution'];
+
+echo ("
+														<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
+															System :: Settings :: Default Theme Directory
+														<HR ALIGN=\"LEFT\" WIDTH=\"40%\"><BR>
+																Theme Video Resolution :: Progressive / Interlaced :: 144<BR>
+														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Themes&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+																<SELECT NAME=\"AMA_Themes_Update_Directory_Theme_144PI\">
+");
+
+/*
+ ============================================================================================================
+ + Update :: Default System Theme Directory :: Video Resolution :: 144PI
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_144PI						= "./Theme/144PI";
+$_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_144PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_144PI);
+
+while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_144PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_144PI))) {
+
+if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_144PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_144PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_144PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_144PI == "Global") {
+/**
+ * Do Nothing
+**/
+} else {
+
+																	echo ("<OPTION VALUE=\"$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_144PI\">$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_144PI</OPTION>");
+
+} // [ + ] IF: Theme Directory IS NOT Specified Files AND Directory
+
+} // [ + ] WHILE: Reading Specified Theme Directory And Files
+
+/*
+ ============================================================================================================
+ + Close :: Directory: System Theme Directory :: 144PI
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_144PI);
+
+/*
+ ============================================================================================================
+ + SET :: Specified Theme Directory
+ ============================================================================================================
+*/
+
+echo ("
+														</SELECT><BR>
+														<INPUT TYPE=\"submit\" VALUE=\"Set Theme Directory\">
+													</FORM><BR><BR>
+");
+
+echo ("
+																Theme Video Resolution :: Progressive / Interlaced :: 240<BR>
+														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Themes&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+																<SELECT NAME=\"AMA_Themes_Update_Directory_Theme_240PI\">
+");
+
+/*
+ ============================================================================================================
+ + Update :: Default System Theme Directory :: Video Resolution :: 240PI
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_240PI						= "./Theme/240PI";
+$_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_240PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_240PI);
+
+while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_240PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_240PI))) {
+
+if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_240PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_240PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_240PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_240PI == "Global") {
+/**
+ * Do Nothing
+**/
+} else {
+
+																	echo ("<OPTION VALUE=\"$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_240PI\">$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_240PI</OPTION>");
+
+} // [ + ] IF: Theme Directory IS NOT Specified Files AND Directory
+
+} // [ + ] WHILE: Reading Specified Theme Directory And Files
+
+/*
+ ============================================================================================================
+ + Close :: Directory: System Theme Directory :: 240PI
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_240PI);
+
+/*
+ ============================================================================================================
+ + SET :: Specified Theme Directory
+ ============================================================================================================
+*/
+
+echo ("
+														</SELECT><BR>
+														<INPUT TYPE=\"submit\" VALUE=\"Set Theme Directory\">
+													</FORM><BR><BR>
+");
+
+echo ("
+
+																Theme Video Resolution :: Progressive / Interlaced :: 340<BR>
+														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Themes&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+																<SELECT NAME=\"AMA_Themes_Update_Directory_Theme_340PI\">
+");
+
+/*
+ ============================================================================================================
+ + Update :: Default System Theme Directory :: Video Resolution :: 340PI
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_340PI						= "./Theme/340PI";
+$_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_340PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_340PI);
+
+while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_340PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_340PI))) {
+
+if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_340PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_340PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_340PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_340PI == "Global") {
+/**
+ * Do Nothing
+**/
+} else {
+
+																	echo ("<OPTION VALUE=\"$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_340PI\">$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_340PI</OPTION>");
+
+} // [ + ] IF: Theme Directory IS NOT Specified Files AND Directory
+
+} // [ + ] WHILE: Reading Specified Theme Directory And Files
+
+/*
+ ============================================================================================================
+ + Close :: Directory: System Theme Directory :: 340PI
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_340PI);
+
+/*
+ ============================================================================================================
+ + SET :: Specified Theme Directory
+ ============================================================================================================
+*/
+
+echo ("
+														</SELECT><BR>
+														<INPUT TYPE=\"submit\" VALUE=\"Set Theme Directory\">
+													</FORM><BR><BR>
+");
+
+echo ("
+
+																Theme Video Resolution :: Progressive / Interlaced :: 480<BR>
+														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Themes&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+																<SELECT NAME=\"AMA_Themes_Update_Directory_Theme_480PI\">
+");
+
+/*
+ ============================================================================================================
+ + Update :: Default System Theme Directory :: Video Resolution :: 480PI
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_480PI						= "./Theme/480PI";
+$_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_480PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_480PI);
+
+while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_480PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_480PI))) {
+
+if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_480PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_480PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_480PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_480PI == "Global") {
+/**
+ * Do Nothing
+**/
+} else {
+
+																	echo ("<OPTION VALUE=\"$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_480PI\">$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_480PI</OPTION>");
+
+} // [ + ] IF: Theme Directory IS NOT Specified Files AND Directory
+
+} // [ + ] WHILE: Reading Specified Theme Directory And Files
+
+/*
+ ============================================================================================================
+ + Close :: Directory: System Theme Directory :: 480PI
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_480PI);
+
+/*
+ ============================================================================================================
+ + SET :: Specified Theme Directory
+ ============================================================================================================
+*/
+
+echo ("
+														</SELECT><BR>
+														<INPUT TYPE=\"submit\" VALUE=\"Set Theme Directory\">
+													</FORM><BR><BR>
+");
+
+echo ("
+
+																Theme Video Resolution :: Progressive / Interlaced :: 520<BR>
+														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Themes&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+																<SELECT NAME=\"AMA_Themes_Update_Directory_Theme_520PI\">
+");
+
+/*
+ ============================================================================================================
+ + Update :: Default System Theme Directory :: Video Resolution :: 520PI
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_520PI						= "./Theme/520PI";
+$_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_520PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_520PI);
+
+while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_520PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_520PI))) {
+
+if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_520PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_520PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_520PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_520PI == "Global") {
+/**
+ * Do Nothing
+**/
+} else {
+
+																	echo ("<OPTION VALUE=\"$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_520PI\">$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_520PI</OPTION>");
+
+} // [ + ] IF: Theme Directory IS NOT Specified Files AND Directory
+
+} // [ + ] WHILE: Reading Specified Theme Directory And Files
+
+/*
+ ============================================================================================================
+ + Close :: Directory: System Theme Directory :: 520PI
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_520PI);
+
+/*
+ ============================================================================================================
+ + SET :: Specified Theme Directory
+ ============================================================================================================
+*/
+
+echo ("
+														</SELECT><BR>
+														<INPUT TYPE=\"submit\" VALUE=\"Set Theme Directory\">
+													</FORM><BR><BR>
+");
+
+echo ("
+
+																Theme Video Resolution :: Progressive / Interlaced :: 640<BR>
+														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Themes&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+																<SELECT NAME=\"AMA_Themes_Update_Directory_Theme_640PI\">
+");
+
+/*
+ ============================================================================================================
+ + Update :: Default System Theme Directory :: Video Resolution :: 640PI
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_640PI						= "./Theme/640PI";
+$_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_640PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_640PI);
+
+while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_640PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_640PI))) {
+
+if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_640PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_640PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_640PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_640PI == "Global") {
+/**
+ * Do Nothing
+**/
+} else {
+
+																	echo ("<OPTION VALUE=\"$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_640PI\">$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_640PI</OPTION>");
+
+} // [ + ] IF: Theme Directory IS NOT Specified Files AND Directory
+
+} // [ + ] WHILE: Reading Specified Theme Directory And Files
+
+/*
+ ============================================================================================================
+ + Close :: Directory: System Theme Directory :: 640PI
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_640PI);
+
+/*
+ ============================================================================================================
+ + SET :: Specified Theme Directory
+ ============================================================================================================
+*/
+
+echo ("
+														</SELECT><BR>
+														<INPUT TYPE=\"submit\" VALUE=\"Set Theme Directory\">
+													</FORM><BR><BR>
+");
+
+echo ("
+
+																Theme Video Resolution :: Progressive / Interlaced :: 720<BR>
+														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Themes&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+																<SELECT NAME=\"AMA_Themes_Update_Directory_Theme_720PI\">
+");
+
+/*
+ ============================================================================================================
+ + Update :: Default System Theme Directory :: Video Resolution :: 720PI
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_720PI						= "./Theme/720PI";
+$_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_720PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_720PI);
+
+while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_720PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_720PI))) {
+
+if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_720PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_720PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_720PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_720PI == "Global") {
+/**
+ * Do Nothing
+**/
+} else {
+
+																	echo ("<OPTION VALUE=\"$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_720PI\">$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_720PI</OPTION>");
+
+} // [ + ] IF: Theme Directory IS NOT Specified Files AND Directory
+
+} // [ + ] WHILE: Reading Specified Theme Directory And Files
+
+/*
+ ============================================================================================================
+ + Close :: Directory: System Theme Directory :: 720PI
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_720PI);
+
+/*
+ ============================================================================================================
+ + SET :: Specified Theme Directory
+ ============================================================================================================
+*/
+
+echo ("
+														</SELECT><BR>
+														<INPUT TYPE=\"submit\" VALUE=\"Set Theme Directory\">
+													</FORM><BR><BR>
+");
+
+echo ("
+
+																Theme Video Resolution :: Progressive / Interlaced :: 1080<BR>
+														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Themes&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+																<SELECT NAME=\"AMA_Themes_Update_Directory_Theme_1080PI\">
+");
+
+/*
+ ============================================================================================================
+ + Update :: Default System Theme Directory :: Video Resolution :: 1080PI
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_1080PI						= "./Theme/1080PI";
+$_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_1080PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_1080PI);
+
+while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_1080PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_1080PI))) {
+
+if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_1080PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_1080PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_1080PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_1080PI == "Global") {
+/**
+ * Do Nothing
+**/
+} else {
+
+																	echo ("<OPTION VALUE=\"$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_1080PI\">$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_1080PI</OPTION>");
+
+} // [ + ] IF: Theme Directory IS NOT Specified Files AND Directory
+
+} // [ + ] WHILE: Reading Specified Theme Directory And Files
+
+/*
+ ============================================================================================================
+ + Close :: Directory: System Theme Directory :: 1080PI
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_1080PI);
+
+/*
+ ============================================================================================================
+ + SET :: Specified Theme Directory
+ ============================================================================================================
+*/
+
+echo ("
+														</SELECT><BR>
+														<INPUT TYPE=\"submit\" VALUE=\"Set Theme Directory\">
+													</FORM><BR><BR>
+");
+
+echo ("
+
+																Theme Video Resolution :: Progressive / Interlaced :: 2040<BR>
+														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Themes&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+																<SELECT NAME=\"AMA_Themes_Update_Directory_Theme_2040PI\">
+");
+
+/*
+ ============================================================================================================
+ + Update :: Default System Theme Directory :: Video Resolution :: 2040PI
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_2040PI						= "./Theme/2040PI";
+$_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_2040PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_2040PI);
+
+while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2040PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_2040PI))) {
+
+if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2040PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2040PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2040PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2040PI == "Global") {
+/**
+ * Do Nothing
+**/
+} else {
+
+																	echo ("<OPTION VALUE=\"$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2040PI\">$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2040PI</OPTION>");
+
+} // [ + ] IF: Theme Directory IS NOT Specified Files AND Directory
+
+} // [ + ] WHILE: Reading Specified Theme Directory And Files
+
+/*
+ ============================================================================================================
+ + Close :: Directory: System Theme Directory :: 2040PI
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_2040PI);
+
+/*
+ ============================================================================================================
+ + SET :: Specified Theme Directory
+ ============================================================================================================
+*/
+
+echo ("
+														</SELECT><BR>
+														<INPUT TYPE=\"submit\" VALUE=\"Set Theme Directory\">
+													</FORM><BR><BR>
+");
+
+echo ("
+
+																Theme Video Resolution :: Progressive / Interlaced :: 2160<BR>
+														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Themes&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+																<SELECT NAME=\"AMA_Themes_Update_Directory_Theme_2160PI\">
+");
+
+/*
+ ============================================================================================================
+ + Update :: Default System Theme Directory :: Video Resolution :: 2160PI
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_2160PI						= "./Theme/2160PI";
+$_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_2160PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_2160PI);
+
+while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2160PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_2160PI))) {
+
+if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2160PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2160PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2160PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2160PI == "Global") {
+/**
+ * Do Nothing
+**/
+} else {
+
+																	echo ("<OPTION VALUE=\"$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2160PI\">$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2160PI</OPTION>");
+
+} // [ + ] IF: Theme Directory IS NOT Specified Files AND Directory
+
+} // [ + ] WHILE: Reading Specified Theme Directory And Files
+
+/*
+ ============================================================================================================
+ + Close :: Directory: System Theme Directory :: 2160PI
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_2160PI);
+
+/*
+ ============================================================================================================
+ + SET :: Specified Theme Directory
+ ============================================================================================================
+*/
+
+echo ("
+														</SELECT><BR>
+														<INPUT TYPE=\"submit\" VALUE=\"Set Theme Directory\">
+													</FORM><BR><BR>
+");
+
+echo ("
+
+																Theme Video Resolution :: Progressive / Interlaced :: 4K<BR>
+														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Themes&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+																<SELECT NAME=\"AMA_Themes_Update_Directory_Theme_4K\">
+");
+
+/*
+ ============================================================================================================
+ + Update :: Default System Theme Directory :: Video Resolution :: 4K
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_4K						= "./Theme/4K";
+$_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_4K						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_4K);
+
+while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_4K	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_4K))) {
+
+if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_4K == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_4K == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_4K == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_4K == "Global") {
+/**
+ * Do Nothing
+**/
+} else {
+
+																	echo ("<OPTION VALUE=\"$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_4K\">$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_4K</OPTION>");
+
+} // [ + ] IF: Theme Directory IS NOT Specified Files AND Directory
+
+} // [ + ] WHILE: Reading Specified Theme Directory And Files
+
+/*
+ ============================================================================================================
+ + Close :: Directory: System Theme Directory :: 4K
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_4K);
+
+/*
+ ============================================================================================================
+ + SET :: Specified Theme Directory
+ ============================================================================================================
+*/
+
+echo ("
+														</SELECT><BR>
+														<INPUT TYPE=\"submit\" VALUE=\"Set Theme Directory\">
+													</FORM><BR><BR>
+");
+
+echo ("
+
+																Theme Video Resolution :: Progressive / Interlaced :: 8K<BR>
+														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Themes&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+																<SELECT NAME=\"AMA_Themes_Update_Directory_Theme_8K\">
+");
+
+/*
+ ============================================================================================================
+ + Update :: Default System Theme Directory :: Video Resolution :: 8K
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_8K						= "./Theme/8K";
+$_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_8K						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_8K);
+
+while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_8K	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_8K))) {
+
+if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_8K == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_8K == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_8K == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_8K == "Global") {
+/**
+ * Do Nothing
+**/
+} else {
+
+																	echo ("<OPTION VALUE=\"$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_8K\">$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_8K</OPTION>");
+
+} // [ + ] IF: Theme Directory IS NOT Specified Files AND Directory
+
+} // [ + ] WHILE: Reading Specified Theme Directory And Files
+
+/*
+ ============================================================================================================
+ + Close :: Directory: System Theme Directory :: 8K
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_8K);
+
+/*
+ ============================================================================================================
+ + SET :: Specified Theme Directory
+ ============================================================================================================
+*/
+
+echo ("
+														</SELECT><BR>
+														<INPUT TYPE=\"submit\" VALUE=\"Set Theme Directory\">
+													</FORM><BR><BR>
+");
+
+echo ("
+
+																Theme Video Resolution :: Progressive / Interlaced :: 16K<BR>
+														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Themes&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+																<SELECT NAME=\"AMA_Themes_Update_Directory_Theme_16K\">
+");
+
+
+/*
+ ============================================================================================================
+ + Update :: Default System Theme Directory :: Video Resolution :: 16K
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_16K						= "./Theme/16K";
+$_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_16K						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_16K);
+
+while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_16K	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_16K))) {
+
+if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_16K == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_16K == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_16K == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_16K == "Global") {
+/**
+ * Do Nothing
+**/
+} else {
+
+																	echo ("<OPTION VALUE=\"$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_16K\">$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_16K</OPTION>");
+
+} // [ + ] IF: Theme Directory IS NOT Specified Files AND Directory
+
+} // [ + ] WHILE: Reading Specified Theme Directory And Files
+
+/*
+ ============================================================================================================
+ + Close :: Directory: System Theme Directory :: 16K
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_16K);
+
+/*
+ ============================================================================================================
+ + SET :: Specified Theme Directory
+ ============================================================================================================
+*/
+
+echo ("
+														</SELECT><BR>
+														<INPUT TYPE=\"submit\" VALUE=\"Set Theme Directory\">
+													</FORM><BR><BR>
+");
+
+echo ("
+																Theme Video Resolution :: Progressive / Interlaced :: 32K<BR>
+														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Themes&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+																<SELECT NAME=\"AMA_Themes_Update_Directory_Theme_32K\">
+");
+
+
+/*
+ ============================================================================================================
+ + Update :: Default System Theme Directory :: Video Resolution :: 32K
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_32K						= "./Theme/32K";
+$_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_32K						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_32K);
+
+while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_32K	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_32K))) {
+
+if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_32K == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_32K == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_32K == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_32K == "Global") {
+/**
+ * Do Nothing
+**/
+} else {
+
+																	echo ("<OPTION VALUE=\"$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_32K\">$_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_32K</OPTION>");
+
+} // [ + ] IF: Theme Directory IS NOT Specified Files AND Directory
+
+} // [ + ] WHILE: Reading Specified Theme Directory And Files
+
+/*
+ ============================================================================================================
+ + Close :: Directory: System Theme Directory :: 32K
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_32K);
+
+/*
+ ============================================================================================================
+ + SET :: Specified Theme Directory
+ ============================================================================================================
+*/
+
+echo ("
+														</SELECT><BR>
+														<INPUT TYPE=\"submit\" VALUE=\"Set Theme Directory\">
+													</FORM><BR><BR>
+");
+
+echo ("
+														<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
+															System :: Default Theme Directory :: Video Resolution
+														<HR ALIGN=\"LEFT\" WIDTH=\"40%\"><BR>
+														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Themes&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+															<SELECT NAME=\"AMA_Themes_Update_Directory_Theme_Video_Resolution\" MAXLENGTH=\"25\">
+															<OPTION VALUE=\"144PI\">Progressive / Interlaced: 144</OPTION>
+															<OPTION VALUE=\"240PI\">Progressive / Interlaced: 240</OPTION>
+															<OPTION VALUE=\"340PI\">Progressive / Interlaced: 340</OPTION>
+															<OPTION VALUE=\"480PI\">Progressive / Interlaced: 480</OPTION>
+															<OPTION VALUE=\"520PI\">Progressive / Interlaced: 520</OPTION>
+															<OPTION VALUE=\"640PI\">Progressive / Interlaced: 640</OPTION>
+															<OPTION VALUE=\"720PI\">Progressive / Interlaced: 720</OPTION>
+															<OPTION VALUE=\"1080PI\">Progressive / Interlaced: 1080</OPTION>
+															<OPTION VALUE=\"2040PI\">Progressive / Interlaced: 2040</OPTION>
+															<OPTION VALUE=\"2140PI\">Progressive / Interlaced: 2140</OPTION>
+															<OPTION VALUE=\"4K\">Progressive / Interlaced: 4K</OPTION>
+															<OPTION VALUE=\"8K\">Progressive / Interlaced: 8K</OPTION>
+															<OPTION VALUE=\"16K\">Progressive / Interlaced: 16K</OPTION>
+															<OPTION VALUE=\"32K\">Progressive / Interlaced: 32K</OPTION>
+														</SELECT><BR>
+															<INPUT TYPE=\"submit\" VALUE=\"Update Theme Video Resolution\">
+														</FORM><BR>
+													Options Note: <I>This Option can be changed to force a custom default Graphical-User-Interface Theme.</I><BR><BR>
+");
+
+/*
+ ============================================================================================================
+ + IF: Input Form :: Update Theme Video Resolution :: Variables Have Executed, SET: Video Resolution Value :: 144PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_144PI) {
+
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME					= "$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_144PI";
+
+/*
+ ============================================================================================================
+ +
+ + Database Management System Server :: Database Query :: Update :: Settings :: Themes Video Resolution :: 144PI
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_settings SET 
+settings_system_directory_theme='$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_144PI'
+WHERE id='1'");
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server Query: Update :: Settings :: Themes :: 144PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS) {
+
+													echo ($_Application_Module_Administration_Message_Settings_SETTINGS_UPDATED_SUCCESSFULLY);
+
+} else {
+
+													echo ($_Message_ERROR_ACTION_UNIVERSAL);
+
+} // [ + ] IF: Database Management System Server :: Database Query: Update :: System Settings :: Themes :: Theme Video Resolution :: 144PI :: Variable Has Executed
+
+} // [ + ] IF: Application Module :: Administration :: Themes :: Input Form :: Update :: Themes :: Theme Video Resolution :: 144PI :: Variable Has Executed
+
+/*
+ ============================================================================================================
+ + IF: Input Form :: Update Theme Video Resolution :: Variables Have Executed, SET: Video Resolution Value :: 240PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_240PI) {
+
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME					= "$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_240PI";
+
+/*
+ ============================================================================================================
+ +
+ + Database Management System Server :: Database Query :: Update :: Settings :: Themes Video Resolution :: 240PI
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_settings SET 
+settings_system_directory_theme='$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_240PI'
+WHERE id='1'");
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server Query: Update :: Settings :: Themes :: 240PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS) {
+
+													echo ($_Application_Module_Administration_Message_Settings_SETTINGS_UPDATED_SUCCESSFULLY);
+
+} else {
+
+													echo ($_Message_ERROR_ACTION_UNIVERSAL);
+
+} // [ + ] IF: Database Management System Server :: Database Query: Update :: System Settings :: Themes :: Theme Video Resolution :: 240PI :: Variable Has Executed
+
+} // [ + ] IF: Application Module :: Administration :: Themes :: Input Form :: Update :: Themes :: Theme Video Resolution :: 240PI :: Variable Has Executed
+
+/*
+ ============================================================================================================
+ + IF: Input Form :: Update Theme Video Resolution :: Variables Have Executed, SET: Video Resolution Value :: 340PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_340PI) {
+
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME					= "$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_340PI";
+
+/*
+ ============================================================================================================
+ +
+ + Database Management System Server :: Database Query :: Update :: Settings :: Themes Video Resolution :: 340PI
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_settings SET 
+settings_system_directory_theme='$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_340PI'
+WHERE id='1'");
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server Query: Update :: Settings :: Themes :: 340PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS) {
+
+													echo ($_Application_Module_Administration_Message_Settings_SETTINGS_UPDATED_SUCCESSFULLY);
+
+} else {
+
+													echo ($_Message_ERROR_ACTION_UNIVERSAL);
+
+} // [ + ] IF: Database Management System Server :: Database Query: Update :: System Settings :: Themes :: Theme Video Resolution :: 340PI :: Variable Has Executed
+
+} // [ + ] IF: Application Module :: Administration :: Themes :: Input Form :: Update :: Themes :: Theme Video Resolution :: 340PI :: Variable Has Executed
+
+/*
+ ============================================================================================================
+ + IF: Input Form :: Update Theme Video Resolution :: Variables Have Executed, SET: Video Resolution Value :: 480PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_480PI) {
+
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME					= "$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_480PI";
+
+
+/*
+ ============================================================================================================
+ +
+ + Database Management System Server :: Database Query :: Update :: Settings :: Themes Video Resolution :: 480PI
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_settings SET 
+settings_system_directory_theme='$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_480PI'
+WHERE id='1'");
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server Query: Update :: Settings :: Themes :: 480PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS) {
+
+													echo ($_Application_Module_Administration_Message_Settings_SETTINGS_UPDATED_SUCCESSFULLY);
+
+} else {
+
+													echo ($_Message_ERROR_ACTION_UNIVERSAL);
+
+} // [ + ] IF: Database Management System Server :: Database Query: Update :: System Settings :: Themes :: Theme Video Resolution :: 480PI :: Variable Has Executed
+
+} // [ + ] IF: Application Module :: Administration :: Themes :: Input Form :: Update :: Themes :: Theme Video Resolution :: 480PI :: Variable Has Executed
+
+/*
+ ============================================================================================================
+ + IF: Input Form :: Update Theme Video Resolution :: Variables Have Executed, SET: Video Resolution Value :: 520PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_520PI) {
+
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME					= "$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_520PI";
+
+/*
+ ============================================================================================================
+ +
+ + Database Management System Server :: Database Query :: Update :: Settings :: Themes Video Resolution :: 520PI
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_settings SET 
+settings_system_directory_theme='$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_520PI'
+WHERE id='1'");
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server Query: Update :: Settings :: Themes :: 520PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS) {
+
+													echo ($_Application_Module_Administration_Message_Settings_SETTINGS_UPDATED_SUCCESSFULLY);
+
+} else {
+
+													echo ($_Message_ERROR_ACTION_UNIVERSAL);
+
+} // [ + ] IF: Database Management System Server :: Database Query: Update :: System Settings :: Themes :: Theme Video Resolution :: 520PI :: Variable Has Executed
+
+} // [ + ] IF: Application Module :: Administration :: Themes :: Input Form :: Update :: Themes :: Theme Video Resolution :: 520PI :: Variable Has Executed
+
+/*
+ ============================================================================================================
+ + IF: Input Form :: Update Theme Video Resolution :: Variables Have Executed, SET: Video Resolution Value :: 640PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_640PI) {
+
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME					= "$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_640PI";
+
+/*
+ ============================================================================================================
+ +
+ + Database Management System Server :: Database Query :: Update :: Settings :: Themes Video Resolution :: 640PI
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_settings SET 
+settings_system_directory_theme='$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_640PI'
+WHERE id='1'");
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server Query: Update :: Settings :: Themes :: 640PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS) {
+
+													echo ($_Application_Module_Administration_Message_Settings_SETTINGS_UPDATED_SUCCESSFULLY);
+
+} else {
+
+													echo ($_Message_ERROR_ACTION_UNIVERSAL);
+
+} // [ + ] IF: Database Management System Server :: Database Query: Update :: System Settings :: Themes :: Theme Video Resolution :: 640PI :: Variable Has Executed
+
+} // [ + ] IF: Application Module :: Administration :: Themes :: Input Form :: Update :: Themes :: Theme Video Resolution :: 640PI :: Variable Has Executed
+
+/*
+ ============================================================================================================
+ + IF: Input Form :: Update Theme Video Resolution :: Variables Have Executed, SET: Video Resolution Value :: 720PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_720PI) {
+
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME					= "$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_720PI";
+
+/*
+ ============================================================================================================
+ +
+ + Database Management System Server :: Database Query :: Update :: Settings :: Themes Video Resolution :: 720PI
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_settings SET 
+settings_system_directory_theme='$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_720PI'
+WHERE id='1'");
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server Query: Update :: Settings :: Themes :: 720PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS) {
+
+													echo ($_Application_Module_Administration_Message_Settings_SETTINGS_UPDATED_SUCCESSFULLY);
+
+} else {
+
+													echo ($_Message_ERROR_ACTION_UNIVERSAL);
+
+} // [ + ] IF: Database Management System Server :: Database Query: Update :: System Settings :: Themes :: Theme Video Resolution :: 720PI :: Variable Has Executed
+
+} // [ + ] IF: Application Module :: Administration :: Themes :: Input Form :: Update :: Themes :: Theme Video Resolution :: 720PI :: Variable Has Executed
+
+/*
+ ============================================================================================================
+ + IF: Input Form :: Update Theme Video Resolution :: Variables Have Executed, SET: Video Resolution Value :: 1080PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_1080PI) {
+
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME					= "$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_1080PI";
+
+/*
+ ============================================================================================================
+ +
+ + Database Management System Server :: Database Query :: Update :: Settings :: Themes Video Resolution :: 1080PI
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_settings SET 
+settings_system_directory_theme='$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_1080PI'
+WHERE id='1'");
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server Query: Update :: Settings :: Themes :: 1080PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS) {
+
+													echo ($_Application_Module_Administration_Message_Settings_SETTINGS_UPDATED_SUCCESSFULLY);
+
+} else {
+
+													echo ($_Message_ERROR_ACTION_UNIVERSAL);
+
+} // [ + ] IF: Database Management System Server :: Database Query: Update :: System Settings :: Themes :: Theme Video Resolution :: 1080PI :: Variable Has Executed
+
+} // [ + ] IF: Application Module :: Administration :: Themes :: Input Form :: Update :: Themes :: Theme Video Resolution :: 1080PI :: Variable Has Executed
+
+/*
+ ============================================================================================================
+ + IF: Input Form :: Update Theme Video Resolution :: Variables Have Executed, SET: Video Resolution Value :: 2040PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_2040PI) {
+
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME					= "$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_2040PI";
+
+/*
+ ============================================================================================================
+ +
+ + Database Management System Server :: Database Query :: Update :: Settings :: Themes Video Resolution :: 2040PI
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_settings SET 
+settings_system_directory_theme='$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_2040PI'
+WHERE id='1'");
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server Query: Update :: Settings :: Themes :: 2040PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS) {
+
+													echo ($_Application_Module_Administration_Message_Settings_SETTINGS_UPDATED_SUCCESSFULLY);
+
+} else {
+
+													echo ($_Message_ERROR_ACTION_UNIVERSAL);
+
+} // [ + ] IF: Database Management System Server :: Database Query: Update :: System Settings :: Themes :: Theme Video Resolution :: 2040PI :: Variable Has Executed
+
+} // [ + ] IF: Application Module :: Administration :: Themes :: Input Form :: Update :: Themes :: Theme Video Resolution :: 2040PI :: Variable Has Executed
+
+/*
+ ============================================================================================================
+ + IF: Input Form :: Update Theme Video Resolution :: Variables Have Executed, SET: Video Resolution Value :: 2160PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_2160PI) {
+
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME					= "$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_2160PI";
+
+/*
+ ============================================================================================================
+ +
+ + Database Management System Server :: Database Query :: Update :: Settings :: Themes Video Resolution :: 2160PI
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_settings SET 
+settings_system_directory_theme='$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_2160PI'
+WHERE id='1'");
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server Query: Update :: Settings :: Themes :: 2160PI
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS) {
+
+													echo ($_Application_Module_Administration_Message_Settings_SETTINGS_UPDATED_SUCCESSFULLY);
+
+} else {
+
+													echo ($_Message_ERROR_ACTION_UNIVERSAL);
+
+} // [ + ] IF: Database Management System Server :: Database Query: Update :: System Settings :: Themes :: Theme Video Resolution :: 2160PI :: Variable Has Executed
+
+} // [ + ] IF: Application Module :: Administration :: Themes :: Input Form :: Update :: Themes :: Theme Video Resolution :: 2160PI :: Variable Has Executed
+
+/*
+ ============================================================================================================
+ + IF: Input Form :: Update Theme Video Resolution :: Variables Have Executed, SET: Video Resolution Value :: 4K
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_4K) {
+
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME					= "$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_4K";
+
+/*
+ ============================================================================================================
+ +
+ + Database Management System Server :: Database Query :: Update :: Settings :: Themes Video Resolution :: 4K
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_settings SET 
+settings_system_directory_theme='$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_4K'
+WHERE id='1'");
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server Query: Update :: Settings :: Themes :: 4K
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS) {
+
+													echo ($_Application_Module_Administration_Message_Settings_SETTINGS_UPDATED_SUCCESSFULLY);
+
+} else {
+
+													echo ($_Message_ERROR_ACTION_UNIVERSAL);
+
+} // [ + ] IF: Database Management System Server :: Database Query: Update :: System Settings :: Themes :: Theme Video Resolution :: 4K :: Variable Has Executed
+
+} // [ + ] IF: Application Module :: Administration :: Themes :: Input Form :: Update :: Themes :: Theme Video Resolution :: 4K :: Variable Has Executed
+
+/*
+ ============================================================================================================
+ + IF: Input Form :: Update Theme Video Resolution :: Variables Have Executed, SET: Video Resolution Value :: 8K
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_8K) {
+
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME					= "$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_8K";
+
+/*
+ ============================================================================================================
+ +
+ + Database Management System Server :: Database Query :: Update :: Settings :: Themes Video Resolution :: 8K
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_settings SET 
+settings_system_directory_theme='$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_8K'
+WHERE id='1'");
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server Query: Update :: Settings :: Themes :: 8K
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS) {
+
+													echo ($_Application_Module_Administration_Message_Settings_SETTINGS_UPDATED_SUCCESSFULLY);
+
+} else {
+
+													echo ($_Message_ERROR_ACTION_UNIVERSAL);
+
+} // [ + ] IF: Database Management System Server :: Database Query: Update :: System Settings :: Themes :: Theme Video Resolution :: 8K :: Variable Has Executed
+
+} // [ + ] IF: Application Module :: Administration :: Themes :: Input Form :: Update :: Themes :: Theme Video Resolution :: 8K :: Variable Has Executed
+
+/*
+ ============================================================================================================
+ + IF: Input Form :: Update Theme Video Resolution :: Variables Have Executed, SET: Video Resolution Value :: 16K
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_16K) {
+
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME					= "$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_16K";
+
+/*
+ ============================================================================================================
+ +
+ + Database Management System Server :: Database Query :: Update :: Settings :: Themes Video Resolution :: 16K
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_settings SET 
+settings_system_directory_theme='$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_16K'
+WHERE id='1'");
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server Query: Update :: Settings :: Themes :: 16K
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS) {
+
+													echo ($_Application_Module_Administration_Message_Settings_SETTINGS_UPDATED_SUCCESSFULLY);
+
+} else {
+
+													echo ($_Message_ERROR_ACTION_UNIVERSAL);
+
+} // [ + ] IF: Database Management System Server :: Database Query: Update :: System Settings :: Themes :: Theme Video Resolution :: 16K :: Variable Has Executed
+
+} // [ + ] IF: Application Module :: Administration :: Themes :: Input Form :: Update :: Themes :: Theme Video Resolution :: 16K :: Variable Has Executed
+
+/*
+ ============================================================================================================
+ + IF: Input Form :: Update Theme Video Resolution :: Variables Have Executed, SET: Video Resolution Value :: 32K
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_32K) {
+
+$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME					= "$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_32K";
+
+/*
+ ============================================================================================================
+ +
+ + Database Management System Server :: Database Query :: Update :: Settings :: Themes Video Resolution :: 32K
+ +
+ ============================================================================================================
+*/
+
+$_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_settings SET 
+settings_system_directory_theme='$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_32K'
+WHERE id='1'");
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server Query: Update :: Settings :: Themes :: 32K
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS) {
+
+													echo ($_Application_Module_Administration_Message_Settings_SETTINGS_UPDATED_SUCCESSFULLY);
+
+} else {
+
+													echo ($_Message_ERROR_ACTION_UNIVERSAL);
+
+} // [ + ] IF: Database Management System Server :: Database Query: Update :: System Settings :: Themes :: Theme Video Resolution :: 32K :: Variable Has Executed
+
+} // [ + ] IF: Application Module :: Administration :: Themes :: Input Form :: Update :: Themes :: Theme Video Resolution :: 32K :: Variable Has Executed
+
+/*
+ ============================================================================================================
+ +
+ + Database Management System Server :: Database Query :: Update :: Settings :: Themes Video Resolution
+ +
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_VIDEO_RESOLUTION) {
+
+$_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_settings SET 
+settings_system_directory_theme_video_resolution='$_Application_Module_Administration_Themes_POST_UPDATE_DIRECTORY_THEME_VIDEO_RESOLUTION'
+WHERE id='1'");
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server Query: Update :: Settings :: Themes
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS) {
+
+													echo ($_Application_Module_Administration_Message_Settings_SETTINGS_UPDATED_SUCCESSFULLY);
+
+} else {
+
+													echo ($_Message_ERROR_ACTION_UNIVERSAL);
+
+} // [ + ] IF: Database Management System Server :: Database Query: Update :: System Settings :: Themes :: Theme Video Resolution :: Variable Has Executed
+
+} // [ + ] IF: Application Module :: Administration :: Themes :: Input Form :: Update :: Themes :: Theme Video Resolution :: Variable Has Executed
+
+/*
+ ============================================================================================================
+ + Kill SQL Database Server Query: Update System Settings :: Themes
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS->free_result();
+
+/*
+ ============================================================================================================
+ + Kill SQL Database Server Query: Select System Settings :: Themes
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Administration_Themes_DB_Query_SELECT_SETTINGS->free_result();
+?>
