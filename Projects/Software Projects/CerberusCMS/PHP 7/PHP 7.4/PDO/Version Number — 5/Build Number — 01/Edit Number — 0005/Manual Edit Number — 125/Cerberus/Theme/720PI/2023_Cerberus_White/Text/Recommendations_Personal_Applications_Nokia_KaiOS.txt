@@ -1,0 +1,8 @@
+- IMAGE PROCESSING
+* Facial Recognition
+* Human Identity Recognition
+* Image Recognition
+* License Plate Scanner
+
+- DISCOVERABILITY
+Discoverability
