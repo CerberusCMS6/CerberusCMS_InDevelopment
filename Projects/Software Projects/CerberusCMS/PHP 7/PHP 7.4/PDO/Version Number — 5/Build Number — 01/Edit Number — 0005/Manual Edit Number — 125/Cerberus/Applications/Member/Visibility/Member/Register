@@ -1,0 +1,1150 @@
+<?php
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    ()  ()  ()
+ +  ()  ()  ()
+ +  ------------------------------
+ +  Application Module
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Root Directory => Applications => Member => Register
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|6|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ +
+ + [ ^ ] Application Module :: Member :: Register
+ +
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Application Module Header
+ ============================================================================================================
+*/
+
+											echo ($_Application_Module_Member_Message_Register_Header);
+
+/*
+ ============================================================================================================
+ + IF: Valid Registered Member Account Credentials Exist :: Display Deny Registration Message
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null) {
+
+											echo ($_Application_Module_Member_Message_Register_REGISTRATION_ERROR_DENIED);
+
+/*
+ ============================================================================================================
+ + ELSE: Registered Member Account Credentials DO NOT Exist :: Display Member Registration Input Form
+ ============================================================================================================
+*/
+
+} else { // [ + ] [ 1 ] ELSE: Member Account UserName AND Password Are Not Null, Display Member Account Registration Form
+
+/*
+ ============================================================================================================
+ +
+ + Member Account :: Registration Form :: Variables
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Member Account Registration :: Set Random Keys
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Register_RANDOM_KEY 										= rand(1, 9999999999999);
+$_Application_Module_Member_Register_RANDOM_KEY_MD5 										= md5($_Application_Module_Member_Register_RANDOM_KEY);
+
+/*
+ ============================================================================================================
+ + Member Account Registration :: Set Recovery Keys
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Register_ACCOUNT_RECOVERY_KEY_1									= rand(10, 99);
+$_Application_Module_Member_Register_ACCOUNT_RECOVERY_KEY_2									= rand(10, 99);
+$_Application_Module_Member_Register_ACCOUNT_RECOVERY_KEY_3									= rand(10, 99);
+$_Application_Module_Member_Register_ACCOUNT_RECOVERY_KEY_4									= rand(10, 99);
+$_Application_Module_Member_Register_ACCOUNT_RECOVERY_KEY_5									= rand(10, 99);
+$_Application_Module_Member_Register_ACCOUNT_RECOVERY_KEY									= "$_Application_Module_Member_Register_ACCOUNT_RECOVERY_KEY_1 - $_Application_Module_Member_Register_ACCOUNT_RECOVERY_KEY_2 - $_Application_Module_Member_Register_ACCOUNT_RECOVERY_KEY_3 - $_Application_Module_Member_Register_ACCOUNT_RECOVERY_KEY_4 - $_Application_Module_Member_Register_ACCOUNT_RECOVERY_KEY_5";
+
+/*
+ ============================================================================================================
+ + Member Account Registration :: Pictographs
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Register_RANDOM_PICTOGRPAH_1									= rand(1, 5);
+$_Application_Module_Member_Register_RANDOM_PICTOGRPAH_2									= rand(1, 5);
+$_Application_Module_Member_Register_RANDOM_PICTOGRPAH_3									= rand(1, 5);
+$_Application_Module_Member_Register_RANDOM_PICTOGRPAH_4									= rand(1, 5);
+$_Application_Module_Member_Register_RANDOM_PICTOGRPAH_5									= rand(1, 5);
+
+$_Application_Module_Member_Register_POST_REGISTRAR_ACCOUNT_RECOVERY_PICTOGRAPH_1						= "<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Pictographs/Pictograph_$_Application_Module_Member_Register_RANDOM_PICTOGRPAH_1.$_GLOBAL_SYSTEM_IMAGE_EXTENSION?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"75\" HEIGHT=\"75\" CLASS=\"AMMRegisterPictograph\" TITLE=\":: Random Pictograph 1 ::\"></IMG>&nbsp;&nbsp;&nbsp;&nbsp;";
+$_Application_Module_Member_Register_POST_REGISTRAR_ACCOUNT_RECOVERY_PICTOGRAPH_2						= "<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Pictographs/Pictograph_$_Application_Module_Member_Register_RANDOM_PICTOGRPAH_2.$_GLOBAL_SYSTEM_IMAGE_EXTENSION?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"75\" HEIGHT=\"75\" CLASS=\"AMMRegisterPictograph\" TITLE=\":: Random Pictograph 2 ::\"></IMG>&nbsp;&nbsp;&nbsp;&nbsp;";
+$_Application_Module_Member_Register_POST_REGISTRAR_ACCOUNT_RECOVERY_PICTOGRAPH_3						= "<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Pictographs/Pictograph_$_Application_Module_Member_Register_RANDOM_PICTOGRPAH_3.$_GLOBAL_SYSTEM_IMAGE_EXTENSION?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"75\" HEIGHT=\"75\" CLASS=\"AMMRegisterPictograph\" TITLE=\":: Random Pictograph 3 ::\"></IMG>&nbsp;&nbsp;&nbsp;&nbsp;";
+$_Application_Module_Member_Register_POST_REGISTRAR_ACCOUNT_RECOVERY_PICTOGRAPH_4						= "<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Pictographs/Pictograph_$_Application_Module_Member_Register_RANDOM_PICTOGRPAH_4.$_GLOBAL_SYSTEM_IMAGE_EXTENSION?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"75\" HEIGHT=\"75\" CLASS=\"AMMRegisterPictograph\" TITLE=\":: Random Pictograph 4 ::\"></IMG>&nbsp;&nbsp;&nbsp;&nbsp;";
+$_Application_Module_Member_Register_POST_REGISTRAR_ACCOUNT_RECOVERY_PICTOGRAPH_5						= "<IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Pictographs/Pictograph_$_Application_Module_Member_Register_RANDOM_PICTOGRPAH_5.$_GLOBAL_SYSTEM_IMAGE_EXTENSION?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" WIDTH=\"75\" HEIGHT=\"75\" CLASS=\"AMMRegisterPictograph\" TITLE=\":: Random Pictograph 5 ::\"></IMG>&nbsp;&nbsp;&nbsp;&nbsp;";
+
+/*
+ ============================================================================================================
+ + Internal Security => String Santization :: Member Account Registration Form :: Variables :: Post Variables
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Register_POST_REGISTRAR_NAME_FIRST									= $_POST['AMM_Register_Registrar_First_Name'];
+$_Application_Module_Member_Register_POST_REGISTRAR_NAME_LAST									= $_POST['AMM_Register_Registrar_Last_Name'];
+$_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_ADDRESS							= $_POST['AMM_Register_Registrar_Electronic_Mail_Address'];
+$_Application_Module_Member_Register_POST_REGISTRAR_AGE_REQUIREMENT								= $_POST['AMM_Register_Registrar_Age_Requirement'];
+$_Application_Module_Member_Register_POST_REGISTRAR_BIRTHDATE									= $_POST['AMM_Register_Registrar_BirthDate'];
+$_Application_Module_Member_Register_POST_REGISTRAR_GENDER									= $_POST['AMM_Register_Registrar_Gender'];
+$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME									= $_POST['AMM_Register_Registrar_UserName'];
+$_Application_Module_Member_Register_POST_REGISTRAR_RANDOM_KEY									= $_POST['AMM_Register_Registrar_Random_Key'];
+$_Application_Module_Member_Register_POST_REGISTRAR_RANDOM_KEY_CHECK								= $_POST['AMM_Register_Registrar_Random_Key_Check'];
+$_Application_Module_Member_Register_POST_REGISTRAR_ACCOUNT_RECOVERY_KEY							= $_POST['AMM_Register_Registrar_Account_Recovery_Key'];
+
+/*
+ ============================================================================================================
+ + Internal Security => String Santization :: Member Account Registration Form :: Post Variables :: Replace Characters AND Strip Slashes
+ ============================================================================================================
+*/
+
+// Name :: Name, First
+$_Application_Module_Member_Register_POST_REGISTRAR_NAME_FIRST									= str_replace(".", "", $_Application_Module_Member_Register_POST_REGISTRAR_NAME_FIRST);
+$_Application_Module_Member_Register_POST_REGISTRAR_NAME_FIRST									= str_replace("`", "", $_Application_Module_Member_Register_POST_REGISTRAR_NAME_FIRST);
+$_Application_Module_Member_Register_POST_REGISTRAR_NAME_FIRST									= stripslashes($_Application_Module_Member_Register_POST_REGISTRAR_NAME_FIRST);
+
+// Name :: Name, Last
+$_Application_Module_Member_Register_POST_REGISTRAR_NAME_LAST									= str_replace(".", "", $_Application_Module_Member_Register_POST_REGISTRAR_NAME_LAST);
+$_Application_Module_Member_Register_POST_REGISTRAR_NAME_LAST									= str_replace("`", "", $_Application_Module_Member_Register_POST_REGISTRAR_NAME_LAST);
+$_Application_Module_Member_Register_POST_REGISTRAR_NAME_LAST									= stripslashes($_Application_Module_Member_Register_POST_REGISTRAR_NAME_LAST);
+
+// Electronic Mail Address
+$_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_ADDRESS							= str_replace("`", "", $_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_ADDRESS);
+$_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_ADDRESS							= stripslashes($_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_ADDRESS);
+
+// Name :: UserName
+$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME									= str_replace(".", "", $_Application_Module_Member_Register_POST_REGISTRAR_USERNAME);
+$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME									= str_replace("`", "", $_Application_Module_Member_Register_POST_REGISTRAR_USERNAME);
+$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME									= stripslashes($_Application_Module_Member_Register_POST_REGISTRAR_USERNAME);
+
+/*
+ ============================================================================================================
+ + Internal Security => Member Account Registration Form :: String Counting :: Variables :: Post Variables
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Register_GET_STRING_LENGTH_REGISTRAR_USERNAME							= strlen($_Application_Module_Member_Register_POST_REGISTRAR_USERNAME);
+
+/*
+ ============================================================================================================
+ + Internal Security => Convert :: Registration Strings To LowerCase Or UpperCase Characters
+ ============================================================================================================
+*/
+
+// Electronic Mail Address
+$_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_ADDRESS							= strtolower($_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_ADDRESS);
+
+// Name :: Name, First
+$_Application_Module_Member_Register_POST_REGISTRAR_NAME_FIRST									= strtolower($_Application_Module_Member_Register_POST_REGISTRAR_NAME_FIRST);
+$_Application_Module_Member_Register_POST_REGISTRAR_NAME_FIRST									= ucfirst($_Application_Module_Member_Register_POST_REGISTRAR_NAME_FIRST);
+
+// Name :: Name, Last
+$_Application_Module_Member_Register_POST_REGISTRAR_NAME_LAST									= strtolower($_Application_Module_Member_Register_POST_REGISTRAR_NAME_LAST);
+$_Application_Module_Member_Register_POST_REGISTRAR_NAME_LAST									= ucfirst($_Application_Module_Member_Register_POST_REGISTRAR_NAME_LAST);
+
+// Name :: UserName
+$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME									= strtolower($_Application_Module_Member_Register_POST_REGISTRAR_USERNAME);
+$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME									= ucfirst($_Application_Module_Member_Register_POST_REGISTRAR_USERNAME);
+
+/*
+ ============================================================================================================
+ + Member Account Registration Form :: Variables :: Random Password Generation
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Register_RANDOM_DIGITS 										= rand(1, 9999999999);
+$_Application_Module_Member_Register_POST_REGISTRAR_PASSWORD_HASHED								= password_hash($_Application_Module_Member_Register_RANDOM_DIGITS, PASSWORD_BCRYPT);
+
+/*
+ ============================================================================================================
+ +
+ + Member Account :: Registration :: Input Form
+ +
+ ============================================================================================================
+*/
+
+if (!$_Application_Module_Member_Register_POST_REGISTRAR_NAME_FIRST) {
+
+echo ("
+											<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<BIG><B>How will I benefit from Registering a Member Account ?</B></BIG><BR><BR>
+
+											<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<BIG><B>&middot;</B></BIG>&nbsp;You will be given access to restricted areas.<BR>
+												<BIG><B>&middot;</B></BIG>&nbsp;You will be given personal webspace where you can upload personal data such as: Audio, Documents, Images and Video with your very own personal website.<BR>
+												<BIG><B>&middot;</B></BIG>&nbsp;You will be given your very own and unique avatar, personal profile with rich features, profile rank and more !<BR><BR>
+
+											<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<BIG><B>Account Registration is completely free ! First you will become an Account Registrar and then you will become a Registered Member with a permanent Registered Member Account after activation.</B></BIG>
+											<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
+												<BR>
+
+											<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Register&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
+
+											<HR WIDTH=\"20%\" ALIGN=\"LEFT\">
+												<B>Registrar :: Personal Details</B>
+											<HR WIDTH=\"20%\" ALIGN=\"LEFT\">
+												* Registrar :: Name, First<BR>
+													<INPUT TYPE=\"text\" NAME=\"AMM_Register_Registrar_First_Name\" MAXLENGTH=\"50\"><BR><BR>
+
+												* Registrar :: Name, Last<BR>
+													<INPUT TYPE=\"text\" NAME=\"AMM_Register_Registrar_Last_Name\" MAXLENGTH=\"50\"><BR><BR>
+
+												* Registrar :: System Registration Age Requirement: $_GLOBAL_SYSTEM_SETTING_SECURITY_ACCOUNT_REGISTRATION_AGE_REQUIREMENT<BR>
+												* Registrar :: Current Age<BR>
+													<INPUT TYPE=\"number\" PLACEHOLDER=\"YY\" NAME=\"AMM_Register_Registrar_Age_Requirement\" MAXLENGTH=\"2\"><BR>
+											<B>Account Registration Note</B>: <I>The current system set age requirements to register a Member Account here is not less than: $_GLOBAL_SYSTEM_SETTING_SECURITY_ACCOUNT_REGISTRATION_AGE_REQUIREMENT years of age. How many years of age are you at this point-in-time ?</I><BR><BR>
+
+												* Registrar :: Birth-Date<BR>
+													<INPUT TYPE=\"date\" NAME=\"AMM_Register_Registrar_BirthDate\" MAXLENGTH=\"20\"><BR><BR>
+
+												* Registrar :: Gender<BR>
+													<SELECT NAME=\"AMM_Register_Registrar_Gender\">
+														<OPTION VALUE=\"0\">Non-Specified</OPTION>
+														<OPTION VALUE=\"1\">Male</OPTION>
+														<OPTION VALUE=\"2\">Female</OPTION>
+													</SELECT><BR><BR>
+
+											<HR WIDTH=\"20%\" ALIGN=\"LEFT\">
+												<B>Registrar :: Contact Details</B>
+											<HR WIDTH=\"20%\" ALIGN=\"LEFT\">
+												* Registrar :: Electronic Mail Address<BR>
+													<INPUT TYPE=\"text\" NAME=\"AMM_Register_Registrar_Electronic_Mail_Address\" MAXLENGTH=\"250\"><BR><BR>
+
+											<HR WIDTH=\"20%\" ALIGN=\"LEFT\">
+												<B>Registrar :: Authentication Details</B>
+											<HR WIDTH=\"20%\" ALIGN=\"LEFT\">
+												* Desired UserName:<BR>
+												-> Cannot contain the following characters: [ ] { } ! @ # $ % ^ & * ( ) | \ ; : ' '' < > , . ? /<BR>
+													<INPUT TYPE=\"text\" NAME=\"AMM_Register_Registrar_UserName\" MAXLENGTH=\"50\"><BR><BR>
+
+											<HR WIDTH=\"20%\" ALIGN=\"LEFT\">
+												<B>Registrar :: Account Recovery Details</B>
+											<HR WIDTH=\"20%\" ALIGN=\"LEFT\">
+												* Account Recovery Pictographs<BR>
+												$_Application_Module_Member_Register_POST_REGISTRAR_ACCOUNT_RECOVERY_PICTOGRAPH_1&nbsp;&nbsp;&nbsp;&nbsp;
+												$_Application_Module_Member_Register_POST_REGISTRAR_ACCOUNT_RECOVERY_PICTOGRAPH_2&nbsp;&nbsp;&nbsp;&nbsp;
+												$_Application_Module_Member_Register_POST_REGISTRAR_ACCOUNT_RECOVERY_PICTOGRAPH_3&nbsp;&nbsp;&nbsp;&nbsp;
+												$_Application_Module_Member_Register_POST_REGISTRAR_ACCOUNT_RECOVERY_PICTOGRAPH_4&nbsp;&nbsp;&nbsp;&nbsp;
+												$_Application_Module_Member_Register_POST_REGISTRAR_ACCOUNT_RECOVERY_PICTOGRAPH_5<BR>
+												<B>Account Registration Note</B>: <I>Memorize and or write down this Account Recovery Pictograph Pattern in order to recover this Member Account in the future.</I><BR><BR>
+												
+												* Account Recovery Key<BR>
+												<TEXTAREA COLS=\"50\" ROWS=\"10\" NAME=\"AMM_Register_Registrar_Account_Recovery_Key\">$_Application_Module_Member_Register_ACCOUNT_RECOVERY_KEY</TEXTAREA><BR>
+												<B>Account Registration Note</B>: <I>Memorize and or write down this Account Recovery Key in order to recover this Member Account in the future.</I><BR><BR>
+
+												* Prove that you are not a Robot by placing this Random String of Numbers into the next text field<BR>
+												Random Key: <B><I>$_Application_Module_Member_Register_RANDOM_KEY</I></B><BR>
+													<INPUT TYPE=\"number\" NAME=\"AMM_Register_Registrar_Random_Key\" MAXLENGTH=\"13\"><BR>
+													<INPUT TYPE=\"hidden\" NAME=\"AMM_Register_Registrar_Random_Key_Check\" VALUE=\"$_Application_Module_Member_Register_RANDOM_KEY\">
+													<INPUT TYPE=\"submit\" VALUE=\"Register Account\">
+											</FORM><BR>
+											<HR WIDTH=\"75%\" ALIGN=\"CENTER\">
+												<CENTER>By clicking or pressing on `Register` you now agree to this Web Site :: <A HREF=\"TOS-PP.txt\" TITLE=\":: Open & Display The :: Terms of Service &amp; Privacy Policy ::\">Terms of Service and Privacy Policy</A></CENTER>
+											<HR WIDTH=\"75%\" ALIGN=\"CENTER\">
+");
+
+/*
+ ============================================================================================================
+ + ELSE: Application Module :: Member :: Register :: Input Form Variables HAVE Executed, Proceed To Registration Procedure
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: Member Account Registration Form Variables Have Executed, Check Random Key
+
+/*
+ ============================================================================================================
+ + IF: Setting :: System :: Registration :: Age Requirement :: Is: LESS THAN Current Age Input, Deny Registration
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SYSTEM_SETTING_SECURITY_ACCOUNT_REGISTRATION_AGE_REQUIREMENT > $_Application_Module_Member_Register_POST_REGISTRAR_AGE_REQUIREMENT) {
+
+											echo ("$_Application_Module_Member_Message_Register_REGISTRATION_ERROR_AGE_REQUIREMENT<BR>");
+
+/*
+ ============================================================================================================
+ + ELSE: Setting :: System :: Registration :: Age Requirement :: Is: GREATER THAN OR EQUAL TO Current Age Input, Accept Registration Age Requirement
+ ============================================================================================================
+*/
+
+} else {
+
+/*
+ ============================================================================================================
+ + IF: Compare Random Key DOES NOT Match :: Halt Registration
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Register_POST_REGISTRAR_RANDOM_KEY != $_Application_Module_Member_Register_POST_REGISTRAR_RANDOM_KEY_CHECK) {
+
+											echo ("$_Application_Module_Member_Message_Register_REGISTRATION_ERROR_KEY<BR> Keys Provided:<BR> ---- $_Application_Module_Member_Register_POST_REGISTRAR_RANDOM_KEY<BR> ---- $_Application_Module_Member_Register_POST_REGISTRAR_RANDOM_KEY_CHECK");
+
+/*
+ ============================================================================================================
+ + ELSE: Random Key Comparison DOES Match :: Continue With Registration
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: Member Account Registration Form Random Key Variables Are The Same, Strip Harmful Characters From POST Data
+
+/*
+ ============================================================================================================
+ + Internal Security => Strip Characters From Variables :: Post Variables
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[0]				= "!";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[1]				= "@";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[2]				= "#";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[3]				= "$";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[4]				= "%";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[5]				= "^";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[6]				= "&";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[7]				= "*";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[8]				= "(";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[9]				= ")";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[10]				= "=";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[11]				= "{";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[12]				= "}";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[13]				= "[";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[14]				= "]";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[15]				= "|";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[16]				= "?";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[17]				= "<";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[18]				= ">";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[19]				= "'";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[20]				= "\"";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[21]				= "/";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[22]				= ".";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[23]				= ",";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[24]				= "+";
+$_Application_Module_Member_Register_POST_STRIP_CHARACTERS[25]				= " ";
+
+/*
+ ============================================================================================================
+ + IF: Registrar Electronic Mail Address Is Invalid: Does Not Contain @ Character :: Halt Registration
+ ============================================================================================================
+*/
+
+if (substr_count($_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_ADDRESS,"@") != 1) {
+
+											echo ($_Application_Module_Member_Message_Register_REGISTRATION_ERROR_INVALID_ELECTRONIC_MAIL_ADDRESS);
+
+/*
+ ============================================================================================================
+ + ELSE: Registrar Electronic Mail Address Is Valid: Does Not Contain @ OR . Character :: Continue Registration
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: Member Account Electronic Mail Address Is Valid: Check For Disallowed Characters
+
+/*
+ ============================================================================================================
+ + IF: Registrar Electronic Mail Address Is Invalid: Does Not Contain . Character :: Halt Registration
+ ============================================================================================================
+*/
+
+if (substr_count($_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_ADDRESS,".") != 1) {
+
+											echo ($_Application_Module_Member_Message_Register_REGISTRATION_ERROR_INVALID_ELECTRONIC_MAIL_ADDRESS);
+
+/*
+ ============================================================================================================
+ + ELSE: Registrar Electronic Mail Address Is Invalid: Does Contain . Character :: Continue Registration
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: Member Account Electronic Mail Address Is Valid: Check For Disallowed Characters
+
+/*
+ ============================================================================================================
+ + IF: Registrar :: Input Form Variables :: Post Variables Contains Disallowed Characters :: Halt Registration
+ ============================================================================================================
+*/
+
+if (substr_count("$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME", "$_Application_Module_Member_Register_POST_STRIP_CHARACTERS") != 0) {
+
+											echo ($_Application_Module_Member_Message_Register_REGISTRATION_ERROR_MEMBER_NAME);
+
+/*
+ ============================================================================================================
+ + ELSE: Registrar :: Input Form Variables :: Post Variables DO NOT Contain Disallowed Characters :: Continue Registration
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: Member Account Registration Characters Are Valid: Check For UserName Character Length
+
+/*
+ ============================================================================================================
+ + IF: Registrar UserName IS LESS THAN 4 Characters :: Halt Registration
+ ============================================================================================================
+*/
+
+if (strlen($_Application_Module_Member_Register_POST_REGISTRAR_USERNAME) <= 4) {
+
+											echo ($_Application_Module_Member_Message_Register_REGISTRATION_ERROR_MEMBER_NAME_LENGTH);
+
+/*
+ ============================================================================================================
+ + ELSE: Registrar UserName IS NOT LESS THAN 4 Characters :: Continue Registration
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: Member Account Registration UserName Is Greater Than 4 Characters: Check For Existing Member Account In Database Server
+
+/*
+ ============================================================================================================
+ + IF: Registrar First Name IS Registrar Last Name :: Halt Registration
+ ============================================================================================================
+*/
+
+if ("$_Application_Module_Member_Register_POST_REGISTRAR_NAME_FIRST" == "$_Application_Module_Member_Register_POST_REGISTRAR_NAME_LAST") {
+
+											echo ($_Application_Module_Member_Message_Register_REGISTRATION_ERROR_MEMBER_NAME_MATCHES);
+
+/*
+ ============================================================================================================
+ + ELSE: Registrar First Name IS NOT Registrar Last Name :: Continue Registration
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: Member Account Registration First Name Is Exactly Member Account Registration Last Name :: Halt Registration
+
+/*
+ ============================================================================================================
+ + IF: Registrar Member Directory DOES EXIST In The Master Directory :: Halt Registration
+ ============================================================================================================
+*/
+
+if (file_exists("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/index.html")) {
+
+											echo ($_Application_Module_Member_Message_Register_REGISTRATION_ERROR_MEMBER_EXISTS);
+
+/*
+ ============================================================================================================
+ + ELSE: Registrar Member Directory DOES NOT EXIST In The Master Directory :: Continue Registration
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: Member Account Registration UserName DOES NOT Exist In The Master Directory
+
+/*
+ ============================================================================================================
+ + IF: Registrar Electronic Mail Address DOES Exist In The Master List: Deny Registration
+ ============================================================================================================
+*/
+
+if (file_exists("./Member/Master_List/Electronic_Mail_Addresses/$_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_ADDRESS")) {
+
+											echo ($_Application_Module_Member_Message_Register_REGISTRATION_ERROR_MEMBER_EXISTS);
+
+/*
+ ============================================================================================================
+ + ELSE: Registrar Electronic Mail Address DOES NOT Exist In The Master List: Continue Registration
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: Member Account Registration Electronic Mail Address Already Exists In Member Account Master: Deny Member Account Registration
+
+											echo ("* Registration Message: Sending Electronic Mail Message... Wait.<BR>");
+											echo ("* Registration Message: Electronic Mail Address: $_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_ADDRESS<BR>");
+
+/*
+ ============================================================================================================
+ +
+ + Send :: Non-Encrypted :: Electronic Mail Message :: Notification Message To: Registrar Provided Electronic Mail Address
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Define :: Non-Encrypted :: Electronic Mail Message :: Notification Message To: Registrar Provided Electronic Mail Address
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_MESSAGE_SUBJECT					= "Thanks For Requesting Member Account Registration With :: $_GLOBAL_SYSTEM_SITE_TITLE";
+$_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_MESSAGE_HEADERS					= "From: $_GLOBAL_SYSTEM_SITE_TITLE";
+$_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_MESSAGE_MESSAGE					= "
+Dear $_Application_Module_Member_Register_POST_REGISTRAR_NAME_FIRST :: $_Application_Module_Member_Register_POST_REGISTRAR_NAME_LAST
+[ $_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_ADDRESS ],
+-------------------------------------------------------------------
+Thank you for requesting Registration for a Member Account with ~ $_GLOBAL_SYSTEM_SITE_TITLE
+
+This is the Member Account information that was provided:
+-------------------------------------------------------------------
+* Member Account, First Name: $_Application_Module_Member_Register_POST_REGISTRAR_NAME_FIRST
+* Member Account, Last Name: $_Application_Module_Member_Register_POST_REGISTRAR_NAME_LAST
+* Member Account, Birth Date: $_Application_Module_Member_Register_POST_REGISTRAR_BIRTHDATE
+* Member Account, Specified Gender: $_Application_Module_Member_Register_POST_REGISTRAR_GENDER
+-------------------
+* Member Account UserName: $_Application_Module_Member_Register_POST_REGISTRAR_USERNAME
+* Member Account Password: $_Application_Module_Member_Register_RANDOM_DIGITS
+* Member Account Electronic Mail Address: $_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_ADDRESS
+* Member Account Activation Key: $_Application_Module_Member_Register_RANDOM_KEY_MD5
+-------------------------------------------------------------------
+
+Once you have successfully authenticated into this Non-Registered Member Account you can then provide more details about yourself in the 'Update Profile' Application Module as well as secure your
+Non-Registered Member Account.
+
+Once after more details about yourself are provided to this Non-Registered Member Account you can then initiate the Registered Member Account process. This process will update your Non-Registered Member Account to
+a Registered Member Account with access priviledges. This process usually takes 24 hours.
+
+The steps for authenticating into this Non-Registered Member Account are as follows:
+
+1. Visit the Web Page Document with the Login form.
+
+2. Input the correct Member Account Login information:
+	* Member Account Electronic Mail Address
+	* Member Account UserName
+	* Member Account Password, $_Application_Module_Member_Register_RANDOM_DIGITS
+
+3. Input the Member Account Activation Key:
+	* $_Application_Module_Member_Register_RANDOM_KEY_MD5
+
+4. Click or Press on the 'Update Password' graphic after successfully authenticating into this Non-Registered Member Account and then update the temporary password to a new password that only you will know and remember.
+
+Your Member Account details are encrypted and these encrypted details are completely unreadable by anyone else unless they know your clear-text password.
+
+IF: you fail to activate this Non-Registered Member Account within 24 hours of this Electronic Mail Message Timestamp this Non-Registered Member Account will automatically be deleted by
+the Automated Services Root Administration Account because the system will think that this Non-Registered Member Account was registered by a malicious robot or a malicious user.
+
+IF: you are unable to authenticate into this Non-Registered Member Account you will need to request an Authorization Security Token in order to Authorize
+your current Internet Protocol Address for this Non-Registered Member Account Authentication Process.
+
+Any problems should be reported to the Administration or to the Services Root Administration.
+
+Your Member Account undergoes scrutiny by the Automated Services Root Administration Account after activation and if it deems that this newly registered Member Account is malicious it will be set to locked, inactive and then frozen.
+
+Further Member Account Registration Details
+----------------------------------------------
+- NETWORKING INFORMATION
+* Internet Protocol Address :: This Web Server: $_GLOBAL_LOCAL_SERVER_ADDRESS :: $_GLOBAL_LOCAL_SERVER_PORT
+* Internet Protocol Address :: Connecting Device: $_GLOBAL_REMOTE_SERVER_ADDRESS :: $_GLOBAL_REMOTE_SERVER_PORT
+* Document Request String :: This Web Server: $_GLOBAL_LOCAL_SERVER_QUERY_STRING
+
+- CONNECTING DEVICE DETAILS
+* The Connecting Device :: Web Browser User-Agent String: $_Application_Module_Background_Log_Visitor_GET_USER_AGENT
+
+- TIMESTAMP DETAILS
+* Timestamp :: Registration :: This Web Server: $_GLOBAL_LOCAL_SERVER_DATE_STANDARD
+* Timestamp :: Registration :: Connecting Device: $_GLOBAL_LOCAL_SERVER_TIME_UNIX
+-------------------------------------------------------------------
+Have a nice day,
+		~ $_GLOBAL_SYSTEM_SITE_TITLE
+";
+
+/*
+ ============================================================================================================
+ + IF: Mail :: Electronic Mail Message :: Member Account Registration Information :: To: Provided Electronic Mail Address
+ ============================================================================================================
+*/
+
+if (mail("$_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_ADDRESS","$_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_MESSAGE_SUBJECT","$_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_MESSAGE_MESSAGE")) {
+
+echo ("* Registration Message: Electronic Mail Message Has Sent.<BR>");
+
+echo ("* Registration Message: Inserting Registrar Data Into The Database Management System Database... Wait<BR>");
+
+/*
+ ============================================================================================================
+ +
+ + Database Server Query :: Insert Registrar Data
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Define :: Database Server Query :: Insert Registrar Data
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_Register_DB_Query_INSERT_REGISTRAR			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members(
+member_access_level,
+member_account_device_web_browser,
+member_account_device_web_browser_authorized,
+member_account_device_mac_address,
+member_account_device_mac_address_authorized,
+member_account_recovery_key,
+member_account_recovery_pictograph_1,
+member_account_recovery_pictograph_2,
+member_account_recovery_pictograph_3,
+member_account_recovery_pictograph_4,
+member_account_recovery_pictograph_5,
+member_attempt_authentication,
+member_birthdate,
+member_address_cryptocurrency_bitcoin,
+member_address_cryptocurrency_bitcoin_gold,
+member_address_cryptocurrency_dogecoin,
+member_address_cryptocurrency_ethereum,
+member_address_cryptocurrency_litecoin,
+member_address_cryptocurrency_mazacoin,
+member_address_cryptocurrency_namecoin,
+member_address_cryptocurrency_peercoin,
+member_address_cryptocurrency_primecoin,
+member_address_cryptocurrency_troncoin,
+member_address_cryptocurrency_zcash,
+member_address_home,
+member_address_mail,
+member_electronic_mail_address,
+member_experience_amount,
+member_gender,
+member_image_avatar,
+member_image_picture,
+member_image_video,
+member_ip_address,
+member_ip_address_authorized,
+member_ip_address_authorized_multifactor,
+member_ip_address_authorization_token,
+member_ip_address_last_authentication_server_device,
+member_ip_address_last_authentication_server_local,
+member_ip_address_last_authentication_server_remote,
+member_ip_address_log,
+member_contact_emergency_1,
+member_contact_emergency_2,
+member_contact_emergency_3,
+member_emergency_medical,
+member_last_referrer,
+member_level_rank,
+member_location_device_html_gps_x,
+member_location_device_html_gps_y,
+member_location_device_html_gps_z,
+member_location_device_php_gps_x,
+member_location_device_php_gps_y,
+member_location_device_php_gps_z,
+member_location_device_glo,
+member_location_device_region,
+member_location_device_timezone,
+member_location_given_area,
+member_location_given_region,
+member_location_given_timezone,
+member_mood,
+member_music,
+member_name_first,
+member_name_last,
+member_name_middle,
+member_name_nickname,
+member_notes,
+member_number_of_posts,
+member_number_phone_area_code,
+member_number_phone_cell,
+member_number_phone_country_code,
+member_number_phone_home,
+member_number_phone_work,
+member_password,
+member_physical_biometrics_blood_type,
+member_physical_biometrics_color_eye_1,
+member_physical_biometrics_color_eye_2,
+member_physical_biometrics_color_hair,
+member_physical_biometrics_height,
+member_physical_biometrics_weight,
+member_physical_dimensions,
+member_physical_ethnicity_1,
+member_physical_ethnicity_2,
+member_physical_ethnicity_3,
+member_physical_ethnicity_4,
+member_physical_nationality_1,
+member_physical_nationality_2,
+member_physical_nationality_3,
+member_physical_race_1,
+member_physical_race_2,
+member_physical_race_3,
+member_physical_race_4,
+member_profile_about,
+member_profile_signature,
+member_registration_date,
+member_registration_details,
+member_security_fingerprint_cleartext,
+member_security_fingerprint_hashed,
+member_security_custom_password_panel,
+member_security_pgp_key_panel_private,
+member_security_pgp_key_panel_public,
+member_security_setting_flag_force_logout,
+member_settings_control_panel_audio,
+member_settings_directory_theme,
+member_settings_directory_theme_video_resolution,
+member_settings_encryption_pgp,
+member_settings_language,
+member_settings_newsletter,
+member_settings_visibility_profile_activity,
+member_settings_visibility_profile_authentication,
+member_settings_visibility_profile_contact,
+member_settings_visibility_profile_contact_emergency,
+member_settings_visibility_profile_details,
+member_settings_visibility_profile_friends,
+member_settings_visibility_profile_gallery_audio,
+member_settings_visibility_profile_gallery_document,
+member_settings_visibility_profile_gallery_image,
+member_settings_visibility_profile_gallery_video,
+member_settings_visibility_profile_location,
+member_settings_visibility_profile_physical,
+member_settings_visibility_profile_security,
+member_settings_visibility_profile_streams,
+member_social_preference_marital_status,
+member_social_preference_sexual_orientation,
+member_socialmedia_audio_spotify,
+member_socialmedia_business_linkedin,
+member_socialmedia_communications_discord,
+member_socialmedia_communications_icq,
+member_socialmedia_communications_skype,
+member_socialmedia_communications_snapchat,
+member_socialmedia_gallery_instagram,
+member_socialmedia_posting_facebook,
+member_socialmedia_posting_twitter,
+member_socialmedia_programming_bitbucket,
+member_socialmedia_programming_github,
+member_socialmedia_programming_launchpad,
+member_socialmedia_security_keybase,
+member_socialmedia_video_youtube,
+member_socialmedia_video_gaming_steam,
+member_status_account_activation,
+member_status_account_activation_key,
+member_status_account_active,
+member_status_account_banned,
+member_status_account_last_active_timestamp,
+member_status_account_last_active_timestamp_unix,
+member_status_account_last_active_years,
+member_status_account_last_active_months,
+member_status_account_last_active_days,
+member_status_account_last_active_hours,
+member_status_account_last_active_minutes,
+member_status_account_last_active_seconds,
+member_status_account_locked,
+member_url_homepage,
+member_username
+)VALUES(
+'1',
+'$_GLOBAL_REMOTE_SERVER_HTTP_USER_AGENT',
+'$_GLOBAL_REMOTE_SERVER_HTTP_USER_AGENT',
+'00:00:00:00:00:00',
+'00:00:00:00:00:00',
+'$_Application_Module_Member_Register_POST_REGISTRAR_ACCOUNT_RECOVERY_KEY',
+'$_Application_Module_Member_Register_RANDOM_PICTOGRPAH_1',
+'$_Application_Module_Member_Register_RANDOM_PICTOGRPAH_2',
+'$_Application_Module_Member_Register_RANDOM_PICTOGRPAH_3',
+'$_Application_Module_Member_Register_RANDOM_PICTOGRPAH_4',
+'$_Application_Module_Member_Register_RANDOM_PICTOGRPAH_5',
+'0',
+'$_Application_Module_Member_Register_POST_REGISTRAR_BIRTHDATE',
+'Empty Entry :: CryptoCurrency :: BitCoin Address',
+'Empty Entry :: CryptoCurrency :: BitCoin Gold Address',
+'Empty Entry :: CryptoCurrency :: DodgeCoin Address',
+'Empty Entry :: CryptoCurrency :: Ethereum Address',
+'Empty Entry :: CryptoCurrency :: LiteCoin Address',
+'Empty Entry :: CryptoCurrency :: MazaCoin Address',
+'Empty Entry :: CryptoCurrency :: NameCoin Address',
+'Empty Entry :: CryptoCurrency :: PeerCoin Address',
+'Empty Entry :: CryptoCurrency :: PrimeCoin Address',
+'Empty Entry :: CryptoCurrency :: TronCoin Address',
+'Empty Entry :: CryptoCurrency :: ZCash Address',
+'Empty Entry :: Physical Home Address',
+'Empty Entry :: Physical Mailing Address',
+'$_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_ADDRESS',
+'10000',
+'$_Application_Module_Member_Register_POST_REGISTRAR_GENDER',
+'Default.png',
+'No_Image.png',
+'No_Image.mp4',
+'$_GLOBAL_REMOTE_SERVER_ADDRESS',
+'000.000.000.000',
+'000.000.000.000',
+'0',
+'$_GLOBAL_REMOTE_SERVER_ADDRESS',
+'$_GLOBAL_LOCAL_SERVER_ADDRESS',
+'$_GLOBAL_REMOTE_SERVER_ADDRESS',
+'$_GLOBAL_REMOTE_SERVER_ADDRESS',
+'Emergency Contact :: 1',
+'Emergency Contact :: 2',
+'Emergency Contact :: 3',
+'Emergency :: Medical',
+'$_GLOBAL_LOCAL_SERVER_HTTP_REFERRER',
+'1',
+'Unknown :: Location :: Device :: HTML :: GPS X',
+'Unknown :: Location :: Device :: HTML :: GPS Y',
+'Unknown :: Location :: Device :: HTML :: GPS Z',
+'Unknown :: Location :: Device :: PHP :: GPS X',
+'Unknown :: Location :: Device :: PHP :: GPS Y',
+'Unknown :: Location :: Device :: PHP :: GPS Z',
+'Unknown :: Location :: Device :: GLO',
+'Unknown :: Location :: Device :: Region',
+'Unknown :: Location :: Device :: Timezone',
+'Unknown :: Location :: Given :: Area',
+'Unknown :: Location :: Given :: Region',
+'Unknown :: Location :: Given :: Timezone',
+'On Guard',
+'Nine Inch Nails - Deep',
+'$_Application_Module_Member_Register_POST_REGISTRAR_NAME_FIRST',
+'$_Application_Module_Member_Register_POST_REGISTRAR_NAME_LAST',
+'Empty Entry :: Middle Name',
+'Emtpy Entry :: Nick Name',
+'Administration Notes',
+'1',
+'111',
+'111-1111',
+'1',
+'111-1111',
+'111-1111',
+'$_Application_Module_Member_Register_POST_REGISTRAR_PASSWORD_HASHED',
+'NA',
+'Eye',
+'Eye',
+'Hair',
+'000',
+'000',
+'0',
+'Unknown :: Ethnicity :: 1',
+'Unknown :: Ethnicity :: 2',
+'Unknown :: Ethnicity :: 3',
+'Unknown :: Ethnicity :: 4',
+'Unknown :: Nationality :: 1',
+'Unknown :: Nationality :: 2',
+'Unknown :: Nationality :: 3',
+'Unknown :: Race :: 1',
+'Unknown :: Race :: 2',
+'Unknown :: Race :: 3',
+'Unknown :: Race :: 4',
+'Account Profile :: Member Account',
+'Account Signature :: Member Account',
+'$_GLOBAL_LOCAL_SERVER_DATE_STANDARD',
+'This Registered Member Account Was Registered From The Internet Protocol Address :: $_GLOBAL_REMOTE_SERVER_ADDRESS :: $_GLOBAL_REMOTE_SERVER_PORT ~ On This Web Server @: $_GLOBAL_LOCAL_SERVER_DATE_STANDARD and On The Connected Device @: $_GLOBAL_LOCAL_SERVER_TIME_UNIX',
+'Unknown :: Fingerprint :: Clear-Text',
+'Unknown :: Fingerprint :: Hashed',
+'Empty Entry :: Password :: Panel :: Custom :: Private',
+'Empty Entry :: P.G.P. :: Key Block :: Private',
+'Empty Entry :: P.G.P. :: Key Block :: Public',
+'0',
+'1',
+'$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME',
+'$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION',
+'1',
+'English',
+'0',
+'0',
+'0',
+'0',
+'0',
+'0',
+'0',
+'0',
+'0',
+'0',
+'0',
+'0',
+'0',
+'0',
+'0',
+'1',
+'1',
+'Empty Entry :: Social Media :: Audio :: Spotify',
+'Empty Entry :: Social Media :: Business :: LinkedIn',
+'Empty Entry :: Social Media :: Communications :: Discord',
+'Empty Entry :: Social Media :: Communications :: ICQ',
+'Empty Entry :: Social Media :: Communications :: Skype',
+'Empty Entry :: Social Media :: Communications :: SnapChat',
+'Empty Entry :: Social Media :: Gallery :: InstaGram',
+'Empty Entry :: Social Media :: Posting :: FaceBook',
+'Empty Entry :: Social Media :: Posting :: Twitter',
+'Empty Entry :: Social Media :: Programming :: BITBucket',
+'Empty Entry :: Social Media :: Programming :: GITHub',
+'Empty Entry :: Social Media :: Programming :: LaunchPad',
+'Empty Entry :: Social Media :: Security :: KeyBase',
+'Empty Entry :: Social Media :: Video :: YouTube',
+'Empty Entry :: Social Media :: Video Gaming :: Steam',
+'0',
+'$_Application_Module_Member_Register_RANDOM_KEY_MD5',
+'0',
+'0',
+'$_GLOBAL_LOCAL_SERVER_DATE_STANDARD',
+'$_GLOBAL_LOCAL_SERVER_TIME_UNIX',
+'$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL',
+'$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL',
+'$_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_DAY_FULL',
+'$_GLOBAL_LOCAL_SERVER_TIME_HOURS',
+'$_GLOBAL_LOCAL_SERVER_TIME_MINUTES',
+'$_GLOBAL_LOCAL_SERVER_TIME_SECONDS',
+'0',
+'https://www.Twitter.com/$_PROJECT_STRING_NAME_UNIX',
+'$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME'
+)");
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server :: Database :: Query :: Insert Registrar
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Register_DB_Query_INSERT_REGISTRAR) {
+
+echo ("* Register Message: Registrar Data Was Inserted Successfully.<BR>");
+
+echo ("* Register Message: Creating Registrar Directory Structure... Wait.<BR>");
+
+/*
+ ============================================================================================================
+ + Make and Create :: Registrar :: Directory and Files
+ ============================================================================================================
+*/
+
+/*
+ + Make Directory: Registrar UserName
+*/
+
+//echo ("Registration Process Has Started<HR>");
+
+//echo ("* Making Registrar Directory: ./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME<BR>");
+
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME");
+
+/*
+ + Make Directory: Registrar Organized File Directory Structure
+*/
+
+//echo ("* Making Registrar Organized Directory Structure: ./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files<BR>");
+
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files");
+
+//echo ("* Making Member Account Organized Directory Structure: ./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Audio<BR>");
+
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Archive");
+
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Audio");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Audio/Gallery");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Audio/Gallery/Backup");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Audio/Live");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Audio/Music");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Audio/Push-To-Talk");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Audio/Recordings");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Audio/Streams");
+
+//echo ("* Making Registrar Organized Directory Structure: ./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document<BR>");
+
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Activity_Logging");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Electronic_Mail");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Friends");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Gallery");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Gallery/Backup");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/GPS");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/GPS/Coordinates");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/GPS/GLO");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/GPS/Region");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Messenger");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Messenger/Clear-Text");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Messenger/Encrypted");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Streams");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Streams/Wall");
+
+//echo ("* Making Registrar Organized Directory Structure: ./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Image<BR>");
+
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Image");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Image/Gallery");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Image/Gallery/Backup");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Image/Profile");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Image/Profile/Backup");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Image/Streams");
+
+//echo ("* Making Registrar Organized Directory Structure: ./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video<BR>");
+
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video/Gallery");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video/Gallery/Backup");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video/Live");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video/Live/Backup");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video/Movies");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video/Profile");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video/Profile/Backup");
+mkdir("./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video/Streams");
+
+/*
+ + Directory Security: Copy Directory Denial Index Files
+*/
+
+//echo ("* Copying Registrar Directory Index Denial Files<BR>");
+
+// Audio
+
+copy("./Member/Setup/Indexes/Files/Files.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/index.php");
+copy("./Member/Setup/Indexes/Files/Archive/Archive.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Archive/index.php");
+copy("./Member/Setup/Indexes/Files/Audio/Audio.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Audio/index.php");
+copy("./Member/Setup/Indexes/Files/Audio/Audio.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Audio/Gallery/index.php");
+copy("./Member/Setup/Indexes/Files/Audio/Gallery/Backup/Backup.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Audio/Gallery/Backup/index.php");
+copy("./Member/Setup/Indexes/Files/Audio/Audio.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Audio/Live/index.php");
+copy("./Member/Setup/Indexes/Files/Audio/Audio.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Audio/Music/index.php");
+copy("./Member/Setup/Indexes/Files/Audio/Audio.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Audio/Push-To-Talk/index.php");
+copy("./Member/Setup/Indexes/Files/Audio/Audio.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Audio/Recordings/index.php");
+copy("./Member/Setup/Indexes/Files/Audio/Audio.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Audio/Streams/index.php");
+
+// Document
+
+copy("./Member/Setup/Indexes/Files/Document/Activity_Logging/Activity_Logging.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Activity_Logging/index.php");
+copy("./Member/Setup/Files/Document/Activity_Logging/Activity_Log.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Activity_Logging/Activity_Log.php");
+copy("./Member/Setup/Indexes/Files/Document/Document.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/index.php");
+copy("./Member/Setup/Indexes/Files/Document/Electronic_Mail/Electronic_Mail.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Electronic_Mail/index.php");
+copy("./Member/Setup/Indexes/Files/Document/Gallery/Gallery.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Gallery/index.php");
+copy("./Member/Setup/Indexes/Files/Document/Gallery/Backup/Backup.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Gallery/Backup/index.php");
+copy("./Member/Setup/Indexes/Files/Document/Document.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Gallery/Backup/index.php");
+copy("./Member/Setup/Indexes/Files/Document/GPS/GPS.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/GPS/index.php");
+copy("./Member/Setup/Indexes/Files/Document/GPS/Coordinates/Coordinates.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/GPS/Coordinates/index.php");
+copy("./Member/Setup/Indexes/Files/Document/GPS/GLO/GLO.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/GPS/GLO/index.php");
+copy("./Member/Setup/Indexes/Files/Document/GPS/Region/Region.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/GPS/Region/index.php");
+copy("./Member/Setup/Indexes/Files/Document/Friends/Friends.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Friends/index.php");
+copy("./Member/Setup/Indexes/Files/Document/Messenger/Messenger.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Messenger/index.php");
+copy("./Member/Setup/Indexes/Files/Document/Messenger/Clear-Text/Clear-Text.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Messenger/Clear-Text/index.php");
+copy("./Member/Setup/Indexes/Files/Document/Messenger/Encrypted/Encrypted.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Messenger/Encrypted/index.php");
+copy("./Member/Setup/Indexes/Files/Document/Streams/Streams.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Streams/index.php");
+copy("./Member/Setup/Indexes/Files/Document/Streams/Wall/Wall.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Streams/Wall/index.php");
+
+// Image
+
+copy("./Member/Setup/Indexes/Files/Image/Image.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Image/index.php");
+copy("./Member/Setup/Indexes/Files/Image/Gallery/Gallery.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Image/Gallery/index.php");
+copy("./Member/Setup/Indexes/Files/Image/Gallery/Backup/Backup.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Image/Gallery/Backup/index.php");
+copy("./Member/Setup/Indexes/Files/Image/Image.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Image/Profile/index.php");
+copy("./Member/Setup/Indexes/Files/Image/Image.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Image/Profile/Backup/index.php");
+copy("./Member/Setup/Indexes/Files/Image/Image.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Image/Streams/index.php");
+copy("./Member/Setup/Indexes/Files/Image/Profile/Profile.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Image/Profile/index.php");
+
+// Video
+
+copy("./Member/Setup/Indexes/Files/Video/Video.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video/index.php");
+copy("./Member/Setup/Indexes/Files/Video/Video.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video/Gallery/index.php");
+copy("./Member/Setup/Indexes/Files/Video/Gallery/Backup/Backup.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video/Gallery/Backup/index.php");
+copy("./Member/Setup/Indexes/Files/Video/Live/Live.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video/Live/index.php");
+copy("./Member/Setup/Indexes/Files/Video/Live/Backup/Backup.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video/Live/Backup/index.php");
+copy("./Member/Setup/Indexes/Files/Video/Video.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video/Movies/index.php");
+copy("./Member/Setup/Indexes/Files/Video/Profile/Profile.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video/Profile/index.php");
+copy("./Member/Setup/Indexes/Files/Video/Profile/Backup/Backup.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video/Profile/Backup/index.php");
+copy("./Member/Setup/Indexes/Files/Video/Video.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video/Profile/index.php");
+copy("./Member/Setup/Indexes/Files/Video/Video.php","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Video/Streams/index.php");
+
+/*
+ + Make Directory: Registrar Hyper-Text-Markup-Language Web-Page Index File
+*/
+
+//echo ("* Making Registrar index.html File<BR>");
+
+copy("./System/Default/Register/Register.html","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/index.html");
+
+/*
+ + Copy Default Files To Organized Directory Structure: Registrar Electronic Mail Address
+*/
+
+//echo ("* Making Registrar Friend File<BR>");
+
+copy("./System/Default/Friend/Friend.cerberus","./Member/$_Application_Module_Member_Register_POST_REGISTRAR_USERNAME/Files/Document/Electronic_Mail/$_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_ADDRESS");
+
+echo ("* Register Message: Registrar Directory Structure Was Created Successfully.<BR>");
+
+/*
+ + Copy Registrar Electronic Mail Address To Master List
+*/
+
+echo ("* Register Message: Adding Registrar Electronic Mail Address To Master List... Wait.<BR>");
+
+copy("./System/Default/Friend/Friend.cerberus","./Member/Master_List/Electronic_Mail_Addresses/$_Application_Module_Member_Register_POST_REGISTRAR_ELECTRONIC_MAIL_ADDRESS");
+
+											echo ($_Application_Module_Member_Message_Register_REGISTRATION_SUCCESSFUL);
+											echo ("<META HTTP-EQUIV=\"REFRESH\" CONTENT=\"5; URL=?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Register\"/>");
+
+/*
+ ============================================================================================================
+ + ELSE: Database Management System Server :: Database :: Query: Insert Registrar Data :: Error, Display Error Message
+ ============================================================================================================
+*/
+
+} else { // [ + ] ELSE: Database Management System Server :: Database :: Query: Insert Registrar Data :: Error, Display Error Message
+
+											echo ($_Application_Module_Member_Message_Register_REGISTRATION_ERROR_DATABASE);
+
+} // [ + ] [ + ] IF: Insert Member Account Registration Variable Has Executed
+
+/*
+ ============================================================================================================
+ + Kill SQL Database Server Query: Insert :: Registrar Data
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Member_Register_DB_Query_INSERT_REGISTRAR->free_result();
+
+} // [ + ] IF: ELECTRONIC MAIL ADDRESS EXISTS IN Electronic_Mail_Addresses DIRECTORY [ 1 ]
+
+} // [ + ] IF: FILE EXISTS ( MEMBER INDEX FILE ) || ( MEMBER ELECTRONIC MAIL ADDRESS FILE ) [ 2 ]
+
+} // [ + ] IF: DATABASE NUMBER OF ROWS IS <= 0 FOR MEMBER ELECTRONIC MAIL ADDRESS [ 3 ]
+
+} // [ + ] IF: REGISTRATION FORM MEMBER USERNAME IS > 4 CHARACTERS [ 4 ]
+
+} // [ + ] IF: Member Account Registration First Name Is Exactly Member Account Registration Last Name :: Halt Registration [ 5 ]
+
+} // [ + ] IF: REGISTRATION FORM MEMBER ELECTRONIC MAIL ADDRESS IS VALID [ 6 ]
+
+} // [ + ] IF: REGISTRATION FORM MEMBER ELECTRONIC MAIL ADDRESS IS VALID [ 7 ]
+
+} // [ + ] IF: REGISTRATION FORM MEMBER USERNAME IS VALID [ 8 ]
+
+} // [ + ] IF: REGISTRATION FORM KEY IS VALID [ 9 ]
+
+} // [ + ] IF: SYSTEM SETTINGS BIRTHDATE REQUIREMENT IS GREATER THAN INPUTTED AGE [ 10 ]
+
+} // [ + ] IF: REGISTRATION FORM POSTED [ 11 ]
+
+} // [ + ] IF: USER CREDENTIALS ALREADY EXIST [ 12 ]
+?>

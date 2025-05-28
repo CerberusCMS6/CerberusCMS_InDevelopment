@@ -1,0 +1,177 @@
+<?php
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    ()  ()  ()
+ +  ()  ()  ()
+ +  ------------------------------
+ +  Application Module
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Root Directory => Applications => Member => Pages
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|6|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ +
+ + [ ^ ] Application Module :: Member :: Pages
+ +
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Application Module Header
+ ============================================================================================================
+*/
+											echo ($_Application_Module_Member_Message_Pages_Header);
+
+/*
+ ============================================================================================================
+ +
+ + [ @ ] Display :: Options
+ +
+ ============================================================================================================
+*/
+
+echo ("
+		<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+				<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Pages&amp;Display&#61;Links&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: Web Pages ::\">Web Page Entries</A>
+		<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+");
+
+/*
+ ============================================================================================================
+ +
+ + [ @ ] Find :: All Custom Web Application Module Entries
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Database Server Query: Select All Custom Web Page Entries From The Database Management System Server Database
+ ============================================================================================================
+*/
+
+$_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_web_pages ORDER BY id DESC");
+$_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_NUMBER_OF_ROWS	= $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES->num_rows;
+
+
+/*
+ ============================================================================================================
+ + WHILE: Retrieving :: All Custom Web Application Module Entries
+ ============================================================================================================
+*/
+
+while ($_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array = $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES->fetch_array(MYSQLI_BOTH)) {
+
+$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_ID						= $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array['id'];
+$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_AUTHOR						= $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array['web_page_author'];
+$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_DATA						= $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array['web_page_data'];
+$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_NAME						= $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array['web_page_name'];
+$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_TIMESTAMP_INSTALLATION				= $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array['web_page_timestamp_installation'];
+$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_TIMESTAMP_UPDATE				= $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array['web_page_timestamp_update'];
+
+/*
+ ============================================================================================================
+ +
+ + [ @ ] IF: Internal Application: Display :: Web Page Links
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Display"] == "Links") {
+
+/*
+ ============================================================================================================
+ + Display :: All Custom Web Application Module Entries
+ ============================================================================================================
+*/
+
+echo ("
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Pages&amp;PageID&#61;$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The :: Custom Web Page Entry :: $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_NAME ::\">$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_NAME</A><BR>
+");
+
+/*
+ ============================================================================================================
+ + IF: Database Management System Server :: Database :: Number of Rows :: Web Page Entries :: Is: Less Than OR Equal To: Zero
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_NUMBER_OF_ROWS <= 0) {
+
+									echo ($_Application_Module_Member_Message_CUSTOM_WEB_PAGE_ENTRIES_EMPTY);
+
+} // [ + ] IF: Database Management System Server :: Database :: Number of Rows :: Web Page Entries :: Is: Less Than OR Equal To: Zero
+
+} // [ + ] IF: Internal Application: Display :: Web Page Links
+
+/*
+ ============================================================================================================
+ +
+ + [ @ ] IF: Internal Application: Display :: Web Page Entry
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["PageID"] == "$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_ID") {
+
+echo ("
+<BR>Web Page Name: $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_NAME<I></I><HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+$_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_DATA
+<HR ALIGN=\"LEFT\" WIDTH=\"25%\">
+<I>This Web Page Was Created By: $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_AUTHOR On: $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_TIMESTAMP_INSTALLATION</I><BR>
+<I>Last Update: $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_TIMESTAMP_UPDATE</I>
+");
+
+} // [ + ] IF: Internal Application: Display :: Web Page Entry
+
+} // [ + ] WHILE: Retrieving All Custom Web Application Module Entries From The Database Management System Server
+
+/*
+ ============================================================================================================
+ + Kill SQL Database Server Query: Select All Custom Web Application Module Entries
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES->free_result();
+?>

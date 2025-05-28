@@ -1,0 +1,1155 @@
+<?php
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    ()  ()  ()
+ +  ()  ()  ()
+ +  ------------------------------
+ +  Application Module
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Root Directory => Applications => Member => System
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|6|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ +
+ + [ ^ ] Application Module :: Member :: System
+ +
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Application Module Header
+ ============================================================================================================
+*/
+
+												echo ($_Application_Module_Member_Message_System_Header);
+
+/*
+ ============================================================================================================
+ +
+ + Fetch Statistics Data From The Database Server
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Find :: Statistics Data
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_STATISTICS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_statistics ORDER BY id ASC LIMIT 1");
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members ORDER BY id ASC");
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_ACTIVE					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_status_account_active='1' ORDER BY id ASC");
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_INACTIVE					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_status_account_active='0' ORDER BY id ASC");
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_COMMENTS						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_comments");
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FILES						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_files");
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_forum_forum");
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_TOPICS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_forum_topic");
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_TOPIC_MESSAGES				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_forum_topic_message");
+
+/*
+ ============================================================================================================
+ + Count :: Number of Rows :: Database Management System Server Query :: SELECT
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS				= $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM->num_rows;
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPICS			= $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_TOPICS->num_rows;
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPIC_MESSAGES		= $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_TOPIC_MESSAGES->num_rows;
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FILES_NUMBER_OF_ROWS				= $_Application_Module_Member_System_DB_Query_SELECT_ALL_FILES->num_rows;
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_COMMENTS_NUMBER_OF_ROWS				= $_Application_Module_Member_System_DB_Query_SELECT_ALL_COMMENTS->num_rows;
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS				= $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS->num_rows;
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS_ACTIVE			= $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_ACTIVE->num_rows;
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS_INACTIVE			= $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_INACTIVE->num_rows;
+
+/*
+ ============================================================================================================
+ + List :: Statistics Data :: Miscellanious
+ ============================================================================================================
+*/
+
+$_Application_Module_Member_System_DB_Query_FETCH_ARRAY_STATISTICS					= $_Application_Module_Member_System_DB_Query_SELECT_ALL_STATISTICS->fetch_array(MYSQLI_BOTH);
+
+$_Application_Module_Member_System_LIST_TOTAL_NUMBER_OF_DOCUMENT_EXECUTIONS_NON_UNIQUE			= $_Application_Module_Member_System_DB_Query_FETCH_ARRAY_STATISTICS['statistics_total_number_of_document_executions_non_unique'];
+$_Application_Module_Member_System_LIST_TOTAL_NUMBER_OF_DOCUMENT_EXECUTIONS_UNIQUE			= $_Application_Module_Member_System_DB_Query_FETCH_ARRAY_STATISTICS['statistics_total_number_of_document_executions_unique'];
+$_Application_Module_Member_System_LIST_INSTALLATION_DATE						= $_Application_Module_Member_System_DB_Query_FETCH_ARRAY_STATISTICS['statistics_installation_date'];
+
+/*
+ ============================================================================================================
+ + IF: System :: Plug-In :: Status :: GZIP Compression :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SYSTEM_STATUS_GZIP == "1") {
+
+	$_Application_Module_Member_System_Status_GZIP							= "On";
+
+} else { // [ + ] IF: G.N.U. ZIP Compression System Setting Is: Off
+
+	$_Application_Module_Member_System_Status_GZIP							= "Off";
+
+} // [ + ] IF: G.N.U. ZIP Compression System Setting Is: On
+
+/*
+ ============================================================================================================
+ + IF: System :: Plug-In :: Status :: Audio :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_AUDIO == "1") {
+
+	$_Application_Module_Member_System_PlugIn_Status_Audio						= "On";
+
+} else { // [ + ] IF: The Audio Plug-In System Setting Is: Off
+
+	$_Application_Module_Member_System_PlugIn_Status_Audio						= "Off";
+
+} // [ + ] IF: The System :: Plug-In :: Status :: Audio :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ + IF: System :: Plug-In :: Status :: Camera :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_CAMERA == "1") {
+
+	$_Application_Module_Member_System_PlugIn_Status_Camera						= "On";
+
+} else { // [ + ] IF: The Camera Plug-In System Setting Is: Off
+
+	$_Application_Module_Member_System_PlugIn_Status_Camera						= "Off";
+
+} // [ + ] IF: The System :: Plug-In :: Status :: Camera :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ + IF: System :: Plug-In :: Status :: Microphone :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_MICROPHONE == "1") {
+
+	$_Application_Module_Member_System_PlugIn_Status_Microphone					= "On";
+
+} else { // [ + ] IF: The Microphone Plug-In System Setting Is: Off
+
+	$_Application_Module_Member_System_PlugIn_Status_Microphone					= "Off";
+
+} // [ + ] IF: The System :: Plug-In :: Status :: Microphone :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ + IF: System :: Plug-In :: Status :: Location :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_LOCATION == "1") {
+
+	$_Application_Module_Member_System_PlugIn_Status_Location					= "On";
+
+} else { // [ + ] IF: The Location Plug-In System Setting Is: Off
+
+	$_Application_Module_Member_System_PlugIn_Status_Location					= "Off";
+
+} // [ + ] IF: The System :: Plug-In :: Status :: Location :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ + IF: System :: Plug-In :: Status :: Notifications :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_NOTIFICATIONS == "1") {
+
+	$_Application_Module_Member_System_PlugIn_Status_Notifications					= "On";
+
+} else { // [ + ] IF: The Notifications Plug-In System Setting Is: Off
+
+	$_Application_Module_Member_System_PlugIn_Status_Notifications					= "Off";
+
+} // [ + ] IF: The System :: Plug-In :: Status :: Notifications :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ + IF: System :: Plug-In :: Status :: Video :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_VIDEO == "1") {
+
+	$_Application_Module_Member_System_PlugIn_Status_Video						= "On";
+
+} else { // [ + ] IF: The Video Plug-In System Setting Is: Off
+
+	$_Application_Module_Member_System_PlugIn_Status_Video						= "Off";
+
+} // [ + ] IF: The System :: Plug-In :: Status :: Video :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ + IF: System :: Plug-In :: Status :: Secure-Delete :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_ENCRYPTION == "1") {
+
+	$_Application_Module_Member_System_PlugIn_Status_Encryption					= "On";
+
+} else { // [ + ] IF: The Encryption Plug-In System Setting Is: Off
+
+	$_Application_Module_Member_System_PlugIn_Status_Encryption					= "Off";
+
+} // [ + ] IF: The System :: Plug-In :: Status :: Encryption :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ + IF: System :: Plug-In :: Status :: Safe-HTML :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_SAFEHTML == "1") {
+
+	$_Application_Module_Member_System_PlugIn_Status_SafeHTML					= "On";
+
+} else { // [ + ] IF: The Safe-HTML Plug-In System Setting Is: Off
+
+	$_Application_Module_Member_System_PlugIn_Status_SafeHTML					= "Off";
+
+} // [ + ] IF: The System :: Plug-In :: Status :: Safe-HTML :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ + IF: System :: Plug-In :: Status :: Secure-Delete :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_SECURE_DELETE == "1") {
+
+	$_Application_Module_Member_System_PlugIn_Status_Secure_Delete					= "On";
+
+} else { // [ + ] IF: The Secure-Delete Plug-In System Setting Is: Off
+
+	$_Application_Module_Member_System_PlugIn_Status_Secure_Delete					= "Off";
+
+} // [ + ] IF: The System :: Plug-In :: Status :: Secure-Delete :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ + IF: System :: Plug-In :: Status :: Text-Editor :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_TEXT_EDITOR == "1") {
+
+	$_Application_Module_Member_System_PlugIn_Status_Text_Editor					= "On";
+
+} else { // [ + ] IF: The Text-Editor Plug-In System Setting Is: Off
+
+	$_Application_Module_Member_System_PlugIn_Status_Text_Editor					= "Off";
+
+} // [ + ] IF: The System :: Plug-In :: Status :: Text-Editor :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ + IF: System :: Plug-In :: Status :: Time :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SYSTEM_PLUGIN_STATUS_TIME == "1") {
+
+	$_Application_Module_Member_System_PlugIn_Status_Time						= "On";
+
+} else { // [ + ] IF: The Time Plug-In System Setting Is: Off
+
+	$_Application_Module_Member_System_PlugIn_Status_Time						= "Off";
+
+} // [ + ] IF: The System :: Plug-In :: Status :: Time :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ + IF: System :: Services :: Status :: Commander :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_COMMANDER != "1") {
+
+	$_Application_Module_Member_System_System_Services_Status_Commander				= "Off";
+
+} else { // [ + ] IF: The System :: Services :: Status :: Commander :: Is: On OR Off
+
+	$_Application_Module_Member_System_System_Services_Status_Commander				= "On";
+
+} // [ + ] IF: The System :: Services :: Status :: Commander :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ + IF: System :: Services :: Status :: Integrity :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_INTEGRITY != "1") {
+
+	$_Application_Module_Member_System_System_Services_Status_Integrity				= "Off";
+
+} else { // [ + ] IF: The System :: Services :: Status :: Integrity :: Is: On OR Off
+
+	$_Application_Module_Member_System_System_Services_Status_Integrity				= "On";
+
+} // [ + ] IF: The System :: Services :: Status :: Integrity :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ + IF: System :: Services :: Status :: Loops :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_LOOPS != "1") {
+
+	$_Application_Module_Member_System_System_Services_Status_Loops					= "Off";
+
+} else { // [ + ] IF: The System :: Services :: Status :: Loops :: Is: On OR Off
+
+	$_Application_Module_Member_System_System_Services_Status_Loops					= "On";
+
+} // [ + ] IF: The System :: Services :: Status :: Loops :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ + IF: System :: Services :: Status :: Services :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_SERVICES != "1") {
+
+	$_Application_Module_Member_System_System_Services_Status_Services				= "Off";
+
+} else { // [ + ] IF: The System :: Services :: Status :: Services :: Is: On OR Off
+
+	$_Application_Module_Member_System_System_Services_Status_Services				= "On";
+
+} // [ + ] IF: The System :: Services :: Status :: Services :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ + IF: System :: Services :: Status :: Services :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_TASKS != "1") {
+
+	$_Application_Module_Member_System_System_Services_Status_Tasks					= "Off";
+
+} else { // [ + ] IF: The System :: Services :: Status :: Tasks :: Is: On OR Off
+
+	$_Application_Module_Member_System_System_Services_Status_Tasks					= "On";
+
+} // [ + ] IF: The System :: Services :: Status :: Tasks :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ + IF: System :: Security :: Module :: Status :: Master Sanitization :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SETTING_SYSTEM_SECURITY_MODULE_STATUS_MASTER_SANITIZATION != "1") {
+
+	$_Application_Module_Member_System_System_Security_Module_Status_Master_Sanitization 		= "Off";
+
+} else { // [ + ] IF: The System :: Security :: Module :: Status :: Master Sanitization :: Is: On OR Off
+
+	$_Application_Module_Member_System_System_Security_Module_Status_Master_Sanitization 		= "On";
+
+} // [ + ] IF: The System :: Security :: Module :: Status :: Master Sanitization :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ + IF: System :: Security :: Module :: Status :: Cache Circumvention :: Is: 0, Define AS OFF :: ELSE :: Is: 1, Define AS ON
+ ============================================================================================================
+*/
+
+if ($_GLOBAL_SETTING_SYSTEM_SECURITY_SETTING_STATUS_CACHE_CIRCUMVENTION != "1") {
+
+	$_Application_Module_Member_System_System_Security_Module_Status_Cache_Circumvention 		= "Off";
+
+} else { // [ + ] IF: The System :: Security :: Module :: Status :: Cache Circumvention :: Is: On OR Off
+
+	$_Application_Module_Member_System_System_Security_Module_Status_Cache_Circumvention 		= "On";
+
+} // [ + ] IF: The System :: Security :: Module :: Status :: Cache Circumvention :: Is: On OR Off
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Is: Options
+ +
+ ============================================================================================================
+*/
+												
+if ($_GET["Display"] == "Options") {
+
+echo ("
+<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+<B>System :: Settings</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;System&amp;Display&#61;Settings&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: System :: Settings ::\">System :: Settings</A><BR>
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;System&amp;Display&#61;Time&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: System :: Settings :: Date and Time ::\">System :: Settings :: Date and Time</A><BR>
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;System&amp;Display&#61;Plug-Ins&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: System :: Settings :: Plug-Ins ::\">System :: Settings :: Plug-Ins</A><BR><BR>
+
+<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+<B>System :: Information</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;System&amp;Display&#61;Networking&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: System :: Information :: Networking Information ::\">System :: Information :: Network Information</A><BR>
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;System&amp;Display&#61;Software&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: System :: Information :: Software Information ::\">System :: Information :: Software Information</A><BR>
+* <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;System&amp;Display&#61;Statistics&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Application :: System :: Information :: Statistics :: System-Wide :: \">System :: Information :: Statistics :: System-Wide</A><BR><BR>
+
+<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+<B>System :: Internal Documents</B>
+<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+* <A HREF=\"./About.txt?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Document :: About ::\">About</A><BR>
+* <A HREF=\"./Bug_Tracker.txt?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Document :: Bug Tracker ::\">Bug Tracker</A><BR>
+* <A HREF=\"./Change-Log.txt?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Document :: Change Log ::\">Change Log</A><BR>
+* <A HREF=\"./File-List.txt?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Document :: File List ::\">File List</A><BR>
+* <A HREF=\"./License.txt?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Document :: License ::\">License</A><BR>
+* <A HREF=\"./Project-Scores.txt?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Document :: Project Scores ::\">Project Scores</A><BR>
+* <A HREF=\"./Read_Me.txt?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Document :: Read Me ::\">Read Me</A><BR>
+* <A HREF=\"./Security.txt?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Document :: Security ::\">Security</A><BR>
+* <A HREF=\"./Software-Valuation.txt?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Document :: Software Valuation ::\">Software Valuation</A><BR>
+* <A HREF=\"./To-Do.txt?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Document :: To Do ::\">To Do</A><BR>
+* <A HREF=\"./TOS-PP.txt?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Document :: Terms of Service and Privacy Policy ::\">Terms of Service and Privacy Policy</A><BR>
+* <A HREF=\"./Version.txt?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Document :: Version ::\">Version</A><BR>
+* <A HREF=\"./Vulnerabilities.txt?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Internal Document :: Vulnerabilities ::\">Vulnerabilities</A><BR>
+");
+
+} // [ + ] IF: Internal Application: Display :: Options :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Is: Statistics
+ +
+ ============================================================================================================
+*/
+												
+if ($_GET["Display"] == "Statistics") {
+
+echo ("
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+											<B>System Statistical Information</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Web Application Project Information</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;Web Application Project Installation Date: $_Application_Module_Member_System_LIST_INSTALLATION_DATE<BR>
+												*&nbsp;Total Number of :: Web-Page Document Executions :: Unique: $_Application_Module_Member_System_LIST_TOTAL_NUMBER_OF_DOCUMENT_EXECUTIONS_UNIQUE<BR>
+												*&nbsp;Total Number of :: Web-Page Document Executions :: Non-Unique: $_Application_Module_Member_System_LIST_TOTAL_NUMBER_OF_DOCUMENT_EXECUTIONS_NON_UNIQUE<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+											<B>System-Wide Social Interaction Information & Statistics</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>System-Wide :: Forum Information & Statistics</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;Total Number of Forums: $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS<BR>
+												*&nbsp;Total Number of Forum' Topics: $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPICS<BR>
+												*&nbsp;Total Number of Forum' Topic' Messages: $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPIC_MESSAGES<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>System-Wide :: Commentation Information & Statistics</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;Total Number of Comments: $_Application_Module_Member_System_DB_Query_SELECT_ALL_COMMENTS_NUMBER_OF_ROWS<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>System-Wide :: Registered Member Accounts Information & Statistics</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;Total Number of Registered Member Accounts: $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS<BR>
+												*&nbsp;Total Number of Registered Member Accounts :: Currently Active: $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS_ACTIVE<BR>
+												*&nbsp;Total Number of Registered Member Accounts :: Currently Inactive: $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS_INACTIVE<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>System-Wide :: File System Information & Statistics</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;Total Number of Files Within The File System: $_Application_Module_Member_System_DB_Query_SELECT_ALL_FILES_NUMBER_OF_ROWS<BR><BR>
+");
+
+} // [ + ] IF: Internal Application: Display :: Statistics :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Is: Settings
+ +
+ ============================================================================================================
+*/
+												
+if ($_GET["Display"] == "Settings") {
+
+echo ("
+										<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
+											<B>Settings :: System :: Current</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"40%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Settings :: System :: Web-Page Document :: Output Data :: Compression</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;G.N.U. ZIP ( GZIP ) Data Compression: $_GLOBAL_SYSTEM_STATUS_GZIP | $_Application_Module_Member_System_Status_GZIP
+
+												<BR><BR>
+												Application Module Note: <I>These options set the Data Compression on the output data that is ultimately received by the connecting device web browser. This raw data is hosted on this web server and the output data from that raw data is compressed where that output data is then generated and delivered by this web application software. If these options are enabled: the output data that is processed by this web application software is compressed so that the web page documents that are generated by it are then loaded by the connecting device web browser extremely fast even if the web server itself or the connecting device itself is using an Internet Connection Speed Bandwidth of less than 1 Megabyte Per Second.</I><BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Settings :: System :: Graphical User Interface :: Theme</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;System :: Theme :: File Format :: Audio: $_GLOBAL_SYSTEM_SOUND_EXTENSION<BR>
+												*&nbsp;System :: Theme :: File Format :: Image: $_GLOBAL_SYSTEM_IMAGE_EXTENSION<BR>
+												*&nbsp;System :: Theme :: Directory: $_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME
+
+												<BR><BR>
+												Application Module Note: <I>These options set the parameters of the Graphical User Interface Theme Packs that are used by this web application software. The parameters could be: Audio File Format, Image File Format, Theme Directory and more.</I><BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Settings :: System :: Language</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;System :: Language: $_GLOBAL_SYSTEM_LANGUAGE_DIRECTORY
+
+												<BR><BR>
+												Application Module Note: <I>These options set the parameters of the Language Packs that are used by this web application software. The parameters could be: Forced Language File, Registered Member Account Set Languages and more.</I><BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
+											<B>Settings :: System :: Security :: Web-Page Output :: Cache :: Cache-Circumvention</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"40%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Settings :: Security :: Cache Circumvention</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;Security :: Setting :: Cache Circumvention :: Status :: $_GLOBAL_SETTING_SYSTEM_SECURITY_SETTING_STATUS_CACHE_CIRCUMVENTION | $_Application_Module_Member_System_System_Security_Module_Status_Cache_Circumvention<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Settings :: Security :: Cache-Circumvention :: Random Generated Strings</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;=> Secure HASH Algorithm, 512 :: Hyper-Text Reference<BR>
+												$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION<BR>
+												*&nbsp;=> Secure HASH Algorithm, 512 :: Audio<BR>
+												$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_AUDIO_RANDOM_STRING_GENERATION<BR>
+												*&nbsp;=> Secure HASH Algorithm, 512 :: Document<BR>
+												$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_DOCUMENT_RANDOM_STRING_GENERATION<BR>
+												*&nbsp;=> Secure HASH Algorithm, 512 :: Image<BR>
+												$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION<BR>
+												*&nbsp;=> Secure HASH Algorithm, 512 :: Video<BR>
+												$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_VIDEO_RANDOM_STRING_GENERATION<BR>
+												*&nbsp;=> Secure HASH Algorithm, 512 :: Internal File Inclusion<BR>
+												$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_FILEINCLUSION_RANDOM_STRING_GENERATION
+												
+												<BR><BR>
+												Application Module Note: <I>These Cache-Circumvention Strings are completely randomly generated alpha-numeric text strings of 512 Character Lengths, 1024 Character Lengths and 2048 Character Lengths. These alpha-numberic strings are so random in fact that it is 94% impossible for any Cache-Control software to guess what the next randomly generated string will be. By adding these randomly generated string variables to the end of every file inclusion and reference within the source programming code of this web application software makes it 94% impossible for any cache-control software to stop the real hosted audio, document, image and video files from being included and displayed within the connecting device web browser. Cache-Control software are usually Government, School and University web server software like <A HREF=\"https://en.Wikipedia.org/wiki/Squid_(software)\" TITLE=\":: Open & Display :: The :: Official Wikipedia Article Entry :: For :: Squid Software ::\" TARGET=\"_NEW\">Squid</A> and 
+												<A HREF=\"https://en.Wikipedia.org/wiki/Privoxy\" TITLE=\":: Open & Display :: The :: Official Wikipedia Article Entry :: For :: Privoxy Software ::\" TARGET=\"_NEW\">Privoxy</A> that are installed and placed between the real web server and the connecting device or this software could be installed on the web server itself and this software is usually used to control the media and content delivered to the connecting device. No one can ever be sure that the authentic data that is hosted on a web server such as the audio, document, image and video files that are delivered to the connecting device web browser is the authentic data that is hosted on the web server at any point-in-time unless advanced Cache-Circumvention Programming Code combined with File Integrity HASH Checking is written into the web application source programming code. These completely randomly generated strings also add to the uniqueness of every re-load of the web page so that the output of these string generations are fresh and 
+												current upon every re-load of any of the web application output documents and this also makes it very easy for every Registered Member Account Device to be located physically in the real world because of this uniqueness.</I><BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
+											<B>Settings :: System :: Security :: Account Control :: Authentication</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"40%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Settings :: Security :: Account Authentication :: Authorization</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;Account Restrictions :: Authentication :: Authorized :: MAC Address: $_GLOBAL_SYSTEM_SETTING_ACCOUNT_SECURITY_RESTRICT_AUTHORIZED_MAC_ADDRESS<BR>
+												*&nbsp;Account Restrictions :: Authentication :: Authorized :: Internet Protocol Address: $_GLOBAL_SYSTEM_SETTING_ACCOUNT_SECURITY_RESTRICT_AUTHORIZED_INTERNET_PROTOCOL_ADDRESS<BR>
+												*&nbsp;Account Restrictions :: Authentication :: Authorized :: Web Browser: $_GLOBAL_SYSTEM_SETTING_ACCOUNT_SECURITY_RESTRICT_AUTHORIZED_WEB_BROWSER
+
+												<BR><BR>
+												Application Module Note: <I>These options set the Authentication and Authorization Security Loops Parameters of the Registered Member Accounts within this web application software. The parameters could be: Machine-Access-Control Address Filtering, Internet Protocol Address Filtering and Web Browser User-Agent Data String Filtering. These options if enabled should make it 100% impossible for anyone else to authenticate into your Registered Member Account while your device is authenticated into your Registered Member Account even if using the exact same Internet Protocol Address that you are currently using.</I><BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												<B>Settings :: Upload :: File Size Control</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												<B>File Categories</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;File Size Upload Limitations :: In BITS :: File System :: $_GLOBAL_SYSTEM_UPLOAD_SIZE_PUBLIC_FILE_CATEGORIES<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Registered Member Account :: Data</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;File Size Upload Limitations :: In BITS :: Registered Member Account :: Media :: Audio: $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_AUDIO<BR>
+												*&nbsp;File Size Upload Limitations :: In BITS :: Registered Member Account :: Media :: Document: $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_DOCUMENT<BR>
+												*&nbsp;File Size Upload Limitations :: In BITS :: Registered Member Account :: Media :: Image: $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_IMAGE<BR>
+												*&nbsp;File Size Upload Limitations :: In BITS :: Registered Member Account :: Media :: Video: $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_VIDEO<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Registered Member Account :: Streams</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;File Size Upload Limitations :: In BITS :: Registered Member Account :: Streams :: Individual Files :: Audio: $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_STREAMS_AUDIO<BR>
+												*&nbsp;File Size Upload Limitations :: In BITS :: Registered Member Account :: Streams :: Individual Files :: Document: $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_STREAMS_DOCUMENT<BR>
+												*&nbsp;File Size Upload Limitations :: In BITS :: Registered Member Account :: Streams :: Individual Files :: Image: $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_STREAMS_IMAGE<BR>
+												*&nbsp;File Size Upload Limitations :: In BITS :: Registered Member Account :: Streams :: Individual Files :: Video: $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_STREAMS_VIDEO<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Application Module :: Media Player :: Data</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;File Size Upload Limitations :: In BITS :: Application Module :: Media Player :: Audio: $_GLOBAL_SYSTEM_UPLOAD_SIZE_PUBLIC_FILE_MEDIA_PLAYER_AUDIO<BR>
+												*&nbsp;File Size Upload Limitations :: In BITS :: Application Module :: Media Player :: Video: $_GLOBAL_SYSTEM_UPLOAD_SIZE_PUBLIC_FILE_MEDIA_PLAYER_VIDEO<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Application Module :: Instant Messenger :: Data</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;File Size Upload Limitations :: In BITS :: Application Module :: Instant Messenger :: Audio: $_GLOBAL_SYSTEM_UPLOAD_SIZE_PUBLIC_FILE_MESSENGER_AUDIO<BR>
+												*&nbsp;File Size Upload Limitations :: In BITS :: Application Module :: Instant Messenger :: Document: $_GLOBAL_SYSTEM_UPLOAD_SIZE_PUBLIC_FILE_MESSENGER_DOCUMENT<BR>
+												*&nbsp;File Size Upload Limitations :: In BITS :: Application Module :: Instant Messenger :: Image: $_GLOBAL_SYSTEM_UPLOAD_SIZE_PUBLIC_FILE_MESSENGER_IMAGE<BR>
+												*&nbsp;File Size Upload Limitations :: In BITS :: Application Module :: Instant Messenger :: Video: $_GLOBAL_SYSTEM_UPLOAD_SIZE_PUBLIC_FILE_MESSENGER_VIDEO
+												
+												<BR><BR>
+												Application Module Note: <I>These options set the File Size Upload Limitations Parameters that are used by this web application software. These parameters limit and unlimit the file sizes of the files that could be uploaded into this web application data storage space.</I><BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
+											<B>Settings :: System :: Kernel Parameters & Information</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"40%\"><BR>
+											
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Database Management System Server Database Entries</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												<B>Database Management System Server Database Entry :: Kernel File :: Backup :: From Initial Installation</B><BR>
+												*&nbsp;Database Management System Server Database Entry :: Kernel File :: Installation :: Installation Date: $_GLOBAL_SYSTEM_SETTINGS_KERNEL_BACKUP_INSTALLATION_DATE_INSTALLATION<BR>
+												*&nbsp;Database Management System Server Database Entry :: Kernel File :: Installation :: Integrity: $_GLOBAL_SYSTEM_SETTINGS_KERNEL_BACKUP_INSTALLATION_FILE_INTEGRITY<BR>
+												*&nbsp;Database Management System Server Database Entry :: Kernel File :: Installation :: Name: <A HREF=\"./System/Kernel/Backup/Kernel_Installation.kernel\" TITLE=\":: Open & Display :: The Kernel File :: Installation Kernel File ::\" TARGET=\"_NEW\">$_GLOBAL_SYSTEM_SETTINGS_KERNEL_BACKUP_INSTALLATION_FILE_NAME</A><BR>
+												*&nbsp;Database Management System Server Database Entry :: Kernel File :: Installation :: Version: $_GLOBAL_SYSTEM_SETTINGS_KERNEL_BACKUP_INSTALLATION_FILE_VERSION<BR><BR>
+										
+												<B>Database Management System Server Database Entry :: Kernel File :: Backup :: Current</B><BR>
+												*&nbsp;Database Management System Server Database Entry :: Kernel File :: Backup :: Current :: Installation Date: $_GLOBAL_SYSTEM_SETTINGS_KERNEL_BACKUP_CURRENT_DATE_INSTALLATION<BR>
+												*&nbsp;Database Management System Server Database Entry :: Kernel File :: Backup :: Current :: Integrity: $_GLOBAL_SYSTEM_SETTINGS_KERNEL_BACKUP_CURRENT_FILE_INTEGRITY<BR>
+												*&nbsp;Database Management System Server Database Entry :: Kernel File :: Backup :: Current :: Name: <A HREF=\"./System/Kernel/Backup/Kernel_Installation.kernel\" TITLE=\":: Open & Display :: The Kernel File :: Current Kernel File ::\" TARGET=\"_NEW\">./System/Kernel/Backup/Current.kernel</A><BR>
+												*&nbsp;Database Management System Server Database Entry :: Kernel File :: Backup :: Current :: Version: $_GLOBAL_SYSTEM_SETTINGS_KERNEL_BACKUP_CURRENT_FILE_VERSION<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Physical Kernel Files</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+
+												<B>Physical Kernel File :: From Initial Installation</B><BR>
+												*&nbsp;Physical Kernel File :: :: Backup :: From Initial Installation :: Name and Location: <A HREF=\"./System/Kernel/Backup/Kernel_Installation.kernel\" TITLE=\":: Open & Display :: The Kernel File :: Installation Kernel File ::\" TARGET=\"_NEW\">./System/Kernel/Backup/Kernel_Installation.kernel</A><BR>
+												*&nbsp;Physical Kernel File :: :: Backup :: From Initial Installation :: Version: $_GLOBAL_SYSTEM_SETTINGS_KERNEL_BACKUP_INSTALLATION_FILE_VERSION<BR>
+												*&nbsp;Physical Kernel File :: :: Backup :: From Initial Installation :: Integrity: $_GLOBAL_SYSTEM_KERNEL_FILE_INTEGRITY_BACKUP_INSTALLATION<BR><BR>
+
+												<B>Physical Kernel File :: Backup :: Current</B><BR>
+												*&nbsp;Physical Kernel File :: Backup :: Current :: Name and Location: <A HREF=\"./System/Kernel/Backup/Current.kernel\" TITLE=\":: Open & Display :: The Kernel File :: Backup :: Current Kernel File ::\" TARGET=\"_NEW\">./System/Kernel/Backup/Current.kernel</A><BR>
+												*&nbsp;Physical Kernel File :: Backup :: Current :: Version: $_GLOBAL_SYSTEM_SETTINGS_KERNEL_BACKUP_INSTALLATION_FILE_VERSION<BR>
+												*&nbsp;Physical Kernel File :: Backup :: Current :: Integrity: $_GLOBAL_SYSTEM_KERNEL_FILE_INTEGRITY_BACKUP_CURRENT<BR><BR>
+												
+												<B>Physical Kernel File :: Configuration File Parameters</B><BR>
+												*&nbsp;Configuration File Parameters :: Kernel File :: Name and Location: $_INTERNAL_FILE_KERNEL<BR>
+												*&nbsp;Configuration File Parameters :: Kernel File :: Version: $_INTERNAL_FILE_KERNEL_VERSION<BR>
+												*&nbsp;Configuration File Parameters :: Kernel File :: Integrity: $_INTERNAL_FILE_KERNEL_INTEGRITY
+
+												<BR><BR>
+												Application Module Note: <I>These options set the Kernel File Parameters that are used by this web application software. These parameters secure, limit and control the Kernel File Versions that are used by this web application software instance at any point-in-time.</I><BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Settings :: System :: Uniform-Resource-Locations :: GIT</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												<B>Uniform-Resource-Location :: GIT :: Applications</B><BR>
+												<FORM>
+													<TEXTAREA ROWS=\"7\" COLS=\"50\">$_ACCESS_URL_GIT_REPOSITORY_APPLICATIONS</TEXTAREA>
+												</FORM><BR><BR>
+
+												<B>Uniform-Resource-Location :: GIT :: Kernel</B><BR>
+												<FORM>
+													<TEXTAREA ROWS=\"7\" COLS=\"50\">$_ACCESS_URL_GIT_REPOSITORY_KERNEL</TEXTAREA>
+												</FORM><BR><BR>
+
+												<B>Uniform-Resource-Location :: GIT :: Plug-Ins</B><BR>
+												<FORM>
+													<TEXTAREA ROWS=\"7\" COLS=\"50\">$_ACCESS_URL_GIT_REPOSITORY_PLUGINS</TEXTAREA>
+												</FORM><BR><BR>
+
+												<B>Uniform-Resource-Location :: GIT :: Themes</B><BR>
+												<FORM>
+													<TEXTAREA ROWS=\"7\" COLS=\"50\">$_ACCESS_URL_GIT_REPOSITORY_THEMES</TEXTAREA>
+												</FORM>
+
+												<BR><BR>
+												Application Module Note: <I>These options set the GIT Uniform-Resource-Location Parameters that are used by this web application software. These parameters control where and when this web application software will download Updates, New Application Modules, New and Improved Kernel Files, Video Games, Graphical User Interface Theme Packs and more.</I>
+");
+												
+} // [ + ] IF: Internal Application: Display :: Settings :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Is: Settings :: Plug-Ins
+ +
+ ============================================================================================================
+*/
+												
+if ($_GET["Display"] == "Plug-Ins") {
+
+echo ("
+										<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
+											<B>System Plug-Ins</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"40%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Settings :: System :: Plug-Ins :: Hardware Devices</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											<B>Settings :: System :: Plug-Ins ::</B> <A HREF=\"./System/Plug-Ins/Audio/$_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_AUDIO/Audio.$_INTERNAL_FILE_EXTENSION\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Plug-In Application Module :: Audio ::\" TARGET=\"_NEW\">Audio</A><BR>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Plug-In :: Audio :: Directory: $_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_AUDIO<BR>
+												*&nbsp;Plug-In :: Audio :: Status: $_GLOBAL_SYSTEM_PLUGIN_STATUS_AUDIO | $_Application_Module_Member_System_PlugIn_Status_Audio<BR>
+											<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Devices&amp;Display&#61;Options&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Application :: Devices ::\">Device :: Hardware :: Testing :: Audio</A><BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											<B>Settings :: System :: Plug-Ins ::</B> <A HREF=\"./System/Plug-Ins/Camera/$_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_CAMERA/Camera.$_INTERNAL_FILE_EXTENSION\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Plug-In Application Module :: Camera ::\" TARGET=\"_NEW\">Camera</A><BR>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Plug-In :: Camera :: Directory: $_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_CAMERA<BR>
+												*&nbsp;Plug-In :: Camera :: Status: $_GLOBAL_SYSTEM_PLUGIN_STATUS_CAMERA | $_Application_Module_Member_System_PlugIn_Status_Camera<BR>
+											<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Devices&amp;Display&#61;Options&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Application :: Devices ::\">Device :: Hardware :: Testing :: Camera</A><BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											<B>Settings :: System :: Plug-Ins ::</B> <A HREF=\"./System/Plug-Ins/Microphone/$_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_MICROPHONE/Microphone.$_INTERNAL_FILE_EXTENSION\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Plug-In Application Module :: Microphone ::\" TARGET=\"_NEW\">Microphone</A>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Plug-In :: Microphone :: Directory: $_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_MICROPHONE<BR>
+												*&nbsp;Plug-In :: Microphone :: Status: $_GLOBAL_SYSTEM_PLUGIN_STATUS_MICROPHONE | $_Application_Module_Member_System_PlugIn_Status_Location<BR>
+											<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Devices&amp;Display&#61;Options&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Application :: Devices ::\">Device :: Hardware :: Testing :: Microphone</A><BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											<B>Settings :: System :: Plug-Ins ::</B> <A HREF=\"./System/Plug-Ins/Location/$_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_LOCATION/Location.$_INTERNAL_FILE_EXTENSION\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Plug-In Application Module :: Location ::\" TARGET=\"_NEW\">Location</A>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Plug-In :: Location :: Directory: $_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_LOCATION<BR>
+												*&nbsp;Plug-In :: Location :: Status: $_GLOBAL_SYSTEM_PLUGIN_STATUS_LOCATION | $_Application_Module_Member_System_PlugIn_Status_Location<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											<B>Settings :: System :: Plug-Ins ::</B> <A HREF=\"./System/Plug-Ins/Notifications/$_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_NOTIFICATIONS/Notifications.$_INTERNAL_FILE_EXTENSION\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Plug-In Application Module :: Notifications ::\" TARGET=\"_NEW\">Notifications</A>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Plug-In :: Notifications :: Directory: $_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_NOTIFICATIONS<BR>
+												*&nbsp;Plug-In :: Notifications :: Status: $_GLOBAL_SYSTEM_PLUGIN_STATUS_NOTIFICATIONS | $_Application_Module_Member_System_PlugIn_Status_Notifications<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											<B>Settings :: System :: Plug-Ins ::</B> <A HREF=\"./System/Plug-Ins/Video/$_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_VIDEO/Video.$_INTERNAL_FILE_EXTENSION\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Plug-In Application Module :: Video ::\" TARGET=\"_NEW\">Video</A>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Plug-In :: Video :: Directory: $_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_VIDEO<BR>
+												*&nbsp;Plug-In :: Video :: Status: $_GLOBAL_SYSTEM_PLUGIN_STATUS_VIDEO | $_Application_Module_Member_System_PlugIn_Status_VIDEO<BR>
+											<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Devices&amp;Display&#61;Options&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Application :: Devices ::\">Device :: Hardware :: Testing :: Video</A><BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Settings :: System :: Plug-Ins :: Data Processing</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											<B>Settings :: System :: Plug-Ins ::</B> <A HREF=\"./System/Plug-Ins/Encryption/$_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_ENCRYPTION/Encryption.$_INTERNAL_FILE_EXTENSION\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Plug-In Application Module :: Encryption ::\" TARGET=\"_NEW\">Encryption</A>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Plug-In :: Encryption :: Directory: $_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_ENCRYPTION<BR>
+												*&nbsp;Plug-In :: Encryption :: Status: $_GLOBAL_SYSTEM_PLUGIN_STATUS_ENCRYPTION | $_Application_Module_Member_System_PlugIn_Status_EncryptionL<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											<B>Settings :: System :: Plug-Ins ::</B> <A HREF=\"./System/Plug-Ins/Safe-HTML/$_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_SAFEHTML/Safe-HTML.$_INTERNAL_FILE_EXTENSION\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Plug-In Application Module :: Safe-HTML ::\" TARGET=\"_NEW\">Safe-HTML</A>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Plug-In :: Safe-HTML :: Directory: $_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_SAFEHTML<BR>
+												*&nbsp;Plug-In :: Safe-HTML :: Status: $_GLOBAL_SYSTEM_PLUGIN_STATUS_SAFEHTML | $_Application_Module_Member_System_PlugIn_Status_SafeHTML<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											<B>Settings :: System :: Plug-Ins ::</B> <A HREF=\"./System/Plug-Ins/Text-Editor/$_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_TEXT_EDITOR/Text-Editor.$_INTERNAL_FILE_EXTENSION\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Plug-In Application Module :: Text-Editor ::\" TARGET=\"_NEW\">Text-Editor</A>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Plug-In :: Text-Editor :: Directory: $_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_TEXT_EDITOR<BR>
+												*&nbsp;Plug-In :: Text-Editor :: Status: $_GLOBAL_SYSTEM_PLUGIN_STATUS_TEXT_EDITOR | $_Application_Module_Member_System_PlugIn_Status_Text_Editor<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Settings :: System :: Plug-Ins :: Data Sanitization</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											<B>Settings :: System :: Plug-Ins ::</B> <A HREF=\"./System/Plug-Ins/Secure-Delete/$_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_SECURE_DELETE/Secure-Delete.$_INTERNAL_FILE_EXTENSION\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Plug-In Application Module :: Secure-Delete ::\" TARGET=\"_NEW\">Secure-Delete</A>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Plug-In :: Secure-Delete :: Directory: $_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_SECURE_DELETE<BR>
+												*&nbsp;Plug-In :: Secure-Delete :: Status: $_GLOBAL_SYSTEM_PLUGIN_STATUS_SECURE_DELETE | $_Application_Module_Member_System_PlugIn_Status_Secure_Delete<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Settings :: System :: Plug-Ins :: Date and Time</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											<B>Settings :: System :: Plug-Ins ::</B> <A HREF=\"./System/Plug-Ins/Time/$_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_TIME/Time.$_INTERNAL_FILE_EXTENSION\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Plug-In Application Module :: Time ::\" TARGET=\"_NEW\">Time</A>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Plug-In :: Time :: Directory: $_GLOBAL_SYSTEM_PLUGIN_DIRECTORY_TIME<BR>
+												*&nbsp;Plug-In :: Time :: Status: $_GLOBAL_SYSTEM_PLUGIN_STATUS_TIME | $_Application_Module_Member_System_PlugIn_Status_Time<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Settings :: System :: Plug-Ins :: Terminal and Console</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											<B>System :: Settings :: Plug-Ins :: Graphical</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Plug-In :: Smileys and Emojis :: Directory: $_GLOBAL_SYSTEM_SMILEYS_DIRECTORY<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
+											<B>System Services</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"40%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											System :: Settings :: Services :: <A HREF=\"./System/Services/Commander\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Application Module :: Commander ::\" TARGET=\"_NEW\">Commander</A>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;System :: Services :: Status :: Commander: $_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_COMMANDER | $_Application_Module_Member_System_System_Services_Status_Commander<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											System :: Settings :: Services :: <A HREF=\"./System/Services/Integrity\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Application Module :: Integrity ::\" TARGET=\"_NEW\">Integrity</A>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;System :: Services :: Status :: Integrity: $_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_INTEGRITY | $_Application_Module_Member_System_System_Services_Status_Integrity<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											System :: Settings :: Services :: <A HREF=\"./System/Services/Loops\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Application Module :: Loops ::\" TARGET=\"_NEW\">Loops</A>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;System :: Services :: Status :: Loops: $_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_LOOPS | $_Application_Module_Member_System_System_Services_Status_Loops<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											System :: Settings :: Services :: <A HREF=\"./System/Services/Services\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Application Module :: Services ::\" TARGET=\"_NEW\">Services</A>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;System :: Services :: Status: Services: $_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_SERVICES | $_Application_Module_Member_System_System_Services_Status_Services<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											System :: Settings :: Services :: <A HREF=\"./System/Services/Tasks\" TITLE=\":: Open & Display :: The Source Programming Code :: For :: The System Application Module :: Tasks ::\" TARGET=\"_NEW\">Tasks</A>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;System :: Services :: Status: Tasks: $_GLOBAL_SETTING_SYSTEM_SERVICES_MODULE_STATUS_TASKS | $_Application_Module_Member_System_System_Services_Status_Tasks<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
+											<B>System Security</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"40%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Settings :: System :: Security :: Security Modules</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+
+												<B>Master Sanitization</B><BR>
+												*&nbsp;System :: Security Module :: Master Sanitization Module :: Directory :: $_GLOBAL_SETTING_SYSTEM_SECURITY_MODULE_DIRECTORY_MASTER_SANITIZATION<BR>
+												*&nbsp;System :: Security Module :: Master Sanitization Module :: Status :: $_GLOBAL_SETTING_SYSTEM_SECURITY_MODULE_STATUS_MASTER_SANITIZATION | $_Application_Module_Member_System_System_Security_Module_Status_Master_Sanitization<BR><BR>
+");
+
+} // [ + ] IF: Internal Application: Display :: Plug-Ins :: Is: Activated
+												
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Is: Networking
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Display"] == "Networking") {
+
+echo ("
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+											<B>Networking Connection and Web Server Information</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Networking :: Connected Device :: Connection Information</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;Network :: Connected Device :: Server Request Method :: $_GLOBAL_LOCAL_SERVER_REQUEST_METHOD<BR>
+												*&nbsp;Network :: Connected Device :: Server Request Time :: $_GLOBAL_LOCAL_SERVER_REQUEST_TIME<BR>
+												*&nbsp;Network :: Connected Device :: Server Connection Type :: $_GLOBAL_LOCAL_SERVER_HTTP_CONNECTION_TYPE<BR>
+												*&nbsp;Network :: Connected Device :: Internet Protocol Address :: <A HREF=\"$_SYSTEM_SERVER_NETWORKING_RESOLVER_WHOIS/$_GLOBAL_REMOTE_SERVER_ADDRESS\" TITLE=\":: Open & Display :: The :: Who-Is Information :: For :: Internet Protocol Address: $_GLOBAL_REMOTE_SERVER_ADDRESS :: \" TARGET=\"_NEW\">$_GLOBAL_REMOTE_SERVER_ADDRESS</A><BR>
+												*&nbsp;Network :: Connected Device :: Internet Protocol Address :: Connecting Port Number :: $_GLOBAL_REMOTE_SERVER_PORT<BR>
+												*&nbsp;Network :: Connected Device :: Web-Browser :: User-Agent :: $_GLOBAL_REMOTE_SERVER_HTTP_USER_AGENT_DISPLAY<BR>
+												*&nbsp;Network :: Connected Device :: Location :: Global-Positioning-System :: Coordinates :: X, Y, Z ::
+												&nbsp;<A ID=\"getLocationOutputLatitude\" TITLE=\":: Global-Positioning-System :: Coordinates :: Latitude ::\"></A>,
+												<A ID=\"getLocationOutputLongitude\" TITLE=\":: Global-Positioning-System :: Coordinates ::: Longitude ::\"></A>
+												&nbsp;With Altitude Above Sea-Level:&nbsp;<A ID=\"getLocationOutputAltitude\" TITLE=\":: Global-Positioning-System :: Coordinates :: Altitude ::\"></A>
+												&nbsp;<SPAN ID=\"OutputLocation\"></SPAN><BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Networking :: This Web Server :: Information</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											<B>Networking :: This Web Server :: Information :: Hyper-Text-Transfer-Protocol</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Network :: This Web Server :: Hyper-Text-Transfer-Protocol :: Host :: $_GLOBAL_LOCAL_SERVER_HTTP_HOST<BR>
+												*&nbsp;Network :: This Web Server :: Hyper-Text-Transfer-Protocol :: Accept Type :: $_GLOBAL_LOCAL_SERVER_HTTP_ACCEPT<BR>
+												*&nbsp;Network :: This Web Server :: Hyper-Text-Transfer-Protocol :: Character Set :: $_GLOBAL_LOCAL_SERVER_HTTP_ACCEPT_CHARACTER_SET<BR>
+												*&nbsp;Network :: This Web Server :: Hyper-Text-Transfer-Protocol :: Encoding :: $_GLOBAL_LOCAL_SERVER_HTTP_ACCEPT_ENCODING<BR>
+												*&nbsp;Network :: This Web Server :: Hyper-Text-Transfer-Protocol :: Loading Type :: $_GLOBAL_LOCAL_SERVER_HTTP_ACCEPT_LOADING<BR>
+												*&nbsp;Network :: This Web Server :: Hyper-Text-Transfer-Protocol :: Language :: $_GLOBAL_LOCAL_SERVER_HTTP_ACCEPT_LANGUAGE<BR>
+												*&nbsp;Network :: This Web Server :: Hyper-Text-Transfer-Protocol :: Connection Type :: $_GLOBAL_LOCAL_SERVER_HTTP_CONNECTION_TYPE<BR>
+												*&nbsp;Network :: This Web Server :: Hyper-Text-Transfer-Protocol :: Host :: $_GLOBAL_LOCAL_SERVER_HTTP_HOST<BR>
+												*&nbsp;Network :: This Web Server :: Hyper-Text-Transfer-Protocol :: Referrer :: $_GLOBAL_LOCAL_SERVER_HTTP_REFERRER<BR>
+												*&nbsp;Network :: This Web Server :: Hyper-Text-Transfer-Protocol :: User-Agent :: $_GLOBAL_LOCAL_SERVER_HTTP_USER_AGENT<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											<B>Networking :: This Web Server :: Information :: Gateway</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Network :: This Web Server :: Gateway Interface :: $_GLOBAL_LOCAL_SERVER_GATEWAY_INTERFACE<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											<B>Networking :: This Web Server :: Information :: Address</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Network :: This Web Server :: Address :: <A HREF=\"$_SYSTEM_SERVER_NETWORKING_RESOLVER_WHOIS/$_GLOBAL_LOCAL_SERVER_ADDRESS\" TITLE=\":: Open & Display :: The :: Who-Is Information :: For :: Internet Protocol Address: $_GLOBAL_LOCAL_SERVER_ADDRESS ::\" TARGET=\"_NEW\">$_GLOBAL_LOCAL_SERVER_ADDRESS</A><BR>
+												*&nbsp;Network :: This Web Server :: Address :: Connecting Port Number: $_GLOBAL_LOCAL_SERVER_PORT<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											<B>Networking :: This Web Server :: Information :: Identity</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Network :: This Web Server :: Name :: $_GLOBAL_LOCAL_SERVER_NAME<BR>
+												*&nbsp;Network :: This Web Server :: Protocol :: $_GLOBAL_LOCAL_SERVER_PROTOCOL<BR>
+												*&nbsp;Network :: This Web Server :: Software :: $_GLOBAL_LOCAL_SERVER_SOFTWARE<BR>
+												*&nbsp;Network :: This Web Server :: Signature :: $_GLOBAL_LOCAL_SERVER_SIGNATURE<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											<B>Networking :: This Web Server :: Information :: Request</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Network :: This Web Server :: Request :: Time :: $_GLOBAL_LOCAL_SERVER_REQUEST_TIME<BR>
+												*&nbsp;Network :: This Web Server :: Request :: Time ( Float ) :: $_GLOBAL_LOCAL_SERVER_REQUEST_TIME_FLOAT<BR>
+												*&nbsp;Network :: This Web Server :: Request :: Method :: $_GLOBAL_LOCAL_SERVER_REQUEST_METHOD<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+											<B>Networking :: This Web Server :: Information :: Document</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
+												*&nbsp;Network :: This Web Server :: Document Root :: $_GLOBAL_LOCAL_SERVER_DOCUMENT_ROOT<BR>
+												*&nbsp;Network :: This Web Server :: Directory :: Current :: $_GLOBAL_LOCAL_SERVER_DIRECTORY_CURRENT<BR>
+												*&nbsp;Network :: This Web Server :: Directory :: File :: Current :: $_GLOBAL_LOCAL_SERVER_DIRECTORY_FILE_CURRENT<BR>
+");
+
+} // [ + ] IF: Internal Application: Display :: Networking :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Is: Time
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Display"] == "Time") {
+
+echo ("
+										<HR ALIGN=\"LEFT\" WIDTH=\"40%\">
+											<B>Current System Date and Time Settings</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"40%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												<B>Device :: This Web Server :: Date</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;This Web Server :: Date :: Standard :: Timestamp :: $_GLOBAL_LOCAL_SERVER_DATE_STANDARD<BR>
+												*&nbsp;This Web Server :: Date :: In Years :: $_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_YEAR_FULL<BR>
+												*&nbsp;This Web Server :: Date :: In Months :: $_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_FULL<BR>
+												*&nbsp;This Web Server :: Date :: In Days :: $_GLOBAL_LOCAL_SERVER_DATE_NUMERICAL_MONTH_DAY_FULL<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												<B>Device :: This Web Server :: Time</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;This Web Server :: Time :: In Hours: $_GLOBAL_LOCAL_SERVER_TIME_HOURS<BR>
+												*&nbsp;This Web Server :: Time :: In Minutes: $_GLOBAL_LOCAL_SERVER_TIME_MINUTES<BR>
+												*&nbsp;This Web Server :: Time :: In Seconds: $_GLOBAL_LOCAL_SERVER_TIME_SECONDS<BR>
+												*&nbsp;This Web Server :: Time :: In Microseconds: $_GLOBAL_LOCAL_SERVER_TIME_MICROSECONDS<BR>
+												*&nbsp;This Web Server :: Time :: In Unix-Epoch: <A HREF=\"$_SYSTEM_SERVER_NETWORKING_RESOLVER_TIMESTAMP_UNIX_EPOCH\" TITLE=\":: Open & Display :: The :: Unix-Epoch Time Reader ::\" TARGET=\"_NEW\">$_GLOBAL_LOCAL_SERVER_TIME_UNIX</A><BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												<B>Device :: This Web Server :: Time :: Internet Time</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;This Web Server :: TIme :: In <A HREF=\"https://en.wikipedia.org/wiki/Internet_Time\" TITLE=\":: Open & Display :: The Official Wikipedia Article Entry :: For :: Internet Time ::\" TARGET=\"_NEW\">Internet Time: $_GLOBAL_LOCAL_SERVER_TIME_INTERNET</A><BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												<B>Device :: This Web Server :: Time :: Unix-Epoch :: Built-In</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;This Web Server :: Time :: In Microtime: $_GLOBAL_LOCAL_SERVER_TIME_MICROTIME<BR>
+												*&nbsp;This Web Server :: Time :: In Unix-Epoch Start Time: January, 1st of 1970<BR>
+												*&nbsp;This Web Server :: Time :: In Unix-Epoch: <A HREF=\"$_SYSTEM_SERVER_NETWORKING_RESOLVER_TIMESTAMP_UNIX_EPOCH\" TITLE=\":: Open & Display :: The :: Unix-Epoch Time Reader ::\" TARGET=\"_NEW\">$_GLOBAL_LOCAL_SERVER_TIME_UNIX</A><BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												<B>Device :: This Web Server :: Time :: Unix-Epoch :: Converted</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;This Web Server :: Time :: In Unix-Epoch :: Seconds: $_GLOBAL_LOCAL_SERVER_TIME_UNIX<BR>
+												*&nbsp;This Web Server :: Time :: In Unix-Epoch :: Minutes: $_GLOBAL_LOCAL_SERVER_TIME_UNIX_MINUTES<BR>
+												*&nbsp;This Web Server :: Time :: In Unix-Epoch :: Hours: $_GLOBAL_LOCAL_SERVER_TIME_UNIX_HOURS<BR>
+												*&nbsp;This Web Server :: Time :: In Unix-Epoch :: Days: $_GLOBAL_LOCAL_SERVER_TIME_UNIX_DAYS<BR>
+												*&nbsp;This Web Server :: Time :: In Unix-Epoch :: Months: $_GLOBAL_LOCAL_SERVER_TIME_UNIX_MONTHS<BR>
+												*&nbsp;This Web Server :: Time :: In Unix-Epoch :: Years: ~ $_GLOBAL_LOCAL_SERVER_TIME_UNIX_YEARS<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												<B>Device :: This Web Server :: Time :: Unix-Epoch :: Manually Programmed</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;This Web Server :: Date-Time :: In Unix-Epoch :: Years: $_GLOBAL_LOCAL_SERVER_DATE_TIME_UNIX_YEARS<BR>
+												*&nbsp;This Web Server :: Date-Time :: In Unix-Epoch :: Months: $_GLOBAL_LOCAL_SERVER_DATE_TIME_UNIX_MONTHS<BR>
+												*&nbsp;This Web Server :: Date-Time :: In Unix-Epoch :: Days: $_GLOBAL_LOCAL_SERVER_DATE_TIME_UNIX_DAYS<BR>
+												*&nbsp;This Web Server :: Date-Time :: In Unix-Epoch :: Hours: $_GLOBAL_LOCAL_SERVER_DATE_TIME_UNIX_HOURS<BR>
+												*&nbsp;This Web Server :: Date-Time :: In Unix-Epoch :: Minutes: $_GLOBAL_LOCAL_SERVER_DATE_TIME_UNIX_MINUTES<BR>
+												*&nbsp;This Web Server :: Date-Time :: In Unix-Epoch :: Seconds: $_GLOBAL_LOCAL_SERVER_DATE_TIME_UNIX_SECONDS<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												<B>Device :: This Web Server :: Time :: Unix-Epoch :: Manually Programmed :: Non-Leap Year</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												*&nbsp;This Web Server :: Date-Time :: In Unix-Epoch :: Years: $_GLOBAL_LOCAL_SERVER_DATE_TIME_UNIX_EPOCH_MANUAL_YEARS<BR>
+												*&nbsp;This Web Server :: Date-Time :: In Unix-Epoch :: Months: $_GLOBAL_LOCAL_SERVER_DATE_TIME_UNIX_EPOCH_MANUAL_MONTHS<BR>
+												*&nbsp;This Web Server :: Date-Time :: In Unix-Epoch :: Days: $_GLOBAL_LOCAL_SERVER_DATE_TIME_UNIX_EPOCH_MANUAL_DAYS<BR>
+												*&nbsp;This Web Server :: Date-Time :: In Unix-Epoch :: Hours: $_GLOBAL_LOCAL_SERVER_DATE_TIME_UNIX_EPOCH_MANUAL_HOURS<BR>
+												*&nbsp;This Web Server :: Date-Time :: In Unix-Epoch :: Minutes: $_GLOBAL_LOCAL_SERVER_DATE_TIME_UNIX_EPOCH_MANUAL_MINUTES<BR>
+												*&nbsp;This Web Server :: Date-Time :: In Unix-Epoch :: Seconds: $_GLOBAL_LOCAL_SERVER_DATE_TIME_UNIX_EPOCH_MANUAL_SECONDS<BR><BR>
+
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												<B>Device :: Connected Device</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												<B><A HREF=\"https://en.Wikipedia.org/wiki/Gregorian_calendar\" TITLE=\":: Open & Display :: The :: Official Wikipedia Article Entry :: For :: Gregorian Calendar ::\" TARGET=\"_NEW\">Gregorian Calendar</A> :: Non-Leap Year</B><BR>
+												*&nbsp;Number of Seconds In 365 Days With 24 Hours In Each Day: 60 Seconds * 60 Minutes * 24 Hours * 365 Days = 31,536,000 Seconds<BR>
+												*&nbsp;Number of Minutes In 365 Days With 24 Hours In Each Day: 60 Minutes * 24 Hours * 365 Days = 31,536,000 Minutes<BR>
+												*&nbsp;Number of Hours In 365 Days With 24 Hours In Each Day: 24 Hours * 365 Days = 8,760 Hours<BR>
+												*&nbsp;Number of Days In 365 Days With 24 Hours In Each Day: 365 Days / 1 = 365 Days<BR>
+												*&nbsp;Number of Weeks In 365 Days With 24 Hours In Each Day: 365 / 7 = 52.1428571429 Weeks<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+												<B>Celestial</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+													<VIDEO WIDTH=\"325\" HEIGHT=\"240\" CONTROLS>
+														<SOURCE SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/Global/Video/Applications/System/Celestial.mp4\" TYPE=\"video/mp4\">
+													</VIDEO> 
+
+");
+												
+} // [ + ] IF: Internal Application: Display :: DateTime :: Is: Activated
+
+/*
+ ============================================================================================================
+ +
+ + IF: Internal Application: Display :: Is: Software
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["Display"] == "Software") {
+
+echo ("
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\">
+											<B>Web Server Software Technologies</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"50%\"><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Hyper-Text-Transfer-Protocol Engine :: General</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											*&nbsp;Hyper-Text-Transfer-Protocol Engine :: Type:  $_PROJECT_WEB_SERVER_TECHNOLOGY_VERSION<BR>
+											*&nbsp;Hyper-Text-Transfer-Protocol Engine :: Version Number: $_PROJECT_WEB_SERVER_TECHNOLOGY_VERSION<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Database Management System Server Database Engine</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											*&nbsp;Database Management System Server Database :: Type: $_PROJECT_WEB_SERVER_TECHNOLOGY_VERSION_MYSQL<BR>
+											*&nbsp;Database Management System Server Database :: Version Number: $_PROJECT_WEB_SERVER_TECHNOLOGY_VERSION_MYSQL<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Operating System Environment</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											*&nbsp;Operating System Environment: $_PROJECT_WEB_SERVER_TECHNOLOGY_VERSION_OPERATING_SYSTEM<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Pre-Hyper-Text-Post-Processor Engine</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											*&nbsp;Pre-Hyper-Text-Post-Processor :: Parser Engine :: Version Number :: Configuration File :: $_ACCESS_PHP_ENGINE_VERSION<BR>
+											*&nbsp;Pre-Hyper-Text-Post-Processor :: Parser Engine :: Version Number :: Currently Loaded :: $_PROJECT_WEB_SERVER_TECHNOLOGY_VERSION_PHP<BR>
+											*&nbsp;Pre-Hyper-Text-Post-Processor :: Zend Engine :: Version Number, Currently Loaded :: $_PROJECT_WEB_SERVER_TECHNOLOGY_VERSION_PHP_ZEND<BR><BR>
+");
+
+} // [ + ] IF: Internal Application: Display :: Statistics :: Is: Activated
+
+echo ("
+											<HR>
+											<CENTER><B>[ <A HREF=\"$_PROJECT_SERVER_URL_SECURE/Projects/CerberusCMS/Validation/Validate.php?Version&#61;$_PROJECT_VERSION_SHORT\" TITLE=\":: Validate This $_PROJECT_STRING_NAME_EXTENDED Installation ::\">$_PROJECT_VERSION_EXTENDED</A> ]</B></CENTER><HR>
+");
+
+/*
+ ============================================================================================================
+ + Kill SQL Database Server Query: Select From Statistics
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_STATISTICS->free_result();
+
+/*
+ ============================================================================================================
+ + Kill SQL Database Server Query: Select From Members
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS->free_result();
+
+/*
+ ============================================================================================================
+ + Kill SQL Database Server Query: Select From Comments
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_COMMENTS->free_result();
+
+/*
+ ============================================================================================================
+ + Kill SQL Database Server Query: Select From Files
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_FILES->free_result();
+
+/*
+ ============================================================================================================
+ + Kill SQL Database Server Query: Select From Forum
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS->free_result();
+
+/*
+ ============================================================================================================
+ + Kill SQL Database Server Query: Select From Forum Topics
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPICS->free_result();
+
+/*
+ ============================================================================================================
+ + Kill SQL Database Server Query: Select From Forum Topic Messages
+ ============================================================================================================
+*/
+
+// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPIC_MESSAGES->free_result();
+?>
