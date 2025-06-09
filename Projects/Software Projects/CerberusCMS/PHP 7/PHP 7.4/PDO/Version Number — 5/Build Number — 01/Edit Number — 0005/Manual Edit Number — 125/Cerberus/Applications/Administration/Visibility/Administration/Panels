@@ -421,7 +421,7 @@ if (!$_Application_Module_Administration_Panels_POST_UPDATE_PANEL_FILE_TITLE) {
 */
 
 echo ("
-													<BR><HR ALIGN=\"CENTER\" WIDTH=\"35%\"><B>Currently Updating Application Panel: <I>$_Application_Module_Administration_Panels_LIST_APPLICATION_PANEL_FILE_NAME</I></B></CENTER><HR ALIGN=\"CENTER\" WIDTH=\"35%\">
+													<BR><HR ALIGN=\"LEFT\" WIDTH=\"35%\"><B>Currently Updating Application Panel: <I>$_Application_Module_Administration_Panels_LIST_APPLICATION_PANEL_FILE_NAME</I></B><HR ALIGN=\"LEFT\" WIDTH=\"35%\">
 														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Panels&UpdateID=$_Application_Module_Administration_Panels_LIST_APPLICATION_PANEL_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 															Application Panel :: File :: Name:<BR>
 															Example: <I>Pictures</I> - Do not write .panel after the filename<BR>
