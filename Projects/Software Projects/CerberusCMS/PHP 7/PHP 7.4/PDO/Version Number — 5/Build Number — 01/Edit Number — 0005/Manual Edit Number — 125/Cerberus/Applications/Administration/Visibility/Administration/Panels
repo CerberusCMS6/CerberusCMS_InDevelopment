@@ -502,15 +502,14 @@ echo ("
 															Example: <I>My Pictures</I><BR>
 																<INPUT TYPE=\"text\" NAME=\"AMA_Panels_Update_Application_Panel_File_Title\" VALUE=\"$_Application_Module_Administration_Panels_LIST_APPLICATION_PANEL_TITLE\" MAXLENGTH=\"250\"><BR><BR>
 
-															Application Panel :: File :: Integrity :: This Installation<BR>
-															Secure-Hash-Algorithm, 256<BR>
+															Application Panel :: File :: Integrity :: This Installation :: Secure-Hash-Algorithm, 256<BR>
 																	<TEXTAREA ROWS=\"10\" COLS=\"50\" NAME=\"AMA_Panels_Update_Application_Panel_File_Integrity_Installation\" MAXLENGTH=\"256\">$_Application_Module_Administration_Panels_LIST_APPLICATION_PANEL_FILE_INTEGRITY_INSTALLATION</TEXTAREA><BR><BR>
 
-															<INPUT TYPE=\"text\" NAME=\"AMA_Panels_Update_Application_Panel_ID\" VALUE=\"$_Application_Module_Administration_Panels_LIST_APPLICATION_PANEL_ID\" MAXLENGTH=\"5\">
-
-															Application Panel :: File :: Integrity :: Physical<BR>
-															Secure-Hash-Algorithm, 256<BR>
+															Application Panel :: File :: Integrity :: Physical :: Secure-Hash-Algorithm, 256<BR>
 																	<TEXTAREA ROWS=\"10\" COLS=\"50\" NAME=\"AMA_Panels_Update_Application_Panel_File_Integrity\" MAXLENGTH=\"256\">$_Application_Module_Administration_Panels_LIST_APPLICATION_PANEL_FILE_INTEGRITY</TEXTAREA><BR>
+
+															Application Panel :: File :: Identification Number<BR>
+															<INPUT TYPE=\"text\" NAME=\"AMA_Panels_Update_Application_Panel_ID\" VALUE=\"$_Application_Module_Administration_Panels_LIST_APPLICATION_PANEL_ID\" MAXLENGTH=\"5\"><BR>
 																<INPUT TYPE=\"submit\" VALUE=\"Update Application Panel\">
 														</FORM><BR>
 ");
