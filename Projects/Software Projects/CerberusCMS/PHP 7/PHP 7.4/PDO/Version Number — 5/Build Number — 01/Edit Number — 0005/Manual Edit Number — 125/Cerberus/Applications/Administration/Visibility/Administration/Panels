@@ -101,7 +101,10 @@ $_Application_Module_Administration_Panels_INSTALL_APPLICATION_PANEL_FILE_INTEGR
 if (!$_Application_Module_Administration_Panels_POST_INSTALL_APPLICATION_PANEL_FILE_NAME) {
 
 echo ("
-													<CENTER><B>Install Application Panel</B></CENTER><HR>
+													<BR>
+													<HR ALIGN=\"LEFT\" WIDTH=\"35%\">
+														<B>Install Application Panel</B>
+													<HR ALIGN=\"LEFT\" WIDTH=\"35%\">
 														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Panels&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 															Application Panel :: File :: Name:<BR>
 															Example: <I>Pictures</I> - Do not write .panel after the filename<BR>
@@ -271,7 +274,7 @@ if ($_Application_Module_Administration_Panels_DB_Query_Install_Application_Pane
 
 $_Application_Module_Administration_Panels_DB_Query_SELECT_APPLICATION_PANELS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_applications_panel_visibility_member ORDER BY application_file_name ASC");
 
-													echo ("<HR WIDTH=\"25%\" ALIGN=\"CENTER\"><CENTER><B>Existing Application Panels</B></CENTER><HR WIDTH=\"25%\" ALIGN=\"CENTER\">");
+													echo ("<HR ALIGN=\"LEFT\" WIDTH=\"35%\"><B>Existing Application Panels</B><HR ALIGN=\"LEFT\" WIDTH=\"35%\"><BR>");
 
 while ($_Application_Module_Administration_Panels_DB_Query_SELECT_APPLICATION_PANELS_Fetch_Array = $_Application_Module_Administration_Panels_DB_Query_SELECT_APPLICATION_PANELS->fetch_array(MYSQLI_BOTH)) {
 
@@ -418,7 +421,7 @@ if (!$_Application_Module_Administration_Panels_POST_UPDATE_PANEL_FILE_TITLE) {
 */
 
 echo ("
-													<BR><HR><CENTER><B>Currently Updating Application Panel: <I>$_Application_Module_Administration_Panels_LIST_APPLICATION_PANEL_FILE_NAME</I></B></CENTER><HR>
+													<BR><HR ALIGN=\"CENTER\" WIDTH=\"35%\"><B>Currently Updating Application Panel: <I>$_Application_Module_Administration_Panels_LIST_APPLICATION_PANEL_FILE_NAME</I></B></CENTER><HR ALIGN=\"CENTER\" WIDTH=\"35%\">
 														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Panels&UpdateID=$_Application_Module_Administration_Panels_LIST_APPLICATION_PANEL_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\">
 															Application Panel :: File :: Name:<BR>
 															Example: <I>Pictures</I> - Do not write .panel after the filename<BR>
@@ -690,7 +693,10 @@ $_Application_Module_Administration_Panels_POST_UPLOAD_FILE_BASENAME				= basena
 if (!$_Application_Module_Administration_Panels_POST_UPLOAD_APPLICATION_PANEL_FILE_TEMPORARY) {
 
 echo ("
-													<BR><HR><CENTER><B>Upload Application Panel</B></CENTER><HR>
+													<BR>
+													<HR ALIGN=\"LEFT\" WIDTH=\"35%\">
+														<B>Upload Application Panel</B>
+													<HR ALIGN=\"LEFT\" WIDTH=\"35%\">
 														<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_ADMINISTRATOR&#61;Control_Panel&amp;Action&#61;Panels&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"post\" ENCTYPE=\"multipart/form-data\">
 																<INPUT TYPE=\"hidden\" NAME=\"AMA_Panels_Upload_Application_Panel_Temporary\" VALUE=\"1\">
 															This Application Panel File must have a File Extension of: <I>.panel</I> which is case-sensitive<BR>
