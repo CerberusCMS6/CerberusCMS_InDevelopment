@@ -338,7 +338,7 @@ if ($_Application_Module_Administration_Panels_DB_Query_Delete_PANEL_ID) {
  ============================================================================================================
 */
 
-if (unlink("./Applications/Panel/Visibility/Member/$_Application_Module_Administration_Panels_LIST_APPLICATION_PANEL_FILE_NAME.panel")) {
+if (unlink("./Applications/Panel/Visibility/Member/$_Application_Module_Administration_Panels_LIST_APPLICATION_PANEL_FILE_NAME.panel") && unlink("./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Panels/$_Application_Module_Administration_Panels_LIST_APPLICATION_PANEL_FILE_NAME.panel")) {
 /**
  * Do Nothing
 **/
@@ -410,7 +410,7 @@ $_Application_Module_Administration_Panels_POST_UPDATE_APPLICATION_PANEL_TITLE		
  ============================================================================================================
 */
 
-if (!$_Application_Module_Administration_Panels_POST_UPDATE_PANEL_FILE_TITLE) {
+if (!$_Application_Module_Administration_Panels_POST_UPDATE_APPLICATION_PANEL_FILE_NAME) {
 
 /*
  ============================================================================================================
