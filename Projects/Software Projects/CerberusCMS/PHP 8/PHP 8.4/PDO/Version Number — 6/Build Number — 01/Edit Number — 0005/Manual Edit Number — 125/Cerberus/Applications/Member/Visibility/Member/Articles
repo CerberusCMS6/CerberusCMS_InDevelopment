@@ -186,5 +186,5 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Articles_DB_Query_SELECT_ARTICLES->free_result();
+// [ C ] $_Application_Module_Member_Articles_DB_Query_SELECT_ARTICLES->closeCursor();
 ?>

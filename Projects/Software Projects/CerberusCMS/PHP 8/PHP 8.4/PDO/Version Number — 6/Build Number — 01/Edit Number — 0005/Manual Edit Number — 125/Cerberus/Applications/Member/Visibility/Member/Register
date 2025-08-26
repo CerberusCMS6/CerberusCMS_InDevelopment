@@ -1122,7 +1122,7 @@ copy("./System/Default/Friend/Friend.cerberus","./Member/Master_List/Electronic_
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Register_DB_Query_INSERT_REGISTRAR->free_result();
+$_Application_Module_Member_Register_DB_Query_INSERT_REGISTRAR->closeCursor();
 
 } // [ + ] IF: ELECTRONIC MAIL ADDRESS EXISTS IN Electronic_Mail_Addresses DIRECTORY [ 1 ]
 

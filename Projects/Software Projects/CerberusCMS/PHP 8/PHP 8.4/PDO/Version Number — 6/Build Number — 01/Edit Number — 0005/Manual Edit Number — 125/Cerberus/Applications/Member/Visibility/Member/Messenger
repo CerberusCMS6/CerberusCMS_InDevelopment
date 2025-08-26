@@ -878,7 +878,7 @@ if ($_Application_Module_Member_Messenger_DB_Query_INSERT_CLEAR_TEXT_FILE_MESSEN
  ==================================================================================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Messenger_DB_Query_INSERT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME->free_result();
+$_Application_Module_Member_Messenger_DB_Query_INSERT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME->closeCursor();
 
 /*
  ============================================================================================================
@@ -959,7 +959,7 @@ $_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENG
  ==================================================================================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Messenger_DB_Query_RETRIEVE_ALL_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES->free_result();
+$_Application_Module_Member_Messenger_DB_Query_RETRIEVE_ALL_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES->closeCursor();
 
 /*
  =============================================================================================================
@@ -1686,7 +1686,7 @@ echo ("
  ==================================================================================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES->free_result();
+$_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES->closeCursor();
 
 /*
  ============================================================================================================
@@ -2507,7 +2507,7 @@ echo ("* Error: Incorrect Password: $_Application_Module_Member_Messenger_POST_E
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Messenger_DB_Query_SELECT_ERASE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME->free_result();
+$_Application_Module_Member_Messenger_DB_Query_SELECT_ERASE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME->closeCursor();
 
 	header("Location: ./$_INTERNAL_FILE_KERNEL?$_INTERNAL_APPLICATION_MODULE_MEMBER=Messenger&SelectedClearTextFile=$_Application_Module_Member_Messenger_POST_ERASE_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 

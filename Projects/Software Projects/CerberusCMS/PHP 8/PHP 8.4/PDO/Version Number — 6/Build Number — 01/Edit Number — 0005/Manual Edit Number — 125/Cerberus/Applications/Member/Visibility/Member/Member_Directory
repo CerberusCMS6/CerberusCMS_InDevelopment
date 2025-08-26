@@ -190,5 +190,5 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Member_Directory_DB_Query_SELECT_MEMBERS->free_result();
+$_Application_Module_Member_Member_Directory_DB_Query_SELECT_MEMBERS->closeCursor();
 ?>

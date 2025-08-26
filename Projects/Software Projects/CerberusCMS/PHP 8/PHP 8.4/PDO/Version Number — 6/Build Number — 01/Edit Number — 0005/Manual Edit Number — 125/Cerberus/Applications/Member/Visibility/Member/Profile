@@ -5448,5 +5448,5 @@ echo ("Streams Message: Authentication Is Required In Order To Broadcast a Live 
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Profile_DB_Query_SELECT_ALL_MEMBER_ACCOUNT_ENTRIES->free_result();
+$_Application_Module_Member_Profile_DB_Query_SELECT_ALL_MEMBER_ACCOUNT_ENTRIES->closeCursor();
 ?>

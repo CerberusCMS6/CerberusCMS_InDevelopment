@@ -426,7 +426,7 @@ System Rank #10, Male: $_Application_Module_Ranks_LIST_RANK_GENDER_MALE_4<BR><BR
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_List_DB_Query_SELECT_RANKS->free_result();
+$_Application_Module_Member_List_DB_Query_SELECT_RANKS->closeCursor();
 
 } // [ + ] IF: Internal Application: Display :: All System Ranks Is: Activated
 

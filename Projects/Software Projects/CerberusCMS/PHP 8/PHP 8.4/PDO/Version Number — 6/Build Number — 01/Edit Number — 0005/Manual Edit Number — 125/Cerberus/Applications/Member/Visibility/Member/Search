@@ -156,7 +156,7 @@ $_Application_Module_Member_Search_LIST_ARTICLE_DATA_REDUCED...<BR><BR>
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Search_DB_Query_SEARCH_ARTICLES->free_result();
+$_Application_Module_Member_Search_DB_Query_SEARCH_ARTICLES->closeCursor();
 
 } // [ + ] IF: Search Type Is: Article Entries
 
@@ -212,7 +212,7 @@ $_Application_Module_Member_Search_LIST_FILE_DATA_REDUCED...<BR><BR>
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Search_DB_Query_SEARCH_FILES->free_result();
+$_Application_Module_Member_Search_DB_Query_SEARCH_FILES->closeCursor();
 
 } // [ + ] IF: Search Type Is: File Entries
 
@@ -268,7 +268,7 @@ $_Application_Module_Member_Search_LIST_FORUM_DATA_REDUCED...<BR><BR>
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Search_DB_Query_SEARCH_FORUM->free_result();
+$_Application_Module_Member_Search_DB_Query_SEARCH_FORUM->closeCursor();
 
 } // [ + ] IF: Search Type Is: Forum Entries
 
@@ -324,7 +324,7 @@ $_Application_Module_Member_Search_LIST_NEWS_DATA_REDUCED...<BR><BR>
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Search_DB_Query_SEARCH_NEWS->free_result();
+$_Application_Module_Member_Search_DB_Query_SEARCH_NEWS->closeCursor();
 
 } // [ + ] IF: Search Type Is: News Article Entries
 
@@ -390,7 +390,7 @@ $_Application_Module_Member_Search_LIST_MEMBER_PROFILE_ABOUT...<BR><BR>
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Search_DB_Query_SEARCH_MEMBERS->free_result();
+$_Application_Module_Member_Search_DB_Query_SEARCH_MEMBERS->closeCursor();
 
 } // [ + ] IF: Search Type Is: Registered Member Account Entries
 

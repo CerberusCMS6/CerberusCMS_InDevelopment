@@ -509,7 +509,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Forum_DB_Query_SELECT_MEMBERS->free_result
+$_Application_Module_Member_Forum_DB_Query_SELECT_MEMBERS->closeCursor
 
 } // [ + ] IF: Forum :: Forum Topic :: Forum Topic Message Entries ARE Zero
 
@@ -521,7 +521,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Forum_DB_Query_SELECT_FORUM_TOPIC_MESSAGES->free_result();
+$_Application_Module_Member_Forum_DB_Query_SELECT_FORUM_TOPIC_MESSAGES->closeCursor();
 
 } // [ + ] WHILE: Retrieving :: Forum :: Forum Topic :: Forum Topic Message Entries :: From The Database Management System Server Database
 
@@ -531,7 +531,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Forum_DB_Query_SELECT_FORUM_TOPICS->free_result();
+$_Application_Module_Member_Forum_DB_Query_SELECT_FORUM_TOPICS->closeCursor();
 
 // [ C ] } // [ + ] WHILE: Retrieving :: Forum :: Topic Entries :: From The Database Management System Server Database
 
@@ -541,7 +541,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Forum_DB_Query_SELECT_FORUMS->free_result();
+$_Application_Module_Member_Forum_DB_Query_SELECT_FORUMS->closeCursor();
 
 /*
  =============================================================================================================
@@ -658,7 +658,7 @@ if ($_Application_Module_Member_Forum_DB_Query_UPDATE_FORUM_TOPIC_MESSAGE_ENTRY)
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Forum_DB_Query_UPDATE_FORUM_TOPIC_MESSAGE_ENTRY->free_result();
+$_Application_Module_Member_Forum_DB_Query_UPDATE_FORUM_TOPIC_MESSAGE_ENTRY->closeCursor();
 
 } // [ + ] WHILE: Retrieving :: Forum :: Forum Topic :: Forum Topic Message Entries :: From The Database Mangement System Server Database
 
@@ -672,7 +672,7 @@ if ($_Application_Module_Member_Forum_DB_Query_UPDATE_FORUM_TOPIC_MESSAGE_ENTRY)
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Forum_DB_Query_SELECT_FORUM_TOPIC_MESSAGES_FOR_UPDATE->free_result();
+$_Application_Module_Member_Forum_DB_Query_SELECT_FORUM_TOPIC_MESSAGES_FOR_UPDATE->closeCursor();
 
 } // [ + ] IF: Update :: Forum :: Topic :: Message Entry :: Database Management System Server Database Variable :: HAS Executed
 
@@ -777,7 +777,7 @@ $_Application_Module_Member_Forum_LIST_FORUM_CREATE_TOPIC_FORUM_TITLE			= $_Appl
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Forum_DB_Query_SELECT_FORUM_CREATE_TOPIC->free_result();
+$_Application_Module_Member_Forum_DB_Query_SELECT_FORUM_CREATE_TOPIC->closeCursor();
 
 echo ("
 													</SELECT>
@@ -862,7 +862,7 @@ $_Application_Module_Member_Message_Forum_CREATE_FORUM_TOPIC_ENTRY_SUCCESSFUL<BR
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Forum_DB_Query_INSERT_FORUM_TOPIC->free_result();
+$_Application_Module_Member_Forum_DB_Query_INSERT_FORUM_TOPIC->closeCursor();
 
 } // [ + ] IF: Create :: Forum :: Forum Topic :: Access Level :: String Length Is: Greater Than 1
 
@@ -878,7 +878,7 @@ $_Application_Module_Member_Message_Forum_CREATE_FORUM_TOPIC_ENTRY_SUCCESSFUL<BR
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Forum_DB_Query_SELECT_FORUM_FORUM->free_result();
+$_Application_Module_Member_Forum_DB_Query_SELECT_FORUM_FORUM->closeCursor();
 
 } // [ + ] IF: Forum :: Forum Topic Entries :: Number Of Rows IS: Less Than Or Equal To: Zero
 
@@ -992,7 +992,7 @@ if ($_Application_Module_Member_Forum_DB_Query_INSERT_FORUM_TOPIC_MESSAGE) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Forum_DB_Query_INSERT_FORUM_TOPIC_MESSAGE->free_result();
+$_Application_Module_Member_Forum_DB_Query_INSERT_FORUM_TOPIC_MESSAGE->closeCursor();
 
 } // [ + ] IF: Internal Application: Display :: Create Forum Topic Message Entry :: Input Form :: Variables :: HAVE NOT Executed
 
@@ -1090,7 +1090,7 @@ if ($_Application_Module_Member_Forum_DB_Query_INSERT_FORUM_TOPIC_MESSAGE_REPLY_
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Forum_DB_Query_INSERT_FORUM_TOPIC_MESSAGE_REPLY_MESSAGE->free_result();
+$_Application_Module_Member_Forum_DB_Query_INSERT_FORUM_TOPIC_MESSAGE_REPLY_MESSAGE->closeCursor();
 
 /*
  =============================================================================================================
@@ -1132,7 +1132,7 @@ if ($_Application_Module_Member_Forum_UPDATE_MEMBER_STATISTICS) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Forum_UPDATE_MEMBER_STATISTICS->free_result();
+$_Application_Module_Member_Forum_UPDATE_MEMBER_STATISTICS->closeCursor();
 
 } // [ + ] IF: Internal Application: Display :: Forum Topic Message Entry Reply Message :: Input Form :: Variables ARE NOT Empty
 
@@ -1211,7 +1211,7 @@ if ($_Application_Module_Member_Forum_DB_Query_DELETE_FORUM_TOPIC_MESSAGE) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Forum_DB_Query_DELETE_FORUM_TOPIC_MESSAGE->free_result();
+$_Application_Module_Member_Forum_DB_Query_DELETE_FORUM_TOPIC_MESSAGE->closeCursor();
 
 } // [ + ] IF: Forum :: Forum Topic :: Forum Topic Message Entry Author IS: Original Author
 
@@ -1225,7 +1225,7 @@ if ($_Application_Module_Member_Forum_DB_Query_DELETE_FORUM_TOPIC_MESSAGE) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Forum_DB_Query_SELECT_FORUM_TOPIC_MESSAGE_DELETE->free_result();
+$_Application_Module_Member_Forum_DB_Query_SELECT_FORUM_TOPIC_MESSAGE_DELETE->closeCursor();
 
 /*
  ============================================================================================================
@@ -1335,6 +1335,6 @@ echo ("Forum :: Quick Options :: Activated :: ?$_INTERNAL_APPLICATION_MODULE_MEM
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Forum_Quick_Options_DB_Query_SELECT_FORUM_JUMP_TO->free_result();
-// [ C ] $_Application_Module_Member_Forum_Quick_Options_DB_Query_SELECT_FORUM_TOPIC_JUMP_TO->free_result();
+$_Application_Module_Member_Forum_Quick_Options_DB_Query_SELECT_FORUM_JUMP_TO->closeCursor();
+$_Application_Module_Member_Forum_Quick_Options_DB_Query_SELECT_FORUM_TOPIC_JUMP_TO->closeCursor();
 ?>

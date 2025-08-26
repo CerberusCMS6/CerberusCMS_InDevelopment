@@ -1103,7 +1103,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_STATISTICS->free_result();
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_STATISTICS->closeCursor();
 
 /*
  ============================================================================================================
@@ -1111,7 +1111,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS->free_result();
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS->closeCursor();
 
 /*
  ============================================================================================================
@@ -1119,7 +1119,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_COMMENTS->free_result();
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_COMMENTS->closeCursor();
 
 /*
  ============================================================================================================
@@ -1127,7 +1127,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_FILES->free_result();
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FILES->closeCursor();
 
 /*
  ============================================================================================================
@@ -1135,7 +1135,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS->free_result();
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS->closeCursor();
 
 /*
  ============================================================================================================
@@ -1143,7 +1143,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPICS->free_result();
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPICS->closeCursor();
 
 /*
  ============================================================================================================
@@ -1151,5 +1151,5 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPIC_MESSAGES->free_result();
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPIC_MESSAGES->closeCursor();
 ?>

@@ -173,5 +173,5 @@ $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_DATA
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES->free_result();
+$_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES->closeCursor();
 ?>

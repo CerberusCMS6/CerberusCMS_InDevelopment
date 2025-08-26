@@ -1712,7 +1712,7 @@ Have a nice day,
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Update_Account_DB_Query_UPDATE_MEMBER_ACCOUNT->free_result();
+$_Application_Module_Member_Update_Account_DB_Query_UPDATE_MEMBER_ACCOUNT->closeCursor();
 
 } // [ + ] IF: Update :: Registered Member Account Form Variables Have Executed
 
@@ -1722,7 +1722,7 @@ Have a nice day,
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS->free_result();
+$_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS->closeCursor();
 
 } // [ + ] WHILE: Retrieving :: Registered Member Account Data From The Database Server
 ?>

@@ -573,7 +573,7 @@ if ($_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA->free_result();
+// [ C ] $_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA->closeCursor();
 
 /*
  ============================================================================================================
@@ -971,7 +971,7 @@ if ($_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA->free_result();
+// [ C ] $_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA->closeCursor();
 
 /*
  ============================================================================================================
@@ -1348,7 +1348,7 @@ if ($_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA->free_result();
+// [ C ] $_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA->closeCursor();
 
 /*
  ============================================================================================================
@@ -1658,7 +1658,7 @@ if ($_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA->free_result();
+// [ C ] $_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA->closeCursor();
 
 /*
  ============================================================================================================
