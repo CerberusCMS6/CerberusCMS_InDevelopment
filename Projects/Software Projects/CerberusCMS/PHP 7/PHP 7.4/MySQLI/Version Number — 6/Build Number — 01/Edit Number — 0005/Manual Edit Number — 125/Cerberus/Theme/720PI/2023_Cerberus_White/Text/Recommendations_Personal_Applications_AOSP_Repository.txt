@@ -1,0 +1,147 @@
+- BASELINE APPLICATIONS
+* gApps Pico
+
+- AUDIO PROCESSING
+* Audacity
+* Internet Radio
+* FM / AM Radio
+
+- DOCUMENT PROCESSING
+* Adobe PDF Reader
+* Libre Office
+* Microsoft Office
+
+- IMAGE PROCESSING
+* Facial Recognition
+* Human Identity Recognition
+* Image Recognition
+* License Plate Scanner
+
+- VIDEO PROCESSING
+* CapCut
+
+- NETWORK TOOLS
+* AdAway
+* DNSCrypt / DNSCrypt-Proxy
+* IPTables
+* MacChanger
+* Network Log
+* Network Monitor
+* OpenVPN
+* WireShark
+
+- SOCIAL MEDIA
+* FaceBook
+* Reddit
+* SnapChat
+* InstaGram
+* Tinder
+* Twitter // X
+* YouTube
+
+- GROCERY AND SUSTENANCE
+* 7-11
+* Albertsons
+* Gelsons
+* Ralphs
+* Vons
+
+- COMMUNICATIONS
+* AndroIRC
+* Discord
+* Google Voice
+* Mastadon
+* Skype
+* TeamSpeak
+* TeleGram
+* VoIP Client
+* Wire
+* WhatsAPP
+
+- DOWNLOAD
+* TTorrent Lite
+
+- TERMINALS
+* Terminal
+* Termux
+
+- MAINTENANCE
+* Call Recorder
+* Remote Administrator Client
+
+- MEDIA PLAYERS
+* SoundCloud
+* VLC Media Player
+* XBMC // KODI Media Center
+
+- DOCUMENT HANDLING
+* PDFReader
+
+- ENCRYPTION TOOLS
+* KeePass
+* PGPAuth
+
+- REPOSITORIES
+* FOSSHub / FOSS Repo
+
+- WEB BROWSERS
+* Chrome
+* Chromium
+* Fennec
+* Mozilla FireFox
+* Opera
+
+- WEB BROWSER ADD-ONS
+* AdBlock Pro
+* Ghostery
+* HTTPSEverywhere
+* NoSCRIPT
+
+- TRAVEL ASSIST
+* Google Earth
+* Google Maps
+* Google Street View
+* Lyft
+* Uber
+
+- FINANCIAL
+* American Express // Visa BlueBird
+* American Express // Visa Serve
+* Visa Crypto.com
+* Visa CashAPP
+* Visa Chime
+* Visa Current
+
+- NEWS / INFORMATION GATHERING
+* Google News
+* SlashDOT
+* Local News Applications / Websites
+* International News Applications / Websites
+
+- SAFETY AND AREA EVALUATION
+* AirNow
+
+- CRYPTO CURRENCY WALLETS
+* CoinBase
+* Crypto ( Crypto.com )
+
+- VIDEO GAME CONSOLE EMULATORS
+* Super Nintendo ( SNESX )
+* Playstation 1
+* Playstation 2
+* Playstation Portable ( PPSSPP )
+
+- UNIVERSE
+* Celestia
+
+- ELECTRONIC MAIL
+* Google Mail
+* Proton Mail
+* TutaNota
+* Yahoo Mail
+
+- HOUSING
+* AirBNB
+* CouchSurfing
+* Hostel
+* Worldpackers
