@@ -1,2 +1,0 @@
-- WEB SERVER SOFTWARE
-sudo pacman -S apache php php-apache mysql
