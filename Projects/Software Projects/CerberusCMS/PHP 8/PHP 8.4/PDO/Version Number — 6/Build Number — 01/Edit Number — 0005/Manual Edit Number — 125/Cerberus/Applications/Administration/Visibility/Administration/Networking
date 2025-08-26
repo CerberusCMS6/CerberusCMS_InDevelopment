@@ -163,7 +163,7 @@ if ($_Application_Module_Administration_Networking_DB_Query_Block_Network_Intern
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Networking_DB_Query_Block_Network_Internet_Protocol_Address_String->free_result();
+$_Application_Module_Administration_Networking_DB_Query_Block_Network_Internet_Protocol_Address_String->closeCursor();
 
 } // [ + ] IF: Network Blocking :: Input Form :: Variables HAVE Executed
 
@@ -256,7 +256,7 @@ if ($_Application_Module_Administration_Networking_DB_Query_REMOVE_BLOCKED_NETWO
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Networking_DB_Query_REMOVE_BLOCKED_NETWORK_ADDRESS->free_result();
+$_Application_Module_Administration_Networking_DB_Query_REMOVE_BLOCKED_NETWORK_ADDRESS->closeCursor();
 
 } // [ + ] IF: Database Server Query :: Delete Entry :: From Network Blocking
 
@@ -270,5 +270,5 @@ if ($_Application_Module_Administration_Networking_DB_Query_REMOVE_BLOCKED_NETWO
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Networking_DB_Query_LIST_BLOCKED_NETWORKS->free_result();
+$_Application_Module_Administration_Networking_DB_Query_LIST_BLOCKED_NETWORKS->closeCursor();
 ?>

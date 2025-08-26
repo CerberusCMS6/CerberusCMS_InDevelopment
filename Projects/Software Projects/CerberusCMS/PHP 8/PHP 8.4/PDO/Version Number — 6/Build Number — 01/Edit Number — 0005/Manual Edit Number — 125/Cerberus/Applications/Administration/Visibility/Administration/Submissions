@@ -148,7 +148,7 @@ if ($_Application_Module_Administration_Submissions_DB_Query_DELETE_SUBMISSION) 
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Submissions_DB_Query_DELETE_SUBMISSION->free_result();
+$_Application_Module_Administration_Submissions_DB_Query_DELETE_SUBMISSION->closeCursor();
 
 } // [ + ] IF: Internal Application: DeleteID Is Activated
 
@@ -162,5 +162,5 @@ if ($_Application_Module_Administration_Submissions_DB_Query_DELETE_SUBMISSION) 
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Submissions_SQL_Query_SELECT_SUBMISSIONS->free_result();
+$_Application_Module_Administration_Submissions_SQL_Query_SELECT_SUBMISSIONS->closeCursor();
 ?>

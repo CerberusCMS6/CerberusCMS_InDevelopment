@@ -150,7 +150,7 @@ if ($_Application_Module_Administration_File_Categories_DB_Query_INSTALL_CATEGOR
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_File_Categories_DB_Query_INSTALL_CATEGORY->free_result();
+$_Application_Module_Administration_File_Categories_DB_Query_INSTALL_CATEGORY->closeCursor();
 
 } // [ + ] IF: Install File Category Entry Variables Have Not Executed
 
@@ -221,7 +221,7 @@ if ($_Application_Module_Administration_File_Categories_DB_Query_DELETE_FILE_CAT
 
 } // [ + ] IF: S.Q.L. Query: Delete File Category Entry By ID
 
-// [ C ] $_Application_Module_Administration_File_Categories_DB_Query_DELETE_FILE_CATEGORY->free_result();
+$_Application_Module_Administration_File_Categories_DB_Query_DELETE_FILE_CATEGORY->closeCursor();
 
 } // [ + ] IF: Internal Application: DeleteID Is Activated
 
@@ -303,7 +303,7 @@ if ($_Application_Module_Administration_File_Categories_DB_Query_UPDATE_CATEGORY
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_File_Categories_DB_Query_UPDATE_CATEGORY->free_result();
+$_Application_Module_Administration_File_Categories_DB_Query_UPDATE_CATEGORY->closeCursor();
 
 } // [ + ] IF: Update File Category Entry Form Variables Have NOT Executed
 
@@ -319,5 +319,5 @@ if ($_Application_Module_Administration_File_Categories_DB_Query_UPDATE_CATEGORY
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_File_Categories_DB_Query_SELECT_ALL_FILE_CATEGORIES->free_result();
+$_Application_Module_Administration_File_Categories_DB_Query_SELECT_ALL_FILE_CATEGORIES->closeCursor();
 ?>

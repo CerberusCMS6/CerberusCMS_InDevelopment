@@ -135,7 +135,7 @@ echo ("
  ============================================================================================================ 
 */
 
-// [ C ] $_Application_Module_Administration_Publish_DB_Query_SELECT_NEWS_SUBMISSIONS->free_result();
+$_Application_Module_Administration_Publish_DB_Query_SELECT_NEWS_SUBMISSIONS->closeCursor();
 
 /*
  ============================================================================================================ 
@@ -253,7 +253,7 @@ fclose($_Application_Module_Administration_Publish_OPEN_NEWS_FILE);
  ============================================================================================================ 
 */
 
-// [ C ] $_Application_Module_Administration_Publish_DB_Query_PUBLISH_NEWS->free_result();
+$_Application_Module_Administration_Publish_DB_Query_PUBLISH_NEWS->closeCursor();
 
 } // [ + ] IF: Publish News Article Variables Have NOT Executed
 
@@ -369,7 +369,7 @@ fclose($_Application_Module_Administration_Publish_OPEN_ARTICLE_FILE);
  ============================================================================================================ 
 */
 
-// [ C ] $_Application_Module_Administration_Publish_DB_Query_PUBLISH_ARTICLE->free_result();
+$_Application_Module_Administration_Publish_DB_Query_PUBLISH_ARTICLE->closeCursor();
 
 } // [ + ] IF: Publish Article Entry Variables Have NOT Executed
 
@@ -456,7 +456,7 @@ This Mass Electronic Mail Message Was Sent On: $_GLOBAL_LOCAL_SERVER_DATE_STANDA
  ============================================================================================================ 
 */
 
-// [ C ] $_Application_Module_Administration_Publish_DB_Query_SELECT_MEMBERS->free_result();
+$_Application_Module_Administration_Publish_DB_Query_SELECT_MEMBERS->closeCursor();
 
 } // [ + ] IF: Send Mass Newsletter Variables Have NOT Executed
 ?>

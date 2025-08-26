@@ -172,7 +172,7 @@ if ($_Application_Module_Administration_Robot_Monitor_DB_Query_DELETE_ALL) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Robot_Monitor_DB_Query_DELETE_ALL->free_result();
+$_Application_Module_Administration_Robot_Monitor_DB_Query_DELETE_ALL->closeCursor();
 
 } // [ + ] IF: Internal Application: Delete All Non-Activated Member Accounts Is Activated
 
@@ -184,5 +184,5 @@ if ($_Application_Module_Administration_Robot_Monitor_DB_Query_DELETE_ALL) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Robot_Monitor_DB_Query_SELECT_MEMBERS->free_result();
+$_Application_Module_Administration_Robot_Monitor_DB_Query_SELECT_MEMBERS->closeCursor();
 ?>

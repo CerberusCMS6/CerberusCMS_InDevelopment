@@ -1420,7 +1420,7 @@ if ($_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS->free_result();
+$_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS->closeCursor();
 
 /*
  ============================================================================================================
@@ -1428,5 +1428,5 @@ if ($_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Themes_DB_Query_SELECT_SETTINGS->free_result();
+$_Application_Module_Administration_Themes_DB_Query_SELECT_SETTINGS->closeCursor();
 ?>

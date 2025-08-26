@@ -678,7 +678,7 @@ if ($_Application_Module_Administration_Settings_DB_Query_UPDATE_SETTINGS) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Settings_DB_Query_UPDATE_SETTINGS->free_result();
+$_Application_Module_Administration_Settings_DB_Query_UPDATE_SETTINGS->closeCursor();
 
 } // [ + ] IF: Update System Settings Form Variables Have Executed
 
@@ -690,5 +690,5 @@ if ($_Application_Module_Administration_Settings_DB_Query_UPDATE_SETTINGS) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Settings_DB_Query_SELECT_SETTINGS->free_result();
+$_Application_Module_Administration_Settings_DB_Query_SELECT_SETTINGS->closeCursor();
 ?>

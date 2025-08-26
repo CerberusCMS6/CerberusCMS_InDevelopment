@@ -261,7 +261,7 @@ if ($_Application_Module_Background_Log_Member_UPDATE_MEMBER_ACCOUNT_CURRENT_INT
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Background_Log_Member_UPDATE_MEMBER_ACCOUNT_CURRENT_INTERNET_PROTOCOL_ADDRESS->free_result();
+$_Application_Module_Background_Log_Member_UPDATE_MEMBER_ACCOUNT_CURRENT_INTERNET_PROTOCOL_ADDRESS->closeCursor();
 
 /*
  ============================================================================================================
@@ -359,7 +359,7 @@ if ($_Application_Module_Background_Log_Member_UPDATE_MEMBER_ACCOUNT_STATUS_ACTI
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Background_Log_Member_UPDATE_MEMBER_ACCOUNT_STATUS_ACTIVE->free_result();
+$_Application_Module_Background_Log_Member_UPDATE_MEMBER_ACCOUNT_STATUS_ACTIVE->closeCursor();
 
 /*
  ============================================================================================================
@@ -367,7 +367,7 @@ if ($_Application_Module_Background_Log_Member_UPDATE_MEMBER_ACCOUNT_STATUS_ACTI
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Background_Log_Member_UPDATE_MEMBER_ACCOUNT_LAST_KNOWN_REFERRER->free_result();
+$_Application_Module_Background_Log_Member_UPDATE_MEMBER_ACCOUNT_LAST_KNOWN_REFERRER->closeCursor();
 
 /*
  ============================================================================================================
@@ -375,7 +375,7 @@ if ($_Application_Module_Background_Log_Member_UPDATE_MEMBER_ACCOUNT_STATUS_ACTI
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Background_Log_Member_UPDATE_MEMBER_ACCOUNT_DEVICE_WEB_BROWSER->free_result();
+$_Application_Module_Background_Log_Member_UPDATE_MEMBER_ACCOUNT_DEVICE_WEB_BROWSER->closeCursor();
 
 } // [ + ] IF: Registered Member Account :: Is Logged-In With Valid Credentials In Set Cookies
 
@@ -385,7 +385,7 @@ if ($_Application_Module_Background_Log_Member_UPDATE_MEMBER_ACCOUNT_STATUS_ACTI
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Background_Log_Background_DB_Query_SELECT_STATISTICS->free_result();
+$_Application_Module_Background_Log_Background_DB_Query_SELECT_STATISTICS->closeCursor();
 
 /*
  ============================================================================================================
@@ -393,7 +393,7 @@ if ($_Application_Module_Background_Log_Member_UPDATE_MEMBER_ACCOUNT_STATUS_ACTI
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Background_Log_Background_DB_Query_UPDATE_SYSTEM_STATISTICS_NUMBER_OF_DOCUMENT_EXECUTIONS_NON_UNIQUE->free_result();
+$_Application_Module_Background_Log_Background_DB_Query_UPDATE_SYSTEM_STATISTICS_NUMBER_OF_DOCUMENT_EXECUTIONS_NON_UNIQUE->closeCursor();
 
 /*
  ============================================================================================================
@@ -401,5 +401,5 @@ if ($_Application_Module_Background_Log_Member_UPDATE_MEMBER_ACCOUNT_STATUS_ACTI
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Background_Log_Background_DB_Query_UPDATE_SYSTEM_STATISTICS_NUMBER_OF_DOCUMENT_EXECUTIONS_UNIQUE->free_result();
+$_Application_Module_Background_Log_Background_DB_Query_UPDATE_SYSTEM_STATISTICS_NUMBER_OF_DOCUMENT_EXECUTIONS_UNIQUE->closeCursor();
 ?>

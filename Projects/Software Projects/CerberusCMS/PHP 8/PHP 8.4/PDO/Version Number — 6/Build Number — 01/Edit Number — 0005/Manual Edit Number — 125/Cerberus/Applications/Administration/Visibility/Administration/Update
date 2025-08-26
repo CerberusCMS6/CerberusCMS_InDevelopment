@@ -129,7 +129,7 @@ if (($_Application_Module_Administration_Update_DB_Query_DELETE_ARTICLE) && ($_A
  =============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Update_DB_Query_DELETE_ARTICLE->free_result();
+$_Application_Module_Administration_Update_DB_Query_DELETE_ARTICLE->closeCursor();
 
 } // [ + ] IF: Database Query: Delete Article Entry By ID AND Unlink Article Entry File
 
@@ -235,7 +235,7 @@ fclose($_Application_Module_Administration_Update_OPEN_ARTICLE_FILE);
  =============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Update_DB_Query_UPDATE_ARTICLE->free_result();
+$_Application_Module_Administration_Update_DB_Query_UPDATE_ARTICLE->closeCursor();
 
 } // [ + ] IF: Update Article Entry Form Variables Have Executed
 
@@ -249,7 +249,7 @@ fclose($_Application_Module_Administration_Update_OPEN_ARTICLE_FILE);
  =============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Update_DB_Query_SELECT_ARTICLES->free_result();
+$_Application_Module_Administration_Update_DB_Query_SELECT_ARTICLES->closeCursor();
 
 } // [ + ] IF: Internal Application: Update Article Entry By ID Is Activated
 
@@ -308,7 +308,7 @@ if ($_Application_Module_Administration_Update_DB_Query_DELETE_LINK) {
  =============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Update_DB_Query_DELETE_LINK->free_result();
+$_Application_Module_Administration_Update_DB_Query_DELETE_LINK->closeCursor();
 
 } // [ + ] IF: Database Query: Delete Link By ID Variable Is Executed
 
@@ -382,7 +382,7 @@ if ($_Application_Module_Administration_Update_DB_Query_UPDATE_LINK) {
  =============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Update_DB_Query_UPDATE_LINK->free_result();
+$_Application_Module_Administration_Update_DB_Query_UPDATE_LINK->closeCursor();
 
 } // [ + ] IF: Update Link Entry Form Variables Have Executed
 
@@ -396,7 +396,7 @@ if ($_Application_Module_Administration_Update_DB_Query_UPDATE_LINK) {
  =============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Update_DB_Query_SELECT_LINKS->free_result();
+$_Application_Module_Administration_Update_DB_Query_SELECT_LINKS->closeCursor();
 
 } // [ + ] IF: Internal Application: Data IS Links Is Activated
 
@@ -528,7 +528,7 @@ fclose($_OPEN_NEWS_FILE);
  =============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Update_DB_Query_UPDATE_NEWS->free_result();
+$_Application_Module_Administration_Update_DB_Query_UPDATE_NEWS->closeCursor();
 
 } // [ + ] IF: Update News Entry Variables Have Executed
 
@@ -561,7 +561,7 @@ if (($_Application_Module_Administration_Update_DB_Query_DELETE_NEWS) && ($_Appl
  =============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Update_DB_Query_DELETE_NEWS->free_result();
+$_Application_Module_Administration_Update_DB_Query_DELETE_NEWS->closeCursor();
 
 } // [ + ] IF: Internal Application: Delete News Article Entry By ID Is Activated
 
@@ -573,7 +573,7 @@ if (($_Application_Module_Administration_Update_DB_Query_DELETE_NEWS) && ($_Appl
  =============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Update_DB_Query_SELECT_NEWS->free_result();
+$_Application_Module_Administration_Update_DB_Query_SELECT_NEWS->closeCursor();
 
 } // [ + ] IF: Internal Application: Data IS News Is Activated
 
@@ -639,7 +639,7 @@ if (($_Application_Module_Administration_Update_DB_Query_DELETE_FILE) && ($_Appl
  =============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Update_DB_Query_DELETE_FILE->free_result();
+$_Application_Module_Administration_Update_DB_Query_DELETE_FILE->closeCursor();
 
 } // [ + ] IF: Internal Application: Delete File By ID Is Activated
 
@@ -722,7 +722,7 @@ if ($_Application_Module_Administration_Update_DB_Query_UPDATE_FILE) {
  =============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Update_DB_Query_UPDATE_FILE->free_result();
+$_Application_Module_Administration_Update_DB_Query_UPDATE_FILE->closeCursor();
 
 } // [ + ] IF: Update File Entry Form Variables Have Executed
 
@@ -736,7 +736,7 @@ if ($_Application_Module_Administration_Update_DB_Query_UPDATE_FILE) {
  =============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Update_DB_Query_SELECT_FILES->free_result();
+$_Application_Module_Administration_Update_DB_Query_SELECT_FILES->closeCursor();
 
 } // [ + ] IF: Internal Application: Data IS File Is Activated
 ?>

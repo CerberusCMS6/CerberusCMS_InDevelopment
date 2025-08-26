@@ -272,7 +272,7 @@ if ($_Application_Module_Administration_Panels_DB_Query_Install_Application_Pane
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Panels_DB_Query_Install_Application_Panel->free_result();
+$_Application_Module_Administration_Panels_DB_Query_Install_Application_Panel->closeCursor();
 
 } // [ + ] IF: Install Application Panel :: Input Form :: Variables HAVE NOT Executed
 
@@ -370,7 +370,7 @@ if (unlink("./Applications/Panel/Visibility/Member/$_Application_Module_Administ
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Panels_DB_Query_Delete_PANEL_ID->free_result();
+$_Application_Module_Administration_Panels_DB_Query_Delete_PANEL_ID->closeCursor();
 
 } // [ + ] IF: Database Server Query: Delete :: Selected Application Panel
 
@@ -574,7 +574,7 @@ if ($_Application_Module_Administration_Panels_DB_Query_Update_Application_Panel
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Panels_DB_Query_UPDATE_APPLICATION_PANEL->free_result();
+$_Application_Module_Administration_Panels_DB_Query_UPDATE_APPLICATION_PANEL->closeCursor();
 
 } // [ + ] IF: Update Application Panel Form Variables Have NOT Executed
 
@@ -622,7 +622,7 @@ if ($_Application_Module_Administration_Panels_DB_Query_UPDATE_APPLICATION_PANEL
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Panels_DB_Query_UPDATE_APPLICATION_PANEL_INCREMENT_ROW->free_result();
+$_Application_Module_Administration_Panels_DB_Query_UPDATE_APPLICATION_PANEL_INCREMENT_ROW->closeCursor();
 
 } // [ + ] IF: Internal Application: Move Application Panel Up
 
@@ -668,7 +668,7 @@ if ($_Application_Module_Administration_Panels_DB_Query_UPDATE_APPLICATION_PANEL
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Panels_DB_Query_UPDATE_APPLICATION_PANEL_DECREMENT_ROW->free_result();
+$_Application_Module_Administration_Panels_DB_Query_UPDATE_APPLICATION_PANEL_DECREMENT_ROW->closeCursor();
 
 } // [ + ] IF: Internal Application: Move Application Panel Row Down
 
@@ -680,7 +680,7 @@ if ($_Application_Module_Administration_Panels_DB_Query_UPDATE_APPLICATION_PANEL
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Panels_DB_Query_SELECT_APPLICATION_PANELS->free_result();
+$_Application_Module_Administration_Panels_DB_Query_SELECT_APPLICATION_PANELS->closeCursor();
 
 /*
  ============================================================================================================

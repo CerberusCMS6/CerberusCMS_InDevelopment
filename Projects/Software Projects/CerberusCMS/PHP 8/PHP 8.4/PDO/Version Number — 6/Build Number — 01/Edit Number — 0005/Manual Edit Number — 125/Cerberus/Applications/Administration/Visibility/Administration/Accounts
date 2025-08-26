@@ -149,7 +149,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Accounts_DB_Query_Fetch_Member_UserName->free_result();
+$_Application_Module_Administration_Accounts_DB_Query_Fetch_Member_UserName->closeCursor();
 
 echo ("
 													</SELECT><BR>
@@ -364,7 +364,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Accounts_DB_Query_Fetch_Member_ID->free_result();
+$_Application_Module_Administration_Accounts_DB_Query_Fetch_Member_ID->closeCursor();
 
 /*
  ============================================================================================================
@@ -432,7 +432,7 @@ if ($_Application_Module_Administration_Accounts_DB_Query_Update_Member_Account_
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Accounts_DB_Query_Update_Member_Account_Without_Password->free_result();
+$_Application_Module_Administration_Accounts_DB_Query_Update_Member_Account_Without_Password->closeCursor();
 
 } // [ + ] IF: Update :: Registered Member Account :: Without Password
 
@@ -494,7 +494,7 @@ if ($_Application_Module_Administration_Accounts_DB_Query_Update_Member_Account_
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Accounts_DB_Query_Update_Member_Account_With_Password->free_result();
+$_Application_Module_Administration_Accounts_DB_Query_Update_Member_Account_With_Password->closeCursor();
 
 } // [ + ] IF: Update :: Registered Member Account :: With Password
 
@@ -622,7 +622,7 @@ if ($_Application_Module_Administration_Accounts_DB_Query_Insert_System_Message)
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Accounts_DB_Query_Insert_System_Message->free_result();
+$_Application_Module_Administration_Accounts_DB_Query_Insert_System_Message->closeCursor();
 
 } // [ + ] IF: System Message :: String Length Is Greater Than: 2000 Characters
 
@@ -634,5 +634,5 @@ if ($_Application_Module_Administration_Accounts_DB_Query_Insert_System_Message)
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Accounts_DB_Query_Fetch_Member_UserName->free_result();
+$_Application_Module_Administration_Accounts_DB_Query_Fetch_Member_UserName->closeCursor();
 ?>

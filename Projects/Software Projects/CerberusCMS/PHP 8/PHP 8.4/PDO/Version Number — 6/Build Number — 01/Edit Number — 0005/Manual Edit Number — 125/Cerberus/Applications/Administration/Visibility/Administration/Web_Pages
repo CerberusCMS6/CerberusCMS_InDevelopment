@@ -241,7 +241,7 @@ if ($_Application_Module_Administration_Web_Pages_DB_Query_DELETE_HYPERLINK) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Administration_Web_Pages_DB_Query_DELETE_HYPERLINK->free_result();
+$_Application_Module_Administration_Web_Pages_DB_Query_DELETE_HYPERLINK->closeCursor();
 
 } // [ + ] IF: Internal Application: Delete Link By ID Is Activated
 
