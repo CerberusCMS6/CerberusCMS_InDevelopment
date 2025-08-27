@@ -295,7 +295,7 @@ mkdir("./System/Plug-Ins/Archive/Source/$_Application_Module_Administration_Plug
  ============================================================================================================
 */
 
-while (($_Application_Module_Administration_PlugIns_READ_DIRECTORY_UPLOAD_PLUGINS = readdir($_Application_Module_Administration_PlugIns_OPEN_DIRECTORY_UPLOAD_PLUGINS_ARCHIVE_PACKAGE))) {
+while (false !== ($_Application_Module_Administration_PlugIns_READ_DIRECTORY_UPLOAD_PLUGINS = readdir($_Application_Module_Administration_PlugIns_OPEN_DIRECTORY_UPLOAD_PLUGINS_ARCHIVE_PACKAGE))) {
 
 /*
  ============================================================================================================

@@ -167,7 +167,7 @@ $_Application_Module_Administration_Archive_DIRECTORY_OPEN					= opendir($_Appli
  ============================================================================================================
 */
 
-while ($_Application_Module_Administration_Archive_DIRECTORY_FILE = readdir($_Application_Module_Administration_Archive_DIRECTORY_OPEN)) {
+while (false !== ($_Application_Module_Administration_Archive_DIRECTORY_FILE = readdir($_Application_Module_Administration_Archive_DIRECTORY_OPEN))) {
 
 /*
  ============================================================================================================
@@ -266,7 +266,7 @@ $_Application_Module_Administration_Archive_OPEN_ARCHIVE_DIRECTORY				= opendir(
  ============================================================================================================
 */
 
-while (($_Application_Module_Administration_Archive_READ_ARCHIVE_DIRECTORY = readdir($_Application_Module_Administration_Archive_OPEN_ARCHIVE_DIRECTORY))) {
+while (false !== ($_Application_Module_Administration_Archive_READ_ARCHIVE_DIRECTORY = readdir($_Application_Module_Administration_Archive_OPEN_ARCHIVE_DIRECTORY))) {
 
 /*
  ============================================================================================================

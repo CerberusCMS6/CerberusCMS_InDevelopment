@@ -111,7 +111,7 @@ echo ("
 $_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_144PI						= "./Theme/144PI";
 $_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_144PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_144PI);
 
-while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_144PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_144PI))) {
+while (false !== ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_144PI = readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_144PI))) {
 
 if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_144PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_144PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_144PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_144PI == "Global") {
 /**
@@ -160,7 +160,7 @@ echo ("
 $_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_240PI						= "./Theme/240PI";
 $_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_240PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_240PI);
 
-while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_240PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_240PI))) {
+while (false !== ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_240PI = readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_240PI))) {
 
 if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_240PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_240PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_240PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_240PI == "Global") {
 /**
@@ -210,7 +210,7 @@ echo ("
 $_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_340PI						= "./Theme/340PI";
 $_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_340PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_340PI);
 
-while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_340PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_340PI))) {
+while (false !== ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_340PI = readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_340PI))) {
 
 if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_340PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_340PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_340PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_340PI == "Global") {
 /**
@@ -260,7 +260,7 @@ echo ("
 $_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_480PI						= "./Theme/480PI";
 $_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_480PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_480PI);
 
-while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_480PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_480PI))) {
+while (false !== ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_480PI = readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_480PI))) {
 
 if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_480PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_480PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_480PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_480PI == "Global") {
 /**
@@ -310,7 +310,7 @@ echo ("
 $_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_520PI						= "./Theme/520PI";
 $_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_520PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_520PI);
 
-while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_520PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_520PI))) {
+while (false !== ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_520PI = readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_520PI))) {
 
 if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_520PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_520PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_520PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_520PI == "Global") {
 /**
@@ -360,7 +360,7 @@ echo ("
 $_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_640PI						= "./Theme/640PI";
 $_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_640PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_640PI);
 
-while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_640PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_640PI))) {
+while (false !== ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_640PI = readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_640PI))) {
 
 if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_640PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_640PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_640PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_640PI == "Global") {
 /**
@@ -410,7 +410,7 @@ echo ("
 $_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_720PI						= "./Theme/720PI";
 $_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_720PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_720PI);
 
-while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_720PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_720PI))) {
+while (false !== ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_720PI = readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_720PI))) {
 
 if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_720PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_720PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_720PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_720PI == "Global") {
 /**
@@ -460,7 +460,7 @@ echo ("
 $_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_1080PI						= "./Theme/1080PI";
 $_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_1080PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_1080PI);
 
-while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_1080PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_1080PI))) {
+while (false !== ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_1080PI = readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_1080PI))) {
 
 if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_1080PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_1080PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_1080PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_1080PI == "Global") {
 /**
@@ -510,7 +510,7 @@ echo ("
 $_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_2040PI						= "./Theme/2040PI";
 $_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_2040PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_2040PI);
 
-while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2040PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_2040PI))) {
+while (false !== ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2040PI = readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_2040PI))) {
 
 if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2040PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2040PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2040PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2040PI == "Global") {
 /**
@@ -560,7 +560,7 @@ echo ("
 $_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_2160PI						= "./Theme/2160PI";
 $_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_2160PI						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_2160PI);
 
-while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2160PI	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_2160PI))) {
+while (false !== ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2160PI = readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_2160PI))) {
 
 if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2160PI == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2160PI == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2160PI == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_2160PI == "Global") {
 /**
@@ -610,7 +610,7 @@ echo ("
 $_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_4K						= "./Theme/4K";
 $_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_4K						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_4K);
 
-while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_4K	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_4K))) {
+while (false !== ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_4K = readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_4K))) {
 
 if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_4K == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_4K == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_4K == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_4K == "Global") {
 /**
@@ -660,7 +660,7 @@ echo ("
 $_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_8K						= "./Theme/8K";
 $_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_8K						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_8K);
 
-while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_8K	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_8K))) {
+while (false !== ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_8K = readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_8K))) {
 
 if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_8K == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_8K == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_8K == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_8K == "Global") {
 /**
@@ -711,7 +711,7 @@ echo ("
 $_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_16K						= "./Theme/16K";
 $_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_16K						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_16K);
 
-while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_16K	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_16K))) {
+while (false !== ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_16K = readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_16K))) {
 
 if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_16K == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_16K == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_16K == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_16K == "Global") {
 /**
@@ -761,7 +761,7 @@ echo ("
 $_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_32K						= "./Theme/32K";
 $_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_32K						= opendir($_Application_Module_Administration_Themes_FIND_THEME_DIRECTORY_32K);
 
-while (($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_32K	= readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_32K))) {
+while (false !== ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_32K = readdir($_Application_Module_Administration_Themes_OPEN_THEME_DIRECTORY_32K))) {
 
 if ($_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_32K == "." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_32K == ".." || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_32K == "index.php" || $_Application_Module_Administration_Themes_READ_THEME_DIRECTORY_32K == "Global") {
 /**

@@ -393,7 +393,7 @@ $_Application_Module_Background_Log_Background_DB_Query_SELECT_STATISTICS->close
  ============================================================================================================
 */
 
-$_Application_Module_Background_Log_Background_DB_Query_UPDATE_SYSTEM_STATISTICS_NUMBER_OF_DOCUMENT_EXECUTIONS_NON_UNIQUE->closeCursor();
+// [ C ] $_Application_Module_Background_Log_Background_DB_Query_UPDATE_SYSTEM_STATISTICS_NUMBER_OF_DOCUMENT_EXECUTIONS_NON_UNIQUE->closeCursor();
 
 /*
  ============================================================================================================

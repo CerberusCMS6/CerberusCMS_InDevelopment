@@ -173,8 +173,8 @@ echo ("
  ============================================================================================================
 */
 
-$_FIND_ADMINISTRATION_APPLICATIONS_DIRECTORY			= "./Applications/Administration/Visibility/Administration";
-$_OPEN_ADMINISTRATION_APPLICATIONS_DIRECTORY			= opendir($_FIND_ADMINISTRATION_APPLICATIONS_DIRECTORY);
+$_FIND_DIRECTORY_ADMINISTRATION_APPLICATIONS			= "./Applications/Administration/Visibility/Administration";
+$_OPEN_DIRECTORY_ADMINISTRATION_APPLICATIONS			= opendir($_FIND_DIRECTORY_ADMINISTRATION_APPLICATIONS);
 
 /*
  ============================================================================================================
@@ -182,7 +182,7 @@ $_OPEN_ADMINISTRATION_APPLICATIONS_DIRECTORY			= opendir($_FIND_ADMINISTRATION_A
  ============================================================================================================
 */
 
-while (($_READ_ADMINISTRATION_APPLICATIONS_DIRECTORY = readdir($_OPEN_ADMINISTRATION_APPLICATIONS_DIRECTORY))) {
+while (false !== ($_READDIRECTORY_ADMINISTRATION_APPLICATIONS = readdir($_OPEN_DIRECTORY_ADMINISTRATION_APPLICATIONS))) {
 
 /*
  ============================================================================================================
@@ -190,7 +190,7 @@ while (($_READ_ADMINISTRATION_APPLICATIONS_DIRECTORY = readdir($_OPEN_ADMINISTRA
  ============================================================================================================
 */
 
-if ($_READ_ADMINISTRATION_APPLICATIONS_DIRECTORY == "." || $_READ_ADMINISTRATION_APPLICATIONS_DIRECTORY == ".." || $_READ_ADMINISTRATION_APPLICATIONS_DIRECTORY == "index.php") {
+if ($_READDIRECTORY_ADMINISTRATION_APPLICATIONS == "." || $_READDIRECTORY_ADMINISTRATION_APPLICATIONS == ".." || $_READDIRECTORY_ADMINISTRATION_APPLICATIONS == "index.php") {
 /**
  * Do Nothing
 **/
@@ -202,7 +202,7 @@ if ($_READ_ADMINISTRATION_APPLICATIONS_DIRECTORY == "." || $_READ_ADMINISTRATION
  ============================================================================================================
 */
 
-if ($_GET["Action"] == "$_READ_ADMINISTRATION_APPLICATIONS_DIRECTORY") {
+if ($_GET["Action"] == "$_READDIRECTORY_ADMINISTRATION_APPLICATIONS") {
 
 /*
  ============================================================================================================
@@ -212,7 +212,7 @@ if ($_GET["Action"] == "$_READ_ADMINISTRATION_APPLICATIONS_DIRECTORY") {
 
 if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null && $_GLOBAL_MEMBER_ACCESS_LEVEL >= 3) {
 
-										include_once "$_FIND_ADMINISTRATION_APPLICATIONS_DIRECTORY/$_READ_ADMINISTRATION_APPLICATIONS_DIRECTORY";
+										include_once "$_FIND_DIRECTORY_ADMINISTRATION_APPLICATIONS/$_READDIRECTORY_ADMINISTRATION_APPLICATIONS";
 
 } else {
 
@@ -232,5 +232,5 @@ if ($_GLOBAL_COOKIE_MEMBER_USERNAME && $_GLOBAL_COOKIE_MEMBER_PASSWORD != null &
  ============================================================================================================
 */
 
-closedir($_OPEN_ADMINISTRATION_APPLICATIONS_DIRECTORY);
+closedir($_OPEN_DIRECTORY_ADMINISTRATION_APPLICATIONS);
 ?>
