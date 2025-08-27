@@ -3652,7 +3652,7 @@ $_KERNEL_INTERNAL_LOOP_PERMISSIONS_CHANGEMODE_VALUE_DIRECTORY_UPLOAD				= "0666"
  ============================================================================================================
 */
 
-while (($_KERNEL_INTERNAL_LOOP_PERMISSIONS_CHANGEMODE_READ_DIRECTORY_UPLOAD = readdir($_KERNEL_INTERNAL_LOOP_PERMISSIONS_CHANGEMODE_OPEN_DIRECTORY_UPLOAD))) {
+while (false !== ($_KERNEL_INTERNAL_LOOP_PERMISSIONS_CHANGEMODE_READ_DIRECTORY_UPLOAD = readdir($_KERNEL_INTERNAL_LOOP_PERMISSIONS_CHANGEMODE_OPEN_DIRECTORY_UPLOAD))) {
 
 /*
  ============================================================================================================
@@ -4603,7 +4603,7 @@ $_Kernel_Authenticate_Member_Account_POST_USERNAME_CLEAR					= ucfirst($_Kernel_
 */
 
 $DB_Query_Kernel_Authenticate_Check_Member_Account_Credentials 					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_username='$_Kernel_Authenticate_Member_Account_POST_USERNAME_CLEAR' AND member_electronic_mail_address='$_Kernel_Authenticate_Member_Account_POST_ELECTRONIC_MAIL_ADDRESS_CLEAR'");
-$DB_Query_Kernel_Authenticate_Check_Member_Account_Entry_Number_Of_Rows				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_username='$_Kernel_Authenticate_Member_Account_POST_USERNAME_CLEAR' AND member_electronic_mail_address='$_Kernel_Authenticate_Member_Account_POST_ELECTRONIC_MAIL_ADDRESS_CLEAR'")->fetchColumn();
+$DB_Query_Kernel_Authenticate_Check_Member_Account_Entry_Number_Of_Rows				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_username='$_Kernel_Authenticate_Member_Account_POST_USERNAME_CLEAR' AND member_electronic_mail_address='$_Kernel_Authenticate_Member_Account_POST_ELECTRONIC_MAIL_ADDRESS_CLEAR'");
 
 /*
  ============================================================================================================
@@ -4611,7 +4611,7 @@ $DB_Query_Kernel_Authenticate_Check_Member_Account_Entry_Number_Of_Rows				= $_G
  ============================================================================================================
 */
 
-if ($DB_Query_Kernel_Authenticate_Check_Member_Account_Entry_Number_Of_Rows == "1") {
+if ($DB_Query_Kernel_Authenticate_Check_Member_Account_Entry_Number_Of_Rows) {
 
 /*
  ============================================================================================================
@@ -4619,7 +4619,7 @@ if ($DB_Query_Kernel_Authenticate_Check_Member_Account_Entry_Number_Of_Rows == "
  ============================================================================================================
 */
 
-$DB_Query_Kernel_Authenticate_Check_Member_Account_Credentials_Fetch_Array					= $DB_Query_Kernel_Authenticate_Check_Member_Account_Credentials->fetch();
+$DB_Query_Kernel_Authenticate_Check_Member_Account_Credentials_Fetch_Array					= $DB_Query_Kernel_Authenticate_Check_Member_Account_Credentials->fetch(PDO::FETCH_ASSOC);
 $DB_Query_Kernel_Authenticate_Check_Member_Account_Credentials_Member_UserName					= $DB_Query_Kernel_Authenticate_Check_Member_Account_Credentials_Fetch_Array['member_username'];
 $DB_Query_Kernel_Authenticate_Check_Member_Account_Credentials_Member_Electronic_Mail_Address			= $DB_Query_Kernel_Authenticate_Check_Member_Account_Credentials_Fetch_Array['member_electronic_mail_address'];
 $DB_Query_Kernel_Authenticate_Check_Member_Account_Credentials_Member_Password					= $DB_Query_Kernel_Authenticate_Check_Member_Account_Credentials_Fetch_Array['member_password'];
@@ -6218,7 +6218,7 @@ $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_START					= microtime();
  ============================================================================================================
 */
 
-$_KERNEL_WEBPAGE_GENERATION_DATATIME_EXPLOSION_START_ARRAY				= explode(" ", $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_START);
+// [ C ] $_KERNEL_WEBPAGE_GENERATION_DATATIME_EXPLOSION_START_ARRAY			= explode(" ", $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_START);
 
 /*
  ============================================================================================================
@@ -6226,7 +6226,7 @@ $_KERNEL_WEBPAGE_GENERATION_DATATIME_EXPLOSION_START_ARRAY				= explode(" ", $_K
  ============================================================================================================
 */
 
-$_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_START					= $_KERNEL_WEBPAGE_GENERATION_DATATIME_EXPLOSION_START_ARRAY[1] + $_KERNEL_WEBPAGE_GENERATION_DATATIME_EXPLOSION_START_ARRAY[0];
+// [ C ] $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_START				= $_KERNEL_WEBPAGE_GENERATION_DATATIME_EXPLOSION_START_ARRAY[1] + $_KERNEL_WEBPAGE_GENERATION_DATATIME_EXPLOSION_START_ARRAY[0];
 
 /*
  ============================================================================================================
@@ -6993,7 +6993,7 @@ $_OPEN_DIRECTORY_APPLICATIONS_MODERATION			= opendir($_FIND_DIRECTORY_APPLICATIO
  ============================================================================================================
 */
 
-while (($_READ_DIRECTORY_APPLICATIONS_MODERATION = readdir($_OPEN_DIRECTORY_APPLICATIONS_MODERATION))) {
+while (false !== ($_READ_DIRECTORY_APPLICATIONS_MODERATION = readdir($_OPEN_DIRECTORY_APPLICATIONS_MODERATION))) {
 
 /*
  ============================================================================================================
@@ -7466,7 +7466,7 @@ $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_END						= microtime();
  ============================================================================================================
 */
 
-$_KERNEL_WEBPAGE_GENERATION_DATATIME_EXPLOSION_END_ARRAY				= explode(" ", $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_END);
+// [ C ] $_KERNEL_WEBPAGE_GENERATION_DATATIME_EXPLOSION_END_ARRAY			= explode(" ", $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_END);
 
 /*
  ============================================================================================================
@@ -7474,7 +7474,7 @@ $_KERNEL_WEBPAGE_GENERATION_DATATIME_EXPLOSION_END_ARRAY				= explode(" ", $_KER
  ============================================================================================================
 */
 
-$_KERNEL_WEBPAGE_GENERATION_DATATIME_IMPLOSION_END_ARRAY				= implode(" ", $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_END);
+// [ C ] $_KERNEL_WEBPAGE_GENERATION_DATATIME_IMPLOSION_END_ARRAY			= implode(" ", $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_END);
 
 /*
  ============================================================================================================
@@ -7482,7 +7482,7 @@ $_KERNEL_WEBPAGE_GENERATION_DATATIME_IMPLOSION_END_ARRAY				= implode(" ", $_KER
  ============================================================================================================
 */
 
-$_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_END						= $_KERNEL_WEBPAGE_GENERATION_DATATIME_EXPLOSION_END_ARRAY[1] + $_KERNEL_WEBPAGE_GENERATION_DATATIME_EXPLOSION_END_ARRAY[0];
+// [ C ] $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_END					= $_KERNEL_WEBPAGE_GENERATION_DATATIME_EXPLOSION_END_ARRAY[1] + $_KERNEL_WEBPAGE_GENERATION_DATATIME_EXPLOSION_END_ARRAY[0];
 
 /*
  ============================================================================================================
@@ -7490,7 +7490,7 @@ $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_END						= $_KERNEL_WEBPAGE_GENERATIO
  ============================================================================================================
 */
 
-$_KERNEL_WEBPAGE_GENERATION_TIME_TOTAL_TIME						= $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_END - $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_START; 
+$_KERNEL_WEBPAGE_GENERATION_TIME_TOTAL_TIME						= $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_START - $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_END; 
 $_KERNEL_WEBPAGE_GENERATION_TIME_TOTAL_TIME						= round($_KERNEL_WEBPAGE_GENERATION_TIME_TOTAL_TIME,5);
 
 /*
@@ -7505,7 +7505,7 @@ $_KERNEL_WEBPAGE_GENERATION_TIME_TOTAL_TIME						= round($_KERNEL_WEBPAGE_GENERA
 
 echo ("
 		<CENTER>
-			This Web Site Is Powered By:&nbsp;<A HREF=\"$_PROJECT_SERVER_URL_SOURCEFORGE_SECURE\" TARGET=\"_NEW\" TITLE=\":: $_PROJECT_STRING_NAME_EXTENDED :: Official SourceForge Software Project Web Page ::\">$_PROJECT_STRING_NAME_EXTENDED</A>&nbsp;|&nbsp;Web-Page Data Generation Time: " . $_KERNEL_WEBPAGE_GENERATION_TIME_TOTAL_TIME . " Seconds&nbsp;|&nbsp;");
+			This Web Site Is Powered By:&nbsp;<A HREF=\"$_PROJECT_SERVER_URL_SOURCEFORGE_SECURE\" TARGET=\"_NEW\" TITLE=\":: $_PROJECT_STRING_NAME_EXTENDED :: Official SourceForge Software Project Web Page ::\">$_PROJECT_STRING_NAME_EXTENDED</A>&nbsp;|&nbsp;Web-Page Data Generation Time: 0.". $_KERNEL_WEBPAGE_GENERATION_TIME_TOTAL_TIME ." Seconds&nbsp;|&nbsp;");
 
 /*
  ============================================================================================================
@@ -7583,7 +7583,7 @@ $_DB_Query_Kernel_Select_Member_Credentials->closeCursor();
  ============================================================================================================
 */
 
-$_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION			= null;
+$_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION					= null;
 
 if ($_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION == null) {
 
@@ -7617,7 +7617,7 @@ echo ("
  ============================================================================================================
  +
  +
- + [ @ ] Internal Resources :: Flushing and Destroying Programming Code Object Initializations
+ + [ @ ] Internal Resources :: Flush and Destroy Programming Code Object Initializations
  +
  +
  ============================================================================================================

@@ -168,3 +168,14 @@ and the encrypted messages are shown in front of everyone but not visible unless
 * add option to delete individual archived chats from the chat room
 * add option that shows current / former participants in the chat room with timestamps and current / former IP addresses
 * add visibility system to application modules
+* add PDO::FETCH_ASSOC to all fetch(); PDO queries system wide.
+$query = "SELECT * FROM database_table";
+ $result = $db->query($query);
+ $total = $result->rowCount();
+* convert all fetchColumn(); to rowCount(); system wide
+* Account_Data closedir(); video profile image won't work. Fatal error. Fix this.
+* Messenger application fatal error "Participants" does not exist ? Fix This.
+* Write new messenger based on DBMS only and add encryption options.
+* System_Message doesn't work. It won't display the message given by administration in the application module System_Message.
+* add Theme hyperlink to Application Panel from installation.
+* fix security fingerprint cookie. The data gets deleted somehow.
