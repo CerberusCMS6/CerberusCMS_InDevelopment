@@ -509,7 +509,7 @@ echo ("
  ============================================================================================================
 */
 
-$_Application_Module_Member_Forum_DB_Query_SELECT_MEMBERS->closeCursor
+$_Application_Module_Member_Forum_DB_Query_SELECT_MEMBERS->closeCursor();
 
 } // [ + ] IF: Forum :: Forum Topic :: Forum Topic Message Entries ARE Zero
 
@@ -979,7 +979,7 @@ $_Application_Module_Member_Forum_DB_Query_INSERT_FORUM_TOPIC_MESSAGE				= $_GLO
 
 if ($_Application_Module_Member_Forum_DB_Query_INSERT_FORUM_TOPIC_MESSAGE) {
 
-												echo ("$_Application_Module_Member_Message_Forum_CREATE_FORUM_TOPIC_MESSAGE_ENTRY<BR><BR><A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Forum&amp;TopicID&#61;$_Application_Module_Member_Forum_POST_CREATE_FORUM_TOPIC_MESSAGE_ENTRY_TOPIC_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: This :: Forum :: Forum Topic :: Forum Topic Message Entry ::\">Click or Press Here To Display This Forum Topic Message Entry</A></CENTER>");
+												echo ("$_Application_Module_Member_Message_Forum_CREATE_FORUM_TOPIC_MESSAGE_ENTRY<BR><BR><CENTER><A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Forum&amp;TopicID&#61;$_Application_Module_Member_Forum_POST_CREATE_FORUM_TOPIC_MESSAGE_ENTRY_TOPIC_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: This :: Forum :: Forum Topic :: Forum Topic Message Entry ::\">Click or Press Here To Display This Forum Topic Message Entry</A></CENTER>");
 } else {
 
 												echo ($_Application_Module_Member_Message_Forum_CREATE_FORUM_TOPIC_MESSAGE_ENTRY_ERROR);
@@ -1076,7 +1076,7 @@ $_Application_Module_Member_Forum_DB_Query_INSERT_FORUM_TOPIC_MESSAGE_REPLY_MESS
 
 if ($_Application_Module_Member_Forum_DB_Query_INSERT_FORUM_TOPIC_MESSAGE_REPLY_MESSAGE) {
 
-												echo ("$_Application_Module_Member_Message_Forum_CREATE_FORUM_TOPIC_MESSAGE_ENTRY<BR><BR><A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Forum&amp;TopicID&#61;$_Application_Module_Member_Forum_POST_FORUM_TOPIC_MESSAGE_ENTRY_REPLY_ID_2&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: This Forum Topic Message Entry ::\">Click or Press Here to Display This Forum Topic Message Entry</A></CENTER>");
+												echo ("$_Application_Module_Member_Message_Forum_CREATE_FORUM_TOPIC_MESSAGE_ENTRY<BR><BR><CENTER><A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Forum&amp;TopicID&#61;$_Application_Module_Member_Forum_POST_FORUM_TOPIC_MESSAGE_ENTRY_REPLY_ID_2&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: This Forum Topic Message Entry ::\">Click or Press Here to Display This Forum Topic Message Entry</A></CENTER>");
 
 } else {
 

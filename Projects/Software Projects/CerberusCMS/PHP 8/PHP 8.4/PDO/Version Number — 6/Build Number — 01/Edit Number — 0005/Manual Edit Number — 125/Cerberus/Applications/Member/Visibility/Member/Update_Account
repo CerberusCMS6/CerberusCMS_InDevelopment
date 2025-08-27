@@ -1157,7 +1157,7 @@ $_Application_Module_Member_Update_Account_Image_OPEN_MEMBER_DIRECTORY						= op
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Update_Account_Image_READ_MEMBER_DIRECTORY = readdir($_Application_Module_Member_Update_Account_Image_OPEN_MEMBER_DIRECTORY))) {
+while (false !== ($_Application_Module_Member_Update_Account_Image_READ_MEMBER_DIRECTORY = readdir($_Application_Module_Member_Update_Account_Image_OPEN_MEMBER_DIRECTORY))) {
 
 if ($_Application_Module_Member_Update_Account_Image_READ_MEMBER_DIRECTORY == "." || $_Application_Module_Member_Update_Account_Image_READ_MEMBER_DIRECTORY == ".." || $_Application_Module_Member_Update_Account_Image_READ_MEMBER_DIRECTORY == "Backup" || $_Application_Module_Member_Update_Account_Image_READ_MEMBER_DIRECTORY == "index.php") {
 /**
@@ -1202,7 +1202,7 @@ echo ("
 $_Application_Module_Member_Update_Account_FIND_DIRECTORY_MEMBER_IMAGE_AVATAR					= "./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Icon_Avatar/";
 $_Application_Module_Member_Update_Account_OPEN_DIRECTORY_MEMBER_IMAGE_AVATAR					= opendir($_Application_Module_Member_Update_Account_FIND_DIRECTORY_MEMBER_IMAGE_AVATAR);
 
-while (($_Application_Module_Member_Update_Account_READ_MEMBER_AVATAR_DIRECTORY = readdir($_Application_Module_Member_Update_Account_OPEN_DIRECTORY_MEMBER_IMAGE_AVATAR))) {
+while (false !== ($_Application_Module_Member_Update_Account_READ_MEMBER_AVATAR_DIRECTORY = readdir($_Application_Module_Member_Update_Account_OPEN_DIRECTORY_MEMBER_IMAGE_AVATAR))) {
 
 if ($_Application_Module_Member_Update_Account_READ_MEMBER_AVATAR_DIRECTORY == "." || $_Application_Module_Member_Update_Account_READ_MEMBER_AVATAR_DIRECTORY == ".." || $_Application_Module_Member_Update_Account_READ_MEMBER_AVATAR_DIRECTORY == "index.php") {
 /**
@@ -1253,7 +1253,7 @@ $_Application_Module_Member_Update_Account_Image_Video_OPEN_MEMBER_DIRECTORY				
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Update_Account_Image_Video_READ_MEMBER_DIRECTORY = readdir($_Application_Module_Member_Update_Account_Image_Video_OPEN_MEMBER_DIRECTORY))) {
+while (false !== ($_Application_Module_Member_Update_Account_Image_Video_READ_MEMBER_DIRECTORY = readdir($_Application_Module_Member_Update_Account_Image_Video_OPEN_MEMBER_DIRECTORY))) {
 
 if ($_Application_Module_Member_Update_Account_Image_Video_READ_MEMBER_DIRECTORY == "." || $_Application_Module_Member_Update_Account_Image_Video_READ_MEMBER_DIRECTORY == ".." || $_Application_Module_Member_Update_Account_Image_Video_READ_MEMBER_DIRECTORY == "Backup" || $_Application_Module_Member_Update_Account_Image_Video_READ_MEMBER_DIRECTORY == "index.php") {
 /**
@@ -1308,7 +1308,7 @@ $_Application_Module_Member_Update_Account_Language_OPEN_DIRECTORY_LANGUAGE					
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Update_Account_Language_READ_LANGUAGE_DIRECTORY = readdir($_Application_Module_Member_Update_Account_Language_OPEN_DIRECTORY_LANGUAGE))) {
+while (false !== ($_Application_Module_Member_Update_Account_Language_READ_LANGUAGE_DIRECTORY = readdir($_Application_Module_Member_Update_Account_Language_OPEN_DIRECTORY_LANGUAGE))) {
 
 if ($_Application_Module_Member_Update_Account_Language_READ_LANGUAGE_DIRECTORY == "." || $_Application_Module_Member_Update_Account_Language_READ_LANGUAGE_DIRECTORY == ".." || $_Application_Module_Member_Update_Account_Language_READ_LANGUAGE_DIRECTORY == "index.php") {
 /**
@@ -1353,7 +1353,7 @@ echo ("
 $_Application_Module_Member_Update_Account_FIND_DIRECTORY_THEME							= "./Theme/$_GLOBAL_MEMBER_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION";
 $_Application_Module_Member_Update_Account_OPEN_DIRECTORY_THEME							= opendir($_Application_Module_Member_Update_Account_FIND_DIRECTORY_THEME);
 
-while (($_Application_Module_Member_Update_Account_READ_THEME_DIRECTORY = readdir($_Application_Module_Member_Update_Account_OPEN_DIRECTORY_THEME))) {
+while (false !== ($_Application_Module_Member_Update_Account_READ_THEME_DIRECTORY = readdir($_Application_Module_Member_Update_Account_OPEN_DIRECTORY_THEME))) {
 
 if ($_Application_Module_Member_Update_Account_READ_THEME_DIRECTORY == "." || $_Application_Module_Member_Update_Account_READ_THEME_DIRECTORY == ".." || $_Application_Module_Member_Update_Account_READ_THEME_DIRECTORY == "index.php" || $_Application_Module_Member_Update_Account_READ_THEME_DIRECTORY == "Global") {
 /**

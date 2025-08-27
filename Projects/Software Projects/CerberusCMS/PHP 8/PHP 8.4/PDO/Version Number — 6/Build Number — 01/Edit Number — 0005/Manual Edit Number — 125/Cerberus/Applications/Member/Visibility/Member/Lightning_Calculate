@@ -101,8 +101,8 @@
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_1D_1					= rand(0, 9);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_1D_2					= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_1D_1					= rand(1, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_1D_2					= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_1D_INPUT						= $_POST['AMM_Lightning_Calculate_Addition_1D_1D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_1D_VALUE_1						= $_POST['AMM_Lightning_Calculate_Addition_1D_1D_Value_1'];
@@ -116,7 +116,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_1D_COMPUTATION	
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_2D_1					= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_2D_1					= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_2D_2					= rand(10, 99);
 
 $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_2D_INPUT						= $_POST['AMM_Lightning_Calculate_Addition_1D_2D_Input'];
@@ -131,7 +131,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_2D_COMPUTATION	
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_3D_1					= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_3D_1					= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_3D_2					= rand(100, 999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_3D_INPUT						= $_POST['AMM_Lightning_Calculate_Addition_1D_3D_Input'];
@@ -146,7 +146,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_3D_COMPUTATION	
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_4D_1					= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_4D_1					= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_4D_2					= rand(1000, 9999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_4D_INPUT						= $_POST['AMM_Lightning_Calculate_Addition_1D_4D_Input'];
@@ -162,7 +162,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_4D_COMPUTATION	
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_5D_1					= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_5D_1					= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_5D_2					= rand(10000, 99999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_5D_INPUT						= $_POST['AMM_Lightning_Calculate_Addition_1D_5D_Input'];
@@ -177,7 +177,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_5D_COMPUTATION	
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_6D_1					= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_6D_1					= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_6D_2					= rand(100000, 999999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_6D_INPUT						= $_POST['AMM_Lightning_Calculate_Addition_1D_6D_Input'];
@@ -192,7 +192,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_6D_COMPUTATION	
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_7D_1					= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_7D_1					= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_7D_2					= rand(1000000, 9999999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_7D_INPUT						= $_POST['AMM_Lightning_Calculate_Addition_1D_7D_Input'];
@@ -207,7 +207,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_7D_COMPUTATION	
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_8D_1					= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_8D_1					= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_8D_2					= rand(10000000, 99999999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_8D_INPUT						= $_POST['AMM_Lightning_Calculate_Addition_1D_8D_Input'];
@@ -222,7 +222,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_8D_COMPUTATION	
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_9D_1					= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_9D_1					= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_9D_2					= rand(100000000, 999999999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_9D_INPUT						= $_POST['AMM_Lightning_Calculate_Addition_1D_9D_Input'];
@@ -237,7 +237,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_9D_COMPUTATION	
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_10D_1					= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_10D_1					= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_ADDITION_1D_10D_2					= rand(1000000000, 9999999999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_1D_10D_INPUT						= $_POST['AMM_Lightning_Calculate_Addition_1D_10D_Input'];
@@ -1017,8 +1017,8 @@ $_Application_Module_Member_Lightning_Calculate_POST_ADDITION_10D_10D_COMPUTATIO
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_1D_1D_1				= rand(0, 9);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_1D_1D_2				= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_1D_1D_1				= rand(1, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_1D_1D_2				= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_1D_1D_INPUT					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_1D_1D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_1D_1D_VALUE_1					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_1D_1D_Value_1'];
@@ -1041,7 +1041,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_1D_1D_COMPUTATI
 */
 
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_2D_1D_1				= rand(10, 99);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_2D_1D_2				= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_2D_1D_2				= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_2D_1D_INPUT					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_2D_1D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_2D_1D_VALUE_1					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_2D_1D_Value_1'];
@@ -1079,7 +1079,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_2D_2D_COMPUTATI
 */
 
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_3D_1D_1				= rand(100, 999);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_3D_1D_2				= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_3D_1D_2				= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_3D_1D_INPUT					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_3D_1D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_3D_1D_VALUE_1					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_3D_1D_Value_1'];
@@ -1132,7 +1132,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_3D_3D_COMPUTATI
 */
 
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_4D_1D_1				= rand(1000, 9999);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_4D_1D_2				= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_4D_1D_2				= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_4D_1D_INPUT					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_4D_1D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_4D_1D_VALUE_1					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_4D_1D_Value_1'];
@@ -1201,7 +1201,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_4D_4D_COMPUTATI
 */
 
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_5D_1D_1				= rand(10000, 99999);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_5D_1D_2				= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_5D_1D_2				= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_5D_1D_INPUT					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_5D_1D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_5D_1D_VALUE_1					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_5D_1D_Value_1'];
@@ -1284,7 +1284,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_5D_5D_COMPUTATI
 */
 
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_6D_1D_1				= rand(100000, 999999);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_6D_1D_2				= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_6D_1D_2				= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_6D_1D_INPUT					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_6D_1D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_6D_1D_VALUE_1					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_6D_1D_Value_1'];
@@ -1382,7 +1382,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_6D_6D_COMPUTATI
 */
 
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_7D_1D_1				= rand(1000000, 9999999);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_7D_1D_2				= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_7D_1D_2				= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_7D_1D_INPUT					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_7D_1D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_7D_1D_VALUE_1					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_7D_1D_Value_1'];
@@ -1496,7 +1496,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_7D_7D_COMPUTATI
 */
 
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_8D_1D_1				= rand(10000000, 99999999);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_8D_1D_2				= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_8D_1D_2				= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_8D_1D_INPUT					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_8D_1D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_8D_1D_VALUE_1					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_8D_1D_Value_1'];
@@ -1625,7 +1625,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_8D_8D_COMPUTATI
 */
 
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_9D_1D_1				= rand(100000000, 999999999);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_9D_1D_2				= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_9D_1D_2				= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_9D_1D_INPUT					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_9D_1D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_9D_1D_VALUE_1					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_9D_1D_Value_1'];
@@ -1768,7 +1768,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_9D_9D_COMPUTATI
 */
 
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_10D_1D_1				= rand(1000000000, 9999999999);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_10D_1D_2				= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_SUBTRACTION_10D_1D_2				= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_10D_1D_INPUT					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_10D_1D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_10D_1D_VALUE_1					= $_POST['AMM_Lightning_Calculate_SUBTRACTION_10D_1D_Value_1'];
@@ -1937,8 +1937,8 @@ $_Application_Module_Member_Lightning_Calculate_POST_SUBTRACTION_10D_10D_COMPUTA
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_1D_1			= rand(0, 9);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_1D_2			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_1D_1			= rand(1, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_1D_2			= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_1D_INPUT				= $_POST['AMM_Lightning_Calculate_Division_Short_1D_1D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_1D_VALUE_1			= $_POST['AMM_Lightning_Calculate_Division_Short_1D_1D_Value_1'];
@@ -1960,7 +1960,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_1D_COMPUT
 */
 
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_2D_1			= rand(10, 99);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_2D_2			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_2D_2			= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_2D_INPUT				= $_POST['AMM_Lightning_Calculate_Division_Short_1D_2D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_2D_VALUE_1			= $_POST['AMM_Lightning_Calculate_Division_Short_1D_2D_Value_1'];
@@ -1975,7 +1975,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_2D_COMPUT
 */
 
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_3D_1			= rand(100, 999);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_3D_2			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_3D_2			= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_3D_INPUT				= $_POST['AMM_Lightning_Calculate_Division_Short_1D_3D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_3D_VALUE_1			= $_POST['AMM_Lightning_Calculate_Division_Short_1D_3D_Value_1'];
@@ -1990,7 +1990,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_3D_COMPUT
 */
 
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_4D_1			= rand(1000, 9999);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_4D_2			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_4D_2			= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_4D_INPUT				= $_POST['AMM_Lightning_Calculate_Division_Short_1D_4D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_4D_VALUE_1			= $_POST['AMM_Lightning_Calculate_Division_Short_1D_4D_Value_1'];
@@ -2005,7 +2005,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_4D_COMPUT
 */
 
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_5D_1			= rand(10000, 99999);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_5D_2			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_5D_2			= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_5D_INPUT				= $_POST['AMM_Lightning_Calculate_Division_Short_1D_5D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_5D_VALUE_1			= $_POST['AMM_Lightning_Calculate_Division_Short_1D_5D_Value_1'];
@@ -2020,7 +2020,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_5D_COMPUT
 */
 
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_6D_1			= rand(100000, 999999);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_6D_2			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_6D_2			= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_6D_INPUT				= $_POST['AMM_Lightning_Calculate_Division_Short_1D_6D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_6D_VALUE_1			= $_POST['AMM_Lightning_Calculate_Division_Short_1D_6D_Value_1'];
@@ -2035,7 +2035,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_6D_COMPUT
 */
 
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_7D_1			= rand(1000000, 9999999);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_7D_2			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_7D_2			= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_7D_INPUT				= $_POST['AMM_Lightning_Calculate_Division_Short_1D_7D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_7D_VALUE_1			= $_POST['AMM_Lightning_Calculate_Division_Short_1D_7D_Value_1'];
@@ -2050,7 +2050,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_7D_COMPUT
 */
 
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_8D_1			= rand(10000000, 99999999);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_8D_2			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_8D_2			= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_8D_INPUT				= $_POST['AMM_Lightning_Calculate_Division_Short_1D_8D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_8D_VALUE_1			= $_POST['AMM_Lightning_Calculate_Division_Short_1D_8D_Value_1'];
@@ -2065,7 +2065,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_8D_COMPUT
 */
 
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_9D_1			= rand(100000000, 999999999);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_9D_2			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_9D_2			= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_9D_INPUT				= $_POST['AMM_Lightning_Calculate_Division_Short_1D_9D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_9D_VALUE_1			= $_POST['AMM_Lightning_Calculate_Division_Short_1D_9D_Value_1'];
@@ -2080,7 +2080,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_9D_COMPUT
 */
 
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_10D_1		= rand(1000000000, 9999999999);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_10D_2		= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_1D_10D_2		= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_10D_INPUT			= $_POST['AMM_Lightning_Calculate_Division_Short_1D_10D_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_10D_VALUE_1			= $_POST['AMM_Lightning_Calculate_Division_Short_1D_10D_Value_1'];
@@ -2102,7 +2102,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_1D_10D_COMPU
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_2D_1D_1			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_2D_1D_1			= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_SHORT_2D_1D_2			= rand(10, 99);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_2D_1D_INPUT				= $_POST['AMM_Lightning_Calculate_Division_Short_2D_1D_Input'];
@@ -2272,7 +2272,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_SHORT_2D_10D_COMPU
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_3D_1D_1			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_3D_1D_1			= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_3D_1D_2			= rand(100, 999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_LONG_3D_1D_INPUT				= $_POST['AMM_Lightning_Calculate_Division_Long_3D_1D_Input'];
@@ -2430,7 +2430,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_LONG_3D_10D_COMPUT
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_4D_1D_1			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_4D_1D_1			= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_4D_1D_2			= rand(1000, 9999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_LONG_4D_1D_INPUT				= $_POST['AMM_Lightning_Calculate_Division_Long_4D_1D_Input'];
@@ -2588,7 +2588,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_LONG_4D_10D_COMPUT
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_5D_1D_1			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_5D_1D_1			= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_5D_1D_2			= rand(10000, 99999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_LONG_5D_1D_INPUT				= $_POST['AMM_Lightning_Calculate_Division_Long_5D_1D_Input'];
@@ -2746,7 +2746,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_LONG_5D_10D_COMPUT
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_6D_1D_1			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_6D_1D_1			= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_6D_1D_2			= rand(100000, 999999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_LONG_6D_1D_INPUT				= $_POST['AMM_Lightning_Calculate_Division_Long_6D_1D_Input'];
@@ -2904,7 +2904,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_LONG_6D_10D_COMPUT
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_7D_1D_1			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_7D_1D_1			= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_7D_1D_2			= rand(1000000, 9999999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_LONG_7D_1D_INPUT				= $_POST['AMM_Lightning_Calculate_Division_Long_7D_1D_Input'];
@@ -3063,7 +3063,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_LONG_7D_10D_COMPUT
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_8D_1D_1			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_8D_1D_1			= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_8D_1D_2			= rand(10000000, 99999999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_LONG_8D_1D_INPUT				= $_POST['AMM_Lightning_Calculate_Division_Long_8D_1D_Input'];
@@ -3221,7 +3221,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_LONG_8D_10D_COMPUT
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_9D_1D_1			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_9D_1D_1			= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_9D_1D_2			= rand(100000000, 999999999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_LONG_9D_1D_INPUT				= $_POST['AMM_Lightning_Calculate_Division_Long_9D_1D_Input'];
@@ -3379,7 +3379,7 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_LONG_9D_10D_COMPUT
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_10D_1D_1			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_10D_1D_1			= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_DIVISION_LONG_10D_1D_2			= rand(1000000000, 9999999999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_LONG_10D_1D_INPUT				= $_POST['AMM_Lightning_Calculate_Division_Long_10D_1D_Input'];
@@ -3559,8 +3559,8 @@ $_Application_Module_Member_Lightning_Calculate_POST_DIVISION_LONG_10D_10D_COMPU
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_MULTIPLICATION_1PLACE_1PLACE_1				= rand(0, 9);
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_MULTIPLICATION_1PLACE_1PLACE_2				= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_MULTIPLICATION_1PLACE_1PLACE_1				= rand(1, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_MULTIPLICATION_1PLACE_1PLACE_2				= rand(1, 9);
 
 $_Application_Module_Member_Lightning_Calculate_POST_MULTIPLICATION_1PLACE_1PLACE_INPUT					= $_POST['AMM_Lightning_Calculate_Multiplication_1PLACE_1PLACE_Input'];
 $_Application_Module_Member_Lightning_Calculate_POST_MULTIPLICATION_1PLACE_1PLACE_VALUE_1				= $_POST['AMM_Lightning_Calculate_Multiplication_1PLACE_1PLACE_Value_1'];
@@ -3574,7 +3574,7 @@ $_Application_Module_Member_Lightning_Calculate_MULTIPLICATION_1PLACE_1PLACE_COM
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_MULTIPLICATION_1PLACE_2PLACES_1			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_MULTIPLICATION_1PLACE_2PLACES_1			= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_MULTIPLICATION_1PLACE_2PLACES_2			= rand(0, 99);
 
 $_Application_Module_Member_Lightning_Calculate_POST_MULTIPLICATION_1PLACE_2PLACES_INPUT				= $_POST['AMM_Lightning_Calculate_Multiplication_1PLACE_2PLACES_Input'];
@@ -3589,7 +3589,7 @@ $_Application_Module_Member_Lightning_Calculate_MULTIPLICATION_1PLACE_2PLACES_CO
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_MULTIPLICATION_1PLACE_3PLACES_1			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_MULTIPLICATION_1PLACE_3PLACES_1			= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_MULTIPLICATION_1PLACE_3PLACES_2			= rand(0, 999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_MULTIPLICATION_1PLACE_3PLACES_INPUT				= $_POST['AMM_Lightning_Calculate_Multiplication_1PLACE_3PLACES_Input'];
@@ -3604,7 +3604,7 @@ $_Application_Module_Member_Lightning_Calculate_MULTIPLICATION_1PLACE_3PLACES_CO
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_MULTIPLICATION_1PLACE_4PLACES_1			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_MULTIPLICATION_1PLACE_4PLACES_1			= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_MULTIPLICATION_1PLACE_4PLACES_2			= rand(0, 9999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_MULTIPLICATION_1PLACE_4PLACES_INPUT				= $_POST['AMM_Lightning_Calculate_Multiplication_1PLACE_4PLACES_Input'];
@@ -3619,7 +3619,7 @@ $_Application_Module_Member_Lightning_Calculate_MULTIPLICATION_1PLACE_4PLACES_CO
  ============================================================================================================
 */
 
-$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_MULTIPLICATION_1PLACE_5PLACES_1			= rand(0, 9);
+$_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_MULTIPLICATION_1PLACE_5PLACES_1			= rand(1, 9);
 $_Application_Module_Member_Lightning_Calculate_RANDOM_GENERATOR_MULTIPLICATION_1PLACE_5PLACES_2			= rand(0, 99999);
 
 $_Application_Module_Member_Lightning_Calculate_POST_MULTIPLICATION_1PLACE_5PLACES_INPUT				= $_POST['AMM_Lightning_Calculate_Multiplication_1PLACE_5PLACES_Input'];

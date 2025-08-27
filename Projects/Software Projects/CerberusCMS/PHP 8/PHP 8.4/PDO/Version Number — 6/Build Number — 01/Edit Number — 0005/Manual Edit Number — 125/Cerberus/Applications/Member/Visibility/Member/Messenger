@@ -959,7 +959,7 @@ $_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENG
  ==================================================================================================================================================================
 */
 
-$_Application_Module_Member_Messenger_DB_Query_RETRIEVE_ALL_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES->closeCursor();
+// [ C ] $_Application_Module_Member_Messenger_DB_Query_RETRIEVE_ALL_VISIBLE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES->closeCursor();
 
 /*
  =============================================================================================================
@@ -1103,7 +1103,7 @@ $_Application_Module_Member_Messenger_DIRECTORY_OPEN_PARTICIPANTS_CLEAR_TEXT_FIL
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES))) {
+while (false !== ($_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES))) {
 
 $_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES_CONTENTS		= file_get_contents("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Messages/$_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES");
 
@@ -1157,7 +1157,7 @@ closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_CLEAR_TEXT_FILE_ME
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Messenger_DIRECTORY_READ_ARCHIVE_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_ARCHIVE_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
+while (false !== ($_Application_Module_Member_Messenger_DIRECTORY_READ_ARCHIVE_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_ARCHIVE_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
 
 /*
  ============================================================================================================
@@ -1216,7 +1216,7 @@ closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_ARCHIVE_CLEAR_TEXT
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Messenger_DIRECTORY_READ_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
+while (false !== ($_Application_Module_Member_Messenger_DIRECTORY_READ_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
 
 /*
  ============================================================================================================
@@ -1275,7 +1275,7 @@ closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_AUDIO_CLEAR_TEXT_F
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Messenger_DIRECTORY_READ_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
+while (false !== ($_Application_Module_Member_Messenger_DIRECTORY_READ_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
 
 /*
  ============================================================================================================
@@ -1334,7 +1334,7 @@ closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_DOCUMENT_CLEAR_TEX
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Messenger_DIRECTORY_READ_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
+while (false !== ($_Application_Module_Member_Messenger_DIRECTORY_READ_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
 
 /*
  ============================================================================================================
@@ -1393,7 +1393,7 @@ closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_IMAGE_CLEAR_TEXT_F
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Messenger_DIRECTORY_READ_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
+while (false !== ($_Application_Module_Member_Messenger_DIRECTORY_READ_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
 
 /*
  ============================================================================================================
@@ -1452,7 +1452,7 @@ closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_VIDEO_CLEAR_TEXT_F
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
+while (false !== ($_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
 
 /*
  ============================================================================================================
@@ -1466,7 +1466,7 @@ if ($_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT
 **/
 } else { // [ + ] ELSE: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
 
-$_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST_PARTICIPANTS						= fopen("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Participants/Participants.html", "w");
+$_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST_PARTICIPANTS		= fopen("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Participants/Participants.html", "w");
 
 /*
  ============================================================================================================
@@ -1489,6 +1489,7 @@ fwrite($_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_F
 */
 
 closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM);
+
 
 /*
  =============================================================================================================
@@ -2829,7 +2830,7 @@ $_Application_Module_Messenger_OPEN_DIRECTORY_MESSENGER_P2P_FILE_CLEARTEXT		= op
  ============================================================================================================
 */
 
-while (($_Application_Module_Messenger_READ_DIRECTORY_MESSENGER_P2P_CONVERSATIONS_CLEARTEXT = readdir($_Application_Module_Messenger_OPEN_DIRECTORY_MESSENGER_P2P_FILE_CLEARTEXT))) {
+while (false !== ($_Application_Module_Messenger_READ_DIRECTORY_MESSENGER_P2P_CONVERSATIONS_CLEARTEXT = readdir($_Application_Module_Messenger_OPEN_DIRECTORY_MESSENGER_P2P_FILE_CLEARTEXT))) {
 
 /*
  ============================================================================================================
@@ -2889,7 +2890,7 @@ $_Application_Module_Messenger_OPEN_DIRECTORY_MESSENGER_P2P_FILE_ENCRYPTED		= op
  ============================================================================================================
 */
 
-while (($_Application_Module_Messenger_READ_DIRECTORY_MESSENGER_P2P_CONVERSATIONS_ENCRYPTED = readdir($_Application_Module_Messenger_OPEN_DIRECTORY_MESSENGER_P2P_FILE_ENCRYPTED))) {
+while (false !== ($_Application_Module_Messenger_READ_DIRECTORY_MESSENGER_P2P_CONVERSATIONS_ENCRYPTED = readdir($_Application_Module_Messenger_OPEN_DIRECTORY_MESSENGER_P2P_FILE_ENCRYPTED))) {
 
 /*
  ============================================================================================================

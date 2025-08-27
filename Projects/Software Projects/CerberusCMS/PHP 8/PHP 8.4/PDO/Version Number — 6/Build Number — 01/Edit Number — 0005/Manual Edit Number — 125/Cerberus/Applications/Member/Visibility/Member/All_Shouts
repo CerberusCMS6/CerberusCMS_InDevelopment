@@ -1696,7 +1696,7 @@ $_Application_Module_Member_All_Shouts_OPEN_DIRECTORY_VIDEO_LIVE				= opendir($_
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_All_Shouts_READ_DIRECTORY_VIDEO_LIVE = readdir($_Application_Module_Member_All_Shouts_OPEN_DIRECTORY_VIDEO_LIVE))) {
+while (false !== ($_Application_Module_Member_All_Shouts_READ_DIRECTORY_VIDEO_LIVE = readdir($_Application_Module_Member_All_Shouts_OPEN_DIRECTORY_VIDEO_LIVE))) {
 
 $_Application_Module_Member_All_Shouts_READ_DIRECTORY_VIDEO_LIVE_FILE_DETAILS			= date("Y-m-d", fileatime("./Temporary/Shouts/Video/Live/$_Application_Module_Member_All_Shouts_READ_DIRECTORY_VIDEO_LIVE"));
 

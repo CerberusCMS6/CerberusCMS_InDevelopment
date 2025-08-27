@@ -576,7 +576,7 @@ $_Application_Module_Member_Control_Panel_ARCHIVE_CREATE_ARCHIVE_DIRECTORY_OPEN_
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Control_Panel_ARCHIVE_CREATE_ARCHIVE_FILE = readdir($_Application_Module_Member_Control_Panel_ARCHIVE_CREATE_ARCHIVE_DIRECTORY_OPEN_DIRECTORY)) {
+while (false !== ($_Application_Module_Member_Control_Panel_ARCHIVE_CREATE_ARCHIVE_FILE = readdir($_Application_Module_Member_Control_Panel_ARCHIVE_CREATE_ARCHIVE_DIRECTORY_OPEN_DIRECTORY))) {
 
 /*
  ============================================================================================================

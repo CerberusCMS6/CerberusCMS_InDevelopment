@@ -566,7 +566,7 @@ $_Application_Module_Member_Profile_STREAMS_POST_UPLOAD_FILE_ALLOWED_FILE_EXTENS
 $_Application_Module_Member_Profile_STREAMS_POST_UPLOAD_FILE_PATHINFO 						= pathinfo($_FILES['AMM_Profile_Streams_Upload_File']['name']);
 $_Application_Module_Member_Profile_STREAMS_POST_UPLOAD_FILE_EXTENSION 						= $_Application_Module_Member_Profile_STREAMS_POST_UPLOAD_FILE_PATHINFO['extension'];
 $_Application_Module_Member_Profile_STREAMS_POST_UPLOAD_FILE_BASENAME						= $_Application_Module_Member_Profile_STREAMS_POST_UPLOAD_FILE_PATHINFO['basename'];
-$_Application_Module_Member_Profile_STREAMS_POST_UPLOAD_FILE_EXPLODE						= explode(" ", $_Application_Module_Member_Profile_STREAMS_POST_UPLOAD_FILE_ALLOWED_FILE_EXTENSIONS);
+// [ C ] $_Application_Module_Member_Profile_STREAMS_POST_UPLOAD_FILE_EXPLODE					= explode("", $_Application_Module_Member_Profile_STREAMS_POST_UPLOAD_FILE_ALLOWED_FILE_EXTENSIONS);
 $_Application_Module_Member_Profile_STREAMS_POST_UPLOAD_FILE_PATHINFO_EXTENSION					= pathinfo($_Application_Module_Member_Profile_STREAMS_POST_UPLOAD_FILE_BASENAME, PATHINFO_EXTENSION);
 
 /*
@@ -2680,7 +2680,7 @@ $_Application_Module_Member_Profile_OPEN_DIRECTORY_FRIEND_LIST					= opendir($_A
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_READ_DIRECTORY_FRIEND_LIST = readdir($_Application_Module_Member_Profile_OPEN_DIRECTORY_FRIEND_LIST))) {
+while (false !== ($_Application_Module_Member_Profile_READ_DIRECTORY_FRIEND_LIST = readdir($_Application_Module_Member_Profile_OPEN_DIRECTORY_FRIEND_LIST))) {
 
 /*
  ============================================================================================================
@@ -3060,7 +3060,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_AUDIO				= op
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_AUDIO = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_AUDIO))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_AUDIO = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_AUDIO))) {
 
 /*
  ============================================================================================================
@@ -3099,7 +3099,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_AUDIO_ALBUM		
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_AUDIO_ALBUM = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_AUDIO_ALBUM))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_AUDIO_ALBUM = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_AUDIO_ALBUM))) {
 
 /*
  ============================================================================================================
@@ -3158,7 +3158,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_AUDIO				= op
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_AUDIO = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_AUDIO))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_AUDIO = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_AUDIO))) {
 
 /*
  ============================================================================================================
@@ -3195,7 +3195,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_AUDIO_ALBUM		
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_AUDIO_ALBUM = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_AUDIO_ALBUM))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_AUDIO_ALBUM = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_AUDIO_ALBUM))) {
 
 /*
  ============================================================================================================
@@ -3266,7 +3266,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_AUDIO				= op
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_AUDIO = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_AUDIO))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_AUDIO = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_AUDIO))) {
 
 /*
  ============================================================================================================
@@ -3303,7 +3303,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_AUDIO_ALBUM		
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_AUDIO_ALBUM = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_AUDIO_ALBUM))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_AUDIO_ALBUM = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_AUDIO_ALBUM))) {
 
 /*
  ============================================================================================================
@@ -3392,7 +3392,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_DOCUMENT				=
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_DOCUMENT = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_DOCUMENT))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_DOCUMENT = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_DOCUMENT))) {
 
 /*
  ============================================================================================================
@@ -3431,7 +3431,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_DOCUMENT_ALBU
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_DOCUMENT_ALBUM = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_DOCUMENT_ALBUM))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_DOCUMENT_ALBUM = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_DOCUMENT_ALBUM))) {
 
 /*
  ============================================================================================================
@@ -3492,7 +3492,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_DOCUMENT				=
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_DOCUMENT = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_DOCUMENT))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_DOCUMENT = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_DOCUMENT))) {
 
 /*
  ============================================================================================================
@@ -3557,7 +3557,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_DOCUMENT				=
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_DOCUMENT = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_DOCUMENT))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_DOCUMENT = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_DOCUMENT))) {
 
 /*
  ============================================================================================================
@@ -3634,7 +3634,7 @@ echo ("<BR><B>Gallery :: Image :: Album :: Profile Images</B><HR WIDTH=\"50%\" A
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_IMAGE_PROFILE = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_IMAGE_PROFILE))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_IMAGE_PROFILE = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_IMAGE_PROFILE))) {
 
 /*
  ============================================================================================================
@@ -3700,7 +3700,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_IMAGE				= op
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_IMAGE = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_IMAGE))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_IMAGE = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_IMAGE))) {
 
 /*
  ============================================================================================================
@@ -3739,7 +3739,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_IMAGE_ALBUM		
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_IMAGE_ALBUM = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_IMAGE_ALBUM))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_IMAGE_ALBUM = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_IMAGE_ALBUM))) {
 
 /*
  ============================================================================================================
@@ -3800,7 +3800,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_IMAGE				= op
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_IMAGE = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_IMAGE))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_IMAGE = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_IMAGE))) {
 
 /*
  ============================================================================================================
@@ -3865,7 +3865,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_IMAGE				= op
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_IMAGE = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_IMAGE))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_IMAGE = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_IMAGE))) {
 
 /*
  ============================================================================================================
@@ -3952,7 +3952,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO				= op
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO))) {
 
 /*
  ============================================================================================================
@@ -3991,7 +3991,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_ALBUM		
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO_ALBUM = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_ALBUM))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO_ALBUM = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_ALBUM))) {
 
 /*
  ============================================================================================================
@@ -4063,7 +4063,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO				= op
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO))) {
 
 /*
  ============================================================================================================
@@ -4102,7 +4102,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_ALBUM		
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO_ALBUM = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_ALBUM))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO_ALBUM = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_ALBUM))) {
 
 /*
  ============================================================================================================
@@ -4179,7 +4179,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO				= op
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO))) {
 
 /*
  ============================================================================================================
@@ -4218,7 +4218,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_ALBUM		
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO_ALBUM = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_ALBUM))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO_ALBUM = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_ALBUM))) {
 
 /*
  ============================================================================================================
@@ -4307,7 +4307,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_PROFILE
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO_PROFILE_IMAGE = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_PROFILE_IMAGE))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO_PROFILE_IMAGE = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_PROFILE_IMAGE))) {
 
 /*
  ============================================================================================================
@@ -4364,7 +4364,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_PROFILE
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO_PROFILE_IMAGE = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_PROFILE_IMAGE))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO_PROFILE_IMAGE = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_PROFILE_IMAGE))) {
 
 /*
  ============================================================================================================
@@ -4433,7 +4433,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_PROFILE
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO_PROFILE_IMAGE = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_PROFILE_IMAGE))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO_PROFILE_IMAGE = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_PROFILE_IMAGE))) {
 
 /*
  ============================================================================================================
@@ -4514,7 +4514,7 @@ $_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_LIVE			
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO_LIVE = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_LIVE))) {
+while (false !== ($_Application_Module_Member_Profile_Gallery_READ_DIRECTORY_GALLERY_VIDEO_LIVE = readdir($_Application_Module_Member_Profile_Gallery_OPEN_DIRECTORY_GALLERY_VIDEO_LIVE))) {
 
 /*
  ============================================================================================================
@@ -4629,7 +4629,7 @@ echo ("
 $_Application_Module_Member_Profile_Streams_FIND_DIRECTORY_STREAMS_SEARCH				= "./Member/$_Application_Module_Member_Profile_LIST_MEMBER_USERNAME/Files/Document/Streams/Wall/$_Application_Module_Member_Profile_STREAMS_SEARCH_POST_SELECT_DATE_YEAR/$_Application_Module_Member_Profile_STREAMS_SEARCH_POST_SELECT_DATE_MONTH/$_Application_Module_Member_Profile_STREAMS_SEARCH_POST_SELECT_DATE_MONTH_DAY";
 $_Application_Module_Member_Profile_Streams_OPEN_DIRECTORY_STREAMS_SEARCH				= opendir($_Application_Module_Member_Profile_Streams_FIND_DIRECTORY_STREAMS_SEARCH);
 
-while (($_Application_Module_Member_Profile_Streams_READ_DIRECTORY_STREAMS_SEARCH = readdir($_Application_Module_Member_Profile_Streams_OPEN_DIRECTORY_STREAMS_SEARCH))) {
+while (false !== ($_Application_Module_Member_Profile_Streams_READ_DIRECTORY_STREAMS_SEARCH = readdir($_Application_Module_Member_Profile_Streams_OPEN_DIRECTORY_STREAMS_SEARCH))) {
 
 /*
  ============================================================================================================
@@ -5239,7 +5239,7 @@ $_Application_Module_Member_Profile_Streams_OPEN_DIRECTORY_STREAMS_LATEST				= o
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Streams_READ_DIRECTORY_STREAMS_LATEST = readdir($_Application_Module_Member_Profile_Streams_OPEN_DIRECTORY_STREAMS_LATEST))) {
+while (false !== ($_Application_Module_Member_Profile_Streams_READ_DIRECTORY_STREAMS_LATEST = readdir($_Application_Module_Member_Profile_Streams_OPEN_DIRECTORY_STREAMS_LATEST))) {
 
 if ($_Application_Module_Member_Profile_Streams_READ_DIRECTORY_STREAMS_LATEST == "." || $_Application_Module_Member_Profile_Streams_READ_DIRECTORY_STREAMS_LATEST == ".." || $_Application_Module_Member_Profile_Streams_READ_DIRECTORY_STREAMS_LATEST == "index.php") {
 /**
@@ -5292,7 +5292,7 @@ $_Application_Module_Member_Profile_Streams_OPEN_DIRECTORY_STREAMS_DELETE				= o
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Streams_READ_DIRECTORY_STREAMS_DELETE = readdir($_Application_Module_Member_Profile_Streams_OPEN_DIRECTORY_STREAMS_DELETE))) {
+while (false !== ($_Application_Module_Member_Profile_Streams_READ_DIRECTORY_STREAMS_DELETE = readdir($_Application_Module_Member_Profile_Streams_OPEN_DIRECTORY_STREAMS_DELETE))) {
 
 /*
  ============================================================================================================
@@ -5353,7 +5353,7 @@ $_Application_Module_Member_Profile_Streams_OPEN_DIRECTORY_STREAMS_FILES_DELETE	
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Profile_Streams_READ_DIRECTORY_STREAMS_FILES_DELETE = readdir($_Application_Module_Member_Profile_Streams_OPEN_DIRECTORY_STREAMS_FILES_DELETE))) {
+while (false !== ($_Application_Module_Member_Profile_Streams_READ_DIRECTORY_STREAMS_FILES_DELETE = readdir($_Application_Module_Member_Profile_Streams_OPEN_DIRECTORY_STREAMS_FILES_DELETE))) {
 
 /*
  ============================================================================================================

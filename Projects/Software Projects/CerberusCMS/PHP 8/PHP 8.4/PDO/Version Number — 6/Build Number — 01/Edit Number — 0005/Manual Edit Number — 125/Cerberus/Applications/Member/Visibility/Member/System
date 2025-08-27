@@ -1135,7 +1135,7 @@ $_Application_Module_Member_System_DB_Query_SELECT_ALL_FILES->closeCursor();
  ============================================================================================================
 */
 
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS->closeCursor();
+// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS->closeCursor();
 
 /*
  ============================================================================================================
@@ -1143,7 +1143,7 @@ $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS->clo
  ============================================================================================================
 */
 
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPICS->closeCursor();
+// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPICS->closeCursor();
 
 /*
  ============================================================================================================
@@ -1151,5 +1151,5 @@ $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPI
  ============================================================================================================
 */
 
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPIC_MESSAGES->closeCursor();
+// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPIC_MESSAGES->closeCursor();
 ?>

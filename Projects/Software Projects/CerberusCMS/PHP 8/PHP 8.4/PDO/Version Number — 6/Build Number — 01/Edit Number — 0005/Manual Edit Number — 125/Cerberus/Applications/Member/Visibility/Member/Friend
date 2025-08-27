@@ -105,7 +105,9 @@ if ($_Application_Module_Member_Friend_READ_DIRECTORY_FRIEND_LIST == "." || $_Ap
 } else {
 
 echo ("
-<B>Friend Name</B>: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Member_Friend_READ_DIRECTORY_FRIEND_LIST&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Registered Member Account :: Profile :: For Friend :: $_Application_Module_Member_Friend_READ_DIRECTORY_FRIEND_LIST ::\">$_Application_Module_Member_Friend_READ_DIRECTORY_FRIEND_LIST</A><HR>
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+<B>Friend UserName</B>: <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Member_Friend_READ_DIRECTORY_FRIEND_LIST&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: The Registered Member Account :: Profile :: For Friend :: $_Application_Module_Member_Friend_READ_DIRECTORY_FRIEND_LIST ::\">$_Application_Module_Member_Friend_READ_DIRECTORY_FRIEND_LIST</A>
+<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
 * <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Friend&amp;RemoveFriend&#61;$_Application_Module_Member_Friend_READ_DIRECTORY_FRIEND_LIST\" TITLE=\":: Remove: $_Application_Module_Member_Friend_READ_DIRECTORY_FRIEND_LIST :: From This Registered Member Account Friend List ::\">Remove</A><BR><BR>
 ");
 
@@ -137,7 +139,7 @@ closedir($_Application_Module_Member_Friend_OPEN_DIRECTORY_FRIEND_LIST);
  ============================================================================================================
 */
 
-$_Application_Module_Member_Friend_DB_Query_SELECT_ALL_MEMBERS 						= $_KERNEL_MYSQL_IMPROVED_DATABASE_SERVER_CONNECT->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members ORDER BY id ASC");
+$_Application_Module_Member_Friend_DB_Query_SELECT_ALL_MEMBERS 						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members ORDER BY id ASC");
 
 /*
  ============================================================================================================
@@ -145,7 +147,7 @@ $_Application_Module_Member_Friend_DB_Query_SELECT_ALL_MEMBERS 						= $_KERNEL_
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Friend_DB_Query_SELECT_ALL_MEMBERS_Fetch_Array = $_Application_Module_Member_Friend_DB_Query_SELECT_ALL_MEMBERS->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Friend_DB_Query_SELECT_ALL_MEMBERS_Fetch_Array = $_Application_Module_Member_Friend_DB_Query_SELECT_ALL_MEMBERS->fetch()) {
 
 $_Application_Module_Member_Friend_LIST_MEMBER_ID							= $_Application_Module_Member_Friend_DB_Query_SELECT_ALL_MEMBERS_Fetch_Array['id'];
 $_Application_Module_Member_Friend_LIST_MEMBER_USERNAME							= $_Application_Module_Member_Friend_DB_Query_SELECT_ALL_MEMBERS_Fetch_Array['member_username'];
@@ -219,5 +221,5 @@ if (unlink("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Friends/$_Ap
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Friend_DB_Query_SELECT_ALL_MEMBERS->free_result();
+$_Application_Module_Member_Friend_DB_Query_SELECT_ALL_MEMBERS->closeCursor();
 ?>

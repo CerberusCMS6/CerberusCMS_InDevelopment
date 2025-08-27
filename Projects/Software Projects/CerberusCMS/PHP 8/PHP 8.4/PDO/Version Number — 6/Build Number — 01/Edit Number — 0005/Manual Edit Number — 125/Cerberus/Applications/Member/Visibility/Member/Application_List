@@ -249,7 +249,7 @@ if ($_GET["Display"] == "ApplicationIcons") {
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Application_List_READ_DIRECTORY_APPLICATIONS_MEMBER = readdir($_Application_Module_Member_Application_List_OPEN_DIRECTORY_APPLICATIONS_MEMBER))) {
+while (false !== ($_Application_Module_Member_Application_List_READ_DIRECTORY_APPLICATIONS_MEMBER = readdir($_Application_Module_Member_Application_List_OPEN_DIRECTORY_APPLICATIONS_MEMBER))) {
 
 /*
  ============================================================================================================
