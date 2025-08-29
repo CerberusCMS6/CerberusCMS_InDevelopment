@@ -1289,49 +1289,6 @@ echo ("
 
 /*
  ============================================================================================================
- + Read :: Directory :: Registered Member Account :: Directory :: For Updating Profile Image
- ============================================================================================================
-*/
-
-/*
- ============================================================================================================
- + Read :: Directory :: Registered Member Account :: Directory :: Variables
- ============================================================================================================
-*/
-
-$_Application_Module_Member_Update_Account_Language_FIND_DIRECTORY_LANGUAGE					= "./System/Language/";
-$_Application_Module_Member_Update_Account_Language_OPEN_DIRECTORY_LANGUAGE					= opendir($_Application_Module_Member_Update_Account_Language_FIND_DIRECTORY_LANGUAGE);
-
-/*
- ============================================================================================================
- + Read :: Registered Member Account Directory :: For Updating Profile Image
- ============================================================================================================
-*/
-
-while (false !== ($_Application_Module_Member_Update_Account_Language_READ_LANGUAGE_DIRECTORY = readdir($_Application_Module_Member_Update_Account_Language_OPEN_DIRECTORY_LANGUAGE))) {
-
-if ($_Application_Module_Member_Update_Account_Language_READ_LANGUAGE_DIRECTORY == "." || $_Application_Module_Member_Update_Account_Language_READ_LANGUAGE_DIRECTORY == ".." || $_Application_Module_Member_Update_Account_Language_READ_LANGUAGE_DIRECTORY == "index.php") {
-/**
- * Do Nothing
-**/
-} else {
-
-															echo ("<OPTION VALUE=\"$_Application_Module_Member_Update_Account_Language_READ_LANGUAGE_DIRECTORY\">$_Application_Module_Member_Update_Account_Language_READ_LANGUAGE_DIRECTORY</OPTION>");
-
-} // [ + ] IF: Registered Member Account :: Directory :: Image Directory AND Files ARE NOT Specified Registered Member Account Image Directory AND Files
-
-} // [ + ] WHILE: Reading :: Specified Registered Member Account Directory: Profile Images
-
-/*
- ============================================================================================================
- + Close Member Directory :: For Updating Profile Image
- ============================================================================================================
-*/
-
-closedir($_Application_Module_Member_Update_Account_Image_OPEN_MEMBER_DIRECTORY);
-
-/*
- ============================================================================================================
  + Read :: Directory :: Theme Directory :: Update :: Registered Member Account Theme
  ============================================================================================================
 */

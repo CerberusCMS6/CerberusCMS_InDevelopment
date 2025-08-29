@@ -1078,6 +1078,11 @@ echo ("
 											*&nbsp;Database Management System Server Database :: Version Number: $_PROJECT_WEB_SERVER_TECHNOLOGY_VERSION_MYSQL<BR><BR>
 
 										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Database Management System Server Database Configuration</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											*&nbsp;Database Management System Server :: Database :: Configuration File Option: $_ACCESS_SQL_ENGINE_VERSION<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
 											<B>Operating System Environment</B>
 										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
 											*&nbsp;Operating System Environment: $_PROJECT_WEB_SERVER_TECHNOLOGY_VERSION_OPERATING_SYSTEM<BR><BR>

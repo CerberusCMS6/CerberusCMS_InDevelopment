@@ -970,7 +970,7 @@ $_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENG
 */
 
 $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_messenger_clear_text_file_room ORDER BY id ASC");
-$_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_NUMBER_OF_ROWS		= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_messenger_clear_text_file_room ORDER BY id ASC")->fetchColumn();
+$_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_NUMBER_OF_ROWS		= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_messenger_clear_text_file_room ORDER BY id ASC");
 
 if ($_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_NUMBER_OF_ROWS <= 0) {
 
@@ -984,16 +984,16 @@ if ($_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_ARRAY = $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES->fetch()) {
+while ($_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_Fetch_Array = $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES->fetch(PDO::FETCH_ASSOC)) {
 
-$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_ID					= $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_ARRAY['id'];
-$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_CREATION_AUTHOR				= $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_ARRAY['messenger_room_creation_author'];
-$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_CREATION_AUTHOR_DEVICE_IP_ADDRESS	= $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_ARRAY['messenger_room_creation_author_device_ip_address'];
-$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_CREATION_AUTHOR_SYSTEM_ACCESS_LEVEL	= $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_ARRAY['messenger_room_creation_author_system_access_level'];
-$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_CREATION_DATE				= $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_ARRAY['messenger_room_creation_date'];
-$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME					= $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_ARRAY['messenger_room_name'];
-$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_PASSWORD_ENTRY				= $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_ARRAY['messenger_room_password_entry'];
-$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_PASSWORD_MAINTENANCE			= $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_ARRAY['messenger_room_password_maintenance'];
+$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_ID					= $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_Fetch_Array['id'];
+$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_CREATION_AUTHOR				= $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_Fetch_Array['messenger_room_creation_author'];
+$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_CREATION_AUTHOR_DEVICE_IP_ADDRESS	= $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_Fetch_Array['messenger_room_creation_author_device_ip_address'];
+$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_CREATION_AUTHOR_SYSTEM_ACCESS_LEVEL	= $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_Fetch_Array['messenger_room_creation_author_system_access_level'];
+$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_CREATION_DATE				= $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_Fetch_Array['messenger_room_creation_date'];
+$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME					= $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_Fetch_Array['messenger_room_name'];
+$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_PASSWORD_ENTRY				= $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_Fetch_Array['messenger_room_password_entry'];
+$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_PASSWORD_MAINTENANCE			= $_Application_Module_Member_Messenger_DB_Query_SELECT_ALL_INCLUDE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAMES_Fetch_Array['messenger_room_password_maintenance'];
 
 /*
  =============================================================================================================
@@ -1452,7 +1452,7 @@ closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_VIDEO_CLEAR_TEXT_F
  ============================================================================================================
 */
 
-while (false !== ($_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
+//while (false !== ($_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
 
 /*
  ============================================================================================================
@@ -1460,13 +1460,13 @@ while (false !== ($_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPA
  ============================================================================================================
 */
 
-if ($_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == "." || $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == ".." || $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == "index.php" || $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == "Files.html") {
+//if ($_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == "." || $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == ".." || $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == "index.php" || $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == "Files.html") {
 /**
  * Do Nothing
 **/
-} else { // [ + ] ELSE: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
+//} else { // [ + ] ELSE: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
 
-$_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST_PARTICIPANTS		= fopen("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Participants/Participants.html", "w");
+//$_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST_PARTICIPANTS		= fopen("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Participants/Participants.html", "w");
 
 /*
  ============================================================================================================
@@ -1474,13 +1474,13 @@ $_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIS
  ============================================================================================================
 */
 
-fwrite($_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST_PARTICIPANTS, "
-<A HREF=\"?$_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM\" TITLE=\":: Open & Display :: The Application Module :: Profile :: Entry :: For :: $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM ::\" TARGET=\"_NEW\">$_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM</A> // <I>$_GLOBAL_LOCAL_SERVER_DATE_STANDARD</I><BR>
-");
+//fwrite($_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST_PARTICIPANTS, "
+//<A HREF=\"?$_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM\" TITLE=\":: Open & Display :: The Application Module :: Profile :: Entry :: For :: $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM ::\" TARGET=\"_NEW\">$_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM</A> // <I>$_GLOBAL_LOCAL_SERVER_DATE_STANDARD</I><BR>
+//");
 
-} // [ + ] IF: Specified Participants Directory AND Files ARE NOT Specified Participants Directory AND Files
+//} // [ + ] IF: Specified Participants Directory AND Files ARE NOT Specified Participants Directory AND Files
 
-} // [ + ] WHILE: Reading Specified Participants Directory AND Files
+//} // [ + ] WHILE: Reading Specified Participants Directory AND Files
 
 /*
  ============================================================================================================
@@ -1488,8 +1488,7 @@ fwrite($_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_F
  ============================================================================================================
 */
 
-closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM);
-
+//closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM);
 
 /*
  =============================================================================================================
