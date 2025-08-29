@@ -1520,11 +1520,12 @@ echo ("
 		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
 		* <I>Structured-Query-Language Engine Type and Version Number</I>:<BR>
 			<SELECT NAME=\"Architect_SQL_Engine_Version\">
-				<OPTION VALUE=\"0\">Standard - MySQL</OPTION>
-				<OPTION VALUE=\"1\">Improved - MySQL</OPTION>
-				<OPTION VALUE=\"2\">Standard - MSQL</OPTION>
-				<OPTION VALUE=\"3\">Standard - MiniSQL</OPTION>
-				<OPTION VALUE=\"4\">Standard - PDO</OPTION>
+				<OPTION VALUE=\"1\">Standard - MySQL</OPTION>
+				<OPTION VALUE=\"2\">Improved - MySQL</OPTION>
+				<OPTION VALUE=\"3\">Standard - Microsoft SQL</OPTION>
+				<OPTION VALUE=\"4\">Standard - MiniSQL</OPTION>
+				<OPTION VALUE=\"5\">Standard - PDO - MySQL</OPTION>
+				<OPTION VALUE=\"6\">Standard - PDO - Microsoft SQL</OPTION>
 			</SELECT><BR><BR>
 
 		<HR ALIGN=\"LEFT\" WIDTH=\"20%\">
@@ -1991,6 +1992,9 @@ $_OPEN_ACCESS_FILE_FILENAME 								= fopen($_SYSTEM_CONFIGURATION_ACCESS_FILE_F
 
 fwrite($_OPEN_ACCESS_FILE_FILENAME, "$_SYSTEM_CONFIGURATION_ACCESS_FILE_DATA");
 fclose($_OPEN_ACCESS_FILE_FILENAME);
+
+copy("./System/Configuration/Global_Configuration.php","./System/Security/Integrity/Backup/Configuration/Global_Configuration.php");
+copy("./System/Configuration/Global_Server_Configuration.php","./System/Security/Integrity/Backup/Configuration/Global_Server_Configuration.php");
 
 echo ("
 								<FONT COLOR=\"#CD0000\">[&nbsp;*&nbsp;]</FONT>&nbsp;Configuration Files Created !<BR><BR>
@@ -3698,10 +3702,11 @@ $_ARCHITECT_INSTALLATION_DATABASE_DATA_SERVER_CONNECT_INITIALIZE_PDO->query("INS
 $_ARCHITECT_INSTALLATION_DATABASE_DATA_SERVER_CONNECT_INITIALIZE_PDO->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks(application_hyperlink_name,application_hyperlink_row,application_hyperlink_url,application_hyperlink_timestamp_installation)VALUES('Search','029','?Application_Member&#61;Search','$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP')");
 $_ARCHITECT_INSTALLATION_DATABASE_DATA_SERVER_CONNECT_INITIALIZE_PDO->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks(application_hyperlink_name,application_hyperlink_row,application_hyperlink_url,application_hyperlink_timestamp_installation)VALUES('System','030','?Application_Member&#61;System&amp;Display&#61;Options','$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP')");
 $_ARCHITECT_INSTALLATION_DATABASE_DATA_SERVER_CONNECT_INITIALIZE_PDO->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks(application_hyperlink_name,application_hyperlink_row,application_hyperlink_url,application_hyperlink_timestamp_installation)VALUES('Submit News','031','?Application_Member&#61;Submit_News','$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP')");
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_SERVER_CONNECT_INITIALIZE_PDO->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks(application_hyperlink_name,application_hyperlink_row,application_hyperlink_url,application_hyperlink_timestamp_installation)VALUES('Travel','032','?Application_Member&#61;Travel&amp;Display&#61;Options','$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP')");
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_SERVER_CONNECT_INITIALIZE_PDO->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks(application_hyperlink_name,application_hyperlink_row,application_hyperlink_url,application_hyperlink_timestamp_installation)VALUES('Upload File','033','?Application_Member&#61;Upload','$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP')");
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_SERVER_CONNECT_INITIALIZE_PDO->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks(application_hyperlink_name,application_hyperlink_row,application_hyperlink_url,application_hyperlink_timestamp_installation)VALUES('VoIP Phone','034','?Application_Member&#61;VoIP','$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP')");
-$_ARCHITECT_INSTALLATION_DATABASE_DATA_SERVER_CONNECT_INITIALIZE_PDO->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks(application_hyperlink_name,application_hyperlink_row,application_hyperlink_url,application_hyperlink_timestamp_installation)VALUES('Welcome !','035','?Application_Custom&#61;1','$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP')");
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_SERVER_CONNECT_INITIALIZE_PDO->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks(application_hyperlink_name,application_hyperlink_row,application_hyperlink_url,application_hyperlink_timestamp_installation)VALUES('Themes','032','?Application_Member&#61;Theme','$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP')");
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_SERVER_CONNECT_INITIALIZE_PDO->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks(application_hyperlink_name,application_hyperlink_row,application_hyperlink_url,application_hyperlink_timestamp_installation)VALUES('Travel','033','?Application_Member&#61;Travel&amp;Display&#61;Options','$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP')");
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_SERVER_CONNECT_INITIALIZE_PDO->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks(application_hyperlink_name,application_hyperlink_row,application_hyperlink_url,application_hyperlink_timestamp_installation)VALUES('Upload File','034','?Application_Member&#61;Upload','$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP')");
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_SERVER_CONNECT_INITIALIZE_PDO->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks(application_hyperlink_name,application_hyperlink_row,application_hyperlink_url,application_hyperlink_timestamp_installation)VALUES('VoIP Phone','035','?Application_Member&#61;VoIP','$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP')");
+$_ARCHITECT_INSTALLATION_DATABASE_DATA_SERVER_CONNECT_INITIALIZE_PDO->query("INSERT INTO {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_application_hyperlinks(application_hyperlink_name,application_hyperlink_row,application_hyperlink_url,application_hyperlink_timestamp_installation)VALUES('Welcome !','036','?Application_Custom&#61;1','$_GLOBAL_LOCAL_SERVER_DATE_TIMESTAMP')");
 
 	echo ("[ Done ]<BR><BR>");
 
@@ -6196,10 +6201,11 @@ $_ARCHITECT_INSTALLATION_DATABASE_DATA_SERVER_CONNECT_INITIALIZE_PDO->query("INS
 copy("./Applications/Administration/Visibility/Administration/Accounts","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Accounts");
 copy("./Applications/Administration/Visibility/Administration/Applications","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Applications");
 copy("./Applications/Administration/Visibility/Administration/Archive","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Archive");
+copy("./Applications/Administration/Visibility/Administration/Contacts","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Contacts");
 copy("./Applications/Administration/Visibility/Administration/Control_Panel","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Control_Panel");
 copy("./Applications/Administration/Visibility/Administration/Emulators","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Emulators");
 copy("./Applications/Administration/Visibility/Administration/File_Categories","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/File_Categories");
-copy("./Applications/Administration/Visibility/Administration/File_Manager","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/File_Manger");
+copy("./Applications/Administration/Visibility/Administration/File_Manager","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/File_Manager");
 copy("./Applications/Administration/Visibility/Administration/Forum","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Forum");
 copy("./Applications/Administration/Visibility/Administration/GIT","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/GIT");
 copy("./Applications/Administration/Visibility/Administration/Messenger","./System/Security/Integrity/Backup/Applications/Administration/Visibility/Administration/Messenger");

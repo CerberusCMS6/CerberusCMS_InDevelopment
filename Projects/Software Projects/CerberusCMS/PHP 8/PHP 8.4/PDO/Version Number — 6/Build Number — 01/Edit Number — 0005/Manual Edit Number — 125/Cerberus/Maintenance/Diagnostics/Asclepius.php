@@ -204,6 +204,7 @@ echo ("
 &nbsp;&middot;&nbsp;<A HREF=\"?InternalApplication&#61;Math_Testing\" TITLE=\":: Test The Math Processor Capabilities of This Web Server ::\">Math Processor Testing</A>
 &nbsp;&middot;&nbsp;<A HREF=\"?InternalApplication&#61;MySQL_Testing\" TITLE=\":: Test The MyS.Q.L. Database Server Connection Through The MyS.Q.L. Driver ::\">MyS.Q.L. Server Standard Driver Testing</A>
 &nbsp;&middot;&nbsp;<A HREF=\"?InternalApplication&#61;MySQLi_Testing\" TITLE=\":: Test The MyS.Q.L. Database Server Connection Through The MyS.Q.L. Improved Driver ::\">MyS.Q.L. Server Improved Driver Testing</A>
+&nbsp;&middot;&nbsp;<A HREF=\"?InternalApplication&#61;MySQL_PDO_Testing\" TITLE=\":: Test The MyS.Q.L. Database Server Connection Through The MyS.Q.L. PDO Driver ::\">MyS.Q.L. Server PDO Driver Testing</A>
 &nbsp;&middot;&nbsp;<A HREF=\"?InternalApplication&#61;Backup_Login\" TITLE=\":: Open & Display The Internal Backup Login Application ::\">Backup Login Application</A> ]</CENTER><HR><BR><BR>
 ");
 
@@ -301,8 +302,8 @@ echo ("Reading cookie: diagnostics_cookie_set_test.. $_Application_Diagnostics_C
 
 if ($_GET["InternalApplication"] == "Math_Testing") {
 
-$_Application_Diagnostics_Math_Testing_Generator_Random_Numbers_1			= rand(00000000000,99999999999999);
-$_Application_Diagnostics_Math_Testing_Generator_Random_Numbers_2			= rand(0,99999999999999);
+$_Application_Diagnostics_Math_Testing_Generator_Random_Numbers_1			= rand(10000000000,99999999999999);
+$_Application_Diagnostics_Math_Testing_Generator_Random_Numbers_2			= rand(10,99999999999999);
 
 $_Application_Diagnostics_Math_Testing_Multiplication					= $_Application_Diagnostics_Math_Testing_Generator_Random_Numbers_1 * $_Application_Diagnostics_Math_Testing_Generator_Random_Numbers_2;
 $_Application_Diagnostics_Math_Testing_Addition						= $_Application_Diagnostics_Math_Testing_Generator_Random_Numbers_1 + $_Application_Diagnostics_Math_Testing_Generator_Random_Numbers_2;
@@ -425,27 +426,27 @@ $_ARRAY_SYSTEM_FILES_PLUGINS_SafeHTML_1					= "../../System/Plug-Ins/Safe-HTML/D
  ============================================================================================================
 */
 
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_0		= "../../Applications/Administration/Administrators";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_1		= "../../Applications/Administration/Applications";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_2		= "../../Applications/Administration/Archive";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_3		= "../../Applications/Administration/Control_Panel";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_4		= "../../Applications/Administration/Emulators";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_5		= "../../Applications/Administration/File_Categories";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_6		= "../../Applications/Administration/File_Manager";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_7		= "../../Applications/Administration/Forum";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_8		= "../../Applications/Administration/Networking";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_9		= "../../Applications/Administration/Panels";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_10		= "../../Applications/Administration/Publish";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_11		= "../../Applications/Administration/Ranks";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_12		= "../../Applications/Administration/Referrers";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_13		= "../../Applications/Administration/Robot_Monitor";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_14		= "../../Applications/Administration/Settings";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_15		= "../../Applications/Administration/Submissions";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_16		= "../../Applications/Administration/Terminal";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_17		= "../../Applications/Administration/Update";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_18		= "../../Applications/Administration/Web_Pages";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_19		= "../../Applications/Administration/index.php";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_20		= "../../Applications/Administration/PHP_Information.php";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_0		= "../../Applications/Administration/Visibility/Administration/Visibility/AdministrationAdministrators";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_1		= "../../Applications/Administration/Visibility/Administration/Applications";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_2		= "../../Applications/Administration/Visibility/Administration/Archive";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_3		= "../../Applications/Administration/Visibility/Administration/Control_Panel";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_4		= "../../Applications/Administration/Visibility/Administration/Emulators";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_5		= "../../Applications/Administration/Visibility/Administration/File_Categories";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_6		= "../../Applications/Administration/Visibility/Administration/File_Manager";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_7		= "../../Applications/Administration/Visibility/Administration/Forum";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_8		= "../../Applications/Administration/Visibility/Administration/Networking";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_9		= "../../Applications/Administration/Visibility/Administration/Panels";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_10		= "../../Applications/Administration/Visibility/Administration/Publish";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_11		= "../../Applications/Administration/Visibility/Administration/Ranks";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_12		= "../../Applications/Administration/Visibility/Administration/Referrers";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_13		= "../../Applications/Administration/Visibility/Administration/Robot_Monitor";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_14		= "../../Applications/Administration/Visibility/Administration/Settings";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_15		= "../../Applications/Administration/Visibility/Administration/Submissions";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_16		= "../../Applications/Administration/Visibility/Administration/Terminal";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_17		= "../../Applications/Administration/Visibility/Administration/Update";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_18		= "../../Applications/Administration/Visibility/Administration/Web_Pages";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_19		= "../../Applications/Administration/Visibility/Administration/index.php";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_ADMINISTRATOR_20		= "../../Applications/Administration/Visibility/Administration/PHP_Information.php";
 
 /*
  ============================================================================================================
@@ -482,49 +483,49 @@ $_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_PANEL_10			= "../../Applications/Panel/
  ============================================================================================================
 */
 
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_0			= "../../Applications/Member/Account_Recovery";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_1			= "../../Applications/Member/Active_Members";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_2			= "../../Applications/Member/All_News";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_3			= "../../Applications/Member/All_Shouts";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_4			= "../../Applications/Member/Application_List";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_5			= "../../Applications/Member/Articles";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_6			= "../../Applications/Member/Audio_Player";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_7			= "../../Applications/Member/Calculator";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_8			= "../../Applications/Member/Calendar";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_9			= "../../Applications/Member/Clock";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_10			= "../../Applications/Member/Comment";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_11			= "../../Applications/Member/Contact_Administrator";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_12			= "../../Applications/Member/Control_Panel";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_13			= "../../Applications/Member/Documentation";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_14			= "../../Applications/Member/Electronic_Mail";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_15			= "../../Applications/Member/Files";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_16			= "../../Applications/Member/Forum";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_17			= "../../Applications/Member/Forward_Friend";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_18			= "../../Applications/Member/Friend";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_19			= "../../Applications/Member/Language";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_20			= "../../Applications/Member/Legal";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_21			= "../../Applications/Member/Links";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_22			= "../../Applications/Member/List";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_23			= "../../Applications/Member/Login";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_24			= "../../Applications/Member/Member_Directory";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_25			= "../../Applications/Member/Messenger";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_26			= "../../Applications/Member/News";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_27			= "../../Applications/Member/Private_Files";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_28			= "../../Applications/Member/Private_Message";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_29			= "../../Applications/Member/Profile";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_30			= "../../Applications/Member/Referrers";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_31			= "../../Applications/Member/Register";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_32			= "../../Applications/Member/Reset_Password";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_33			= "../../Applications/Member/Search";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_34			= "../../Applications/Member/Statistics";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_35			= "../../Applications/Member/Submit_News";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_36			= "../../Applications/Member/System_Message";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_37			= "../../Applications/Member/Update_Account";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_38			= "../../Applications/Member/Update_Password";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_39			= "../../Applications/Member/Upload";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_40			= "../../Applications/Member/Video_Player";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_41			= "../../Applications/Member/Webspace";
-$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_42			= "../../Applications/Member/index.php";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_0			= "../../Applications/Member/Visibility/Member/Account_Recovery";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_1			= "../../Applications/Member/Visibility/Member/Active_Members";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_2			= "../../Applications/Member/Visibility/Member/All_News";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_3			= "../../Applications/Member/Visibility/Member/All_Shouts";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_4			= "../../Applications/Member/Visibility/Member/Application_List";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_5			= "../../Applications/Member/Visibility/Member/Articles";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_6			= "../../Applications/Member/Visibility/Member/Audio_Player";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_7			= "../../Applications/Member/Visibility/Member/Calculator";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_8			= "../../Applications/Member/Visibility/Member/Calendar";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_9			= "../../Applications/Member/Visibility/Member/Clock";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_10			= "../../Applications/Member/Visibility/Member/Comment";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_11			= "../../Applications/Member/Visibility/Member/Contact_Administrator";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_12			= "../../Applications/Member/Visibility/Member/Control_Panel";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_13			= "../../Applications/Member/Visibility/Member/Documentation";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_14			= "../../Applications/Member/Visibility/Member/Electronic_Mail";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_15			= "../../Applications/Member/Visibility/Member/Files";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_16			= "../../Applications/Member/Visibility/Member/Forum";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_17			= "../../Applications/Member/Visibility/Member/Forward_Friend";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_18			= "../../Applications/Member/Visibility/Member/Friend";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_19			= "../../Applications/Member/Visibility/Member/Language";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_20			= "../../Applications/Member/Visibility/Member/Legal";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_21			= "../../Applications/Member/Visibility/Member/Links";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_22			= "../../Applications/Member/Visibility/Member/List";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_23			= "../../Applications/Member/Visibility/Member/Login";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_24			= "../../Applications/Member/Visibility/Member/Member_Directory";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_25			= "../../Applications/Member/Visibility/Member/Messenger";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_26			= "../../Applications/Member/Visibility/Member/News";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_27			= "../../Applications/Member/Visibility/Member/Private_Files";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_28			= "../../Applications/Member/Visibility/Member/Private_Message";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_29			= "../../Applications/Member/Visibility/Member/Profile";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_30			= "../../Applications/Member/Visibility/Member/Referrers";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_31			= "../../Applications/Member/Visibility/Member/Register";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_32			= "../../Applications/Member/Visibility/Member/Reset_Password";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_33			= "../../Applications/Member/Visibility/Member/Search";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_34			= "../../Applications/Member/Visibility/Member/Statistics";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_35			= "../../Applications/Member/Visibility/Member/Submit_News";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_36			= "../../Applications/Member/Visibility/Member/System_Message";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_37			= "../../Applications/Member/Visibility/Member/Update_Account";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_38			= "../../Applications/Member/Visibility/Member/Update_Password";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_39			= "../../Applications/Member/Visibility/Member/Upload";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_40			= "../../Applications/Member/Visibility/Member/Video_Player";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_41			= "../../Applications/Member/Visibility/Member/Webspace";
+$_ARRAY_SYSTEM_FILES_APPLICATION_MODULES_MEMBER_42			= "../../Applications/Member/Visibility/Member/index.php";
 
 /*
  ============================================================================================================
@@ -824,6 +825,50 @@ if (mysqli_select_db($_GLOBAL_SQL_DATABASE_SERVER_CONNECTION, $_ACCESS_DATABASE_
 	echo ("[ * ] Connection To MyS.Q.L. Database Server Database Name: <I>$_ACCESS_DATABASE_SERVER_DATABASE_NAME</I> Was ***NOT*** Successful.<BR>");
 
 } // [ + ] IF: Connection To MyS.Q.L. Database Server Database Name
+
+} // [ + ] IF: Internal Application: S.Q.L. Testing Is Activated
+
+/*
+ ============================================================================================================
+ +
+ + Internal Application :: My Structured Query Language Database Server :: PDO Driver Connection Testing
+ +
+ ============================================================================================================
+*/
+
+if ($_GET["InternalApplication"] == "MySQL_PDO_Testing") {
+
+	echo ("<B>My Structured Query Language :: Improved Driver :: Connection Testing</B><BR>");
+
+	echo ("[ * ] Including Global Configuration File...<BR>");
+
+	include_once "../../System/Configuration/Global_Configuration.php";
+
+	echo ("[ * ] Global Configuration File Included Successfully.<BR>");
+
+	echo ("[ * ] Including Database Server Access Configuration File...<BR>");
+
+	include_once "../../System/Configuration/Global_Server_Configuration.php";
+
+	echo ("[ * ] Database Server Access Configuration File Included Successfully.<BR>");
+
+	echo ("[ * ] Including Database Server Class Functions File For MySQL Server PDO Driver...<BR>");
+
+	include_once "../../System/Configuration/Global_SQL_Server_Database_Class_MySQL_PDO";
+
+	echo ("[ * ] Database Server Class Functions File Included Successfully.<BR>");
+
+	echo ("[ * ] Connecting To MyS.Q.L. Database Server Host-Name...<BR>");
+
+if ($_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION) {
+
+	echo ("[ * ] Connection To MyS.Q.L. Database Server Host-Name: <I>$_ACCESS_DATABASE_SERVER_HOSTNAME</I> With UserName: <I>$_ACCESS_DATABASE_SERVER_USERNAME</I> Was Successful.<BR>");
+
+} else {
+
+	echo ("[ * ] Connection To MyS.Q.L. Database Server Host-Name: <I>$_ACCESS_DATABASE_SERVER_HOSTNAME</I> With UserName: <I>$_ACCESS_DATABASE_SERVER_USERNAME</I> Was ***NOT*** Successful.<BR>");
+
+} // [ + ] IF: Connection To MyS.Q.L. Database Server
 
 } // [ + ] IF: Internal Application: S.Q.L. Testing Is Activated
 

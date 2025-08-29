@@ -7490,8 +7490,8 @@ $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_END						= microtime();
  ============================================================================================================
 */
 
-$_KERNEL_WEBPAGE_GENERATION_TIME_TOTAL_TIME						= $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_START - $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_END; 
-$_KERNEL_WEBPAGE_GENERATION_TIME_TOTAL_TIME						= round($_KERNEL_WEBPAGE_GENERATION_TIME_TOTAL_TIME,5);
+$_KERNEL_WEBPAGE_GENERATION_TIME_TOTAL_TIME						= $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_END - $_KERNEL_WEBPAGE_GENERATION_TIME_MICROTIME_START; 
+$_KERNEL_WEBPAGE_GENERATION_TIME_TOTAL_TIME						= round($_KERNEL_WEBPAGE_GENERATION_TIME_TOTAL_TIME, 5, PHP_ROUND_HALF_UP);
 
 /*
  ============================================================================================================
@@ -7505,7 +7505,7 @@ $_KERNEL_WEBPAGE_GENERATION_TIME_TOTAL_TIME						= round($_KERNEL_WEBPAGE_GENERA
 
 echo ("
 		<CENTER>
-			This Web Site Is Powered By:&nbsp;<A HREF=\"$_PROJECT_SERVER_URL_SOURCEFORGE_SECURE\" TARGET=\"_NEW\" TITLE=\":: $_PROJECT_STRING_NAME_EXTENDED :: Official SourceForge Software Project Web Page ::\">$_PROJECT_STRING_NAME_EXTENDED</A>&nbsp;|&nbsp;Web-Page Data Generation Time: 0.". $_KERNEL_WEBPAGE_GENERATION_TIME_TOTAL_TIME ." Seconds&nbsp;|&nbsp;");
+			This Web Site Is Powered By:&nbsp;<A HREF=\"$_PROJECT_SERVER_URL_SOURCEFORGE_SECURE\" TARGET=\"_NEW\" TITLE=\":: $_PROJECT_STRING_NAME_EXTENDED :: Official SourceForge Software Project Web Page ::\">$_PROJECT_STRING_NAME_EXTENDED</A>&nbsp;|&nbsp;Web-Page Data Generation Time: ". $_KERNEL_WEBPAGE_GENERATION_TIME_TOTAL_TIME ." Seconds&nbsp;|&nbsp;");
 
 /*
  ============================================================================================================
