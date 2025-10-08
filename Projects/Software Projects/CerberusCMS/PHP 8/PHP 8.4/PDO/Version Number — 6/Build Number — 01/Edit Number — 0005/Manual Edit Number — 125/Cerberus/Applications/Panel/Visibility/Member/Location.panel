@@ -1,0 +1,97 @@
+<?php
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    ()  ()  --  ()
+ +  ()  --  ()  ()
+ +  ------------------------------
+ +  Panel Application Module
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Master Root Directory => Applications => Panel => Location
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|6|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ +
+ + [ ^ ] Application Module :: Panel :: Location
+ +
+ +
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ +
+ + [ @ ] Display :: Panel :: Location
+ +
+ +
+ ============================================================================================================
+*/
+
+echo ("
+<B>Connected Device :: Coordinates</B><BR>
+* Latitude: <A ID=\"getLocationOutputLatitude\" TITLE=\":: Global-Positioning-System :: Coordinates :: Latitude ::\"></A><BR>
+* Longitude: <A ID=\"getLocationOutputLongitude\" TITLE=\":: Global-Positioning-System :: Coordinates ::: Longitude ::\"></A><BR>
+* Altitude To Sea-Level: <A ID=\"getLocationOutputAltitude\" TITLE=\":: Global-Positioning-System :: Coordinates :: Altitude ::\"></A><BR>
+* Maps Interface: <SPAN ID=\"OutputLocation\"></SPAN><BR><BR>
+
+<B>Connected Device :: Motion</B><BR>
+* Acceleration:<BR>
+* Linear-Acceleration:<BR>
+* Direction:<BR>
+* Gravity:<BR><BR>
+
+<B>Connected Device :: Network</B><BR>
+* <I><B>Internet Protocol Address :: Connected Device</B></I><BR>
+~ <A HREF=\"$_SYSTEM_SERVER_NETWORKING_RESOLVER_WHOIS/$_GLOBAL_REMOTE_SERVER_ADDRESS\" TITLE=\":: Open & Display :: The :: Who-Is Information :: For :: Internet Protocol Address: $_GLOBAL_REMOTE_SERVER_ADDRESS :: \" TARGET=\"_NEW\">$_GLOBAL_REMOTE_SERVER_ADDRESS :: $_GLOBAL_REMOTE_SERVER_PORT</A><BR><BR>
+
+* <I><B>Internet Protocol Address :: This Web Server</B></I><BR>
+~ <A HREF=\"$_SYSTEM_SERVER_NETWORKING_RESOLVER_WHOIS/$_GLOBAL_LOCAL_SERVER_ADDRESS\" TITLE=\":: Open & Display :: The :: Who-Is Information :: For :: Internet Protocol Address: $_GLOBAL_LOCAL_SERVER_ADDRESS ::\" TARGET=\"_NEW\">$_GLOBAL_LOCAL_SERVER_ADDRESS :: $_GLOBAL_LOCAL_SERVER_PORT</A><BR><BR>
+
+* <I><B>Connection Type :: Connected Device</B></I><BR>
+~ $_GLOBAL_LOCAL_SERVER_HTTP_CONNECTION_TYPE<BR>
+
+<HR>
+$_GLOBAL_SYSTEM_PLUGIN_LOCATION_GPS_COORDINATES_XYZ_HTML5_APPLICATION_PANEL
+$_GLOBAL_SYSTEM_PLUGIN_LOCATION_GPS_COORDINATES_XY_HTML5_HTR_APPLICATION_PANEL
+");
+?>
