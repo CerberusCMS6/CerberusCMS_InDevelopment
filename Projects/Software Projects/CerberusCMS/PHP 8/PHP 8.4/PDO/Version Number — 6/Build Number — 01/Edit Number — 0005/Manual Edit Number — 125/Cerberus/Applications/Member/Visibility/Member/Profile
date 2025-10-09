@@ -5612,15 +5612,15 @@ unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Applicati
 
 } // [ + ] IF: NOT In Array: Allowed File Extension :: Uploaded File :: Document :: 5, Delete File
 
-if (!in_array($_Application_Module_Member_Profile_Streams_FILE_IMAGE_1_EXTENSION, $_Application_Module_Member_Profile_Streams_ALLOWED_FILE_EXTENSIONS_IMAGE)) {
-
-unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_IMAGE_1_BASENAME");
-
 /*
  ============================================================================================================
  + IF: Streams :: Uploaded File :: Image :: File Extension :: IS NOT Allowed, Delete File Upload
  ============================================================================================================
 */
+
+if (!in_array($_Application_Module_Member_Profile_Streams_FILE_IMAGE_1_EXTENSION, $_Application_Module_Member_Profile_Streams_ALLOWED_FILE_EXTENSIONS_IMAGE)) {
+
+unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_IMAGE_1_BASENAME");
 
 } // [ + ] IF: NOT In Array: Allowed File Extension :: Uploaded File :: Image :: 1, Delete File
 
@@ -5648,15 +5648,15 @@ unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Applicati
 
 } // [ + ] IF: NOT In Array: Allowed File Extension :: Uploaded File :: Image :: 5, Delete File
 
-if (!in_array($_Application_Module_Member_Profile_Streams_FILE_VIDEO_1_EXTENSION, $_Application_Module_Member_Profile_Streams_ALLOWED_FILE_EXTENSIONS_VIDEO)) {
-
-unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_VIDEO_1_BASENAME");
-
 /*
  ============================================================================================================
  + IF: Streams :: Uploaded File :: Video :: File Extension :: IS NOT Allowed, Delete File Upload
  ============================================================================================================
 */
+
+if (!in_array($_Application_Module_Member_Profile_Streams_FILE_VIDEO_1_EXTENSION, $_Application_Module_Member_Profile_Streams_ALLOWED_FILE_EXTENSIONS_VIDEO)) {
+
+unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_VIDEO_1_BASENAME");
 
 } // [ + ] IF: NOT In Array: Allowed File Extension :: Uploaded File :: Video :: 1, Delete File
 
@@ -5684,17 +5684,18 @@ unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Applicati
 
 } // [ + ] IF: NOT In Array: Allowed File Extension :: Uploaded File :: Video :: 5, Delete File
 
-if (filesize($_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_AUDIO_1_BASENAME) > $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_STREAMS_AUDIO) {
-
-unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_AUDIO_1_BASENAME");
-
-} // [ + ] IF: File Size: Uploaded File :: Audio :: 1 :: Is: Greater Than :: Allowed File Size, Delete File
-
 /*
  ============================================================================================================
  + IF: Streams :: Uploaded File :: Audio :: File Size :: IS Greater Than Allowed File Size, Delete File Upload
  ============================================================================================================
 */
+
+/*
+if (filesize($_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_AUDIO_1_BASENAME) > $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_STREAMS_AUDIO) {
+
+unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_AUDIO_1_BASENAME");
+
+} // [ + ] IF: File Size: Uploaded File :: Audio :: 1 :: Is: Greater Than :: Allowed File Size, Delete File
 
 if (filesize($_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_AUDIO_2_BASENAME) > $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_STREAMS_AUDIO) {
 
@@ -5719,6 +5720,7 @@ if (filesize($_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Appl
 unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_AUDIO_5_BASENAME");
 
 } // [ + ] IF: File Size: Uploaded File :: Audio :: 5 :: Is: Greater Than :: Allowed File Size, Delete File
+*/
 
 /*
  ============================================================================================================
@@ -5726,6 +5728,7 @@ unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Applicati
  ============================================================================================================
 */
 
+/*
 if (filesize($_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_DOCUMENT_1_BASENAME) > $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_STREAMS_DOCUMENT) {
 
 unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_DOCUMENT_1_BASENAME");
@@ -5755,6 +5758,7 @@ if (filesize($_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Appl
 unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_DOCUMENT_5_BASENAME");
 
 } // [ + ] IF: File Size: Uploaded File :: Document :: 5 :: Is: Greater Than :: Allowed File Size, Delete File
+*/
 
 /*
  ============================================================================================================
@@ -5762,6 +5766,7 @@ unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Applicati
  ============================================================================================================
 */
 
+/*
 if (filesize($_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_IMAGE_1_BASENAME) > $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_STREAMS_IMAGE) {
 
 unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_IMAGE_1_BASENAME");
@@ -5791,6 +5796,7 @@ if (filesize($_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Appl
 unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_IMAGE_5_BASENAME");
 
 } // [ + ] IF: File Size: Uploaded File :: Image :: 5 :: Is: Greater Than :: Allowed File Size, Delete File
+*/
 
 /*
  ============================================================================================================
@@ -5798,6 +5804,7 @@ unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Applicati
  ============================================================================================================
 */
 
+/*
 if (filesize($_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_VIDEO_1_BASENAME) > $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_STREAMS_VIDEO) {
 
 unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_VIDEO_1_BASENAME");
@@ -5827,6 +5834,7 @@ if (filesize($_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Appl
 unlink("$_Application_Module_Member_Profile_Streams_DIRECTORY_UPLOAD/$_Application_Module_Member_Profile_Streams_FILE_VIDEO_5_BASENAME");
 
 } // [ + ] IF: File Size: Uploaded File :: Video :: 5 :: Is: Greater Than :: Allowed File Size, Delete File
+*/
 
 /*
  ============================================================================================================
