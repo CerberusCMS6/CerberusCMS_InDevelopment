@@ -1307,17 +1307,7 @@ echo ("
 
 													<B>Settings :: Account :: Language</B><BR>
 														* Member Account Perferred Language:<BR>
-															<SELECT NAME=\"AMM_Update_Account_Member_Settings_Language\" VALUE=\"$_GLOBAL_MEMBER_LANGUAGE\" MAXLENGTH=\"50\">
-");
-
-/*
- ============================================================================================================
- + Read :: Directory :: Theme Directory :: Update :: Registered Member Account Theme
- ============================================================================================================
-*/
-
-echo ("
-															</SELECT><BR><BR>
+															<INPUT TYPE=\"TEXT\" NAME=\"AMM_Update_Account_Member_Settings_Language\" VALUE=\"$_Application_Module_Member_Update_Account_LIST_MEMBER_SETTINGS_LANGUAGE\" MAXLENGTH=\"100\"><BR><BR>
 
 													<B>Settings :: Account :: Graphics :: Theme</B><BR>
 														* Member Account Theme:<BR>
@@ -1583,7 +1573,6 @@ member_name_first='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER
 member_name_last='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NAME_LAST',
 member_name_middle='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NAME_MIDDLE',
 member_name_nickname='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NAME_NICKNAME',
-member_number_of_posts='',
 member_number_phone_cell='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_CELL',
 member_number_phone_cell_area_code='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_CELL_AREA_CODE',
 member_number_phone_cell_country_code='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_CELL_COUNTRY_CODE',
