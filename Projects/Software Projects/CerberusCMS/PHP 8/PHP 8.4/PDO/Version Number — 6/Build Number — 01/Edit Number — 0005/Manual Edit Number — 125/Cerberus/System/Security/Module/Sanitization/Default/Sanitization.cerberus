@@ -12676,7 +12676,7 @@ $_Application_Module_Member_Control_Panel_POST_ACCOUNT_ACTIVATION_KEY						= str
  + [ @ ] Application :: Member :: Electronic_Mail
  +
  + Number of Variables :: GET  :: 00 
- + Number of Variables :: POST :: 01
+ + Number of Variables :: POST :: 02
  ============================================================================================================
 */
 
@@ -12688,7 +12688,8 @@ $_Application_Module_Member_Control_Panel_POST_ACCOUNT_ACTIVATION_KEY						= str
  ============================================================================================================
 */
 
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= $_POST['AMM_Electronic_Mail_Message'];
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT						= $_POST['AMM_Electronic_Mail_Message_ClearText'];
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED						= $_POST['AMM_Electronic_Mail_Message_Encrypted'];
 
 /*
  ============================================================================================================
@@ -12698,36 +12699,67 @@ $_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= $_POST['AMM_Ele
  ============================================================================================================
 */
 
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("`", "", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("@", "&commat;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("<", "&lt;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace(">", "&gt;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("\"", "&quot;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("&", "&amp;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("'", "&apos;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("~", "&#126;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("$", "&#36;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("=", "&#61;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("{", "&lcub;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("}", "&rcub;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("(", "&lpar;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace(")", "&rpar;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("#", "&num;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("%", "&percnt;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("*", "&ast;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("+", "&plus;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace(",", "&comma;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("-", "&minus;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace(".", "&period;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("/", "&sol;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace(":", "&colon;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("\;", "&semi;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("?", "&quest;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("[", "&lsqb;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("]", "&rsqb;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("^", "&hat;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("_", "&lowbar;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
-$_Application_Module_Member_Electronic_Mail_POST_MESSAGE							= str_replace("|", "&verbar;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("`", "", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("@", "&commat;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("<", "&lt;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace(">", "&gt;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("\"", "&quot;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("&", "&amp;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("'", "&apos;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("~", "&#126;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("$", "&#36;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("=", "&#61;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("{", "&lcub;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("}", "&rcub;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("(", "&lpar;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace(")", "&rpar;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("#", "&num;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("%", "&percnt;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("*", "&ast;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("+", "&plus;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace(",", "&comma;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("-", "&minus;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace(".", "&period;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("/", "&sol;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace(":", "&colon;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("\;", "&semi;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("?", "&quest;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("[", "&lsqb;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("]", "&rsqb;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("^", "&hat;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("_", "&lowbar;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT							= str_replace("|", "&verbar;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_CLEARTEXT);
+
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("`", "", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("@", "&commat;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("<", "&lt;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace(">", "&gt;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("\"", "&quot;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("&", "&amp;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("'", "&apos;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("~", "&#126;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("$", "&#36;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("=", "&#61;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("{", "&lcub;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("}", "&rcub;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("(", "&lpar;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace(")", "&rpar;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("#", "&num;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("%", "&percnt;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("*", "&ast;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("+", "&plus;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace(",", "&comma;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("-", "&minus;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace(".", "&period;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("/", "&sol;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace(":", "&colon;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("\;", "&semi;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("?", "&quest;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("[", "&lsqb;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("]", "&rsqb;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("^", "&hat;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("_", "&lowbar;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
+$_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED							= str_replace("|", "&verbar;", $_Application_Module_Member_Electronic_Mail_POST_MESSAGE_ENCRYPTED);
 
 /*
  ============================================================================================================
