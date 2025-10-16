@@ -1413,20 +1413,4 @@ if ($_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS) {
 } // [ + ] IF: Database Management System Server :: Database Query: Update :: System Settings :: Themes :: Theme Video Resolution :: Variable Has Executed
 
 } // [ + ] IF: Application Module :: Administration :: Themes :: Input Form :: Update :: Themes :: Theme Video Resolution :: Variable Has Executed
-
-/*
- ============================================================================================================
- + Kill SQL Database Server Query: Update System Settings :: Themes
- ============================================================================================================
-*/
-
-$_Application_Module_Administration_Themes_DB_Query_UPDATE_SETTINGS->closeCursor();
-
-/*
- ============================================================================================================
- + Kill SQL Database Server Query: Select System Settings :: Themes
- ============================================================================================================
-*/
-
-$_Application_Module_Administration_Themes_DB_Query_SELECT_SETTINGS->closeCursor();
 ?>
