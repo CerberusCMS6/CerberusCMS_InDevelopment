@@ -2667,7 +2667,7 @@ $_DB_Query_Kernel_Security_Check_Cookie_Member_UserName_AND_Password_Number_Of_R
  ============================================================================================================
 */
 
-if ($_DB_Query_Kernel_Security_Check_Cookie_Member_UserName_AND_Password_Number_Of_Rows == "1") {
+if ($_DB_Query_Kernel_Security_Check_Cookie_Member_UserName_AND_Password_Number_Of_Rows >= "1") {
 /**
  * Do Nothing
 **/
@@ -2680,6 +2680,13 @@ if ($_DB_Query_Kernel_Security_Check_Cookie_Member_UserName_AND_Password_Number_
 
 } else {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Fake Data Found In Credential Cookies - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -2726,7 +2733,7 @@ $_DB_Query_Kernel_Security_Check_Cookie_Member_Electronic_Mail_Address_Number_Of
  ============================================================================================================
 */
 
-if ($_DB_Query_Kernel_Security_Check_Cookie_Member_Electronic_Mail_Address_Number_Of_Rows == "1") {
+if ($_DB_Query_Kernel_Security_Check_Cookie_Member_Electronic_Mail_Address_Number_Of_Rows >= "1") {
 /**
  * Do Nothing
 **/
@@ -2739,6 +2746,13 @@ if ($_DB_Query_Kernel_Security_Check_Cookie_Member_Electronic_Mail_Address_Numbe
 
 } else {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Fake Data Found In Cookies - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -2796,6 +2810,13 @@ $_MEMBER_DIRECTORY_INDEX_FILE								= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME
 
 if (!file_exists($_MEMBER_DIRECTORY_INDEX_FILE)) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Fake Data Found - Redirect To Logout Section
 	exit;
 
@@ -2845,6 +2866,13 @@ $_MEMBER_DIRECTORY_MASTER_LIST_ELECTRONIC_MAIL_ADDRESS_FILE					= "./Member/Mast
 
 if (!file_exists($_MEMBER_DIRECTORY_MASTER_LIST_ELECTRONIC_MAIL_ADDRESS_FILE)) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Fake Data Found - Redirect To Internal Application: Logout
 	exit;
 
@@ -2936,6 +2964,13 @@ $_DB_Query_Kernel_Networking_Status_Security_Check_Blocked_Networks->closeCursor
 
 if ($_GLOBAL_LOCAL_SERVER_HTTP_USER_AGENT == "") {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/HTML/Banned.html?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Web Browser :: User-Agent :: Empty Data Found - Redirect To Internet Protocol Address and Network Banishment Notification
 	exit;
 
@@ -2949,6 +2984,13 @@ if ($_GLOBAL_LOCAL_SERVER_HTTP_USER_AGENT == "") {
 
 if ($_GLOBAL_LOCAL_SERVER_HTTP_USER_AGENT == null) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/HTML/Banned.html?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Web Browser :: User-Agent :: Null Data Found - Redirect To Internet Protocol Address and Network Banishment Notification
 	exit;
 
@@ -2986,6 +3028,13 @@ $_GLOBAL_REMOTE_SERVER_HTTP_USER_AGENT_DISPLAY	= "$_GLOBAL_REMOTE_SERVER_HTTP_US
 
 if (substr_count($_GLOBAL_REMOTE_SERVER_HTTP_USER_AGENT_DISPLAY,"<") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/HTML/Banned.html?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Web Browser :: User-Agent :: String :: Is Tampered - Redirect To Internet Protocol Address and Network Banishment Notification
 	exit;
 
@@ -2999,6 +3048,13 @@ if (substr_count($_GLOBAL_REMOTE_SERVER_HTTP_USER_AGENT_DISPLAY,"<") == 1) {
 
 if (substr_count($_GLOBAL_REMOTE_SERVER_HTTP_USER_AGENT_DISPLAY,">") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/HTML/Banned.html?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Web Browser :: User-Agent :: String :: Is Tampered - Redirect To Internet Protocol Address and Network Banishment Notification
 	exit;
 
@@ -3014,6 +3070,13 @@ if (substr_count($_GLOBAL_REMOTE_SERVER_HTTP_USER_AGENT_DISPLAY,">") == 1) {
 
 if ($_GLOBAL_REMOTE_SERVER_HTTP_USER_AGENT_DISPLAY == "") {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/HTML/Banned.html?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Web Browser :: User-Agent :: String :: Is Null - Redirect To Internet Protocol Address and Network Banishment Notification
 	exit;
 
@@ -3035,7 +3098,13 @@ if ($_GLOBAL_REMOTE_SERVER_HTTP_USER_AGENT_DISPLAY == "") {
 
 if ($_GLOBAL_COOKIE_MEMBER_LANGUAGE == ".." || $_GLOBAL_COOKIE_MEMBER_LANGUAGE == "." || $_GLOBAL_COOKIE_MEMBER_LANGUAGE == "@" || $_GLOBAL_COOKIE_MEMBER_LANGUAGE == "`") {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
 	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit and Escaping Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3049,7 +3118,13 @@ if ($_GLOBAL_COOKIE_MEMBER_LANGUAGE == ".." || $_GLOBAL_COOKIE_MEMBER_LANGUAGE =
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_LANGUAGE,"<") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
 	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3063,7 +3138,13 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_LANGUAGE,"<") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_LANGUAGE,">") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
 	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3077,7 +3158,13 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_LANGUAGE,">") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_LANGUAGE,"`") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
 	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3091,7 +3178,13 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_LANGUAGE,"`") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_LANGUAGE,".") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
 	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3113,7 +3206,13 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_LANGUAGE,".") == 1) {
 
 if ($_GLOBAL_COOKIE_MEMBER_USERNAME == ".." || $_GLOBAL_COOKIE_MEMBER_USERNAME == "." || $_GLOBAL_COOKIE_MEMBER_USERNAME == "@" || $_GLOBAL_COOKIE_MEMBER_USERNAME == "`") {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
 	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit and Escaping Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3127,7 +3226,13 @@ if ($_GLOBAL_COOKIE_MEMBER_USERNAME == ".." || $_GLOBAL_COOKIE_MEMBER_USERNAME =
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_USERNAME,"<") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
 	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3141,7 +3246,13 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_USERNAME,"<") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_USERNAME,">") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
 	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3155,7 +3266,13 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_USERNAME,">") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_USERNAME,"`") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
 	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3169,7 +3286,13 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_USERNAME,"`") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_USERNAME,".") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
 	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3191,7 +3314,13 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_USERNAME,".") == 1) {
 
 if ($_GLOBAL_COOKIE_MEMBER_PASSWORD == ".." || $_GLOBAL_COOKIE_MEMBER_PASSWORD == "." || $_GLOBAL_COOKIE_MEMBER_PASSWORD == "@" || $_GLOBAL_COOKIE_MEMBER_PASSWORD == "`") {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
 	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit and Escaping Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3205,7 +3334,13 @@ if ($_GLOBAL_COOKIE_MEMBER_PASSWORD == ".." || $_GLOBAL_COOKIE_MEMBER_PASSWORD =
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_PASSWORD,"<") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
 	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3219,7 +3354,13 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_PASSWORD,"<") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_PASSWORD,">") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
 	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3233,7 +3374,13 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_PASSWORD,">") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_MEMBER_PASSWORD,"`") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
 	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3256,6 +3403,12 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_PASSWORD,"`") == 1) {
 if ($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS == ".." || $_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS == "." || $_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS == "@" || $_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS == "`") {
 
 	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit and Escaping Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3270,6 +3423,12 @@ if ($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS == ".." || $_GLOBAL_COOKIE_ME
 if (substr_count($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS,"<") == 1) {
 
 	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3284,6 +3443,12 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS,"<") == 1) {
 if (substr_count($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS,">") == 1) {
 
 	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3298,6 +3463,12 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS,">") == 1) {
 if (substr_count($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS,"`") == 1) {
 
 	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3319,7 +3490,13 @@ if (substr_count($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS,"`") == 1) {
 
 if ($_GLOBAL_COOKIE_DIRECTORY_THEME == ".." || $_GLOBAL_COOKIE_DIRECTORY_THEME == "." || $_GLOBAL_COOKIE_DIRECTORY_THEME == "@" || $_GLOBAL_COOKIE_DIRECTORY_THEME == "`") {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit and Escaping Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3333,7 +3510,13 @@ if ($_GLOBAL_COOKIE_DIRECTORY_THEME == ".." || $_GLOBAL_COOKIE_DIRECTORY_THEME =
 
 if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME,"<") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3347,7 +3530,13 @@ if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME,"<") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME,">") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3361,7 +3550,13 @@ if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME,">") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME,"`") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
 
@@ -3383,6 +3578,12 @@ if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME,"`") == 1) {
 
 if ($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION == ".." || $_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION == "." || $_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION == "@" || $_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION == "`") {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit and Escaping Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
@@ -3397,6 +3598,12 @@ if ($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION == ".." || $_GLOBAL_COOKIE_
 
 if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION,"<") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
@@ -3411,6 +3618,12 @@ if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION,"<") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION,">") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
@@ -3425,6 +3638,12 @@ if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION,">") == 1) {
 
 if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION,"`") == 1) {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION"); // Exploit Programming Code Found - Redirect To Logout Section, Destroy All Cookies
 	exit;
@@ -3447,7 +3666,13 @@ if (substr_count($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION,"`") == 1) {
 
 if (strlen($_GLOBAL_COOKIE_MEMBER_LANGUAGE) >= "15") {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
 	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
 
@@ -3469,7 +3694,13 @@ if (strlen($_GLOBAL_COOKIE_MEMBER_LANGUAGE) >= "15") {
 
 if (strlen($_GLOBAL_COOKIE_MEMBER_USERNAME) >= "25") {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
 	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
 
@@ -3491,7 +3722,13 @@ if (strlen($_GLOBAL_COOKIE_MEMBER_USERNAME) >= "25") {
 
 if (strlen($_GLOBAL_COOKIE_MEMBER_PASSWORD) >= "256") {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
 	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
 
@@ -3514,6 +3751,12 @@ if (strlen($_GLOBAL_COOKIE_MEMBER_PASSWORD) >= "256") {
 if (strlen($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS) >= "100") {
 
 	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
 
@@ -3535,7 +3778,13 @@ if (strlen($_GLOBAL_COOKIE_MEMBER_ELECTRONIC_MAIL_ADDRESS) >= "100") {
 
 if (strlen($_GLOBAL_COOKIE_DIRECTORY_THEME) >= "100") {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
 
@@ -3557,6 +3806,12 @@ if (strlen($_GLOBAL_COOKIE_DIRECTORY_THEME) >= "100") {
 
 if (strlen($_GLOBAL_COOKIE_DIRECTORY_THEME_VIDEO_RESOLUTION) >= "100") {
 
+	setcookie("kernel_member_electronic_mail_address", "", time()-42000);
+	setcookie("kernel_member_language", "", time()-42000);
+	setcookie("kernel_member_password", "", time()-42000);
+	setcookie("kernel_member_security_fingerprint", "", time()-42000);
+	setcookie("kernel_member_username", "", time()-42000);
+	setcookie("kernel_visitor_directory_theme", "", time()-42000);
 	setcookie("kernel_visitor_directory_theme_video_resolution", "", time()-42000);
 	header("Location: ?$_INTERNAL_APPLICATION_MODULE_INTERNAL=Logout&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
 	exit;
@@ -5593,6 +5848,17 @@ $_DB_Query_Kernel_Logout_Remove_Member_Account_Authorized_IP_Address->closeCurso
 /*
  + Nothing Here Yet
 */
+
+/*
+ ============================================================================================================
+ + Header Redirect :: News
+ ============================================================================================================
+*/
+	
+	header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=News&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
+	exit;
+
+} else {
 
 /*
  ============================================================================================================
