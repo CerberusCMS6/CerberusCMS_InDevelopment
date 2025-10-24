@@ -1092,60 +1092,6 @@ $_Application_Module_Member_Messenger_DIRECTORY_OPEN_PARTICIPANTS_CLEAR_TEXT_FIL
 /*
  ============================================================================================================
  +
- + Read Directory :: Clear-Text File Messenger Room :: File Directory :: Messages
- +
- ============================================================================================================
-*/
-
-/*
- ============================================================================================================
- + WHILE: Reading Directory :: Clear-Text File Messenger Room :: Messages :: Write Message List To File List
- ============================================================================================================
-*/
-
-while (false !== ($_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES))) {
-
-$_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES_CONTENTS		= file_get_contents("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Messages/$_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES");
-
-/*
- ============================================================================================================
- + IF: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
- ============================================================================================================
-*/
-
-if ($_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES == "." || $_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES == ".." || $_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES == "index.php" || $_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES == "Files.html") {
-/**
- * Do Nothing
-**/
-} else { // [ + ] ELSE: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
-
-$_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_OPEN_MESSAGE_ENTRIES			= fopen("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME.html", "a");
-
-/*
- ============================================================================================================
- + IF: Write Message To Clear-Text File Messenger Room Name :: File List :: Messages
- ============================================================================================================
-*/
-
-fwrite($_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_OPEN_MESSAGE_ENTRIES, "
-$_Application_Module_Member_Messenger_DIRECTORY_READ_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES_CONTENTS
-");
-
-} // [ + ] IF: Specified Archive Directory AND Files ARE NOT Specified Archive Directory AND Files
-
-} // [ + ] WHILE: Reading Specified Archive Directory AND Files
-
-/*
- ============================================================================================================
- + Close Directory :: Clear-Text File :: Messenger Room :: Directory :: Messages
- ============================================================================================================
-*/
-
-closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_CLEAR_TEXT_FILE_MESSENGER_ROOM_MESSAGES);
-
-/*
- ============================================================================================================
- +
  + Read Directory :: Clear-Text File Messenger Room :: File Directory :: Archive
  +
  ============================================================================================================
@@ -1452,7 +1398,7 @@ closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_VIDEO_CLEAR_TEXT_F
  ============================================================================================================
 */
 
-//while (false !== ($_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
+while (false !== ($_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
 
 /*
  ============================================================================================================
@@ -1460,13 +1406,13 @@ closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_VIDEO_CLEAR_TEXT_F
  ============================================================================================================
 */
 
-//if ($_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == "." || $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == ".." || $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == "index.php" || $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == "Files.html") {
+if ($_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == "." || $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == ".." || $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == "index.php" || $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM == "Participants.html") {
 /**
  * Do Nothing
 **/
-//} else { // [ + ] ELSE: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
+} else { // [ + ] ELSE: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
 
-//$_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST_PARTICIPANTS		= fopen("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Participants/Participants.html", "w");
+$_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST_PARTICIPANTS		= fopen("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME/Participants/Participants.html", "w");
 
 /*
  ============================================================================================================
@@ -1474,13 +1420,21 @@ closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_VIDEO_CLEAR_TEXT_F
  ============================================================================================================
 */
 
-//fwrite($_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST_PARTICIPANTS, "
-//<A HREF=\"?$_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM\" TITLE=\":: Open & Display :: The Application Module :: Profile :: Entry :: For :: $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM ::\" TARGET=\"_NEW\">$_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM</A> // <I>$_GLOBAL_LOCAL_SERVER_DATE_STANDARD</I><BR>
-//");
+fwrite($_Application_Module_Member_Messenger_FIND_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST_PARTICIPANTS, "
+	<HEAD>
+		<TITLE>$_GLOBAL_SYSTEM_SITE_TITLE</TITLE>
+		<LINK REL=\"stylesheet\" HREF=\"../../../../../../../Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Style_Sheet/Style.css\" TYPE=\"text/css\">
+	</HEAD>
 
-//} // [ + ] IF: Specified Participants Directory AND Files ARE NOT Specified Participants Directory AND Files
+	<BODY>
+		<A HREF=\"../../../../../../../$_INTERNAL_FILE_KERNEL?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Profile&amp;Name&#61;$_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM\" TITLE=\":: Open & Display :: The Application Module :: Profile :: Entry :: For :: $_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM ::\" TARGET=\"_NEW\">$_Application_Module_Member_Messenger_DIRECTORY_READ_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM</A><BR>
+		Last Active: <I>$_GLOBAL_LOCAL_SERVER_TIME_UNIX // $_GLOBAL_LOCAL_SERVER_DATE_STANDARD</I><BR><BR>
+	</BODY>
+");
 
-//} // [ + ] WHILE: Reading Specified Participants Directory AND Files
+} // [ + ] IF: Specified Participants Directory AND Files ARE NOT Specified Participants Directory AND Files
+
+} // [ + ] WHILE: Reading Specified Participants Directory AND Files
 
 /*
  ============================================================================================================
@@ -1488,7 +1442,7 @@ closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_VIDEO_CLEAR_TEXT_F
  ============================================================================================================
 */
 
-//closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM);
+closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_PARTICIPANTS_CLEAR_TEXT_FILE_MESSENGER_ROOM);
 
 /*
  =============================================================================================================
@@ -1729,7 +1683,7 @@ if ($_GET["UploadFile"] == "Audio") {
  ============================================================================================================
 */
 
-if (in_array($_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION, $_Application_Module_Member_Messenger_ALLOWED_FILE_EXTENSION_AUDIO)) {
+if (in_array($_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE, $_Application_Module_Member_Messenger_ALLOWED_FILE_EXTENSION_AUDIO)) {
 
 $_Application_Module_Messenger_UPLOAD_FILE_AUDIO_PREPARE_FILE									= "1";
 
@@ -1745,7 +1699,7 @@ $_Application_Module_Messenger_UPLOAD_FILE_AUDIO_PREPARE_FILE									= "0";
 
 } // [ + ] IF: File Extension :: Audio :: Is In Allowed File Extension Array
 
-											echo ("* This Audio File Extension Type Is: $_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION<BR>");
+											echo ("* This Audio File Extension Type Is: $_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE<BR>");
 
 											echo ("* This Audio File Extension Type Is: $_Application_Module_Messenger_UPLOAD_FILE_AUDIO_PREPARE_FILE Where 1 is allowed and 0 is not allowed.<BR>");
 
@@ -1797,9 +1751,9 @@ move_uploaded_file($_FILES['AMM_Messenger_Visible_Clear_Text_File_Messenger_Room
 
 											echo ("* Done...<BR>");
 
-											echo ("* Renaming This Audio File From: ./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME To: ./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION<BR>");
+											echo ("* Renaming This Audio File From: ./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME To: ./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME<BR>");
 
-rename("./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME", "./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION");
+rename("./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME", "./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME");
 
 											echo ("* This Audio File has been renamed.<BR>");
 
@@ -1807,15 +1761,15 @@ rename("./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_AUD
 
 											echo ("* Copying This Audio File From Location: ./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME To Location: ./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/Files/Audio/$_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME<BR><BR>");
 
-copy("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION","./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/Files/Audio/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION");
+copy("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME","./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/Files/Audio/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME");
 
 											echo ("* This Audio File Has Been Copied.<BR>");
 
-											echo ("* Deleting This Orignal Audio File From: ./Temporary/Upload");
+											echo ("* Deleting This Orignal Audio File From: ./Temporary/Upload<BR>");
 
-											unlink("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION");
+											unlink("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_AUDIO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME");
 
-											echo ("* This Original Audio File Deleted.");
+											echo ("* This Original Audio File Deleted.<BR>");
 
 											echo ("* Redirecting To This Non-Encrypted Clear-Text File Messenger Room...<BR>");
 
@@ -1863,7 +1817,7 @@ if ($_GET["UploadFile"] == "Document") {
  ============================================================================================================
 */
 
-if (in_array($_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION, $_Application_Module_Member_Messenger_ALLOWED_FILE_EXTENSION_DOCUMENT)) {
+if (in_array($_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE, $_Application_Module_Member_Messenger_ALLOWED_FILE_EXTENSION_DOCUMENT)) {
 
 $_Application_Module_Messenger_UPLOAD_FILE_DOCUMENT_PREPARE_FILE									= "1";
 
@@ -1879,7 +1833,7 @@ $_Application_Module_Messenger_UPLOAD_FILE_DOCUMENT_PREPARE_FILE									= "0";
 
 } // [ + ] IF: File Extension :: Document :: Is In Allowed File Extension Array
 
-											echo ("* File Extension Type Is: $_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION<BR>");
+											echo ("* File Extension Type Is: $_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE<BR>");
 
 											echo ("* File Extension Type Is: $_Application_Module_Messenger_UPLOAD_FILE_DOCUMENT_PREPARE_FILE Where 1 is allowed and 0 is not allowed.<BR>");
 
@@ -1903,7 +1857,7 @@ if (file_exists("./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Applicatio
 
 											echo ("* This Document File already exists in ./Document/Files/ ... Deleting Temporary File<BR>");
 
-											unlink("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME");
+											unlink("./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME");
 
 											echo ("* This Document File Was Deleted.<BR>");
 
@@ -1931,25 +1885,25 @@ move_uploaded_file($_FILES['AMM_Messenger_Visible_Clear_Text_File_Messenger_Room
 
 											echo ("* Done...<BR>");
 
-											echo ("* Renaming This Document File From: ./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME To: ./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION<BR>");
+											echo ("* Renaming This Document File From: ./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME To: ./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME<BR>");
 
-rename("./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME", "./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION");
+rename("./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME", "./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME");
 
 											echo ("* This Document File Was Renamed.<BR>");
 
 											echo ("* Copying This Document File To File Type Directory Within Messenger Room:<BR>");
 
-											echo ("* Copying This Document File From Location: ./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME To Location: ./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/Files/Document/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME<BR><BR>");
+											echo ("* Copying This Document File From Location: ./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME To Location: ./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/Files/Document/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME<BR><BR>");
 
-copy("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION","./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/Files/Document/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION");
+copy("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME","./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/Files/Document/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME");
 
 											echo ("* This Document File Was Copied.<BR>");
 
-											echo ("* Deleting This Orignal Document File From: ./Temporary/Upload");
+											echo ("* Deleting This Orignal Document File From: ./Temporary/Upload<BR>");
 
-											unlink("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION");
+											unlink("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_DOCUMENT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME");
 
-											echo ("* This Document File Was Deleted.");
+											echo ("* This Document File Was Deleted.<BR>");
 
 											echo ("* Redirecting To This Messenger Room...<BR>");
 
@@ -1997,7 +1951,7 @@ if ($_GET["UploadFile"] == "Image") {
  ============================================================================================================
 */
 
-if (in_array($_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION, $_Application_Module_Member_Messenger_ALLOWED_FILE_EXTENSION_IMAGE)) {
+if (in_array($_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE, $_Application_Module_Member_Messenger_ALLOWED_FILE_EXTENSION_IMAGE)) {
 
 $_Application_Module_Messenger_UPLOAD_FILE_IMAGE_PREPARE_FILE									= "1";
 
@@ -2013,7 +1967,7 @@ $_Application_Module_Messenger_UPLOAD_FILE_IMAGE_PREPARE_FILE									= "0";
 
 } // [ + ] IF: File Extension :: Image :: Is In Allowed File Extension Array
 
-											echo ("* This Image File Extension Type Is: $_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION<BR>");
+											echo ("* This Image File Extension Type Is: $_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE<BR>");
 
 											echo ("* This Image File Extension Type Is: $_Application_Module_Messenger_UPLOAD_FILE_IMAGE_PREPARE_FILE Where 1 is allowed and 0 is not allowed.<BR>");
 
@@ -2059,25 +2013,25 @@ move_uploaded_file($_FILES['AMM_Messenger_Visible_Clear_Text_File_Messenger_Room
 
 											echo ("* Done...<BR>");
 
-											echo ("* Renaming This Image File From: ./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME To: ./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION<BR>");
+											echo ("* Renaming This Image File From: ./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME To: ./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME<BR>");
 
-rename("./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME", "./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION");
+rename("./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME", "./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME");
 
 											echo ("* This Image File Was Renamed.<BR>");
 
 											echo ("* Copying This Image File To File Type Directory Within Messenger Room:<BR>");
 
-											echo ("* Copying This Image File From Location: ./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME To Location: ./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/Files/Image/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME<BR><BR>");
+											echo ("* Copying This Image File From Location: ./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME To Location: ./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/Files/Image/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME<BR><BR>");
 
-copy("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION","./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/Files/Image/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION");
+copy("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME","./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/Files/Image/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME");
 
 											echo ("* This Image File Was Copied.<BR>");
 
-											echo ("* Deleting This Orignal Image File From: ./Temporary/Upload");
+											echo ("* Deleting This Orignal Image File From: ./Temporary/Upload<BR>");
 
-											unlink("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION");
+											unlink("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_IMAGE_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME");
 
-											echo ("* This Original Image File Was Deleted.");
+											echo ("* This Original Image File Was Deleted.<BR>");
 
 											echo ("* Redirecting To Messenger Room...<BR>");
 
@@ -2125,7 +2079,7 @@ if ($_GET["UploadFile"] == "Video") {
  ============================================================================================================
 */
 
-if (in_array($_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION, $_Application_Module_Member_Messenger_ALLOWED_FILE_EXTENSION_VIDEO)) {
+if (in_array($_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE, $_Application_Module_Member_Messenger_ALLOWED_FILE_EXTENSION_VIDEO)) {
 
 $_Application_Module_Messenger_UPLOAD_FILE_VIDEO_PREPARE_FILE									= "1";
 
@@ -2141,7 +2095,7 @@ $_Application_Module_Messenger_UPLOAD_FILE_VIDEO_PREPARE_FILE									= "0";
 
 } // [ + ] IF: File Extension :: Video :: Is In Allowed File Extension Array
 
-											echo ("* This File Extension Type Is: $_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION<BR>");
+											echo ("* This File Extension Type Is: $_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION_TYPE<BR>");
 
 											echo ("* This File Extension Type Is: $_Application_Module_Messenger_UPLOAD_FILE_VIDEO_PREPARE_FILE Where 1 is allowed and 0 is not allowed.<BR>");
 
@@ -2193,25 +2147,25 @@ move_uploaded_file($_FILES['AMM_Messenger_Visible_Clear_Text_File_Messenger_Room
 
 											echo ("* Done...<BR>");
 
-											echo ("* Renaming This Video File From: ./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME To: ./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION<BR>");
+											echo ("* Renaming This Video File From: ./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME To: ./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME<BR>");
 
-rename("./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME", "./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION");
+rename("./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME", "./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME");
 
 											echo ("* This Video File Was Renamed.<BR>");
 
 											echo ("* Copying This Video File To File Type Directory Within Messenger Room:<BR>");
 
-											echo ("* Copying This Video File From Location: ./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME To Location: ./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/Files/Video/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME<BR><BR>");
+											echo ("* Copying This Video File From Location: ./Temporary/Upload/$_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME To Location: ./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/Files/Video/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME<BR><BR>");
 
-copy("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION","./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/Files/Video/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION");
+copy("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME","./Temporary/Messenger/Text-File/Clear-Text/Visible/$_Application_Module_Member_Messenger_POST_SELECT_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_HIDDEN/Files/Video/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME");
 
 											echo ("* This Video File Was Copied.<BR>");
 
-											echo ("* Deleting This Orignal Video File From: ./Temporary/Upload");
+											echo ("* Deleting This Orignal Video File From: ./Temporary/Upload<BR>");
 
-											unlink("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_DATE_STANDARD - $_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME - $_Application_Module_Member_Messenger_RANDOM_NUMBER_GENERATOR_1_HASH_MD5_1.$_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_EXTENSION");
+											unlink("./Temporary/Upload/$_GLOBAL_LOCAL_SERVER_TIME_UNIX - $_GLOBAL_COOKIE_MEMBER_USERNAME - $_Application_Module_Member_Messenger_UPLOAD_FILE_VIDEO_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME_SPECIFY_UPLOAD_FILE_BASENAME");
 
-											echo ("* This Original Video File Deleted.");
+											echo ("* This Original Video File Deleted.<BR>");
 
 											echo ("* Redirecting To This Messenger Room...<BR>");
 
