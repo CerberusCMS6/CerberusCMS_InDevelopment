@@ -60,6 +60,22 @@
 /*
  ============================================================================================================
  +
+ + Master Index File :: Includes
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Master Index File :: Includes :: System Configuration File
+ ============================================================================================================
+*/
+
+include_once "./System/Configuration/Global_Configuration.php";
+
+/*
+ ============================================================================================================
+ +
  + Master Index File :: Variables
  +
  ============================================================================================================
@@ -79,7 +95,8 @@ $_Project_File_Installation				= "./Architect.php";
  ============================================================================================================
 */
 
-$_Project_File_Kernel					= "./Cerberus.php?Application_Member=News";
+$_Project_File_Kernel					= "./$_INTERNAL_FILE_KERNEL";
+$_Project_File_Kernel_Default_Application		= "./$_INTERNAL_FILE_KERNEL?Application_Member=News";
 
 /*
  ============================================================================================================
@@ -91,7 +108,49 @@ $_Project_File_Index					= "./index.php";
 
 /*
  ============================================================================================================
- + Check For Installation File: If It Exists, Redirect To It
+ +
+ + Master Index File :: File Checks
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + IF: File DOES NOT Exist: Kernel File :: Flash :: Kernel File From Backup
+ ============================================================================================================
+*/
+
+if (!file_exists($_Project_File_Kernel)) {
+
+	copy("./System/Kernel/Backup/Current.kernel","$_Project_File_Kernel");
+	header("location: ./Maintenance/Repair/$_INTERNAL_FILE_MAINTENANCE_REPAIR");
+
+} // [ + ] IF: File DOES NOT Exist: Kernel File :: Flash :: Kernel File From Backup
+
+/*
+ ============================================================================================================
+ + IF: File Size: Kernel File :: Is: Less Than OR Equal To: Zero :: Flash :: Kernel File From Backup
+ ============================================================================================================
+*/
+
+if (filesize($_Project_File_Kernel) <= "2048") {
+
+	copy("./System/Kernel/Backup/Current.kernel","$_Project_File_Kernel");
+	header("location: ./Maintenance/Repair/$_INTERNAL_FILE_MAINTENANCE_REPAIR");
+
+} // [ + ] IF: File Size: Kernel File :: Is: Less Than OR Equal To: Zero :: Flash :: Kernel File From Backup
+
+/*
+ ============================================================================================================
+ +
+ + Master Index File :: Redirects
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Check For The Installation File: If It Exists, Redirect To It
  ============================================================================================================
 */
 
@@ -101,13 +160,13 @@ if (file_exists($_Project_File_Installation)) {
 
 /*
  ============================================================================================================
- + Check For Installation File: If It Does Not Exists, Redirect To Kernel File
+ + Check For The Installation File: If It Does Not Exists, Redirect To The Kernel File
  ============================================================================================================
 */
 
-} else {
+} else { // [ + ] ELSE: The Installation File DOES NOT Exist, Redirect To The Kernel File
 
-	header("location: $_Project_File_Kernel");
+	header("location: $_Project_File_Kernel_Default_Application");
 
 } // [ + ] IF: File Exists: Architect Installation Application
 ?>
