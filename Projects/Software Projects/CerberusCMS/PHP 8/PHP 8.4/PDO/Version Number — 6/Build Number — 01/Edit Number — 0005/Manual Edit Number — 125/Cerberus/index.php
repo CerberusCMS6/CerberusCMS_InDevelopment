@@ -133,7 +133,7 @@ if (!file_exists($_Project_File_Kernel)) {
  ============================================================================================================
 */
 
-if (filesize($_Project_File_Kernel) <= "2048") {
+if (filesize($_Project_File_Kernel) <= "4096") {
 
 	copy("./System/Kernel/Backup/Current.kernel","$_Project_File_Kernel");
 	header("location: ./Maintenance/Repair/$_INTERNAL_FILE_MAINTENANCE_REPAIR");
