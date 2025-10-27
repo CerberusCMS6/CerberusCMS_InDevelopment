@@ -1,0 +1,126 @@
+/*
+ ============================================================================================================
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ + Cerberus Content Management System
+ + ----------------------------------------------------------------------------------------------------------
+ + - Author			 : Gary Christopher Johnson of Oildale In Southern California
+ + - Company			 : CerberusCMS, Free and Open Source Software
+ + - Company Address		 : Oildale In Southern California, United States of America
+ + - Electronic Mail Address	 : CerberusCMS6@Proton.me
+ + - Document Notes		 : View this file in a non-formatting text editor without word-wrap for the
+ +				 : correct display of this programming code and its indentation.
+ + ----------------------------------------------------------------------------------------------------------
+ +    () ()()()()() () -- ()
+ +  ()  () () --
+ +  ------
+ + Information Text File
+ + ----------------------------------------------------------------------------------------------------------
+ + - This File, Location	 : Master Root Directory => Root Directory => Cost.txt
+ + - This File, Version		 : 0.7.7
+ + - This File, Programming Code : Pure Pre-Hyper-Text-Post-Processor
+ + - Programming Code Model	 : Procedural, Functional, Object Oriented :: Pre-Order Algebraic
+ + -				 :					   :: Pre-Order Logical
+ + - Compatibility		 : Extensible-Markup-Language		   :: Version Numbers: 1, 1.1
+ + - Compatibility		 : Hyper-Text-Markup-Language		   :: Version Numbers: 1, 2, 3, 4, 5
+ + - Compatibility		 : Pre-Hyper-Text-Post-Processor 	   :: Version Numbers: 5, 7, 8
+ + - Compatibility		 : Zend Engine				   :: Version Numbers: 3, 4
+ + - Official Release Date	 : Saturday, April 19th of 2025
+ + ----------------------------------------------------------------------------------------------------------
+ + -------------------------------------------------------------------------------      - Titan -
+ + --[][]--[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[][][]------------   []++++||=======>
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |'-._/\_.-'|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |    []    |
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    |___-[]-___|
+ + -[]-----[][][]--[][][]--[][][]---[][][]--[][][]--[]--[]------[]----------------    |__((**))__|
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]----------------    \   -[]-   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]------------/-\-     \   []   /
+ + -[]-----[]------[]--[]--[]---[]--[]------[]--[]--[]--[]------[]---VERSION--|6|-	\  []  /
+ + --[][]--[][][]--[]--[]--[][][]---[][][]--[]--[]--[][][]--[][][]------------\-/-	 '.[].'
+ + -------------------------------------------------------------------------------
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Build Number: 01 ~ Final
+ + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Edit Number : 0,005
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ +
+ + Cost
+ +
+ ============================================================================================================
+*/
+
+/*
+ ============================================================================================================
+ + Assessment :: Time Cost
+ ============================================================================================================
+*/
+
+-------------------------------------------------------------------------------------------------------------
+Cost :: Programming Code Time
+-------------------------------------------------------------------------------------------------------------
+* 1 Person @ Approximately 4 hours per day every x days of y week from: ~January 1st of 2000 - ~January 1st of 2002: 1,460 Hours.
+* 1 Person @ Approximately 3 hours per day every x days of y week from: ~January 1st of 2003 - ~January 1st of 2004: ? Original XBOX ERA
+* 1 Person @ Approximately x hours per day every y days of z week from: ~January 1st of 2004 - ~January 1st of 2005: ?
+* 1 Person @ Approximately 3 hours per day every 3 days of 1 week from: ~January 1st of 2005 - ~January 1st of 2006: 363 Hours.
+* 1 Person @ Approximately 4 hours per day every 3 days of 1 week from: ~January 1st of 2006 - ~January 1st of 2007: 484 Hours.
+* 1 Person @ Approximately 4 hours per day every 3 days of 1 week from: ~January 1st of 2007 - ~January 1st of 2008: ? Hours.
+* 1 Person @ Approximately 4 hours per day every 3 days of 1 week from: ~January 1st of 2008 - ~January 1st of 2009: ? Hours.
+* 1 Person @ Approximately 4 hours per day every 3 days of 1 week from: ~January 1st of 2009 - ~January 1st of 2010: ? Hours.
+* 1 Person @ Approximately 3 hours per day every 3 days of 1 week from: ~January 1st of 2013 - ~August 20th of 2013: 400 Hours.
+* 1 Person @ Approximately 2 hours per day every 3 days of 1 week from: ~January 1st of 2013 - ~January 1st of 2014: 363 Hours.
+* 1 Person @ Approximately 6 hours per day every x days of y week from: ~January 1st of 2021 - ~February 29th of 2024, 6,570 Hours.
+* Total Number of Hours In 365 Days With 24 Hours Within Each Day: 8,760
+-------------------------------------------------------------------------------------------------------------
+Approximate Total Programming Code Time Cost: 9,640 Hours
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Cost :: Research and Development Time
+-------------------------------------------------------------------------------------------------------------
+* 1 Person @ Approximately 2 hours of research and development per every 3 weeks from: ~January 1st of 2021 - ~February 29th of 2024: 192.3333333333333 Hours.
+-------------------------------------------------------------------------------------------------------------
+Approximate Total Research and Development Time Cost: 192.3333333333333 Hours
+-------------------------------------------------------------------------------------------------------------
+
+/*
+ ============================================================================================================
+ + Assessment :: Monetary Cost
+ ============================================================================================================
+*/
+
+-------------------------------------------------------------------------------------------------------------
+Cost :: Programming Code Monetary :: Personal
+-------------------------------------------------------------------------------------------------------------
+* 9,640 Hours With Approximate Average of 2 Meals @ $10 Per Meal: 9,640 / 24 = 401.6666666666667 * $20 = $8,033.333333333333
+* 1,460 Hours With Approximate Average of x1 Pack of Cigarettes @ $04 Within Every 24 Hours From: 2000 - 2002: 1,460 / 24 = 60.83333333333333 * $04 = $243.3333333333333
+* 00363 Hours With Approximate Average of x1 Pack of Cigarettes @ $07 Within Every 24 Hours From: 2004 - 2006: 00363 / 24 = 15.125 * $07 = $105.875
+* 00484 Hours With Approximate Average of x1 Pack of Cigarettes @ $08 Within Every 24 Hours From: 2007 - 2009: 00484 / 24 = 20.16666666666667 * $08 = $161.3333333333334
+* 00363 Hours With Appriximate Average of x1 Pack of Cigarettes @ $09 Within Every 24 Hours From: 2013 - 2013: 00363 / 24 = 15.125 * $09 = $136.125
+* 06570 Hours With Appriximate Average of x1 Pack of Cigarettes @ $11 Within Every 24 Hours From: 2021 - 2023: 6,570 / 24 = 273.75 * $11 = $3,011.25
+-------------------------------------------------------------------------------------------------------------
+Approximate Total Monetary Cost: $11,691.25 United States Dollars
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Cost :: Programming Code Monetary :: Material Things
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Approximate Total Monetary Cost: $11,691.25 United States Dollars
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Cost :: Travel
+-------------------------------------------------------------------------------------------------------------
+- Area :: California :: Central
+* 
+
+- Area :: California :: Southern
+*
+
+-------------------------------------------------------------------------------------------------------------
+Approximate Total Travel Cost: $?
+-------------------------------------------------------------------------------------------------------------
