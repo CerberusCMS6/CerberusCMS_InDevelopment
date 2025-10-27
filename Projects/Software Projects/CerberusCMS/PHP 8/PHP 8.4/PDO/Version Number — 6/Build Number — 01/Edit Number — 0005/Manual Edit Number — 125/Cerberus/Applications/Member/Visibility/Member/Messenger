@@ -3908,66 +3908,6 @@ $_Application_Module_Member_Messenger_P2P_Messenger_ClearText_File_LIST_MEMBER_S
 
 if ($_GET["MemberName"] == "$_Application_Module_Member_Messenger_P2P_Messenger_ClearText_File_LIST_MEMBER_USERNAME") {
 
-$_Application_Module_Member_Messenger_DIRECTORY_FIND_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM						= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Messenger/Clear-Text/$_Application_Module_Member_Messenger_P2P_Messenger_ClearText_File_LIST_MEMBER_USERNAME";
-$_Application_Module_Member_Messenger_DIRECTORY_OPEN_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM						= opendir($_Application_Module_Member_Messenger_DIRECTORY_FIND_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM);
-
-/*
- =============================================================================================================
- + Write: P2P :: Messenger :: Clear-Text File :: File List
- =============================================================================================================
-*/
-
-$_Application_Module_Member_Messenger_OPEN_P2P_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST						= fopen("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Messenger/Clear-Text/$_Application_Module_Member_Messenger_P2P_Messenger_ClearText_File_LIST_MEMBER_USERNAME/Files.html", "w");
-
-/*
- ============================================================================================================
- + WHILE: Reading Directory :: P2P :: Clear-Text File Messenger Room :: Write File List To File List File
- ============================================================================================================
-*/
-
-while (false !== ($_Application_Module_Member_Messenger_DIRECTORY_READ_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
-
-/*
- ============================================================================================================
- + IF: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
- ============================================================================================================
-*/
-
-if ($_Application_Module_Member_Messenger_DIRECTORY_READ_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM == "." || $_Application_Module_Member_Messenger_DIRECTORY_READ_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM == ".." || $_Application_Module_Member_Messenger_DIRECTORY_READ_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM == "index.php" || $_Application_Module_Member_Messenger_DIRECTORY_READ_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM == "Files.html" || $_Application_Module_Member_Messenger_DIRECTORY_READ_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM == "Messenger.html") {
-/**
- * Do Nothing
-**/
-} else { // [ + ] ELSE: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
-
-/*
- ============================================================================================================
- + IF: Write Message To :: P2P :: Clear-Text File Messenger Room Name :: File List
- ============================================================================================================
-*/
-
-fwrite($_Application_Module_Member_Messenger_OPEN_P2P_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST, "
-	<HEAD>
-		<TITLE>$_GLOBAL_SYSTEM_SITE_TITLE</TITLE>
-		<LINK REL=\"stylesheet\" HREF=\"../../../../../../../Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_Application_Module_Member_Messenger_P2P_Messenger_ClearText_File_LIST_MEMBER_SETTINGS_THEME_DIRECTORY/Style_Sheet/Style.css\" TYPE=\"text/css\">
-	</HEAD>
-
-	<BODY>
-		*&nbsp;<A HREF=\"./$_Application_Module_Member_Messenger_DIRECTORY_READ_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM\" TITLE=\":: Open This File ::\" TARGET=\"_NEW\">./$_Application_Module_Member_Messenger_DIRECTORY_READ_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM</A><BR>
-	</BODY>
-");
-
-} // [ + ] IF: Specified File Directory AND Files ARE NOT Specified File Directory AND Files
-
-} // [ + ] WHILE: Reading Specified File Directory AND Files
-
-/*
- ============================================================================================================
- + Close Directory :: P2P :: Clear-Text File :: Messenger Room :: Directory :: Files
- ============================================================================================================
-*/
-
-closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM);
-
 /*
  ============================================================================================================
  + IF: Internal Application :: Member :: Registered Member Account :: Is: Member Name :: Variable :: POST :: Erase
@@ -4192,7 +4132,8 @@ echo ("[ Done ]<BR><BR>");
 
 echo ("* Messenger: Creating Clear-Text Messenger File For: ./Member/$_Application_Module_Member_Messenger_P2P_Messenger_ClearText_File_LIST_MEMBER_USERNAME ... Wait.<BR>");
 
-$_Application_Module_Member_Messenger_GENERATE_FIND_CLEAR_TEXT_MESSENGER_MEMBER_LOCAL_FILE_NAME	= fopen("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Messenger/Clear-Text/$_Application_Module_Member_Messenger_P2P_Messenger_ClearText_File_LIST_MEMBER_USERNAME/Messenger.html", "a");
+$_Application_Module_Member_Messenger_GENERATE_FIND_CLEAR_TEXT_MESSENGER_MEMBER_LOCAL_FILE_NAME			= fopen("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Messenger/Clear-Text/$_Application_Module_Member_Messenger_P2P_Messenger_ClearText_File_LIST_MEMBER_USERNAME/Messenger.html", "a");
+$_Application_Module_Member_Messenger_GENERATE_FIND_CLEAR_TEXT_MESSENGER_MEMBER_LOCAL_FILE_LIST			= fopen("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Messenger/Clear-Text/$_Application_Module_Member_Messenger_P2P_Messenger_ClearText_File_LIST_MEMBER_USERNAME/Files.html", "a");
 
 /*
  ============================================================================================================
@@ -4210,6 +4151,15 @@ if (fwrite($_Application_Module_Member_Messenger_GENERATE_FIND_CLEAR_TEXT_MESSEN
 		<BODY ONLOAD=\"window.scrollTo(0,document.body.scrollHeight);\">
 	</BODY>
 ")) {
+
+fwrite($_Application_Module_Member_Messenger_GENERATE_FIND_CLEAR_TEXT_MESSENGER_MEMBER_LOCAL_FILE_LIST, "
+<HTML>
+	<HEAD>
+		<LINK REL=\"stylesheet\" HREF=\"../../../../../../../Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Style_Sheet/Style.css\" TYPE=\"text/css\">
+	</HEAD>
+
+	<BODY>
+");
 
 echo ("[ Done ]<BR><BR>");
 
@@ -4278,7 +4228,7 @@ echo ("
 														<I>Video</I><BR>
 															* AVCHD, AVI, FLV, MKV, MOV, MP4, SWF, WEBM, WMV<BR><BR>
 
-														<I>Maximum File Size Permitted: $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_MESSENGER</I><BR>
+														<I>Maximum File Size Permitted :: In Bytes :: $_GLOBAL_SYSTEM_UPLOAD_SIZE_PRIVATE_MEMBER_MESSENGER</I><BR>
 														<INPUT TYPE=\"hidden\" NAME=\"AMM_Messenger_P2P_Messenger_Room_File_Upload_Remote_UserName\" VALUE=\"$_Application_Module_Member_Messenger_P2P_Messenger_ClearText_File_LIST_MEMBER_USERNAME\" MAXLENGTH=\"100\"><BR>
 														<INPUT TYPE=\"file\" NAME=\"AMM_Messenger_P2P_Messenger_Room_File_Upload\" MAXLENGTH=\"100\"><BR>
 														<INPUT TYPE=\"submit\" VALUE=\"Upload File\">
@@ -4302,6 +4252,67 @@ echo ("
 														* This P2P :: Clear-Text File :: Messenger Room :: Secure-Hash-Algorithm, 256: $_Application_Module_Member_Messenger_MESSENGER_P2P_CLEARTEXT_FILE_ROOM_FILE_SIZE<BR>
 														<AUDIO CONTROLS AUTOPLAY HIDDEN=\"TRUE\" SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Audio/Notifications/Messenger/Notification_Messenger_Message_Send.$_GLOBAL_SYSTEM_SOUND_EXTENSION?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_AUDIO_RANDOM_STRING_GENERATION\" TYPE=\"audio/mp3\"></AUDIO>
 ");
+
+$_Application_Module_Member_Messenger_DIRECTORY_FIND_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM						= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Messenger/Clear-Text/$_Application_Module_Member_Messenger_P2P_Messenger_ClearText_File_LIST_MEMBER_USERNAME";
+$_Application_Module_Member_Messenger_DIRECTORY_OPEN_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM						= opendir($_Application_Module_Member_Messenger_DIRECTORY_FIND_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM);
+
+/*
+ =============================================================================================================
+ + Write: P2P :: Messenger :: Clear-Text File :: File List
+ =============================================================================================================
+*/
+
+$_Application_Module_Member_Messenger_OPEN_P2P_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST						= fopen("./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Messenger/Clear-Text/$_Application_Module_Member_Messenger_P2P_Messenger_ClearText_File_LIST_MEMBER_USERNAME/Files.html", "w");
+
+/*
+ ============================================================================================================
+ + WHILE: Reading Directory :: P2P :: Clear-Text File Messenger Room :: Write File List To File List File
+ ============================================================================================================
+*/
+
+while (false !== ($_Application_Module_Member_Messenger_DIRECTORY_READ_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM = readdir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM))) {
+
+/*
+ ============================================================================================================
+ + IF: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
+ ============================================================================================================
+*/
+
+if ($_Application_Module_Member_Messenger_DIRECTORY_READ_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM == "." || $_Application_Module_Member_Messenger_DIRECTORY_READ_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM == ".." || $_Application_Module_Member_Messenger_DIRECTORY_READ_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM == "index.php" || $_Application_Module_Member_Messenger_DIRECTORY_READ_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM == "Files.html" || $_Application_Module_Member_Messenger_DIRECTORY_READ_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM == "Messenger.html") {
+/**
+ * Do Nothing
+**/
+} else { // [ + ] ELSE: STOP :: Exploits: Local-File-Inclusion AND Remote-File-Inclusion
+
+/*
+ ============================================================================================================
+ + IF: Write Message To :: P2P :: Clear-Text File Messenger Room Name :: File List
+ ============================================================================================================
+*/
+
+fwrite($_Application_Module_Member_Messenger_OPEN_P2P_VISIBLE_CLEAR_TEXT_MESSENGER_FILE_LIST, "
+	<HEAD>
+		<TITLE>$_GLOBAL_SYSTEM_SITE_TITLE</TITLE>
+		<LINK REL=\"stylesheet\" HREF=\"../../../../../../../Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_Application_Module_Member_Messenger_P2P_Messenger_ClearText_File_LIST_MEMBER_SETTINGS_THEME_DIRECTORY/Style_Sheet/Style.css\" TYPE=\"text/css\">
+	</HEAD>
+
+	<BODY>
+		*&nbsp;<A HREF=\"./$_Application_Module_Member_Messenger_DIRECTORY_READ_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM\" TITLE=\":: Open This File ::\" TARGET=\"_NEW\">./$_Application_Module_Member_Messenger_DIRECTORY_READ_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM</A><BR>
+	</BODY>
+");
+
+} // [ + ] IF: Specified File Directory AND Files ARE NOT Specified File Directory AND Files
+
+} // [ + ] WHILE: Reading Specified File Directory AND Files
+
+/*
+ ============================================================================================================
+ + Close Directory :: P2P :: Clear-Text File :: Messenger Room :: Directory :: Files
+ ============================================================================================================
+*/
+
+closedir($_Application_Module_Member_Messenger_DIRECTORY_OPEN_P2P_CLEAR_TEXT_FILE_MESSENGER_ROOM);
+
 
 /*
  =============================================================================================================
