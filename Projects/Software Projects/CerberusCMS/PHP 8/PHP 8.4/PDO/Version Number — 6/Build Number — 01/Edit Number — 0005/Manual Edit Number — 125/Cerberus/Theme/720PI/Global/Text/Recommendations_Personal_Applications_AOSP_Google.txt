@@ -1,0 +1,69 @@
+- AUDIO PROCESSING
+* Audacity
+* SoundCloud
+* Internet Radio
+* FM / AM Radio
+
+- DOCUMENT PROCESSING
+* Adobe PDF Reader
+* 
+
+- IMAGE PROCESSING
+* Facial Recognition
+* Human Identity Recognition
+* Image Recognition
+* License Plate Scanner
+
+- VIDEO PROCESSING
+* VLC Media Player
+* XBMC / KODI Media Center
+* CapCut
+* YouTube
+
+- SOCIAL MEDIA
+* FaceBook
+* SnapChat
+* InstaGram
+* Twitter
+* Reddit
+* Tinder
+
+- COMMUNICATIONS
+* WhatsApp
+* TeleGram
+* Discord
+* WeChat
+* 
+
+- HOUSING
+* AirBNB
+* Hostelworld
+* Worldpackers
+* CouchSurfing
+
+- SECURITY
+* OpenVPN
+* DNSCrypt / DNSCrypt-Proxy
+* AdAway ( Root / SuperUser )
+* Network Monitor ( Root / SuperUser )
+
+- TRAVEL AND BACKPACKING
+
+- FINANCIAL
+* American Express / VISA BlueBird
+
+- NEWS / INFORMATION GATHERING
+* Google News
+* SlashDOT
+* Local News Applications / Websites
+* International News Applications / Websites
+
+- SAFETY AND AREA EVALUATION
+* AirNow
+* 
+
+- REPOSITORIES
+* F-Droid
+
+- DISCOVERABILITY
+Discoverability
