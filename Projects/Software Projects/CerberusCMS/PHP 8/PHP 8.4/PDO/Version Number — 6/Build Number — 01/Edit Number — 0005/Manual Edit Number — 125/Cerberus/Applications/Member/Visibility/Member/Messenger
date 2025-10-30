@@ -1777,6 +1777,16 @@ echo ("
 
 echo ("
 
+													<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Messenger&amp;DeleteMessengerRoom&#61;$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"POST\">
+														* <I>Ban Account</I><BR>
+														<I>Administration Accounts: Type The UserName - In Order To Ban The Account</I>:<BR>
+														[ Maximum Length: 100 Alpha-Numeric Characters ]<BR>
+														<INPUT TYPE=\"text\" NAME=\"AMM_Messenger_Ban_Account_UserName\" VALUE=\"UserName\" MAXLENGTH=\"50\"><BR>
+														<INPUT TYPE=\"submit\" VALUE=\"Ban Account\">
+													</FORM><BR><BR>
+
+echo ("
+
 													<FORM ACTION=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Messenger&amp;EraseMessengerRoom&#61;$_Application_Module_Member_Messenger_SQL_LIST_MESSENGER_CLEAR_TEXT_FILE_MESSENGER_ROOM_NAME&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" METHOD=\"POST\">
 														* <I>Erase This Visible Clear-Text File Messenger Room</I><BR>
 														<I>Maintenance Password</I>:<BR>
