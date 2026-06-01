@@ -135,7 +135,7 @@ if ($_Application_Module_Member_Submit_News_DB_Query_INSERT_SUBMISSION) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Submit_News_DB_Query_INSERT_SUBMISSION->free_result();
+$_Application_Module_Member_Submit_News_DB_Query_INSERT_SUBMISSION->closeCursor();
 
 } // [ + ] IF: News Submission Entry Form Variables Have Executed
 ?>

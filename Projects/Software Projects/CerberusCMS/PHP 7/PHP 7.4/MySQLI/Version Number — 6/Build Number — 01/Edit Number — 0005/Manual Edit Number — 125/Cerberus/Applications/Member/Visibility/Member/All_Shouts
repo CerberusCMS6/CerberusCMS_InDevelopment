@@ -116,7 +116,7 @@ $_Application_Module_Member_All_Shouts_MAXIMUM_UPLOAD_LIMIT_FILE								= $_GLOB
 */
 
 $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_shout_messages ORDER BY id DESC LIMIT 100");
-$_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_NUMBER_OF_ROWS					= $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES->num_rows;
+$_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_NUMBER_OF_ROWS					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_shout_messages ORDER BY id DESC LIMIT 100")->fetchColumn();
 
 /*
  ============================================================================================================
@@ -127,7 +127,7 @@ $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES
 */
 
 $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_IMAGE_SINGLE					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_shout_messages WHERE message_image IS NOT NULL ORDER BY id DESC LIMIT 100");
-$_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_IMAGE_SINGLE_NUMBER_OF_ROWS 			= $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_VIDEO_PRERECORDED_SINGLE->num_rows;
+$_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_IMAGE_SINGLE_NUMBER_OF_ROWS 			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_shout_messages WHERE message_image IS NOT NULL ORDER BY id DESC LIMIT 100")->fetchColumn();
 
 /*
  ============================================================================================================
@@ -138,7 +138,7 @@ $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES
 */
 
 $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_IMAGE_MULTIPLE					= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_shout_messages WHERE message_image_multiple='1' ORDER BY id DESC LIMIT 100");
-$_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_IMAGE_MULTIPLE_NUMBER_OF_ROWS 			= $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_VIDEO_PRERECORDED_SINGLE->num_rows;
+$_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_IMAGE_MULTIPLE_NUMBER_OF_ROWS 			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_shout_messages WHERE message_image_multiple='1' ORDER BY id DESC LIMIT 100")->fetchColumn();
 
 /*
  ============================================================================================================
@@ -149,7 +149,7 @@ $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES
 */
 
 $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_VIDEO_PRERECORDED_SINGLE			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_shout_messages WHERE message_video_prerecorded IS NOT NULL ORDER BY id DESC LIMIT 100");
-$_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_VIDEO_PRERECORDED_SINGLE_NUMBER_OF_ROWS 	= $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_VIDEO_PRERECORDED_SINGLE->num_rows;
+$_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_VIDEO_PRERECORDED_SINGLE_NUMBER_OF_ROWS 	= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_shout_messages WHERE message_video_prerecorded IS NOT NULL ORDER BY id DESC LIMIT 100")->fetchColumn();
 
 /*
  ============================================================================================================
@@ -160,7 +160,7 @@ $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES
 */
 
 $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_VIDEO_PRERECORDED_MULTIPLE			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_shout_messages WHERE message_video_prerecorded_multiple='1' ORDER BY id DESC LIMIT 100");
-$_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_VIDEO_PRERECORDED_MULTIPLE_NUMBER_OF_ROWS 	= $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_VIDEO_PRERECORDED_SINGLE->num_rows;
+$_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_VIDEO_PRERECORDED_MULTIPLE_NUMBER_OF_ROWS 	= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_shout_messages WHERE message_video_prerecorded_multiple='1' ORDER BY id DESC LIMIT 100")->fetchColumn();
 
 /*
  ============================================================================================================
@@ -317,7 +317,7 @@ if ($_GET["Display"] == "Text") {
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_Fetch_Array = $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_Fetch_Array = $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES->fetch()) {
 
 /*
  ============================================================================================================
@@ -573,7 +573,7 @@ if ($_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA->free_result();
+// [ C ] $_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA->closeCursor();
 
 /*
  ============================================================================================================
@@ -608,7 +608,7 @@ if ($_GET["Display"] == "Image_Single") {
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_Fetch_Array = $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_Fetch_Array = $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES->fetch()) {
 
 /*
  ============================================================================================================
@@ -971,7 +971,7 @@ if ($_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA->free_result();
+// [ C ] $_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA->closeCursor();
 
 /*
  ============================================================================================================
@@ -1006,7 +1006,7 @@ if ($_GET["Display"] == "Video_PreRecorded_Single") {
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_Fetch_Array = $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_Fetch_Array = $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES->fetch()) {
 
 /*
  ============================================================================================================
@@ -1348,7 +1348,7 @@ if ($_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA->free_result();
+// [ C ] $_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA->closeCursor();
 
 /*
  ============================================================================================================
@@ -1383,7 +1383,7 @@ if ($_GET["Display"] == "Video_Live") {
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_Fetch_Array = $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES_Fetch_Array = $_Application_Module_Member_All_Shouts_DB_Query_SELECT_ALL_SHOUT_MESSAGE_ENTRIES->fetch()) {
 
 /*
  ============================================================================================================
@@ -1658,7 +1658,7 @@ if ($_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA->free_result();
+// [ C ] $_Application_Module_Member_All_Shouts_DB_Query_INSERT_SHOUT_MESSAGE_DATA->closeCursor();
 
 /*
  ============================================================================================================
@@ -1696,7 +1696,7 @@ $_Application_Module_Member_All_Shouts_OPEN_DIRECTORY_VIDEO_LIVE				= opendir($_
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_All_Shouts_READ_DIRECTORY_VIDEO_LIVE = readdir($_Application_Module_Member_All_Shouts_OPEN_DIRECTORY_VIDEO_LIVE))) {
+while (false !== ($_Application_Module_Member_All_Shouts_READ_DIRECTORY_VIDEO_LIVE = readdir($_Application_Module_Member_All_Shouts_OPEN_DIRECTORY_VIDEO_LIVE))) {
 
 $_Application_Module_Member_All_Shouts_READ_DIRECTORY_VIDEO_LIVE_FILE_DETAILS			= date("Y-m-d", fileatime("./Temporary/Shouts/Video/Live/$_Application_Module_Member_All_Shouts_READ_DIRECTORY_VIDEO_LIVE"));
 

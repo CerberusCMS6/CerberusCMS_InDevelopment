@@ -93,7 +93,7 @@ echo ("
 */
 
 $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_web_pages ORDER BY id DESC");
-$_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_NUMBER_OF_ROWS	= $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES->num_rows;
+$_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_NUMBER_OF_ROWS	= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_web_pages ORDER BY id DESC")->fetchColumn();
 
 
 /*
@@ -102,7 +102,7 @@ $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_NUMBER_OF
  ============================================================================================================
 */
 
-while ($_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array = $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array = $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES->fetch()) {
 
 $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_ID						= $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array['id'];
 $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_AUTHOR						= $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES_Fetch_Array['web_page_author'];
@@ -173,5 +173,5 @@ $_Application_Module_Pages_LIST_CUSTOM_WEB_PAGE_DATA
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES->free_result();
+$_Application_Module_Pages_DB_Query_SELECT_ALL_CUSTOM_WEB_PAGE_ENTRIES->closeCursor();
 ?>

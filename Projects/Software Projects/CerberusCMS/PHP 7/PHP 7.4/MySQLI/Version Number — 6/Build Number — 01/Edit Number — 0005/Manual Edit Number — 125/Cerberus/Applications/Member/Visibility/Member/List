@@ -124,7 +124,7 @@ $_Application_Module_Member_List_OPEN_DIRECTORY_AVATAR				= opendir($_Applicatio
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_List_READ_DIRECTORY_AVATAR = readdir($_Application_Module_Member_List_OPEN_DIRECTORY_AVATAR))) {
+while (false !== ($_Application_Module_Member_List_READ_DIRECTORY_AVATAR = readdir($_Application_Module_Member_List_OPEN_DIRECTORY_AVATAR))) {
 
 /*
  ============================================================================================================
@@ -215,7 +215,7 @@ $_Application_Module_Member_List_OPEN_DIRECTORY_ANIMOJI				= opendir($_Applicati
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_List_READ_DIRECTORY_ANIMOJI = readdir($_Application_Module_Member_List_OPEN_DIRECTORY_ANIMOJI))) {
+while (false !== ($_Application_Module_Member_List_READ_DIRECTORY_ANIMOJI = readdir($_Application_Module_Member_List_OPEN_DIRECTORY_ANIMOJI))) {
 
 /*
  ============================================================================================================
@@ -266,7 +266,7 @@ $_Application_Module_Member_List_OPEN_DIRECTORY_SMILEYS					= opendir($_Applicat
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_List_READ_DIRECTORY_SMILEYS = readdir($_Application_Module_Member_List_OPEN_DIRECTORY_SMILEYS))) {
+while (false !== ($_Application_Module_Member_List_READ_DIRECTORY_SMILEYS = readdir($_Application_Module_Member_List_OPEN_DIRECTORY_SMILEYS))) {
 
 /*
  ============================================================================================================
@@ -325,7 +325,7 @@ $_Application_Module_Member_List_OPEN_DIRECTORY_ACCOUNT_DATA				= opendir($_Appl
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_List_READ_DIRECTORY_ACCOUNT_DATA = readdir($_Application_Module_Member_List_OPEN_DIRECTORY_ACCOUNT_DATA))) {
+while (false !== ($_Application_Module_Member_List_READ_DIRECTORY_ACCOUNT_DATA = readdir($_Application_Module_Member_List_OPEN_DIRECTORY_ACCOUNT_DATA))) {
 
 /*
  ============================================================================================================
@@ -379,7 +379,7 @@ $_Application_Module_Member_List_DB_Query_SELECT_RANKS				= $_GLOBAL_DATABASE_MA
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_List_DB_Query_SELECT_RANKS_Fetch_Array = $_Application_Module_Member_List_DB_Query_SELECT_RANKS->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_List_DB_Query_SELECT_RANKS_Fetch_Array = $_Application_Module_Member_List_DB_Query_SELECT_RANKS->fetch()) {
 
 $_Application_Module_Ranks_LIST_RANK_GENDER_MALE_0					= $_Application_Module_Member_List_DB_Query_SELECT_RANKS_Fetch_Array['rank_gender_male_0'];
 $_Application_Module_Ranks_LIST_RANK_GENDER_MALE_1					= $_Application_Module_Member_List_DB_Query_SELECT_RANKS_Fetch_Array['rank_gender_male_1'];
@@ -426,7 +426,7 @@ System Rank #10, Male: $_Application_Module_Ranks_LIST_RANK_GENDER_MALE_4<BR><BR
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_List_DB_Query_SELECT_RANKS->free_result();
+$_Application_Module_Member_List_DB_Query_SELECT_RANKS->closeCursor();
 
 } // [ + ] IF: Internal Application: Display :: All System Ranks Is: Activated
 

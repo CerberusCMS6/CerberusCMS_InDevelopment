@@ -212,7 +212,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_144PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_144PI))) {
+while (false !== ($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_144PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_144PI))) {
 
 /*
  ============================================================================================================
@@ -280,7 +280,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_240PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_240PI))) {
+while (false !== ($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_240PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_240PI))) {
 
 /*
  ============================================================================================================
@@ -348,7 +348,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_340PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_340PI))) {
+while (false !== ($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_340PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_340PI))) {
 
 /*
  ============================================================================================================
@@ -416,7 +416,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_480PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_480PI))) {
+while (false !== ($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_480PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_480PI))) {
 
 /*
  ============================================================================================================
@@ -484,7 +484,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_520PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_520PI))) {
+while (false !== ($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_520PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_520PI))) {
 
 /*
  ============================================================================================================
@@ -552,7 +552,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_640PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_640PI))) {
+while (false !== ($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_640PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_640PI))) {
 
 /*
  ============================================================================================================
@@ -620,7 +620,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_720PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_720PI))) {
+while (false !== ($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_720PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_720PI))) {
 
 /*
  ============================================================================================================
@@ -688,7 +688,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_1080PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_1080PI))) {
+while (false !== ($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_1080PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_1080PI))) {
 
 /*
  ============================================================================================================
@@ -756,7 +756,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_2040PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_2040PI))) {
+while (false !== ($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_2040PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_2040PI))) {
 
 /*
  ============================================================================================================
@@ -824,7 +824,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_2160PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_2160PI))) {
+while (false !== ($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_2160PI = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_2160PI))) {
 
 /*
  ============================================================================================================
@@ -892,7 +892,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_4K = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_4K))) {
+while (false !== ($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_4K = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_4K))) {
 
 /*
  ============================================================================================================
@@ -960,7 +960,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_8K = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_8K))) {
+while (false !== ($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_8K = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_8K))) {
 
 /*
  ============================================================================================================
@@ -1028,7 +1028,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_16K = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_16K))) {
+while (false !== ($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_16K = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_16K))) {
 
 /*
  ============================================================================================================
@@ -1096,7 +1096,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_32K = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_32K))) {
+while (false !== ($_Application_Module_Member_Theme_READ_DIRECTORY_THEME_32K = readdir($_Application_Module_Member_Theme_OPEN_DIRECTORY_THEME_32K))) {
 
 /*
  ============================================================================================================

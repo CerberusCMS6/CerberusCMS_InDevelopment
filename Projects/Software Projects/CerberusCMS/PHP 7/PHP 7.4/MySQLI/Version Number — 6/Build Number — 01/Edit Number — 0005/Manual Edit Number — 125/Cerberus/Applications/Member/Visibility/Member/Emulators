@@ -206,7 +206,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Emulators_READ_DIRECTORY_HTML5_CANVAS = readdir($_Application_Module_Member_Emulators_OPEN_DIRECTORY_HTML5_CANVAS))) {
+while (false !== ($_Application_Module_Member_Emulators_READ_DIRECTORY_HTML5_CANVAS = readdir($_Application_Module_Member_Emulators_OPEN_DIRECTORY_HTML5_CANVAS))) {
 
 /*
  ============================================================================================================
@@ -264,7 +264,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Emulators_READ_DIRECTORY_HTML5_UNITY3D = readdir($_Application_Module_Member_Emulators_OPEN_DIRECTORY_HTML5_UNITY3D))) {
+while (false !== ($_Application_Module_Member_Emulators_READ_DIRECTORY_HTML5_UNITY3D = readdir($_Application_Module_Member_Emulators_OPEN_DIRECTORY_HTML5_UNITY3D))) {
 
 /*
  ============================================================================================================

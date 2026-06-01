@@ -280,7 +280,7 @@ echo ("
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Upload_DB_Query_SELECT_CATEGORIES_Fetch_Array = $_Application_Module_Member_Upload_DB_Query_SELECT_CATEGORIES->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Upload_DB_Query_SELECT_CATEGORIES_Fetch_Array = $_Application_Module_Member_Upload_DB_Query_SELECT_CATEGORIES->fetch()) {
 
 $_Application_Module_Member_Upload_LIST_FILE_CATEGORY_ID			= $_Application_Module_Member_Upload_DB_Query_SELECT_CATEGORIES_Fetch_Array['id'];
 $_Application_Module_Member_Upload_LIST_FILE_CATEGORY_TITLE			= $_Application_Module_Member_Upload_DB_Query_SELECT_CATEGORIES_Fetch_Array['file_category_title'];
@@ -295,7 +295,7 @@ $_Application_Module_Member_Upload_LIST_FILE_CATEGORY_TITLE			= $_Application_Mo
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Upload_DB_Query_SELECT_CATEGORIES->free_result();
+$_Application_Module_Member_Upload_DB_Query_SELECT_CATEGORIES->closeCursor();
 
 echo ("
 													</SELECT><BR><BR>
@@ -876,7 +876,7 @@ if ($_Application_Module_Member_Upload_DB_Query_UPDATE_MEMBER) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Upload_DB_Query_UPDATE_MEMBER->free_result();
+$_Application_Module_Member_Upload_DB_Query_UPDATE_MEMBER->closeCursor();
 
 /*
  ============================================================================================================

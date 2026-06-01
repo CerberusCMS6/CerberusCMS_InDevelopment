@@ -585,7 +585,7 @@ $_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_AU
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_AUDIO_SELECTION = readdir($_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_AUDIO_SELECTION))) {
+while (false !== ($_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_AUDIO_SELECTION = readdir($_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_AUDIO_SELECTION))) {
 
 /*
  ============================================================================================================
@@ -773,7 +773,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_AUDIO = readdir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_AUDIO))) {
+while (false !== ($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_AUDIO = readdir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_AUDIO))) {
 
 /*
  ============================================================================================================
@@ -826,7 +826,7 @@ echo ("File System: Directory Found: $_Application_Module_Member_Account_Data_PO
 $_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT		= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Audio/Gallery/$_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_AUDIO_SELECTION";
 $_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT		= opendir($_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT);
 
-while (($_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT = readdir($_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT))) {
+while (false !== ($_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT = readdir($_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_AUDIO_ACT))) {
 
 /*
  ============================================================================================================
@@ -948,7 +948,7 @@ $_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_DO
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_DOCUMENT_SELECTION = readdir($_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_DOCUMENT_SELECTION))) {
+while (false !== ($_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_DOCUMENT_SELECTION = readdir($_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_DOCUMENT_SELECTION))) {
 
 /*
  ============================================================================================================
@@ -1137,7 +1137,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_DOCUMENT = readdir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_DOCUMENT))) {
+while (false !== ($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_DOCUMENT = readdir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_DOCUMENT))) {
 
 /*
  ============================================================================================================
@@ -1190,7 +1190,7 @@ echo ("File System: Directory Found: $_Application_Module_Member_Account_Data_PO
 $_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT		= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Document/Gallery/$_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_DOCUMENT_SELECTION";
 $_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT		= opendir($_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT);
 
-while (($_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT = readdir($_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT))) {
+while (false !== ($_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT = readdir($_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_DOCUMENT_ACT))) {
 
 /*
  ============================================================================================================
@@ -1281,7 +1281,7 @@ echo ("
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_IMAGE_PROFILE = readdir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_IMAGE_PROFILE)) {
+while (false !== ($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_IMAGE_PROFILE = readdir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_IMAGE_PROFILE))) {
 
 /*
  ============================================================================================================
@@ -1507,7 +1507,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Account_Data_UPLOAD_READ_DIRECTORY_MEMBER_GALLERY_IMAGE = readdir($_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_IMAGE))) {
+while (false !== ($_Application_Module_Member_Account_Data_UPLOAD_READ_DIRECTORY_MEMBER_GALLERY_IMAGE = readdir($_Application_Module_Member_Account_Data_UPLOAD_OPEN_DIRECTORY_MEMBER_GALLERY_IMAGE))) {
 
 /*
  ============================================================================================================
@@ -1696,7 +1696,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_IMAGE_SELECTION = readdir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_IMAGE_SELECTION))) {
+while (false !== ($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_IMAGE_SELECTION = readdir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_IMAGE_SELECTION))) {
 
 /*
  ============================================================================================================
@@ -1749,7 +1749,7 @@ echo ("File System: Directory Found: $_Application_Module_Member_Account_Data_PO
 $_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT		= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Image/Gallery/$_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_IMAGE_SELECTION";
 $_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT		= opendir($_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT);
 
-while (($_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT = readdir($_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT))) {
+while (false !== ($_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT = readdir($_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_IMAGE_ACT))) {
 
 /*
  ============================================================================================================
@@ -1840,7 +1840,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION = readdir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION))) {
+while (false !== ($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION = readdir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION))) {
 
 /*
  ============================================================================================================
@@ -2068,7 +2068,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_VIDEO_SELECTION = readdir($_Application_Module_Member_Account_Data_UPLOAD_OPEN_MEMBER_DIRECTORY_GALLERY_VIDEO_SELECTION))) {
+while (false !== ($_Application_Module_Member_Account_Data_UPLOAD_READ_MEMBER_DIRECTORY_GALLERY_VIDEO_SELECTION = readdir($_Application_Module_Member_Account_Data_UPLOAD_OPEN_MEMBER_DIRECTORY_GALLERY_VIDEO_SELECTION))) {
 
 /*
  ============================================================================================================
@@ -2257,7 +2257,7 @@ echo ("
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_VIDEO_SELECTION = readdir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_VIDEO_SELECTION))) {
+while (false !== ($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLERY_VIDEO_SELECTION = readdir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_VIDEO_SELECTION))) {
 
 /*
  ============================================================================================================
@@ -2277,19 +2277,19 @@ if ($_Application_Module_Member_Account_Data_DELETE_READ_DIRECTORY_MEMBER_GALLER
 
 } // [ + ] WHILE: Reading Specified Member Account :: Directory :: Video Directory
 
+echo ("
+													</SELECT><BR>
+												<INPUT TYPE=\"submit\" VALUE=\"Delete Gallery\">
+											</FORM><BR>
+");
+
 /*
  ============================================================================================================
  + Close :: Directory :: Registered Member Account :: Gallery :: Video :: Selection
  ============================================================================================================
 */
 
-closedir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION);
-
-echo ("
-													</SELECT><BR>
-												<INPUT TYPE=\"submit\" VALUE=\"Delete Gallery\">
-											</FORM><BR>
-");
+// [ C ] closedir($_Application_Module_Member_Account_Data_DELETE_OPEN_DIRECTORY_MEMBER_GALLERY_VIDEO_PROFILE_IMAGE_SELECTION);
 
 /*
  ============================================================================================================
@@ -2310,7 +2310,7 @@ echo ("File System: Directory Found: $_Application_Module_Member_Account_Data_PO
 $_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT		= "./Member/$_GLOBAL_COOKIE_MEMBER_USERNAME/Files/Video/Gallery/$_Application_Module_Member_Account_Data_POST_DELETE_DIRECTORY_GALLERY_VIDEO_SELECTION";
 $_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT		= opendir($_Application_Module_Member_Account_Data_FIND_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT);
 
-while (($_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT = readdir($_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT))) {
+while (false !== ($_Application_Module_Member_Account_Data_READ_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT = readdir($_Application_Module_Member_Account_Data_OPEN_DELETE_DIRECTORY_MEMBER_GALLERY_VIDEO_ACT))) {
 
 /*
  ============================================================================================================

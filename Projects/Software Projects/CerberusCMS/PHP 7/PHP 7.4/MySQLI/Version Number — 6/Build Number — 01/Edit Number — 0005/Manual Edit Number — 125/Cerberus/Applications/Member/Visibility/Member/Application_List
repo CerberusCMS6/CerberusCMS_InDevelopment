@@ -249,7 +249,7 @@ if ($_GET["Display"] == "ApplicationIcons") {
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Application_List_READ_DIRECTORY_APPLICATIONS_MEMBER = readdir($_Application_Module_Member_Application_List_OPEN_DIRECTORY_APPLICATIONS_MEMBER))) {
+while (false !== ($_Application_Module_Member_Application_List_READ_DIRECTORY_APPLICATIONS_MEMBER = readdir($_Application_Module_Member_Application_List_OPEN_DIRECTORY_APPLICATIONS_MEMBER))) {
 
 /*
  ============================================================================================================
@@ -330,7 +330,7 @@ echo ("
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Application_List_DB_Query_List_Applications_Background_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Application_List_DB_Query_List_Applications_Background_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background->fetch()) {
 
 $_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_ID					= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background_Fetch_Array['id'];
 $_Application_Module_Member_Application_List_LIST_APPLICATION_BACKGROUND_FILE_NAME				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background_Fetch_Array['application_file_name'];
@@ -410,7 +410,7 @@ echo ("
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services->fetch()) {
 
 $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_ID					= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services_Fetch_Array['id'];
 $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_SERVICES_FILE_NAME				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services_Fetch_Array['application_file_name'];
@@ -491,7 +491,7 @@ echo ("
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root->fetch()) {
 
 $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_ID					= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Fetch_Array['id'];
 $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ROOT_FILE_NAME				= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Fetch_Array['application_file_name'];
@@ -571,7 +571,7 @@ echo ("
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration->fetch()) {
 
 $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_ID						= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array['id'];
 $_Application_Module_Member_Application_List_LIST_APPLICATION_ADMINISTRATION_FILE_NAME					= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Fetch_Array['application_file_name'];
@@ -657,7 +657,7 @@ echo ("
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member->fetch()) {
 
 $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_ID						= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array['id'];
 $_Application_Module_Member_Application_List_LIST_APPLICATION_MEMBER_FILE_NAME					= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member_Fetch_Array['application_file_name'];
@@ -735,7 +735,7 @@ echo ("
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel->fetch()) {
 
 $_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_ID						= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel_Fetch_Array['id'];
 $_Application_Module_Member_Application_List_LIST_APPLICATION_PANEL_FILE_NAME					= $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel_Fetch_Array['application_panel_file_name'];
@@ -805,7 +805,7 @@ echo ("
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Application_List_DB_Query_List_Kernel_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Kernel->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Application_List_DB_Query_List_Kernel_Fetch_Array = $_Application_Module_Member_Application_List_DB_Query_List_Kernel->fetch()) {
 
 $_Application_Module_Member_Application_List_LIST_KERNEL_ENTRY_ID					= $_Application_Module_Member_Application_List_DB_Query_List_Kernel_Fetch_Array['id'];
 $_Application_Module_Member_Application_List_LIST_KERNEL_ENTRY_FILE_DATE_INSTALLATION			= $_Application_Module_Member_Application_List_DB_Query_List_Kernel_Fetch_Array['kernel_file_date_installation'];
@@ -932,7 +932,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background->free_result();
+// [ C ] $_Application_Module_Member_Application_List_DB_Query_List_Applications_Background->closeCursor();
 
 /*
  ============================================================================================================
@@ -940,7 +940,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services->free_result();
+// [ C ] $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root_Services->closeCursor();
 
 /*
  ============================================================================================================
@@ -948,7 +948,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root->free_result();
+// [ C ] $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration_Root->closeCursor();
 
 /*
  ============================================================================================================
@@ -956,7 +956,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration->free_result();
+// [ C ] $_Application_Module_Member_Application_List_DB_Query_List_Applications_Administration->closeCursor();
 
 /*
  ============================================================================================================
@@ -964,7 +964,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member->free_result();
+// [ C ] $_Application_Module_Member_Application_List_DB_Query_List_Applications_Member->closeCursor();
 
 /*
  ============================================================================================================
@@ -972,5 +972,5 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel->free_result();
+// [ C ] $_Application_Module_Member_Application_List_DB_Query_List_Applications_Panel->closeCursor();
 ?>

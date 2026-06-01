@@ -58,7 +58,7 @@
 */
 
 $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIES			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_news ORDER BY id DESC LIMIT 1");
-$_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIES_NUMBER_OF_ROWS	= $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIES->num_rows;
+$_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIES_NUMBER_OF_ROWS	= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_news ORDER BY id DESC LIMIT 1")->fetchColumn();
 
 /*
  ============================================================================================================
@@ -78,16 +78,16 @@ if ($_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIES_NUMBER_OF
  ============================================================================================================
 */
 
-while ($_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIESL = $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIES->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIES_Fetch_Array = $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIES->fetch()) {
 
-$_Application_Module_News_LIST_NEWS_ARTICLE_ENTRY_ID				= $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIESL['id'];
-$_Application_Module_News_LIST_NEWS_ARTICLE_ENTRY_AUTHOR			= $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIESL['news_author'];
-$_Application_Module_News_LIST_NEWS_ARTICLE_ENTRY_AVATAR			= $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIESL['news_avatar'];
-$_Application_Module_News_LIST_NEWS_ARTICLE_ENTRY_DATA				= $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIESL['news_data'];
-$_Application_Module_News_LIST_NEWS_ARTICLE_ENTRY_MOOD				= $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIESL['news_mood'];
-$_Application_Module_News_LIST_NEWS_ARTICLE_ENTRY_MUSIC				= $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIESL['news_music'];
-$_Application_Module_News_LIST_NEWS_ARTICLE_ENTRY_TIME				= $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIESL['news_time'];
-$_Application_Module_News_LIST_NEWS_ARTICLE_ENTRY_TITLE				= $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIESL['news_title'];
+$_Application_Module_News_LIST_NEWS_ARTICLE_ENTRY_ID				= $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIES_Fetch_Array['id'];
+$_Application_Module_News_LIST_NEWS_ARTICLE_ENTRY_AUTHOR			= $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIES_Fetch_Array['news_author'];
+$_Application_Module_News_LIST_NEWS_ARTICLE_ENTRY_AVATAR			= $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIES_Fetch_Array['news_avatar'];
+$_Application_Module_News_LIST_NEWS_ARTICLE_ENTRY_DATA				= $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIES_Fetch_Array['news_data'];
+$_Application_Module_News_LIST_NEWS_ARTICLE_ENTRY_MOOD				= $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIES_Fetch_Array['news_mood'];
+$_Application_Module_News_LIST_NEWS_ARTICLE_ENTRY_MUSIC				= $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIES_Fetch_Array['news_music'];
+$_Application_Module_News_LIST_NEWS_ARTICLE_ENTRY_TIME				= $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIES_Fetch_Array['news_time'];
+$_Application_Module_News_LIST_NEWS_ARTICLE_ENTRY_TITLE				= $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIES_Fetch_Array['news_title'];
 
 /*
  ============================================================================================================
@@ -117,5 +117,5 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIES->free_result();
+$_Application_Module_News_DB_Query_SELECT_ALL_NEWS_ARTICLE_ENTRIES->closeCursor();
 ?>

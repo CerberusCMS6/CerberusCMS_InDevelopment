@@ -79,7 +79,7 @@ $_Application_Module_Member_Electronic_Mail_DB_Query_SELECT_MEMBERS					= $_GLOB
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Electronic_Mail_DB_Query_SELECT_MEMBERS_Fetch_Array	= $_Application_Module_Member_Electronic_Mail_DB_Query_SELECT_MEMBERS->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Electronic_Mail_DB_Query_SELECT_MEMBERS_Fetch_Array	= $_Application_Module_Member_Electronic_Mail_DB_Query_SELECT_MEMBERS->fetch()) {
 
 $_Application_Module_Member_Electronic_Mail_LIST_MEMBER_ID						= $_Application_Module_Member_Electronic_Mail_DB_Query_SELECT_MEMBERS_Fetch_Array['id'];
 $_Application_Module_Member_Electronic_Mail_LIST_MEMBER_ELECTRONIC_MAIL_ADDRESS				= $_Application_Module_Member_Electronic_Mail_DB_Query_SELECT_MEMBERS_Fetch_Array['member_electronic_mail_address'];

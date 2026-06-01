@@ -95,14 +95,14 @@ $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_TOPIC_MESSAGES				=
  ============================================================================================================
 */
 
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS				= $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM->num_rows;
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPICS			= $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_TOPICS->num_rows;
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPIC_MESSAGES		= $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_TOPIC_MESSAGES->num_rows;
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_FILES_NUMBER_OF_ROWS				= $_Application_Module_Member_System_DB_Query_SELECT_ALL_FILES->num_rows;
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_COMMENTS_NUMBER_OF_ROWS				= $_Application_Module_Member_System_DB_Query_SELECT_ALL_COMMENTS->num_rows;
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS				= $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS->num_rows;
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS_ACTIVE			= $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_ACTIVE->num_rows;
-$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS_INACTIVE			= $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_INACTIVE->num_rows;
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_COMMENTS_NUMBER_OF_ROWS				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_comments")->fetchColumn();
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FILES_NUMBER_OF_ROWS				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_files")->fetchColumn();
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_forum_forum")->fetchColumn();
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPICS			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_forum_topic")->fetchColumn();
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPIC_MESSAGES		= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_forum_topic_message")->fetchColumn();
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members ORDER BY id ASC")->fetchColumn();
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS_ACTIVE			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_status_account_active='1' ORDER BY id ASC")->fetchColumn();
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS_INACTIVE			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_status_account_active='0' ORDER BY id ASC")->fetchColumn();
 
 /*
  ============================================================================================================
@@ -110,7 +110,7 @@ $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS_NUMBER_OF_ROWS_IN
  ============================================================================================================
 */
 
-$_Application_Module_Member_System_DB_Query_FETCH_ARRAY_STATISTICS					= $_Application_Module_Member_System_DB_Query_SELECT_ALL_STATISTICS->fetch_array(MYSQLI_BOTH);
+$_Application_Module_Member_System_DB_Query_FETCH_ARRAY_STATISTICS					= $_Application_Module_Member_System_DB_Query_SELECT_ALL_STATISTICS->fetch();
 
 $_Application_Module_Member_System_LIST_TOTAL_NUMBER_OF_DOCUMENT_EXECUTIONS_NON_UNIQUE			= $_Application_Module_Member_System_DB_Query_FETCH_ARRAY_STATISTICS['statistics_total_number_of_document_executions_non_unique'];
 $_Application_Module_Member_System_LIST_TOTAL_NUMBER_OF_DOCUMENT_EXECUTIONS_UNIQUE			= $_Application_Module_Member_System_DB_Query_FETCH_ARRAY_STATISTICS['statistics_total_number_of_document_executions_unique'];
@@ -1078,6 +1078,11 @@ echo ("
 											*&nbsp;Database Management System Server Database :: Version Number: $_PROJECT_WEB_SERVER_TECHNOLOGY_VERSION_MYSQL<BR><BR>
 
 										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											<B>Database Management System Server Database Configuration</B>
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
+											*&nbsp;Database Management System Server :: Database :: Configuration File Option: $_ACCESS_SQL_ENGINE_VERSION<BR><BR>
+
+										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
 											<B>Operating System Environment</B>
 										<HR ALIGN=\"LEFT\" WIDTH=\"30%\">
 											*&nbsp;Operating System Environment: $_PROJECT_WEB_SERVER_TECHNOLOGY_VERSION_OPERATING_SYSTEM<BR><BR>
@@ -1103,7 +1108,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_STATISTICS->free_result();
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_STATISTICS->closeCursor();
 
 /*
  ============================================================================================================
@@ -1111,7 +1116,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS->free_result();
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_MEMBERS->closeCursor();
 
 /*
  ============================================================================================================
@@ -1119,7 +1124,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_COMMENTS->free_result();
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_COMMENTS->closeCursor();
 
 /*
  ============================================================================================================
@@ -1127,7 +1132,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_FILES->free_result();
+$_Application_Module_Member_System_DB_Query_SELECT_ALL_FILES->closeCursor();
 
 /*
  ============================================================================================================
@@ -1135,7 +1140,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS->free_result();
+// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS->closeCursor();
 
 /*
  ============================================================================================================
@@ -1143,7 +1148,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPICS->free_result();
+// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPICS->closeCursor();
 
 /*
  ============================================================================================================
@@ -1151,5 +1156,5 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPIC_MESSAGES->free_result();
+// [ C ] $_Application_Module_Member_System_DB_Query_SELECT_ALL_FORUM_NUMBER_OF_ROWS_TOPIC_MESSAGES->closeCursor();
 ?>

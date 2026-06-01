@@ -81,7 +81,7 @@ $_Application_Module_Member_Active_Members_DB_Query_SELECT_MEMBERS						= $_GLOB
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Active_Members_DB_Query_SELECT_MEMBERS_Fetch_Array = $_Application_Module_Member_Active_Members_DB_Query_SELECT_MEMBERS->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Active_Members_DB_Query_SELECT_MEMBERS_Fetch_Array = $_Application_Module_Member_Active_Members_DB_Query_SELECT_MEMBERS->fetch()) {
 
 $_Application_Module_Member_Active_Members_LIST_MEMBER_ID							= $_Application_Module_Member_Active_Members_DB_Query_SELECT_MEMBERS_Fetch_Array['id'];
 $_Application_Module_Member_Active_Members_LIST_MEMBER_ACCESS_LEVEL						= $_Application_Module_Member_Active_Members_DB_Query_SELECT_MEMBERS_Fetch_Array['member_access_level'];
@@ -216,5 +216,5 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Active_Members_DB_Query_SELECT_MEMBERS->free_result();
+// [ C ] $_Application_Module_Member_Active_Members_DB_Query_SELECT_MEMBERS->closeCursor();
 ?>

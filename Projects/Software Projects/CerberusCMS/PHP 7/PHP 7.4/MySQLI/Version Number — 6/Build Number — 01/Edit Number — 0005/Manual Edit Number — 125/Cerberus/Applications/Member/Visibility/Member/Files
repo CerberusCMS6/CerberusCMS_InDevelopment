@@ -80,7 +80,7 @@
 */
 
 $_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES 				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_file_categories ORDER BY file_category_title ASC");
-$_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES_NUMBER_OF_ROWS		= $_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES->num_rows;
+$_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES_NUMBER_OF_ROWS		= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_file_categories ORDER BY file_category_title ASC")->fetchColumn();
 
 /*
  ============================================================================================================
@@ -100,7 +100,7 @@ if ($_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES_NUMBER_OF_ROWS 
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES_Fetch_Array	= $_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES_Fetch_Array	= $_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES->fetch()) {
 
 $_Application_Module_Member_Files_LIST_FILE_CATEGORY_ID					= $_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES_Fetch_Array['id'];
 $_Application_Module_Member_Files_LIST_FILE_CATEGORY_DESCRIPTION 			= $_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES_Fetch_Array['file_category_description'];
@@ -151,7 +151,7 @@ if ($_GET["CategoryID"] == "$_Application_Module_Member_Files_LIST_FILE_CATEGORY
 */
 
 $_Application_Module_Member_Files_DB_Query_SELECT_FILES_FOR_CATEGORY 			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_files WHERE file_category='$_Application_Module_Member_Files_LIST_FILE_CATEGORY_ID' ORDER BY file_title ASC");
-$_Application_Module_Member_Files_DB_Query_SELECT_FILES_FOR_CATEGORY_NUMBER_OF_ROWS	= $_Application_Module_Member_Files_DB_Query_SELECT_FILES_FOR_CATEGORY->num_rows;
+$_Application_Module_Member_Files_DB_Query_SELECT_FILES_FOR_CATEGORY_NUMBER_OF_ROWS	= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_files WHERE file_category='$_Application_Module_Member_Files_LIST_FILE_CATEGORY_ID' ORDER BY file_title ASC")->fetchColumn();
 
 											echo ("<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Files&amp;CategoryID&#61;All&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: All File Category Entries ::\">File Categories</A> => $_Application_Module_Member_Files_LIST_FILE_CATEGORY_TITLE<BR><BR>");
 
@@ -173,7 +173,7 @@ if ($_Application_Module_Member_Files_DB_Query_SELECT_FILES_FOR_CATEGORY_NUMBER_
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Files_DB_Query_SELECT_FILES_FOR_CATEGORY_Fetch_Array = $_Application_Module_Member_Files_DB_Query_SELECT_FILES_FOR_CATEGORY->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Files_DB_Query_SELECT_FILES_FOR_CATEGORY_Fetch_Array = $_Application_Module_Member_Files_DB_Query_SELECT_FILES_FOR_CATEGORY->fetch()) {
 
 $_Application_Module_Member_Files_LIST_FILE_FOR_CATEGORY_ID 				= $_Application_Module_Member_Files_DB_Query_SELECT_FILES_FOR_CATEGORY_Fetch_Array['id'];
 $_Application_Module_Member_Files_LIST_FILE_FOR_CATEGORY_TITLE 				= $_Application_Module_Member_Files_DB_Query_SELECT_FILES_FOR_CATEGORY_Fetch_Array['file_title'];
@@ -217,7 +217,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Files_DB_Query_SELECT_FILES_FOR_CATEGORY->free_result();
+$_Application_Module_Member_Files_DB_Query_SELECT_FILES_FOR_CATEGORY->closeCursor();
 
 } // [ + ] IF: Internal Application: Display :: File Category Entry By ID :: Is: Activated
 
@@ -229,7 +229,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES->free_result();
+$_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES->closeCursor();
 
 /*
  ============================================================================================================
@@ -253,7 +253,7 @@ $_Application_Module_Member_Files_DB_Query_SELECT_FILES							= $_GLOBAL_DATABAS
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Files_DB_Query_SELECT_FILES_Fetch_Array = $_Application_Module_Member_Files_DB_Query_SELECT_FILES->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Files_DB_Query_SELECT_FILES_Fetch_Array = $_Application_Module_Member_Files_DB_Query_SELECT_FILES->fetch()) {
 
 $_Application_Module_Member_Files_LIST_FILE_ID						= $_Application_Module_Member_Files_DB_Query_SELECT_FILES_Fetch_Array['id'];
 $_Application_Module_Member_Files_LIST_FILE_AUTHOR					= $_Application_Module_Member_Files_DB_Query_SELECT_FILES_Fetch_Array['file_author'];
@@ -276,7 +276,7 @@ $_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES_BY_ID			= $_GLOBAL_
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES_BY_ID_Fetch_Array = $_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES_BY_ID->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES_BY_ID_Fetch_Array = $_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES_BY_ID->fetch()) {
 
 $_Application_Module_Member_Files_LIST_FILE_CATEGORY_FOR_FILE 				= $_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES_BY_ID_Fetch_Array['file_category_title'];
 
@@ -387,7 +387,7 @@ if (!file_exists("$_Application_Module_Member_Files_LIST_FILE_LOCATION")) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Files_DB_Query_UPDATE_FILES->free_result();
+$_Application_Module_Member_Files_DB_Query_UPDATE_FILES->closeCursor();
 
 } // [ + ] IF: Internal Application: Download :: Selected File Entry :: Is: Activated
 
@@ -406,7 +406,7 @@ if (!file_exists("$_Application_Module_Member_Files_LIST_FILE_LOCATION")) {
 */
 
 $_Application_Module_Member_Files_DB_Query_SELECT_COMMENTS 				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_comments WHERE comment_application_id='$_Application_Module_Member_Files_LIST_FILE_ID' AND comment_application_name='FILES'");
-$_Application_Module_Member_Files_DB_Query_SELECT_COMMENTS_NUMBER_OF_ROWS		= $_Application_Module_Member_Files_DB_Query_SELECT_COMMENTS->num_rows;
+$_Application_Module_Member_Files_DB_Query_SELECT_COMMENTS_NUMBER_OF_ROWS		= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_comments WHERE comment_application_id='$_Application_Module_Member_Files_LIST_FILE_ID' AND comment_application_name='FILES'")->fetchColumn();
 
 											echo ("<HR ALIGN=\"CENTER\" WIDTH=\"50%\"><CENTER><B>[ <A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Files&amp;FileID&#61;$_Application_Module_Member_Files_LIST_FILE_ID&amp;Display&#61;Comment_Field&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Comment On The File Entry :: $_Application_Module_Member_Files_LIST_FILE_TITLE\">Comments</A> ]</B></CENTER><HR ALIGN=\"CENTER\" WIDTH=\"50%\"><BR><BR>");
 
@@ -428,7 +428,7 @@ if ($_Application_Module_Member_Files_DB_Query_SELECT_COMMENTS_NUMBER_OF_ROWS <=
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Files_DB_Query_SELECT_COMMENTS_Fetch_Array = $_Application_Module_Member_Files_DB_Query_SELECT_COMMENTS->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Files_DB_Query_SELECT_COMMENTS_Fetch_Array = $_Application_Module_Member_Files_DB_Query_SELECT_COMMENTS->fetch()) {
 
 $_Application_Module_Member_Files_LIST_COMMENT_ID 					= $_Application_Module_Member_Files_DB_Query_SELECT_COMMENTS_Fetch_Array['id'];
 $_Application_Module_Member_Files_LIST_COMMENT_AUTHOR					= $_Application_Module_Member_Files_DB_Query_SELECT_COMMENTS_Fetch_Array['comment_author'];
@@ -451,7 +451,7 @@ $_Application_Module_Member_Files_DB_Query_SELECT_MEMBERS_FOR_COMMENT 			= $_GLO
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Files_DB_Query_SELECT_MEMBERS_FOR_COMMENT_Fetch_Array = $_Application_Module_Member_Files_DB_Query_SELECT_MEMBERS_FOR_COMMENT->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Files_DB_Query_SELECT_MEMBERS_FOR_COMMENT_Fetch_Array = $_Application_Module_Member_Files_DB_Query_SELECT_MEMBERS_FOR_COMMENT->fetch()) {
 
 $_Application_Module_Member_Files_LIST_COMMENT_AUTHOR_AVATAR				= $_Application_Module_Member_Files_DB_Query_SELECT_MEMBERS_FOR_COMMENT_Fetch_Array['member_image_avatar'];
 $_Application_Module_Member_Files_LIST_COMMENT_AUTHOR_EXPERIENCE_AMOUNT			= $_Application_Module_Member_Files_DB_Query_SELECT_MEMBERS_FOR_COMMENT_Fetch_Array['member_experience_amount'];
@@ -485,7 +485,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Files_DB_Query_SELECT_MEMBERS_FOR_COMMENT->free_result();
+$_Application_Module_Member_Files_DB_Query_SELECT_MEMBERS_FOR_COMMENT->closeCursor();
 
 } // [ + ] WHILE: Retrieving :: Registered Member Account :: Entry For Comment Entry
 
@@ -495,7 +495,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Files_DB_Query_SELECT_COMMENTS->free_result();
+$_Application_Module_Member_Files_DB_Query_SELECT_COMMENTS->closeCursor();
 
 /*
  ============================================================================================================
@@ -533,7 +533,7 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES_BY_ID->free_result();
+$_Application_Module_Member_Files_DB_Query_SELECT_CATEGORIES_BY_ID->closeCursor();
 
 /*
  ============================================================================================================
@@ -541,5 +541,5 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Files_DB_Query_SELECT_FILES->free_result();
+$_Application_Module_Member_Files_DB_Query_SELECT_FILES->closeCursor();
 ?>

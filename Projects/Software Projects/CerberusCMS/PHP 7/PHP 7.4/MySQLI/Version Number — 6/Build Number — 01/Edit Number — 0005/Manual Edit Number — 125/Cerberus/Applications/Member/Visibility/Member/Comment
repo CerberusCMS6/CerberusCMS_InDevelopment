@@ -143,7 +143,7 @@ if ($_Application_Module_Member_Comment_DB_Query_INSERT_COMMENT) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Comment_DB_Query_INSERT_COMMENT->free_result();
+$_Application_Module_Member_Comment_DB_Query_INSERT_COMMENT->closeCursor();
 
 } // [ + ] IF: Comment :: Variables :: HAVE Executed
 
@@ -169,7 +169,7 @@ $_Application_Module_Member_Comment_DB_Query_SELECT_COMMENT 				= $_GLOBAL_DATAB
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_Comment_DB_Query_SELECT_COMMENT_Fetch_Array = $_Application_Module_Member_Comment_DB_Query_SELECT_COMMENT->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Comment_DB_Query_SELECT_COMMENT_Fetch_Array = $_Application_Module_Member_Comment_DB_Query_SELECT_COMMENT->fetch()) {
 
 $_Application_Module_Member_Comment_LIST_COMMENT_ID					= $_Application_Module_Member_Comment_DB_Query_SELECT_COMMENT_Fetch_Array['id'];
 $_Application_Module_Member_Comment_LIST_COMMENT_APPLICATION_ID				= $_Application_Module_Member_Comment_DB_Query_SELECT_COMMENT_Fetch_Array['comment_application_id'];
@@ -277,7 +277,7 @@ if ($_Application_Module_Member_Comment_DB_Query_UPDATE_COMMENT) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Comment_DB_Query_UPDATE_COMMENT->free_result();
+$_Application_Module_Member_Comment_DB_Query_UPDATE_COMMENT->closeCursor();
 
 } // [ + ] IF: Update :: Comment :: Input Form :: Variables :: HAVE Executed
 
@@ -323,7 +323,7 @@ if ($_Application_Module_Member_Comment_DB_Query_DELETE_COMMENT) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Comment_DB_Query_DELETE_COMMENT->free_result();
+$_Application_Module_Member_Comment_DB_Query_DELETE_COMMENT->closeCursor();
 
 } // [ + ] IF: Internal Application: Delete :: Comment By ID :: Is: Activated
 
@@ -335,5 +335,5 @@ if ($_Application_Module_Member_Comment_DB_Query_DELETE_COMMENT) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Comment_DB_Query_SELECT_COMMENT->free_result();
+$_Application_Module_Member_Comment_DB_Query_SELECT_COMMENT->closeCursor();
 ?>

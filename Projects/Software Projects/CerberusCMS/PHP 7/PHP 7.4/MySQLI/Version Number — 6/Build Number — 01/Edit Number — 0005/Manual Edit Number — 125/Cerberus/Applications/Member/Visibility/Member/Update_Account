@@ -74,7 +74,7 @@
 */
 
 $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_username='$_GLOBAL_COOKIE_MEMBER_USERNAME'");
-$_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS_Fetch_Array					= $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS->fetch_array(MYSQLI_BOTH);
+$_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS_Fetch_Array					= $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS->fetch();
 
 /*
  ============================================================================================================
@@ -86,7 +86,7 @@ $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS_Fetch_Array		
 
 $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS 						= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_username='$_GLOBAL_COOKIE_MEMBER_USERNAME'");
 
-while ($_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS_Fetch_Array = $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS_Fetch_Array = $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS->fetch()) {
 
 /*
  ============================================================================================================
@@ -148,11 +148,18 @@ $_Application_Module_Member_Update_Account_LIST_MEMBER_SOCIAL_PREFERENCE_SEXUAL_
  ============================================================================================================
 */
 
-$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_AREA_CODE				= $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS_Fetch_Array['member_number_phone_area_code'];
+$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_CELL_AREA_CODE			= $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS_Fetch_Array['member_number_phone_cell_area_code'];
+$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_CELL_COUNTRY_CODE			= $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS_Fetch_Array['member_number_phone_cell_country_code'];
 $_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_CELL				= $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS_Fetch_Array['member_number_phone_cell'];
-$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_COUNTRY_CODE			= $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS_Fetch_Array['member_number_phone_country_code'];
+
+$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_HOME_AREA_CODE			= $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS_Fetch_Array['member_number_phone_home_area_code'];
+$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_HOME_COUNTRY_CODE			= $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS_Fetch_Array['member_number_phone_home_country_code'];
 $_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_HOME				= $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS_Fetch_Array['member_number_phone_home'];
+
+$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_WORK_AREA_CODE			= $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS_Fetch_Array['member_number_phone_work_area_code'];
+$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_WORK_COUNTRY_CODE			= $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS_Fetch_Array['member_number_phone_work_country_code'];
 $_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_WORK				= $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS_Fetch_Array['member_number_phone_work'];
+
 
 /*
  ============================================================================================================
@@ -508,10 +515,16 @@ $_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_ADDRESS_MA
  ============================================================================================================
 */
 
-$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_AREA_CODE			= $_POST['AMM_Update_Account_Member_Number_Phone_Area_Code'];
+$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_CELL_AREA_CODE		= $_POST['AMM_Update_Account_Member_Number_Phone_Cell_Area_Code'];
+$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_CELL_COUNTRY_CODE		= $_POST['AMM_Update_Account_Member_Number_Phone_Cell_Country_Code'];
 $_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_CELL				= $_POST['AMM_Update_Account_Member_Number_Phone_Cell'];
-$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_COUNTRY_CODE			= $_POST['AMM_Update_Account_Member_Number_Phone_Country_Code'];
+
+$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_HOME_AREA_CODE		= $_POST['AMM_Update_Account_Member_Number_Phone_Home_Area_Code'];
+$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_HOME_COUNTRY_CODE		= $_POST['AMM_Update_Account_Member_Number_Phone_Home_Country_Code'];
 $_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_HOME				= $_POST['AMM_Update_Account_Member_Number_Phone_Home'];
+
+$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_WORK_AREA_CODE		= $_POST['AMM_Update_Account_Member_Number_Phone_Work_Area_Code'];
+$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_WORK_COUNTRY_CODE		= $_POST['AMM_Update_Account_Member_Number_Phone_Work_Country_Code'];
 $_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_WORK				= $_POST['AMM_Update_Account_Member_Number_Phone_Work'];
 
 /*
@@ -957,17 +970,27 @@ echo ("
 													<B>Contact Information :: Physical :: Communications :: Telephony</B>
 												<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
 
-														* Phone Number :: Country Code:<BR>
-															<INPUT TYPE=\"text\" NAME=\"AMM_Update_Account_Member_Number_Phone_Country_Code\" VALUE=\"$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_COUNTRY_CODE\" MAXLENGTH=\"5\"><BR>
-														* Phone Number :: Area Code:<BR>
-															<INPUT TYPE=\"text\" NAME=\"AMM_Update_Account_Member_Number_Phone_Area_Code\" VALUE=\"$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_AREA_CODE\" MAXLENGTH=\"5\"><BR>	
+														* Phone Number :: Mobile :: Country Code:<BR>
+															<INPUT TYPE=\"text\" NAME=\"AMM_Update_Account_Member_Number_Phone_Cell_Country_Code\" VALUE=\"$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_CELL_COUNTRY_CODE\" MAXLENGTH=\"5\"><BR>
+														* Phone Number :: Mobile :: Area Code:<BR>
+															<INPUT TYPE=\"text\" NAME=\"AMM_Update_Account_Member_Number_Phone_Cell_Area_Code\" VALUE=\"$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_CELL_AREA_CODE\" MAXLENGTH=\"5\"><BR>	
 														* Phone Number :: Mobile:<BR>
-															<INPUT TYPE=\"text\" NAME=\"AMM_Update_Account_Member_Number_Phone_Cell\" VALUE=\"$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_CELL\" MAXLENGTH=\"20\"><BR>
-														* Phone Number :: Residence:<BR>
-															<INPUT TYPE=\"text\" NAME=\"AMM_Update_Account_Member_Number_Phone_Home\" VALUE=\"$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_HOME\" MAXLENGTH=\"20\"><BR>
+															<INPUT TYPE=\"text\" NAME=\"AMM_Update_Account_Member_Number_Phone_Cell\" VALUE=\"$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_CELL\" MAXLENGTH=\"20\"><BR><BR>
+
+														* Phone Number :: Home :: Country Code:<BR>
+															<INPUT TYPE=\"text\" NAME=\"AMM_Update_Account_Member_Number_Phone_Home_Country_Code\" VALUE=\"$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_HOME_COUNTRY_CODE\" MAXLENGTH=\"5\"><BR>
+														* Phone Number :: Home :: Area Code:<BR>
+															<INPUT TYPE=\"text\" NAME=\"AMM_Update_Account_Member_Number_Phone_Home_Area_Code\" VALUE=\"$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_HOME_AREA_CODE\" MAXLENGTH=\"5\"><BR>	
+														* Phone Number :: Home:<BR>
+															<INPUT TYPE=\"text\" NAME=\"AMM_Update_Account_Member_Number_Phone_Home\" VALUE=\"$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_HOME\" MAXLENGTH=\"20\"><BR><BR>
+
+														* Phone Number :: Work :: Country Code:<BR>
+															<INPUT TYPE=\"text\" NAME=\"AMM_Update_Account_Member_Number_Phone_Work_Country_Code\" VALUE=\"$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_WORK_COUNTRY_CODE\" MAXLENGTH=\"5\"><BR>
+														* Phone Number :: Work :: Area Code:<BR>
+															<INPUT TYPE=\"text\" NAME=\"AMM_Update_Account_Member_Number_Phone_Work_Area_Code\" VALUE=\"$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_WORK_AREA_CODE\" MAXLENGTH=\"5\"><BR>	
 														* Phone Number :: Work:<BR>
 															<INPUT TYPE=\"text\" NAME=\"AMM_Update_Account_Member_Number_Phone_Work\" VALUE=\"$_Application_Module_Member_Update_Account_LIST_MEMBER_ACCOUNT_NUMBER_PHONE_WORK\" MAXLENGTH=\"20\"><BR><BR>
-
+	
 												<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
 													<B>Contact Information :: Physical :: Communications :: Emergency</B>
 												<HR WIDTH=\"50%\" ALIGN=\"LEFT\">
@@ -1157,7 +1180,7 @@ $_Application_Module_Member_Update_Account_Image_OPEN_MEMBER_DIRECTORY						= op
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Update_Account_Image_READ_MEMBER_DIRECTORY = readdir($_Application_Module_Member_Update_Account_Image_OPEN_MEMBER_DIRECTORY))) {
+while (false !== ($_Application_Module_Member_Update_Account_Image_READ_MEMBER_DIRECTORY = readdir($_Application_Module_Member_Update_Account_Image_OPEN_MEMBER_DIRECTORY))) {
 
 if ($_Application_Module_Member_Update_Account_Image_READ_MEMBER_DIRECTORY == "." || $_Application_Module_Member_Update_Account_Image_READ_MEMBER_DIRECTORY == ".." || $_Application_Module_Member_Update_Account_Image_READ_MEMBER_DIRECTORY == "Backup" || $_Application_Module_Member_Update_Account_Image_READ_MEMBER_DIRECTORY == "index.php") {
 /**
@@ -1202,7 +1225,7 @@ echo ("
 $_Application_Module_Member_Update_Account_FIND_DIRECTORY_MEMBER_IMAGE_AVATAR					= "./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Icon_Avatar/";
 $_Application_Module_Member_Update_Account_OPEN_DIRECTORY_MEMBER_IMAGE_AVATAR					= opendir($_Application_Module_Member_Update_Account_FIND_DIRECTORY_MEMBER_IMAGE_AVATAR);
 
-while (($_Application_Module_Member_Update_Account_READ_MEMBER_AVATAR_DIRECTORY = readdir($_Application_Module_Member_Update_Account_OPEN_DIRECTORY_MEMBER_IMAGE_AVATAR))) {
+while (false !== ($_Application_Module_Member_Update_Account_READ_MEMBER_AVATAR_DIRECTORY = readdir($_Application_Module_Member_Update_Account_OPEN_DIRECTORY_MEMBER_IMAGE_AVATAR))) {
 
 if ($_Application_Module_Member_Update_Account_READ_MEMBER_AVATAR_DIRECTORY == "." || $_Application_Module_Member_Update_Account_READ_MEMBER_AVATAR_DIRECTORY == ".." || $_Application_Module_Member_Update_Account_READ_MEMBER_AVATAR_DIRECTORY == "index.php") {
 /**
@@ -1253,7 +1276,7 @@ $_Application_Module_Member_Update_Account_Image_Video_OPEN_MEMBER_DIRECTORY				
  ============================================================================================================
 */
 
-while (($_Application_Module_Member_Update_Account_Image_Video_READ_MEMBER_DIRECTORY = readdir($_Application_Module_Member_Update_Account_Image_Video_OPEN_MEMBER_DIRECTORY))) {
+while (false !== ($_Application_Module_Member_Update_Account_Image_Video_READ_MEMBER_DIRECTORY = readdir($_Application_Module_Member_Update_Account_Image_Video_OPEN_MEMBER_DIRECTORY))) {
 
 if ($_Application_Module_Member_Update_Account_Image_Video_READ_MEMBER_DIRECTORY == "." || $_Application_Module_Member_Update_Account_Image_Video_READ_MEMBER_DIRECTORY == ".." || $_Application_Module_Member_Update_Account_Image_Video_READ_MEMBER_DIRECTORY == "Backup" || $_Application_Module_Member_Update_Account_Image_Video_READ_MEMBER_DIRECTORY == "index.php") {
 /**
@@ -1284,60 +1307,7 @@ echo ("
 
 													<B>Settings :: Account :: Language</B><BR>
 														* Member Account Perferred Language:<BR>
-															<SELECT NAME=\"AMM_Update_Account_Member_Settings_Language\" VALUE=\"$_GLOBAL_MEMBER_LANGUAGE\" MAXLENGTH=\"50\">
-");
-
-/*
- ============================================================================================================
- + Read :: Directory :: Registered Member Account :: Directory :: For Updating Profile Image
- ============================================================================================================
-*/
-
-/*
- ============================================================================================================
- + Read :: Directory :: Registered Member Account :: Directory :: Variables
- ============================================================================================================
-*/
-
-$_Application_Module_Member_Update_Account_Language_FIND_DIRECTORY_LANGUAGE					= "./System/Language/";
-$_Application_Module_Member_Update_Account_Language_OPEN_DIRECTORY_LANGUAGE					= opendir($_Application_Module_Member_Update_Account_Language_FIND_DIRECTORY_LANGUAGE);
-
-/*
- ============================================================================================================
- + Read :: Registered Member Account Directory :: For Updating Profile Image
- ============================================================================================================
-*/
-
-while (($_Application_Module_Member_Update_Account_Language_READ_LANGUAGE_DIRECTORY = readdir($_Application_Module_Member_Update_Account_Language_OPEN_DIRECTORY_LANGUAGE))) {
-
-if ($_Application_Module_Member_Update_Account_Language_READ_LANGUAGE_DIRECTORY == "." || $_Application_Module_Member_Update_Account_Language_READ_LANGUAGE_DIRECTORY == ".." || $_Application_Module_Member_Update_Account_Language_READ_LANGUAGE_DIRECTORY == "index.php") {
-/**
- * Do Nothing
-**/
-} else {
-
-															echo ("<OPTION VALUE=\"$_Application_Module_Member_Update_Account_Language_READ_LANGUAGE_DIRECTORY\">$_Application_Module_Member_Update_Account_Language_READ_LANGUAGE_DIRECTORY</OPTION>");
-
-} // [ + ] IF: Registered Member Account :: Directory :: Image Directory AND Files ARE NOT Specified Registered Member Account Image Directory AND Files
-
-} // [ + ] WHILE: Reading :: Specified Registered Member Account Directory: Profile Images
-
-/*
- ============================================================================================================
- + Close Member Directory :: For Updating Profile Image
- ============================================================================================================
-*/
-
-closedir($_Application_Module_Member_Update_Account_Image_OPEN_MEMBER_DIRECTORY);
-
-/*
- ============================================================================================================
- + Read :: Directory :: Theme Directory :: Update :: Registered Member Account Theme
- ============================================================================================================
-*/
-
-echo ("
-															</SELECT><BR><BR>
+															<INPUT TYPE=\"TEXT\" NAME=\"AMM_Update_Account_Member_Settings_Language\" VALUE=\"$_Application_Module_Member_Update_Account_LIST_MEMBER_SETTINGS_LANGUAGE\" MAXLENGTH=\"100\"><BR><BR>
 
 													<B>Settings :: Account :: Graphics :: Theme</B><BR>
 														* Member Account Theme:<BR>
@@ -1353,7 +1323,7 @@ echo ("
 $_Application_Module_Member_Update_Account_FIND_DIRECTORY_THEME							= "./Theme/$_GLOBAL_MEMBER_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION";
 $_Application_Module_Member_Update_Account_OPEN_DIRECTORY_THEME							= opendir($_Application_Module_Member_Update_Account_FIND_DIRECTORY_THEME);
 
-while (($_Application_Module_Member_Update_Account_READ_THEME_DIRECTORY = readdir($_Application_Module_Member_Update_Account_OPEN_DIRECTORY_THEME))) {
+while (false !== ($_Application_Module_Member_Update_Account_READ_THEME_DIRECTORY = readdir($_Application_Module_Member_Update_Account_OPEN_DIRECTORY_THEME))) {
 
 if ($_Application_Module_Member_Update_Account_READ_THEME_DIRECTORY == "." || $_Application_Module_Member_Update_Account_READ_THEME_DIRECTORY == ".." || $_Application_Module_Member_Update_Account_READ_THEME_DIRECTORY == "index.php" || $_Application_Module_Member_Update_Account_READ_THEME_DIRECTORY == "Global") {
 /**
@@ -1603,11 +1573,15 @@ member_name_first='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER
 member_name_last='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NAME_LAST',
 member_name_middle='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NAME_MIDDLE',
 member_name_nickname='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NAME_NICKNAME',
-member_number_phone_area_code='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_AREA_CODE',
 member_number_phone_cell='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_CELL',
-member_number_phone_country_code='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_COUNTRY_CODE',
+member_number_phone_cell_area_code='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_CELL_AREA_CODE',
+member_number_phone_cell_country_code='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_CELL_COUNTRY_CODE',
 member_number_phone_home='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_HOME',
+member_number_phone_home_area_code='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_HOME_AREA_CODE',
+member_number_phone_home_country_code='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_HOME_COUNTRY_CODE',
 member_number_phone_work='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_WORK',
+member_number_phone_work_area_code='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_WORK_AREA_CODE',
+member_number_phone_work_country_code='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_NUMBER_PHONE_WORK_COUNTRY_CODE',
 member_physical_biometrics_blood_type='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_PHYSICAL_BIOMETRICS_BLOOD_TYPE',
 member_physical_biometrics_color_eye_1='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_PHYSICAL_BIOMETRICS_COLOR_EYE_1',
 member_physical_biometrics_color_eye_2='$_Application_Module_Member_Update_Account_POST_UPDATE_MEMBER_ACCOUNT_PHYSICAL_BIOMETRICS_COLOR_EYE_2',
@@ -1697,8 +1671,7 @@ Have a nice day,
 
 											echo ($_Application_Module_Member_Message_Update_Account_UPDATE);
 
-											header("Location: ?$_INTERNAL_APPLICATION_MODULE_MEMBER=Update_Account&$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION");
-											exit();
+	echo ("<META HTTP-EQUIV=\"refresh\" CONTENT=\"0; URL=?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;Update_Account&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\">");
 
 } else {
 
@@ -1712,7 +1685,7 @@ Have a nice day,
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Update_Account_DB_Query_UPDATE_MEMBER_ACCOUNT->free_result();
+$_Application_Module_Member_Update_Account_DB_Query_UPDATE_MEMBER_ACCOUNT->closeCursor();
 
 } // [ + ] IF: Update :: Registered Member Account Form Variables Have Executed
 
@@ -1722,7 +1695,7 @@ Have a nice day,
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS->free_result();
+$_Application_Module_Member_Update_Account_DB_Query_SELECT_MEMBERS->closeCursor();
 
 } // [ + ] WHILE: Retrieving :: Registered Member Account Data From The Database Server
 ?>

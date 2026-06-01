@@ -247,7 +247,7 @@ $_Application_Module_Notepad_DB_Query_SEARCH_ALL_NOTEPAD_NOTE_ENTRIES						= $_G
  ============================================================================================================
 */
 
-while ($_Application_Module_Notepad_DB_Query_SEARCH_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array = $_Application_Module_Notepad_DB_Query_SEARCH_ALL_NOTEPAD_NOTE_ENTRIES->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Notepad_DB_Query_SEARCH_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array = $_Application_Module_Notepad_DB_Query_SEARCH_ALL_NOTEPAD_NOTE_ENTRIES->fetch()) {
 
 $_Application_Module_Member_Notepad_SEARCH_LIST_NOTEPAD_NOTE_ID				= $_Application_Module_Notepad_DB_Query_SEARCH_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array['id'];
 $_Application_Module_Member_Notepad_SEARCH_LIST_NOTEPAD_NOTE_AUTHOR			= $_Application_Module_Notepad_DB_Query_SEARCH_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array['note_author'];
@@ -392,7 +392,7 @@ if ($_Application_Module_Member_Notepad_DB_Query_INSERT_NOTEPAD_NOTE) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_Notepad_DB_Query_INSERT_NOTEPAD_NOTE->free_result();
+$_Application_Module_Member_Notepad_DB_Query_INSERT_NOTEPAD_NOTE->closeCursor();
 
 } // [ + ] IF: Internal Application: Display :: Create Note :: Input Form Application Variables HAVE Executed
 
@@ -428,7 +428,7 @@ $_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES						= $_G
  ============================================================================================================
 */
 
-while ($_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array = $_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array = $_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES->fetch()) {
 
 $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ID								= $_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array['id'];
 $_Application_Module_Notepad_LIST_NOTEPAD_NOTE_ACCESS_LEVEL							= $_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES_Fetch_Array['note_access_level'];
@@ -493,7 +493,7 @@ if ($_Application_Module_Notepad_DB_Query_DELETE_NOTEPAD_NOTE_ENTRY) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Notepad_DB_Query_DELETE_NOTEPAD_NOTE_ENTRY->free_result();
+$_Application_Module_Notepad_DB_Query_DELETE_NOTEPAD_NOTE_ENTRY->closeCursor();
 
 } // [ + ] IF: Notepad Note Entry Author :: Is: Current Registered Member Account UserName
 
@@ -1020,5 +1020,5 @@ This Notepad Note Entry Access Level: $_Application_Module_Notepad_LIST_NOTEPAD_
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES->free_result();
+$_Application_Module_Notepad_DB_Query_SELECT_ALL_NOTEPAD_NOTE_ENTRIES->closeCursor();
 ?>

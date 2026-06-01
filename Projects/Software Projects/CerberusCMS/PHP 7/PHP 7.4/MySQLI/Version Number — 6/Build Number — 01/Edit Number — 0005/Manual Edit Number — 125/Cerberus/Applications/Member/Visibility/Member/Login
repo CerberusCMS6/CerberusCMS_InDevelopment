@@ -436,7 +436,7 @@ echo ("
 */
 
 $_Application_Module_Login_DB_Query_SELECT_MEMBERS_FOR_AUTHORIZATION_UPDATE			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_electronic_mail_address='$_Application_Module_Member_Login_POST_AUTHORIZATION_ELECTRONIC_MAIL_ADDRESS' AND member_username='$_Application_Module_Member_Login_POST_AUTHORIZATION_USERNAME'");
-$_Application_Module_Login_DB_Query_SELECT_MEMBERS_FOR_AUTHORIZATION_UPDATE_NUMBER_OF_ROWS	= $_Application_Module_Login_DB_Query_SELECT_MEMBERS_FOR_AUTHORIZATION_UPDATE->num_rows;
+$_Application_Module_Login_DB_Query_SELECT_MEMBERS_FOR_AUTHORIZATION_UPDATE_NUMBER_OF_ROWS	= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_electronic_mail_address='$_Application_Module_Member_Login_POST_AUTHORIZATION_ELECTRONIC_MAIL_ADDRESS' AND member_username='$_Application_Module_Member_Login_POST_AUTHORIZATION_USERNAME'")->fetchColumn();
 
 /*
  ============================================================================================================
@@ -452,7 +452,7 @@ if ($_Application_Module_Login_DB_Query_SELECT_MEMBERS_FOR_AUTHORIZATION_UPDATE_
  ============================================================================================================
 */
 
-while ($_Application_Module_Login_DB_Query_SELECT_MEMBERS_FOR_AUTHORIZATION_UPDATE_Fetch_Array = $_Application_Module_Login_DB_Query_SELECT_MEMBERS_FOR_AUTHORIZATION_UPDATE->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Login_DB_Query_SELECT_MEMBERS_FOR_AUTHORIZATION_UPDATE_Fetch_Array = $_Application_Module_Login_DB_Query_SELECT_MEMBERS_FOR_AUTHORIZATION_UPDATE->fetch()) {
 
 $_Application_Module_Login_LIST_MEMBER_ID							= $_Application_Module_Login_DB_Query_SELECT_MEMBERS_FOR_AUTHORIZATION_UPDATE_Fetch_Array['id'];
 $_Application_Module_Login_LIST_MEMBER_USERNAME							= $_Application_Module_Login_DB_Query_SELECT_MEMBERS_FOR_AUTHORIZATION_UPDATE_Fetch_Array['member_username'];
@@ -564,7 +564,7 @@ Have a nice day,
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Login_DB_Query_SELECT_MEMBERS_FOR_AUTHORIZATION_UPDATE->free_result();
+$_Application_Module_Login_DB_Query_SELECT_MEMBERS_FOR_AUTHORIZATION_UPDATE->closeCursor();
 
 } // [ + ] IF: Authorization Form Variables Have Executed
 
@@ -603,7 +603,7 @@ echo ("
 
 $_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHORIZATION_TOKEN				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_ip_address_authorization_token='$_Application_Module_Member_Login_POST_AUTHORIZATION_INTERNET_PROTOCOL_ADDRESS_TOKEN'");
 $_Application_Module_Login_DB_Query_UPDATE_MEMBER_AUTHORIZATION_TOKEN				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("UPDATE {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members SET member_ip_address_authorized='$_GLOBAL_REMOTE_SERVER_ADDRESS',member_ip_address_authorized_multifactor='$_GLOBAL_REMOTE_SERVER_ADDRESS',member_account_device_mac_address_authorized='$_GLOBAL_REMOTE_DEVICE_MAC_ADDRESS',member_account_device_web_browser_authorized='$_GLOBAL_REMOTE_SERVER_HTTP_USER_AGENT_DISPLAY',member_security_setting_flag_force_logout='0' WHERE member_ip_address_authorization_token='$_Application_Module_Member_Login_POST_AUTHORIZATION_INTERNET_PROTOCOL_ADDRESS_TOKEN'");
-$_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHORIZATION_TOKEN_NUMBER_OF_ROWS		= $_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHORIZATION_TOKEN->num_rows;
+$_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHORIZATION_TOKEN_NUMBER_OF_ROWS		= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_ip_address_authorization_token='$_Application_Module_Member_Login_POST_AUTHORIZATION_INTERNET_PROTOCOL_ADDRESS_TOKEN'")->fetchColumn();
 
 /*
  ============================================================================================================
@@ -643,7 +643,7 @@ if ($_Application_Module_Login_DB_Query_UPDATE_MEMBER_AUTHORIZATION_TOKEN) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Login_DB_Query_UPDATE_MEMBER_AUTHORIZATION_TOKEN->free_result();
+$_Application_Module_Login_DB_Query_UPDATE_MEMBER_AUTHORIZATION_TOKEN->closeCursor();
 
 /*
  ============================================================================================================
@@ -651,7 +651,7 @@ if ($_Application_Module_Login_DB_Query_UPDATE_MEMBER_AUTHORIZATION_TOKEN) {
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHORIZATION_TOKEN->free_result();
+$_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHORIZATION_TOKEN->closeCursor();
 
 } // [ + ] IF: Registered Member Account :: Authorization Token :: Input Form Variables Have Executed
 
@@ -693,7 +693,7 @@ echo ("
 
 $_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHENTICATED_KILL_ACCOUNT_CURRENT			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_electronic_mail_address='$_Application_Module_Member_Login_POST_AUTHENTICATED_ELECTRONIC_MAIL_ADDRESS_CLEAR_KILL_CURRENT' AND member_username='$_Application_Module_Member_Login_POST_AUTHENTICATED_USERNAME_CLEAR_KILL_CURRENT'");
 
-$_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHENTICATED_KILL_ACCOUNT_CURRENT_Fetch_Array	= $_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHENTICATED_KILL_ACCOUNT_CURRENT->fetch_array(MYSQLI_BOTH);
+$_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHENTICATED_KILL_ACCOUNT_CURRENT_Fetch_Array	= $_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHENTICATED_KILL_ACCOUNT_CURRENT->fetch();
 $_Application_Module_Login_LIST_AUTHENTICATED_ELECTRONIC_MAIL_ADDRESS_KILL_CURRENT			= $_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHENTICATED_KILL_ACCOUNT_CURRENT_Fetch_Array['member_electronic_mail_address'];
 $_Application_Module_Login_LIST_AUTHENTICATED_USERNAME_KILL_CURRENT					= $_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHENTICATED_KILL_ACCOUNT_CURRENT_Fetch_Array['member_username'];
 $_Application_Module_Login_LIST_AUTHENTICATED_PASSWORD_KILL_CURRENT					= $_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHENTICATED_KILL_ACCOUNT_CURRENT_Fetch_Array['member_password'];
@@ -766,7 +766,7 @@ echo ("
 
 $_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHENTICATED_KILL_ACCOUNT_GHOST			= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_members WHERE member_electronic_mail_address='$_Application_Module_Member_Login_POST_AUTHENTICATED_ELECTRONIC_MAIL_ADDRESS_CLEAR_KILL_GHOST' AND member_username='$_Application_Module_Member_Login_POST_AUTHENTICATED_USERNAME_CLEAR_KILL_GHOST'");
 
-$_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHENTICATED_KILL_ACCOUNT_GHOST_Fetch_Array	= $_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHENTICATED_KILL_ACCOUNT_GHOST->fetch_array(MYSQLI_BOTH);
+$_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHENTICATED_KILL_ACCOUNT_GHOST_Fetch_Array	= $_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHENTICATED_KILL_ACCOUNT_GHOST->fetch();
 $_Application_Module_Login_LIST_AUTHENTICATED_ELECTRONIC_MAIL_ADDRESS_KILL_GHOST			= $_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHENTICATED_KILL_ACCOUNT_GHOST_Fetch_Array['member_electronic_mail_address'];
 $_Application_Module_Login_LIST_AUTHENTICATED_USERNAME_KILL_GHOST					= $_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHENTICATED_KILL_ACCOUNT_GHOST_Fetch_Array['member_username'];
 $_Application_Module_Login_LIST_AUTHENTICATED_PASSWORD_KILL_GHOST					= $_Application_Module_Login_DB_Query_SELECT_MEMBER_AUTHENTICATED_KILL_ACCOUNT_GHOST_Fetch_Array['member_password'];

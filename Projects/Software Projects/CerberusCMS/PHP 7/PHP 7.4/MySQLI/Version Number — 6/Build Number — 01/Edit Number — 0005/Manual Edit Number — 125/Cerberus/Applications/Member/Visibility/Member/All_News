@@ -72,7 +72,7 @@
 */
 
 $_Application_Module_Member_All_News_DB_Query_SELECT_NEWS				= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT * FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_news ORDER BY id DESC");
-$_Application_Module_Member_All_News_DB_Query_SELECT_NEWS_NUMBER_OF_ROWS		= $_Application_Module_Member_All_News_DB_Query_SELECT_NEWS->num_rows;
+$_Application_Module_Member_All_News_DB_Query_SELECT_NEWS_NUMBER_OF_ROWS		= $_GLOBAL_DATABASE_MANAGEMENT_SYSTEM_SERVER_DATABASE_CONNECTION->query("SELECT COUNT(*) FROM {$_ACCESS_DATABASE_SERVER_DATABASE_TABLE_PREFIX}_news ORDER BY id DESC")->fetchColumn();
 
 /*
  ============================================================================================================
@@ -100,7 +100,7 @@ if ($_Application_Module_Member_All_News_DB_Query_SELECT_NEWS_NUMBER_OF_ROWS <= 
  ============================================================================================================
 */
 
-while ($_Application_Module_Member_All_News_DB_Query_SELECT_NEWS_Fetch_Array = $_Application_Module_Member_All_News_DB_Query_SELECT_NEWS->fetch_array(MYSQLI_BOTH)) {
+while ($_Application_Module_Member_All_News_DB_Query_SELECT_NEWS_Fetch_Array = $_Application_Module_Member_All_News_DB_Query_SELECT_NEWS->fetch(PDO::FETCH_ASSOC)) {
 
 $_Application_Module_Member_All_News_LIST_NEWS_ARTICLE_ENTRY_ID				= $_Application_Module_Member_All_News_DB_Query_SELECT_NEWS_Fetch_Array['id'];
 $_Application_Module_Member_All_News_LIST_NEWS_ARTICLE_ENTRY_AUTHOR			= $_Application_Module_Member_All_News_DB_Query_SELECT_NEWS_Fetch_Array['news_author'];
@@ -126,7 +126,7 @@ if ($_GET["DisplayID"] == "All") {
 echo ("
 													<BR>News Article Entry: $_Application_Module_Member_All_News_LIST_NEWS_ARTICLE_ENTRY_TITLE</A>
 													<HR>
-														<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;All_News&amp;DisplayID&#61;$_Application_Module_Member_All_News_LIST_NEWS_ARTICLE_ENTRY_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: All News Article Entries ::\"><IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_THEME_DIRECTORY/Image/Icon_Avatar/$_Application_Module_Member_All_News_LIST_NEWS_ARTICLE_ENTRY_AVATAR?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" CLASS=\"AMMNewsImage\" WIDTH=\"75\" HEIGHT=\"75\" TITLE=\":: Open & Display :: All News Article Entries ::\" ALT=\":: Open & Display :: All News Article Entries ::\"></IMG></A><BR><BR>
+														<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;All_News&amp;DisplayID&#61;$_Application_Module_Member_All_News_LIST_NEWS_ARTICLE_ENTRY_ID&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: All News Article Entries ::\"><IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Icon_Avatar/$_Application_Module_Member_All_News_LIST_NEWS_ARTICLE_ENTRY_AVATAR?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" CLASS=\"AMMNewsImage\" WIDTH=\"75\" HEIGHT=\"75\" TITLE=\":: Open & Display :: All News Article Entries ::\" ALT=\":: Open & Display :: All News Article Entries ::\"></IMG></A><BR><BR>
 														<I>$_Application_Module_Member_All_News_LIST_NEWS_ARTICLE_ENTRY_DATA_REDUCED...</I><HR>													
 														This News Article Entry Was Published By: <I>$_Application_Module_Member_All_News_LIST_NEWS_ARTICLE_ENTRY_AUTHOR</I> On: <I>$_Application_Module_Member_All_News_LIST_NEWS_ARTICLE_ENTRY_TIME</I><BR><BR>
 ");
@@ -146,7 +146,7 @@ if ($_GET["DisplayID"] == "$_Application_Module_Member_All_News_LIST_NEWS_ARTICL
 echo ("
 											$_Application_Module_Member_All_News_LIST_NEWS_ARTICLE_ENTRY_TITLE
 											<HR>
-												<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;All_News&amp;DisplayID&#61;All&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: All News Article Entries ::\"><IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_THEME_DIRECTORY/Image/Icon_Avatar/$_Application_Module_Member_All_News_LIST_NEWS_ARTICLE_ENTRY_AVATAR?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" CLASS=\"AMMNewsImage\" WIDTH=\"75\" HEIGHT=\"75\" TITLE=\":: Open & Display :: All News Article Entries ::\" ALT=\":: Open & Display :: All News Article Entries ::\"></IMG></A><BR><BR>
+												<A HREF=\"?$_INTERNAL_APPLICATION_MODULE_MEMBER&#61;All_News&amp;DisplayID&#61;All&amp;$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_HTR_RANDOM_STRING_GENERATION\" TITLE=\":: Open & Display :: All News Article Entries ::\"><IMG SRC=\"./Theme/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME_VIDEO_RESOLUTION/$_GLOBAL_SYSTEM_SETTINGS_DIRECTORY_THEME/Image/Icon_Avatar/$_Application_Module_Member_All_News_LIST_NEWS_ARTICLE_ENTRY_AVATAR?$_GLOBAL_SYSTEM_SECURITY_CACHE_CIRCUMVENTION_IMAGE_RANDOM_STRING_GENERATION\" CLASS=\"AMMNewsImage\" WIDTH=\"75\" HEIGHT=\"75\" TITLE=\":: Open & Display :: All News Article Entries ::\" ALT=\":: Open & Display :: All News Article Entries ::\"></IMG></A><BR><BR>
 												<I>$_Application_Module_Member_All_News_LIST_NEWS_ARTICLE_ENTRY_DATA</I>
 											<HR>
 												<B>The Author of This News Article Entry Was Feeling</B>: <I>$_Application_Module_Member_All_News_LIST_NEWS_ARTICLE_ENTRY_MOOD</I><BR>
@@ -169,5 +169,5 @@ echo ("
  ============================================================================================================
 */
 
-// [ C ] $_Application_Module_Member_All_News_DB_Query_SELECT_NEWS->free_result();
+$_Application_Module_Member_All_News_DB_Query_SELECT_NEWS->closeCursor();
 ?>
