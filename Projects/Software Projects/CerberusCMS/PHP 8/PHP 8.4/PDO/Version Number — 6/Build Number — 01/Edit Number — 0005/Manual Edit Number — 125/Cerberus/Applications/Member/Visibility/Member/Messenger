@@ -1784,6 +1784,7 @@ echo ("
 														<INPUT TYPE=\"text\" NAME=\"AMM_Messenger_Ban_Account_UserName\" VALUE=\"UserName\" MAXLENGTH=\"50\"><BR>
 														<INPUT TYPE=\"submit\" VALUE=\"Ban Account\">
 													</FORM><BR><BR>
+");
 
 echo ("
 
